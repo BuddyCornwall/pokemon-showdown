@@ -3627,7 +3627,7 @@ boosts: {
 spe: 2,
 },
 secondary: null,
-target: "allies",
+target: "adjacentAlly",
 type: "Normal",
 },
 
@@ -4477,7 +4477,7 @@ basePower: 150,
 category: "Special",
 name: "Eternabeam",
 pp: 0.625,
-flags: {recharge: 1, protect: 1, mirror: 1, beam: 1},
+flags: {recharge: 1, protect: 1, mirror: 1},
 self: {
 volatileStatus: 'mustrecharge',
 },
@@ -5455,6 +5455,7 @@ flags: {contact: 1, protect: 1, punch: 1},
 boosts: {
 chance: 75,
 accuracy: 1,
+atk: 1,
 },
 secondary: null,
 target: "any",
@@ -12434,7 +12435,7 @@ type: "Fighting",
 
 rockthrow: {
 accuracy: 95,
-basePower: 0,
+basePower: 40,
 damageCallback(pokemon) {
 return (this.random(10, 200) * pokemon.level) / 100;
 },
@@ -15069,6 +15070,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 33,
+self: {
 boosts: {
 atk: 1,
 },
@@ -17656,5 +17658,430 @@ target: "any",
 type: "Electric",
 },
 
+terastarstorm: {
+accuracy: 100,
+basePower: 120,
+category: "Special",
+name: "Tera Starstorm",
+pp: 5,
+priority: 0,
+flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1, failmimic: 1},
+onModifyType(move, pokemon) {
+if (pokemon.species.name === 'Terapagos-Stellar') {
+move.type = 'Stellar';
+}
+},
+onModifyMove(move, pokemon) {
+if (pokemon.species.name === 'Terapagos-Stellar') {
+move.target = 'allAdjacentFoes';
+}
+},
+
+malignantchain: {
+accuracy: 100,
+basePower: 100,
+category: "Special",
+name: "Malignant Chain",
+pp: 5,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1},
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "normal",
+type: "Poison",
+},
+
+burningbulwark: {
+accuracy: 100,
+basePower: 0,
+category: "Status",
+name: "Burning Bulwark",
+pp: 10,
+priority: 4,
+flags: {metronome: 1, noassist: 1, failcopycat: 1},
+stallingMove: true,
+volatileStatus: 'burningbulwark',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect'] || move.category === 'Status') {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('brn', target);
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('brn', target);
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Fire",
+},
+
+mightycleave: {
+accuracy: 100,
+basePower: 95,
+category: "Physical",
+name: "Mighty Cleave",
+pp: 5,
+priority: 0,
+flags: {contact: 1, mirror: 1, metronome: 1, slicing: 1},
+secondary: null,
+target: "normal",
+type: "Rock",
+},
+
+thunderclap: {
+accuracy: 100,
+basePower: 70,
+category: "Special",
+name: "Thunderclap",
+pp: 5,
+priority: 1,
+flags: {protect: 1, mirror: 1, metronome: 1},
+onTry(source, target) {
+const action = this.queue.willMove(target);
+const move = action?.choice === 'move' ? action.move : null;
+if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+return false;
+}
+},
+secondary: null,
+target: "normal",
+type: "Electric",
+},
+
+tachyoncutter: {
+accuracy: 100,
+basePower: 50,
+category: "Special",
+name: "Tachyon Cutter",
+pp: 10,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1, slicing: 1},
+multihit: 2,
+secondary: null,
+target: "normal",
+type: "Steel",
+},
+
+electroshot: {
+accuracy: 100,
+basePower: 130,
+category: "Special",
+name: "Electro Shot",
+pp: 10,
+priority: 0,
+flags: {charge: 1, protect: 1, mirror: 1, metronome: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spa: 1}, attacker, attacker, move);
+if (['raindance', 'primordialsea'].includes(attacker.effectiveWeather())) {
+this.attrLastMove('[still]');
+this.addMove('-anim', attacker, move.name, defender);
+return;
+}
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: null,
+hasSheerForce: true,
+target: "normal",
+type: "Electric",
+},
+
+ficklebeam: {
+accuracy: 100,
+basePower: 80,
+category: "Special",
+name: "Fickle Beam",
+pp: 5,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1},
+onBasePower(basePower, pokemon) {
+if (this.randomChance(3, 10)) {
+this.attrLastMove('[anim] Fickle Beam All Out');
+this.add('-activate', pokemon, 'move: Fickle Beam');
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "normal",
+type: "Dragon",
+},
+
+psychicnoise: {
+accuracy: 100,
+basePower: 75,
+category: "Special",
+name: "Psychic Noise",
+pp: 10,
+priority: 0,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
+secondary: {
+chance: 100,
+volatileStatus: 'healblock',
+},
+target: "normal",
+type: "Psychic",
+},
+
+upperhand: {
+accuracy: 100,
+basePower: 65,
+category: "Physical",
+name: "Upper Hand",
+pp: 15,
+priority: 3,
+flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+onTryHit(target, pokemon) {
+const action = this.queue.willMove(target);
+const move = action?.choice === 'move' ? action.move : null;
+if (!move || move.priority <= 0.1 || move.category === 'Status') {
+return false;
+}
+},
+secondary: {
+chance: 100,
+volatileStatus: 'flinch',
+},
+target: "normal",
+type: "Fighting",
+},
+
+malignantchain: {
+accuracy: 100,
+basePower: 100,
+category: "Special",
+name: "Malignant Chain",
+pp: 5,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1},
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "normal",
+type: "Poison",
+},
+
+temperflare: {
+accuracy: 100,
+basePower: 75,
+basePowerCallback(pokemon, target, move) {
+if (pokemon.moveLastTurnResult === false) {
+this.debug('doubling Temper Flare BP due to previous move failure');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Temper Flare",
+pp: 10,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+secondary: null,
+target: "normal",
+type: "Fire",
+},
+
+alluringvoice: {
+accuracy: 100,
+basePower: 80,
+category: "Special",
+name: "Alluring Voice",
+pp: 10,
+priority: 0,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
+secondary: {
+chance: 100,
+onHit(target, source, move) {
+if (target?.statsRaisedThisTurn) {
+target.addVolatile('confusion', source, move);
+}
+},
+},
+target: "normal",
+type: "Fairy",
+},
+
+dragoncheer: {
+accuracy: 100,
+basePower: 0,
+category: "Status",
+name: "Dragon Cheer",
+pp: 15,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1, metronome: 1},
+volatileStatus: 'dragoncheer',
+condition: {
+onStart(target, source, effect) {
+if (target.volatiles['focusenergy']) return false;
+if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+this.add('-start', target, 'move: Dragon Cheer', '[silent]');
+} else {
+this.add('-start', target, 'move: Dragon Cheer');
+}
+// Store at the start because the boost doesn't change if a Pokemon
+// Terastallizes into Dragon while having this volatile
+// Found by DarkFE:
+// https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9894139
+this.effectState.hasDragonType = target.hasType("Dragon");
+},
+onModifyCritRatio(critRatio, source) {
+return critRatio + (this.effectState.hasDragonType ? 2 : 1);
+},
+},
+secondary: null,
+target: "adjacentAlly",
+type: "Dragon",
+},
+
+supercellslam: {
+accuracy: 95,
+basePower: 100,
+category: "Physical",
+name: "Supercell Slam",
+pp: 15,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Supercell Slam'));
+},
+secondary: null,
+target: "normal",
+type: "Electric",
+},
+
+syrupbomb: {
+accuracy: 85,
+basePower: 60,
+category: "Special",
+name: "Syrup Bomb",
+pp: 10,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
+condition: {
+noCopy: true,
+duration: 4,
+onStart(pokemon) {
+this.add('-start', pokemon, 'Syrup Bomb');
+},
+onResidualOrder: 14,
+onResidual() {
+this.boost({spe: -1});
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Syrup Bomb', '[silent]');
+},
+},
+secondary: {
+chance: 100,
+volatileStatus: 'syrupbomb',
+},
+target: "normal",
+type: "Grass",
+},
+
+matchagotcha: {
+accuracy: 90,
+basePower: 80,
+category: "Special",
+name: "Matcha Gotcha",
+pp: 15,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1, heal: 1, metronome: 1},
+drain: [1, 2],
+thawsTarget: true,
+secondary: {
+chance: 20,
+status: 'brn',
+},
+target: "allAdjacentFoes",
+type: "Grass",
+},
+
+ivycudgel: {
+accuracy: 100,
+basePower: 100,
+category: "Physical",
+name: "Ivy Cudgel",
+pp: 10,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1},
+critRatio: 2,
+onPrepareHit(target, source, move) {
+if (move.type !== "Grass") {
+this.attrLastMove('[anim] Ivy Cudgel ' + move.type);
+}
+},
+onModifyType(move, pokemon) {
+switch (pokemon.species.name) {
+case 'Ogerpon-Wellspring': case 'Ogerpon-Wellspring-Tera':
+move.type = 'Water';
+break;
+case 'Ogerpon-Hearthflame': case 'Ogerpon-Hearthflame-Tera':
+move.type = 'Fire';
+break;
+case 'Ogerpon-Cornerstone': case 'Ogerpon-Cornerstone-Tera':
+move.type = 'Rock';
+break;
+}
+},
+secondary: null,
+target: "normal",
+type: "Grass",
+},
+
+bloodmoon: {
+accuracy: 100,
+basePower: 140,
+category: "Special",
+name: "Blood Moon",
+pp: 5,
+priority: 0,
+flags: {protect: 1, mirror: 1, metronome: 1, cantusetwice: 1},
+secondary: null,
+target: "normal",
+type: "Normal",
+},
 
 };
