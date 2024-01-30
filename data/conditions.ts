@@ -58,7 +58,7 @@ this.add('-status', target, 'slp', '[from] move: ' + sourceEffect.name);
 this.add('-status', target, 'slp');
 }
 // 1-4 turns
-this.effectState.startTime = this.random(2, 4);
+this.effectState.startTime = this.random(1, 5);
 this.effectState.time = this.effectState.startTime;
 
 if (target.removeVolatile('nightmare')) {
