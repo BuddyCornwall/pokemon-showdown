@@ -15069,10 +15069,11 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 33,
+chance: 75,
 self: {
 boosts: {
 atk: 1,
+},
 },
 },
 target: "any",
@@ -17656,25 +17657,6 @@ volatileStatus: 'flinch',
 },
 target: "any",
 type: "Electric",
-},
-
-terastarstorm: {
-accuracy: 100,
-basePower: 120,
-category: "Special",
-name: "Tera Starstorm",
-pp: 5,
-priority: 0,
-flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1, failmimic: 1},
-onModifyType(move, pokemon) {
-if (pokemon.species.name === 'Terapagos-Stellar') {
-move.type = 'Stellar';
-}
-},
-onModifyMove(move, pokemon) {
-if (pokemon.species.name === 'Terapagos-Stellar') {
-move.target = 'allAdjacentFoes';
-}
 },
 
 malignantchain: {
