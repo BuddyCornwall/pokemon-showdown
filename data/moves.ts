@@ -4619,7 +4619,7 @@ basePower: 50,
 category: "Physical",
 name: "Fake Out",
 pp: 0.625,
-priority: 3,
+priority: 100,
 flags: {contact: 1, protect: 1, mirror: 1},
 onTry(source) {
 if (source.activeMoveActions > 1) {
@@ -15069,7 +15069,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 self: {
 boosts: {
 atk: 1,
@@ -17866,22 +17866,6 @@ volatileStatus: 'flinch',
 },
 target: "normal",
 type: "Fighting",
-},
-
-malignantchain: {
-accuracy: 100,
-basePower: 100,
-category: "Special",
-name: "Malignant Chain",
-pp: 5,
-priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1},
-secondary: {
-chance: 50,
-status: 'tox',
-},
-target: "normal",
-type: "Poison",
 },
 
 temperflare: {
