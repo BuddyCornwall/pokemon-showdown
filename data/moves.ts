@@ -2501,57 +2501,6 @@ if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 type: "Rock",
 },
 
-conversion: {
-accuracy: 95,
-basePower: 0,
-category: "Status",
-name: "Conversion",
-pp: 1.25,
-priority: 0,
-flags: {snatch: 1},
-onHit(target) {
-const type = this.dex.moves.get(target.moveSlots[0].id).type;
-if (target.hasType(type) || !target.setType(type)) return false;
-this.add('-start', target, 'typechange', type);
-},
-secondary: null,
-target: "self",
-type: "Normal",
-},
-
-conversion2: {
-accuracy: 95,
-basePower: 0,
-category: "Status",
-name: "Conversion 2",
-pp: 1.25,
-priority: 0,
-flags: {bypasssub: 1},
-onHit(target, source) {
-if (!target.lastMoveUsed) {
-return false;
-}
-const possibleTypes = [];
-const attackType = target.lastMoveUsed.type;
-for (const type of this.dex.types.names()) {
-if (source.hasType(type)) continue;
-const typeCheck = this.dex.types.get(type).damageTaken[attackType];
-if (typeCheck === 2 || typeCheck === 3) {
-possibleTypes.push(type);
-}
-}
-if (!possibleTypes.length) {
-return false;
-}
-const randomType = this.sample(possibleTypes);
-if (!source.setType(randomType)) return false;
-this.add('-start', source, 'typechange', randomType);
-},
-secondary: null,
-target: "any",
-type: "Normal",
-},
-
 copycat: {
 accuracy: 95,
 basePower: 0,
@@ -4003,7 +3952,7 @@ type: "Normal",
 electricterrain: {
 accuracy: 95,
 basePower: 50,
-category: "Physical",
+category: "Special",
 name: "Electric Terrain",
 pp: 0.625,
 priority: 0,
@@ -4981,10 +4930,16 @@ name: "Flame Wheel",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-secondary: {
-chance: 25,
-status: 'brn',
+secondaries: [
+{
+chance: 50,
+status: 'burn',
+}, {
+chance: 50,
+boosts: {
+spe: 1,
 },
+],
 target: "any",
 type: "Fire",
 },
@@ -6249,20 +6204,6 @@ status: 'tox',
 },
 target: "any",
 type: "Poison",
-},
-
-gust: {
-accuracy: 95,
-basePower: 40,
-category: "Special",
-name: "Gust",
-pp: 1.25,
-priority: 0,
-flags: {protect: 1, mirror: 1, distance: 1, wind: 1},
-critRatio: 2,
-secondary: null,
-target: "any",
-type: "Flying",
 },
 
 gyroball: {
