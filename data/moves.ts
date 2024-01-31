@@ -4936,6 +4936,7 @@ chance: 50,
 status: 'burn',
 }, {
 chance: 50,
+self: {
 boosts: {
 spe: 1,
 },
