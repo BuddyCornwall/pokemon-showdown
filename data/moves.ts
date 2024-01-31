@@ -4930,19 +4930,19 @@ name: "Flame Wheel",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-secondaries: [
-{
-chance: 50,
-status: 'brn',
-}, {
-chance: 50,
-self: {
-boosts: {
-spe: 1,
+secondary: {
+chance: 100,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('brn', source);
+} else if (result === 1) {
+boost[randomStat] = 2;
+} else {
+target.trySetStatus('burn', source),boost[randomStat] = 2;
+}
 },
 },
-},
-],
 target: "any",
 type: "Fire",
 },
