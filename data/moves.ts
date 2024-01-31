@@ -4933,7 +4933,7 @@ flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
 secondaries: [
 {
 chance: 50,
-status: 'burn',
+status: 'brn',
 }, {
 chance: 50,
 self: {
