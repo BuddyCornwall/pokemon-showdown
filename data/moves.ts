@@ -4939,6 +4939,7 @@ chance: 50,
 boosts: {
 spe: 1,
 },
+},
 ],
 target: "any",
 type: "Fire",
