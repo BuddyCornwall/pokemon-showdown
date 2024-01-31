@@ -4941,6 +4941,7 @@ boosts: {
 spe: 1,
 },
 },
+},
 ],
 target: "any",
 type: "Fire",
