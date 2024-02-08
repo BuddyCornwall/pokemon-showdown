@@ -5296,12 +5296,13 @@ chance: 75,
 self: {
 boosts: {
 accuracy: 1,
-}, {
+},
+},
+{
 chance: 75,
 self: {
 boosts: {
 atk: 1,
-},
 },
 },
 },
