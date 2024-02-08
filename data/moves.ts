@@ -4939,6 +4939,8 @@ self: {
 boosts: {
 spe: 1,
 },
+},
+},
 ],
 target: "any",
 type: "Fire",
@@ -5299,6 +5301,10 @@ chance: 75,
 self: {
 boosts: {
 atk: 1,
+},
+},
+},
+},
 },
 ],
 target: "any",
