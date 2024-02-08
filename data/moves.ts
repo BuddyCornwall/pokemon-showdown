@@ -4133,7 +4133,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 33,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -4150,12 +4150,11 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 volatileStatus: 'encore',
 condition: {
-duration: 3,
+duration: 2,
 noCopy: true, // doesn't get copied by Z-Baton Pass
 onStart(target) {
 let move: Move | ActiveMove | null = target.lastMove;
 if (!move || target.volatiles['dynamax']) return false;
-
 if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
 const moveIndex = target.moves.indexOf(move.id);
 if (move.isZ || move.flags['failencore'] || !target.moveSlots[moveIndex] || target.moveSlots[moveIndex].pp <= 0) {
@@ -4938,9 +4937,7 @@ status: 'brn',
 chance: 50,
 self: {
 boosts: {
-spe: -2,
-},
-},
+spe: 1,
 },
 ],
 target: "any",
@@ -5085,7 +5082,10 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 selfSwitch: true,
-secondary: null,
+secondary: {
+chance: 50,
+volatileStatus: 'confusion',
+},
 target: "any",
 type: "Water",
 },
@@ -5159,7 +5159,10 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
-secondary: null,
+secondary: {
+chance: 33,
+volatileStatus: 'confusion',
+},
 target: "any",
 type: "Grass",
 },
@@ -5285,12 +5288,19 @@ name: "Focus Punch",
 pp: 1.25,
 priority: -3,
 flags: {contact: 1, protect: 1, punch: 1},
-boosts: {
+secondaries: [
+{
 chance: 75,
+self: {
+boosts: {
 accuracy: 1,
+}, {
+chance: 75,
+self: {
+boosts: {
 atk: 1,
 },
-secondary: null,
+],
 target: "any",
 type: "Fighting",
 },
@@ -5301,14 +5311,14 @@ basePower: 0,
 category: "Status",
 name: "Follow Me",
 pp: 0.625,
-priority: 2,
+priority: 5,
 flags: {},
 volatileStatus: 'followme',
 onTry(source) {
 return this.activePerHalf > 1;
 },
 condition: {
-duration: 1,
+duration: 3,
 onStart(target, source, effect) {
 if (effect?.id === 'zpower') {
 this.add('-singleturn', target, 'move: Follow Me', '[zeffect]');
@@ -5339,7 +5349,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 25,
+chance: 33,
 status: 'par',
 },
 target: "any",
@@ -5417,10 +5427,15 @@ return;
 attacker.addVolatile('twoturnmove', defender);
 return null;
 },
-secondary: {
-chance: 33,
+secondaries: [
+{
+chance: 50,
 status: 'frz',
+}, {
+chance: 50,
+status: 'par',
 },
+],
 target: "any",
 type: "Ice",
 },
@@ -5488,7 +5503,7 @@ this.add('-singlemove', pokemon, 'Rage');
 },
 onHit(target, source, move) {
 if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
+this.boost({atk: 1});
 }
 },
 onBeforeMovePriority: 100,
@@ -5524,7 +5539,7 @@ this.add('-singlemove', pokemon, 'Rage');
 },
 onHit(target, source, move) {
 if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
+this.boost({atk: 1});
 }
 },
 onBeforeMovePriority: 100,
@@ -5558,7 +5573,7 @@ this.add('-singlemove', pokemon, 'Rage');
 },
 onHit(target, source, move) {
 if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
+this.boost({atk: 1});
 }
 },
 onBeforeMovePriority: 100,
@@ -5766,6 +5781,11 @@ name: "Glaciate",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
+onHit(target) {
+if (target.hasType('Ice')) return false;
+if (!target.addType('Ice')) return false;
+this.add('-start', target, 'typeadd', 'Ice', '[from] move: Glaciate');
+},
 secondary: {
 chance: 75,
 boosts: {
