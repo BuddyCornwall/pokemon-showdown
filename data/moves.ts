@@ -16899,12 +16899,12 @@ flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Steel') return 1;
 },
-secondary: {
-chance: 66
-status: 'tox',
-},
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: {
+chance: 75,
+status: 'tox',
 },
 target: "any",
 type: "Poison",
