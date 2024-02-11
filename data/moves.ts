@@ -937,8 +937,6 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 onBasePower(basePower, pokemon, target) {
-multiaccuracy: 85,
-multihit: [1, 7],
 if (target.status === 'tox' || target.status === 'tox') {
 return this.chainModify(2);
 }
@@ -947,6 +945,8 @@ secondary: {
 chance: 50,
 status: 'tox',
 },
+multihit: [1, 7],
+multiaccuracy: 85,
 target: "any",
 type: "Poison",
 },
