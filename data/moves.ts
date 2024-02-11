@@ -660,7 +660,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 secondary: {
-chance: 50
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "randomNormal",
