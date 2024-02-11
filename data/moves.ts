@@ -41,12 +41,17 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
-secondary: {
-chance: 33,
+secondaries: [
+{
+chance: 50,
+status: 'brn',
+}, {
+chance: 50,
 boosts: {
 spd: -1,
 },
 },
+],
 target: "allAdjacentFoes",
 type: "Poison",
 },
@@ -93,12 +98,17 @@ pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 critRatio: 2,
-secondary: {
-chance: 75,
+secondaries: [
+{
+chance: 50,
+status: 'brn',
+}, {
+chance: 50,
 boosts: {
 spd: -2,
 },
 },
+],
 target: "any",
 type: "Poison",
 },
@@ -359,13 +369,18 @@ name: "Apple Acid",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-secondary: {
-chance: 75,
+secondaries: [
+{
+chance: 25,
+status: 'brn',
+}, {
+chance: 50,
 boosts: {
-spd: -1,
 def: -1,
+spd: -1,
 },
 },
+],
 target: "any",
 type: "Grass",
 },
@@ -406,7 +421,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Aqua Ring",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
 volatileStatus: 'aquaring',
@@ -499,7 +514,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Aromatherapy",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1, distance: 1},
 onHit(target, source, move) {
@@ -521,7 +536,7 @@ type: "Grass",
 
 aromaticmist: {
 accuracy: 95,
-basePower: 0,
+basePower: 50,
 category: "Special",
 name: "Aromatic Mist",
 pp: 1.25,
@@ -638,55 +653,17 @@ type: "Bug",
 
 attract: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 60,
+category: "Special",
 name: "Attract",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
-volatileStatus: 'attract',
-condition: {
-noCopy: true, // doesn't get copied by Baton Pass
-onStart(pokemon, source, effect) {
-if (!(pokemon.gender === 'M' && source.gender === 'F') && !(pokemon.gender === 'F' && source.gender === 'M')) {
-this.debug('incompatible gender');
-return false;
-}
-if (!this.runEvent('Attract', pokemon, source)) {
-this.debug('Attract event failed');
-return false;
-}
-if (effect.name === 'Cute Charm') {
-this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
-} else if (effect.name === 'Destiny Knot') {
-this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
-} else {
-this.add('-start', pokemon, 'Attract');
-}
+secondary: {
+chance: 50
+volatileStatus: 'confusion',
 },
-onUpdate(pokemon) {
-if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
-this.debug('Removing Attract volatile on ' + pokemon);
-pokemon.removeVolatile('attract');
-}
-},
-onBeforeMovePriority: 2,
-onBeforeMove(pokemon, target, move) {
-this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
-this.add('cant', pokemon, 'Attract');
-return false;
-}
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Attract', '[silent]');
-},
-},
-onTryImmunity(target, source) {
-return (target.gender === 'M' && source.gender === 'F') || (target.gender === 'F' && source.gender === 'M');
-},
-secondary: null,
-target: "any",
+target: "randomNormal",
 type: "Normal",
 },
 
@@ -764,7 +741,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Aurora Veil",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
 sideCondition: 'auroraveil',
@@ -953,13 +930,15 @@ type: "Poison",
 
 barbbarrage: {
 accuracy: 95,
-basePower: 60,
+basePower: 20,
 category: "Physical",
 name: "Barb Barrage",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 onBasePower(basePower, pokemon, target) {
+multihit: [1, 7],
+multiaccuracy: 85,
 if (target.status === 'tox' || target.status === 'tox') {
 return this.chainModify(2);
 }
@@ -1008,7 +987,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Baton Pass",
-pp: 1.25,
+pp: 0.625,
 priority: -2,
 flags: {},
 onTryHit(target) {
@@ -1035,13 +1014,13 @@ basePower: 105,
 category: "Physical",
 name: "Beak Blast",
 pp: 0.625,
-priority: -3,
+priority: 0,
 flags: {bullet: 1, protect: 1},
 priorityChargeCallback(pokemon) {
 pokemon.addVolatile('beakblast');
 },
 condition: {
-duration: 1,
+duration: 2,
 onStart(pokemon) {
 this.add('-singleturn', pokemon, 'move: Beak Blast');
 },
@@ -1062,16 +1041,16 @@ type: "Flying",
 
 beatup: {
 accuracy: 95,
-basePower: 40,
+basePower: 30,
 basePowerCallback(pokemon, target, move) {
 const currentSpecies = move.allies!.shift()!.species;
-const bp = 10 + Math.floor(currentSpecies.baseStats.atk / 10);
+const bp = 30 + Math.floor(currentSpecies.baseStats.atk / 10);
 this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
 return bp;
 },
 category: "Physical",
 name: "Beat Up",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, allyanim: 1},
 onModifyMove(move, pokemon) {
@@ -1157,7 +1136,7 @@ type: "Normal",
 
 bide: {
 accuracy: 95,
-basePower: 0,
+basePower: 20,
 category: "Physical",
 name: "Bide",
 pp: 0.625,
@@ -2466,24 +2445,6 @@ target: "any",
 type: "Psychic",
 },
 
-constrict: {
-accuracy: 95,
-basePower: 15,
-category: "Physical",
-name: "Constrict",
-pp: 1.25,
-priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
-secondary: {
-chance: 25,
-boosts: {
-spe: -1,
-},
-},
-target: "any",
-type: "Normal",
-},
-
 continentalcrush: {
 accuracy: 85,
 basePower: 105,
@@ -2563,10 +2524,10 @@ type: "Steel",
 
 corrosivegas: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 40,
+category: "Special",
 name: "Corrosive Gas",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 onHit(target, source) {
@@ -2746,29 +2707,6 @@ this.add('-activate', source, 'move: Court Change');
 },
 secondary: null,
 target: "all",
-type: "Normal",
-},
-
-covet: {
-accuracy: 95,
-basePower: 50,
-category: "Physical",
-name: "Covet",
-pp: 1.25,
-priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
-volatileStatus: 'attract',
-onBeforeMovePriority: 2,
-onBeforeMove(pokemon, target, move) {
-this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
-this.add('cant', pokemon, 'Attract');
-return false;
-}
-},
-critRatio: 0,
-secondary: null,
-target: "any",
 type: "Normal",
 },
 
@@ -12243,7 +12181,7 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 weather: 'Sandstorm',
 secondary: {
-chance: 100,
+chance: 95,
 evasion: -1,
 },
 target: "allAdjacentFoes",
@@ -12392,6 +12330,7 @@ name: "Scorching Sands",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, defrost: 1},
+weather: 'Sandstorm',
 thawsTarget: true,
 secondary: {
 chance: 25,
@@ -16950,27 +16889,33 @@ type: "Psychic",
 },
 
 malignantchain: {
-accuracy: 100,
-basePower: 100,
+accuracy: 85,
+basePower: 80,
 category: "Special",
 name: "Malignant Chain",
-pp: 5,
+pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1},
-secondary: {
-chance: 50,
-status: 'tox',
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Steel') return 1;
 },
-target: "normal",
+secondary: {
+chance: 66
+status: 'tox',
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
 type: "Poison",
 },
 
 burningbulwark: {
-accuracy: 100,
+accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Burning Bulwark",
-pp: 10,
+pp: 0.625,
 priority: 4,
 flags: {metronome: 1, noassist: 1, failcopycat: 1},
 stallingMove: true,
@@ -17022,26 +16967,28 @@ type: "Fire",
 },
 
 mightycleave: {
-accuracy: 100,
-basePower: 95,
+accuracy: 85,
+basePower: 100,
 category: "Physical",
 name: "Mighty Cleave",
-pp: 5,
+pp: 1.25,
 priority: 0,
-flags: {contact: 1, mirror: 1, metronome: 1, slicing: 1},
+flags: {contact: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+breaksProtect: true,
 secondary: null,
-target: "normal",
+target: "any",
 type: "Rock",
 },
 
 thunderclap: {
-accuracy: 100,
+accuracy: 95,
 basePower: 70,
 category: "Special",
 name: "Thunderclap",
-pp: 5,
+pp: 0.625,
 priority: 1,
-flags: {protect: 1, mirror: 1, metronome: 1},
+flags: {protect: 1, mirror: 1},
 onTry(source, target) {
 const action = this.queue.willMove(target);
 const move = action?.choice === 'move' ? action.move : null;
@@ -17050,38 +16997,40 @@ return false;
 }
 },
 secondary: null,
-target: "normal",
+target: "any",
 type: "Electric",
 },
 
 tachyoncutter: {
-accuracy: 100,
+accuracy: 95,
 basePower: 50,
 category: "Special",
 name: "Tachyon Cutter",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1, slicing: 1},
+flags: {protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
 multihit: 2,
+multiaccuracy: 50,
 secondary: null,
-target: "normal",
+target: "any",
 type: "Steel",
 },
 
 electroshot: {
-accuracy: 100,
+accuracy: 85,
 basePower: 130,
 category: "Special",
 name: "Electro Shot",
-pp: 10,
+pp: 0.625,
 priority: 0,
-flags: {charge: 1, protect: 1, mirror: 1, metronome: 1},
+flags: {charge: 1, protect: 1, mirror: 1},
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
 }
 this.add('-prepare', attacker, move.name);
-this.boost({spa: 1}, attacker, attacker, move);
+this.boost({spa: 2}, attacker, attacker, move);
 if (['raindance', 'primordialsea'].includes(attacker.effectiveWeather())) {
 this.attrLastMove('[still]');
 this.addMove('-anim', attacker, move.name, defender);
@@ -17095,18 +17044,18 @@ return null;
 },
 secondary: null,
 hasSheerForce: true,
-target: "normal",
+target: "any",
 type: "Electric",
 },
 
 ficklebeam: {
-accuracy: 100,
-basePower: 80,
+accuracy: 95,
+basePower: 60,
 category: "Special",
 name: "Fickle Beam",
-pp: 5,
+pp: 1.25,
 priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1},
+flags: {protect: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
 if (this.randomChance(3, 10)) {
 this.attrLastMove('[anim] Fickle Beam All Out');
@@ -17115,34 +17064,34 @@ return this.chainModify(2);
 }
 },
 secondary: null,
-target: "normal",
+target: "any",
 type: "Dragon",
 },
 
 psychicnoise: {
-accuracy: 100,
+accuracy: 95,
 basePower: 75,
 category: "Special",
 name: "Psychic Noise",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 100,
+chance: 95,
 volatileStatus: 'healblock',
 },
-target: "normal",
+target: "any",
 type: "Psychic",
 },
 
 upperhand: {
-accuracy: 100,
-basePower: 65,
+accuracy: 95,
+basePower: 60,
 category: "Physical",
 name: "Upper Hand",
-pp: 15,
+pp: 0.625,
 priority: 3,
-flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 onTryHit(target, pokemon) {
 const action = this.queue.willMove(target);
 const move = action?.choice === 'move' ? action.move : null;
@@ -17151,16 +17100,16 @@ return false;
 }
 },
 secondary: {
-chance: 100,
+chance: 75,
 volatileStatus: 'flinch',
 },
-target: "normal",
+target: "any",
 type: "Fighting",
 },
 
 temperflare: {
-accuracy: 100,
-basePower: 75,
+accuracy: 95,
+basePower: 70,
 basePowerCallback(pokemon, target, move) {
 if (pokemon.moveLastTurnResult === false) {
 this.debug('doubling Temper Flare BP due to previous move failure');
@@ -17172,40 +17121,40 @@ category: "Physical",
 name: "Temper Flare",
 pp: 10,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
-target: "normal",
+target: "any",
 type: "Fire",
 },
 
 alluringvoice: {
-accuracy: 100,
-basePower: 80,
+accuracy: 95,
+basePower: 70,
 category: "Special",
 name: "Alluring Voice",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 100,
+chance: 95,
 onHit(target, source, move) {
 if (target?.statsRaisedThisTurn) {
 target.addVolatile('confusion', source, move);
 }
 },
 },
-target: "normal",
+target: "any",
 type: "Fairy",
 },
 
 dragoncheer: {
-accuracy: 100,
+accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Dragon Cheer",
 pp: 15,
 priority: 0,
-flags: {bypasssub: 1, allyanim: 1, metronome: 1},
+flags: {bypasssub: 1, allyanim: 1},
 volatileStatus: 'dragoncheer',
 condition: {
 onStart(target, source, effect) {
@@ -17231,33 +17180,33 @@ type: "Dragon",
 },
 
 supercellslam: {
-accuracy: 95,
+accuracy: 75,
 basePower: 100,
 category: "Physical",
 name: "Supercell Slam",
-pp: 15,
+pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Supercell Slam'));
 },
 secondary: null,
-target: "normal",
+target: "any",
 type: "Electric",
 },
 
 syrupbomb: {
 accuracy: 85,
-basePower: 60,
+basePower: 50,
 category: "Special",
 name: "Syrup Bomb",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
+flags: {protect: 1, mirror: 1, bullet: 1},
 condition: {
 noCopy: true,
-duration: 4,
+duration: 10,
 onStart(pokemon) {
 this.add('-start', pokemon, 'Syrup Bomb');
 },
@@ -17270,73 +17219,41 @@ this.add('-end', pokemon, 'Syrup Bomb', '[silent]');
 },
 },
 secondary: {
-chance: 100,
+chance: 95,
 volatileStatus: 'syrupbomb',
 },
-target: "normal",
+target: "allAdjacent",
 type: "Grass",
 },
 
 matchagotcha: {
-accuracy: 90,
+accuracy: 85,
 basePower: 80,
 category: "Special",
 name: "Matcha Gotcha",
-pp: 15,
+pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1, defrost: 1, heal: 1, metronome: 1},
+flags: {protect: 1, mirror: 1, defrost: 1, heal: 1},
 drain: [1, 2],
 thawsTarget: true,
 secondary: {
-chance: 20,
+chance: 25,
 status: 'brn',
 },
 target: "allAdjacentFoes",
 type: "Grass",
 },
 
-ivycudgel: {
-accuracy: 100,
-basePower: 100,
-category: "Physical",
-name: "Ivy Cudgel",
-pp: 10,
-priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1},
-critRatio: 2,
-onPrepareHit(target, source, move) {
-if (move.type !== "Grass") {
-this.attrLastMove('[anim] Ivy Cudgel ' + move.type);
-}
-},
-onModifyType(move, pokemon) {
-switch (pokemon.species.name) {
-case 'Ogerpon-Wellspring': case 'Ogerpon-Wellspring-Tera':
-move.type = 'Water';
-break;
-case 'Ogerpon-Hearthflame': case 'Ogerpon-Hearthflame-Tera':
-move.type = 'Fire';
-break;
-case 'Ogerpon-Cornerstone': case 'Ogerpon-Cornerstone-Tera':
-move.type = 'Rock';
-break;
-}
-},
-secondary: null,
-target: "normal",
-type: "Grass",
-},
-
 bloodmoon: {
-accuracy: 100,
+accuracy: 85,
 basePower: 140,
 category: "Special",
 name: "Blood Moon",
-pp: 5,
+pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1, metronome: 1, cantusetwice: 1},
+flags: {protect: 1, mirror: 1},
 secondary: null,
-target: "normal",
+target: "any",
 type: "Normal",
 },
 
