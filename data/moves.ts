@@ -16902,9 +16902,9 @@ if (type === 'Steel') return 1;
 secondary: {
 chance: 66
 status: 'tox',
+},
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
-},
 },
 target: "any",
 type: "Poison",
