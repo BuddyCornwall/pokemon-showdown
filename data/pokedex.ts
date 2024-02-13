@@ -7253,9 +7253,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
-"Arceus", "Arceus-Fighting", "Arceus-Flying", "Arceus-Poison", "Arceus-Ground", "Arceus-Rock", "Arceus-Bug", "Arceus-Ghost", "Arceus-Steel",
-"Arceus-Fire", "Arceus-Water", "Arceus-Grass", "Arceus-Electric", "Arceus-Psychic", "Arceus-Ice", "Arceus-Dragon", "Arceus-Dark", "Arceus-Fairy",
-],
 },
 
 arceusbug: {
