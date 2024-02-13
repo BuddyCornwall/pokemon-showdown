@@ -1119,7 +1119,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Belly Drum",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
 onHit(target) {
@@ -3169,7 +3169,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
 secondary: {
-chance: 30,
+chance: 50,
 onHit(target, source) {
 const result = this.random(3);
 if (result === 0) {
