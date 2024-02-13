@@ -11562,11 +11562,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 100, def: 60, spa: 100, spd: 60, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-cosmeticFormes: ["Minior-Orange", "Minior-Yellow", "Minior-Green", "Minior-Blue", "Minior-Indigo", "Minior-Violet"],
-// All of the colored Minior Meteor formes (unsupported by PS) are numbers 0-6
-Minior-Meteor, "Minior-Meteor", "Minior-Meteor", "Minior-Meteor", "Minior-Meteor", "Minior-Meteor", "Minior-Meteor",
-Minior, "Minior-Orange", "Minior-Yellow", "Minior-Green", "Minior-Blue", "Minior-Indigo", "Minior-Violet",
-],
 },
 
 miniormeteor: {
