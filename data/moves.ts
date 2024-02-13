@@ -1783,7 +1783,7 @@ pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
 boosts: {
-atk: 1.5
+atk: 1.5,
 def: 1.5,
 evasion: -1.5,
 },
