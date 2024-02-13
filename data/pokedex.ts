@@ -7,7 +7,6 @@ baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
 gender: "F",
 abilities: {0: "No Ability"},
 weightkg: 6.9,
-evos: ["Ivysaur"],
 },
 
 ivysaur: {
@@ -18,8 +17,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 13,
-prevo: "Bulbasaur",
-evos: ["Venusaur"],
 },
 
 venusaur: {
@@ -30,7 +27,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 100,
-prevo: "Ivysaur",
 },
 
 venusaurmega: {
@@ -53,7 +49,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Venusaur",
 },
 
 charmander: {
@@ -64,7 +59,6 @@ gender: "F",
 baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Charmeleon"],
 },
 
 charmeleon: {
@@ -75,8 +69,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 19,
-prevo: "Charmander",
-evos: ["Charizard"],
 },
 
 charizard: {
@@ -87,7 +79,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 90.5,
-prevo: "Charmeleon",
 },
 
 charizardmegax: {
@@ -121,7 +112,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Charizard",
 },
 
 squirtle: {
@@ -132,7 +122,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 48, def: 65, spa: 50, spd: 64, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 9,
-evos: ["Wartortle"],
 },
 
 wartortle: {
@@ -143,8 +132,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 63, def: 80, spa: 65, spd: 80, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 22.5,
-prevo: "Squirtle",
-evos: ["Blastoise"],
 },
 
 blastoise: {
@@ -155,7 +142,6 @@ gender: "F",
 baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 85.5,
-prevo: "Wartortle",
 },
 
 blastoisemega: {
@@ -178,7 +164,6 @@ gender: "F",
 baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Blastoise",
 },
 
 caterpie: {
@@ -189,7 +174,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 35, spa: 20, spd: 20, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 2.9,
-evos: ["Metapod"],
 },
 
 metapod: {
@@ -200,8 +184,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 20, def: 55, spa: 25, spd: 25, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 9.9,
-prevo: "Caterpie",
-evos: ["Butterfree"],
 },
 
 butterfree: {
@@ -212,7 +194,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 40, def: 55, spa: 111, spd: 95, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 32,
-prevo: "Metapod",
 },
 
 butterfreegmax: {
@@ -224,7 +205,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Butterfree",
 },
 
 weedle: {
@@ -235,7 +215,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 3.2,
-evos: ["Kakuna"],
 },
 
 kakuna: {
@@ -246,8 +225,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 25, def: 50, spa: 25, spd: 25, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 10,
-prevo: "Weedle",
-evos: ["Beedrill"],
 },
 
 beedrill: {
@@ -258,7 +235,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 95, def: 45, spa: 45, spd: 85, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 29.5,
-prevo: "Kakuna",
 },
 
 beedrillmega: {
@@ -280,7 +256,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 40, spa: 35, spd: 35, spe: 56},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Pidgeotto"],
 },
 
 pidgeotto: {
@@ -291,8 +266,6 @@ gender: "F",
 baseStats: {hp: 63, atk: 60, def: 55, spa: 50, spd: 50, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Pidgey",
-evos: ["Pidgeot"],
 },
 
 pidgeot: {
@@ -303,7 +276,6 @@ gender: "F",
 baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
 abilities: {0: "No Ability"},
 weightkg: 39.5,
-prevo: "Pidgeotto",
 },
 
 pidgeotmega: {
@@ -325,7 +297,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-evos: ["Raticate"],
 },
 
 rattataalola: {
@@ -337,7 +308,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 3.8,
-evos: ["Raticate-Alola"],
 },
 
 raticate: {
@@ -348,7 +318,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 85, def: 60, spa: 50, spd: 80, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 18.5,
-prevo: "Rattata",
 },
 
 raticatealola: {
@@ -360,7 +329,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 75, def: 75, spa: 40, spd: 85, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 25.5,
-prevo: "Rattata-Alola",
 evoCondition: "at night",
 },
 
@@ -383,7 +351,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 60, def: 30, spa: 31, spd: 31, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Fearow"],
 },
 
 fearow: {
@@ -394,7 +361,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 38,
-prevo: "Spearow",
 },
 
 ekans: {
@@ -405,7 +371,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 60, def: 44, spa: 40, spd: 54, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 6.9,
-evos: ["Arbok"],
 },
 
 arbok: {
@@ -416,7 +381,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 65,
-prevo: "Ekans",
 },
 
 pikachu: {
@@ -450,7 +414,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-changesFrom: "Pikachu-Cosplay",
 gen: 6,
 },
 
@@ -463,7 +426,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-changesFrom: "Pikachu-Cosplay",
 gen: 6,
 },
 
@@ -476,7 +438,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-changesFrom: "Pikachu-Cosplay",
 gen: 6,
 },
 
@@ -489,7 +450,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-changesFrom: "Pikachu-Cosplay",
 gen: 6,
 },
 
@@ -502,7 +462,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-changesFrom: "Pikachu-Cosplay",
 gen: 6,
 },
 
@@ -610,7 +569,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Pikachu",
 },
 
 pikachuworld: {
@@ -633,8 +591,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Pikachu",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -647,8 +603,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 21,
-prevo: "Pikachu",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 evoRegion: "Alola",
 },
@@ -661,7 +615,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 75, def: 85, spa: 20, spd: 30, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Sandslash"],
 },
 
 sandshrewalola: {
@@ -673,7 +626,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 75, def: 90, spa: 10, spd: 35, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 40,
-evos: ["Sandslash-Alola"],
 },
 
 sandslash: {
@@ -684,7 +636,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 29.5,
-prevo: "Sandshrew",
 },
 
 sandslashalola: {
@@ -696,8 +647,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 100, def: 120, spa: 25, spd: 65, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Sandshrew-Alola",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -709,7 +658,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 47, def: 52, spa: 40, spd: 40, spe: 41},
 abilities: {0: "No Ability"},
 weightkg: 7,
-evos: ["Nidorina"],
 },
 
 nidorina: {
@@ -720,8 +668,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 62, def: 67, spa: 55, spd: 55, spe: 56},
 abilities: {0: "No Ability"},
 weightkg: 20,
-prevo: "Nidoran-F",
-evos: ["Nidoqueen"],
 },
 
 nidoqueen: {
@@ -732,8 +678,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76},
 abilities: {0: "No Ability"},
 weightkg: 60,
-prevo: "Nidorina",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -745,7 +689,6 @@ gender: "F",
 baseStats: {hp: 46, atk: 57, def: 40, spa: 40, spd: 40, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 9,
-evos: ["Nidorino"],
 },
 
 nidorino: {
@@ -756,8 +699,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 80, def: 57, spa: 47, spd: 55, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-prevo: "Nidoran-M",
-evos: ["Nidoking"],
 },
 
 nidoking: {
@@ -768,8 +709,6 @@ gender: "F",
 baseStats: {hp: 81, atk: 115, def: 77, spa: 72, spd: 75, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 62,
-prevo: "Nidorino",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -781,9 +720,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 45, def: 48, spa: 60, spd: 65, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-prevo: "Cleffa",
-evoType: "levelFriendship",
-evos: ["Clefable"],
 },
 
 clefable: {
@@ -794,8 +730,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 40,
-prevo: "Clefairy",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -807,7 +741,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 9.9,
-evos: ["Ninetales"],
 },
 
 vulpixalola: {
@@ -819,7 +752,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 9.9,
-evos: ["Ninetales-Alola"],
 },
 
 ninetales: {
@@ -830,8 +762,6 @@ gender: "F",
 baseStats: {hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 19.9,
-prevo: "Vulpix",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -844,8 +774,6 @@ gender: "F",
 baseStats: {hp: 73, atk: 67, def: 75, spa: 81, spd: 100, spe: 109},
 abilities: {0: "No Ability"},
 weightkg: 19.9,
-prevo: "Vulpix-Alola",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -857,9 +785,6 @@ gender: "F",
 baseStats: {hp: 115, atk: 45, def: 20, spa: 45, spd: 25, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-prevo: "Igglybuff",
-evoType: "levelFriendship",
-evos: ["Wigglytuff"],
 },
 
 wigglytuff: {
@@ -870,8 +795,6 @@ gender: "F",
 baseStats: {hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 12,
-prevo: "Jigglypuff",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -883,7 +806,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 35, spa: 30, spd: 40, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-evos: ["Golbat"],
 },
 
 golbat: {
@@ -894,8 +816,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Zubat",
-evos: ["Crobat"],
 },
 
 oddish: {
@@ -906,7 +826,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 50, def: 55, spa: 75, spd: 65, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 5.4,
-evos: ["Gloom"],
 },
 
 gloom: {
@@ -917,8 +836,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 65, def: 70, spa: 85, spd: 75, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 8.6,
-prevo: "Oddish",
-evos: ["Vileplume", "Bellossom"],
 },
 
 vileplume: {
@@ -929,8 +846,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 18.6,
-prevo: "Gloom",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -942,7 +857,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 70, def: 55, spa: 45, spd: 55, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 5.4,
-evos: ["Parasect"],
 },
 
 parasect: {
@@ -953,7 +867,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 100, def: 85, spa: 60, spd: 95, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 29.5,
-prevo: "Paras",
 },
 
 venonat: {
@@ -964,7 +877,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 55, def: 50, spa: 40, spd: 55, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 30,
-evos: ["Venomoth"],
 },
 
 venomoth: {
@@ -975,7 +887,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-prevo: "Venonat",
 },
 
 diglett: {
@@ -986,7 +897,6 @@ gender: "F",
 baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 45, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 0.8,
-evos: ["Dugtrio"],
 },
 
 diglettalola: {
@@ -998,7 +908,6 @@ gender: "F",
 baseStats: {hp: 10, atk: 55, def: 30, spa: 35, spd: 45, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Dugtrio-Alola"],
 },
 
 dugtrio: {
@@ -1009,7 +918,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 33.3,
-prevo: "Diglett",
 },
 
 dugtrioalola: {
@@ -1021,7 +929,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 100, def: 60, spa: 50, spd: 70, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 66.6,
-prevo: "Diglett-Alola",
 },
 
 meowth: {
@@ -1032,7 +939,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 4.2,
-evos: ["Persian"],
 },
 
 meowthalola: {
@@ -1044,7 +950,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 35, def: 35, spa: 50, spd: 40, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 4.2,
-evos: ["Persian-Alola"],
 },
 
 meowthgalar: {
@@ -1056,7 +961,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 55, spa: 40, spd: 40, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-evos: ["Perrserker"],
 },
 
 meowthgmax: {
@@ -1068,7 +972,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Meowth",
 },
 
 persian: {
@@ -1079,7 +982,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 32,
-prevo: "Meowth",
 },
 
 persianalola: {
@@ -1091,8 +993,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 60, spa: 75, spd: 65, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 33,
-prevo: "Meowth-Alola",
-evoType: "levelFriendship",
 },
 
 psyduck: {
@@ -1103,7 +1003,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 52, def: 48, spa: 65, spd: 50, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 19.6,
-evos: ["Golduck"],
 },
 
 golduck: {
@@ -1114,7 +1013,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 76.6,
-prevo: "Psyduck",
 },
 
 mankey: {
@@ -1125,7 +1023,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 80, def: 35, spa: 35, spd: 45, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 28,
-evos: ["Primeape"],
 },
 
 primeape: {
@@ -1136,8 +1033,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 32,
-prevo: "Mankey",
-evos: ["Annihilape"],
 },
 
 growlithe: {
@@ -1148,7 +1043,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 19,
-evos: ["Arcanine"],
 },
 
 growlithehisui: {
@@ -1160,7 +1054,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 75, def: 45, spa: 65, spd: 50, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 22.7,
-evos: ["Arcanine-Hisui"],
 },
 
 arcanine: {
@@ -1171,8 +1064,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 155,
-prevo: "Growlithe",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -1185,8 +1076,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 115, def: 80, spa: 95, spd: 80, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 168,
-prevo: "Growlithe-Hisui",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -1198,7 +1087,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 50, def: 40, spa: 40, spd: 40, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 12.4,
-evos: ["Poliwhirl"],
 },
 
 poliwhirl: {
@@ -1209,8 +1097,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 65, def: 65, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 20,
-prevo: "Poliwag",
-evos: ["Poliwrath", "Politoed"],
 },
 
 poliwrath: {
@@ -1221,8 +1107,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 54,
-prevo: "Poliwhirl",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -1234,7 +1118,6 @@ gender: "F",
 baseStats: {hp: 25, atk: 20, def: 15, spa: 105, spd: 55, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-evos: ["Kadabra"],
 },
 
 kadabra: {
@@ -1245,8 +1128,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 35, def: 30, spa: 120, spd: 70, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 56.5,
-prevo: "Abra",
-evos: ["Alakazam"],
 },
 
 alakazam: {
@@ -1257,8 +1138,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 48,
-prevo: "Kadabra",
-evoType: "trade",
 },
 
 alakazammega: {
@@ -1280,7 +1159,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 80, def: 50, spa: 35, spd: 35, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-evos: ["Machoke"],
 },
 
 machoke: {
@@ -1291,8 +1169,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 100, def: 70, spa: 50, spd: 60, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 70.5,
-prevo: "Machop",
-evos: ["Machamp"],
 },
 
 machamp: {
@@ -1303,8 +1179,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 130,
-prevo: "Machoke",
-evoType: "trade",
 },
 
 machampgmax: {
@@ -1316,7 +1190,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Machamp",
 },
 
 bellsprout: {
@@ -1327,7 +1200,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 75, def: 35, spa: 70, spd: 30, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Weepinbell"],
 },
 
 weepinbell: {
@@ -1338,8 +1210,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 50, spa: 85, spd: 45, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 6.4,
-prevo: "Bellsprout",
-evos: ["Victreebel"],
 },
 
 victreebel: {
@@ -1350,8 +1220,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 15.5,
-prevo: "Weepinbell",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -1363,7 +1231,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 45.5,
-evos: ["Tentacruel"],
 },
 
 tentacruel: {
@@ -1374,7 +1241,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Tentacool",
 },
 
 geodude: {
@@ -1385,7 +1251,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 20,
-evos: ["Graveler"],
 },
 
 geodudealola: {
@@ -1397,7 +1262,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 20.3,
-evos: ["Graveler-Alola"],
 },
 
 graveler: {
@@ -1408,8 +1272,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 105,
-prevo: "Geodude",
-evos: ["Golem"],
 },
 
 graveleralola: {
@@ -1421,8 +1283,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 110,
-prevo: "Geodude-Alola",
-evos: ["Golem-Alola"],
 },
 
 golem: {
@@ -1433,8 +1293,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 300,
-prevo: "Graveler",
-evoType: "trade",
 },
 
 golemalola: {
@@ -1446,8 +1304,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 316,
-prevo: "Graveler-Alola",
-evoType: "trade",
 },
 
 ponyta: {
@@ -1458,7 +1314,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 30,
-evos: ["Rapidash"],
 },
 
 ponytagalar: {
@@ -1470,7 +1325,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 24,
-evos: ["Rapidash-Galar"],
 },
 
 rapidash: {
@@ -1481,7 +1335,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 95,
-prevo: "Ponyta",
 },
 
 rapidashgalar: {
@@ -1493,7 +1346,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 80,
-prevo: "Ponyta-Galar",
 },
 
 slowpoke: {
@@ -1504,7 +1356,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 36,
-evos: ["Slowbro", "Slowking"],
 },
 
 slowpokegalar: {
@@ -1516,7 +1367,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 36,
-evos: ["Slowbro-Galar", "Slowking-Galar"],
 },
 
 slowbro: {
@@ -1527,7 +1377,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 75, def: 115, spa: 105, spd: 90, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 78.5,
-prevo: "Slowpoke",
 },
 
 slowbromega: {
@@ -1550,8 +1399,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 100, def: 95, spa: 100, spd: 70, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 70.5,
-prevo: "Slowpoke-Galar",
-evoType: "useItem",
 evoItem: "Galarica Cuff",
 },
 
@@ -1563,7 +1410,6 @@ gender: "F",
 baseStats: {hp: 25, atk: 35, def: 70, spa: 95, spd: 55, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Magneton"],
 },
 
 magneton: {
@@ -1574,8 +1420,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 60,
-prevo: "Magnemite",
-evos: ["Magnezone"],
 },
 
 farfetchd: {
@@ -1597,7 +1441,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 95, def: 55, spa: 58, spd: 62, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Sirfetch\u2019d"],
 },
 
 doduo: {
@@ -1608,7 +1451,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 39.2,
-evos: ["Dodrio"],
 },
 
 dodrio: {
@@ -1619,7 +1461,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 85.2,
-prevo: "Doduo",
 },
 
 seel: {
@@ -1630,7 +1471,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 45, def: 55, spa: 45, spd: 70, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 90,
-evos: ["Dewgong"],
 },
 
 dewgong: {
@@ -1641,7 +1481,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Seel",
 },
 
 grimer: {
@@ -1652,7 +1491,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 30,
-evos: ["Muk"],
 },
 
 grimeralola: {
@@ -1664,7 +1502,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 42,
-evos: ["Muk-Alola"],
 },
 
 muk: {
@@ -1675,7 +1512,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Grimer",
 },
 
 mukalola: {
@@ -1687,7 +1523,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 52,
-prevo: "Grimer-Alola",
 },
 
 shellder: {
@@ -1698,7 +1533,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 65, def: 100, spa: 45, spd: 25, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Cloyster"],
 },
 
 cloyster: {
@@ -1709,8 +1543,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 132.5,
-prevo: "Shellder",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -1722,7 +1554,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 35, def: 30, spa: 100, spd: 35, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 0.1,
-evos: ["Haunter"],
 },
 
 haunter: {
@@ -1733,8 +1564,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 50, def: 45, spa: 115, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 0.1,
-prevo: "Gastly",
-evos: ["Gengar"],
 },
 
 gengar: {
@@ -1745,8 +1574,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 40.5,
-prevo: "Haunter",
-evoType: "trade",
 },
 
 gengarmega: {
@@ -1769,7 +1596,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Gengar",
 },
 
 onix: {
@@ -1780,7 +1606,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 210,
-evos: ["Steelix"],
 },
 
 drowzee: {
@@ -1791,7 +1616,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 48, def: 45, spa: 43, spd: 90, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 32.4,
-evos: ["Hypno"],
 },
 
 hypno: {
@@ -1802,7 +1626,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 75.6,
-prevo: "Drowzee",
 },
 
 krabby: {
@@ -1813,7 +1636,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 105, def: 90, spa: 25, spd: 25, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-evos: ["Kingler"],
 },
 
 kingler: {
@@ -1824,7 +1646,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 60,
-prevo: "Krabby",
 },
 
 kinglergmax: {
@@ -1836,7 +1657,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Kingler",
 },
 
 voltorb: {
@@ -1847,7 +1667,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 10.4,
-evos: ["Electrode"],
 },
 
 voltorbhisui: {
@@ -1859,7 +1678,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 13,
-evos: ["Electrode-Hisui"],
 },
 
 electrode: {
@@ -1870,7 +1688,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
 abilities: {0: "No Ability"},
 weightkg: 66.6,
-prevo: "Voltorb",
 },
 
 electrodehisui: {
@@ -1882,8 +1699,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
 abilities: {0: "No Ability"},
 weightkg: 71,
-prevo: "Voltorb-Hisui",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -1895,7 +1710,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 40, def: 80, spa: 60, spd: 45, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Exeggutor", "Exeggutor-Alola"],
 },
 
 exeggutor: {
@@ -1906,8 +1720,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Exeggcute",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -1920,8 +1732,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 105, def: 85, spa: 125, spd: 75, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 415.6,
-prevo: "Exeggcute",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 evoRegion: "Alola",
 },
@@ -1934,7 +1744,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 95, spa: 40, spd: 50, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-evos: ["Marowak", "Marowak-Alola"],
 },
 
 marowak: {
@@ -1945,7 +1754,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 90, def: 110, spa: 50, spd: 85, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 45,
-prevo: "Cubone",
 },
 
 marowakalola: {
@@ -1957,7 +1765,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 90, def: 110, spa: 50, spd: 85, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 34,
-prevo: "Cubone",
 evoCondition: "at night",
 evoRegion: "Alola",
 },
@@ -1981,7 +1788,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87},
 abilities: {0: "No Ability"},
 weightkg: 49.8,
-prevo: "Tyrogue",
 evoCondition: "with an Atk stat > its Def stat",
 },
 
@@ -1993,7 +1799,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76},
 abilities: {0: "No Ability"},
 weightkg: 50.2,
-prevo: "Tyrogue",
 evoCondition: "with an Atk stat < its Def stat",
 },
 
@@ -2005,7 +1810,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 65.5,
-evos: ["Lickilicky"],
 },
 
 koffing: {
@@ -2016,7 +1820,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Weezing", "Weezing-Galar"],
 },
 
 weezing: {
@@ -2027,7 +1830,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-prevo: "Koffing",
 },
 
 weezinggalar: {
@@ -2039,7 +1841,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 16,
-prevo: "Koffing",
 evoRegion: "Galar",
 },
 
@@ -2051,7 +1852,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 85, def: 95, spa: 30, spd: 30, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 115,
-evos: ["Rhydon"],
 },
 
 rhydon: {
@@ -2062,8 +1862,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Rhyhorn",
-evos: ["Rhyperior"],
 },
 
 chansey: {
@@ -2074,11 +1872,8 @@ gender: "F",
 baseStats: {hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 34.6,
-prevo: "Happiny",
-evoType: "levelHold",
 evoItem: "Oval Stone",
 evoCondition: "during the day",
-evos: ["Blissey"],
 canHatch: true,
 },
 
@@ -2090,7 +1885,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 35,
-evos: ["Tangrowth"],
 },
 
 kangaskhan: {
@@ -2122,7 +1916,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 40, def: 70, spa: 70, spd: 25, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Seadra"],
 },
 
 seadra: {
@@ -2133,8 +1926,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Horsea",
-evos: ["Kingdra"],
 },
 
 goldeen: {
@@ -2145,7 +1936,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 67, def: 60, spa: 35, spd: 50, spe: 63},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Seaking"],
 },
 
 seaking: {
@@ -2156,7 +1946,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 39,
-prevo: "Goldeen",
 },
 
 staryu: {
@@ -2167,7 +1956,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 45, def: 55, spa: 70, spd: 55, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 34.5,
-evos: ["Starmie"],
 },
 
 starmie: {
@@ -2178,8 +1966,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 80,
-prevo: "Staryu",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -2191,9 +1977,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 54.5,
-prevo: "Mime Jr.",
-evoType: "levelMove",
-evoMove: "Mimic",
 canHatch: true,
 },
 
@@ -2206,11 +1989,7 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 65, spa: 90, spd: 90, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 56.8,
-prevo: "Mime Jr.",
-evoType: "levelMove",
-evoMove: "Mimic",
 evoRegion: "Galar",
-evos: ["Mr. Rime"],
 canHatch: true,
 },
 
@@ -2222,7 +2001,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 56,
-evos: ["Scizor", "Kleavor"],
 },
 
 jynx: {
@@ -2233,7 +2011,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 40.6,
-prevo: "Smoochum",
 },
 
 electabuzz: {
@@ -2244,8 +2021,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Elekid",
-evos: ["Electivire"],
 },
 
 magmar: {
@@ -2256,8 +2031,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
 abilities: {0: "No Ability"},
 weightkg: 44.5,
-prevo: "Magby",
-evos: ["Magmortar"],
 },
 
 pinsir: {
@@ -2332,7 +2105,6 @@ gender: "F",
 baseStats: {hp: 20, atk: 10, def: 55, spa: 15, spd: 20, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 10,
-evos: ["Gyarados"],
 },
 
 gyarados: {
@@ -2343,7 +2115,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81},
 abilities: {0: "No Ability"},
 weightkg: 235,
-prevo: "Magikarp",
 },
 
 gyaradosmega: {
@@ -2376,7 +2147,6 @@ gender: "F",
 baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Lapras",
 },
 
 ditto: {
@@ -2397,7 +2167,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 65, def: 60, spa: 65, spd: 75, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-evos: ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"],
 },
 
 eeveestarter: {
@@ -2420,7 +2189,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Eevee",
 },
 
 vaporeon: {
@@ -2431,8 +2199,6 @@ gender: "F",
 baseStats: {hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 29,
-prevo: "Eevee",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -2444,8 +2210,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130},
 abilities: {0: "No Ability"},
 weightkg: 24.5,
-prevo: "Eevee",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -2457,8 +2221,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Eevee",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -2470,7 +2232,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 36.5,
-evos: ["Porygon2"],
 },
 
 omanyte: {
@@ -2481,7 +2242,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 40, def: 100, spa: 90, spd: 55, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-evos: ["Omastar"],
 },
 
 omastar: {
@@ -2492,7 +2252,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 35,
-prevo: "Omanyte",
 },
 
 kabuto: {
@@ -2503,7 +2262,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 80, def: 90, spa: 55, spd: 45, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-evos: ["Kabutops"],
 },
 
 kabutops: {
@@ -2514,7 +2272,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 40.5,
-prevo: "Kabuto",
 },
 
 aerodactyl: {
@@ -2546,8 +2303,6 @@ gender: "F",
 baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 460,
-prevo: "Munchlax",
-evoType: "levelFriendship",
 canHatch: true,
 },
 
@@ -2560,7 +2315,6 @@ gender: "F",
 baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Snorlax",
 },
 
 articuno: {
@@ -2634,7 +2388,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 3.3,
-evos: ["Dragonair"],
 },
 
 dragonair: {
@@ -2645,8 +2398,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 16.5,
-prevo: "Dratini",
-evos: ["Dragonite"],
 },
 
 dragonite: {
@@ -2657,7 +2408,6 @@ gender: "F",
 baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 210,
-prevo: "Dragonair",
 },
 
 mewtwo: {
@@ -2710,7 +2460,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 49, def: 65, spa: 49, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 6.4,
-evos: ["Bayleef"],
 },
 
 bayleef: {
@@ -2721,8 +2470,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 62, def: 80, spa: 63, spd: 80, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 15.8,
-prevo: "Chikorita",
-evos: ["Meganium"],
 },
 
 meganium: {
@@ -2733,7 +2480,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-prevo: "Bayleef",
 },
 
 cyndaquil: {
@@ -2744,7 +2490,6 @@ gender: "F",
 baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 7.9,
-evos: ["Quilava"],
 },
 
 quilava: {
@@ -2755,8 +2500,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 19,
-prevo: "Cyndaquil",
-evos: ["Typhlosion", "Typhlosion-Hisui"],
 },
 
 typhlosion: {
@@ -2767,7 +2510,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 79.5,
-prevo: "Quilava",
 },
 
 typhlosionhisui: {
@@ -2779,7 +2521,6 @@ gender: "F",
 baseStats: {hp: 73, atk: 84, def: 78, spa: 119, spd: 85, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 69.8,
-prevo: "Quilava",
 },
 
 totodile: {
@@ -2790,7 +2531,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 64, spa: 44, spd: 48, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-evos: ["Croconaw"],
 },
 
 croconaw: {
@@ -2801,8 +2541,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 80, def: 80, spa: 59, spd: 63, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Totodile",
-evos: ["Feraligatr"],
 },
 
 feraligatr: {
@@ -2813,7 +2551,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 88.8,
-prevo: "Croconaw",
 },
 
 sentret: {
@@ -2824,7 +2561,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 46, def: 34, spa: 35, spd: 45, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Furret"],
 },
 
 furret: {
@@ -2835,7 +2571,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 85, def: 65, spa: 45, spd: 55, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 32.5,
-prevo: "Sentret",
 },
 
 hoothoot: {
@@ -2846,7 +2581,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 21.2,
-evos: ["Noctowl"],
 },
 
 noctowl: {
@@ -2857,7 +2591,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 50, def: 50, spa: 86, spd: 96, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 40.8,
-prevo: "Hoothoot",
 },
 
 ledyba: {
@@ -2868,7 +2601,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 60, def: 30, spa: 40, spd: 40, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 10.8,
-evos: ["Ledian"],
 },
 
 ledian: {
@@ -2879,7 +2611,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 105, def: 55, spa: 60, spd: 55, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 35.6,
-prevo: "Ledyba",
 },
 
 spinarak: {
@@ -2890,7 +2621,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 60, def: 40, spa: 40, spd: 40, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Ariados"],
 },
 
 ariados: {
@@ -2901,7 +2631,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 100, def: 80, spa: 60, spd: 75, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 33.5,
-prevo: "Spinarak",
 },
 
 crobat: {
@@ -2912,8 +2641,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130},
 abilities: {0: "No Ability"},
 weightkg: 75,
-prevo: "Golbat",
-evoType: "levelFriendship",
 },
 
 chinchou: {
@@ -2924,7 +2651,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Lanturn"],
 },
 
 lanturn: {
@@ -2935,7 +2661,6 @@ gender: "F",
 baseStats: {hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 22.5,
-prevo: "Chinchou",
 },
 
 pichu: {
@@ -2946,7 +2671,6 @@ gender: "F",
 baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Pikachu"],
 canHatch: true,
 },
 
@@ -2970,7 +2694,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 25, def: 28, spa: 45, spd: 55, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 3,
-evos: ["Clefairy"],
 canHatch: true,
 },
 
@@ -2982,7 +2705,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 30, def: 15, spa: 40, spd: 20, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Jigglypuff"],
 canHatch: true,
 },
 
@@ -2994,7 +2716,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 20, def: 65, spa: 40, spd: 65, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Togetic"],
 canHatch: true,
 },
 
@@ -3006,9 +2727,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 40, def: 85, spa: 80, spd: 105, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 3.2,
-prevo: "Togepi",
-evoType: "levelFriendship",
-evos: ["Togekiss"],
 },
 
 natu: {
@@ -3019,7 +2737,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 50, def: 45, spa: 70, spd: 45, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Xatu"],
 },
 
 xatu: {
@@ -3030,7 +2747,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 15,
-prevo: "Natu",
 },
 
 mareep: {
@@ -3041,7 +2757,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 40, def: 40, spa: 65, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 7.8,
-evos: ["Flaaffy"],
 },
 
 flaaffy: {
@@ -3052,8 +2767,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 55, def: 55, spa: 80, spd: 60, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 13.3,
-prevo: "Mareep",
-evos: ["Ampharos"],
 },
 
 ampharos: {
@@ -3064,7 +2777,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 61.5,
-prevo: "Flaaffy",
 },
 
 ampharosmega: {
@@ -3085,8 +2797,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 5.8,
-prevo: "Gloom",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -3098,9 +2808,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 40, def: 50, spa: 20, spd: 50, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-prevo: "Azurill",
-evoType: "levelFriendship",
-evos: ["Azumarill"],
 canHatch: true,
 },
 
@@ -3112,7 +2819,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 55, def: 85, spa: 60, spd: 85, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 28.5,
-prevo: "Marill",
 },
 
 sudowoodo: {
@@ -3123,9 +2829,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 105, def: 125, spa: 30, spd: 85, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 38,
-prevo: "Bonsly",
-evoType: "levelMove",
-evoMove: "Mimic",
 canHatch: true,
 },
 
@@ -3137,8 +2840,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 33.9,
-prevo: "Poliwhirl",
-evoType: "trade",
 evoItem: "King's Rock",
 },
 
@@ -3150,7 +2851,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 35, def: 40, spa: 35, spd: 55, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-evos: ["Skiploom"],
 },
 
 skiploom: {
@@ -3161,8 +2861,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 45, def: 50, spa: 45, spd: 65, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 1,
-prevo: "Hoppip",
-evos: ["Jumpluff"],
 },
 
 jumpluff: {
@@ -3173,7 +2871,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 3,
-prevo: "Skiploom",
 },
 
 aipom: {
@@ -3184,7 +2881,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-evos: ["Ambipom"],
 },
 
 sunkern: {
@@ -3195,7 +2891,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Sunflora"],
 },
 
 sunflora: {
@@ -3206,8 +2901,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 75, def: 65, spa: 105, spd: 85, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-prevo: "Sunkern",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -3219,7 +2912,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 38,
-evos: ["Yanmega"],
 },
 
 wooper: {
@@ -3230,7 +2922,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Quagsire"],
 },
 
 wooperpaldea: {
@@ -3242,7 +2933,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Clodsire"],
 },
 
 quagsire: {
@@ -3253,7 +2943,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 75,
-prevo: "Wooper",
 },
 
 espeon: {
@@ -3264,8 +2953,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 26.5,
-prevo: "Eevee",
-evoType: "levelFriendship",
 evoCondition: "during the day",
 },
 
@@ -3277,8 +2964,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 27,
-prevo: "Eevee",
-evoType: "levelFriendship",
 evoCondition: "at night",
 },
 
@@ -3290,7 +2975,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 42, spa: 85, spd: 42, spe: 91},
 abilities: {0: "No Ability"},
 weightkg: 2.1,
-evos: ["Honchkrow"],
 },
 
 slowking: {
@@ -3301,8 +2985,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 79.5,
-prevo: "Slowpoke",
-evoType: "trade",
 evoItem: "King's Rock",
 },
 
@@ -3315,8 +2997,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 65, def: 80, spa: 110, spd: 110, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 79.5,
-prevo: "Slowpoke-Galar",
-evoType: "useItem",
 evoItem: "Galarica Wreath",
 },
 
@@ -3328,7 +3008,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Mismagius"],
 },
 
 unown: {
@@ -3350,7 +3029,6 @@ gender: "F",
 baseStats: {hp: 200, atk: 33, def: 65, spa: 33, spd: 66, spe: 33},
 abilities: {0: "No Ability"},
 weightkg: 28.5,
-prevo: "Wynaut",
 canHatch: true,
 },
 
@@ -3362,7 +3040,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 41.5,
-evos: ["Farigiraf"],
 },
 
 pineco: {
@@ -3373,7 +3050,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 90, spa: 35, spd: 35, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 7.2,
-evos: ["Forretress"],
 },
 
 forretress: {
@@ -3384,7 +3060,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 125.8,
-prevo: "Pineco",
 },
 
 dunsparce: {
@@ -3395,7 +3070,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 14,
-evos: ["Dudunsparce", "Dudunsparce-Three-Segment"],
 },
 
 gligar: {
@@ -3406,7 +3080,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 75, def: 105, spa: 35, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 64.8,
-evos: ["Gliscor"],
 },
 
 steelix: {
@@ -3417,8 +3090,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 400,
-prevo: "Onix",
-evoType: "trade",
 evoItem: "Metal Coat",
 },
 
@@ -3441,7 +3112,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 80, def: 50, spa: 40, spd: 40, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 7.8,
-evos: ["Granbull"],
 },
 
 granbull: {
@@ -3452,7 +3122,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 48.7,
-prevo: "Snubbull",
 },
 
 qwilfish: {
@@ -3474,7 +3143,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 3.9,
-evos: ["Overqwil"],
 },
 
 scizor: {
@@ -3485,8 +3153,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 118,
-prevo: "Scyther",
-evoType: "trade",
 evoItem: "Metal Coat",
 },
 
@@ -3540,7 +3206,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 28,
-evos: ["Weavile"],
 },
 
 sneaselhisui: {
@@ -3552,7 +3217,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 27,
-evos: ["Sneasler"],
 },
 
 teddiursa: {
@@ -3563,7 +3227,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 80, def: 50, spa: 50, spd: 50, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 8.8,
-evos: ["Ursaring"],
 },
 
 ursaring: {
@@ -3574,8 +3237,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 130, def: 75, spa: 75, spd: 75, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 125.8,
-prevo: "Teddiursa",
-evos: ["Ursaluna"],
 },
 
 slugma: {
@@ -3586,7 +3247,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 40, spa: 70, spd: 40, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 35,
-evos: ["Magcargo"],
 },
 
 magcargo: {
@@ -3597,7 +3257,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 120, spa: 90, spd: 80, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Slugma",
 },
 
 swinub: {
@@ -3608,7 +3267,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 40, spa: 30, spd: 30, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-evos: ["Piloswine"],
 },
 
 piloswine: {
@@ -3619,8 +3277,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 100, def: 80, spa: 60, spd: 60, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 55.8,
-prevo: "Swinub",
-evos: ["Mamoswine"],
 },
 
 corsola: {
@@ -3642,7 +3298,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 55, def: 100, spa: 65, spd: 100, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-evos: ["Cursola"],
 },
 
 remoraid: {
@@ -3653,7 +3308,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Octillery"],
 },
 
 octillery: {
@@ -3664,7 +3318,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 28.5,
-prevo: "Remoraid",
 },
 
 delibird: {
@@ -3685,8 +3338,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 40, def: 70, spa: 80, spd: 140, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 220,
-prevo: "Mantyke",
-evoType: "levelExtra",
 evoCondition: "with a Remoraid in party",
 canHatch: true,
 },
@@ -3709,7 +3360,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 60, def: 30, spa: 80, spd: 50, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 10.8,
-evos: ["Houndoom"],
 },
 
 houndoom: {
@@ -3720,7 +3370,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 35,
-prevo: "Houndour",
 },
 
 houndoommega: {
@@ -3742,8 +3391,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 152,
-prevo: "Seadra",
-evoType: "trade",
 evoItem: "Dragon Scale",
 },
 
@@ -3755,7 +3402,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 60, def: 60, spa: 40, spd: 40, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 33.5,
-evos: ["Donphan"],
 },
 
 donphan: {
@@ -3766,7 +3412,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Phanpy",
 },
 
 porygon2: {
@@ -3777,10 +3422,7 @@ gender: "F",
 baseStats: {hp: 85, atk: 80, def: 90, spa: 105, spd: 95, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 32.5,
-prevo: "Porygon",
-evoType: "trade",
 evoItem: "Up-Grade",
-evos: ["Porygon-Z"],
 },
 
 stantler: {
@@ -3791,7 +3433,6 @@ gender: "F",
 baseStats: {hp: 73, atk: 105, def: 62, spa: 75, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 71.2,
-evos: ["Wyrdeer"],
 },
 
 smeargle: {
@@ -3812,7 +3453,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 35, def: 35, spa: 35, spd: 35, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 21,
-evos: ["Hitmonlee", "Hitmonchan", "Hitmontop"],
 canHatch: true,
 },
 
@@ -3824,7 +3464,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 48,
-prevo: "Tyrogue",
 evoCondition: "with an Atk stat equal to its Def stat",
 },
 
@@ -3836,7 +3475,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 15, spa: 85, spd: 65, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Jynx"],
 canHatch: true,
 },
 
@@ -3848,7 +3486,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 23.5,
-evos: ["Electabuzz"],
 canHatch: true,
 },
 
@@ -3860,7 +3497,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83},
 abilities: {0: "No Ability"},
 weightkg: 21.4,
-evos: ["Magmar"],
 canHatch: true,
 },
 
@@ -3882,8 +3518,6 @@ gender: "F",
 baseStats: {hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 46.8,
-prevo: "Chansey",
-evoType: "levelFriendship",
 },
 
 raikou: {
@@ -3924,7 +3558,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41},
 abilities: {0: "No Ability"},
 weightkg: 72,
-evos: ["Pupitar"],
 },
 
 pupitar: {
@@ -3935,8 +3568,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 84, def: 70, spa: 65, spd: 70, spe: 51},
 abilities: {0: "No Ability"},
 weightkg: 152,
-prevo: "Larvitar",
-evos: ["Tyranitar"],
 },
 
 tyranitar: {
@@ -3947,7 +3578,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61},
 abilities: {0: "No Ability"},
 weightkg: 202,
-prevo: "Pupitar",
 },
 
 tyranitarmega: {
@@ -3999,7 +3629,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 65, def: 35, spa: 45, spd: 55, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 5,
-evos: ["Grovyle"],
 },
 
 grovyle: {
@@ -4010,8 +3639,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 85, def: 45, spa: 65, spd: 65, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 21.6,
-prevo: "Treecko",
-evos: ["Sceptile"],
 },
 
 sceptile: {
@@ -4022,7 +3649,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 105, def: 65, spa: 85, spd: 85, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 52.2,
-prevo: "Grovyle",
 },
 
 sceptilemega: {
@@ -4044,7 +3670,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Combusken"],
 },
 
 combusken: {
@@ -4055,8 +3680,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-prevo: "Torchic",
-evos: ["Blaziken"],
 },
 
 blaziken: {
@@ -4067,7 +3690,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 52,
-prevo: "Combusken",
 },
 
 blazikenmega: {
@@ -4089,7 +3711,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 7.6,
-evos: ["Marshtomp"],
 },
 
 marshtomp: {
@@ -4100,8 +3721,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 85, def: 70, spa: 60, spd: 70, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 28,
-prevo: "Mudkip",
-evos: ["Swampert"],
 },
 
 swampert: {
@@ -4112,7 +3731,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 81.9,
-prevo: "Marshtomp",
 },
 
 swampertmega: {
@@ -4134,7 +3752,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 35, spa: 30, spd: 30, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 13.6,
-evos: ["Mightyena"],
 },
 
 mightyena: {
@@ -4145,7 +3762,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 95, def: 70, spa: 60, spd: 60, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 37,
-prevo: "Poochyena",
 },
 
 zigzagoon: {
@@ -4156,7 +3772,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 17.5,
-evos: ["Linoone"],
 },
 
 zigzagoongalar: {
@@ -4168,7 +3783,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 17.5,
-evos: ["Linoone-Galar"],
 },
 
 linoone: {
@@ -4179,7 +3793,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 32.5,
-prevo: "Zigzagoon",
 },
 
 linoonegalar: {
@@ -4191,8 +3804,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 32.5,
-prevo: "Zigzagoon-Galar",
-evos: ["Obstagoon"],
 },
 
 wurmple: {
@@ -4203,7 +3814,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 45, def: 35, spa: 20, spd: 30, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 3.6,
-evos: ["Silcoon", "Cascoon"],
 },
 
 silcoon: {
@@ -4214,8 +3824,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 10,
-prevo: "Wurmple",
-evos: ["Beautifly"],
 },
 
 beautifly: {
@@ -4226,7 +3834,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 70, def: 60, spa: 105, spd: 60, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 28.4,
-prevo: "Silcoon",
 },
 
 cascoon: {
@@ -4237,8 +3844,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-prevo: "Wurmple",
-evos: ["Dustox"],
 },
 
 dustox: {
@@ -4249,7 +3854,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 50, def: 80, spa: 60, spd: 105, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 31.6,
-prevo: "Cascoon",
 },
 
 lotad: {
@@ -4260,7 +3864,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 2.6,
-evos: ["Lombre"],
 },
 
 lombre: {
@@ -4271,8 +3874,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 50, spa: 60, spd: 70, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 32.5,
-prevo: "Lotad",
-evos: ["Ludicolo"],
 },
 
 ludicolo: {
@@ -4283,8 +3884,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Lombre",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -4296,7 +3895,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Nuzleaf"],
 },
 
 nuzleaf: {
@@ -4307,8 +3905,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 28,
-prevo: "Seedot",
-evos: ["Shiftry"],
 },
 
 shiftry: {
@@ -4319,8 +3915,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 59.6,
-prevo: "Nuzleaf",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -4332,7 +3926,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 2.3,
-evos: ["Swellow"],
 },
 
 swellow: {
@@ -4343,7 +3936,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 60, spa: 75, spd: 50, spe: 125},
 abilities: {0: "No Ability"},
 weightkg: 19.8,
-prevo: "Taillow",
 },
 
 wingull: {
@@ -4354,7 +3946,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 30, spa: 55, spd: 30, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-evos: ["Pelipper"],
 },
 
 pelipper: {
@@ -4365,7 +3956,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 100, spa: 95, spd: 70, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 28,
-prevo: "Wingull",
 },
 
 ralts: {
@@ -4376,7 +3966,6 @@ gender: "F",
 baseStats: {hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 6.6,
-evos: ["Kirlia"],
 },
 
 kirlia: {
@@ -4387,8 +3976,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 20.2,
-prevo: "Ralts",
-evos: ["Gardevoir", "Gallade"],
 },
 
 gardevoir: {
@@ -4399,7 +3986,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 48.4,
-prevo: "Kirlia",
 },
 
 gardevoirmega: {
@@ -4421,7 +4007,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 32, spa: 50, spd: 52, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 1.7,
-evos: ["Masquerain"],
 },
 
 masquerain: {
@@ -4432,7 +4017,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 60, def: 62, spa: 100, spd: 82, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 3.6,
-prevo: "Surskit",
 },
 
 shroomish: {
@@ -4443,7 +4027,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 40, def: 60, spa: 40, spd: 60, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 4.5,
-evos: ["Breloom"],
 },
 
 breloom: {
@@ -4454,7 +4037,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 39.2,
-prevo: "Shroomish",
 },
 
 slakoth: {
@@ -4465,7 +4047,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 60, spa: 35, spd: 35, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 24,
-evos: ["Vigoroth"],
 },
 
 vigoroth: {
@@ -4476,8 +4057,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 80, def: 80, spa: 55, spd: 55, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 46.5,
-prevo: "Slakoth",
-evos: ["Slaking"],
 },
 
 slaking: {
@@ -4488,7 +4067,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 130, def: 90, spa: 80, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 130.5,
-prevo: "Vigoroth",
 },
 
 nincada: {
@@ -4499,7 +4077,6 @@ gender: "F",
 baseStats: {hp: 31, atk: 45, def: 90, spa: 30, spd: 30, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-evos: ["Ninjask", "Shedinja"],
 },
 
 ninjask: {
@@ -4510,7 +4087,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160},
 abilities: {0: "No Ability"},
 weightkg: 12,
-prevo: "Nincada",
 },
 
 shedinja: {
@@ -4522,7 +4098,6 @@ baseStats: {hp: 1, atk: 95, def: 45, spa: 95, spd: 45, spe: 70},
 maxHP: 1,
 abilities: {0: "No Ability"},
 weightkg: 1.2,
-prevo: "Nincada",
 },
 
 whismur: {
@@ -4533,7 +4108,6 @@ gender: "F",
 baseStats: {hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28},
 abilities: {0: "No Ability"},
 weightkg: 16.3,
-evos: ["Loudred"],
 },
 
 loudred: {
@@ -4544,8 +4118,6 @@ gender: "F",
 baseStats: {hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48},
 abilities: {0: "No Ability"},
 weightkg: 40.5,
-prevo: "Whismur",
-evos: ["Exploud"],
 },
 
 exploud: {
@@ -4556,7 +4128,6 @@ gender: "F",
 baseStats: {hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 84,
-prevo: "Loudred",
 },
 
 makuhita: {
@@ -4567,7 +4138,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 60, def: 30, spa: 20, spd: 30, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 86.4,
-evos: ["Hariyama"],
 },
 
 hariyama: {
@@ -4578,7 +4148,6 @@ gender: "F",
 baseStats: {hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 253.8,
-prevo: "Makuhita",
 },
 
 azurill: {
@@ -4589,7 +4158,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 40, def: 40, spa: 20, spd: 40, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Marill"],
 canHatch: true,
 },
 
@@ -4601,7 +4169,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 45, def: 135, spa: 45, spd: 90, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 97,
-evos: ["Probopass"],
 },
 
 skitty: {
@@ -4612,7 +4179,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 35, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 11,
-evos: ["Delcatty"],
 },
 
 delcatty: {
@@ -4623,8 +4189,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 70, def: 70, spa: 60, spd: 60, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 32.6,
-prevo: "Skitty",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -4678,7 +4242,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 60,
-evos: ["Lairon"],
 },
 
 lairon: {
@@ -4689,8 +4252,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Aron",
-evos: ["Aggron"],
 },
 
 aggron: {
@@ -4701,7 +4262,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 360,
-prevo: "Lairon",
 },
 
 aggronmega: {
@@ -4723,7 +4283,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 80, def: 55, spa: 40, spd: 55, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 11.2,
-evos: ["Medicham"],
 },
 
 medicham: {
@@ -4734,7 +4293,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 70, def: 80, spa: 70, spd: 75, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 31.5,
-prevo: "Meditite",
 },
 
 medichammega: {
@@ -4756,7 +4314,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 40, spa: 65, spd: 40, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 15.2,
-evos: ["Manectric"],
 },
 
 manectric: {
@@ -4767,7 +4324,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 40.2,
-prevo: "Electrike",
 },
 
 manectricmega: {
@@ -4829,10 +4385,7 @@ gender: "F",
 baseStats: {hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 2,
-prevo: "Budew",
-evoType: "levelFriendship",
 evoCondition: "during the day",
-evos: ["Roserade"],
 canHatch: true,
 },
 
@@ -4844,7 +4397,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 43, def: 53, spa: 43, spd: 53, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 10.3,
-evos: ["Swalot"],
 },
 
 swalot: {
@@ -4855,7 +4407,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 80,
-prevo: "Gulpin",
 },
 
 carvanha: {
@@ -4866,7 +4417,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 90, def: 20, spa: 65, spd: 20, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 20.8,
-evos: ["Sharpedo"],
 },
 
 sharpedo: {
@@ -4877,7 +4427,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 88.8,
-prevo: "Carvanha",
 },
 
 sharpedomega: {
@@ -4899,7 +4448,6 @@ gender: "F",
 baseStats: {hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 130,
-evos: ["Wailord"],
 },
 
 wailord: {
@@ -4910,7 +4458,6 @@ gender: "F",
 baseStats: {hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 398,
-prevo: "Wailmer",
 },
 
 numel: {
@@ -4921,7 +4468,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 24,
-evos: ["Camerupt"],
 },
 
 camerupt: {
@@ -4932,7 +4478,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 220,
-prevo: "Numel",
 },
 
 cameruptmega: {
@@ -4964,7 +4509,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 25, def: 35, spa: 70, spd: 80, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 30.6,
-evos: ["Grumpig"],
 },
 
 grumpig: {
@@ -4975,7 +4519,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 71.5,
-prevo: "Spoink",
 },
 
 spinda: {
@@ -4996,7 +4539,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Vibrava"],
 },
 
 vibrava: {
@@ -5007,8 +4549,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 15.3,
-prevo: "Trapinch",
-evos: ["Flygon"],
 },
 
 flygon: {
@@ -5019,7 +4559,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 82,
-prevo: "Vibrava",
 },
 
 cacnea: {
@@ -5030,7 +4569,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 85, def: 40, spa: 85, spd: 40, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 51.3,
-evos: ["Cacturne"],
 },
 
 cacturne: {
@@ -5041,7 +4579,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 77.4,
-prevo: "Cacnea",
 },
 
 swablu: {
@@ -5052,7 +4589,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 40, def: 60, spa: 40, spd: 75, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 1.2,
-evos: ["Altaria"],
 },
 
 altaria: {
@@ -5063,7 +4599,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 20.6,
-prevo: "Swablu",
 },
 
 altariamega: {
@@ -5125,7 +4660,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 47, def: 42, spa: 47, spd: 42, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 1.9,
-evos: ["Whiscash"],
 },
 
 whiscash: {
@@ -5136,7 +4670,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 77, def: 72, spa: 77, spd: 72, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 23.6,
-prevo: "Barboach",
 },
 
 corphish: {
@@ -5147,7 +4680,6 @@ gender: "F",
 baseStats: {hp: 43, atk: 80, def: 65, spa: 50, spd: 35, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-evos: ["Crawdaunt"],
 },
 
 crawdaunt: {
@@ -5158,7 +4690,6 @@ gender: "F",
 baseStats: {hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 32.8,
-prevo: "Corphish",
 },
 
 baltoy: {
@@ -5169,7 +4700,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 55, spa: 40, spd: 70, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 21.5,
-evos: ["Claydol"],
 },
 
 claydol: {
@@ -5180,7 +4710,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 108,
-prevo: "Baltoy",
 },
 
 lileep: {
@@ -5191,7 +4720,6 @@ gender: "F",
 baseStats: {hp: 66, atk: 41, def: 77, spa: 61, spd: 87, spe: 23},
 abilities: {0: "No Ability"},
 weightkg: 23.8,
-evos: ["Cradily"],
 },
 
 cradily: {
@@ -5202,7 +4730,6 @@ gender: "F",
 baseStats: {hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 60.4,
-prevo: "Lileep",
 },
 
 anorith: {
@@ -5213,7 +4740,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 95, def: 50, spa: 40, spd: 50, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-evos: ["Armaldo"],
 },
 
 armaldo: {
@@ -5224,7 +4750,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 68.2,
-prevo: "Anorith",
 },
 
 feebas: {
@@ -5235,7 +4760,6 @@ gender: "F",
 baseStats: {hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 7.4,
-evos: ["Milotic"],
 },
 
 milotic: {
@@ -5246,8 +4770,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81},
 abilities: {0: "No Ability"},
 weightkg: 162,
-prevo: "Feebas",
-evoType: "trade",
 evoItem: "Prism Scale",
 },
 
@@ -5318,7 +4840,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 75, def: 35, spa: 63, spd: 33, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 2.3,
-evos: ["Banette"],
 },
 
 banette: {
@@ -5329,7 +4850,6 @@ gender: "F",
 baseStats: {hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-prevo: "Shuppet",
 },
 
 banettemega: {
@@ -5351,7 +4871,6 @@ gender: "F",
 baseStats: {hp: 20, atk: 40, def: 90, spa: 30, spd: 90, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Dusclops"],
 },
 
 dusclops: {
@@ -5362,8 +4881,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 70, def: 130, spa: 60, spd: 130, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 30.6,
-prevo: "Duskull",
-evos: ["Dusknoir"],
 },
 
 tropius: {
@@ -5384,8 +4901,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 50, def: 80, spa: 95, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 1,
-prevo: "Chingling",
-evoType: "levelFriendship",
 evoCondition: "at night",
 canHatch: true,
 },
@@ -5419,7 +4934,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 23, def: 48, spa: 23, spd: 48, spe: 23},
 abilities: {0: "No Ability"},
 weightkg: 14,
-evos: ["Wobbuffet"],
 canHatch: true,
 },
 
@@ -5431,7 +4945,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 16.8,
-evos: ["Glalie", "Froslass"],
 },
 
 glalie: {
@@ -5442,7 +4955,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 256.5,
-prevo: "Snorunt",
 },
 
 glaliemega: {
@@ -5464,7 +4976,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 35, def: 50, spa: 60, spd: 50, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 39.5,
-evos: ["Sealeo"],
 },
 
 sealeo: {
@@ -5475,8 +4986,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 55, def: 70, spa: 80, spd: 70, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 87.6,
-prevo: "Spheal",
-evos: ["Walrein"],
 },
 
 walrein: {
@@ -5487,7 +4996,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 75, def: 90, spa: 100, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 150.6,
-prevo: "Sealeo",
 },
 
 clamperl: {
@@ -5498,7 +5006,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 64, def: 85, spa: 74, spd: 55, spe: 32},
 abilities: {0: "No Ability"},
 weightkg: 52.5,
-evos: ["Huntail", "Gorebyss"],
 },
 
 huntail: {
@@ -5509,8 +5016,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52},
 abilities: {0: "No Ability"},
 weightkg: 27,
-prevo: "Clamperl",
-evoType: "trade",
 evoItem: "Deep Sea Tooth",
 },
 
@@ -5522,8 +5027,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52},
 abilities: {0: "No Ability"},
 weightkg: 22.6,
-prevo: "Clamperl",
-evoType: "trade",
 evoItem: "Deep Sea Scale",
 },
 
@@ -5555,7 +5058,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 75, def: 60, spa: 40, spd: 30, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 42.1,
-evos: ["Shelgon"],
 },
 
 shelgon: {
@@ -5566,8 +5068,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 95, def: 100, spa: 60, spd: 50, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 110.5,
-prevo: "Bagon",
-evos: ["Salamence"],
 },
 
 salamence: {
@@ -5578,7 +5078,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 102.6,
-prevo: "Shelgon",
 },
 
 salamencemega: {
@@ -5600,7 +5099,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 95.2,
-evos: ["Metang"],
 },
 
 metang: {
@@ -5611,8 +5109,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 202.5,
-prevo: "Beldum",
-evos: ["Metagross"],
 },
 
 metagross: {
@@ -5623,7 +5119,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 550,
-prevo: "Metang",
 },
 
 metagrossmega: {
@@ -5802,7 +5297,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 180, def: 20, spa: 180, spd: 20, spe: 150},
 abilities: {0: "No Ability"},
 weightkg: 60.8,
-changesFrom: "Deoxys",
 },
 
 deoxysdefense: {
@@ -5814,7 +5308,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 70, def: 160, spa: 70, spd: 160, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 60.8,
-changesFrom: "Deoxys",
 },
 
 deoxysspeed: {
@@ -5826,7 +5319,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 95, def: 90, spa: 95, spd: 90, spe: 180},
 abilities: {0: "No Ability"},
 weightkg: 60.8,
-changesFrom: "Deoxys",
 },
 
 turtwig: {
@@ -5837,7 +5329,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31},
 abilities: {0: "No Ability"},
 weightkg: 10.2,
-evos: ["Grotle"],
 },
 
 grotle: {
@@ -5848,8 +5339,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36},
 abilities: {0: "No Ability"},
 weightkg: 97,
-prevo: "Turtwig",
-evos: ["Torterra"],
 },
 
 torterra: {
@@ -5860,7 +5349,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56},
 abilities: {0: "No Ability"},
 weightkg: 310,
-prevo: "Grotle",
 },
 
 chimchar: {
@@ -5871,7 +5359,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
 abilities: {0: "No Ability"},
 weightkg: 6.2,
-evos: ["Monferno"],
 },
 
 monferno: {
@@ -5882,8 +5369,6 @@ gender: "F",
 baseStats: {hp: 64, atk: 78, def: 52, spa: 78, spd: 52, spe: 81},
 abilities: {0: "No Ability"},
 weightkg: 22,
-prevo: "Chimchar",
-evos: ["Infernape"],
 },
 
 infernape: {
@@ -5894,7 +5379,6 @@ gender: "F",
 baseStats: {hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108},
 abilities: {0: "No Ability"},
 weightkg: 55,
-prevo: "Monferno",
 },
 
 piplup: {
@@ -5905,7 +5389,6 @@ gender: "F",
 baseStats: {hp: 53, atk: 51, def: 53, spa: 61, spd: 56, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 5.2,
-evos: ["Prinplup"],
 },
 
 prinplup: {
@@ -5916,8 +5399,6 @@ gender: "F",
 baseStats: {hp: 64, atk: 66, def: 68, spa: 81, spd: 76, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 23,
-prevo: "Piplup",
-evos: ["Empoleon"],
 },
 
 empoleon: {
@@ -5928,7 +5409,6 @@ gender: "F",
 baseStats: {hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 84.5,
-prevo: "Prinplup",
 },
 
 starly: {
@@ -5939,7 +5419,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Staravia"],
 },
 
 staravia: {
@@ -5950,8 +5429,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 15.5,
-prevo: "Starly",
-evos: ["Staraptor"],
 },
 
 staraptor: {
@@ -5962,7 +5439,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 24.9,
-prevo: "Staravia",
 },
 
 bidoof: {
@@ -5973,7 +5449,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 45, def: 40, spa: 35, spd: 40, spe: 31},
 abilities: {0: "No Ability"},
 weightkg: 20,
-evos: ["Bibarel"],
 },
 
 bibarel: {
@@ -5984,7 +5459,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 90, def: 63, spa: 55, spd: 62, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 31.5,
-prevo: "Bidoof",
 },
 
 kricketot: {
@@ -5995,7 +5469,6 @@ gender: "F",
 baseStats: {hp: 37, atk: 25, def: 41, spa: 25, spd: 41, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 2.2,
-evos: ["Kricketune"],
 },
 
 kricketune: {
@@ -6006,7 +5479,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 90, def: 50, spa: 80, spd: 55, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 25.5,
-prevo: "Kricketot",
 },
 
 shinx: {
@@ -6017,7 +5489,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-evos: ["Luxio"],
 },
 
 luxio: {
@@ -6028,8 +5499,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 30.5,
-prevo: "Shinx",
-evos: ["Luxray"],
 },
 
 luxray: {
@@ -6040,7 +5509,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 42,
-prevo: "Luxio",
 },
 
 budew: {
@@ -6051,7 +5519,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 1.2,
-evos: ["Roselia"],
 canHatch: true,
 },
 
@@ -6063,8 +5530,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 14.5,
-prevo: "Roselia",
-evoType: "useItem",
 evoItem: "Shiny Stone",
 },
 
@@ -6076,7 +5541,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 125, def: 40, spa: 30, spd: 30, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 31.5,
-evos: ["Rampardos"],
 },
 
 rampardos: {
@@ -6087,7 +5551,6 @@ gender: "F",
 baseStats: {hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 102.5,
-prevo: "Cranidos",
 },
 
 shieldon: {
@@ -6098,7 +5561,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 42, def: 118, spa: 42, spd: 88, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 57,
-evos: ["Bastiodon"],
 },
 
 bastiodon: {
@@ -6109,7 +5571,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 149.5,
-prevo: "Shieldon",
 },
 
 burmy: {
@@ -6120,7 +5581,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
 abilities: {0: "No Ability"},
 weightkg: 3.4,
-evos: ["Wormadam", "Wormadam-Sandy", "Wormadam-Trash", "Mothim"],
 cosmeticFormes: ["Burmy-Sandy", "Burmy-Trash"],
 },
 
@@ -6132,7 +5592,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 59, def: 91, spa: 79, spd: 105, spe: 36},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-prevo: "Burmy",
 },
 
 wormadamsandy: {
@@ -6144,7 +5603,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 79, def: 105, spa: 59, spd: 91, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-prevo: "Burmy",
 },
 
 wormadamtrash: {
@@ -6156,7 +5614,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 69, def: 101, spa: 69, spd: 95, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-prevo: "Burmy",
 },
 
 mothim: {
@@ -6167,7 +5624,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 96, def: 50, spa: 96, spd: 50, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 23.3,
-prevo: "Burmy",
 },
 
 combee: {
@@ -6178,7 +5634,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 30, def: 42, spa: 30, spd: 42, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-evos: ["Vespiquen"],
 },
 
 vespiquen: {
@@ -6189,7 +5644,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 38.5,
-prevo: "Combee",
 },
 
 pachirisu: {
@@ -6210,7 +5664,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 65, def: 35, spa: 60, spd: 30, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 29.5,
-evos: ["Floatzel"],
 },
 
 floatzel: {
@@ -6221,7 +5674,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 33.5,
-prevo: "Buizel",
 },
 
 cherubi: {
@@ -6232,7 +5684,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 35, def: 45, spa: 62, spd: 53, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 3.3,
-evos: ["Cherrim"],
 },
 
 cherrim: {
@@ -6243,7 +5694,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 9.3,
-prevo: "Cherubi",
 },
 
 cherrimsunshine: {
@@ -6267,7 +5717,6 @@ gender: "F",
 baseStats: {hp: 76, atk: 48, def: 48, spa: 57, spd: 62, spe: 34},
 abilities: {0: "No Ability"},
 weightkg: 6.3,
-evos: ["Gastrodon"],
 cosmeticFormes: ["Shellos-East"],
 },
 
@@ -6279,7 +5728,6 @@ gender: "F",
 baseStats: {hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39},
 abilities: {0: "No Ability"},
 weightkg: 29.9,
-prevo: "Shellos",
 cosmeticFormes: ["Gastrodon-East"],
 },
 
@@ -6291,9 +5739,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 20.3,
-prevo: "Aipom",
-evoType: "levelMove",
-evoMove: "Double Hit",
 },
 
 drifloon: {
@@ -6304,7 +5749,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 1.2,
-evos: ["Drifblim"],
 },
 
 drifblim: {
@@ -6315,7 +5759,6 @@ gender: "F",
 baseStats: {hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 15,
-prevo: "Drifloon",
 },
 
 buneary: {
@@ -6326,7 +5769,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-evos: ["Lopunny"],
 },
 
 lopunny: {
@@ -6337,8 +5779,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 33.3,
-prevo: "Buneary",
-evoType: "levelFriendship",
 },
 
 lopunnymega: {
@@ -6360,8 +5800,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 4.4,
-prevo: "Misdreavus",
-evoType: "useItem",
 evoItem: "Dusk Stone",
 },
 
@@ -6373,8 +5811,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 27.3,
-prevo: "Murkrow",
-evoType: "useItem",
 evoItem: "Dusk Stone",
 },
 
@@ -6386,7 +5822,6 @@ gender: "F",
 baseStats: {hp: 49, atk: 55, def: 42, spa: 42, spd: 37, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 3.9,
-evos: ["Purugly"],
 },
 
 purugly: {
@@ -6397,7 +5832,6 @@ gender: "F",
 baseStats: {hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112},
 abilities: {0: "No Ability"},
 weightkg: 43.8,
-prevo: "Glameow",
 },
 
 chingling: {
@@ -6408,7 +5842,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 50, spa: 65, spd: 50, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 0.6,
-evos: ["Chimecho"],
 canHatch: true,
 },
 
@@ -6420,7 +5853,6 @@ gender: "F",
 baseStats: {hp: 63, atk: 63, def: 47, spa: 41, spd: 41, spe: 74},
 abilities: {0: "No Ability"},
 weightkg: 19.2,
-evos: ["Skuntank"],
 },
 
 skuntank: {
@@ -6431,7 +5863,6 @@ gender: "F",
 baseStats: {hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84},
 abilities: {0: "No Ability"},
 weightkg: 38,
-prevo: "Stunky",
 },
 
 bronzor: {
@@ -6442,7 +5873,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 24, def: 86, spa: 24, spd: 86, spe: 23},
 abilities: {0: "No Ability"},
 weightkg: 60.5,
-evos: ["Bronzong"],
 },
 
 bronzong: {
@@ -6453,7 +5883,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33},
 abilities: {0: "No Ability"},
 weightkg: 187,
-prevo: "Bronzor",
 },
 
 bonsly: {
@@ -6464,7 +5893,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 80, def: 95, spa: 10, spd: 45, spe: 10},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Sudowoodo"],
 canHatch: true,
 },
 
@@ -6476,7 +5904,6 @@ gender: "F",
 baseStats: {hp: 20, atk: 25, def: 45, spa: 70, spd: 90, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 13,
-evos: ["Mr. Mime", "Mr. Mime-Galar"],
 canHatch: true,
 },
 
@@ -6488,7 +5915,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 5, def: 5, spa: 15, spd: 65, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 24.4,
-evos: ["Chansey"],
 canHatch: true,
 },
 
@@ -6520,7 +5946,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 70, def: 45, spa: 40, spd: 45, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 20.5,
-evos: ["Gabite"],
 },
 
 gabite: {
@@ -6531,8 +5956,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 90, def: 65, spa: 50, spd: 55, spe: 82},
 abilities: {0: "No Ability"},
 weightkg: 56,
-prevo: "Gible",
-evos: ["Garchomp"],
 },
 
 garchomp: {
@@ -6543,7 +5966,6 @@ gender: "F",
 baseStats: {hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102},
 abilities: {0: "No Ability"},
 weightkg: 95,
-prevo: "Gabite",
 },
 
 garchompmega: {
@@ -6565,7 +5987,6 @@ gender: "F",
 baseStats: {hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5},
 abilities: {0: "No Ability"},
 weightkg: 105,
-evos: ["Snorlax"],
 canHatch: true,
 },
 
@@ -6577,7 +5998,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 20.2,
-evos: ["Lucario"],
 canHatch: true,
 },
 
@@ -6589,8 +6009,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 54,
-prevo: "Riolu",
-evoType: "levelFriendship",
 evoCondition: "during the day",
 },
 
@@ -6613,7 +6031,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 72, def: 78, spa: 38, spd: 42, spe: 32},
 abilities: {0: "No Ability"},
 weightkg: 49.5,
-evos: ["Hippowdon"],
 },
 
 hippowdon: {
@@ -6624,7 +6041,6 @@ gender: "F",
 baseStats: {hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47},
 abilities: {0: "No Ability"},
 weightkg: 300,
-prevo: "Hippopotas",
 },
 
 skorupi: {
@@ -6635,7 +6051,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 50, def: 90, spa: 30, spd: 55, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Drapion"],
 },
 
 drapion: {
@@ -6646,7 +6061,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 61.5,
-prevo: "Skorupi",
 },
 
 croagunk: {
@@ -6657,7 +6071,6 @@ gender: "F",
 baseStats: {hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 23,
-evos: ["Toxicroak"],
 },
 
 toxicroak: {
@@ -6668,7 +6081,6 @@ gender: "F",
 baseStats: {hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 44.4,
-prevo: "Croagunk",
 },
 
 carnivine: {
@@ -6689,7 +6101,6 @@ gender: "F",
 baseStats: {hp: 49, atk: 49, def: 56, spa: 49, spd: 61, spe: 66},
 abilities: {0: "No Ability"},
 weightkg: 7,
-evos: ["Lumineon"],
 },
 
 lumineon: {
@@ -6700,7 +6111,6 @@ gender: "F",
 baseStats: {hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91},
 abilities: {0: "No Ability"},
 weightkg: 24,
-prevo: "Finneon",
 },
 
 mantyke: {
@@ -6711,7 +6121,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 20, def: 50, spa: 60, spd: 120, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 65,
-evos: ["Mantine"],
 canHatch: true,
 },
 
@@ -6723,7 +6132,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 62, def: 50, spa: 62, spd: 60, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 50.5,
-evos: ["Abomasnow"],
 },
 
 abomasnow: {
@@ -6734,7 +6142,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 135.5,
-prevo: "Snover",
 },
 
 abomasnowmega: {
@@ -6756,8 +6163,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125},
 abilities: {0: "No Ability"},
 weightkg: 34,
-prevo: "Sneasel",
-evoType: "levelHold",
 evoItem: "Razor Claw",
 evoCondition: "at night",
 },
@@ -6770,8 +6175,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 180,
-prevo: "Magneton",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -6783,9 +6186,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 140,
-prevo: "Lickitung",
-evoType: "levelMove",
-evoMove: "Rollout",
 },
 
 rhyperior: {
@@ -6796,8 +6196,6 @@ gender: "F",
 baseStats: {hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 282.8,
-prevo: "Rhydon",
-evoType: "trade",
 evoItem: "Protector",
 },
 
@@ -6809,9 +6207,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 128.6,
-prevo: "Tangela",
-evoType: "levelMove",
-evoMove: "Ancient Power",
 },
 
 electivire: {
@@ -6822,8 +6217,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 125, def: 85, spa: 75, spd: 85, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 138.6,
-prevo: "Electabuzz",
-evoType: "trade",
 evoItem: "Electirizer",
 },
 
@@ -6835,8 +6228,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 75, def: 85, spa: 125, spd: 95, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 68,
-prevo: "Magmar",
-evoType: "trade",
 evoItem: "Magmarizer",
 },
 
@@ -6848,8 +6239,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 38,
-prevo: "Togetic",
-evoType: "useItem",
 evoItem: "Shiny Stone",
 },
 
@@ -6861,9 +6250,6 @@ gender: "F",
 baseStats: {hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 51.5,
-prevo: "Yanma",
-evoType: "levelMove",
-evoMove: "Ancient Power",
 },
 
 leafeon: {
@@ -6874,8 +6260,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 25.5,
-prevo: "Eevee",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -6887,8 +6271,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 25.9,
-prevo: "Eevee",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -6900,8 +6282,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 42.5,
-prevo: "Gligar",
-evoType: "levelHold",
 evoItem: "Razor Fang",
 evoCondition: "at night",
 },
@@ -6914,9 +6294,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 291,
-prevo: "Piloswine",
-evoType: "levelMove",
-evoMove: "Ancient Power",
 },
 
 porygonz: {
@@ -6927,8 +6304,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 34,
-prevo: "Porygon2",
-evoType: "trade",
 evoItem: "Dubious Disc",
 },
 
@@ -6940,8 +6315,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 52,
-prevo: "Kirlia",
-evoType: "useItem",
 evoItem: "Dawn Stone",
 },
 
@@ -6964,8 +6337,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 340,
-prevo: "Nosepass",
-evoType: "levelExtra",
 evoCondition: "near a special magnetic field",
 },
 
@@ -6977,8 +6348,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 106.6,
-prevo: "Dusclops",
-evoType: "trade",
 evoItem: "Reaper Cloth",
 },
 
@@ -6990,8 +6359,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 26.6,
-prevo: "Snorunt",
-evoType: "useItem",
 evoItem: "Dawn Stone",
 },
 
@@ -7014,7 +6381,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-changesFrom: "Rotom",
 },
 
 rotomwash: {
@@ -7026,7 +6392,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-changesFrom: "Rotom",
 },
 
 rotomfrost: {
@@ -7038,7 +6403,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-changesFrom: "Rotom",
 },
 
 rotomfan: {
@@ -7050,7 +6414,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-changesFrom: "Rotom",
 },
 
 rotommow: {
@@ -7062,7 +6425,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-changesFrom: "Rotom",
 },
 
 uxie: {
@@ -7114,7 +6476,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 100, def: 120, spa: 150, spd: 120, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 850,
-changesFrom: "Dialga",
 gen: 8,
 },
 
@@ -7137,7 +6498,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 100, def: 100, spa: 150, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 660,
-changesFrom: "Palkia",
 gen: 8,
 },
 
@@ -7180,7 +6540,6 @@ gender: "F",
 baseStats: {hp: 150, atk: 120, def: 100, spa: 120, spd: 100, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 650,
-changesFrom: "Giratina",
 },
 
 cresselia: {
@@ -7242,7 +6601,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 103, def: 75, spa: 120, spd: 75, spe: 127},
 abilities: {0: "No Ability"},
 weightkg: 5.2,
-changesFrom: "Shaymin",
 },
 
 arceus: {
@@ -7265,7 +6623,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Insect Plate", "Buginium Z"],
-changesFrom: "Arceus",
 },
 
 arceusdark: {
@@ -7278,7 +6635,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Dread Plate", "Darkinium Z"],
-changesFrom: "Arceus",
 },
 
 arceusdragon: {
@@ -7291,7 +6647,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Draco Plate", "Dragonium Z"],
-changesFrom: "Arceus",
 },
 
 arceuselectric: {
@@ -7304,7 +6659,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Zap Plate", "Electrium Z"],
-changesFrom: "Arceus",
 },
 
 arceusfairy: {
@@ -7317,7 +6671,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Pixie Plate", "Fairium Z"],
-changesFrom: "Arceus",
 gen: 6,
 },
 
@@ -7331,7 +6684,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Fist Plate", "Fightinium Z"],
-changesFrom: "Arceus",
 },
 
 arceusfire: {
@@ -7344,7 +6696,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Flame Plate", "Firium Z"],
-changesFrom: "Arceus",
 },
 
 arceusflying: {
@@ -7357,7 +6708,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Sky Plate", "Flyinium Z"],
-changesFrom: "Arceus",
 },
 
 arceusghost: {
@@ -7370,7 +6720,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Spooky Plate", "Ghostium Z"],
-changesFrom: "Arceus",
 },
 
 arceusgrass: {
@@ -7383,7 +6732,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Meadow Plate", "Grassium Z"],
-changesFrom: "Arceus",
 },
 
 arceusground: {
@@ -7396,7 +6744,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Earth Plate", "Groundium Z"],
-changesFrom: "Arceus",
 },
 
 arceusice: {
@@ -7409,7 +6756,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Icicle Plate", "Icium Z"],
-changesFrom: "Arceus",
 },
 
 arceuspoison: {
@@ -7422,7 +6768,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Toxic Plate", "Poisonium Z"],
-changesFrom: "Arceus",
 },
 
 arceuspsychic: {
@@ -7435,7 +6780,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Mind Plate", "Psychium Z"],
-changesFrom: "Arceus",
 },
 
 arceusrock: {
@@ -7448,7 +6792,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Stone Plate", "Rockium Z"],
-changesFrom: "Arceus",
 },
 
 arceussteel: {
@@ -7461,7 +6804,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Iron Plate", "Steelium Z"],
-changesFrom: "Arceus",
 },
 
 arceuswater: {
@@ -7474,7 +6816,6 @@ baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 320,
 requiredItems: ["Splash Plate", "Waterium Z"],
-changesFrom: "Arceus",
 },
 
 victini: {
@@ -7495,7 +6836,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63},
 abilities: {0: "No Ability"},
 weightkg: 8.1,
-evos: ["Servine"],
 },
 
 servine: {
@@ -7506,8 +6846,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83},
 abilities: {0: "No Ability"},
 weightkg: 16,
-prevo: "Snivy",
-evos: ["Serperior"],
 },
 
 serperior: {
@@ -7518,7 +6856,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113},
 abilities: {0: "No Ability"},
 weightkg: 63,
-prevo: "Servine",
 },
 
 tepig: {
@@ -7529,7 +6866,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 63, def: 45, spa: 45, spd: 45, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 9.9,
-evos: ["Pignite"],
 },
 
 pignite: {
@@ -7540,8 +6876,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 93, def: 55, spa: 70, spd: 55, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 55.5,
-prevo: "Tepig",
-evos: ["Emboar"],
 },
 
 emboar: {
@@ -7552,7 +6886,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 123, def: 65, spa: 100, spd: 65, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 150,
-prevo: "Pignite",
 },
 
 oshawott: {
@@ -7563,7 +6896,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 55, def: 45, spa: 63, spd: 45, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 5.9,
-evos: ["Dewott"],
 },
 
 dewott: {
@@ -7574,8 +6906,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 75, def: 60, spa: 83, spd: 60, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 24.5,
-prevo: "Oshawott",
-evos: ["Samurott", "Samurott-Hisui"],
 },
 
 samurott: {
@@ -7586,7 +6916,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 100, def: 85, spa: 108, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 94.6,
-prevo: "Dewott",
 },
 
 samurotthisui: {
@@ -7598,7 +6927,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 108, def: 80, spa: 100, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 58.2,
-prevo: "Dewott",
 },
 
 patrat: {
@@ -7609,7 +6937,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 55, def: 39, spa: 35, spd: 39, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 11.6,
-evos: ["Watchog"],
 },
 
 watchog: {
@@ -7620,7 +6947,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 90, def: 70, spa: 60, spd: 70, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 27,
-prevo: "Patrat",
 },
 
 lillipup: {
@@ -7631,7 +6957,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 60, def: 45, spa: 25, spd: 45, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 4.1,
-evos: ["Herdier"],
 },
 
 herdier: {
@@ -7642,8 +6967,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 80, def: 65, spa: 35, spd: 65, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 14.7,
-prevo: "Lillipup",
-evos: ["Stoutland"],
 },
 
 stoutland: {
@@ -7654,7 +6977,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 110, def: 90, spa: 45, spd: 90, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 61,
-prevo: "Herdier",
 },
 
 purrloin: {
@@ -7665,7 +6987,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66},
 abilities: {0: "No Ability"},
 weightkg: 10.1,
-evos: ["Liepard"],
 },
 
 liepard: {
@@ -7676,7 +6997,6 @@ gender: "F",
 baseStats: {hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106},
 abilities: {0: "No Ability"},
 weightkg: 37.5,
-prevo: "Purrloin",
 },
 
 pansage: {
@@ -7687,7 +7007,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-evos: ["Simisage"],
 },
 
 simisage: {
@@ -7698,8 +7017,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
 abilities: {0: "No Ability"},
 weightkg: 30.5,
-prevo: "Pansage",
-evoType: "useItem",
 evoItem: "Leaf Stone",
 },
 
@@ -7711,7 +7028,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 11,
-evos: ["Simisear"],
 },
 
 simisear: {
@@ -7722,8 +7038,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
 abilities: {0: "No Ability"},
 weightkg: 28,
-prevo: "Pansear",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -7735,7 +7049,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 13.5,
-evos: ["Simipour"],
 },
 
 simipour: {
@@ -7746,8 +7059,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
 abilities: {0: "No Ability"},
 weightkg: 29,
-prevo: "Panpour",
-evoType: "useItem",
 evoItem: "Water Stone",
 },
 
@@ -7759,7 +7070,6 @@ gender: "F",
 baseStats: {hp: 76, atk: 25, def: 45, spa: 67, spd: 55, spe: 24},
 abilities: {0: "No Ability"},
 weightkg: 23.3,
-evos: ["Musharna"],
 },
 
 musharna: {
@@ -7770,8 +7080,6 @@ gender: "F",
 baseStats: {hp: 116, atk: 55, def: 85, spa: 107, spd: 95, spe: 29},
 abilities: {0: "No Ability"},
 weightkg: 60.5,
-prevo: "Munna",
-evoType: "useItem",
 evoItem: "Moon Stone",
 },
 
@@ -7783,7 +7091,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 55, def: 50, spa: 36, spd: 30, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 2.1,
-evos: ["Tranquill"],
 },
 
 tranquill: {
@@ -7794,8 +7101,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 77, def: 62, spa: 50, spd: 42, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 15,
-prevo: "Pidove",
-evos: ["Unfezant"],
 },
 
 unfezant: {
@@ -7806,7 +7111,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 115, def: 80, spa: 65, spd: 55, spe: 93},
 abilities: {0: "No Ability"},
 weightkg: 29,
-prevo: "Tranquill",
 },
 
 blitzle: {
@@ -7817,7 +7121,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 60, def: 32, spa: 50, spd: 32, spe: 76},
 abilities: {0: "No Ability"},
 weightkg: 29.8,
-evos: ["Zebstrika"],
 },
 
 zebstrika: {
@@ -7828,7 +7131,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 100, def: 63, spa: 80, spd: 63, spe: 116},
 abilities: {0: "No Ability"},
 weightkg: 79.5,
-prevo: "Blitzle",
 },
 
 roggenrola: {
@@ -7839,7 +7141,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 75, def: 85, spa: 25, spd: 25, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 18,
-evos: ["Boldore"],
 },
 
 boldore: {
@@ -7850,8 +7151,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 105, def: 105, spa: 50, spd: 40, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 102,
-prevo: "Roggenrola",
-evos: ["Gigalith"],
 },
 
 gigalith: {
@@ -7862,8 +7161,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 135, def: 130, spa: 60, spd: 80, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 260,
-prevo: "Boldore",
-evoType: "trade",
 },
 
 woobat: {
@@ -7874,7 +7171,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 45, def: 43, spa: 55, spd: 43, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 2.1,
-evos: ["Swoobat"],
 },
 
 swoobat: {
@@ -7885,8 +7181,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 57, def: 55, spa: 80, spd: 56, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-prevo: "Woobat",
-evoType: "levelFriendship",
 },
 
 drilbur: {
@@ -7897,7 +7191,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 85, def: 40, spa: 30, spd: 45, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Excadrill"],
 },
 
 excadrill: {
@@ -7908,7 +7201,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 135, def: 60, spa: 50, spd: 65, spe: 88},
 abilities: {0: "No Ability"},
 weightkg: 40.4,
-prevo: "Drilbur",
 },
 
 audino: {
@@ -7940,7 +7232,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 80, def: 55, spa: 25, spd: 35, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-evos: ["Gurdurr"],
 },
 
 gurdurr: {
@@ -7951,8 +7242,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 105, def: 85, spa: 40, spd: 50, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 40,
-prevo: "Timburr",
-evos: ["Conkeldurr"],
 },
 
 conkeldurr: {
@@ -7963,8 +7252,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 140, def: 95, spa: 55, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 87,
-prevo: "Gurdurr",
-evoType: "trade",
 },
 
 tympole: {
@@ -7975,7 +7262,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 40, spa: 50, spd: 40, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 4.5,
-evos: ["Palpitoad"],
 },
 
 palpitoad: {
@@ -7986,8 +7272,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 65, def: 55, spa: 65, spd: 55, spe: 69},
 abilities: {0: "No Ability"},
 weightkg: 17,
-prevo: "Tympole",
-evos: ["Seismitoad"],
 },
 
 seismitoad: {
@@ -7998,7 +7282,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 95, def: 75, spa: 85, spd: 75, spe: 74},
 abilities: {0: "No Ability"},
 weightkg: 62,
-prevo: "Palpitoad",
 },
 
 throh: {
@@ -8029,7 +7312,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 53, def: 70, spa: 40, spd: 60, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Swadloon"],
 },
 
 swadloon: {
@@ -8040,8 +7322,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 7.3,
-prevo: "Sewaddle",
-evos: ["Leavanny"],
 },
 
 leavanny: {
@@ -8052,8 +7332,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 103, def: 80, spa: 70, spd: 80, spe: 92},
 abilities: {0: "No Ability"},
 weightkg: 20.5,
-prevo: "Swadloon",
-evoType: "levelFriendship",
 },
 
 venipede: {
@@ -8064,7 +7342,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57},
 abilities: {0: "No Ability"},
 weightkg: 5.3,
-evos: ["Whirlipede"],
 },
 
 whirlipede: {
@@ -8075,8 +7352,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47},
 abilities: {0: "No Ability"},
 weightkg: 58.5,
-prevo: "Venipede",
-evos: ["Scolipede"],
 },
 
 scolipede: {
@@ -8087,7 +7362,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112},
 abilities: {0: "No Ability"},
 weightkg: 200.5,
-prevo: "Whirlipede",
 },
 
 cottonee: {
@@ -8098,7 +7372,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 27, def: 60, spa: 37, spd: 50, spe: 66},
 abilities: {0: "No Ability"},
 weightkg: 0.6,
-evos: ["Whimsicott"],
 },
 
 whimsicott: {
@@ -8109,8 +7382,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 67, def: 85, spa: 77, spd: 75, spe: 116},
 abilities: {0: "No Ability"},
 weightkg: 6.6,
-prevo: "Cottonee",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -8122,7 +7393,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 6.6,
-evos: ["Lilligant", "Lilligant-Hisui"],
 },
 
 lilligant: {
@@ -8133,8 +7403,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 16.3,
-prevo: "Petilil",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -8147,8 +7415,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 105, def: 75, spa: 50, spd: 75, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 19.2,
-prevo: "Petilil",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -8182,7 +7448,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
 abilities: {0: "No Ability"},
 weightkg: 18,
-evos: ["Basculegion", "Basculegion-F"],
 gen: 8,
 },
 
@@ -8194,7 +7459,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 72, def: 35, spa: 35, spd: 35, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 15.2,
-evos: ["Krokorok"],
 },
 
 krokorok: {
@@ -8205,8 +7469,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 82, def: 45, spa: 45, spd: 45, spe: 74},
 abilities: {0: "No Ability"},
 weightkg: 33.4,
-prevo: "Sandile",
-evos: ["Krookodile"],
 },
 
 krookodile: {
@@ -8217,7 +7479,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 117, def: 80, spa: 65, spd: 70, spe: 92},
 abilities: {0: "No Ability"},
 weightkg: 96.3,
-prevo: "Krokorok",
 },
 
 darumaka: {
@@ -8228,7 +7489,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 37.5,
-evos: ["Darmanitan"],
 },
 
 darumakagalar: {
@@ -8240,7 +7500,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 40,
-evos: ["Darmanitan-Galar"],
 },
 
 darmanitan: {
@@ -8251,7 +7510,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 92.9,
-prevo: "Darumaka",
 },
 
 darmanitanzen: {
@@ -8276,8 +7534,6 @@ gender: "F",
 baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Darumaka-Galar",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -8312,7 +7568,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 14.5,
-evos: ["Crustle"],
 },
 
 crustle: {
@@ -8323,7 +7578,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 105, def: 125, spa: 65, spd: 75, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 200,
-prevo: "Dwebble",
 },
 
 scraggy: {
@@ -8334,7 +7588,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48},
 abilities: {0: "No Ability"},
 weightkg: 11.8,
-evos: ["Scrafty"],
 },
 
 scrafty: {
@@ -8345,7 +7598,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Scraggy",
 },
 
 sigilyph: {
@@ -8366,7 +7618,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Cofagrigus"],
 },
 
 yamaskgalar: {
@@ -8378,7 +7629,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 55, def: 85, spa: 30, spd: 65, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Runerigus"],
 },
 
 cofagrigus: {
@@ -8389,7 +7639,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 50, def: 145, spa: 95, spd: 105, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 76.5,
-prevo: "Yamask",
 },
 
 tirtouga: {
@@ -8400,7 +7649,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 78, def: 103, spa: 53, spd: 45, spe: 22},
 abilities: {0: "No Ability"},
 weightkg: 16.5,
-evos: ["Carracosta"],
 },
 
 carracosta: {
@@ -8411,7 +7659,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32},
 abilities: {0: "No Ability"},
 weightkg: 81,
-prevo: "Tirtouga",
 },
 
 archen: {
@@ -8422,7 +7669,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 90, def: 45, spa: 60, spd: 45, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-evos: ["Archeops"],
 },
 
 archeops: {
@@ -8433,7 +7679,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 125, def: 65, spa: 85, spd: 65, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 32,
-prevo: "Archen",
 },
 
 trubbish: {
@@ -8444,7 +7689,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 62, spa: 40, spd: 62, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 31,
-evos: ["Garbodor"],
 },
 
 garbodor: {
@@ -8455,7 +7699,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 107.3,
-prevo: "Trubbish",
 },
 
 garbodorgmax: {
@@ -8467,7 +7710,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Garbodor",
 },
 
 zorua: {
@@ -8478,7 +7720,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 65, def: 40, spa: 80, spd: 40, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-evos: ["Zoroark"],
 },
 
 zoruahisui: {
@@ -8490,7 +7731,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 60, def: 40, spa: 85, spd: 40, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-evos: ["Zoroark-Hisui"],
 },
 
 zoroark: {
@@ -8501,7 +7741,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 81.1,
-prevo: "Zorua",
 },
 
 zoroarkhisui: {
@@ -8513,7 +7752,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 100, def: 60, spa: 125, spd: 60, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 73,
-prevo: "Zorua-Hisui",
 },
 
 minccino: {
@@ -8524,7 +7762,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 50, def: 40, spa: 40, spd: 40, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 5.8,
-evos: ["Cinccino"],
 },
 
 cinccino: {
@@ -8535,8 +7772,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 95, def: 60, spa: 65, spd: 60, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-prevo: "Minccino",
-evoType: "useItem",
 evoItem: "Shiny Stone",
 },
 
@@ -8548,7 +7783,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 50, spa: 55, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 5.8,
-evos: ["Gothorita"],
 },
 
 gothorita: {
@@ -8559,8 +7793,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 45, def: 70, spa: 75, spd: 85, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 18,
-prevo: "Gothita",
-evos: ["Gothitelle"],
 },
 
 gothitelle: {
@@ -8571,7 +7803,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 55, def: 95, spa: 95, spd: 110, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 44,
-prevo: "Gothorita",
 },
 
 solosis: {
@@ -8582,7 +7813,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Duosion"],
 },
 
 duosion: {
@@ -8593,8 +7823,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 8,
-prevo: "Solosis",
-evos: ["Reuniclus"],
 },
 
 reuniclus: {
@@ -8605,7 +7833,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 20.1,
-prevo: "Duosion",
 },
 
 ducklett: {
@@ -8616,7 +7843,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 44, def: 50, spa: 44, spd: 50, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-evos: ["Swanna"],
 },
 
 swanna: {
@@ -8627,7 +7853,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 87, def: 63, spa: 87, spd: 63, spe: 98},
 abilities: {0: "No Ability"},
 weightkg: 24.2,
-prevo: "Ducklett",
 },
 
 vanillite: {
@@ -8638,7 +7863,6 @@ gender: "F",
 baseStats: {hp: 36, atk: 50, def: 50, spa: 65, spd: 60, spe: 44},
 abilities: {0: "No Ability"},
 weightkg: 5.7,
-evos: ["Vanillish"],
 },
 
 vanillish: {
@@ -8649,8 +7873,6 @@ gender: "F",
 baseStats: {hp: 51, atk: 65, def: 65, spa: 80, spd: 75, spe: 59},
 abilities: {0: "No Ability"},
 weightkg: 41,
-prevo: "Vanillite",
-evos: ["Vanilluxe"],
 },
 
 vanilluxe: {
@@ -8661,7 +7883,6 @@ gender: "F",
 baseStats: {hp: 71, atk: 95, def: 85, spa: 110, spd: 95, spe: 79},
 abilities: {0: "No Ability"},
 weightkg: 57.5,
-prevo: "Vanillish",
 },
 
 deerling: {
@@ -8672,7 +7893,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 50, spa: 40, spd: 50, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-evos: ["Sawsbuck"],
 cosmeticFormes: ["Deerling-Summer", "Deerling-Autumn", "Deerling-Winter"],
 },
 
@@ -8684,7 +7904,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 100, def: 70, spa: 60, spd: 70, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 92.5,
-prevo: "Deerling",
 cosmeticFormes: ["Sawsbuck-Summer", "Sawsbuck-Autumn", "Sawsbuck-Winter"],
 },
 
@@ -8706,7 +7925,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 5.9,
-evos: ["Escavalier"],
 },
 
 escavalier: {
@@ -8717,8 +7935,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 33,
-prevo: "Karrablast",
-evoType: "trade",
 evoCondition: "with a Shelmet",
 },
 
@@ -8730,7 +7946,6 @@ gender: "F",
 baseStats: {hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Amoonguss"],
 },
 
 amoonguss: {
@@ -8741,7 +7956,6 @@ gender: "F",
 baseStats: {hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-prevo: "Foongus",
 },
 
 frillish: {
@@ -8752,7 +7966,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 40, def: 50, spa: 65, spd: 85, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 33,
-evos: ["Jellicent"],
 },
 
 jellicent: {
@@ -8763,7 +7976,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 60, def: 70, spa: 85, spd: 105, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 135,
-prevo: "Frillish",
 },
 
 alomomola: {
@@ -8784,7 +7996,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 47, def: 50, spa: 57, spd: 50, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 0.6,
-evos: ["Galvantula"],
 },
 
 galvantula: {
@@ -8795,7 +8006,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 77, def: 60, spa: 97, spd: 60, spe: 108},
 abilities: {0: "No Ability"},
 weightkg: 14.3,
-prevo: "Joltik",
 },
 
 ferroseed: {
@@ -8806,7 +8016,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 50, def: 91, spa: 24, spd: 86, spe: 10},
 abilities: {0: "No Ability"},
 weightkg: 18.8,
-evos: ["Ferrothorn"],
 },
 
 ferrothorn: {
@@ -8817,7 +8026,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 94, def: 131, spa: 54, spd: 116, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 110,
-prevo: "Ferroseed",
 },
 
 klink: {
@@ -8828,7 +8036,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 55, def: 70, spa: 45, spd: 60, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 21,
-evos: ["Klang"],
 },
 
 klang: {
@@ -8839,8 +8046,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 80, def: 95, spa: 70, spd: 85, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 51,
-prevo: "Klink",
-evos: ["Klinklang"],
 },
 
 klinklang: {
@@ -8851,7 +8056,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 100, def: 115, spa: 70, spd: 85, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 81,
-prevo: "Klang",
 },
 
 tynamo: {
@@ -8862,7 +8066,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 45, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-evos: ["Eelektrik"],
 },
 
 eelektrik: {
@@ -8873,8 +8076,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 85, def: 70, spa: 75, spd: 70, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 22,
-prevo: "Tynamo",
-evos: ["Eelektross"],
 },
 
 eelektross: {
@@ -8885,8 +8086,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 115, def: 80, spa: 105, spd: 80, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 80.5,
-prevo: "Eelektrik",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -8898,7 +8097,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 55, def: 55, spa: 85, spd: 55, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 9,
-evos: ["Beheeyem"],
 },
 
 beheeyem: {
@@ -8909,7 +8107,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 75, def: 75, spa: 125, spd: 95, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 34.5,
-prevo: "Elgyem",
 },
 
 litwick: {
@@ -8920,7 +8117,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 3.1,
-evos: ["Lampent"],
 },
 
 lampent: {
@@ -8931,8 +8127,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 13,
-prevo: "Litwick",
-evos: ["Chandelure"],
 },
 
 chandelure: {
@@ -8943,8 +8137,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 34.3,
-prevo: "Lampent",
-evoType: "useItem",
 evoItem: "Dusk Stone",
 },
 
@@ -8956,7 +8148,6 @@ gender: "F",
 baseStats: {hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57},
 abilities: {0: "No Ability"},
 weightkg: 18,
-evos: ["Fraxure"],
 },
 
 fraxure: {
@@ -8967,8 +8158,6 @@ gender: "F",
 baseStats: {hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 36,
-prevo: "Axew",
-evos: ["Haxorus"],
 },
 
 haxorus: {
@@ -8979,7 +8168,6 @@ gender: "F",
 baseStats: {hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 105.5,
-prevo: "Fraxure",
 },
 
 cubchoo: {
@@ -8990,7 +8178,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 70, def: 40, spa: 60, spd: 40, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Beartic"],
 },
 
 beartic: {
@@ -9001,7 +8188,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 130, def: 80, spa: 70, spd: 80, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 260,
-prevo: "Cubchoo",
 },
 
 cryogonal: {
@@ -9022,7 +8208,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 40, def: 85, spa: 40, spd: 65, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 7.7,
-evos: ["Accelgor"],
 },
 
 accelgor: {
@@ -9033,8 +8218,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 70, def: 40, spa: 100, spd: 60, spe: 145},
 abilities: {0: "No Ability"},
 weightkg: 25.3,
-prevo: "Shelmet",
-evoType: "trade",
 evoCondition: "with a Karrablast",
 },
 
@@ -9067,7 +8250,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 85, def: 50, spa: 55, spd: 50, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 20,
-evos: ["Mienshao"],
 },
 
 mienshao: {
@@ -9078,7 +8260,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 125, def: 60, spa: 95, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 35.5,
-prevo: "Mienfoo",
 },
 
 druddigon: {
@@ -9099,7 +8280,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 92,
-evos: ["Golurk"],
 },
 
 golurk: {
@@ -9110,7 +8290,6 @@ gender: "F",
 baseStats: {hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 330,
-prevo: "Golett",
 },
 
 pawniard: {
@@ -9121,7 +8300,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 10.2,
-evos: ["Bisharp"],
 },
 
 bisharp: {
@@ -9132,8 +8310,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 70,
-prevo: "Pawniard",
-evos: ["Kingambit"],
 },
 
 bouffalant: {
@@ -9154,7 +8330,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 83, def: 50, spa: 37, spd: 50, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-evos: ["Braviary", "Braviary-Hisui"],
 },
 
 braviary: {
@@ -9165,7 +8340,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 123, def: 75, spa: 57, spd: 75, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 41,
-prevo: "Rufflet",
 },
 
 braviaryhisui: {
@@ -9177,7 +8351,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 83, def: 70, spa: 112, spd: 70, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 43.4,
-prevo: "Rufflet",
 },
 
 vullaby: {
@@ -9188,7 +8361,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 55, def: 75, spa: 45, spd: 65, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 9,
-evos: ["Mandibuzz"],
 },
 
 mandibuzz: {
@@ -9199,7 +8371,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 65, def: 105, spa: 55, spd: 95, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 39.5,
-prevo: "Vullaby",
 },
 
 heatmor: {
@@ -9230,7 +8401,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38},
 abilities: {0: "No Ability"},
 weightkg: 17.3,
-evos: ["Zweilous"],
 },
 
 zweilous: {
@@ -9241,8 +8411,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 50,
-prevo: "Deino",
-evos: ["Hydreigon"],
 },
 
 hydreigon: {
@@ -9253,7 +8421,6 @@ gender: "F",
 baseStats: {hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98},
 abilities: {0: "No Ability"},
 weightkg: 160,
-prevo: "Zweilous",
 },
 
 larvesta: {
@@ -9264,7 +8431,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 28.8,
-evos: ["Volcarona"],
 },
 
 volcarona: {
@@ -9275,7 +8441,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 46,
-prevo: "Larvesta",
 },
 
 cobalion: {
@@ -9327,7 +8492,6 @@ gender: "F",
 baseStats: {hp: 79, atk: 100, def: 80, spa: 110, spd: 90, spe: 121},
 abilities: {0: "No Ability"},
 weightkg: 63,
-changesFrom: "Tornadus",
 },
 
 thundurus: {
@@ -9349,7 +8513,6 @@ gender: "F",
 baseStats: {hp: 79, atk: 105, def: 70, spa: 145, spd: 80, spe: 101},
 abilities: {0: "No Ability"},
 weightkg: 61,
-changesFrom: "Thundurus",
 },
 
 reshiram: {
@@ -9391,7 +8554,6 @@ gender: "F",
 baseStats: {hp: 89, atk: 145, def: 90, spa: 105, spd: 80, spe: 91},
 abilities: {0: "No Ability"},
 weightkg: 68,
-changesFrom: "Landorus",
 },
 
 kyurem: {
@@ -9413,7 +8575,6 @@ gender: "F",
 baseStats: {hp: 125, atk: 170, def: 100, spa: 120, spd: 90, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 325,
-changesFrom: "Kyurem",
 },
 
 kyuremwhite: {
@@ -9425,7 +8586,6 @@ gender: "F",
 baseStats: {hp: 125, atk: 120, def: 90, spa: 170, spd: 100, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 325,
-changesFrom: "Kyurem",
 },
 
 keldeo: {
@@ -9448,7 +8608,6 @@ baseStats: {hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108},
 abilities: {0: "No Ability"},
 weightkg: 48.5,
 requiredMove: "Secret Sword",
-changesFrom: "Keldeo",
 },
 
 meloetta: {
@@ -9542,7 +8701,6 @@ gender: "F",
 baseStats: {hp: 56, atk: 61, def: 65, spa: 48, spd: 45, spe: 38},
 abilities: {0: "No Ability"},
 weightkg: 9,
-evos: ["Quilladin"],
 },
 
 quilladin: {
@@ -9553,8 +8711,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 78, def: 95, spa: 56, spd: 58, spe: 57},
 abilities: {0: "No Ability"},
 weightkg: 29,
-prevo: "Chespin",
-evos: ["Chesnaught"],
 },
 
 chesnaught: {
@@ -9565,7 +8721,6 @@ gender: "F",
 baseStats: {hp: 88, atk: 107, def: 122, spa: 74, spd: 75, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 90,
-prevo: "Quilladin",
 },
 
 fennekin: {
@@ -9576,7 +8731,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 40, spa: 62, spd: 60, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 9.4,
-evos: ["Braixen"],
 },
 
 braixen: {
@@ -9587,8 +8741,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 59, def: 58, spa: 90, spd: 70, spe: 73},
 abilities: {0: "No Ability"},
 weightkg: 14.5,
-prevo: "Fennekin",
-evos: ["Delphox"],
 },
 
 delphox: {
@@ -9599,7 +8751,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 69, def: 72, spa: 114, spd: 100, spe: 104},
 abilities: {0: "No Ability"},
 weightkg: 39,
-prevo: "Braixen",
 },
 
 froakie: {
@@ -9610,7 +8761,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 7,
-evos: ["Frogadier"],
 },
 
 frogadier: {
@@ -9621,8 +8771,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 10.9,
-prevo: "Froakie",
-evos: ["Greninja"],
 },
 
 greninja: {
@@ -9633,7 +8781,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
 abilities: {0: "No Ability"},
 weightkg: 40,
-prevo: "Frogadier",
 // non-activated Greninja-Ash is forme 1, but PS does not currently distinguish it
 },
 
@@ -9659,7 +8806,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 36, def: 38, spa: 32, spd: 36, spe: 57},
 abilities: {0: "No Ability"},
 weightkg: 5,
-evos: ["Diggersby"],
 },
 
 diggersby: {
@@ -9670,7 +8816,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 60, def: 77, spa: 50, spd: 80, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 42.4,
-prevo: "Bunnelby",
 },
 
 fletchling: {
@@ -9681,7 +8826,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 50, def: 43, spa: 40, spd: 38, spe: 62},
 abilities: {0: "No Ability"},
 weightkg: 1.7,
-evos: ["Fletchinder"],
 },
 
 fletchinder: {
@@ -9692,8 +8836,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 73, def: 55, spa: 56, spd: 52, spe: 84},
 abilities: {0: "No Ability"},
 weightkg: 16,
-prevo: "Fletchling",
-evos: ["Talonflame"],
 },
 
 talonflame: {
@@ -9704,7 +8846,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 81, def: 71, spa: 74, spd: 69, spe: 126},
 abilities: {0: "No Ability"},
 weightkg: 24.5,
-prevo: "Fletchinder",
 },
 
 scatterbug: {
@@ -9715,7 +8856,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 35, def: 40, spa: 27, spd: 25, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Spewpa"],
 // TODO: Scatterbug technically has the same number of formes as Vivillon
 },
 
@@ -9727,8 +8867,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 22, def: 60, spa: 27, spd: 30, spe: 29},
 abilities: {0: "No Ability"},
 weightkg: 8.4,
-prevo: "Scatterbug",
-evos: ["Vivillon", "Vivillon-Fancy"],
 // TODO: Spewpa technically has the same number of formes as Vivillon
 },
 
@@ -9740,7 +8878,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 55, def: 50, spa: 95, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 17,
-prevo: "Spewpa",
 cosmeticFormes: ["Vivillon-Archipelago", "Vivillon-Continental", "Vivillon-Elegant", "Vivillon-Garden", "Vivillon-High Plains", "Vivillon-Icy Snow", "Vivillon-Jungle", "Vivillon-Marine", "Vivillon-Modern", "Vivillon-Monsoon", "Vivillon-Ocean", "Vivillon-Polar", "Vivillon-River", "Vivillon-Sandstorm", "Vivillon-Savanna", "Vivillon-Sun", "Vivillon-Tundra"],
 
 
@@ -9775,7 +8912,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 55, def: 50, spa: 95, spd: 55, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 17,
-prevo: "Spewpa",
 },
 
 vivillonpokeball: {
@@ -9797,7 +8933,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 50, def: 58, spa: 73, spd: 54, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 13.5,
-evos: ["Pyroar"],
 },
 
 pyroar: {
@@ -9808,7 +8943,6 @@ gender: "F",
 baseStats: {hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106},
 abilities: {0: "No Ability"},
 weightkg: 81.5,
-prevo: "Litleo",
 },
 
 flabebe: {
@@ -9819,7 +8953,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 38, def: 39, spa: 61, spd: 79, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 0.1,
-evos: ["Floette"],
 cosmeticFormes: ["Flabe\u0301be\u0301-Blue", "Flabe\u0301be\u0301-Orange", "Flabe\u0301be\u0301-White", "Flabe\u0301be\u0301-Yellow"],
 },
 
@@ -9831,8 +8964,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 45, def: 47, spa: 75, spd: 98, spe: 52},
 abilities: {0: "No Ability"},
 weightkg: 0.9,
-prevo: "Flabe\u0301be\u0301",
-evos: ["Florges"],
 cosmeticFormes: ["Floette-Blue", "Floette-Orange", "Floette-White", "Floette-Yellow"],
 },
 
@@ -9855,8 +8986,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 65, def: 68, spa: 112, spd: 154, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 10,
-prevo: "Floette",
-evoType: "useItem",
 evoItem: "Shiny Stone",
 cosmeticFormes: ["Florges-Blue", "Florges-Orange", "Florges-White", "Florges-Yellow"],
 },
@@ -9869,7 +8998,6 @@ gender: "F",
 baseStats: {hp: 66, atk: 65, def: 48, spa: 62, spd: 57, spe: 52},
 abilities: {0: "No Ability"},
 weightkg: 31,
-evos: ["Gogoat"],
 },
 
 gogoat: {
@@ -9880,7 +9008,6 @@ gender: "F",
 baseStats: {hp: 123, atk: 100, def: 62, spa: 97, spd: 81, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 91,
-prevo: "Skiddo",
 },
 
 pancham: {
@@ -9891,7 +9018,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 82, def: 62, spa: 46, spd: 48, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Pangoro"],
 },
 
 pangoro: {
@@ -9902,7 +9028,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 124, def: 78, spa: 69, spd: 71, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 136,
-prevo: "Pancham",
 evoCondition: "with a Dark-type in the party",
 },
 
@@ -9924,7 +9049,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 48, def: 54, spa: 63, spd: 60, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-evos: ["Meowstic", "Meowstic-F"],
 },
 
 meowstic: {
@@ -9935,7 +9059,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-prevo: "Espurr",
 },
 
 meowsticf: {
@@ -9947,7 +9070,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-prevo: "Espurr",
 },
 
 honedge: {
@@ -9958,7 +9080,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Doublade"],
 },
 
 doublade: {
@@ -9969,8 +9090,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 4.5,
-prevo: "Honedge",
-evos: ["Aegislash"],
 },
 
 aegislash: {
@@ -9981,8 +9100,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 140, spa: 50, spd: 140, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 53,
-prevo: "Doublade",
-evoType: "useItem",
 evoItem: "Dusk Stone",
 },
 
@@ -10007,7 +9124,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 52, def: 60, spa: 63, spd: 65, spe: 23},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-evos: ["Aromatisse"],
 },
 
 aromatisse: {
@@ -10018,8 +9134,6 @@ gender: "F",
 baseStats: {hp: 101, atk: 72, def: 72, spa: 99, spd: 89, spe: 29},
 abilities: {0: "No Ability"},
 weightkg: 15.5,
-prevo: "Spritzee",
-evoType: "trade",
 evoItem: "Sachet",
 },
 
@@ -10031,7 +9145,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 48, def: 66, spa: 59, spd: 57, spe: 49},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-evos: ["Slurpuff"],
 },
 
 slurpuff: {
@@ -10042,8 +9155,6 @@ gender: "F",
 baseStats: {hp: 82, atk: 80, def: 86, spa: 85, spd: 75, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 5,
-prevo: "Swirlix",
-evoType: "trade",
 evoItem: "Whipped Dream",
 },
 
@@ -10055,7 +9166,6 @@ gender: "F",
 baseStats: {hp: 53, atk: 54, def: 53, spa: 37, spd: 46, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-evos: ["Malamar"],
 },
 
 malamar: {
@@ -10066,7 +9176,6 @@ gender: "F",
 baseStats: {hp: 86, atk: 92, def: 88, spa: 68, spd: 75, spe: 73},
 abilities: {0: "No Ability"},
 weightkg: 47,
-prevo: "Inkay",
 evoCondition: "with the console turned upside-down",
 },
 
@@ -10078,7 +9187,6 @@ gender: "F",
 baseStats: {hp: 42, atk: 52, def: 67, spa: 39, spd: 56, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 31,
-evos: ["Barbaracle"],
 },
 
 barbaracle: {
@@ -10089,7 +9197,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 105, def: 115, spa: 54, spd: 86, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 96,
-prevo: "Binacle",
 },
 
 skrelp: {
@@ -10100,7 +9207,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 60, def: 60, spa: 60, spd: 60, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 7.3,
-evos: ["Dragalge"],
 },
 
 dragalge: {
@@ -10111,7 +9217,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44},
 abilities: {0: "No Ability"},
 weightkg: 81.5,
-prevo: "Skrelp",
 },
 
 clauncher: {
@@ -10122,7 +9227,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 62, spa: 61, spd: 63, spe: 44},
 abilities: {0: "No Ability"},
 weightkg: 8.3,
-evos: ["Clawitzer"],
 },
 
 clawitzer: {
@@ -10133,7 +9237,6 @@ gender: "F",
 baseStats: {hp: 71, atk: 70, def: 88, spa: 123, spd: 89, spe: 59},
 abilities: {0: "No Ability"},
 weightkg: 35.3,
-prevo: "Clauncher",
 },
 
 helioptile: {
@@ -10144,7 +9247,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 38, def: 33, spa: 61, spd: 43, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Heliolisk"],
 },
 
 heliolisk: {
@@ -10155,8 +9257,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 55, def: 52, spa: 109, spd: 94, spe: 109},
 abilities: {0: "No Ability"},
 weightkg: 21,
-prevo: "Helioptile",
-evoType: "useItem",
 evoItem: "Sun Stone",
 },
 
@@ -10168,7 +9268,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 89, def: 77, spa: 45, spd: 45, spe: 48},
 abilities: {0: "No Ability"},
 weightkg: 26,
-evos: ["Tyrantrum"],
 },
 
 tyrantrum: {
@@ -10179,7 +9278,6 @@ gender: "F",
 baseStats: {hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 270,
-prevo: "Tyrunt",
 evoCondition: "during the day",
 },
 
@@ -10191,7 +9289,6 @@ gender: "F",
 baseStats: {hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46},
 abilities: {0: "No Ability"},
 weightkg: 25.2,
-evos: ["Aurorus"],
 },
 
 aurorus: {
@@ -10202,7 +9299,6 @@ gender: "F",
 baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 225,
-prevo: "Amaura",
 evoCondition: "at night",
 },
 
@@ -10214,8 +9310,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 65, def: 65, spa: 110, spd: 130, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 23.5,
-prevo: "Eevee",
-evoType: "levelExtra",
 evoCondition: "with a Fairy-type move and two levels of Affection",
 },
 
@@ -10257,7 +9351,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 2.8,
-evos: ["Sliggoo", "Sliggoo-Hisui"],
 },
 
 sliggoo: {
@@ -10268,8 +9361,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 17.5,
-prevo: "Goomy",
-evos: ["Goodra"],
 },
 
 sliggoohisui: {
@@ -10281,8 +9372,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 75, def: 83, spa: 83, spd: 113, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 68.5,
-prevo: "Goomy",
-evos: ["Goodra-Hisui"],
 },
 
 goodra: {
@@ -10293,7 +9382,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 150.5,
-prevo: "Sliggoo",
 },
 
 goodrahisui: {
@@ -10305,7 +9393,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 100, def: 100, spa: 110, spd: 150, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 334.1,
-prevo: "Sliggoo-Hisui",
 },
 
 klefki: {
@@ -10326,7 +9413,6 @@ gender: "F",
 baseStats: {hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38},
 abilities: {0: "No Ability"},
 weightkg: 7,
-evos: ["Trevenant"],
 },
 
 trevenant: {
@@ -10337,8 +9423,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56},
 abilities: {0: "No Ability"},
 weightkg: 71,
-prevo: "Phantump",
-evoType: "trade",
 },
 
 pumpkaboo: {
@@ -10349,7 +9433,6 @@ gender: "F",
 baseStats: {hp: 49, atk: 66, def: 70, spa: 44, spd: 55, spe: 51},
 abilities: {0: "No Ability"},
 weightkg: 5,
-evos: ["Gourgeist"],
 },
 
 pumpkaboosmall: {
@@ -10361,7 +9444,6 @@ gender: "F",
 baseStats: {hp: 44, atk: 66, def: 70, spa: 44, spd: 55, spe: 56},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-evos: ["Gourgeist-Small"],
 },
 
 pumpkaboolarge: {
@@ -10373,7 +9455,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 66, def: 70, spa: 44, spd: 55, spe: 46},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-evos: ["Gourgeist-Large"],
 },
 
 pumpkaboosuper: {
@@ -10385,7 +9466,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 66, def: 70, spa: 44, spd: 55, spe: 41},
 abilities: {0: "No Ability"},
 weightkg: 15,
-evos: ["Gourgeist-Super"],
 },
 
 gourgeist: {
@@ -10396,8 +9476,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 90, def: 122, spa: 58, spd: 75, spe: 84},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-prevo: "Pumpkaboo",
-evoType: "trade",
 },
 
 gourgeistsmall: {
@@ -10409,8 +9487,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 85, def: 122, spa: 58, spd: 75, spe: 99},
 abilities: {0: "No Ability"},
 weightkg: 9.5,
-prevo: "Pumpkaboo-Small",
-evoType: "trade",
 },
 
 gourgeistlarge: {
@@ -10422,8 +9498,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 95, def: 122, spa: 58, spd: 75, spe: 69},
 abilities: {0: "No Ability"},
 weightkg: 14,
-prevo: "Pumpkaboo-Large",
-evoType: "trade",
 },
 
 gourgeistsuper: {
@@ -10435,8 +9509,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 100, def: 122, spa: 58, spd: 75, spe: 54},
 abilities: {0: "No Ability"},
 weightkg: 39,
-prevo: "Pumpkaboo-Super",
-evoType: "trade",
 },
 
 bergmite: {
@@ -10447,7 +9519,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28},
 abilities: {0: "No Ability"},
 weightkg: 99.5,
-evos: ["Avalugg", "Avalugg-Hisui"],
 },
 
 avalugg: {
@@ -10458,7 +9529,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
 abilities: {0: "No Ability"},
 weightkg: 505,
-prevo: "Bergmite",
 },
 
 avalugghisui: {
@@ -10470,7 +9540,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 127, def: 184, spa: 34, spd: 36, spe: 38},
 abilities: {0: "No Ability"},
 weightkg: 262.4,
-prevo: "Bergmite",
 },
 
 noibat: {
@@ -10481,7 +9550,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Noivern"],
 },
 
 noivern: {
@@ -10492,7 +9560,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123},
 abilities: {0: "No Ability"},
 weightkg: 85,
-prevo: "Noibat",
 },
 
 xerneas: {
@@ -10546,7 +9613,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 100, def: 71, spa: 61, spd: 85, spe: 115},
 abilities: {0: "No Ability"},
 weightkg: 33.5,
-changesFrom: "Zygarde",
 gen: 7,
 },
 
@@ -10604,7 +9670,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 160, def: 60, spa: 170, spd: 130, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 490,
-changesFrom: "Hoopa",
 },
 
 volcanion: {
@@ -10625,7 +9690,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 55, def: 55, spa: 50, spd: 50, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Dartrix"],
 },
 
 dartrix: {
@@ -10636,8 +9700,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 75, def: 75, spa: 70, spd: 70, spe: 52},
 abilities: {0: "No Ability"},
 weightkg: 16,
-prevo: "Rowlet",
-evos: ["Decidueye", "Decidueye-Hisui"],
 },
 
 decidueye: {
@@ -10648,7 +9710,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 107, def: 75, spa: 100, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 36.6,
-prevo: "Dartrix",
 },
 
 decidueyehisui: {
@@ -10660,7 +9721,6 @@ gender: "F",
 baseStats: {hp: 88, atk: 112, def: 80, spa: 95, spd: 95, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 37,
-prevo: "Dartrix",
 },
 
 litten: {
@@ -10671,7 +9731,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 65, def: 40, spa: 60, spd: 40, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 4.3,
-evos: ["Torracat"],
 },
 
 torracat: {
@@ -10682,8 +9741,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 85, def: 50, spa: 80, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Litten",
-evos: ["Incineroar"],
 },
 
 incineroar: {
@@ -10694,7 +9751,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 115, def: 90, spa: 80, spd: 90, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 83,
-prevo: "Torracat",
 },
 
 popplio: {
@@ -10705,7 +9761,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 54, def: 54, spa: 66, spd: 56, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 7.5,
-evos: ["Brionne"],
 },
 
 brionne: {
@@ -10716,8 +9771,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 69, def: 69, spa: 91, spd: 81, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 17.5,
-prevo: "Popplio",
-evos: ["Primarina"],
 },
 
 primarina: {
@@ -10728,7 +9781,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 74, def: 74, spa: 126, spd: 116, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 44,
-prevo: "Brionne",
 },
 
 pikipek: {
@@ -10739,7 +9791,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 75, def: 30, spa: 30, spd: 30, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 1.2,
-evos: ["Trumbeak"],
 },
 
 trumbeak: {
@@ -10750,8 +9801,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 85, def: 50, spa: 40, spd: 50, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 14.8,
-prevo: "Pikipek",
-evos: ["Toucannon"],
 },
 
 toucannon: {
@@ -10762,7 +9811,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 75, spa: 75, spd: 75, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 26,
-prevo: "Trumbeak",
 },
 
 yungoos: {
@@ -10773,7 +9821,6 @@ gender: "F",
 baseStats: {hp: 48, atk: 70, def: 30, spa: 30, spd: 30, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Gumshoos"],
 },
 
 gumshoos: {
@@ -10784,7 +9831,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 110, def: 65, spa: 55, spd: 65, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 14.2,
-prevo: "Yungoos",
 evoCondition: "during the day",
 },
 
@@ -10807,7 +9853,6 @@ gender: "F",
 baseStats: {hp: 47, atk: 62, def: 45, spa: 55, spd: 45, spe: 46},
 abilities: {0: "No Ability"},
 weightkg: 4.4,
-evos: ["Charjabug"],
 },
 
 charjabug: {
@@ -10818,8 +9863,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 82, def: 95, spa: 55, spd: 75, spe: 36},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-prevo: "Grubbin",
-evos: ["Vikavolt"],
 },
 
 vikavolt: {
@@ -10830,8 +9873,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 75, spa: 115, spd: 65, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 45,
-prevo: "Charjabug",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -10854,7 +9895,6 @@ gender: "F",
 baseStats: {hp: 47, atk: 82, def: 57, spa: 42, spd: 47, spe: 63},
 abilities: {0: "No Ability"},
 weightkg: 7,
-evos: ["Crabominable"],
 },
 
 crabominable: {
@@ -10865,8 +9905,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 120, def: 80, spa: 60, spd: 55, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 180,
-prevo: "Crabrawler",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -10889,7 +9927,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
 abilities: {0: "No Ability"},
 weightkg: 3.4,
-changesFrom: "Oricorio",
 },
 
 oricoriopau: {
@@ -10901,7 +9938,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
 abilities: {0: "No Ability"},
 weightkg: 3.4,
-changesFrom: "Oricorio",
 },
 
 oricoriosensu: {
@@ -10913,7 +9949,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
 abilities: {0: "No Ability"},
 weightkg: 3.4,
-changesFrom: "Oricorio",
 },
 
 cutiefly: {
@@ -10924,7 +9959,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 40, spa: 55, spd: 40, spe: 84},
 abilities: {0: "No Ability"},
 weightkg: 0.2,
-evos: ["Ribombee"],
 },
 
 ribombee: {
@@ -10935,7 +9969,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-prevo: "Cutiefly",
 },
 
 ribombeetotem: {
@@ -10957,7 +9990,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 65, def: 40, spa: 30, spd: 40, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 9.2,
-evos: ["Lycanroc", "Lycanroc-Midnight", "Lycanroc-Dusk"],
 },
 
 lycanroc: {
@@ -10968,7 +10000,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 115, def: 65, spa: 55, spd: 65, spe: 112},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Rockruff",
 evoCondition: "during the day",
 },
 
@@ -10981,7 +10012,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 115, def: 75, spa: 55, spd: 75, spe: 82},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Rockruff",
 evoCondition: "at night",
 },
 
@@ -10994,7 +10024,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 117, def: 65, spa: 55, spd: 65, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 25,
-prevo: "Rockruff",
 evoCondition: "from a special Rockruff",
 },
 
@@ -11029,7 +10058,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 53, def: 62, spa: 43, spd: 52, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Toxapex"],
 },
 
 toxapex: {
@@ -11040,7 +10068,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 63, def: 152, spa: 53, spd: 142, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 14.5,
-prevo: "Mareanie",
 },
 
 mudbray: {
@@ -11051,7 +10078,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 100, def: 70, spa: 45, spd: 55, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 110,
-evos: ["Mudsdale"],
 },
 
 mudsdale: {
@@ -11062,7 +10088,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 125, def: 100, spa: 55, spd: 85, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 920,
-prevo: "Mudbray",
 },
 
 dewpider: {
@@ -11073,7 +10098,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 40, def: 52, spa: 40, spd: 72, spe: 27},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Araquanid"],
 },
 
 araquanid: {
@@ -11084,7 +10108,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 82,
-prevo: "Dewpider",
 },
 
 araquanidtotem: {
@@ -11106,7 +10129,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 50, def: 35, spa: 55, spd: 35, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Lurantis"],
 },
 
 lurantis: {
@@ -11117,7 +10139,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 80, def: 90, spa: 105, spd: 90, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 18.5,
-prevo: "Fomantis",
 evoCondition: "during the day",
 },
 
@@ -11140,7 +10161,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 35, def: 55, spa: 65, spd: 75, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Shiinotic"],
 },
 
 shiinotic: {
@@ -11151,7 +10171,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 45, def: 85, spa: 95, spd: 105, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-prevo: "Morelull",
 },
 
 salandit: {
@@ -11162,7 +10181,6 @@ gender: "F",
 baseStats: {hp: 48, atk: 44, def: 40, spa: 71, spd: 40, spe: 77},
 abilities: {0: "No Ability"},
 weightkg: 4.8,
-evos: ["Salazzle"],
 },
 
 salazzle: {
@@ -11173,7 +10191,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117},
 abilities: {0: "No Ability"},
 weightkg: 22.2,
-prevo: "Salandit",
 },
 
 salazzletotem: {
@@ -11195,7 +10212,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 75, def: 50, spa: 45, spd: 50, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 6.8,
-evos: ["Bewear"],
 },
 
 bewear: {
@@ -11206,7 +10222,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 125, def: 80, spa: 55, spd: 60, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 135,
-prevo: "Stufful",
 },
 
 bounsweet: {
@@ -11217,7 +10232,6 @@ gender: "F",
 baseStats: {hp: 42, atk: 30, def: 38, spa: 30, spd: 38, spe: 32},
 abilities: {0: "No Ability"},
 weightkg: 3.2,
-evos: ["Steenee"],
 },
 
 steenee: {
@@ -11228,8 +10242,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 40, def: 48, spa: 40, spd: 48, spe: 62},
 abilities: {0: "No Ability"},
 weightkg: 8.2,
-prevo: "Bounsweet",
-evos: ["Tsareena"],
 },
 
 tsareena: {
@@ -11240,9 +10252,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 120, def: 98, spa: 50, spd: 98, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 21.4,
-prevo: "Steenee",
-evoType: "levelMove",
-evoMove: "Stomp",
 },
 
 comfey: {
@@ -11283,7 +10292,6 @@ gender: "F",
 baseStats: {hp: 25, atk: 35, def: 40, spa: 20, spd: 30, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Golisopod"],
 },
 
 golisopod: {
@@ -11294,7 +10302,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 125, def: 140, spa: 60, spd: 90, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 108,
-prevo: "Wimpod",
 },
 
 sandygast: {
@@ -11305,7 +10312,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 55, def: 80, spa: 70, spd: 45, spe: 15},
 abilities: {0: "No Ability"},
 weightkg: 70,
-evos: ["Palossand"],
 },
 
 palossand: {
@@ -11316,7 +10322,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 75, def: 110, spa: 100, spd: 75, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 250,
-prevo: "Sandygast",
 },
 
 pyukumuku: {
@@ -11337,7 +10342,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 59},
 abilities: {0: "No Ability"},
 weightkg: 120.5,
-evos: ["Silvally"],
 },
 
 silvally: {
@@ -11359,7 +10363,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallydark: {
@@ -11371,7 +10374,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallydragon: {
@@ -11383,7 +10385,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyelectric: {
@@ -11395,7 +10396,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyfairy: {
@@ -11407,7 +10407,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyfighting: {
@@ -11419,7 +10418,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyfire: {
@@ -11431,7 +10429,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyflying: {
@@ -11443,7 +10440,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyghost: {
@@ -11455,7 +10451,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallygrass: {
@@ -11467,7 +10462,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyground: {
@@ -11479,7 +10473,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyice: {
@@ -11491,7 +10484,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallypoison: {
@@ -11503,7 +10495,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallypsychic: {
@@ -11515,7 +10506,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallyrock: {
@@ -11527,7 +10517,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallysteel: {
@@ -11539,7 +10528,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 silvallywater: {
@@ -11551,7 +10539,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-changesFrom: "Silvally",
 },
 
 minior: {
@@ -11703,7 +10690,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 55, def: 65, spa: 45, spd: 45, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 29.7,
-evos: ["Hakamoo"],
 },
 
 hakamoo: {
@@ -11714,8 +10700,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 75, def: 90, spa: 65, spd: 70, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 47,
-prevo: "Jangmoo",
-evos: ["Kommoo"],
 },
 
 kommoo: {
@@ -11726,7 +10710,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 78.2,
-prevo: "Hakamoo",
 },
 
 kommoototem: {
@@ -11788,7 +10771,6 @@ gender: "F",
 baseStats: {hp: 43, atk: 29, def: 31, spa: 29, spd: 31, spe: 37},
 abilities: {0: "No Ability"},
 weightkg: 0.1,
-evos: ["Cosmoem"],
 },
 
 cosmoem: {
@@ -11799,8 +10781,6 @@ gender: "F",
 baseStats: {hp: 43, atk: 29, def: 131, spa: 29, spd: 131, spe: 37},
 abilities: {0: "No Ability"},
 weightkg: 999.9,
-prevo: "Cosmog",
-evos: ["Solgaleo", "Lunala"],
 },
 
 solgaleo: {
@@ -11811,7 +10791,6 @@ gender: "F",
 baseStats: {hp: 137, atk: 137, def: 107, spa: 113, spd: 89, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 230,
-prevo: "Cosmoem",
 },
 
 lunala: {
@@ -11822,7 +10801,6 @@ gender: "F",
 baseStats: {hp: 137, atk: 113, def: 89, spa: 137, spd: 107, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Cosmoem",
 },
 
 nihilego: {
@@ -11914,7 +10892,6 @@ gender: "F",
 baseStats: {hp: 97, atk: 157, def: 127, spa: 113, spd: 109, spe: 77},
 abilities: {0: "No Ability"},
 weightkg: 460,
-changesFrom: "Necrozma",
 },
 
 necrozmadawnwings: {
@@ -11926,7 +10903,6 @@ gender: "F",
 baseStats: {hp: 97, atk: 113, def: 109, spa: 157, spd: 127, spe: 77},
 abilities: {0: "No Ability"},
 weightkg: 350,
-changesFrom: "Necrozma",
 },
 
 necrozmaultra: {
@@ -11980,7 +10956,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 73, def: 67, spa: 73, spd: 67, spe: 73},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Naganadel"],
 },
 
 naganadel: {
@@ -11991,9 +10966,6 @@ gender: "F",
 baseStats: {hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121},
 abilities: {0: "No Ability"},
 weightkg: 150,
-prevo: "Poipole",
-evoType: "levelMove",
-evoMove: "Dragon Pulse",
 },
 
 stakataka: {
@@ -12055,7 +11027,6 @@ gender: "F",
 baseStats: {hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Melmetal",
 },
 
 grookey: {
@@ -12066,7 +11037,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 50, spa: 40, spd: 40, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 5,
-evos: ["Thwackey"],
 },
 
 thwackey: {
@@ -12077,8 +11047,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 85, def: 70, spa: 55, spd: 60, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 14,
-prevo: "Grookey",
-evos: ["Rillaboom"],
 },
 
 rillaboom: {
@@ -12089,7 +11057,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 90,
-prevo: "Thwackey",
 },
 
 rillaboomgmax: {
@@ -12101,7 +11068,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Rillaboom",
 },
 
 scorbunny: {
@@ -12112,7 +11078,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 71, def: 40, spa: 40, spd: 40, spe: 69},
 abilities: {0: "No Ability"},
 weightkg: 4.5,
-evos: ["Raboot"],
 },
 
 raboot: {
@@ -12123,8 +11088,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 86, def: 60, spa: 55, spd: 60, spe: 94},
 abilities: {0: "No Ability"},
 weightkg: 9,
-prevo: "Scorbunny",
-evos: ["Cinderace"],
 },
 
 cinderace: {
@@ -12135,7 +11098,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
 abilities: {0: "No Ability"},
 weightkg: 33,
-prevo: "Raboot",
 },
 
 cinderacegmax: {
@@ -12147,7 +11109,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Cinderace",
 },
 
 sobble: {
@@ -12158,7 +11119,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 40, def: 40, spa: 70, spd: 40, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Drizzile"],
 },
 
 drizzile: {
@@ -12169,8 +11129,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 55, spa: 95, spd: 55, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 11.5,
-prevo: "Sobble",
-evos: ["Inteleon"],
 },
 
 inteleon: {
@@ -12181,7 +11139,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 45.2,
-prevo: "Drizzile",
 },
 
 inteleongmax: {
@@ -12193,7 +11150,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Inteleon",
 },
 
 skwovet: {
@@ -12204,7 +11160,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 55, def: 55, spa: 35, spd: 35, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Greedent"],
 },
 
 greedent: {
@@ -12215,7 +11170,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 95, def: 95, spa: 55, spd: 75, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 6,
-prevo: "Skwovet",
 },
 
 rookidee: {
@@ -12226,7 +11180,6 @@ gender: "F",
 baseStats: {hp: 38, atk: 47, def: 35, spa: 33, spd: 35, spe: 57},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Corvisquire"],
 },
 
 corvisquire: {
@@ -12237,8 +11190,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 67, def: 55, spa: 43, spd: 55, spe: 77},
 abilities: {0: "No Ability"},
 weightkg: 16,
-prevo: "Rookidee",
-evos: ["Corviknight"],
 },
 
 corviknight: {
@@ -12249,7 +11200,6 @@ gender: "F",
 baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 75,
-prevo: "Corvisquire",
 },
 
 corviknightgmax: {
@@ -12261,7 +11211,6 @@ gender: "F",
 baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Corviknight",
 },
 
 blipbug: {
@@ -12272,7 +11221,6 @@ gender: "F",
 baseStats: {hp: 25, atk: 20, def: 20, spa: 25, spd: 45, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Dottler"],
 },
 
 dottler: {
@@ -12283,8 +11231,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 35, def: 80, spa: 50, spd: 90, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 19.5,
-prevo: "Blipbug",
-evos: ["Orbeetle"],
 },
 
 orbeetle: {
@@ -12295,7 +11241,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 40.8,
-prevo: "Dottler",
 },
 
 orbeetlegmax: {
@@ -12307,7 +11252,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Orbeetle",
 },
 
 nickit: {
@@ -12318,7 +11262,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 28, def: 28, spa: 47, spd: 52, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 8.9,
-evos: ["Thievul"],
 },
 
 thievul: {
@@ -12329,7 +11272,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 58, def: 58, spa: 87, spd: 92, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 19.9,
-prevo: "Nickit",
 },
 
 gossifleur: {
@@ -12340,7 +11282,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 60, spa: 40, spd: 60, spe: 10},
 abilities: {0: "No Ability"},
 weightkg: 2.2,
-evos: ["Eldegoss"],
 },
 
 eldegoss: {
@@ -12351,7 +11292,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 50, def: 90, spa: 80, spd: 120, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-prevo: "Gossifleur",
 },
 
 wooloo: {
@@ -12362,7 +11302,6 @@ gender: "F",
 baseStats: {hp: 42, atk: 40, def: 55, spa: 40, spd: 45, spe: 48},
 abilities: {0: "No Ability"},
 weightkg: 6,
-evos: ["Dubwool"],
 },
 
 dubwool: {
@@ -12373,7 +11312,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 80, def: 100, spa: 60, spd: 90, spe: 88},
 abilities: {0: "No Ability"},
 weightkg: 43,
-prevo: "Wooloo",
 },
 
 chewtle: {
@@ -12384,7 +11322,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 64, def: 50, spa: 38, spd: 38, spe: 44},
 abilities: {0: "No Ability"},
 weightkg: 8.5,
-evos: ["Drednaw"],
 },
 
 drednaw: {
@@ -12395,7 +11332,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
 abilities: {0: "No Ability"},
 weightkg: 115.5,
-prevo: "Chewtle",
 },
 
 drednawgmax: {
@@ -12407,7 +11343,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Drednaw",
 },
 
 yamper: {
@@ -12418,7 +11353,6 @@ gender: "F",
 baseStats: {hp: 59, atk: 45, def: 50, spa: 40, spd: 50, spe: 26},
 abilities: {0: "No Ability"},
 weightkg: 13.5,
-evos: ["Boltund"],
 },
 
 boltund: {
@@ -12429,7 +11363,6 @@ gender: "F",
 baseStats: {hp: 69, atk: 90, def: 60, spa: 90, spd: 60, spe: 121},
 abilities: {0: "No Ability"},
 weightkg: 34,
-prevo: "Yamper",
 },
 
 rolycoly: {
@@ -12440,7 +11373,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 40, def: 50, spa: 40, spd: 50, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Carkol"],
 },
 
 carkol: {
@@ -12451,8 +11383,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 60, def: 90, spa: 60, spd: 70, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 78,
-prevo: "Rolycoly",
-evos: ["Coalossal"],
 },
 
 coalossal: {
@@ -12463,7 +11393,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 310.5,
-prevo: "Carkol",
 },
 
 coalossalgmax: {
@@ -12475,7 +11404,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Coalossal",
 },
 
 applin: {
@@ -12486,7 +11414,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 80, spa: 40, spd: 40, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-evos: ["Flapple", "Appletun"],
 },
 
 flapple: {
@@ -12497,8 +11424,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 1,
-prevo: "Applin",
-evoType: "useItem",
 evoItem: "Tart Apple",
 },
 
@@ -12511,7 +11436,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Flapple",
 },
 
 appletun: {
@@ -12522,8 +11446,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 13,
-prevo: "Applin",
-evoType: "useItem",
 evoItem: "Sweet Apple",
 },
 
@@ -12536,7 +11458,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Appletun",
 },
 
 silicobra: {
@@ -12547,7 +11468,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 57, def: 75, spa: 35, spd: 50, spe: 46},
 abilities: {0: "No Ability"},
 weightkg: 7.6,
-evos: ["Sandaconda"],
 },
 
 sandaconda: {
@@ -12558,7 +11478,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 65.5,
-prevo: "Silicobra",
 },
 
 sandacondagmax: {
@@ -12570,7 +11489,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Sandaconda",
 },
 
 cramorant: {
@@ -12617,7 +11535,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 63, def: 40, spa: 40, spd: 30, spe: 66},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Barraskewda"],
 },
 
 barraskewda: {
@@ -12628,7 +11545,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 123, def: 60, spa: 60, spd: 50, spe: 136},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Arrokuda",
 },
 
 toxel: {
@@ -12639,7 +11555,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 38, def: 35, spa: 54, spd: 35, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 11,
-evos: ["Toxtricity", "Toxtricity-Low-Key"],
 canHatch: true,
 },
 
@@ -12651,7 +11566,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 40,
-prevo: "Toxel",
 },
 
 toxtricitylowkey: {
@@ -12663,7 +11577,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 40,
-prevo: "Toxel",
 },
 
 toxtricitygmax: {
@@ -12675,7 +11588,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Toxtricity",
 },
 
 toxtricitylowkeygmax: {
@@ -12688,7 +11600,6 @@ baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 0,
 battleOnly: "Toxtricity-Low-Key",
-changesFrom: "Toxtricity-Low-Key",
 },
 
 sizzlipede: {
@@ -12699,7 +11610,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 65, def: 45, spa: 50, spd: 50, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Centiskorch"],
 },
 
 centiskorch: {
@@ -12710,7 +11620,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Sizzlipede",
 },
 
 centiskorchgmax: {
@@ -12722,7 +11631,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Centiskorch",
 },
 
 clobbopus: {
@@ -12733,7 +11641,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 68, def: 60, spa: 50, spd: 50, spe: 32},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Grapploct"],
 },
 
 grapploct: {
@@ -12744,9 +11651,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 118, def: 90, spa: 70, spd: 80, spe: 42},
 abilities: {0: "No Ability"},
 weightkg: 39,
-prevo: "Clobbopus",
-evoType: "levelMove",
-evoMove: "Taunt",
 },
 
 sinistea: {
@@ -12757,7 +11661,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 0.2,
-evos: ["Polteageist"],
 },
 
 sinisteaantique: {
@@ -12769,7 +11672,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 0.2,
-evos: ["Polteageist-Antique"],
 },
 
 polteageist: {
@@ -12780,8 +11682,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 0.4,
-prevo: "Sinistea",
-evoType: "useItem",
 evoItem: "Cracked Pot",
 },
 
@@ -12794,8 +11694,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 0.4,
-prevo: "Sinistea-Antique",
-evoType: "useItem",
 evoItem: "Chipped Pot",
 },
 
@@ -12807,7 +11705,6 @@ gender: "F",
 baseStats: {hp: 42, atk: 30, def: 45, spa: 56, spd: 53, spe: 39},
 abilities: {0: "No Ability"},
 weightkg: 3.4,
-evos: ["Hattrem"],
 },
 
 hattrem: {
@@ -12818,8 +11715,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 40, def: 65, spa: 86, spd: 73, spe: 49},
 abilities: {0: "No Ability"},
 weightkg: 4.8,
-prevo: "Hatenna",
-evos: ["Hatterene"],
 },
 
 hatterene: {
@@ -12830,7 +11725,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
 abilities: {0: "No Ability"},
 weightkg: 5.1,
-prevo: "Hattrem",
 },
 
 hatterenegmax: {
@@ -12842,7 +11736,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Hatterene",
 },
 
 impidimp: {
@@ -12853,7 +11746,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 45, def: 30, spa: 55, spd: 40, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 5.5,
-evos: ["Morgrem"],
 },
 
 morgrem: {
@@ -12864,8 +11756,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 45, spa: 75, spd: 55, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 12.5,
-prevo: "Impidimp",
-evos: ["Grimmsnarl"],
 },
 
 grimmsnarl: {
@@ -12876,7 +11766,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 61,
-prevo: "Morgrem",
 },
 
 grimmsnarlgmax: {
@@ -12888,7 +11777,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Grimmsnarl",
 },
 
 obstagoon: {
@@ -12899,7 +11787,6 @@ gender: "F",
 baseStats: {hp: 93, atk: 90, def: 101, spa: 60, spd: 81, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 46,
-prevo: "Linoone-Galar",
 evoCondition: "at night",
 },
 
@@ -12911,7 +11798,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 110, def: 100, spa: 50, spd: 60, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 28,
-prevo: "Meowth-Galar",
 },
 
 cursola: {
@@ -12922,7 +11808,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 95, def: 50, spa: 145, spd: 130, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0.4,
-prevo: "Corsola-Galar",
 },
 
 sirfetchd: {
@@ -12933,8 +11818,6 @@ gender: "F",
 baseStats: {hp: 62, atk: 135, def: 95, spa: 68, spd: 82, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 117,
-prevo: "Farfetch\u2019d-Galar",
-evoType: "other",
 evoCondition: "Land 3 critical hits in 1 battle",
 },
 
@@ -12946,7 +11829,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 85, def: 75, spa: 110, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 58.2,
-prevo: "Mr. Mime-Galar",
 },
 
 runerigus: {
@@ -12957,8 +11839,6 @@ gender: "F",
 baseStats: {hp: 58, atk: 95, def: 145, spa: 50, spd: 105, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 66.6,
-prevo: "Yamask-Galar",
-evoType: "other",
 evoCondition: "Have 49+ HP lost and walk under stone sculpture in Dusty Bowl",
 },
 
@@ -12970,7 +11850,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 40, def: 40, spa: 50, spd: 61, spe: 34},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
-evos: ["Alcremie"],
 },
 
 alcremie: {
@@ -12981,8 +11860,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 0.5,
-prevo: "Milcery",
-evoType: "other",
 evoCondition: "spin while holding a Sweet",
 cosmeticFormes: ["Alcremie-Ruby-Cream", "Alcremie-Matcha-Cream", "Alcremie-Mint-Cream", "Alcremie-Lemon-Cream", "Alcremie-Salted-Cream", "Alcremie-Ruby-Swirl", "Alcremie-Caramel-Swirl", "Alcremie-Rainbow-Swirl"],
 },
@@ -12996,7 +11873,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Alcremie",
 },
 
 falinks: {
@@ -13027,7 +11903,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 25, def: 35, spa: 45, spd: 30, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 3.8,
-evos: ["Frosmoth"],
 },
 
 frosmoth: {
@@ -13038,8 +11913,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 65, def: 60, spa: 125, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 42,
-prevo: "Snom",
-evoType: "levelFriendship",
 evoCondition: "at night",
 },
 
@@ -13128,7 +12001,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 80, def: 49, spa: 40, spd: 49, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 100,
-evos: ["Copperajah"],
 },
 
 copperajah: {
@@ -13139,7 +12011,6 @@ gender: "F",
 baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 650,
-prevo: "Cufant",
 },
 
 copperajahgmax: {
@@ -13151,7 +12022,6 @@ gender: "F",
 baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Copperajah",
 },
 
 dracozolt: {
@@ -13213,7 +12083,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Duraludon",
 },
 
 dreepy: {
@@ -13224,7 +12093,6 @@ gender: "F",
 baseStats: {hp: 28, atk: 60, def: 30, spa: 40, spd: 30, spe: 82},
 abilities: {0: "No Ability"},
 weightkg: 2,
-evos: ["Drakloak"],
 },
 
 drakloak: {
@@ -13235,8 +12103,6 @@ gender: "F",
 baseStats: {hp: 68, atk: 80, def: 50, spa: 60, spd: 50, spe: 102},
 abilities: {0: "No Ability"},
 weightkg: 11,
-prevo: "Dreepy",
-evos: ["Dragapult"],
 },
 
 dragapult: {
@@ -13247,7 +12113,6 @@ gender: "F",
 baseStats: {hp: 88, atk: 120, def: 75, spa: 100, spd: 75, spe: 142},
 abilities: {0: "No Ability"},
 weightkg: 50,
-prevo: "Drakloak",
 },
 
 zacian: {
@@ -13329,7 +12194,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 90, def: 60, spa: 53, spd: 50, spe: 72},
 abilities: {0: "No Ability"},
 weightkg: 12,
-evos: ["Urshifu", "Urshifu-Rapid-Strike"],
 },
 
 urshifu: {
@@ -13340,8 +12204,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 105,
-prevo: "Kubfu",
-evoType: "other",
 evoCondition: "Defeat the Single Strike Tower",
 },
 
@@ -13354,8 +12216,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 105,
-prevo: "Kubfu",
-evoType: "other",
 evoCondition: "Defeat the Rapid Strike Tower",
 },
 
@@ -13368,7 +12228,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 0,
-changesFrom: "Urshifu",
 },
 
 urshifurapidstrikegmax: {
@@ -13381,7 +12240,6 @@ baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
 abilities: {0: "No Ability"},
 weightkg: 105,
 battleOnly: "Urshifu-Rapid-Strike",
-changesFrom: "Urshifu-Rapid-Strike",
 },
 
 zarude: {
@@ -13464,7 +12322,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 165, def: 150, spa: 85, spd: 130, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 809.1,
-changesFrom: "Calyrex",
 },
 
 calyrexshadow: {
@@ -13476,7 +12333,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 85, def: 80, spa: 165, spd: 100, spe: 150},
 abilities: {0: "No Ability"},
 weightkg: 53.6,
-changesFrom: "Calyrex",
 },
 
 wyrdeer: {
@@ -13487,8 +12343,6 @@ gender: "F",
 baseStats: {hp: 103, atk: 107, def: 72, spa: 107, spd: 72, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 95.1,
-prevo: "Stantler",
-evoType: "other",
 evoCondition: "Use Agile style Psyshield Bash 20 times",
 },
 
@@ -13500,8 +12354,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 135, def: 95, spa: 45, spd: 70, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 89,
-prevo: "Scyther",
-evoType: "other",
 evoCondition: "Black Augurite",
 },
 
@@ -13513,8 +12365,6 @@ gender: "F",
 baseStats: {hp: 130, atk: 140, def: 105, spa: 45, spd: 80, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 290,
-prevo: "Ursaring",
-evoType: "other",
 evoCondition: "Peat Block when there's a full moon",
 },
 
@@ -13544,8 +12394,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 112, def: 65, spa: 80, spd: 75, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 110,
-prevo: "Basculin-White-Striped",
-evoType: "other",
 evoCondition: "Receive 294+ recoil without fainting",
 },
 
@@ -13558,8 +12406,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 80, def: 65, spa: 112, spd: 75, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 110,
-prevo: "Basculin-White-Striped",
-evoType: "other",
 evoCondition: "Receive 294+ recoil without fainting",
 },
 
@@ -13571,8 +12417,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 130, def: 60, spa: 40, spd: 80, spe: 120},
 abilities: {0: "No Ability"},
 weightkg: 43,
-prevo: "Sneasel-Hisui",
-evoType: "levelHold",
 evoItem: "Razor Claw",
 evoCondition: "during the day",
 },
@@ -13585,8 +12429,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 115, def: 95, spa: 65, spd: 65, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 3.9,
-prevo: "Qwilfish-Hisui",
-evoType: "other",
 evoCondition: "Use Strong style Barb Barrage 20 times",
 },
 
@@ -13609,7 +12451,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 115, def: 110, spa: 135, spd: 100, spe: 46},
 abilities: {0: "No Ability"},
 weightkg: 48,
-changesFrom: "Enamorus",
 },
 
 sprigatito: {
@@ -13620,7 +12461,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 61, def: 54, spa: 45, spd: 45, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 4.1,
-evos: ["Floragato"],
 },
 
 floragato: {
@@ -13631,8 +12471,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 80, def: 63, spa: 60, spd: 63, spe: 83},
 abilities: {0: "No Ability"},
 weightkg: 12.2,
-prevo: "Sprigatito",
-evos: ["Meowscarada"],
 },
 
 meowscarada: {
@@ -13643,7 +12481,6 @@ gender: "F",
 baseStats: {hp: 76, atk: 110, def: 70, spa: 81, spd: 70, spe: 123},
 abilities: {0: "No Ability"},
 weightkg: 31.2,
-prevo: "Floragato",
 },
 
 fuecoco: {
@@ -13654,7 +12491,6 @@ gender: "F",
 baseStats: {hp: 67, atk: 45, def: 59, spa: 63, spd: 40, spe: 36},
 abilities: {0: "No Ability"},
 weightkg: 9.8,
-evos: ["Crocalor"],
 },
 
 crocalor: {
@@ -13665,8 +12501,6 @@ gender: "F",
 baseStats: {hp: 81, atk: 55, def: 78, spa: 90, spd: 58, spe: 49},
 abilities: {0: "No Ability"},
 weightkg: 30.7,
-prevo: "Fuecoco",
-evos: ["Skeledirge"],
 },
 
 skeledirge: {
@@ -13677,7 +12511,6 @@ gender: "F",
 baseStats: {hp: 104, atk: 75, def: 100, spa: 110, spd: 75, spe: 66},
 abilities: {0: "No Ability"},
 weightkg: 326.5,
-prevo: "Crocalor",
 },
 
 quaxly: {
@@ -13688,7 +12521,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 65, def: 45, spa: 50, spd: 45, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 6.1,
-evos: ["Quaxwell"],
 },
 
 quaxwell: {
@@ -13699,8 +12531,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 85, def: 65, spa: 65, spd: 60, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 21.5,
-prevo: "Quaxly",
-evos: ["Quaquaval"],
 },
 
 quaquaval: {
@@ -13711,7 +12541,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 120, def: 80, spa: 85, spd: 75, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 61.9,
-prevo: "Quaxwell",
 },
 
 lechonk: {
@@ -13722,7 +12551,6 @@ gender: "F",
 baseStats: {hp: 54, atk: 45, def: 40, spa: 35, spd: 45, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 10.2,
-evos: ["Oinkologne", "Oinkologne-F"],
 },
 
 oinkologne: {
@@ -13733,7 +12561,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 100, def: 75, spa: 59, spd: 80, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Lechonk",
 },
 
 oinkolognef: {
@@ -13745,7 +12572,6 @@ gender: "F",
 baseStats: {hp: 115, atk: 90, def: 70, spa: 59, spd: 90, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Lechonk",
 },
 
 tarountula: {
@@ -13756,7 +12582,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 41, def: 45, spa: 29, spd: 40, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 4,
-evos: ["Spidops"],
 },
 
 spidops: {
@@ -13767,7 +12592,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 85, def: 95, spa: 55, spd: 90, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 16.5,
-prevo: "Tarountula",
 },
 
 nymble: {
@@ -13778,7 +12602,6 @@ gender: "F",
 baseStats: {hp: 33, atk: 46, def: 40, spa: 21, spd: 25, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Lokix"],
 },
 
 lokix: {
@@ -13789,7 +12612,6 @@ gender: "F",
 baseStats: {hp: 71, atk: 102, def: 78, spa: 52, spd: 55, spe: 92},
 abilities: {0: "No Ability"},
 weightkg: 17.5,
-prevo: "Nymble",
 },
 
 pawmi: {
@@ -13800,7 +12622,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 50, def: 20, spa: 40, spd: 25, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 2.5,
-evos: ["Pawmo"],
 },
 
 pawmo: {
@@ -13811,8 +12632,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 75, def: 40, spa: 50, spd: 40, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-prevo: "Pawmi",
-evos: ["Pawmot"],
 },
 
 pawmot: {
@@ -13823,8 +12642,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 115, def: 70, spa: 70, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 41,
-prevo: "Pawmo",
-evoType: "other",
 evoCondition: "walk 1000 steps in Let's Go",
 },
 
@@ -13836,7 +12653,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 50, def: 45, spa: 40, spd: 45, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Maushold", "Maushold-Four"],
 },
 
 maushold: {
@@ -13847,7 +12663,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 75, def: 70, spa: 65, spd: 75, spe: 111},
 abilities: {0: "No Ability"},
 weightkg: 2.3,
-prevo: "Tandemaus",
 },
 
 mausholdfour: {
@@ -13859,7 +12674,6 @@ gender: "F",
 baseStats: {hp: 74, atk: 75, def: 70, spa: 65, spd: 75, spe: 111},
 abilities: {0: "No Ability"},
 weightkg: 2.8,
-prevo: "Tandemaus",
 },
 
 fidough: {
@@ -13870,7 +12684,6 @@ gender: "F",
 baseStats: {hp: 37, atk: 55, def: 70, spa: 30, spd: 55, spe: 65},
 abilities: {0: "No Ability"},
 weightkg: 10.9,
-evos: ["Dachsbun"],
 },
 
 dachsbun: {
@@ -13881,7 +12694,6 @@ gender: "F",
 baseStats: {hp: 57, atk: 80, def: 115, spa: 50, spd: 80, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 14.9,
-prevo: "Fidough",
 },
 
 smoliv: {
@@ -13892,7 +12704,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 35, def: 45, spa: 58, spd: 51, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 6.5,
-evos: ["Dolliv"],
 },
 
 dolliv: {
@@ -13903,8 +12714,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 53, def: 60, spa: 78, spd: 78, spe: 33},
 abilities: {0: "No Ability"},
 weightkg: 11.9,
-prevo: "Smoliv",
-evos: ["Arboliva"],
 },
 
 arboliva: {
@@ -13915,7 +12724,6 @@ gender: "F",
 baseStats: {hp: 78, atk: 69, def: 90, spa: 125, spd: 109, spe: 39},
 abilities: {0: "No Ability"},
 weightkg: 48.2,
-prevo: "Dolliv",
 },
 
 squawkabilly: {
@@ -13969,7 +12777,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 55, def: 75, spa: 35, spd: 35, spe: 25},
 abilities: {0: "No Ability"},
 weightkg: 16,
-evos: ["Naclstack"],
 },
 
 naclstack: {
@@ -13980,8 +12787,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 60, def: 100, spa: 35, spd: 65, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 105,
-prevo: "Nacli",
-evos: ["Garganacl"],
 },
 
 garganacl: {
@@ -13992,7 +12797,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 100, def: 130, spa: 45, spd: 90, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 240,
-prevo: "Naclstack",
 },
 
 charcadet: {
@@ -14003,7 +12807,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 50, def: 40, spa: 50, spd: 40, spe: 35},
 abilities: {0: "No Ability"},
 weightkg: 10.5,
-evos: ["Armarouge", "Ceruledge"],
 },
 
 armarouge: {
@@ -14014,8 +12817,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 60, def: 100, spa: 125, spd: 80, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 85,
-prevo: "Charcadet",
-evoType: "useItem",
 evoItem: "Auspicious Armor",
 },
 
@@ -14027,8 +12828,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 125, def: 80, spa: 60, spd: 100, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 62,
-prevo: "Charcadet",
-evoType: "useItem",
 evoItem: "Malicious Armor",
 },
 
@@ -14040,7 +12839,6 @@ gender: "F",
 baseStats: {hp: 61, atk: 31, def: 41, spa: 59, spd: 35, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 0.4,
-evos: ["Bellibolt"],
 },
 
 bellibolt: {
@@ -14051,8 +12849,6 @@ gender: "F",
 baseStats: {hp: 109, atk: 64, def: 91, spa: 103, spd: 83, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 113,
-prevo: "Tadbulb",
-evoType: "useItem",
 evoItem: "Thunder Stone",
 },
 
@@ -14064,7 +12860,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 35, spa: 55, spd: 40, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 3.6,
-evos: ["Kilowattrel"],
 },
 
 kilowattrel: {
@@ -14075,7 +12870,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 70, def: 60, spa: 105, spd: 60, spe: 125},
 abilities: {0: "No Ability"},
 weightkg: 38.6,
-prevo: "Wattrel",
 },
 
 maschiff: {
@@ -14086,7 +12880,6 @@ gender: "F",
 baseStats: {hp: 60, atk: 78, def: 60, spa: 40, spd: 51, spe: 51},
 abilities: {0: "No Ability"},
 weightkg: 16,
-evos: ["Mabosstiff"],
 },
 
 mabosstiff: {
@@ -14097,7 +12890,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 120, def: 90, spa: 60, spd: 70, spe: 85},
 abilities: {0: "No Ability"},
 weightkg: 61,
-prevo: "Maschiff",
 },
 
 shroodle: {
@@ -14108,7 +12900,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 65, def: 35, spa: 40, spd: 35, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 0.7,
-evos: ["Grafaiai"],
 },
 
 grafaiai: {
@@ -14119,7 +12910,6 @@ gender: "F",
 baseStats: {hp: 63, atk: 95, def: 65, spa: 80, spd: 72, spe: 110},
 abilities: {0: "No Ability"},
 weightkg: 27.2,
-prevo: "Shroodle",
 },
 
 bramblin: {
@@ -14130,7 +12920,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 65, def: 30, spa: 45, spd: 35, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 0.6,
-evos: ["Brambleghast"],
 },
 
 brambleghast: {
@@ -14141,8 +12930,6 @@ gender: "F",
 baseStats: {hp: 55, atk: 115, def: 70, spa: 80, spd: 70, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-prevo: "Bramblin",
-evoType: "other",
 evoCondition: "Walk 1000 steps in Let's Go",
 },
 
@@ -14154,7 +12941,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
 abilities: {0: "No Ability"},
 weightkg: 33,
-evos: ["Toedscruel"],
 },
 
 toedscruel: {
@@ -14165,7 +12951,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 58,
-prevo: "Toedscool",
 },
 
 klawf: {
@@ -14186,7 +12971,6 @@ gender: "F",
 baseStats: {hp: 52, atk: 62, def: 40, spa: 62, spd: 40, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 3,
-evos: ["Scovillain"],
 },
 
 scovillain: {
@@ -14197,8 +12981,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 108, def: 65, spa: 108, spd: 65, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 15,
-prevo: "Capsakid",
-evoType: "useItem",
 evoItem: "Fire Stone",
 },
 
@@ -14210,7 +12992,6 @@ gender: "F",
 baseStats: {hp: 41, atk: 50, def: 60, spa: 31, spd: 58, spe: 30},
 abilities: {0: "No Ability"},
 weightkg: 1,
-evos: ["Rabsca"],
 },
 
 rabsca: {
@@ -14221,8 +13002,6 @@ gender: "F",
 baseStats: {hp: 75, atk: 50, def: 85, spa: 115, spd: 100, spe: 45},
 abilities: {0: "No Ability"},
 weightkg: 3.5,
-prevo: "Rellor",
-evoType: "other",
 evoCondition: "walk 1000 steps in Let's Go",
 },
 
@@ -14234,7 +13013,6 @@ gender: "F",
 baseStats: {hp: 30, atk: 35, def: 30, spa: 55, spd: 30, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 1.5,
-evos: ["Espathra"],
 },
 
 espathra: {
@@ -14245,7 +13023,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 60, def: 60, spa: 101, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
 weightkg: 90,
-prevo: "Flittle",
 },
 
 tinkatink: {
@@ -14256,7 +13033,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 64, spe: 58},
 abilities: {0: "No Ability"},
 weightkg: 8.9,
-evos: ["Tinkatuff"],
 },
 
 tinkatuff: {
@@ -14267,8 +13043,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 55, def: 55, spa: 45, spd: 82, spe: 78},
 abilities: {0: "No Ability"},
 weightkg: 59.1,
-prevo: "Tinkatink",
-evos: ["Tinkaton"],
 },
 
 tinkaton: {
@@ -14279,7 +13053,6 @@ gender: "F",
 baseStats: {hp: 85, atk: 75, def: 77, spa: 70, spd: 105, spe: 94},
 abilities: {0: "No Ability"},
 weightkg: 112.8,
-prevo: "Tinkatuff",
 },
 
 wiglett: {
@@ -14290,7 +13063,6 @@ gender: "F",
 baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 25, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 1.8,
-evos: ["Wugtrio"],
 },
 
 wugtrio: {
@@ -14301,7 +13073,6 @@ gender: "F",
 baseStats: {hp: 40, atk: 105, def: 50, spa: 50, spd: 70, spe: 125},
 abilities: {0: "No Ability"},
 weightkg: 5.4,
-prevo: "Wiglett",
 },
 
 bombirdier: {
@@ -14322,7 +13093,6 @@ gender: "F",
 baseStats: {hp: 70, atk: 45, def: 40, spa: 45, spd: 40, spe: 75},
 abilities: {0: "No Ability"},
 weightkg: 60.2,
-evos: ["Palafin"],
 },
 
 palafin: {
@@ -14333,7 +13103,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 70, def: 72, spa: 53, spd: 62, spe: 100},
 abilities: {0: "No Ability"},
 weightkg: 60.2,
-prevo: "Finizen",
 },
 
 palafinhero: {
@@ -14357,7 +13126,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 70, def: 63, spa: 30, spd: 45, spe: 47},
 abilities: {0: "No Ability"},
 weightkg: 35,
-evos: ["Revavroom"],
 },
 
 revavroom: {
@@ -14368,7 +13136,6 @@ gender: "F",
 baseStats: {hp: 80, atk: 119, def: 90, spa: 54, spd: 67, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Varoom",
 },
 
 cyclizar: {
@@ -14399,7 +13166,6 @@ gender: "F",
 baseStats: {hp: 48, atk: 35, def: 42, spa: 105, spd: 60, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 8,
-evos: ["Glimmora"],
 },
 
 glimmora: {
@@ -14410,7 +13176,6 @@ gender: "F",
 baseStats: {hp: 83, atk: 55, def: 90, spa: 130, spd: 81, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 45,
-prevo: "Glimmet",
 },
 
 greavard: {
@@ -14421,7 +13186,6 @@ gender: "F",
 baseStats: {hp: 50, atk: 61, def: 60, spa: 30, spd: 55, spe: 34},
 abilities: {0: "No Ability"},
 weightkg: 35,
-evos: ["Houndstone"],
 },
 
 houndstone: {
@@ -14432,7 +13196,6 @@ gender: "F",
 baseStats: {hp: 72, atk: 101, def: 100, spa: 50, spd: 97, spe: 68},
 abilities: {0: "No Ability"},
 weightkg: 15,
-prevo: "Greavard",
 evoCondition: "at night",
 },
 
@@ -14454,7 +13217,6 @@ gender: "F",
 baseStats: {hp: 108, atk: 68, def: 45, spa: 30, spd: 40, spe: 43},
 abilities: {0: "No Ability"},
 weightkg: 45,
-evos: ["Cetitan"],
 },
 
 cetitan: {
@@ -14465,8 +13227,6 @@ gender: "F",
 baseStats: {hp: 170, atk: 113, def: 65, spa: 45, spd: 55, spe: 73},
 abilities: {0: "No Ability"},
 weightkg: 700,
-prevo: "Cetoddle",
-evoType: "useItem",
 evoItem: "Ice Stone",
 },
 
@@ -14509,8 +13269,6 @@ gender: "F",
 baseStats: {hp: 110, atk: 115, def: 80, spa: 50, spd: 90, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 56,
-prevo: "Primeape",
-evoType: "other",
 evoCondition: "Use Rage Fist 20 times and level-up",
 },
 
@@ -14522,7 +13280,6 @@ gender: "F",
 baseStats: {hp: 130, atk: 75, def: 60, spa: 45, spd: 100, spe: 20},
 abilities: {0: "No Ability"},
 weightkg: 223,
-prevo: "Wooper-Paldea",
 },
 
 farigiraf: {
@@ -14533,9 +13290,6 @@ gender: "F",
 baseStats: {hp: 120, atk: 90, def: 70, spa: 110, spd: 70, spe: 60},
 abilities: {0: "No Ability"},
 weightkg: 160,
-prevo: "Girafarig",
-evoType: "levelMove",
-evoMove: "Twin Beam",
 },
 
 dudunsparce: {
@@ -14546,9 +13300,6 @@ gender: "F",
 baseStats: {hp: 125, atk: 100, def: 80, spa: 85, spd: 75, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 39.2,
-prevo: "Dunsparce",
-evoType: "levelMove",
-evoMove: "Hyper Drill",
 },
 
 dudunsparcethreesegment: {
@@ -14560,9 +13311,6 @@ gender: "F",
 baseStats: {hp: 125, atk: 100, def: 80, spa: 85, spd: 75, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 47.4,
-prevo: "Dunsparce",
-evoType: "levelMove",
-evoMove: "Hyper Drill",
 },
 
 kingambit: {
@@ -14573,8 +13321,6 @@ gender: "F",
 baseStats: {hp: 100, atk: 135, def: 120, spa: 60, spd: 85, spe: 50},
 abilities: {0: "No Ability"},
 weightkg: 120,
-prevo: "Bisharp",
-evoType: "other",
 evoCondition: "Defeat 3 Bisharp leading Pawniard and level-up",
 },
 
@@ -14706,7 +13452,6 @@ gender: "F",
 baseStats: {hp: 65, atk: 75, def: 45, spa: 35, spd: 45, spe: 55},
 abilities: {0: "No Ability"},
 weightkg: 17,
-evos: ["Arctibax"],
 },
 
 arctibax: {
@@ -14717,8 +13462,6 @@ gender: "F",
 baseStats: {hp: 90, atk: 95, def: 66, spa: 45, spd: 65, spe: 62},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Frigibax",
-evos: ["Baxcalibur"],
 },
 
 baxcalibur: {
@@ -14729,7 +13472,6 @@ gender: "F",
 baseStats: {hp: 115, atk: 145, def: 92, spa: 75, spd: 86, spe: 87},
 abilities: {0: "No Ability"},
 weightkg: 210,
-prevo: "Arctibax",
 },
 
 gimmighoul: {
@@ -14740,7 +13482,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 70, spa: 75, spd: 70, spe: 10},
 abilities: {0: "No Ability"},
 weightkg: 5,
-evos: ["Gholdengo"],
 },
 
 gimmighoulroaming: {
@@ -14752,7 +13493,6 @@ gender: "F",
 baseStats: {hp: 45, atk: 30, def: 25, spa: 75, spd: 45, spe: 80},
 abilities: {0: "No Ability"},
 weightkg: 0.1,
-evos: ["Gholdengo"],
 },
 
 gholdengo: {
@@ -14763,8 +13503,6 @@ gender: "F",
 baseStats: {hp: 87, atk: 60, def: 95, spa: 133, spd: 91, spe: 84},
 abilities: {0: "No Ability"},
 weightkg: 30,
-prevo: "Gimmighoul",
-evoType: "other",
 evoCondition: "Level up with 999 Coins in the bag",
 },
 
@@ -14876,9 +13614,6 @@ baseStats: {hp: 80, atk: 80, def: 110, spa: 95, spd: 80, spe: 40},
 abilities: {0: "No Ability"},
 weightkg: 4.4,
 color: "Green",
-prevo: "Applin",
-evos: ["Hydrapple"],
-evoType: "useItem",
 evoItem: "Syrupy Apple",
 },
 
@@ -14892,7 +13627,6 @@ abilities: {0: "No Ability"},
 
 weightkg: 1.1,
 color: "Green",
-evos: ["Sinistcha"],
 },
 
 poltchageistartisan: {
@@ -14906,7 +13640,6 @@ abilities: {0: "No Ability"},
 
 weightkg: 1.1,
 color: "Green",
-evos: ["Sinistcha-Masterpiece"],
 },
 
 sinistcha: {
@@ -14919,8 +13652,6 @@ abilities: {0: "No Ability"},
 
 weightkg: 2.2,
 color: "Green",
-prevo: "Poltchageist",
-evoType: "useItem",
 evoItem: "Unremarkable Teacup",
 },
 
@@ -14935,8 +13666,6 @@ abilities: {0: "No Ability"},
 
 weightkg: 2.2,
 color: "Green",
-prevo: "Poltchageist-Artisan",
-evoType: "useItem",
 evoItem: "Masterpiece Teacup",
 },
 
