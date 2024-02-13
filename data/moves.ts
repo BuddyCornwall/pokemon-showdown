@@ -2248,7 +2248,10 @@ onHit(target) {
 target.clearBoosts();
 this.add('-clearboost', target);
 },
-secondary: null,
+secondary: {
+chance: 10,
+status: 'tox',
+},
 target: "any",
 type: "Poison",
 },
@@ -2419,7 +2422,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 66,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2454,7 +2457,6 @@ flags: {},
 onHit(pokemon) {
 let move: Move | ActiveMove | null = this.lastMove;
 if (!move) return;
-
 if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
 if (move.flags['failcopycat'] || move.isZ || move.isMax) {
 return false;
@@ -17132,7 +17134,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Dragon Cheer",
-pp: 15,
+pp: 0.625,
 priority: 0,
 flags: {bypasssub: 1, allyanim: 1},
 volatileStatus: 'dragoncheer',
@@ -17232,7 +17234,24 @@ name: "Blood Moon",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-secondary: null,
+secondaries: [
+{
+chance: 10,
+weather: 'hail',
+}, {
+chance: 10,
+weather: 'RainDance',
+}, {
+chance: 10,
+weather: 'Sandstorm',
+}, {
+chance: 10,
+weather: 'snow',
+}, {
+chance: 10,
+weather: 'sunnyday',
+},
+],
 target: "any",
 type: "Normal",
 },
