@@ -3093,7 +3093,7 @@ basePower: 80,
 category: "Physical",
 name: "Dig",
 pp: 0.625,
-priority: 1,
+priority: 0,
 flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
