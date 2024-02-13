@@ -427,14 +427,6 @@ gender: "F",
 baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
 abilities: {0: "No Ability"},
 weightkg: 6,
-prevo: "Pichu",
-evos: ["Raichu", "Raichu-Alola"],
-"Pikachu",
-"Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", // Gen 7 formes
-"Pikachu-Starter", // forme 8 in LGPE
-"Pikachu-World", // Gen 8 forme (indexed as Pikachu 9 in datamine)
-"Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Cosplay", // formes 1-6 from Gen 6
-],
 },
 
 pikachucosplay: {
