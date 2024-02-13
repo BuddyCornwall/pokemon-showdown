@@ -11348,11 +11348,6 @@ gender: "F",
 baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
 abilities: {0: "No Ability"},
 weightkg: 100.5,
-prevo: "Type: Null",
-evoType: "levelFriendship",
-Silvally, "Silvally-Fighting", "Silvally-Flying", "Silvally-Poison", "Silvally-Ground", "Silvally-Rock", "Silvally-Bug", "Silvally-Ghost", "Silvally-Steel",
-Silvally-Fire, "Silvally-Water", "Silvally-Grass", "Silvally-Electric", "Silvally-Psychic", "Silvally-Ice", "Silvally-Dragon", "Silvally-Dark", "Silvally-Fairy",
-],
 },
 
 silvallybug: {
