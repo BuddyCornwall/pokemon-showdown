@@ -936,8 +936,6 @@ name: "Barb Barrage",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-multihit: [1, 7],
-multiaccuracy: 85,
 onBasePower(basePower, pokemon, target) {
 if (target.status === 'tox' || target.status === 'tox') {
 return this.chainModify(2);
@@ -947,6 +945,8 @@ secondary: {
 chance: 50,
 status: 'tox',
 },
+multihit: [1, 7],
+multiaccuracy: 85,
 target: "any",
 type: "Poison",
 },
@@ -1779,13 +1779,13 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Bulk Up",
-pp: 0.625,
+pp: 1.25,
 priority: 0,
 flags: {snatch: 1},
 boosts: {
-atk: 1.5,
-def: 1.5,
-evasion: -1.5,
+atk: 1,
+def: 1,
+evasion: -1,
 },
 secondary: null,
 target: "self",
@@ -1794,14 +1794,18 @@ type: "Fighting",
 
 bulldoze: {
 accuracy: 95,
-basePower: 70,
+basePower: 60,
 category: "Physical",
 name: "Bulldoze",
-pp: 0.625,
-priority: -1,
+pp: 1.25,
+priority: 0,
 flags: {protect: 1, mirror: 1},
-forceSwitch: true,
-secondary: null,
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
 target: "allAdjacent",
 type: "Ground",
 },
@@ -1830,7 +1834,7 @@ basePower: 25,
 category: "Physical",
 name: "Bullet Seed",
 pp: 1.25,
-priority: 2,
+priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 multihit: [1, 5],
 multiaccuracy: 85,
@@ -1927,6 +1931,26 @@ this.add('-start', target, 'typechange', newType);
 },
 secondary: null,
 target: "self",
+type: "Normal",
+},
+
+captivate: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Captivate",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+onTryImmunity(pokemon, source) {
+return (pokemon.gender === 'M' && source.gender === 'F') || (pokemon.gender === 'F' && source.gender === 'M');
+},
+boosts: {
+spa: -2,
+atk: -2
+},
+secondary: null,
+target: "allAdjacentFoes",
 type: "Normal",
 },
 
@@ -2064,11 +2088,6 @@ name: "Chilling Water",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-onHit(target) {
-if (target.hasType('Ice')) return false;
-if (!target.addType('Ice')) return false;
-this.add('-start', target, 'typeadd', 'Ice', '[from] move: Chilling Water');
-},
 secondary: {
 chance: 75,
 boosts: {
@@ -15845,6 +15864,7 @@ onHit(target) {
 if (target.hasType('Ghost')) return false;
 if (!target.addType('Ghost')) return false;
 this.add('-start', target, 'typeadd', 'Ghost', '[from] move: Trick or Treat');
+
 if (target.side.active.length === 2 && target.position === 1) {
 // Curse Glitch
 const action = this.queue.willMove(target);
@@ -16524,7 +16544,7 @@ onHitSide(side, source) {
 source.addVolatile('stall');
 },
 condition: {
-duration: 5,
+duration: 3,
 onSideStart(target, source) {
 this.add('-singleturn', source, 'Wide Guard');
 },
@@ -16617,7 +16637,7 @@ slotCondition: 'Wish',
 condition: {
 duration: 2,
 onStart(pokemon, source) {
-this.effectState.hp = source.maxhp / 1.5;
+this.effectState.hp = source.maxhp / 2;
 },
 onResidualOrder: 4,
 onEnd(target) {
