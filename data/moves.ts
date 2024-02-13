@@ -2070,7 +2070,7 @@ if (!target.addType('Ice')) return false;
 this.add('-start', target, 'typeadd', 'Ice', '[from] move: Chilling Water');
 },
 secondary: {
-chance: 75,
+chance: 33,
 boosts: {
 atk: -1,
 spa: -1,
@@ -3100,7 +3100,7 @@ if (attacker.removeVolatile(move.id)) {
 return;
 }
 this.add('-prepare', attacker, move.name);
-this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+this.boost({atk: 1, spe: -2, evasion: -2,}, attacker, attacker, move);
 if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 return;
 }
@@ -3191,7 +3191,7 @@ basePower: 80,
 category: "Physical",
 name: "Dive",
 pp: 0.625,
-priority: 1,
+priority: 0,
 flags: {contact: 1, charge: 1, protect: 1, mirror: 1, allyanim: 1},
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
@@ -3202,7 +3202,7 @@ const forme = attacker.hp <= attacker.maxhp / 2 ? 'cramorantgorging' : 'cramoran
 attacker.formeChange(forme, move);
 }
 this.add('-prepare', attacker, move.name);
-this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+this.boost({atk: 1, spe: -2, evasion: -2,}, attacker, attacker, move);
 if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 return;
 }
