@@ -6562,7 +6562,7 @@ type: "Normal",
 
 hex: {
 accuracy: 95,
-basePower: 65,
+basePower: 70,
 basePowerCallback(pokemon, target, move) {
 if (target.status || target.hasAbility('comatose')) {
 this.debug('BP doubled from status condition');
@@ -11531,7 +11531,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Rest",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1, heal: 1},
 onTry(source) {
@@ -12281,7 +12281,7 @@ multiaccuracy: 85,
 selfBoost: {
 boosts: {
 def: -1,
-spd: +1,
+spe: 1,
 },
 },
 secondary: null,
@@ -15003,7 +15003,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Tail Glow",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
 boosts: {
@@ -15706,7 +15706,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Toxic",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 // No Guard-like effect for Poison-type user's implemented in Scripts#tryMoveHit
@@ -15902,24 +15902,24 @@ type: "Psychic",
 
 triplearrows: {
 accuracy: 95,
-basePower: 90,
+basePower: 80,
 category: "Physical",
 name: "Triple Arrows",
-pp: 1.25,
-priority: 1,
+pp: 0.625,
+priority: 0,
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Flying') return 1;
 },
-critRatio: 2,
+critRatio: 1,
 secondaries: [
 {
-chance: 33,
+chance: 25,
 boosts: {
 def: -1,
 },
 }, {
-chance: 33,
+chance: 25,
 volatileStatus: 'flinch',
 },
 ],
