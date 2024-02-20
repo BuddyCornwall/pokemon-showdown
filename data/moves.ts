@@ -9670,6 +9670,9 @@ name: "Octazooka",
 pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+},
 multihit: [1, 8],
 multiaccuracy: 75,
 secondary: {
@@ -13738,7 +13741,7 @@ type: "Dragon",
 
 sparklingaria: {
 accuracy: 95,
-basePower: 90,
+basePower: 50,
 category: "Special",
 name: "Sparkling Aria",
 pp: 0.625,
