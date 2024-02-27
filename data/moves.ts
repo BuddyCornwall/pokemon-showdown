@@ -6641,9 +6641,6 @@ pp: 0.625,
 priority: 0,
 flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
 weather: 'Sandstorm',
-
-
-
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
@@ -9992,7 +9989,7 @@ if (!result) return false;
 if (message) this.add('-fieldactivate', 'move: Perish Song');
 },
 condition: {
-duration: 2,
+this.effectState.startTime = this.random(1, 5);
 onEnd(target) {
 this.add('-start', target, 'perish0');
 target.faint();
