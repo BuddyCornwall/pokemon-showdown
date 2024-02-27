@@ -9989,7 +9989,7 @@ if (!result) return false;
 if (message) this.add('-fieldactivate', 'move: Perish Song');
 },
 condition: {
-duration: 2.5,
+duration: 2,
 onEnd(target) {
 this.add('-start', target, 'perish0');
 target.faint();
@@ -9997,7 +9997,7 @@ target.faint();
 onResidualOrder: 24,
 onResidual(pokemon) {
 const duration = pokemon.volatiles['perishsong'].duration;
-this.add('-start', pokemon, 'perish' + duration);
+
 },
 },
 secondary: null,
