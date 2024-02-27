@@ -9980,7 +9980,7 @@ result = true;
 result = true;
 } else if (!pokemon.volatiles['perishsong']) {
 pokemon.addVolatile('perishsong');
-this.add('-start', pokemon, 'perish3', '[silent]');
+
 result = true;
 message = true;
 }
@@ -9997,7 +9997,7 @@ target.faint();
 onResidualOrder: 24,
 onResidual(pokemon) {
 const duration = pokemon.volatiles['perishsong'].duration;
-
+this.add('-start', pokemon, 'perish' + duration);
 },
 },
 secondary: null,
