@@ -9989,7 +9989,7 @@ if (!result) return false;
 if (message) this.add('-fieldactivate', 'move: Perish Song');
 },
 condition: {
-this.effectState.startTime = this.random(1, 5);
+duration: 2.5,
 onEnd(target) {
 this.add('-start', target, 'perish0');
 target.faint();
