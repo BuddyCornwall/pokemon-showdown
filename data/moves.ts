@@ -9980,7 +9980,6 @@ result = true;
 result = true;
 } else if (!pokemon.volatiles['perishsong']) {
 pokemon.addVolatile('perishsong');
-
 result = true;
 message = true;
 }
@@ -9989,7 +9988,7 @@ if (!result) return false;
 if (message) this.add('-fieldactivate', 'move: Perish Song');
 },
 condition: {
-duration: 2,
+duration: 3,
 onEnd(target) {
 this.add('-start', target, 'perish0');
 target.faint();
