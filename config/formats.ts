@@ -3,21 +3,21 @@ export const Formats: FormatList = [
 section: "BUDPOW",
 },
 {
-name: "[PGL | Singles] BUDPOW",
+name: "[PGL: Singles] BUDPOW",
 mod: 'gen9',
 gameType: 'singles',
 ruleset: ['Picked Team Size = 3','Max Move Count = 8', 'HP Percentage Mod', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 3'],
 },
 
 {
-name: "[PGL | Doubles] BUDPOW",
+name: "[PGL: Doubles] BUDPOW",
 mod: 'gen9',
 gameType: 'doubles',
 ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'HP Percentage Mod', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
 },
 
 {
-name: "[TRI* League] BUDPOW",
+name: "[TRI*] BUDPOW",
 mod: 'gen9',
 gameType: 'triples',
 ruleset: ['Max Move Count = 8', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause'],
