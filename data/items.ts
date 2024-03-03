@@ -7093,10 +7093,9 @@ egg: {
 name: "Egg",
 spritenum: 388,
 onUpdate(pokemon) {
-onDamagingHit(damage, target, source, move) {
+onDamagingHit(damage, target, source, move) ;
 pokemon.addVolatile('confusion');
 target.useItem();
-}
 },
 num: 0,
 gen: 2,
