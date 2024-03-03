@@ -1840,21 +1840,6 @@ num: 538,
 gen: 5,
 },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 fairiumz: {
 name: "Fairium Z",
 spritenum: 648,
@@ -4833,6 +4818,27 @@ num: 1884,
 gen: 9,
 },
 
+goldenbullet: {
+name: "Golden Bullet",
+spritenum: 749,
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['bullet']) {
+this.debug('Golden Bullet boost');
+return this.chainModify([100, 11]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['bullet']) delete move.flags['contact'];
+},
+num: 1884,
+gen: 9,
+},
+
 skates: {
 name: "Skates",
 spritenum: 749,
@@ -4848,7 +4854,7 @@ return this.chainModify([100, 11]);
 },
 onModifyMovePriority: 1,
 onModifyMove(move) {
-if (move.flags['punch']) delete move.flags['contact'];
+if (move.flags['slow']) delete move.flags['contact'];
 },
 num: 1884,
 gen: 9,
@@ -4894,8 +4900,8 @@ basePower: 30,
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
-if (move.flags['slow']) {
-this.debug('Skates boost');
+if (move.flags['beam']) {
+this.debug('Dragon Ball boost');
 return this.chainModify([100, 11]);
 }
 },
@@ -4921,22 +4927,6 @@ return this.chainModify([100, 11]);
 num: 268,
 gen: 4,
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 qualotberry: {
 name: "Qualot Berry",
