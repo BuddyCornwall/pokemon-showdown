@@ -7097,7 +7097,6 @@ onDamagingHit(damage, target, source, move) {
 pokemon.addVolatile('confusion');
 target.useItem();
 }
-}
 },
 num: 0,
 gen: 2,
