@@ -7094,7 +7094,6 @@ name: "Egg",
 spritenum: 388,
 onUpdate(pokemon) {
 onDamagingHit(damage, target, source, move) {
-if (pokemon.useItem()) {
 pokemon.addVolatile('confusion');
 target.useItem();
 }
