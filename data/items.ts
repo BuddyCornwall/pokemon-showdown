@@ -34,7 +34,7 @@ this.heal(pokemon.baseMaxhp / 40);
 },
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
-if (this.randomChance(16.5, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+if (this.randomChance(10, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
 this.add("-activate", target, "item: Focus Band");
 return target.hp - 1;
 }
@@ -1840,20 +1840,20 @@ num: 538,
 gen: 5,
 },
 
-expertbelt: {
-name: "Expert Belt",
-spritenum: 132,
-fling: {
-basePower: 10,
-},
-onModifyDamage(damage, source, target, move) {
-if (move && target.getMoveHitData(move).typeMod > 0) {
-return this.chainModify([100, 20]);
-}
-},
-num: 268,
-gen: 4,
-},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fairiumz: {
 name: "Fairium Z",
@@ -4085,22 +4085,6 @@ num: 81,
 gen: 1,
 },
 
-muscleband: {
-name: "Muscle Band",
-spritenum: 297,
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 16,
-onBasePower(basePower, user, target, move) {
-if (move.category === 'Physical') {
-return this.chainModify([100, 20]);
-}
-},
-num: 266,
-gen: 4,
-},
-
 mysticwater: {
 name: "Mystic Water",
 spritenum: 300,
@@ -4838,7 +4822,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
 this.debug('Punching Glove boost');
-return this.chainModify([100, 20]);
+return this.chainModify([100, 11]);
 }
 },
 onModifyMovePriority: 1,
@@ -4848,6 +4832,111 @@ if (move.flags['punch']) delete move.flags['contact'];
 num: 1884,
 gen: 9,
 },
+
+skates: {
+name: "Skates",
+spritenum: 749,
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['slow']) {
+this.debug('Skates boost');
+return this.chainModify([100, 11]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['punch']) delete move.flags['contact'];
+},
+num: 1884,
+gen: 9,
+},
+
+wiseglasses: {
+name: "Wise Glasses",
+spritenum: 539,
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 16,
+onBasePower(basePower, user, target, move) {
+if (move.category === 'Special') {
+return this.chainModify([100, 11]);
+}
+},
+num: 267,
+gen: 4,
+},
+
+muscleband: {
+name: "Muscle Band",
+spritenum: 297,
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 16,
+onBasePower(basePower, user, target, move) {
+if (move.category === 'Physical') {
+return this.chainModify([100, 11]);
+}
+},
+num: 266,
+gen: 4,
+},
+
+dragonball: {
+name: "Dragon Ball",
+spritenum: 749,
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['slow']) {
+this.debug('Skates boost');
+return this.chainModify([100, 11]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['beam']) delete move.flags['contact'];
+},
+num: 1884,
+gen: 9,
+},
+
+expertbelt: {
+name: "Expert Belt",
+spritenum: 132,
+fling: {
+basePower: 10,
+},
+onModifyDamage(damage, source, target, move) {
+if (move && target.getMoveHitData(move).typeMod > 0) {
+return this.chainModify([100, 11]);
+}
+},
+num: 268,
+gen: 4,
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 qualotberry: {
 name: "Qualot Berry",
@@ -5795,7 +5884,7 @@ fling: {
 basePower: 30,
 },
 onDamagingHit(damage, target, source, move) {
-if (move.type === 'Ice') {
+if (move.type === 'Steel') {
 target.useItem();
 }
 },
@@ -6681,22 +6770,6 @@ num: 160,
 gen: 3,
 },
 
-wiseglasses: {
-name: "Wise Glasses",
-spritenum: 539,
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 16,
-onBasePower(basePower, user, target, move) {
-if (move.category === 'Special') {
-return this.chainModify([100, 20]);
-}
-},
-num: 267,
-gen: 4,
-},
-
 yacheberry: {
 name: "Yache Berry",
 spritenum: 567,
@@ -7091,15 +7164,20 @@ isNonstandard: "CAP",
 
 egg: {
 name: "Egg",
-spritenum: 388,
-onUpdate(pokemon) {
-onDamagingHit(damage, target, source, move) ;
+spritenum: 417,
+fling: {
+basePower: 60,
+},
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (this.checkMoveMakesContact(move, source, target)) {
+this.damage(source.baseMaxhp / 10, source, target);
 pokemon.addVolatile('confusion');
 target.useItem();
+}
 },
-num: 0,
-gen: 2,
-isNonstandard: "Past",
+num: 540,
+gen: 5,
 },
 
 };
