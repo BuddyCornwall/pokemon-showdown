@@ -815,25 +815,6 @@ gen: 6,
 isNonstandard: "Past",
 },
 
-cellbattery: {
-name: "Cell Battery",
-spritenum: 60,
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Electric') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-num: 546,
-gen: 5,
-},
-
 charcoal: {
 name: "Charcoal",
 spritenum: 61,
@@ -5744,9 +5725,86 @@ target.useItem();
 },
 boosts: {
 atk: 1,
+spa: 1,
 },
 num: 649,
 gen: 6,
+},
+
+fairyscale: {
+name: "Fairy Scale",
+spritenum: 606,
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Fairy') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+num: 649,
+gen: 6,
+},
+
+cellbattery: {
+name: "Cell Battery",
+spritenum: 60,
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Electric') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+num: 546,
+gen: 5,
+},
+
+darkband: {
+name: "Dark Band",
+spritenum: 60,
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Dark') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+num: 546,
+gen: 5,
+},
+
+puck: {
+name: "Puck",
+spritenum: 60,
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Ice') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+num: 546,
+gen: 5,
 },
 
 softsand: {
@@ -7029,6 +7087,22 @@ itemUser: ["Venomicon-Epilogue"],
 num: -2,
 gen: 8,
 isNonstandard: "CAP",
+},
+
+egg: {
+name: "Egg",
+spritenum: 388,
+onUpdate(pokemon) {
+onDamagingHit(damage, target, source, move) {
+if (pokemon.useItem()) {
+pokemon.addVolatile('confusion');
+target.useItem();
+}
+}
+},
+num: 0,
+gen: 2,
+isNonstandard: "Past",
 },
 
 };
