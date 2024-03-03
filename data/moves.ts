@@ -17071,7 +17071,7 @@ basePower: 60,
 category: "Physical",
 name: "Upper Hand",
 pp: 0.625,
-priority: 3,
+priority: 100,
 flags: {contact: 1, protect: 1, mirror: 1},
 onTryHit(target, pokemon) {
 const action = this.queue.willMove(target);
@@ -17100,7 +17100,7 @@ return move.basePower;
 },
 category: "Physical",
 name: "Temper Flare",
-pp: 10,
+pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
