@@ -3923,7 +3923,7 @@ this.add('-fieldend', 'move: Electric Terrain');
 },
 },
 secondary: null,
-target: "all",
+target: "any",
 type: "Electric",
 },
 
@@ -5884,7 +5884,7 @@ this.add('-fieldend', 'move: Grassy Terrain');
 },
 },
 secondary: null,
-target: "all",
+target: "any",
 type: "Grass",
 },
 
@@ -9023,7 +9023,7 @@ this.add('-fieldend', 'Misty Terrain');
 },
 },
 secondary: null,
-target: "all",
+target: "any",
 type: "Fairy",
 },
 
@@ -10834,7 +10834,7 @@ this.add('-fieldend', 'move: Psychic Terrain');
 },
 },
 secondary: null,
-target: "all",
+target: "any",
 type: "Psychic",
 },
 
