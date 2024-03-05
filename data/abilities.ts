@@ -4637,7 +4637,7 @@ onDamagingHit(damage, target, source, move) {
 const side = source.isAlly(target) ? source.side.foe : source.side;
 const stealthrock= side.sideConditions['stealthrock'];
 if (move.category === 'Physical' && (!stealthrock|| stealthrock.layers < 2)) {
-this.add('-activate', target, 'ability: 'Stealthy Spike Debris');
+this.add('-activate', target, 'ability: Stealthy Spike Debris');
 side.addSideCondition('stealthrock', target);
 }
 },
@@ -4649,7 +4649,7 @@ onDamagingHit(damage, target, source, move) {
 const side = source.isAlly(target) ? source.side.foe : source.side;
 const stickyweb= side.sideConditions['stickyweb'];
 if (move.category === 'Physical' && (!stickyweb|| stickyweb.layers < 2)) {
-this.add('-activate', target, 'ability: 'Web Slingers');
+this.add('-activate', target, 'ability: Web Slingers');
 side.addSideCondition('stickyweb', target);
 }
 },
