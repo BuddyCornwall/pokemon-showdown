@@ -342,7 +342,7 @@ accuracy: 95,
 basePower: 60,
 category: "Special",
 name: "Ancient Power",
-pp: 0.625,
+pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
