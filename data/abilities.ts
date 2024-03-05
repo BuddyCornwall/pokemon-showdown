@@ -3631,27 +3631,6 @@ rating: 0.5,
 num: 53,
 },
 
-pixilate: {
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-const noModifyType = [
-'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
-];
-if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
-!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Fairy';
-move.typeChangerBoosted = this.effect;
-}
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 33]);
-},
-name: "Pixilate",
-rating: 4,
-num: 182,
-},
-
 plus: {
 onModifySpAPriority: 5,
 onModifySpA(spa, pokemon) {
