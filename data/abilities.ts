@@ -16,7 +16,7 @@ rating: 4,
 num: 91,
 },
 
-aerilate: {
+aerolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 const noModifyType = [
@@ -30,11 +30,32 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
-name: "Aerilate",
+name: "Aerolate",
 rating: 4,
 num: 184,
+},
+
+pixilate: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+const noModifyType = [
+'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
+if (move.type === 'Fairy' && !noModifyType.includes(move.id) &&
+!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+move.type = 'Fairy';
+move.typeChangerBoosted = this.effect;
+}
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, pokemon, target, move) {
+if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+},
+name: "Pixilate",
+rating: 4,
+num: 206,
 },
 
 aftermath: {
@@ -1627,34 +1648,6 @@ this.boost({spe: -1});
 }
 },
 name: "Electrolate",
-rating: 4,
-num: 206,
-},
-
-faelate: {
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-const noModifyType = [
-'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
-];
-if (move.type === 'Fairy' && !noModifyType.includes(move.id) &&
-!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Electric';
-move.typeChangerBoosted = this.effect;
-}
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 33]);
-},
-onResidualOrder: 28,
-onResidualSubOrder: 2,
-onResidual(pokemon) {
-if (pokemon.activeTurns) {
-this.boost({spe: -1});
-}
-},
-name: "Pixilate",
 rating: 4,
 num: 206,
 },
@@ -3887,25 +3880,25 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
 this.debug('Protosynthesis atk boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
 this.debug('Protosynthesis def boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
 this.debug('Protosynthesis spa boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpDPriority: 6,
 onModifySpD(relayVar, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
 this.debug('Protosynthesis spd boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
@@ -4016,25 +4009,25 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
 this.debug('Quark Drive atk boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
 this.debug('Quark Drive def boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
 this.debug('Quark Drive spa boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpDPriority: 6,
 onModifySpD(relayVar, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
 this.debug('Quark Drive spd boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
@@ -4166,7 +4159,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 12]);
 },
 name: "Refrigerate",
 rating: 4,
@@ -4356,7 +4349,7 @@ onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
 if (this.field.isWeather('sandstorm')) {
 this.debug('Sand Veil - decreasing accuracy');
-return this.chainModify([3277, 4096]);
+return this.chainModify([125, 1000]);
 }
 },
 isBreakable: true,
@@ -4720,7 +4713,7 @@ onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
 if (this.field.isWeather(['hail', 'snow'])) {
 this.debug('Snow Cloak - decreasing accuracy');
-return this.chainModify([3277, 4096]);
+return this.chainModify([125, 1000]);
 }
 },
 isBreakable: true,
@@ -5387,7 +5380,7 @@ toughclaws: {
 onBasePowerPriority: 21,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['contact']) {
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 13]);
 }
 },
 name: "Tough Claws",
