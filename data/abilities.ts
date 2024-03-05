@@ -2143,7 +2143,7 @@ return this.modify(atk, 1.5);
 onSourceModifyAccuracyPriority: -1,
 onSourceModifyAccuracy(accuracy, target, source, move) {
 if (move.category === 'Physical' && typeof accuracy === 'number') {
-return this.chainModify([3277, 4096]);
+return this.chainModify([125, 1000]);
 }
 },
 name: "Hustle",
@@ -2472,25 +2472,12 @@ ironbarbs: {
 onDamagingHitOrder: 1,
 onDamagingHit(damage, target, source, move) {
 if (this.checkMoveMakesContact(move, source, target, true)) {
-this.damage(source.baseMaxhp / 8, source, target);
+this.damage(source.baseMaxhp / 6, source, target);
 }
 },
 name: "Iron Barbs",
 rating: 2.5,
 num: 160,
-},
-
-dragonball: {
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['beam']) {
-this.debug('Dragon Ball boost');
-return this.chainModify([100, 33]);
-}
-},
-name: "Dragon Ball",
-rating: 3,
-num: 89,
 },
 
 ironfist: {
@@ -4889,7 +4876,7 @@ supremeoverlord: {
 onStart(pokemon) {
 if (pokemon.side.totalFainted) {
 this.add('-activate', pokemon, 'ability: Supreme Overlord');
-const fallen = Math.min(pokemon.side.totalFainted, 5);
+const fallen = Math.min(pokemon.side.totalFainted, 2);
 this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
 this.effectState.fallen = fallen;
 }
@@ -5212,7 +5199,7 @@ toughclaws: {
 onBasePowerPriority: 21,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['contact']) {
-return this.chainModify([100, 13]);
+return this.chainModify([100, 33]);
 }
 },
 name: "Tough Claws",
@@ -5245,6 +5232,8 @@ name: "Toxic Debris",
 rating: 3.5,
 num: 295,
 },
+
+
 
 trace: {
 onStart(pokemon) {
