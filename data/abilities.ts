@@ -357,7 +357,7 @@ name: "Aftermath",
 onDamagingHitOrder: 1,
 onDamagingHit(damage, target, source, move) {
 if (!target.hp && this.checkMoveMakesContact(move, source, target, true)) {
-this.damage(source.baseMaxhp / 4, source, target);
+this.damage(source.baseMaxhp / 3, source, target);
 }
 },
 rating: 2,
