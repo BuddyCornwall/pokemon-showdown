@@ -103,6 +103,26 @@ rating: 1,
 num: 83,
 },
 
+mobpsycho100: {
+onHit(target, source, move) {
+if (!target.hp) return;
+if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+this.boost({spa: 12}, target, target);
+}
+},
+name: "Mob Psycho 100",
+},
+
+borsalino : {
+onHit(target, source, move) {
+if (!target.hp) return;
+if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+this.boost({spe: 12}, target, target);
+}
+},
+name: "borsalino ",
+},
+
 angershell: {
 onDamage(damage, target, source, effect) {
 if (
