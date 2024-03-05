@@ -4635,7 +4635,7 @@ name: "Spike Debris",
 stealthyspikedebris: {
 onDamagingHit(damage, target, source, move) {
 const side = source.isAlly(target) ? source.side.foe : source.side;
-const toxicSpikes = side.sideConditions: 'stealthrock',
+const stealthrock = side.sideConditions: 'stealthrock',
 if (move.category === 'Physical' && (!stealthrock|| stealthrock.layers < 2)) {
 this.add('-activate', target, 'ability: 'Stealthy Spike Debris');
 side.addSideCondition('stealthrock', target);
