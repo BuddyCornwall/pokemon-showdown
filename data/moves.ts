@@ -548,7 +548,7 @@ spd: 1,
 def: 1,
 },
 secondary: null,
-target: "adjacentFoe",
+target: "allAdjacent",
 type: "Fairy",
 },
 
