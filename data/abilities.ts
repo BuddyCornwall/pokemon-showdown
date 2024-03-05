@@ -3998,27 +3998,6 @@ rating: 3,
 num: 120,
 },
 
-refrigerate: {
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-const noModifyType = [
-'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
-];
-if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
-!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Ice';
-move.typeChangerBoosted = this.effect;
-}
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 12]);
-},
-name: "Refrigerate",
-rating: 4,
-num: 174,
-},
-
 regenerator: {
 onSwitchOut(pokemon) {
 pokemon.heal(pokemon.baseMaxhp / 3.333);
