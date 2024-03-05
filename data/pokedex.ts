@@ -8662,7 +8662,7 @@ pyroar: {
 num: 668,
 name: "Pyroar",
 types: ["Fire", "Ground"],
-gender: "F",
+gender: "M",
 baseStats: {hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106},
 abilities: {0: "No Ability"},
 weightkg: 81.5,
