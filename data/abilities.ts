@@ -1,4 +1,4 @@
-*export const Abilities: {[abilityid: string]: AbilityData} = {
+export const Abilities: {[abilityid: string]: AbilityData} = {
 
 noability: {
 isNonstandard: "Past",
