@@ -5233,7 +5233,41 @@ rating: 3.5,
 num: 295,
 },
 
+spikedebris: {
+onDamagingHit(damage, target, source, move) {
+const side = source.isAlly(target) ? source.side.foe : source.side;
+const spikes= side.sideConditions['spikes'];
+if (move.category === 'Physical' && (!Spikes || Spikes.layers < 2)) {
+this.add('-activate', target, 'ability: Spike Debris');
+side.addSideCondition('spikes', target);
+}
+},
+name: "Spike Debris",
+},
 
+stealthyspikedebris: {
+onDamagingHit(damage, target, source, move) {
+const side = source.isAlly(target) ? source.side.foe : source.side;
+const stealthrock= side.sideConditions['stealthrock'];
+if (move.category === 'Physical' && (!stealthrock|| stealthrock.layers < 2)) {
+this.add('-activate', target, 'ability: Stealthy Spike Debris');
+side.addSideCondition('stealthrock', target);
+}
+},
+name: "Stealthy Spike Debris",
+},
+
+webslingers: {
+onDamagingHit(damage, target, source, move) {
+const side = source.isAlly(target) ? source.side.foe : source.side;
+const stickyweb= side.sideConditions['stickyweb'];
+if (move.category === 'Physical' && (!stickyweb|| stickyweb.layers < 2)) {
+this.add('-activate', target, 'ability: Web Slingers');
+side.addSideCondition('stickyweb', target);
+}
+},
+name: "Web Slinglers",
+},
 
 trace: {
 onStart(pokemon) {
