@@ -2669,14 +2669,74 @@ rating: 2.5,
 num: 64,
 },
 
-liquidvoice: {
+fosrodah: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Dragon';
+}
+},
+name: "Fosrodah",
+rating: 1.5,
+num: 204,
+},
+
+faetoorshul: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Fairy';
+}
+},
+name: "Faetoorshul",
+rating: 1.5,
+num: 204,
+},
+
+yoltoorshul: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Fire';
+}
+},
+name: "Yoltoorshul",
+rating: 1.5,
+num: 204,
+},
+
+vengaarnos: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Flying';
+}
+},
+name: "Vengaarnos",
+rating: 1.5,
+num: 204,
+},
+
+fokrahdiin: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Ice';
+}
+},
+name: "Fokrahdiin",
+rating: 1.5,
+num: 204,
+},
+
+Okaazfokrah: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
 move.type = 'Water';
 }
 },
-name: "Liquid Voice",
+name: "Okaazfokrah",
 rating: 1.5,
 num: 204,
 },
@@ -5233,18 +5293,6 @@ rating: 3.5,
 num: 295,
 },
 
-spikedebris: {
-onDamagingHit(damage, target, source, move) {
-const side = source.isAlly(target) ? source.side.foe : source.side;
-const spikes= side.sideConditions['spikes'];
-if (move.category === 'Physical' && (!Spikes || Spikes.layers < 2)) {
-this.add('-activate', target, 'ability: Spike Debris');
-side.addSideCondition('spikes', target);
-}
-},
-name: "Spike Debris",
-},
-
 stealthyspikedebris: {
 onDamagingHit(damage, target, source, move) {
 const side = source.isAlly(target) ? source.side.foe : source.side;
@@ -5255,18 +5303,6 @@ side.addSideCondition('stealthrock', target);
 }
 },
 name: "Stealthy Spike Debris",
-},
-
-webslingers: {
-onDamagingHit(damage, target, source, move) {
-const side = source.isAlly(target) ? source.side.foe : source.side;
-const stickyweb= side.sideConditions['stickyweb'];
-if (move.category === 'Physical' && (!stickyweb|| stickyweb.layers < 2)) {
-this.add('-activate', target, 'ability: Web Slingers');
-side.addSideCondition('stickyweb', target);
-}
-},
-name: "Web Slinglers",
 },
 
 trace: {
@@ -5830,8 +5866,6 @@ rating: 5,
 num: 278,
 },
 
-// CAP
-
 mountaineer: {
 onDamage(damage, target, source, effect) {
 if (effect && effect.id === 'stealthrock') {
@@ -5893,239 +5927,71 @@ rating: 3,
 num: -4,
 },
 
-stalk: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Dark' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Stalk boost');
-return this.chainModify(1.5);
+hospitality: {
+onStart(pokemon) {
+for (const ally of pokemon.adjacentAllies()) {
+this.heal(ally.baseMaxhp / 4, ally, pokemon);
 }
 },
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Dark' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Stalk boost');
-return this.chainModify(1.5);
-}
-},
-name: "Stalk",
+flags: {},
+name: "Hospitality",
 },
 
-dragging: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Dragon' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Dragging boost');
-return this.chainModify(1.5);
+mindseye: {
+onTryBoost(boost, target, source, effect) {
+if (source && target === source) return;
+if (boost.accuracy && boost.accuracy < 0) {
+delete boost.accuracy;
+if (!(effect as ActiveMove).secondaries) {
+this.add("-fail", target, "unboost", "accuracy", "[from] ability: Mind's Eye", "[of] " + target);
+}
 }
 },
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Dragon' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Dragging boost');
-return this.chainModify(1.5);
+onModifyMovePriority: -5,
+onModifyMove(move) {
+move.ignoreEvasion = true;
+if (!move.ignoreImmunity) move.ignoreImmunity = {};
+if (move.ignoreImmunity !== true) {
+move.ignoreImmunity['Fighting'] = true;
+move.ignoreImmunity['Normal'] = true;
 }
 },
-name: "Dragging",
+flags: {breakable: 1},
+name: "Mind's Eye",
 },
 
-fae: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Fairy' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Fae boost');
-return this.chainModify(1.5);
+supersweetsyrup: {
+onStart(pokemon) {
+if (pokemon.syrupTriggered) return;
+pokemon.syrupTriggered = true;
+this.add('-ability', pokemon, 'Supersweet Syrup');
+let activated = false;
+for (const target of pokemon.adjacentFoes()) {
+if (!activated) {
+this.add('-ability', pokemon, 'Supersweet Syrup', 'boost');
+activated = true;
+}
+if (target.volatiles['substitute']) {
+this.add('-immune', target);
+} else {
+this.boost({evasion: -1}, target, pokemon, null, true);
+}
 }
 },
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Fairy' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Fae boost');
-return this.chainModify(1.5);
-}
-},
-name: "Fae",
+flags: {},
+name: "Supersweet Syrup",
 },
 
-fisting: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Grass' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Fighting boost');
-return this.chainModify(1.5);
+toxicchain: {
+onSourceDamagingHit(damage, target, source, move) {
+// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
+if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+if (this.randomChance(3, 10)) {
+target.trySetStatus('tox', source);
 }
 },
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Fighting' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Fisting boost');
-return this.chainModify(1.5);
-}
+flags: {},
+name: "Toxic Chain",
 },
-name: "Fisting",
-},
-
-powercell: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Electric' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Powercell boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Electric' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Powercell boost');
-return this.chainModify(1.5);
-}
-},
-name: "Powercell",
-},
-
-sinkhole: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Ground' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Sinkhole boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Ground' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Sinkhole boost');
-return this.chainModify(1.5);
-}
-},
-name: "Overgrow",
-},
-
-whiteout: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Whiteout boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Whiteout boost');
-return this.chainModify(1.5);
-}
-},
-name: "Whiteout",
-},
-
-basic: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Normal' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Basic boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Normal' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Basic boost');
-return this.chainModify(1.5);
-}
-},
-name: "Basic",
-},
-
-venomous: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Poison' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Venomous boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Poison' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Venomous boost');
-return this.chainModify(1.5);
-}
-},
-name: "Venomous",
-},
-
-landslide: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Rock' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Landslide boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Rock' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Landslide boost');
-return this.chainModify(1.5);
-}
-},
-name: "Landslide",
-},
-
-ferrous: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Steel' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Ferrous boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Steel' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Ferrous boost');
-return this.chainModify(1.5);
-}
-},
-name: "Ferrous",
-},
-
-esp: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Psychic' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('ESP boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Psychic' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('ESP boost');
-return this.chainModify(1.5);
-}
-},
-name: "ESP",
-},
-
-swoop: {
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (move.type === 'Psychic' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Swoop boost');
-return this.chainModify(1.5);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Psychic' && attacker.hp <= attacker.maxhp / 2) {
-this.debug('Swoop boost');
-return this.chainModify(1.5);
-}
-},
-name: "Swoop",
-},
-
 
 };
