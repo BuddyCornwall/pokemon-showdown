@@ -633,15 +633,28 @@ rating: 0,
 num: 237,
 },
 
-battery: {
+synergysurge: {
 onAllyBasePowerPriority: 22,
 onAllyBasePower(basePower, attacker, defender, move) {
 if (attacker !== this.effectState.target && move.category === 'Special') {
-this.debug('Battery boost');
+this.debug('Synergy Surge boost');
 return this.chainModify([100, 33]);
 }
 },
-name: "Battery",
+name: "Synergy Surge",
+rating: 0,
+num: 217,
+},
+
+inspireaura: {
+onAllyBasePowerPriority: 22,
+onAllyBasePower(basePower, attacker, defender, move) {
+if (attacker !== this.effectState.target && move.category === 'Physical') {
+this.debug('Inspire Aura boost');
+return this.chainModify([100, 33]);
+}
+},
+name: "Inspire Aura",
 rating: 0,
 num: 217,
 },
@@ -2860,6 +2873,10 @@ num: 42,
 marvelscale: {
 onModifyDefPriority: 6,
 onModifyDef(def, pokemon) {
+if (pokemon.status) {
+return this.chainModify(1.5);
+}
+onModifySPD(spd, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
 }
