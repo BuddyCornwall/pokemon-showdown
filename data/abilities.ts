@@ -2883,7 +2883,7 @@ rating: 2.5,
 num: 63,
 },
 
-dccale: {
+dcscale: {
 onModifySPDPriority: 6,
 onModifySPD(SPD, pokemon) {
 if (pokemon.status) {
