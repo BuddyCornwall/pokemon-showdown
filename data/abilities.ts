@@ -2875,9 +2875,11 @@ onModifyDefPriority: 6,
 onModifyDef(def, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
+}
 onModifySPD(spd, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
+}
 }
 },
 isBreakable: true,
