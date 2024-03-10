@@ -2884,8 +2884,8 @@ num: 63,
 },
 
 dcscale: {
-onModifySpDPriority: 6,
-onModifySpD(spd, pokemon) {
+onModifySpePriority: 6,
+onModifySpe(spe, pokemon) {
 if (pokemon.status) {
 return this.chainModify(2);
 }
