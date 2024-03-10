@@ -2891,7 +2891,7 @@ return this.chainModify(2);
 }
 },
 isBreakable: true,
-name: "DCScale",
+name: "DC Scale",
 rating: 2.5,
 num: 63,
 },
