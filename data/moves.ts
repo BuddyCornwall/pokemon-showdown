@@ -3932,7 +3932,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Electrify",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, slow: 1, mirror: 1, allyanim: 1},
 volatileStatus: 'electrify',
@@ -4751,7 +4751,7 @@ type: "Bug",
 
 fishiousrend: {
 accuracy: 85,
-basePower: 85,
+basePower: 75,
 basePowerCallback(pokemon, target, move) {
 if (target.newlySwitched || this.queue.willMove(target)) {
 this.debug('Fishious Rend damage boost');
@@ -10738,14 +10738,14 @@ type: "Normal",
 
 psychic: {
 accuracy: 95,
-basePower: 95,
+basePower: 105,
 category: "Special",
 name: "Psychic",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 25,
+chance: 33,
 boosts: {
 spd: -1,
 },
