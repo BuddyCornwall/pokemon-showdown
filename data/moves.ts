@@ -4903,8 +4903,8 @@ type: "Fire",
 
 flash: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 50,
+category: "Special",
 name: "Flash",
 pp: 0.625,
 priority: 4,
@@ -6988,7 +6988,7 @@ basePower: 65,
 category: "Physical",
 name: "Ice Fang",
 pp: 0.625,
-priority: 1,
+priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondaries: [
 {
