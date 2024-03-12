@@ -2327,7 +2327,7 @@ this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState,
 },
 onEnd(pokemon) {
 if (pokemon.illusion) {
-this.debug('illusion cleared');
+this.debug('GEEEEEENE boost');
 pokemon.illusion = null;
 const details = pokemon.species.name + (pokemon.level === 100 ? '' : ', L' + pokemon.level) +
 (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
@@ -3098,7 +3098,7 @@ num: 136,
 invisiblescreen: {
 onSourceModifyDamage(damage, source, target, move) {
 if (target.hp >= target.maxhp) {
-this.debug('Invisible Screen! weaken');
+this.debug('Invisible Screen weaken');
 return this.chainModify(0.25);
 this.effectState.busted = true;
 }
