@@ -2853,6 +2853,18 @@ num: 40,
 },
 
 maglock: {
+onTryHit(target, source, move) {
+if (target !== source && move.type === 'Steel') {
+if (!this.heal(target.baseMaxhp / 4)) {
+this.add('-immune', target, '[from] ability: Maglock');
+}
+return null;
+}
+
+
+
+
+
 onFoeTrapPokemon(pokemon) {
 if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
 pokemon.tryTrap(true);
@@ -2864,12 +2876,8 @@ if (!source || !pokemon.isAdjacent(source)) return;
 if (!pokemon.knownType || pokemon.hasType('Steel')) {
 pokemon.maybeTrapped = true;
 }
-},
-onTryHit(target, source, move) {
-if (target !== source && move.type === 'Steel') {
-if (!this.boost({spe: 1})) {
-this.add('-immune', target, '[from] ability: Maglock');
 }
+},
 name: "Maglock",
 rating: 4,
 num: 42,
