@@ -2327,7 +2327,7 @@ this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState,
 },
 onEnd(pokemon) {
 if (pokemon.illusion) {
-this.debug('GEEEEEENE boost');
+this.debug('illusion cleared');
 pokemon.illusion = null;
 const details = pokemon.species.name + (pokemon.level === 100 ? '' : ', L' + pokemon.level) +
 (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
@@ -2852,7 +2852,7 @@ rating: 0.5,
 num: 40,
 },
 
-magnetpull: {
+maglock: {
 onFoeTrapPokemon(pokemon) {
 if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
 pokemon.tryTrap(true);
@@ -2865,7 +2865,12 @@ if (!pokemon.knownType || pokemon.hasType('Steel')) {
 pokemon.maybeTrapped = true;
 }
 },
-name: "Magnet Pull",
+onTryHit(target, source, move) {
+if (target !== source && move.type === 'Steel') {
+if (!this.boost({spe: 1})) {
+this.add('-immune', target, '[from] ability: Maglock');
+}
+name: "Maglock",
 rating: 4,
 num: 42,
 },
