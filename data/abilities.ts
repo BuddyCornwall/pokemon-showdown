@@ -3104,10 +3104,7 @@ this.effectState.busted = true;
 }
 },
 onDamagingHit(damage, target, source, effect) {
-this.boost({def: -.5});
-},
-onDamagingHit(damage, target, source, effect) {
-this.boost({spd: -.5});
+this.boost({def: -.5}{spd: -.5});
 },
 
 isBreakable: true,
