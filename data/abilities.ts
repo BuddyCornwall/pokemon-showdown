@@ -2852,11 +2852,11 @@ rating: 0.5,
 num: 40,
 },
 
-maglock: {
+magneato: {
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Steel') {
 if (!this.heal(target.baseMaxhp / 5)) {
-this.add('-immune', target, '[from] ability: Maglock');
+this.add('-immune', target, '[from] ability: Magneato');
 }
 return null;
 }
@@ -2873,7 +2873,7 @@ if (!pokemon.knownType || pokemon.hasType('Steel')) {
 pokemon.maybeTrapped = true;
 }
 },
-name: "Maglock",
+name: "Magneato",
 rating: 4,
 num: 42,
 },
