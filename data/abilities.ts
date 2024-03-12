@@ -3104,12 +3104,12 @@ this.effectState.busted = true;
 }
 },
 onModifyDef(def, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 4) {
+if (pokemon.hp <= pokemon.maxhp / 1.5) {
 return this.chainModify(0.5);
 }
 },
-onModifySps(apd, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 4) {
+onModifySpd(spd, pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 1.5) {
 return this.chainModify(0.5);
 }
 },
