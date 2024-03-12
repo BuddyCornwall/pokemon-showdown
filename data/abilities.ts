@@ -3103,18 +3103,13 @@ return this.chainModify(0.25);
 this.effectState.busted = true;
 }
 },
-onModifyDefPriority: 5,
-onModifyDef(atk, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-return this.chainModify(0.5);
-}
+onDamagingHit(damage, target, source, effect) {
+this.boost({def: -.5});
 },
-onModifySpdPriority: 5,
-onModifySpd(atk, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-return this.chainModify(0.5);
-}
+onDamagingHit(damage, target, source, effect) {
+this.boost({spd: -.5});
 },
+
 isBreakable: true,
 name: "Invisible Screen",
 rating: 3.5,
