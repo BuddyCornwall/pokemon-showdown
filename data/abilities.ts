@@ -3098,7 +3098,7 @@ num: 136,
 invisiblescreen: {
 onSourceModifyDamage(damage, source, target, move) {
 if (target.hp >= target.maxhp) {
-this.debug('Invisible Screen weaken');
+this.debug('Invisible Screen! weaken');
 return this.chainModify(0.25);
 this.effectState.busted = true;
 }
@@ -3106,7 +3106,6 @@ this.effectState.busted = true;
 onDamagingHit(damage, target, source, effect) {
 this.boost({def: -.5, spd: -.5});
 },
-
 isBreakable: true,
 name: "Invisible Screen",
 rating: 3.5,
