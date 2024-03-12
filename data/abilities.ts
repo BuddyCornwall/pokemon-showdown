@@ -3103,13 +3103,15 @@ return this.chainModify(0.25);
 this.effectState.busted = true;
 }
 },
-onModifyDef(def, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 1.5) {
+onModifyAtkPriority: 5,
+onModifyDef(atk, pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
 return this.chainModify(0.5);
 }
 },
-onModifySpd(spd, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 1.5) {
+onModifySpAPriority: 5,
+onModifySpd(atk, pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
 return this.chainModify(0.5);
 }
 },
