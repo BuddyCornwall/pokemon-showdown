@@ -2855,16 +2855,12 @@ num: 40,
 maglock: {
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Steel') {
-if (!this.heal(target.baseMaxhp / 4)) {
+if (!this.heal(target.baseMaxhp / 5)) {
 this.add('-immune', target, '[from] ability: Maglock');
 }
 return null;
 }
 },
-
-
-
-
 onFoeTrapPokemon(pokemon) {
 if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
 pokemon.tryTrap(true);
