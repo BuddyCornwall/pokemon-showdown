@@ -3103,6 +3103,16 @@ return this.chainModify(0.25);
 this.effectState.busted = true;
 }
 },
+onModifyDef(def, pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 4) {
+return this.chainModify(0.5);
+}
+},
+onModifySps(apd, pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 4) {
+return this.chainModify(0.5);
+}
+},
 isBreakable: true,
 name: "Invisible Screen",
 rating: 3.5,
