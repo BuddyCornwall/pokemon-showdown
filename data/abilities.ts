@@ -2860,7 +2860,7 @@ this.add('-immune', target, '[from] ability: Maglock');
 }
 return null;
 }
-
+},
 
 
 
@@ -2875,7 +2875,6 @@ if (!source) source = this.effectState.target;
 if (!source || !pokemon.isAdjacent(source)) return;
 if (!pokemon.knownType || pokemon.hasType('Steel')) {
 pokemon.maybeTrapped = true;
-}
 }
 },
 name: "Maglock",
