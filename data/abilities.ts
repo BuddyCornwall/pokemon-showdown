@@ -2892,7 +2892,7 @@ num: 63,
 },
 
 dcscale: {
-onModifySpDPriority: 6,
+onModifyDefPriority: 6,
 onModifySpD(def, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
