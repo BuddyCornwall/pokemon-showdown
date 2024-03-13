@@ -2882,10 +2882,10 @@ marvelscale: {
 onModifyDefPriority: 6,
 onModifyDef(def, pokemon) {
 if (pokemon.status) {
-return this.chainModify(2);
+return this.chainModify(1.5);
 }
 },
-isBreakable: true,
+flags: {breakable: 1},
 name: "Marvel Scale",
 rating: 2.5,
 num: 63,
@@ -2893,12 +2893,12 @@ num: 63,
 
 dcscale: {
 onModifySpDPriority: 6,
-onModifySpD(spd, pokemon) {
+onModifySpD(def, pokemon) {
 if (pokemon.status) {
-return this.chainModify(2);
+return this.chainModify(1.5);
 }
 },
-isBreakable: true,
+flags: {breakable: 1},
 name: "DC Scale",
 rating: 2.5,
 num: 63,
