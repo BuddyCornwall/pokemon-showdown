@@ -2893,7 +2893,7 @@ num: 63,
 
 dcscale: {
 onModifyDefPriority: 6,
-onModifySpD(def, pokemon) {
+onModifySpD(SpD, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
 }
@@ -4740,6 +4740,32 @@ this.boost({spe: 1});
 }
 },
 name: "Speed Boost",
+rating: 4.5,
+num: 3,
+},
+
+boilingrage: {
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (pokemon.activeTurns) {
+this.boost({atk: 0.33});
+}
+},
+name: "Boiling Rage",
+rating: 4.5,
+num: 3,
+},
+
+risingpower: {
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (pokemon.activeTurns) {
+this.boost({spa: 0.33});
+}
+},
+name: "Rising Power",
 rating: 4.5,
 num: 3,
 },
