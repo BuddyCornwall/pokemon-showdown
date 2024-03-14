@@ -4749,7 +4749,7 @@ onResidualOrder: 28,
 onResidualSubOrder: 2,
 onResidual(pokemon) {
 if (pokemon.activeTurns) {
-this.boost({atk: 0.33});
+this.boost({atk: 1.00});
 }
 },
 name: "Boiling Rage",
@@ -4762,7 +4762,7 @@ onResidualOrder: 28,
 onResidualSubOrder: 2,
 onResidual(pokemon) {
 if (pokemon.activeTurns) {
-this.boost({spa: 0.33});
+this.boost({spa: 1.00});
 }
 },
 name: "Rising Power",
