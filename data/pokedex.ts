@@ -6152,12 +6152,12 @@ abilities: {0: "No Ability"},
 weightkg: 26.6,
 },
 
-rotom: {
+rotombulb: {
 num: 479,
-name: "Rotom",
+name: "Rotom-Bulb",
 types: ["Electric", "Ghost"],
 gender: "F",
-baseStats: {hp: 50, atk: 50, def: 77, spa: 95, spd: 77, spe: 91},
+baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
 abilities: {0: "No Ability"},
 weightkg: 0.3,
 },

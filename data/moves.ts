@@ -2093,7 +2093,7 @@ flags: {},
 weather: 'snow',
 selfSwitch: true,
 secondary: null,
-target: "all",
+target: "any",
 type: "Ice",
 },
 
