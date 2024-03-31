@@ -1050,7 +1050,7 @@ return bp;
 },
 category: "Physical",
 name: "Beat Up",
-pp: 100.625,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, allyanim: 1},
 onModifyMove(move, pokemon) {
