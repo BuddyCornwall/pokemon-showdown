@@ -2753,7 +2753,7 @@ rating: 1.5,
 num: 204,
 },
 
-Okaazfokrah: {
+okaazfokrah: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
