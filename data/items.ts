@@ -5829,8 +5829,8 @@ num: 649,
 gen: 6,
 },
 
-cellbattery: {
-name: "Cell Battery",
+cellsynergysurge: {
+name: "Cell Synergy Surge",
 spritenum: 60,
 fling: {
 basePower: 30,
