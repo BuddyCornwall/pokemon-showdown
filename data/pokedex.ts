@@ -1,13447 +1,17258 @@
-export const Pokedex: {[speciesid: string]: SpeciesData} = {
-bulbasaur: {
-num: 1,
-name: "Bulbasaur",
-types: ["Grass"],
-baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
-gender: "F",
-abilities: {0: "No Ability"},
-weightkg: 6.9,
-},
-
-ivysaur: {
-num: 2,
-name: "Ivysaur",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-venusaur: {
-num: 3,
-name: "Venusaur",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 100,
-},
-
-venusaurmega: {
-num: 3,
-name: "Venusaur-Mega",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 123, spa: 122, spd: 120, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 155.5,
-},
-
-venusaurgmax: {
-num: 3,
-name: "Venusaur-Gmax",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-charmander: {
-num: 4,
-name: "Charmander",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-charmeleon: {
-num: 5,
-name: "Charmeleon",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 19,
-},
-
-charizard: {
-num: 6,
-name: "Charizard",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 90.5,
-},
-
-charizardmegax: {
-num: 6,
-name: "Charizard-Mega-X",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 78, atk: 130, def: 111, spa: 130, spd: 85, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 110.5,
-},
-
-charizardmegay: {
-num: 6,
-name: "Charizard-Mega-Y",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 78, atk: 104, def: 78, spa: 159, spd: 115, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-charizardgmax: {
-num: 6,
-name: "Charizard-Gmax",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-squirtle: {
-num: 7,
-name: "Squirtle",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 44, atk: 48, def: 65, spa: 50, spd: 64, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-wartortle: {
-num: 8,
-name: "Wartortle",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 59, atk: 63, def: 80, spa: 65, spd: 80, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 22.5,
-},
-
-blastoise: {
-num: 9,
-name: "Blastoise",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 85.5,
-},
-
-blastoisemega: {
-num: 9,
-name: "Blastoise-Mega",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 79, atk: 103, def: 120, spa: 135, spd: 115, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 101.1,
-},
-
-blastoisegmax: {
-num: 9,
-name: "Blastoise-Gmax",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-caterpie: {
-num: 10,
-name: "Caterpie",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 35, spa: 20, spd: 20, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 2.9,
-},
-
-metapod: {
-num: 11,
-name: "Metapod",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 20, def: 55, spa: 25, spd: 25, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 9.9,
-},
-
-butterfree: {
-num: 12,
-name: "Butterfree",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 75, atk: 40, def: 55, spa: 111, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 32,
-},
-
-butterfreegmax: {
-num: 12,
-name: "Butterfree-Gmax",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-weedle: {
-num: 13,
-name: "Weedle",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 3.2,
-},
-
-kakuna: {
-num: 14,
-name: "Kakuna",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 45, atk: 25, def: 50, spa: 25, spd: 25, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 10,
-},
-
-beedrill: {
-num: 15,
-name: "Beedrill",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 70, atk: 95, def: 45, spa: 45, spd: 85, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 29.5,
-},
-
-beedrillmega: {
-num: 15,
-name: "Beedrill-Mega",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 150, def: 40, spa: 15, spd: 80, spe: 145},
-abilities: {0: "No Ability"},
-weightkg: 40.5,
-},
-
-pidgey: {
-num: 16,
-name: "Pidgey",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 40, spa: 35, spd: 35, spe: 56},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-pidgeotto: {
-num: 17,
-name: "Pidgeotto",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 63, atk: 60, def: 55, spa: 50, spd: 50, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-pidgeot: {
-num: 18,
-name: "Pidgeot",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 39.5,
-},
-
-pidgeotmega: {
-num: 18,
-name: "Pidgeot-Mega",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 83, atk: 80, def: 80, spa: 135, spd: 80, spe: 121},
-abilities: {0: "No Ability"},
-weightkg: 50.5,
-},
-
-rattata: {
-num: 19,
-name: "Rattata",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-rattataalola: {
-num: 19,
-name: "Rattata-Alola",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 3.8,
-},
-
-raticate: {
-num: 20,
-name: "Raticate",
-types: ["Ground", "Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 85, def: 60, spa: 50, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 18.5,
-},
-
-raticatealola: {
-num: 20,
-name: "Raticate-Alola",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 75, def: 75, spa: 40, spd: 85, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 25.5,
-},
-
-raticatealolatotem: {
-num: 20,
-name: "Raticate-Alola-Totem",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 105,
-},
-
-spearow: {
-num: 21,
-name: "Spearow",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 40, atk: 60, def: 30, spa: 31, spd: 31, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-fearow: {
-num: 22,
-name: "Fearow",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 38,
-},
-
-ekans: {
-num: 23,
-name: "Ekans",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 35, atk: 60, def: 44, spa: 40, spd: 54, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 6.9,
-},
-
-arbok: {
-num: 24,
-name: "Arbok",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 65,
-},
-
-pikachu: {
-num: 25,
-name: "Pikachu",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-pikachucosplay: {
-num: 25,
-name: "Pikachu-Cosplay",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachurockstar: {
-num: 25,
-name: "Pikachu-Rock-Star",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachubelle: {
-num: 25,
-name: "Pikachu-Belle",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachupopstar: {
-num: 25,
-name: "Pikachu-Pop-Star",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachuphd: {
-num: 25,
-name: "Pikachu-PhD",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachulibre: {
-num: 25,
-name: "Pikachu-Libre",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 6,
-},
-
-pikachuoriginal: {
-num: 25,
-name: "Pikachu-Original",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachuhoenn: {
-num: 25,
-name: "Pikachu-Hoenn",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachusinnoh: {
-num: 25,
-name: "Pikachu-Sinnoh",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachuunova: {
-num: 25,
-name: "Pikachu-Unova",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachukalos: {
-num: 25,
-name: "Pikachu-Kalos",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachualola: {
-num: 25,
-name: "Pikachu-Alola",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachupartner: {
-num: 25,
-name: "Pikachu-Partner",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 7,
-},
-
-pikachustarter: {
-num: 25,
-name: "Pikachu-Starter",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 45, atk: 80, def: 50, spa: 75, spd: 60, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-pikachugmax: {
-num: 25,
-name: "Pikachu-Gmax",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-pikachuworld: {
-num: 25,
-name: "Pikachu-World",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-gen: 8,
-},
-
-raichu: {
-num: 26,
-name: "Raichu",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-raichualola: {
-num: 26,
-name: "Raichu-Alola",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 21,
-},
-
-sandshrew: {
-num: 27,
-name: "Sandshrew",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 50, atk: 75, def: 85, spa: 20, spd: 30, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-sandshrewalola: {
-num: 27,
-name: "Sandshrew-Alola",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 75, def: 90, spa: 10, spd: 35, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-sandslash: {
-num: 28,
-name: "Sandslash",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 29.5,
-},
-
-sandslashalola: {
-num: 28,
-name: "Sandslash-Alola",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 120, spa: 25, spd: 65, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-nidorana: {
-num: 29,
-name: "Nidorana",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 47, def: 52, spa: 40, spd: 40, spe: 41},
-abilities: {0: "No Ability"},
-weightkg: 7,
-},
-
-nidorina: {
-num: 30,
-name: "Nidorina",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 70, atk: 62, def: 67, spa: 55, spd: 55, spe: 56},
-abilities: {0: "No Ability"},
-weightkg: 20,
-},
-
-nidoqueen: {
-num: 31,
-name: "Nidoqueen",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-nidoran: {
-num: 32,
-name: "Nidoran",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 46, atk: 57, def: 40, spa: 40, spd: 40, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-nidorino: {
-num: 33,
-name: "Nidorino",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 61, atk: 80, def: 57, spa: 47, spd: 55, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-nidoking: {
-num: 34,
-name: "Nidoking",
-types: ["Ground", "Poison"],
-gender: "F",
-baseStats: {hp: 81, atk: 115, def: 77, spa: 72, spd: 75, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 62,
-},
-
-clefairy: {
-num: 35,
-name: "Clefairy",
-types: ["Fairy", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 45, def: 48, spa: 60, spd: 65, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-clefable: {
-num: 36,
-name: "Clefable",
-types: ["Fairy", "Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-vulpix: {
-num: 37,
-name: "Vulpix",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 9.9,
-},
-
-vulpixalola: {
-num: 37,
-name: "Vulpix-Alola",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 9.9,
-},
-
-ninetales: {
-num: 38,
-name: "Ninetales",
-types: ["Fairy", "Fire"],
-gender: "F",
-baseStats: {hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 19.9,
-},
-
-ninetalesalola: {
-num: 38,
-name: "Ninetales-Alola",
-types: ["Fairy", "Ice"],
-gender: "F",
-baseStats: {hp: 73, atk: 67, def: 75, spa: 81, spd: 100, spe: 109},
-abilities: {0: "No Ability"},
-weightkg: 19.9,
-},
-
-jigglypuff: {
-num: 39,
-name: "Jigglypuff",
-types: ["Fairy", "Fire"],
-gender: "F",
-baseStats: {hp: 115, atk: 45, def: 20, spa: 45, spd: 25, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-wigglytuff: {
-num: 40,
-name: "Wigglytuff",
-types: ["Fairy", "Fire"],
-gender: "F",
-baseStats: {hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-zubat: {
-num: 41,
-name: "Zubat",
-types: ["Flying", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 35, spa: 30, spd: 40, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-golbat: {
-num: 42,
-name: "Golbat",
-types: ["Flying", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-oddish: {
-num: 43,
-name: "Oddish",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 45, atk: 50, def: 55, spa: 75, spd: 65, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 5.4,
-},
-
-gloom: {
-num: 44,
-name: "Gloom",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 70, spa: 85, spd: 75, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 8.6,
-},
-
-vileplume: {
-num: 45,
-name: "Vileplume",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 18.6,
-},
-
-paras: {
-num: 46,
-name: "Paras",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 35, atk: 70, def: 55, spa: 45, spd: 55, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 5.4,
-},
-
-parasect: {
-num: 47,
-name: "Parasect",
-types: ["Bug", "Ghost"],
-gender: "F",
-baseStats: {hp: 70, atk: 100, def: 85, spa: 60, spd: 95, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 29.5,
-},
-
-venonat: {
-num: 48,
-name: "Venonat",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 50, spa: 40, spd: 55, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-venomoth: {
-num: 49,
-name: "Venomoth",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-diglett: {
-num: 50,
-name: "Diglett",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 45, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 0.8,
-},
-
-diglettalola: {
-num: 50,
-name: "Diglett-Alola",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 10, atk: 55, def: 30, spa: 35, spd: 45, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-dugtrio: {
-num: 51,
-name: "Dugtrio",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 40, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 33.3,
-},
-
-dugtrioalola: {
-num: 51,
-name: "Dugtrio-Alola",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 40, atk: 100, def: 60, spa: 50, spd: 70, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 66.6,
-},
-
-meowth: {
-num: 52,
-name: "Meowth",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 4.2,
-},
-
-meowthalola: {
-num: 52,
-name: "Meowth-Alola",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 40, atk: 35, def: 35, spa: 50, spd: 40, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 4.2,
-},
-
-meowthgalar: {
-num: 52,
-name: "Meowth-Galar",
-types: ["Normal", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 55, spa: 40, spd: 40, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-meowthgmax: {
-num: 52,
-name: "Meowth-Gmax",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-persian: {
-num: 53,
-name: "Persian",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 32,
-},
-
-persianalola: {
-num: 53,
-name: "Persian-Alola",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 60, spa: 75, spd: 65, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-psyduck: {
-num: 54,
-name: "Psyduck",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 52, def: 48, spa: 65, spd: 50, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 19.6,
-},
-
-golduck: {
-num: 55,
-name: "Golduck",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 76.6,
-},
-
-mankey: {
-num: 56,
-name: "Mankey",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 40, atk: 80, def: 35, spa: 35, spd: 45, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-primeape: {
-num: 57,
-name: "Primeape",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 32,
-},
-
-growlithe: {
-num: 58,
-name: "Growlithe",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 19,
-},
-
-growlithehisui: {
-num: 58,
-name: "Growlithe-Hisui",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 75, def: 45, spa: 65, spd: 50, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 22.7,
-},
-
-arcanine: {
-num: 59,
-name: "Arcanine",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 155,
-},
-
-arcaninehisui: {
-num: 59,
-name: "Arcanine-Hisui",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 115, def: 80, spa: 95, spd: 80, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 168,
-},
-
-poliwag: {
-num: 60,
-name: "Poliwag",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 50, def: 40, spa: 40, spd: 40, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 12.4,
-},
-
-poliwhirl: {
-num: 61,
-name: "Poliwhirl",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 65, spa: 50, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 20,
-},
-
-poliwrath: {
-num: 62,
-name: "Poliwrath",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 54,
-},
-
-abra: {
-num: 63,
-name: "Abra",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 25, atk: 20, def: 15, spa: 105, spd: 55, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-kadabra: {
-num: 64,
-name: "Kadabra",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 40, atk: 35, def: 30, spa: 120, spd: 70, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 56.5,
-},
-
-alakazam: {
-num: 65,
-name: "Alakazam",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 48,
-},
-
-alakazammega: {
-num: 65,
-name: "Alakazam-Mega",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 55, atk: 50, def: 65, spa: 175, spd: 105, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 48,
-},
-
-machop: {
-num: 66,
-name: "Machop",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 50, spa: 35, spd: 35, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-machoke: {
-num: 67,
-name: "Machoke",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 70, spa: 50, spd: 60, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 70.5,
-},
-
-machamp: {
-num: 68,
-name: "Machamp",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 130,
-},
-
-machampgmax: {
-num: 68,
-name: "Machamp-Gmax",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-bellsprout: {
-num: 69,
-name: "Bellsprout",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 50, atk: 75, def: 35, spa: 70, spd: 30, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-weepinbell: {
-num: 70,
-name: "Weepinbell",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 50, spa: 85, spd: 45, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 6.4,
-},
-
-victreebel: {
-num: 71,
-name: "Victreebel",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 15.5,
-},
-
-tentacool: {
-num: 72,
-name: "Tentacool",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 45.5,
-},
-
-tentacruel: {
-num: 73,
-name: "Tentacruel",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-geodude: {
-num: 74,
-name: "Geodude",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 20,
-},
-
-geodudealola: {
-num: 74,
-name: "Geodude-Alola",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 20.3,
-},
-
-graveler: {
-num: 75,
-name: "Graveler",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 105,
-},
-
-graveleralola: {
-num: 75,
-name: "Graveler-Alola",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 110,
-},
-
-golem: {
-num: 76,
-name: "Golem",
-types: ["Dragon", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 300,
-},
-
-golemalola: {
-num: 76,
-name: "Golem-Alola",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 316,
-},
-
-ponyta: {
-num: 77,
-name: "Ponyta",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-ponytagalar: {
-num: 77,
-name: "Ponyta-Galar",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 24,
-},
-
-rapidash: {
-num: 78,
-name: "Rapidash",
-types: ["Fire", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 95,
-},
-
-rapidashgalar: {
-num: 78,
-name: "Rapidash-Galar",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 80,
-},
-
-slowpoke: {
-num: 79,
-name: "Slowpoke",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 36,
-},
-
-slowpokegalar: {
-num: 79,
-name: "Slowpoke-Galar",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 36,
-},
-
-slowbro: {
-num: 80,
-name: "Slowbro",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 105, atk: 75, def: 115, spa: 105, spd: 90, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 78.5,
-},
-
-slowbromega: {
-num: 80,
-name: "Slowbro-Mega",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 75, def: 180, spa: 130, spd: 80, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-slowbrogalar: {
-num: 80,
-name: "Slowbro-Galar",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 95, atk: 100, def: 95, spa: 100, spd: 70, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 70.5,
-},
-
-magnemite: {
-num: 81,
-name: "Magnemite",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 25, atk: 35, def: 70, spa: 95, spd: 55, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-magneton: {
-num: 82,
-name: "Magneton",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-farfetchd: {
-num: 83,
-name: "Farfetch\u2019d",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 105, def: 55, spa: 60, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-farfetchdgalar: {
-num: 83,
-name: "Farfetch\u2019d-Galar",
-types: ["Fighting", "Flying"],
-gender: "F",
-baseStats: {hp: 52, atk: 95, def: 55, spa: 58, spd: 62, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-doduo: {
-num: 84,
-name: "Doduo",
-types: ["Flying", "Ground"],
-gender: "F",
-baseStats: {hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 39.2,
-},
-
-dodrio: {
-num: 85,
-name: "Dodrio",
-types: ["Flying", "Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 85.2,
-},
-
-seel: {
-num: 86,
-name: "Seel",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 65, atk: 45, def: 55, spa: 45, spd: 70, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 90,
-},
-
-dewgong: {
-num: 87,
-name: "Dewgong",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-grimer: {
-num: 88,
-name: "Grimer",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-grimeralola: {
-num: 88,
-name: "Grimer-Alola",
-types: ["Dark", "Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 42,
-},
-
-muk: {
-num: 89,
-name: "Muk",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-mukalola: {
-num: 89,
-name: "Muk-Alola",
-types: ["Dark", "Poison"],
-gender: "F",
-baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 52,
-},
-
-shellder: {
-num: 90,
-name: "Shellder",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 30, atk: 65, def: 100, spa: 45, spd: 25, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-cloyster: {
-num: 91,
-name: "Cloyster",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 132.5,
-},
-
-gastly: {
-num: 92,
-name: "Gastly",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 30, atk: 35, def: 30, spa: 100, spd: 35, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-haunter: {
-num: 93,
-name: "Haunter",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 45, atk: 50, def: 45, spa: 115, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-gengar: {
-num: 94,
-name: "Gengar",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 40.5,
-},
-
-gengarmega: {
-num: 94,
-name: "Gengar-Mega",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 80, spa: 170, spd: 95, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 40.5,
-},
-
-gengargmax: {
-num: 94,
-name: "Gengar-Gmax",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-onix: {
-num: 95,
-name: "Onix",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 210,
-},
-
-drowzee: {
-num: 96,
-name: "Drowzee",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 48, def: 45, spa: 43, spd: 90, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 32.4,
-},
-
-hypno: {
-num: 97,
-name: "Hypno",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 75.6,
-},
-
-krabby: {
-num: 98,
-name: "Krabby",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 30, atk: 105, def: 90, spa: 25, spd: 25, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-kingler: {
-num: 99,
-name: "Kingler",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-kinglergmax: {
-num: 99,
-name: "Kingler-Gmax",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-voltorb: {
-num: 100,
-name: "Voltorb",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 10.4,
-},
-
-voltorbhisui: {
-num: 100,
-name: "Voltorb-Hisui",
-types: ["Electric", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-electrode: {
-num: 101,
-name: "Electrode",
-types: ["Electric", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 66.6,
-},
-
-electrodehisui: {
-num: 101,
-name: "Electrode-Hisui",
-types: ["Electric", "Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 71,
-},
-
-exeggcute: {
-num: 102,
-name: "Exeggcute",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 40, def: 80, spa: 60, spd: 45, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-exeggutor: {
-num: 103,
-name: "Exeggutor",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-exeggutoralola: {
-num: 103,
-name: "Exeggutor-Alola",
-types: ["Dragon", "Psychic"],
-gender: "F",
-baseStats: {hp: 95, atk: 105, def: 85, spa: 125, spd: 75, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 415.6,
-},
-
-cubone: {
-num: 104,
-name: "Cubone",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 95, spa: 40, spd: 50, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-marowak: {
-num: 105,
-name: "Marowak",
-types: ["Ghost", "Ground"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 110, spa: 50, spd: 85, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 45,
-},
-
-marowakalola: {
-num: 105,
-name: "Marowak-Alola",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 110, spa: 50, spd: 85, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 34,
-},
-
-marowakalolatotem: {
-num: 105,
-name: "Marowak-Alola-Totem",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 98,
-},
-
-hitmonlee: {
-num: 106,
-name: "Hitmonlee",
-types: ["Fighting", "Ground"],
-gender: "F",
-baseStats: {hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87},
-abilities: {0: "No Ability"},
-weightkg: 49.8,
-},
-
-hitmonchan: {
-num: 107,
-name: "Hitmonchan",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76},
-abilities: {0: "No Ability"},
-weightkg: 50.2,
-},
-
-lickitung: {
-num: 108,
-name: "Lickitung",
-types: ["Fairy", "Poison"],
-gender: "F",
-baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 65.5,
-},
-
-koffing: {
-num: 109,
-name: "Koffing",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-weezing: {
-num: 110,
-name: "Weezing",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-weezinggalar: {
-num: 110,
-name: "Weezing-Galar",
-types: ["Fairy", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-rhyhorn: {
-num: 111,
-name: "Rhyhorn",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 85, def: 95, spa: 30, spd: 30, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 115,
-},
-
-rhydon: {
-num: 112,
-name: "Rhydon",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-chansey: {
-num: 113,
-name: "Chansey",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 34.6,
-canHatch: true,
-},
-
-tangela: {
-num: 114,
-name: "Tangela",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-kangaskhan: {
-num: 115,
-name: "Kangaskhan",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 80,
-},
-
-kangaskhanmega: {
-num: 115,
-name: "Kangaskhan-Mega",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 105, atk: 125, def: 100, spa: 60, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 100,
-},
-
-horsea: {
-num: 116,
-name: "Horsea",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 30, atk: 40, def: 70, spa: 70, spd: 25, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-seadra: {
-num: 117,
-name: "Seadra",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-goldeen: {
-num: 118,
-name: "Goldeen",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 45, atk: 67, def: 60, spa: 35, spd: 50, spe: 63},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-seaking: {
-num: 119,
-name: "Seaking",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 39,
-},
-
-staryu: {
-num: 120,
-name: "Staryu",
-types: ["Psychic", "Rock"],
-gender: "F",
-baseStats: {hp: 30, atk: 45, def: 55, spa: 70, spd: 55, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 34.5,
-},
-
-starmie: {
-num: 121,
-name: "Starmie",
-types: ["Psychic", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 80,
-},
-
-mrmime: {
-num: 122,
-name: "Mr. Mime",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 54.5,
-canHatch: true,
-},
-
-mrmimegalar: {
-num: 122,
-name: "Mr. Mime-Galar",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 65, spa: 90, spd: 90, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 56.8,
-canHatch: true,
-},
-
-scyther: {
-num: 123,
-name: "Scyther",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 56,
-},
-
-jynx: {
-num: 124,
-name: "Jynx",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 40.6,
-},
-
-electabuzz: {
-num: 125,
-name: "Electabuzz",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-magmar: {
-num: 126,
-name: "Magmar",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 44.5,
-},
-
-pinsir: {
-num: 127,
-name: "Pinsir",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-pinsirmega: {
-num: 127,
-name: "Pinsir-Mega",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 65, atk: 155, def: 120, spa: 65, spd: 90, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 59,
-},
-
-tauros: {
-num: 128,
-name: "Tauros",
-types: ["Fighting", "Ground"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 88.4,
-},
-
-taurospaldeacombat: {
-num: 128,
-name: "Tauros-Paldea-Combat",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 88.4,
-},
-
-taurospaldeablaze: {
-num: 128,
-name: "Tauros-Paldea-Blaze",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 88.4,
-},
-
-taurospaldeaaqua: {
-num: 128,
-name: "Tauros-Paldea-Aqua",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 105, spa: 30, spd: 70, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 88.4,
-},
-
-magikarp: {
-num: 129,
-name: "Magikarp",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 20, atk: 10, def: 55, spa: 15, spd: 20, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 10,
-},
-
-gyarados: {
-num: 130,
-name: "Gyarados",
-types: ["Dragon", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81},
-abilities: {0: "No Ability"},
-weightkg: 235,
-},
-
-gyaradosmega: {
-num: 130,
-name: "Gyarados-Mega",
-types: ["Dragon", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 155, def: 109, spa: 70, spd: 130, spe: 81},
-abilities: {0: "No Ability"},
-weightkg: 305,
-},
-
-lapras: {
-num: 131,
-name: "Lapras",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 220,
-},
-
-laprasgmax: {
-num: 131,
-name: "Lapras-Gmax",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-ditto: {
-num: 132,
-name: "Ditto",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-eevee: {
-num: 133,
-name: "Eevee",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 60, spa: 65, spd: 75, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-eeveestarter: {
-num: 133,
-name: "Eevee-Starter",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 60, spa: 65, spd: 75, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-eeveegmax: {
-num: 133,
-name: "Eevee-Gmax",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-vaporeon: {
-num: 134,
-name: "Vaporeon",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 29,
-},
-
-jolteon: {
-num: 135,
-name: "Jolteon",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 24.5,
-},
-
-flareon: {
-num: 136,
-name: "Flareon",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-porygon: {
-num: 137,
-name: "Porygon",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 36.5,
-},
-
-omanyte: {
-num: 138,
-name: "Omanyte",
-types: ["Bug", "Ghost"],
-gender: "F",
-baseStats: {hp: 35, atk: 40, def: 100, spa: 90, spd: 55, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-omastar: {
-num: 139,
-name: "Omastar",
-types: ["Bug", "Ghost"],
-gender: "F",
-baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-kabuto: {
-num: 140,
-name: "Kabuto",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 30, atk: 80, def: 90, spa: 55, spd: 45, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-kabutops: {
-num: 141,
-name: "Kabutops",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 40.5,
-},
-
-aerodactyl: {
-num: 142,
-name: "Aerodactyl",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 59,
-},
-
-aerodactylmega: {
-num: 142,
-name: "Aerodactyl-Mega",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 80, atk: 135, def: 85, spa: 70, spd: 95, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 79,
-},
-
-snorlax: {
-num: 143,
-name: "Snorlax",
-types: ["Dragon", "Normal"],
-gender: "F",
-baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 460,
-canHatch: true,
-},
-
-snorlaxgmax: {
-num: 143,
-name: "Snorlax-Gmax",
-types: ["Dragon", "Normal"],
-gender: "F",
-baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-articuno: {
-num: 144,
-name: "Articuno",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 55.4,
-},
-
-articunogalar: {
-num: 144,
-name: "Articuno-Galar",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 90, atk: 85, def: 85, spa: 125, spd: 100, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 50.9,
-},
-
-zapdos: {
-num: 145,
-name: "Zapdos",
-types: ["Electric", "Flying"],
-gender: "F",
-baseStats: {hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 52.6,
-},
-
-zapdosgalar: {
-num: 145,
-name: "Zapdos-Galar",
-types: ["Fighting", "Flying"],
-gender: "F",
-baseStats: {hp: 90, atk: 125, def: 90, spa: 85, spd: 90, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 58.2,
-},
-
-moltres: {
-num: 146,
-name: "Moltres",
-types: ["Fire", "Flying"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-moltresgalar: {
-num: 146,
-name: "Moltres-Galar",
-types: ["Dark", "Flying"],
-gender: "F",
-baseStats: {hp: 90, atk: 85, def: 90, spa: 100, spd: 125, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 66,
-},
-
-dratini: {
-num: 147,
-name: "Dratini",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 3.3,
-},
-
-dragonair: {
-num: 148,
-name: "Dragonair",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 16.5,
-},
-
-dragonite: {
-num: 149,
-name: "Dragonite",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 210,
-},
-
-mewtwo: {
-num: 150,
-name: "Mewtwo",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 86, atk: 90, def: 80, spa: 134, spd: 80, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 122,
-},
-
-mewtwomegax: {
-num: 150,
-name: "Mewtwo-Mega-X",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 106, atk: 190, def: 100, spa: 154, spd: 100, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 127,
-},
-
-mewtwomegay: {
-num: 150,
-name: "Mewtwo-Mega-Y",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 106, atk: 150, def: 70, spa: 194, spd: 120, spe: 140},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-mew: {
-num: 151,
-name: "Mew",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-chikorita: {
-num: 152,
-name: "Chikorita",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 45, atk: 49, def: 65, spa: 49, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 6.4,
-},
-
-bayleef: {
-num: 153,
-name: "Bayleef",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 62, def: 80, spa: 63, spd: 80, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 15.8,
-},
-
-meganium: {
-num: 154,
-name: "Meganium",
-types: ["Fairy", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-cyndaquil: {
-num: 155,
-name: "Cyndaquil",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 7.9,
-},
-
-quilava: {
-num: 156,
-name: "Quilava",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 19,
-},
-
-typhlosion: {
-num: 157,
-name: "Typhlosion",
-types: ["Electric", "Fire"],
-gender: "F",
-baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 79.5,
-},
-
-typhlosionhisui: {
-num: 157,
-name: "Typhlosion-Hisui",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 73, atk: 84, def: 78, spa: 119, spd: 85, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 69.8,
-},
-
-totodile: {
-num: 158,
-name: "Totodile",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 64, spa: 44, spd: 48, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-croconaw: {
-num: 159,
-name: "Croconaw",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 65, atk: 80, def: 80, spa: 59, spd: 63, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-feraligatr: {
-num: 160,
-name: "Feraligatr",
-types: ["Fire", "Water"],
-gender: "F",
-baseStats: {hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 88.8,
-},
-
-sentret: {
-num: 161,
-name: "Sentret",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 35, atk: 46, def: 34, spa: 35, spd: 45, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-furret: {
-num: 162,
-name: "Furret",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 90, atk: 85, def: 65, spa: 45, spd: 55, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 32.5,
-},
-
-hoothoot: {
-num: 163,
-name: "Hoothoot",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 21.2,
-},
-
-noctowl: {
-num: 164,
-name: "Noctowl",
-types: ["Flying", "Ghost"],
-gender: "F",
-baseStats: {hp: 100, atk: 50, def: 50, spa: 86, spd: 96, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 40.8,
-},
-
-ledyba: {
-num: 165,
-name: "Ledyba",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 40, atk: 60, def: 30, spa: 40, spd: 40, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 10.8,
-},
-
-ledian: {
-num: 166,
-name: "Ledian",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 105, def: 55, spa: 60, spd: 55, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 35.6,
-},
-
-spinarak: {
-num: 167,
-name: "Spinarak",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 40, atk: 60, def: 40, spa: 40, spd: 40, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-ariados: {
-num: 168,
-name: "Ariados",
-types: ["Bug", "Dark"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 80, spa: 60, spd: 75, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 33.5,
-},
-
-crobat: {
-num: 169,
-name: "Crobat",
-types: ["Flying", "Poison"],
-gender: "F",
-baseStats: {hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 75,
-},
-
-chinchou: {
-num: 170,
-name: "Chinchou",
-types: ["Electric", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-lanturn: {
-num: 171,
-name: "Lanturn",
-types: ["Electric", "Water"],
-gender: "F",
-baseStats: {hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 22.5,
-},
-
-pichu: {
-num: 172,
-name: "Pichu",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 2,
-canHatch: true,
-},
-
-pichuspikyeared: {
-num: 172,
-name: "Pichu-Spiky-eared",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 2,
-gen: 4,
-},
-
-cleffa: {
-num: 173,
-name: "Cleffa",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 50, atk: 25, def: 28, spa: 45, spd: 55, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 3,
-canHatch: true,
-},
-
-igglybuff: {
-num: 174,
-name: "Igglybuff",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 90, atk: 30, def: 15, spa: 40, spd: 20, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 1,
-canHatch: true,
-},
-
-togepi: {
-num: 175,
-name: "Togepi",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 35, atk: 20, def: 65, spa: 40, spd: 65, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-canHatch: true,
-},
-
-togetic: {
-num: 176,
-name: "Togetic",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 55, atk: 40, def: 85, spa: 80, spd: 105, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 3.2,
-},
-
-natu: {
-num: 177,
-name: "Natu",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 40, atk: 50, def: 45, spa: 70, spd: 45, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-xatu: {
-num: 178,
-name: "Xatu",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-mareep: {
-num: 179,
-name: "Mareep",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 40, def: 40, spa: 65, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 7.8,
-},
-
-flaaffy: {
-num: 180,
-name: "Flaaffy",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 70, atk: 55, def: 55, spa: 80, spd: 60, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 13.3,
-},
-
-ampharos: {
-num: 181,
-name: "Ampharos",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 61.5,
-},
-
-ampharosmega: {
-num: 181,
-name: "Ampharos-Mega",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 61.5,
-},
-
-bellossom: {
-num: 182,
-name: "Bellossom",
-types: ["Fire", "Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 5.8,
-},
-
-marill: {
-num: 183,
-name: "Marill",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 40, def: 50, spa: 20, spd: 50, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-canHatch: true,
-},
-
-azumarill: {
-num: 184,
-name: "Azumarill",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 105, atk: 55, def: 85, spa: 60, spd: 85, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 28.5,
-},
-
-sudowoodo: {
-num: 185,
-name: "Sudowoodo",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 75, atk: 105, def: 125, spa: 30, spd: 85, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 38,
-canHatch: true,
-},
-
-politoed: {
-num: 186,
-name: "Politoed",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 33.9,
-},
-
-hoppip: {
-num: 187,
-name: "Hoppip",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 35, atk: 35, def: 40, spa: 35, spd: 55, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-skiploom: {
-num: 188,
-name: "Skiploom",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 55, atk: 45, def: 50, spa: 45, spd: 65, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-jumpluff: {
-num: 189,
-name: "Jumpluff",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 3,
-},
-
-aipom: {
-num: 190,
-name: "Aipom",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-sunkern: {
-num: 191,
-name: "Sunkern",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-sunflora: {
-num: 192,
-name: "Sunflora",
-types: ["Fire", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 75, def: 65, spa: 105, spd: 85, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-yanma: {
-num: 193,
-name: "Yanma",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 38,
-},
-
-wooper: {
-num: 194,
-name: "Wooper",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-wooperpaldea: {
-num: 194,
-name: "Wooper-Paldea",
-types: ["Ground", "Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-quagsire: {
-num: 195,
-name: "Quagsire",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 75,
-},
-
-espeon: {
-num: 196,
-name: "Espeon",
-types: ["Normal", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 26.5,
-},
-
-umbreon: {
-num: 197,
-name: "Umbreon",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 27,
-},
-
-murkrow: {
-num: 198,
-name: "Murkrow",
-types: ["Dark", "Flying"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 42, spa: 85, spd: 42, spe: 91},
-abilities: {0: "No Ability"},
-weightkg: 2.1,
-},
-
-slowking: {
-num: 199,
-name: "Slowking",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 79.5,
-},
-
-slowkinggalar: {
-num: 199,
-name: "Slowking-Galar",
-types: ["Dark", "Poison"],
-gender: "F",
-baseStats: {hp: 95, atk: 65, def: 80, spa: 110, spd: 110, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 79.5,
-},
-
-misdreavus: {
-num: 200,
-name: "Misdreavus",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-unown: {
-num: 201,
-name: "Unown",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 55, atk: 80, def: 55, spa: 105, spd: 60, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-wobbuffet: {
-num: 202,
-name: "Wobbuffet",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 200, atk: 33, def: 65, spa: 33, spd: 66, spe: 33},
-abilities: {0: "No Ability"},
-weightkg: 28.5,
-canHatch: true,
-},
-
-girafarig: {
-num: 203,
-name: "Girafarig",
-types: ["Normal", "Psychic"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 41.5,
-},
-
-pineco: {
-num: 204,
-name: "Pineco",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 90, spa: 35, spd: 35, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 7.2,
-},
-
-forretress: {
-num: 205,
-name: "Forretress",
-types: ["Bug", "Ground"],
-gender: "F",
-baseStats: {hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 125.8,
-},
-
-dunsparce: {
-num: 206,
-name: "Dunsparce",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 14,
-},
-
-gligar: {
-num: 207,
-name: "Gligar",
-types: ["Flying", "Ground"],
-gender: "F",
-baseStats: {hp: 65, atk: 75, def: 105, spa: 35, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 64.8,
-},
-
-steelix: {
-num: 208,
-name: "Steelix",
-types: ["Ground", "Steel"],
-gender: "F",
-baseStats: {hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 400,
-},
-
-steelixmega: {
-num: 208,
-name: "Steelix-Mega",
-types: ["Ground", "Steel"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 230, spa: 55, spd: 95, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 740,
-},
-
-snubbull: {
-num: 209,
-name: "Snubbull",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 60, atk: 80, def: 50, spa: 40, spd: 40, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 7.8,
-},
-
-granbull: {
-num: 210,
-name: "Granbull",
-types: ["Fairy", "Fighting"],
-gender: "F",
-baseStats: {hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 48.7,
-},
-
-qwilfish: {
-num: 211,
-name: "Qwilfish",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 3.9,
-},
-
-qwilfishhisui: {
-num: 211,
-name: "Qwilfish-Hisui",
-types: ["Dark", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 3.9,
-},
-
-scizor: {
-num: 212,
-name: "Scizor",
-types: ["Bug", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 118,
-},
-
-scizormega: {
-num: 212,
-name: "Scizor-Mega",
-types: ["Bug", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 125,
-},
-
-shuckle: {
-num: 213,
-name: "Shuckle",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
-abilities: {0: "No Ability"},
-weightkg: 20.5,
-},
-
-heracross: {
-num: 214,
-name: "Heracross",
-types: ["Bug", "Fighting"],
-gender: "F",
-baseStats: {hp: 80, atk: 125, def: 75, spa: 40, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 54,
-},
-
-heracrossmega: {
-num: 214,
-name: "Heracross-Mega",
-types: ["Bug", "Fighting"],
-gender: "F",
-baseStats: {hp: 80, atk: 185, def: 115, spa: 40, spd: 105, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 62.5,
-},
-
-sneasel: {
-num: 215,
-name: "Sneasel",
-types: ["Dark", "Ice"],
-gender: "F",
-baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-sneaselhisui: {
-num: 215,
-name: "Sneasel-Hisui",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 27,
-},
-
-teddiursa: {
-num: 216,
-name: "Teddiursa",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 60, atk: 80, def: 50, spa: 50, spd: 50, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 8.8,
-},
-
-ursaring: {
-num: 217,
-name: "Ursaring",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 90, atk: 130, def: 75, spa: 75, spd: 75, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 125.8,
-},
-
-slugma: {
-num: 218,
-name: "Slugma",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 40, spa: 70, spd: 40, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-magcargo: {
-num: 219,
-name: "Magcargo",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 120, spa: 90, spd: 80, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-swinub: {
-num: 220,
-name: "Swinub",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 40, spa: 30, spd: 30, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-piloswine: {
-num: 221,
-name: "Piloswine",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 80, spa: 60, spd: 60, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 55.8,
-},
-
-corsola: {
-num: 222,
-name: "Corsola",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 68, atk: 55, def: 98, spa: 65, spd: 98, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-corsolagalar: {
-num: 222,
-name: "Corsola-Galar",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 100, spa: 65, spd: 100, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-remoraid: {
-num: 223,
-name: "Remoraid",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-octillery: {
-num: 224,
-name: "Octillery",
-types: ["Fighting", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 28.5,
-},
-
-delibird: {
-num: 225,
-name: "Delibird",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 65, spa: 75, spd: 55, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-mantine: {
-num: 226,
-name: "Mantine",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 85, atk: 40, def: 70, spa: 80, spd: 140, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 220,
-canHatch: true,
-},
-
-skarmory: {
-num: 227,
-name: "Skarmory",
-types: ["Flying", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 80, def: 140, spa: 40, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 50.5,
-},
-
-houndour: {
-num: 228,
-name: "Houndour",
-types: ["Dark", "Fire"],
-gender: "F",
-baseStats: {hp: 45, atk: 60, def: 30, spa: 80, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 10.8,
-},
-
-houndoom: {
-num: 229,
-name: "Houndoom",
-types: ["Dark", "Fire"],
-gender: "F",
-baseStats: {hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-houndoommega: {
-num: 229,
-name: "Houndoom-Mega",
-types: ["Dark", "Fire"],
-gender: "F",
-baseStats: {hp: 75, atk: 90, def: 90, spa: 140, spd: 90, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 49.5,
-},
-
-kingdra: {
-num: 230,
-name: "Kingdra",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 152,
-},
-
-phanpy: {
-num: 231,
-name: "Phanpy",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 90, atk: 60, def: 60, spa: 40, spd: 40, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 33.5,
-},
-
-donphan: {
-num: 232,
-name: "Donphan",
-types: ["Fighting", "Ground"],
-gender: "F",
-baseStats: {hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-porygon2: {
-num: 233,
-name: "Porygon2",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 85, atk: 80, def: 90, spa: 105, spd: 95, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 32.5,
-},
-
-stantler: {
-num: 234,
-name: "Stantler",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 73, atk: 105, def: 62, spa: 75, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 71.2,
-},
-
-smeargle: {
-num: 235,
-name: "Smeargle",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 50, def: 70, spa: 50, spd: 75, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 58,
-},
-
-tyrogue: {
-num: 236,
-name: "Tyrogue",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 35, atk: 35, def: 35, spa: 35, spd: 35, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 21,
-canHatch: true,
-},
-
-hitmontop: {
-num: 237,
-name: "Hitmontop",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 48,
-},
-
-smoochum: {
-num: 238,
-name: "Smoochum",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 15, spa: 85, spd: 65, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 6,
-canHatch: true,
-},
-
-elekid: {
-num: 239,
-name: "Elekid",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 23.5,
-canHatch: true,
-},
-
-magby: {
-num: 240,
-name: "Magby",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83},
-abilities: {0: "No Ability"},
-weightkg: 21.4,
-canHatch: true,
-},
-
-miltank: {
-num: 241,
-name: "Miltank",
-types: ["Normal", "Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 80, def: 105, spa: 40, spd: 70, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 75.5,
-},
-
-blissey: {
-num: 242,
-name: "Blissey",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 46.8,
-},
-
-raikou: {
-num: 243,
-name: "Raikou",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 90, atk: 85, def: 75, spa: 115, spd: 100, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 178,
-},
-
-entei: {
-num: 244,
-name: "Entei",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 115, atk: 115, def: 85, spa: 90, spd: 75, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 198,
-},
-
-suicune: {
-num: 245,
-name: "Suicune",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 100, atk: 75, def: 115, spa: 90, spd: 115, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 187,
-},
-
-larvitar: {
-num: 246,
-name: "Larvitar",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41},
-abilities: {0: "No Ability"},
-weightkg: 72,
-},
-
-pupitar: {
-num: 247,
-name: "Pupitar",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 84, def: 70, spa: 65, spd: 70, spe: 51},
-abilities: {0: "No Ability"},
-weightkg: 152,
-},
-
-tyranitar: {
-num: 248,
-name: "Tyranitar",
-types: ["Dark", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61},
-abilities: {0: "No Ability"},
-weightkg: 202,
-},
-
-tyranitarmega: {
-num: 248,
-name: "Tyranitar-Mega",
-types: ["Dark", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 164, def: 150, spa: 95, spd: 120, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 255,
-},
-
-lugia: {
-num: 249,
-name: "Lugia",
-types: ["Dragon", "Water"],
-gender: "F",
-baseStats: {hp: 106, atk: 80, def: 110, spa: 80, spd: 134, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 216,
-},
-
-hooh: {
-num: 250,
-name: "Ho-Oh",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 96, atk: 110, def: 80, spa: 100, spd: 134, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 199,
-},
-
-celebi: {
-num: 251,
-name: "Celebi",
-types: ["Fairy", "Grass"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-treecko: {
-num: 252,
-name: "Treecko",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 65, def: 35, spa: 45, spd: 55, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-grovyle: {
-num: 253,
-name: "Grovyle",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 45, spa: 65, spd: 65, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 21.6,
-},
-
-sceptile: {
-num: 254,
-name: "Sceptile",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 105, def: 65, spa: 85, spd: 85, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 52.2,
-},
-
-sceptilemega: {
-num: 254,
-name: "Sceptile-Mega",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 75, spa: 145, spd: 85, spe: 145},
-abilities: {0: "No Ability"},
-weightkg: 55.2,
-},
-
-torchic: {
-num: 255,
-name: "Torchic",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-combusken: {
-num: 256,
-name: "Combusken",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-blaziken: {
-num: 257,
-name: "Blaziken",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 52,
-},
-
-blazikenmega: {
-num: 257,
-name: "Blaziken-Mega",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 160, def: 80, spa: 130, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 52,
-},
-
-mudkip: {
-num: 258,
-name: "Mudkip",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 7.6,
-},
-
-marshtomp: {
-num: 259,
-name: "Marshtomp",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 70, spa: 60, spd: 70, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-swampert: {
-num: 260,
-name: "Swampert",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 81.9,
-},
-
-swampertmega: {
-num: 260,
-name: "Swampert-Mega",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 150, def: 110, spa: 95, spd: 110, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 102,
-},
-
-poochyena: {
-num: 261,
-name: "Poochyena",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 35, spa: 30, spd: 30, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 13.6,
-},
-
-mightyena: {
-num: 262,
-name: "Mightyena",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 75, atk: 95, def: 70, spa: 60, spd: 60, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 37,
-},
-
-zigzagoon: {
-num: 263,
-name: "Zigzagoon",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 17.5,
-},
-
-zigzagoongalar: {
-num: 263,
-name: "Zigzagoon-Galar",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 17.5,
-},
-
-linoone: {
-num: 264,
-name: "Linoone",
-types: ["Electric", "Ground"],
-gender: "F",
-baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 32.5,
-},
-
-linoonegalar: {
-num: 264,
-name: "Linoone-Galar",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 32.5,
-},
-
-wurmple: {
-num: 265,
-name: "Wurmple",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 45, atk: 45, def: 35, spa: 20, spd: 30, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 3.6,
-},
-
-silcoon: {
-num: 266,
-name: "Silcoon",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 10,
-},
-
-beautifly: {
-num: 267,
-name: "Beautifly",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 70, def: 60, spa: 105, spd: 60, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 28.4,
-},
-
-cascoon: {
-num: 268,
-name: "Cascoon",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-dustox: {
-num: 269,
-name: "Dustox",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 50, def: 80, spa: 60, spd: 105, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 31.6,
-},
-
-lotad: {
-num: 270,
-name: "Lotad",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 2.6,
-},
-
-lombre: {
-num: 271,
-name: "Lombre",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 50, spa: 60, spd: 70, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 32.5,
-},
-
-ludicolo: {
-num: 272,
-name: "Ludicolo",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-seedot: {
-num: 273,
-name: "Seedot",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-nuzleaf: {
-num: 274,
-name: "Nuzleaf",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-shiftry: {
-num: 275,
-name: "Shiftry",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 59.6,
-},
-
-taillow: {
-num: 276,
-name: "Taillow",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 2.3,
-},
-
-swellow: {
-num: 277,
-name: "Swellow",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 60, spa: 75, spd: 50, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 19.8,
-},
-
-wingull: {
-num: 278,
-name: "Wingull",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 30, spa: 55, spd: 30, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-pelipper: {
-num: 279,
-name: "Pelipper",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 100, spa: 95, spd: 70, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-ralts: {
-num: 280,
-name: "Ralts",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 6.6,
-},
-
-kirlia: {
-num: 281,
-name: "Kirlia",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 20.2,
-},
-
-gardevoir: {
-num: 282,
-name: "Gardevoir",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 48.4,
-},
-
-gardevoirmega: {
-num: 282,
-name: "Gardevoir-Mega",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 68, atk: 85, def: 65, spa: 165, spd: 135, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 48.4,
-},
-
-surskit: {
-num: 283,
-name: "Surskit",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 32, spa: 50, spd: 52, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 1.7,
-},
-
-masquerain: {
-num: 284,
-name: "Masquerain",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 60, def: 62, spa: 100, spd: 82, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 3.6,
-},
-
-shroomish: {
-num: 285,
-name: "Shroomish",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 40, def: 60, spa: 40, spd: 60, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 4.5,
-},
-
-breloom: {
-num: 286,
-name: "Breloom",
-types: ["Fighting", "Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 39.2,
-},
-
-slakoth: {
-num: 287,
-name: "Slakoth",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 60, spa: 35, spd: 35, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 24,
-},
-
-vigoroth: {
-num: 288,
-name: "Vigoroth",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 80, spa: 55, spd: 55, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 46.5,
-},
-
-slaking: {
-num: 289,
-name: "Slaking",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 110, atk: 130, def: 90, spa: 80, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 130.5,
-},
-
-nincada: {
-num: 290,
-name: "Nincada",
-types: ["Bug", "Ground"],
-gender: "F",
-baseStats: {hp: 31, atk: 45, def: 90, spa: 30, spd: 30, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-ninjask: {
-num: 291,
-name: "Ninjask",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-shedinja: {
-num: 292,
-name: "Shedinja",
-types: ["Bug", "Ghost"],
-gender: "F",
-baseStats: {hp: 1, atk: 95, def: 45, spa: 95, spd: 45, spe: 70},
-maxHP: 1,
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-},
-
-whismur: {
-num: 293,
-name: "Whismur",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28},
-abilities: {0: "No Ability"},
-weightkg: 16.3,
-},
-
-loudred: {
-num: 294,
-name: "Loudred",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48},
-abilities: {0: "No Ability"},
-weightkg: 40.5,
-},
-
-exploud: {
-num: 295,
-name: "Exploud",
-types: ["Poison", "Steel"],
-gender: "F",
-baseStats: {hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 84,
-},
-
-makuhita: {
-num: 296,
-name: "Makuhita",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 72, atk: 60, def: 30, spa: 20, spd: 30, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 86.4,
-},
-
-hariyama: {
-num: 297,
-name: "Hariyama",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 253.8,
-},
-
-azurill: {
-num: 298,
-name: "Azurill",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 40, def: 40, spa: 20, spd: 40, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 2,
-canHatch: true,
-},
-
-nosepass: {
-num: 299,
-name: "Nosepass",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 30, atk: 45, def: 135, spa: 45, spd: 90, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 97,
-},
-
-skitty: {
-num: 300,
-name: "Skitty",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 35, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-delcatty: {
-num: 301,
-name: "Delcatty",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 70, spa: 60, spd: 60, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 32.6,
-},
-
-sableye: {
-num: 302,
-name: "Sableye",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 125, spa: 85, spd: 115, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-sableyemega: {
-num: 302,
-name: "Sableye-Mega",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 125, spa: 85, spd: 115, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 161,
-},
-
-mawile: {
-num: 303,
-name: "Mawile",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 105, def: 125, spa: 55, spd: 95, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-mawilemega: {
-num: 303,
-name: "Mawile-Mega",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 105, def: 125, spa: 55, spd: 95, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 23.5,
-},
-
-aron: {
-num: 304,
-name: "Aron",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-lairon: {
-num: 305,
-name: "Lairon",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-aggron: {
-num: 306,
-name: "Aggron",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 360,
-},
-
-aggronmega: {
-num: 306,
-name: "Aggron-Mega",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 140, def: 230, spa: 60, spd: 80, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 395,
-},
-
-meditite: {
-num: 307,
-name: "Meditite",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 30, atk: 80, def: 55, spa: 40, spd: 55, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 11.2,
-},
-
-medicham: {
-num: 308,
-name: "Medicham",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 70, def: 80, spa: 70, spd: 75, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 31.5,
-},
-
-medichammega: {
-num: 308,
-name: "Medicham-Mega",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 100, def: 85, spa: 80, spd: 85, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 31.5,
-},
-
-electrike: {
-num: 309,
-name: "Electrike",
-types: ["Electric", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 40, spa: 65, spd: 40, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 15.2,
-},
-
-manectric: {
-num: 310,
-name: "Manectric",
-types: ["Electric", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 40.2,
-},
-
-manectricmega: {
-num: 310,
-name: "Manectric-Mega",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 70, atk: 75, def: 80, spa: 135, spd: 80, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 44,
-},
-
-plusle: {
-num: 311,
-name: "Plusle",
-types: ["Electric", "Fire"],
-gender: "F",
-baseStats: {hp: 65, atk: 50, def: 40, spa: 95, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 4.2,
-},
-
-minun: {
-num: 312,
-name: "Minun",
-types: ["Electric", "Water"],
-gender: "F",
-baseStats: {hp: 65, atk: 40, def: 55, spa: 75, spd: 95, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 4.2,
-},
-
-volbeat: {
-num: 313,
-name: "Volbeat",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 65, atk: 73, def: 75, spa: 47, spd: 85, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 17.7,
-},
-
-illumise: {
-num: 314,
-name: "Illumise",
-types: ["Bug", "Ice"],
-gender: "F",
-baseStats: {hp: 65, atk: 47, def: 75, spa: 73, spd: 85, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 17.7,
-},
-
-roselia: {
-num: 315,
-name: "Roselia",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 2,
-canHatch: true,
-},
-
-gulpin: {
-num: 316,
-name: "Gulpin",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 70, atk: 43, def: 53, spa: 43, spd: 53, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 10.3,
-},
-
-swalot: {
-num: 317,
-name: "Swalot",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 80,
-},
-
-carvanha: {
-num: 318,
-name: "Carvanha",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 45, atk: 90, def: 20, spa: 65, spd: 20, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 20.8,
-},
-
-sharpedo: {
-num: 319,
-name: "Sharpedo",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 88.8,
-},
-
-sharpedomega: {
-num: 319,
-name: "Sharpedo-Mega",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 140, def: 70, spa: 110, spd: 65, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 130.3,
-},
-
-wailmer: {
-num: 320,
-name: "Wailmer",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 130,
-},
-
-wailord: {
-num: 321,
-name: "Wailord",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 398,
-},
-
-numel: {
-num: 322,
-name: "Numel",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 24,
-},
-
-camerupt: {
-num: 323,
-name: "Camerupt",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 220,
-},
-
-cameruptmega: {
-num: 323,
-name: "Camerupt-Mega",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 70, atk: 120, def: 100, spa: 145, spd: 105, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 320.5,
-},
-
-torkoal: {
-num: 324,
-name: "Torkoal",
-types: ["Fire", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 140, spa: 85, spd: 70, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 80.4,
-},
-
-spoink: {
-num: 325,
-name: "Spoink",
-types: ["Dark", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 25, def: 35, spa: 70, spd: 80, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 30.6,
-},
-
-grumpig: {
-num: 326,
-name: "Grumpig",
-types: ["Dark", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 71.5,
-},
-
-spinda: {
-num: 327,
-name: "Spinda",
-types: ["Ground", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-trapinch: {
-num: 328,
-name: "Trapinch",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-vibrava: {
-num: 329,
-name: "Vibrava",
-types: ["Bug", "Dragon"],
-gender: "F",
-baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 15.3,
-},
-
-flygon: {
-num: 330,
-name: "Flygon",
-types: ["Bug", "Dragon"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 82,
-},
-
-cacnea: {
-num: 331,
-name: "Cacnea",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 50, atk: 85, def: 40, spa: 85, spd: 40, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 51.3,
-},
-
-cacturne: {
-num: 332,
-name: "Cacturne",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 77.4,
-},
-
-swablu: {
-num: 333,
-name: "Swablu",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 45, atk: 40, def: 60, spa: 40, spd: 75, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-},
-
-altaria: {
-num: 334,
-name: "Altaria",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 20.6,
-},
-
-altariamega: {
-num: 334,
-name: "Altaria-Mega",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 110, spa: 110, spd: 105, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 20.6,
-},
-
-zangoose: {
-num: 335,
-name: "Zangoose",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 40.3,
-},
-
-seviper: {
-num: 336,
-name: "Seviper",
-types: ["Poison", "Steel"],
-gender: "F",
-baseStats: {hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 52.5,
-},
-
-lunatone: {
-num: 337,
-name: "Lunatone",
-types: ["Psychic", "Rock"],
-gender: "F",
-baseStats: {hp: 90, atk: 55, def: 65, spa: 95, spd: 85, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 168,
-},
-
-solrock: {
-num: 338,
-name: "Solrock",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 90, atk: 95, def: 85, spa: 55, spd: 65, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 154,
-},
-
-barboach: {
-num: 339,
-name: "Barboach",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 50, atk: 47, def: 42, spa: 47, spd: 42, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 1.9,
-},
-
-whiscash: {
-num: 340,
-name: "Whiscash",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 110, atk: 77, def: 72, spa: 77, spd: 72, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 23.6,
-},
-
-corphish: {
-num: 341,
-name: "Corphish",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 43, atk: 80, def: 65, spa: 50, spd: 35, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-crawdaunt: {
-num: 342,
-name: "Crawdaunt",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 32.8,
-},
-
-baltoy: {
-num: 343,
-name: "Baltoy",
-types: ["Ground", "Psychic"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 55, spa: 40, spd: 70, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 21.5,
-},
-
-claydol: {
-num: 344,
-name: "Claydol",
-types: ["Ground", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 108,
-},
-
-lileep: {
-num: 345,
-name: "Lileep",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 66, atk: 41, def: 77, spa: 61, spd: 87, spe: 23},
-abilities: {0: "No Ability"},
-weightkg: 23.8,
-},
-
-cradily: {
-num: 346,
-name: "Cradily",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 60.4,
-},
-
-anorith: {
-num: 347,
-name: "Anorith",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 45, atk: 95, def: 50, spa: 40, spd: 50, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-armaldo: {
-num: 348,
-name: "Armaldo",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 68.2,
-},
-
-feebas: {
-num: 349,
-name: "Feebas",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 7.4,
-},
-
-milotic: {
-num: 350,
-name: "Milotic",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81},
-abilities: {0: "No Ability"},
-weightkg: 162,
-},
-
-castform: {
-num: 351,
-name: "Castform",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 90, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0.8,
-},
-
-castformsunny: {
-num: 351,
-name: "Castform-Sunny",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0.8,
-requiredAbility: "Forecast",
-battleOnly: "Castform",
-},
-
-castformrainy: {
-num: 351,
-name: "Castform-Rainy",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 80, spa: 70, spd: 80, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0.8,
-requiredAbility: "Forecast",
-battleOnly: "Castform",
-},
-
-castformsnowy: {
-num: 351,
-name: "Castform-Snowy",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 0.8,
-requiredAbility: "Forecast",
-battleOnly: "Castform",
-},
-
-kecleon: {
-num: 352,
-name: "Kecleon",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 60, atk: 90, def: 70, spa: 60, spd: 120, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 22,
-},
-
-shuppet: {
-num: 353,
-name: "Shuppet",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 44, atk: 75, def: 35, spa: 63, spd: 33, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 2.3,
-},
-
-banette: {
-num: 354,
-name: "Banette",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-banettemega: {
-num: 354,
-name: "Banette-Mega",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 64, atk: 165, def: 75, spa: 93, spd: 83, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-duskull: {
-num: 355,
-name: "Duskull",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 20, atk: 40, def: 90, spa: 30, spd: 90, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-dusclops: {
-num: 356,
-name: "Dusclops",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 40, atk: 70, def: 130, spa: 60, spd: 130, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 30.6,
-},
-
-tropius: {
-num: 357,
-name: "Tropius",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 99, atk: 68, def: 83, spa: 72, spd: 87, spe: 51},
-abilities: {0: "No Ability"},
-weightkg: 100,
-},
-
-chimecho: {
-num: 358,
-name: "Chimecho",
-types: ["Ghost", "Psychic"],
-gender: "F",
-baseStats: {hp: 75, atk: 50, def: 80, spa: 95, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 1,
-canHatch: true,
-},
-
-absol: {
-num: 359,
-name: "Absol",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 130, def: 60, spa: 75, spd: 60, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 47,
-},
-
-absolmega: {
-num: 359,
-name: "Absol-Mega",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 150, def: 60, spa: 115, spd: 60, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 49,
-},
-
-wynaut: {
-num: 360,
-name: "Wynaut",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 95, atk: 23, def: 48, spa: 23, spd: 48, spe: 23},
-abilities: {0: "No Ability"},
-weightkg: 14,
-canHatch: true,
-},
-
-snorunt: {
-num: 361,
-name: "Snorunt",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 16.8,
-},
-
-glalie: {
-num: 362,
-name: "Glalie",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 256.5,
-},
-
-glaliemega: {
-num: 362,
-name: "Glalie-Mega",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 80, spa: 120, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 350.2,
-},
-
-spheal: {
-num: 363,
-name: "Spheal",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 35, def: 50, spa: 60, spd: 50, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 39.5,
-},
-
-sealeo: {
-num: 364,
-name: "Sealeo",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 55, def: 70, spa: 80, spd: 70, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 87.6,
-},
-
-walrein: {
-num: 365,
-name: "Walrein",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 110, atk: 75, def: 90, spa: 100, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 150.6,
-},
-
-clamperl: {
-num: 366,
-name: "Clamperl",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 45, atk: 54, def: 125, spa: 114, spd: 115, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 52.5,
-},
-
-huntail: {
-num: 367,
-name: "Huntail",
-types: ["Fire", "Ice"],
-gender: "F",
-baseStats: {hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52},
-abilities: {0: "No Ability"},
-weightkg: 27,
-},
-
-gorebyss: {
-num: 368,
-name: "Gorebyss",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52},
-abilities: {0: "No Ability"},
-weightkg: 22.6,
-},
-
-relicanth: {
-num: 369,
-name: "Relicanth",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 90, def: 130, spa: 45, spd: 65, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 23.4,
-},
-
-luvdisc: {
-num: 370,
-name: "Luvdisc",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 8.7,
-},
-
-bagon: {
-num: 371,
-name: "Bagon",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 45, atk: 75, def: 60, spa: 40, spd: 30, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 42.1,
-},
-
-shelgon: {
-num: 372,
-name: "Shelgon",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 65, atk: 95, def: 100, spa: 60, spd: 50, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 110.5,
-},
-
-salamence: {
-num: 373,
-name: "Salamence",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 102.6,
-},
-
-salamencemega: {
-num: 373,
-name: "Salamence-Mega",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 95, atk: 145, def: 130, spa: 120, spd: 90, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 112.6,
-},
-
-beldum: {
-num: 374,
-name: "Beldum",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 95.2,
-},
-
-metang: {
-num: 375,
-name: "Metang",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 202.5,
-},
-
-metagross: {
-num: 376,
-name: "Metagross",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 550,
-},
-
-metagrossmega: {
-num: 376,
-name: "Metagross-Mega",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 145, def: 150, spa: 105, spd: 110, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 942.9,
-},
-
-regirock: {
-num: 377,
-name: "Regirock",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 200, spa: 50, spd: 100, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 230,
-},
-
-regice: {
-num: 378,
-name: "Regice",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 80, atk: 50, def: 100, spa: 100, spd: 200, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 175,
-},
-
-registeel: {
-num: 379,
-name: "Registeel",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 75, def: 150, spa: 75, spd: 150, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 205,
-},
-
-latias: {
-num: 380,
-name: "Latias",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-latiasmega: {
-num: 380,
-name: "Latias-Mega",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 120, spa: 140, spd: 150, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 52,
-},
-
-latios: {
-num: 381,
-name: "Latios",
-types: ["Dragon", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-latiosmega: {
-num: 381,
-name: "Latios-Mega",
-types: ["Dragon", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 70,
-},
-
-kyogre: {
-num: 382,
-name: "Kyogre",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 90, spa: 150, spd: 140, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 352,
-},
-
-kyogreprimal: {
-num: 382,
-name: "Kyogre-Primal",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 150, def: 90, spa: 180, spd: 160, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 430,
-},
-
-groudon: {
-num: 383,
-name: "Groudon",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 100, atk: 150, def: 140, spa: 100, spd: 90, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 950,
-},
-
-groudonprimal: {
-num: 383,
-name: "Groudon-Primal",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 100, atk: 180, def: 160, spa: 150, spd: 90, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 999.7,
-},
-
-rayquaza: {
-num: 384,
-name: "Rayquaza",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 206.5,
-},
-
-rayquazamega: {
-num: 384,
-name: "Rayquaza-Mega",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 105, atk: 180, def: 100, spa: 180, spd: 100, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 392,
-requiredMove: "Dragon Ascent",
-},
-
-jirachi: {
-num: 385,
-name: "Jirachi",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 1.1,
-},
-
-deoxys: {
-num: 386,
-name: "Deoxys",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 150, def: 50, spa: 150, spd: 50, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 60.8,
-},
-
-deoxysattack: {
-num: 386,
-name: "Deoxys-Attack",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 180, def: 20, spa: 180, spd: 20, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 60.8,
-},
-
-deoxysdefense: {
-num: 386,
-name: "Deoxys-Defense",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 70, def: 160, spa: 70, spd: 160, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 60.8,
-},
-
-deoxysspeed: {
-num: 386,
-name: "Deoxys-Speed",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 95, def: 90, spa: 95, spd: 90, spe: 180},
-abilities: {0: "No Ability"},
-weightkg: 60.8,
-},
-
-turtwig: {
-num: 387,
-name: "Turtwig",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31},
-abilities: {0: "No Ability"},
-weightkg: 10.2,
-},
-
-grotle: {
-num: 388,
-name: "Grotle",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 97,
-},
-
-torterra: {
-num: 389,
-name: "Torterra",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56},
-abilities: {0: "No Ability"},
-weightkg: 310,
-},
-
-chimchar: {
-num: 390,
-name: "Chimchar",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
-abilities: {0: "No Ability"},
-weightkg: 6.2,
-},
-
-monferno: {
-num: 391,
-name: "Monferno",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 64, atk: 78, def: 52, spa: 78, spd: 52, spe: 81},
-abilities: {0: "No Ability"},
-weightkg: 22,
-},
-
-infernape: {
-num: 392,
-name: "Infernape",
-types: ["Fighting", "Fire"],
-gender: "F",
-baseStats: {hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 55,
-},
-
-piplup: {
-num: 393,
-name: "Piplup",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 53, atk: 51, def: 53, spa: 61, spd: 56, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 5.2,
-},
-
-prinplup: {
-num: 394,
-name: "Prinplup",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 64, atk: 66, def: 68, spa: 81, spd: 76, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 23,
-},
-
-empoleon: {
-num: 395,
-name: "Empoleon",
-types: ["Steel", "Water"],
-gender: "F",
-baseStats: {hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 84.5,
-},
-
-starly: {
-num: 396,
-name: "Starly",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-staravia: {
-num: 397,
-name: "Staravia",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 15.5,
-},
-
-staraptor: {
-num: 398,
-name: "Staraptor",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 24.9,
-},
-
-bidoof: {
-num: 399,
-name: "Bidoof",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 59, atk: 45, def: 40, spa: 35, spd: 40, spe: 31},
-abilities: {0: "No Ability"},
-weightkg: 20,
-},
-
-bibarel: {
-num: 400,
-name: "Bibarel",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 85, atk: 90, def: 63, spa: 55, spd: 62, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 31.5,
-},
-
-kricketot: {
-num: 401,
-name: "Kricketot",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 37, atk: 25, def: 41, spa: 25, spd: 41, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 2.2,
-},
-
-kricketune: {
-num: 402,
-name: "Kricketune",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 80, atk: 90, def: 50, spa: 80, spd: 55, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 25.5,
-},
-
-shinx: {
-num: 403,
-name: "Shinx",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-luxio: {
-num: 404,
-name: "Luxio",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 30.5,
-},
-
-luxray: {
-num: 405,
-name: "Luxray",
-types: ["Dark", "Electric"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 42,
-},
-
-budew: {
-num: 406,
-name: "Budew",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-canHatch: true,
-},
-
-roserade: {
-num: 407,
-name: "Roserade",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 14.5,
-},
-
-cranidos: {
-num: 408,
-name: "Cranidos",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 67, atk: 125, def: 40, spa: 30, spd: 30, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 31.5,
-},
-
-rampardos: {
-num: 409,
-name: "Rampardos",
-types: ["Dragon", "Rock"],
-gender: "F",
-baseStats: {hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 102.5,
-},
-
-shieldon: {
-num: 410,
-name: "Shieldon",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 30, atk: 42, def: 118, spa: 42, spd: 88, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 57,
-},
-
-bastiodon: {
-num: 411,
-name: "Bastiodon",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 149.5,
-},
-
-burmy: {
-num: 412,
-name: "Burmy",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-wormadam: {
-num: 413,
-name: "Wormadam",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 59, def: 91, spa: 79, spd: 105, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-wormadamsandy: {
-num: 413,
-name: "Wormadam-Sandy",
-types: ["Bug", "Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 79, def: 105, spa: 59, spd: 91, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-wormadamtrash: {
-num: 413,
-name: "Wormadam-Trash",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 60, atk: 69, def: 101, spa: 69, spd: 95, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-mothim: {
-num: 414,
-name: "Mothim",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 70, atk: 96, def: 50, spa: 96, spd: 50, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 23.3,
-},
-
-combee: {
-num: 415,
-name: "Combee",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 30, atk: 30, def: 42, spa: 30, spd: 42, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-vespiquen: {
-num: 416,
-name: "Vespiquen",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 38.5,
-},
-
-pachirisu: {
-num: 417,
-name: "Pachirisu",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 70, spa: 50, spd: 95, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 3.9,
-},
-
-buizel: {
-num: 418,
-name: "Buizel",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 65, def: 35, spa: 60, spd: 30, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 29.5,
-},
-
-floatzel: {
-num: 419,
-name: "Floatzel",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 33.5,
-},
-
-cherubi: {
-num: 420,
-name: "Cherubi",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 45, atk: 35, def: 45, spa: 62, spd: 53, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 3.3,
-},
-
-cherrim: {
-num: 421,
-name: "Cherrim",
-types: ["Fire", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 9.3,
-},
-
-cherrimsunshine: {
-num: 421,
-name: "Cherrim-Sunshine",
-types: ["Fire", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 9.3,
-requiredAbility: "Flower Gift",
-battleOnly: "Cherrim",
-},
-
-shellos: {
-num: 422,
-name: "Shellos",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 76, atk: 48, def: 48, spa: 57, spd: 62, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 6.3,
-},
-
-gastrodon: {
-num: 423,
-name: "Gastrodon",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39},
-abilities: {0: "No Ability"},
-weightkg: 29.9,
-},
-
-ambipom: {
-num: 424,
-name: "Ambipom",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 20.3,
-},
-
-drifloon: {
-num: 425,
-name: "Drifloon",
-types: ["Flying", "Ghost"],
-gender: "F",
-baseStats: {hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-},
-
-drifblim: {
-num: 426,
-name: "Drifblim",
-types: ["Flying", "Ghost"],
-gender: "F",
-baseStats: {hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-buneary: {
-num: 427,
-name: "Buneary",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-lopunny: {
-num: 428,
-name: "Lopunny",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 33.3,
-},
-
-lopunnymega: {
-num: 428,
-name: "Lopunny-Mega",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 136, def: 94, spa: 54, spd: 96, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 28.3,
-},
-
-mismagius: {
-num: 429,
-name: "Mismagius",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 4.4,
-},
-
-honchkrow: {
-num: 430,
-name: "Honchkrow",
-types: ["Dark", "Flying"],
-gender: "F",
-baseStats: {hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 27.3,
-},
-
-glameow: {
-num: 431,
-name: "Glameow",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 49, atk: 55, def: 42, spa: 42, spd: 37, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 3.9,
-},
-
-purugly: {
-num: 432,
-name: "Purugly",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112},
-abilities: {0: "No Ability"},
-weightkg: 43.8,
-},
-
-chingling: {
-num: 433,
-name: "Chingling",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 50, spa: 65, spd: 50, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 0.6,
-canHatch: true,
-},
-
-stunky: {
-num: 434,
-name: "Stunky",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 63, atk: 63, def: 47, spa: 41, spd: 41, spe: 74},
-abilities: {0: "No Ability"},
-weightkg: 19.2,
-},
-
-skuntank: {
-num: 435,
-name: "Skuntank",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84},
-abilities: {0: "No Ability"},
-weightkg: 38,
-},
-
-bronzor: {
-num: 436,
-name: "Bronzor",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 57, atk: 24, def: 86, spa: 24, spd: 86, spe: 23},
-abilities: {0: "No Ability"},
-weightkg: 60.5,
-},
-
-bronzong: {
-num: 437,
-name: "Bronzong",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33},
-abilities: {0: "No Ability"},
-weightkg: 187,
-},
-
-bonsly: {
-num: 438,
-name: "Bonsly",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 80, def: 95, spa: 10, spd: 45, spe: 10},
-abilities: {0: "No Ability"},
-weightkg: 15,
-canHatch: true,
-},
-
-mimejr: {
-num: 439,
-name: "Mime Jr.",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 20, atk: 25, def: 45, spa: 70, spd: 90, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 13,
-canHatch: true,
-},
-
-happiny: {
-num: 440,
-name: "Happiny",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 5, def: 5, spa: 15, spd: 65, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 24.4,
-canHatch: true,
-},
-
-chatot: {
-num: 441,
-name: "Chatot",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 50, spa: 95, spd: 42, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 1.9,
-},
-
-spiritomb: {
-num: 442,
-name: "Spiritomb",
-types: ["Dark", "Ghost"],
-gender: "F",
-baseStats: {hp: 50, atk: 92, def: 108, spa: 92, spd: 108, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 108,
-},
-
-gible: {
-num: 443,
-name: "Gible",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 58, atk: 70, def: 45, spa: 40, spd: 45, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 20.5,
-},
-
-gabite: {
-num: 444,
-name: "Gabite",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 68, atk: 90, def: 65, spa: 50, spd: 55, spe: 82},
-abilities: {0: "No Ability"},
-weightkg: 56,
-},
-
-garchomp: {
-num: 445,
-name: "Garchomp",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102},
-abilities: {0: "No Ability"},
-weightkg: 95,
-},
-
-garchompmega: {
-num: 445,
-name: "Garchomp-Mega",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 108, atk: 170, def: 115, spa: 120, spd: 95, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 95,
-},
-
-munchlax: {
-num: 446,
-name: "Munchlax",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5},
-abilities: {0: "No Ability"},
-weightkg: 105,
-canHatch: true,
-},
-
-riolu: {
-num: 447,
-name: "Riolu",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 20.2,
-canHatch: true,
-},
-
-lucario: {
-num: 448,
-name: "Lucario",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 54,
-},
-
-lucariomega: {
-num: 448,
-name: "Lucario-Mega",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 145, def: 88, spa: 140, spd: 70, spe: 112},
-abilities: {0: "No Ability"},
-weightkg: 57.5,
-},
-
-hippopotas: {
-num: 449,
-name: "Hippopotas",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 68, atk: 72, def: 78, spa: 38, spd: 42, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 49.5,
-},
-
-hippowdon: {
-num: 450,
-name: "Hippowdon",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47},
-abilities: {0: "No Ability"},
-weightkg: 300,
-},
-
-skorupi: {
-num: 451,
-name: "Skorupi",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 50, def: 90, spa: 30, spd: 55, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-drapion: {
-num: 452,
-name: "Drapion",
-types: ["Bug", "Dark"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 61.5,
-},
-
-croagunk: {
-num: 453,
-name: "Croagunk",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 23,
-},
-
-toxicroak: {
-num: 454,
-name: "Toxicroak",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 44.4,
-},
-
-carnivine: {
-num: 455,
-name: "Carnivine",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 74, atk: 100, def: 72, spa: 90, spd: 72, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 27,
-},
-
-finneon: {
-num: 456,
-name: "Finneon",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 49, atk: 49, def: 56, spa: 49, spd: 61, spe: 66},
-abilities: {0: "No Ability"},
-weightkg: 7,
-},
-
-lumineon: {
-num: 457,
-name: "Lumineon",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91},
-abilities: {0: "No Ability"},
-weightkg: 24,
-},
-
-mantyke: {
-num: 458,
-name: "Mantyke",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 45, atk: 20, def: 50, spa: 60, spd: 120, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 65,
-canHatch: true,
-},
-
-snover: {
-num: 459,
-name: "Snover",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 60, atk: 62, def: 50, spa: 62, spd: 60, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 50.5,
-},
-
-abomasnow: {
-num: 460,
-name: "Abomasnow",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 135.5,
-},
-
-abomasnowmega: {
-num: 460,
-name: "Abomasnow-Mega",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 132, def: 105, spa: 132, spd: 105, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 185,
-},
-
-weavile: {
-num: 461,
-name: "Weavile",
-types: ["Dark", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 34,
-},
-
-magnezone: {
-num: 462,
-name: "Magnezone",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 180,
-},
-
-lickilicky: {
-num: 463,
-name: "Lickilicky",
-types: ["Fairy", "Poison"],
-gender: "F",
-baseStats: {hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 140,
-},
-
-rhyperior: {
-num: 464,
-name: "Rhyperior",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 282.8,
-},
-
-tangrowth: {
-num: 465,
-name: "Tangrowth",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 128.6,
-},
-
-electivire: {
-num: 466,
-name: "Electivire",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 85, spa: 75, spd: 85, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 138.6,
-},
-
-magmortar: {
-num: 467,
-name: "Magmortar",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 75, def: 85, spa: 125, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 68,
-},
-
-togekiss: {
-num: 468,
-name: "Togekiss",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 38,
-},
-
-yanmega: {
-num: 469,
-name: "Yanmega",
-types: ["Bug", "Dragon"],
-gender: "F",
-baseStats: {hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 51.5,
-},
-
-leafeon: {
-num: 470,
-name: "Leafeon",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 25.5,
-},
-
-glaceon: {
-num: 471,
-name: "Glaceon",
-types: ["Ice", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 25.9,
-},
-
-gliscor: {
-num: 472,
-name: "Gliscor",
-types: ["Flying", "Ground"],
-gender: "F",
-baseStats: {hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 42.5,
-},
-
-mamoswine: {
-num: 473,
-name: "Mamoswine",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 291,
-},
-
-porygonz: {
-num: 474,
-name: "Porygon-Z",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 34,
-},
-
-gallade: {
-num: 475,
-name: "Gallade",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 52,
-},
-
-gallademega: {
-num: 475,
-name: "Gallade-Mega",
-types: ["Fighting", "Psychic"],
-gender: "F",
-baseStats: {hp: 68, atk: 165, def: 95, spa: 65, spd: 115, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 56.4,
-},
-
-probopass: {
-num: 476,
-name: "Probopass",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 340,
-},
-
-dusknoir: {
-num: 477,
-name: "Dusknoir",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 106.6,
-},
-
-froslass: {
-num: 478,
-name: "Froslass",
-types: ["Ghost", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 26.6,
-},
-
-rotombulb: {
-num: 479,
-name: "Rotom-Bulb",
-types: ["Electric", "Ghost"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-rotomheat: {
-num: 479,
-name: "Rotom-Heat",
-types: ["Electric", "Fire"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-rotomwash: {
-num: 479,
-name: "Rotom-Wash",
-types: ["Electric", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-rotomfrost: {
-num: 479,
-name: "Rotom-Frost",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-rotomfan: {
-num: 479,
-name: "Rotom-Fan",
-types: ["Electric", "Flying"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-rotommow: {
-num: 479,
-name: "Rotom-Mow",
-types: ["Electric", "Grass"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-uxie: {
-num: 480,
-name: "Uxie",
-types: ["Electric", "Fairy"],
-gender: "F",
-baseStats: {hp: 75, atk: 75, def: 130, spa: 75, spd: 130, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-mesprit: {
-num: 481,
-name: "Mesprit",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 80, atk: 105, def: 105, spa: 105, spd: 105, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-azelf: {
-num: 482,
-name: "Azelf",
-types: ["Fairy", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-dialga: {
-num: 483,
-name: "Dialga",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 100, atk: 120, def: 120, spa: 150, spd: 100, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 683,
-},
-
-dialgaorigin: {
-num: 483,
-name: "Dialga-Origin",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 120, spa: 150, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 850,
-gen: 8,
-},
-
-palkia: {
-num: 484,
-name: "Palkia",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 90, atk: 120, def: 100, spa: 150, spd: 120, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 336,
-},
-
-palkiaorigin: {
-num: 484,
-name: "Palkia-Origin",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 100, spa: 150, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 660,
-gen: 8,
-},
-
-heatran: {
-num: 485,
-name: "Heatran",
-types: ["Fire", "Steel"],
-gender: "F",
-baseStats: {hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 430,
-},
-
-regigigas: {
-num: 486,
-name: "Regigigas",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 95, atk: 135, def: 100, spa: 80, spd: 100, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 420,
-},
-
-giratina: {
-num: 487,
-name: "Giratina",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 150, atk: 100, def: 120, spa: 100, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 750,
-},
-
-giratinaorigin: {
-num: 487,
-name: "Giratina-Origin",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 150, atk: 120, def: 100, spa: 120, spd: 100, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 650,
-},
-
-cresselia: {
-num: 488,
-name: "Cresselia",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 120, atk: 70, def: 120, spa: 75, spd: 130, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 85.6,
-},
-
-phione: {
-num: 489,
-name: "Phione",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 3.1,
-},
-
-manaphy: {
-num: 490,
-name: "Manaphy",
-types: ["Fairy", "Ice"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 1.4,
-},
-
-darkrai: {
-num: 491,
-name: "Darkrai",
-types: ["Dark", "Ghost"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 90, spa: 135, spd: 90, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 50.5,
-},
-
-shaymin: {
-num: 492,
-name: "Shaymin",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 2.1,
-},
-
-shayminsky: {
-num: 492,
-name: "Shaymin-Sky",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 100, atk: 103, def: 75, spa: 120, spd: 75, spe: 127},
-abilities: {0: "No Ability"},
-weightkg: 5.2,
-},
-
-arceus: {
-num: 493,
-name: "Arceus",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-},
-
-arceusbug: {
-num: 493,
-name: "Arceus-Bug",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Insect Plate", "Buginium Z"],
-},
-
-arceusdark: {
-num: 493,
-name: "Arceus-Dark",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Dread Plate", "Darkinium Z"],
-},
-
-arceusdragon: {
-num: 493,
-name: "Arceus-Dragon",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Draco Plate", "Dragonium Z"],
-},
-
-arceuselectric: {
-num: 493,
-name: "Arceus-Electric",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Zap Plate", "Electrium Z"],
-},
-
-arceusfairy: {
-num: 493,
-name: "Arceus-Fairy",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Pixie Plate", "Fairium Z"],
-gen: 6,
-},
-
-arceusfighting: {
-num: 493,
-name: "Arceus-Fighting",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Fist Plate", "Fightinium Z"],
-},
-
-arceusfire: {
-num: 493,
-name: "Arceus-Fire",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Flame Plate", "Firium Z"],
-},
-
-arceusflying: {
-num: 493,
-name: "Arceus-Flying",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Sky Plate", "Flyinium Z"],
-},
-
-arceusghost: {
-num: 493,
-name: "Arceus-Ghost",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Spooky Plate", "Ghostium Z"],
-},
-
-arceusgrass: {
-num: 493,
-name: "Arceus-Grass",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Meadow Plate", "Grassium Z"],
-},
-
-arceusground: {
-num: 493,
-name: "Arceus-Ground",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Earth Plate", "Groundium Z"],
-},
-
-arceusice: {
-num: 493,
-name: "Arceus-Ice",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Icicle Plate", "Icium Z"],
-},
-
-arceuspoison: {
-num: 493,
-name: "Arceus-Poison",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Toxic Plate", "Poisonium Z"],
-},
-
-arceuspsychic: {
-num: 493,
-name: "Arceus-Psychic",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Mind Plate", "Psychium Z"],
-},
-
-arceusrock: {
-num: 493,
-name: "Arceus-Rock",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Stone Plate", "Rockium Z"],
-},
-
-arceussteel: {
-num: 493,
-name: "Arceus-Steel",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Iron Plate", "Steelium Z"],
-},
-
-arceuswater: {
-num: 493,
-name: "Arceus-Water",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 320,
-requiredItems: ["Splash Plate", "Waterium Z"],
-},
-
-victini: {
-num: 494,
-name: "Victini",
-types: ["Fire", "Psychic"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-snivy: {
-num: 495,
-name: "Snivy",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63},
-abilities: {0: "No Ability"},
-weightkg: 8.1,
-},
-
-servine: {
-num: 496,
-name: "Servine",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-serperior: {
-num: 497,
-name: "Serperior",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113},
-abilities: {0: "No Ability"},
-weightkg: 63,
-},
-
-tepig: {
-num: 498,
-name: "Tepig",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 65, atk: 63, def: 45, spa: 45, spd: 45, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 9.9,
-},
-
-pignite: {
-num: 499,
-name: "Pignite",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 90, atk: 93, def: 55, spa: 70, spd: 55, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 55.5,
-},
-
-emboar: {
-num: 500,
-name: "Emboar",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 110, atk: 123, def: 65, spa: 100, spd: 65, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 150,
-},
-
-oshawott: {
-num: 501,
-name: "Oshawott",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 45, spa: 63, spd: 45, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 5.9,
-},
-
-dewott: {
-num: 502,
-name: "Dewott",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 75, def: 60, spa: 83, spd: 60, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 24.5,
-},
-
-samurott: {
-num: 503,
-name: "Samurott",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 100, def: 85, spa: 108, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 94.6,
-},
-
-samurotthisui: {
-num: 503,
-name: "Samurott-Hisui",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 108, def: 80, spa: 100, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 58.2,
-},
-
-patrat: {
-num: 504,
-name: "Patrat",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 45, atk: 55, def: 39, spa: 35, spd: 39, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 11.6,
-},
-
-watchog: {
-num: 505,
-name: "Watchog",
-types: ["Ground", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 90, def: 70, spa: 60, spd: 70, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 27,
-},
-
-lillipup: {
-num: 506,
-name: "Lillipup",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 45, atk: 60, def: 45, spa: 25, spd: 45, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 4.1,
-},
-
-herdier: {
-num: 507,
-name: "Herdier",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 80, def: 65, spa: 35, spd: 65, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 14.7,
-},
-
-stoutland: {
-num: 508,
-name: "Stoutland",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 110, def: 90, spa: 45, spd: 90, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 61,
-},
-
-purrloin: {
-num: 509,
-name: "Purrloin",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66},
-abilities: {0: "No Ability"},
-weightkg: 10.1,
-},
-
-liepard: {
-num: 510,
-name: "Liepard",
-types: ["Dark", "Electric"],
-gender: "F",
-baseStats: {hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106},
-abilities: {0: "No Ability"},
-weightkg: 37.5,
-},
-
-pansage: {
-num: 511,
-name: "Pansage",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-simisage: {
-num: 512,
-name: "Simisage",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 30.5,
-},
-
-pansear: {
-num: 513,
-name: "Pansear",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-simisear: {
-num: 514,
-name: "Simisear",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-panpour: {
-num: 515,
-name: "Panpour",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 13.5,
-},
-
-simipour: {
-num: 516,
-name: "Simipour",
-types: ["Normal", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 29,
-},
-
-munna: {
-num: 517,
-name: "Munna",
-types: ["Ghost", "Psychic"],
-gender: "F",
-baseStats: {hp: 76, atk: 25, def: 45, spa: 67, spd: 55, spe: 24},
-abilities: {0: "No Ability"},
-weightkg: 23.3,
-},
-
-musharna: {
-num: 518,
-name: "Musharna",
-types: ["Ghost", "Psychic"],
-gender: "F",
-baseStats: {hp: 116, atk: 55, def: 85, spa: 107, spd: 95, spe: 29},
-abilities: {0: "No Ability"},
-weightkg: 60.5,
-},
-
-pidove: {
-num: 519,
-name: "Pidove",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 55, def: 50, spa: 36, spd: 30, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 2.1,
-},
-
-tranquill: {
-num: 520,
-name: "Tranquill",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 62, atk: 77, def: 62, spa: 50, spd: 42, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-unfezant: {
-num: 521,
-name: "Unfezant",
-types: ["Flying", "Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 115, def: 80, spa: 65, spd: 55, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 29,
-},
-
-blitzle: {
-num: 522,
-name: "Blitzle",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 45, atk: 60, def: 32, spa: 50, spd: 32, spe: 76},
-abilities: {0: "No Ability"},
-weightkg: 29.8,
-},
-
-zebstrika: {
-num: 523,
-name: "Zebstrika",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 75, atk: 100, def: 63, spa: 80, spd: 63, spe: 116},
-abilities: {0: "No Ability"},
-weightkg: 79.5,
-},
-
-roggenrola: {
-num: 524,
-name: "Roggenrola",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 55, atk: 75, def: 85, spa: 25, spd: 25, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-boldore: {
-num: 525,
-name: "Boldore",
-types: ["Poison", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 105, def: 105, spa: 50, spd: 40, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 102,
-},
-
-gigalith: {
-num: 526,
-name: "Gigalith",
-types: ["Poison", "Rock"],
-gender: "F",
-baseStats: {hp: 85, atk: 135, def: 130, spa: 60, spd: 80, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 260,
-},
-
-woobat: {
-num: 527,
-name: "Woobat",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 45, def: 43, spa: 55, spd: 43, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 2.1,
-},
-
-swoobat: {
-num: 528,
-name: "Swoobat",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 67, atk: 57, def: 55, spa: 80, spd: 56, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-drilbur: {
-num: 529,
-name: "Drilbur",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 85, def: 40, spa: 30, spd: 45, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-excadrill: {
-num: 530,
-name: "Excadrill",
-types: ["Ground", "Steel"],
-gender: "F",
-baseStats: {hp: 110, atk: 135, def: 60, spa: 50, spd: 65, spe: 88},
-abilities: {0: "No Ability"},
-weightkg: 40.4,
-},
-
-audino: {
-num: 531,
-name: "Audino",
-types: ["Fairy", "Poison"],
-gender: "F",
-baseStats: {hp: 103, atk: 60, def: 86, spa: 60, spd: 86, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 31,
-},
-
-audinomega: {
-num: 531,
-name: "Audino-Mega",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 103, atk: 60, def: 126, spa: 80, spd: 126, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 32,
-},
-
-timburr: {
-num: 532,
-name: "Timburr",
-types: ["Fighting", "Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 55, spa: 25, spd: 35, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-gurdurr: {
-num: 533,
-name: "Gurdurr",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 85, atk: 105, def: 85, spa: 40, spd: 50, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-conkeldurr: {
-num: 534,
-name: "Conkeldurr",
-types: ["Fighting", "Rock"],
-gender: "F",
-baseStats: {hp: 105, atk: 140, def: 95, spa: 55, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 87,
-},
-
-tympole: {
-num: 535,
-name: "Tympole",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 40, spa: 50, spd: 40, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 4.5,
-},
-
-palpitoad: {
-num: 536,
-name: "Palpitoad",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 65, def: 55, spa: 65, spd: 55, spe: 69},
-abilities: {0: "No Ability"},
-weightkg: 17,
-},
-
-seismitoad: {
-num: 537,
-name: "Seismitoad",
-types: ["Ground", "Water"],
-gender: "F",
-baseStats: {hp: 105, atk: 95, def: 75, spa: 85, spd: 75, spe: 74},
-abilities: {0: "No Ability"},
-weightkg: 62,
-},
-
-throh: {
-num: 538,
-name: "Throh",
-types: ["Fighting", "Rock"],
-gender: "F",
-baseStats: {hp: 120, atk: 100, def: 85, spa: 30, spd: 85, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 55.5,
-},
-
-sawk: {
-num: 539,
-name: "Sawk",
-types: ["Fighting", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 75, spa: 30, spd: 75, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 51,
-},
-
-sewaddle: {
-num: 540,
-name: "Sewaddle",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 45, atk: 53, def: 70, spa: 40, spd: 60, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-swadloon: {
-num: 541,
-name: "Swadloon",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 7.3,
-},
-
-leavanny: {
-num: 542,
-name: "Leavanny",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 103, def: 80, spa: 70, spd: 80, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 20.5,
-},
-
-venipede: {
-num: 543,
-name: "Venipede",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57},
-abilities: {0: "No Ability"},
-weightkg: 5.3,
-},
-
-whirlipede: {
-num: 544,
-name: "Whirlipede",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47},
-abilities: {0: "No Ability"},
-weightkg: 58.5,
-},
-
-scolipede: {
-num: 545,
-name: "Scolipede",
-types: ["Bug", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112},
-abilities: {0: "No Ability"},
-weightkg: 200.5,
-},
-
-cottonee: {
-num: 546,
-name: "Cottonee",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 27, def: 60, spa: 37, spd: 50, spe: 66},
-abilities: {0: "No Ability"},
-weightkg: 0.6,
-},
-
-whimsicott: {
-num: 547,
-name: "Whimsicott",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 67, def: 85, spa: 77, spd: 75, spe: 116},
-abilities: {0: "No Ability"},
-weightkg: 6.6,
-},
-
-petilil: {
-num: 548,
-name: "Petilil",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 6.6,
-},
-
-lilligant: {
-num: 549,
-name: "Lilligant",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 16.3,
-},
-
-lilliganthisui: {
-num: 549,
-name: "Lilligant-Hisui",
-types: ["Fighting", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 105, def: 75, spa: 50, spd: 75, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 19.2,
-},
-
-basculin: {
-num: 550,
-name: "Basculin",
-types: ["Fire", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-basculinbluestriped: {
-num: 550,
-name: "Basculin-Blue-Striped",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-basculinwhitestriped: {
-num: 550,
-name: "Basculin-White-Striped",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
-abilities: {0: "No Ability"},
-weightkg: 18,
-gen: 8,
-},
-
-sandile: {
-num: 551,
-name: "Sandile",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 50, atk: 72, def: 35, spa: 35, spd: 35, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 15.2,
-},
-
-krokorok: {
-num: 552,
-name: "Krokorok",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 82, def: 45, spa: 45, spd: 45, spe: 74},
-abilities: {0: "No Ability"},
-weightkg: 33.4,
-},
-
-krookodile: {
-num: 553,
-name: "Krookodile",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 95, atk: 117, def: 80, spa: 65, spd: 70, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 96.3,
-},
-
-darumaka: {
-num: 554,
-name: "Darumaka",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 37.5,
-},
-
-darumakagalar: {
-num: 554,
-name: "Darumaka-Galar",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-darmanitan: {
-num: 555,
-name: "Darmanitan",
-types: ["Fire", "Psychic"],
-gender: "F",
-baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 92.9,
-},
-
-darmanitanzen: {
-num: 555,
-name: "Darmanitan-Zen",
-types: ["Fire", "Psychic"],
-gender: "F",
-baseStats: {hp: 105, atk: 30, def: 105, spa: 140, spd: 105, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 92.9,
-requiredAbility: "Zen Mode",
-battleOnly: "Darmanitan",
-},
-
-darmanitangalar: {
-num: 555,
-name: "Darmanitan-Galar",
-types: ["Fire", "Ice"],
-gender: "F",
-baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-darmanitangalarzen: {
-num: 555,
-name: "Darmanitan-Galar-Zen",
-types: ["Fire", "Ice"],
-gender: "F",
-baseStats: {hp: 105, atk: 160, def: 55, spa: 30, spd: 55, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 120,
-requiredAbility: "Zen Mode",
-battleOnly: "Darmanitan-Galar",
-},
-
-maractus: {
-num: 556,
-name: "Maractus",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 86, def: 67, spa: 106, spd: 67, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-dwebble: {
-num: 557,
-name: "Dwebble",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 14.5,
-},
-
-crustle: {
-num: 558,
-name: "Crustle",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 105, def: 125, spa: 65, spd: 75, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 200,
-},
-
-scraggy: {
-num: 559,
-name: "Scraggy",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48},
-abilities: {0: "No Ability"},
-weightkg: 11.8,
-},
-
-scrafty: {
-num: 560,
-name: "Scrafty",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-sigilyph: {
-num: 561,
-name: "Sigilyph",
-types: ["Flying", "Psychic"],
-gender: "F",
-baseStats: {hp: 72, atk: 58, def: 80, spa: 103, spd: 80, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 14,
-},
-
-yamask: {
-num: 562,
-name: "Yamask",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-yamaskgalar: {
-num: 562,
-name: "Yamask-Galar",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 38, atk: 55, def: 85, spa: 30, spd: 65, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-cofagrigus: {
-num: 563,
-name: "Cofagrigus",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 58, atk: 50, def: 145, spa: 95, spd: 105, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 76.5,
-},
-
-tirtouga: {
-num: 564,
-name: "Tirtouga",
-types: ["Ice", "Rock"],
-gender: "F",
-baseStats: {hp: 54, atk: 78, def: 103, spa: 53, spd: 45, spe: 22},
-abilities: {0: "No Ability"},
-weightkg: 16.5,
-},
-
-carracosta: {
-num: 565,
-name: "Carracosta",
-types: ["Ice", "Rock"],
-gender: "F",
-baseStats: {hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 81,
-},
-
-archen: {
-num: 566,
-name: "Archen",
-types: ["Flying", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 90, def: 45, spa: 60, spd: 45, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-archeops: {
-num: 567,
-name: "Archeops",
-types: ["Flying", "Rock"],
-gender: "F",
-baseStats: {hp: 65, atk: 125, def: 65, spa: 85, spd: 65, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 32,
-},
-
-trubbish: {
-num: 568,
-name: "Trubbish",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 62, spa: 40, spd: 62, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 31,
-},
-
-garbodor: {
-num: 569,
-name: "Garbodor",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 107.3,
-},
-
-garbodorgmax: {
-num: 569,
-name: "Garbodor-Gmax",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-zorua: {
-num: 570,
-name: "Zorua",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 40, atk: 65, def: 40, spa: 80, spd: 40, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-zoruahisui: {
-num: 570,
-name: "Zorua-Hisui",
-types: ["Ghost", "Normal"],
-gender: "F",
-baseStats: {hp: 35, atk: 60, def: 40, spa: 85, spd: 40, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-zoroark: {
-num: 571,
-name: "Zoroark",
-types: ["Dark", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 81.1,
-},
-
-zoroarkhisui: {
-num: 571,
-name: "Zoroark-Hisui",
-types: ["Ghost", "Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 90, def: 60, spa: 135, spd: 60, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 73,
-},
-
-minccino: {
-num: 572,
-name: "Minccino",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 55, atk: 50, def: 40, spa: 40, spd: 40, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 5.8,
-},
-
-cinccino: {
-num: 573,
-name: "Cinccino",
-types: ["Fairy", "Fighting"],
-gender: "F",
-baseStats: {hp: 75, atk: 95, def: 60, spa: 65, spd: 60, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-gothita: {
-num: 574,
-name: "Gothita",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 50, spa: 55, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 5.8,
-},
-
-gothorita: {
-num: 575,
-name: "Gothorita",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 45, def: 70, spa: 75, spd: 85, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-gothitelle: {
-num: 576,
-name: "Gothitelle",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 70, atk: 55, def: 95, spa: 95, spd: 110, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 44,
-},
-
-solosis: {
-num: 577,
-name: "Solosis",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-duosion: {
-num: 578,
-name: "Duosion",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-reuniclus: {
-num: 579,
-name: "Reuniclus",
-types: ["Poison", "Psychic"],
-gender: "F",
-baseStats: {hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 20.1,
-},
-
-ducklett: {
-num: 580,
-name: "Ducklett",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 62, atk: 44, def: 50, spa: 44, spd: 50, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-swanna: {
-num: 581,
-name: "Swanna",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 87, def: 63, spa: 87, spd: 63, spe: 98},
-abilities: {0: "No Ability"},
-weightkg: 24.2,
-},
-
-vanillite: {
-num: 582,
-name: "Vanillite",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 36, atk: 50, def: 50, spa: 65, spd: 60, spe: 44},
-abilities: {0: "No Ability"},
-weightkg: 5.7,
-},
-
-vanillish: {
-num: 583,
-name: "Vanillish",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 51, atk: 65, def: 65, spa: 80, spd: 75, spe: 59},
-abilities: {0: "No Ability"},
-weightkg: 41,
-},
-
-vanilluxe: {
-num: 584,
-name: "Vanilluxe",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 71, atk: 95, def: 85, spa: 110, spd: 95, spe: 79},
-abilities: {0: "No Ability"},
-weightkg: 57.5,
-},
-
-deerling: {
-num: 585,
-name: "Deerling",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 50, spa: 40, spd: 50, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-sawsbuck: {
-num: 586,
-name: "Sawsbuck",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 70, spa: 60, spd: 70, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 92.5,
-},
-
-emolga: {
-num: 587,
-name: "Emolga",
-types: ["Electric", "Ground"],
-gender: "F",
-baseStats: {hp: 55, atk: 75, def: 60, spa: 75, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-karrablast: {
-num: 588,
-name: "Karrablast",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 5.9,
-},
-
-escavalier: {
-num: 589,
-name: "Escavalier",
-types: ["Bug", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-foongus: {
-num: 590,
-name: "Foongus",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-amoonguss: {
-num: 591,
-name: "Amoonguss",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-frillish: {
-num: 592,
-name: "Frillish",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 40, def: 50, spa: 65, spd: 85, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-jellicent: {
-num: 593,
-name: "Jellicent",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 60, def: 70, spa: 85, spd: 105, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 135,
-},
-
-alomomola: {
-num: 594,
-name: "Alomomola",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 165, atk: 85, def: 85, spa: 60, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 31.6,
-},
-
-joltik: {
-num: 595,
-name: "Joltik",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 50, atk: 47, def: 50, spa: 57, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 0.6,
-},
-
-galvantula: {
-num: 596,
-name: "Galvantula",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 70, atk: 77, def: 60, spa: 97, spd: 60, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 14.3,
-},
-
-ferroseed: {
-num: 597,
-name: "Ferroseed",
-types: ["Grass", "Steel"],
-gender: "F",
-baseStats: {hp: 44, atk: 50, def: 91, spa: 24, spd: 86, spe: 10},
-abilities: {0: "No Ability"},
-weightkg: 18.8,
-},
-
-ferrothorn: {
-num: 598,
-name: "Ferrothorn",
-types: ["Grass", "Steel"],
-gender: "F",
-baseStats: {hp: 74, atk: 94, def: 131, spa: 54, spd: 116, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 110,
-},
-
-klink: {
-num: 599,
-name: "Klink",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 40, atk: 55, def: 70, spa: 45, spd: 60, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 21,
-},
-
-klang: {
-num: 600,
-name: "Klang",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 80, def: 95, spa: 70, spd: 85, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 51,
-},
-
-klinklang: {
-num: 601,
-name: "Klinklang",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 100, def: 115, spa: 70, spd: 85, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 81,
-},
-
-tynamo: {
-num: 602,
-name: "Tynamo",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 35, atk: 55, def: 40, spa: 45, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-eelektrik: {
-num: 603,
-name: "Eelektrik",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 85, def: 70, spa: 75, spd: 70, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 22,
-},
-
-eelektross: {
-num: 604,
-name: "Eelektross",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 85, atk: 115, def: 80, spa: 105, spd: 80, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 80.5,
-},
-
-elgyem: {
-num: 605,
-name: "Elgyem",
-types: ["Psychic", "Rock"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 55, spa: 85, spd: 55, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-beheeyem: {
-num: 606,
-name: "Beheeyem",
-types: ["Psychic", "Rock"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 80, spa: 130, spd: 95, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 34.5,
-},
-
-litwick: {
-num: 607,
-name: "Litwick",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 3.1,
-},
-
-lampent: {
-num: 608,
-name: "Lampent",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-chandelure: {
-num: 609,
-name: "Chandelure",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 34.3,
-},
-
-axew: {
-num: 610,
-name: "Axew",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-fraxure: {
-num: 611,
-name: "Fraxure",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 36,
-},
-
-haxorus: {
-num: 612,
-name: "Haxorus",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 105.5,
-},
-
-cubchoo: {
-num: 613,
-name: "Cubchoo",
-types: ["Ice", "Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 70, def: 40, spa: 60, spd: 40, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-beartic: {
-num: 614,
-name: "Beartic",
-types: ["Ice", "Normal"],
-gender: "F",
-baseStats: {hp: 95, atk: 130, def: 80, spa: 70, spd: 80, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 260,
-},
-
-cryogonal: {
-num: 615,
-name: "Cryogonal",
-types: ["Ice", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 50, def: 50, spa: 95, spd: 135, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 148,
-},
-
-shelmet: {
-num: 616,
-name: "Shelmet",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 50, atk: 40, def: 85, spa: 40, spd: 65, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 7.7,
-},
-
-accelgor: {
-num: 617,
-name: "Accelgor",
-types: ["Bug", "Ghost"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 40, spa: 100, spd: 60, spe: 145},
-abilities: {0: "No Ability"},
-weightkg: 25.3,
-},
-
-stunfisk: {
-num: 618,
-name: "Stunfisk",
-types: ["Electric", "Ground"],
-gender: "F",
-baseStats: {hp: 109, atk: 66, def: 84, spa: 81, spd: 99, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-stunfiskgalar: {
-num: 618,
-name: "Stunfisk-Galar",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 109, atk: 81, def: 99, spa: 66, spd: 84, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 20.5,
-},
-
-mienfoo: {
-num: 619,
-name: "Mienfoo",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 45, atk: 85, def: 50, spa: 55, spd: 50, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 20,
-},
-
-mienshao: {
-num: 620,
-name: "Mienshao",
-types: ["Fighting", "Ghost"],
-gender: "F",
-baseStats: {hp: 65, atk: 125, def: 60, spa: 95, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 35.5,
-},
-
-druddigon: {
-num: 621,
-name: "Druddigon",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 77, atk: 120, def: 90, spa: 60, spd: 90, spe: 48},
-abilities: {0: "No Ability"},
-weightkg: 139,
-},
-
-golett: {
-num: 622,
-name: "Golett",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 92,
-},
-
-golurk: {
-num: 623,
-name: "Golurk",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 330,
-},
-
-pawniard: {
-num: 624,
-name: "Pawniard",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 10.2,
-},
-
-bisharp: {
-num: 625,
-name: "Bisharp",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 70,
-},
-
-bouffalant: {
-num: 626,
-name: "Bouffalant",
-types: ["Normal", "Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 110, def: 95, spa: 40, spd: 95, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 94.6,
-},
-
-rufflet: {
-num: 627,
-name: "Rufflet",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 83, def: 50, spa: 37, spd: 50, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-braviary: {
-num: 628,
-name: "Braviary",
-types: ["Flying", "Ice"],
-gender: "F",
-baseStats: {hp: 100, atk: 123, def: 75, spa: 57, spd: 75, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 41,
-},
-
-braviaryhisui: {
-num: 628,
-name: "Braviary-Hisui",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 110, atk: 83, def: 70, spa: 112, spd: 70, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 43.4,
-},
-
-vullaby: {
-num: 629,
-name: "Vullaby",
-types: ["Dark", "Flying"],
-gender: "F",
-baseStats: {hp: 70, atk: 55, def: 75, spa: 45, spd: 65, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-mandibuzz: {
-num: 630,
-name: "Mandibuzz",
-types: ["Dark", "Flying"],
-gender: "F",
-baseStats: {hp: 110, atk: 65, def: 105, spa: 55, spd: 95, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 39.5,
-},
-
-heatmor: {
-num: 631,
-name: "Heatmor",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 85, atk: 97, def: 66, spa: 105, spd: 66, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 58,
-},
-
-durant: {
-num: 632,
-name: "Durant",
-types: ["Bug", "Steel"],
-gender: "F",
-baseStats: {hp: 58, atk: 109, def: 112, spa: 48, spd: 48, spe: 109},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-deino: {
-num: 633,
-name: "Deino",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38},
-abilities: {0: "No Ability"},
-weightkg: 17.3,
-},
-
-zweilous: {
-num: 634,
-name: "Zweilous",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 50,
-},
-
-hydreigon: {
-num: 635,
-name: "Hydreigon",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98},
-abilities: {0: "No Ability"},
-weightkg: 160,
-},
-
-larvesta: {
-num: 636,
-name: "Larvesta",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 28.8,
-},
-
-volcarona: {
-num: 637,
-name: "Volcarona",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 46,
-},
-
-cobalion: {
-num: 638,
-name: "Cobalion",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 91, atk: 90, def: 129, spa: 90, spd: 72, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 250,
-},
-
-terrakion: {
-num: 639,
-name: "Terrakion",
-types: ["Fighting", "Rock"],
-gender: "F",
-baseStats: {hp: 91, atk: 129, def: 90, spa: 72, spd: 90, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 260,
-},
-
-virizion: {
-num: 640,
-name: "Virizion",
-types: ["Fighting", "Grass"],
-gender: "F",
-baseStats: {hp: 91, atk: 90, def: 72, spa: 90, spd: 129, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 200,
-},
-
-tornadus: {
-num: 641,
-name: "Tornadus",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111},
-abilities: {0: "No Ability"},
-weightkg: 63,
-},
-
-tornadustherian: {
-num: 641,
-name: "Tornadus-Therian",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 79, atk: 100, def: 80, spa: 110, spd: 90, spe: 121},
-abilities: {0: "No Ability"},
-weightkg: 63,
-},
-
-thundurus: {
-num: 642,
-name: "Thundurus",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111},
-abilities: {0: "No Ability"},
-weightkg: 61,
-},
-
-thundurustherian: {
-num: 642,
-name: "Thundurus-Therian",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 79, atk: 105, def: 70, spa: 145, spd: 80, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 61,
-},
-
-reshiram: {
-num: 643,
-name: "Reshiram",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 100, atk: 120, def: 100, spa: 150, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 330,
-},
-
-zekrom: {
-num: 644,
-name: "Zekrom",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 100, atk: 150, def: 120, spa: 120, spd: 100, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 345,
-},
-
-landorus: {
-num: 645,
-name: "Landorus",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 89, atk: 125, def: 90, spa: 115, spd: 80, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 68,
-},
-
-landorustherian: {
-num: 645,
-name: "Landorus-Therian",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 89, atk: 145, def: 90, spa: 105, spd: 80, spe: 91},
-abilities: {0: "No Ability"},
-weightkg: 68,
-},
-
-kyurem: {
-num: 646,
-name: "Kyurem",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 125, atk: 130, def: 90, spa: 130, spd: 90, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 325,
-},
-
-kyuremblack: {
-num: 646,
-name: "Kyurem-Black",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 125, atk: 170, def: 100, spa: 120, spd: 90, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 325,
-},
-
-kyuremwhite: {
-num: 646,
-name: "Kyurem-White",
-types: ["Fire", "Ice"],
-gender: "F",
-baseStats: {hp: 125, atk: 120, def: 90, spa: 170, spd: 100, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 325,
-},
-
-keldeo: {
-num: 647,
-name: "Keldeo",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 48.5,
-},
-
-keldeoresolute: {
-num: 647,
-name: "Keldeo-Resolute",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 48.5,
-requiredMove: "Secret Sword",
-},
-
-meloetta: {
-num: 648,
-name: "Meloetta",
-types: ["Normal", "Psychic"],
-gender: "F",
-baseStats: {hp: 100, atk: 77, def: 77, spa: 128, spd: 128, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-meloettapirouette: {
-num: 648,
-name: "Meloetta-Pirouette",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 128, def: 90, spa: 77, spd: 77, spe: 128},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-requiredMove: "Relic Song",
-battleOnly: "Meloetta",
-},
-
-genesect: {
-num: 649,
-name: "Genesect",
-types: ["Bug", "Dark"],
-gender: "F",
-baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 82.5,
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-chespin: {
-num: 650,
-name: "Chespin",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 56, atk: 61, def: 65, spa: 48, spd: 45, spe: 38},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-quilladin: {
-num: 651,
-name: "Quilladin",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 61, atk: 78, def: 95, spa: 56, spd: 58, spe: 57},
-abilities: {0: "No Ability"},
-weightkg: 29,
-},
-
-chesnaught: {
-num: 652,
-name: "Chesnaught",
-types: ["Grass", "Steel"],
-gender: "F",
-baseStats: {hp: 88, atk: 107, def: 122, spa: 74, spd: 75, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 90,
-},
-
-fennekin: {
-num: 653,
-name: "Fennekin",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 40, spa: 62, spd: 60, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 9.4,
-},
-
-braixen: {
-num: 654,
-name: "Braixen",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 59, atk: 59, def: 58, spa: 90, spd: 70, spe: 73},
-abilities: {0: "No Ability"},
-weightkg: 14.5,
-},
-
-delphox: {
-num: 655,
-name: "Delphox",
-types: ["Fire", "Psychic"],
-gender: "F",
-baseStats: {hp: 75, atk: 69, def: 72, spa: 114, spd: 100, spe: 104},
-abilities: {0: "No Ability"},
-weightkg: 39,
-},
-
-froakie: {
-num: 656,
-name: "Froakie",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 7,
-},
-
-frogadier: {
-num: 657,
-name: "Frogadier",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 10.9,
-},
-
-greninja: {
-num: 658,
-name: "Greninja",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
-abilities: {0: "No Ability"},
-weightkg: 40,
-// non-activated Greninja-Ash is forme 1, but PS does not currently distinguish it
-},
-
-greninjaash: {
-num: 658,
-name: "Greninja-Ash",
-types: ["Dark", "Water"],
-gender: "F",
-baseStats: {hp: 72, atk: 145, def: 67, spa: 153, spd: 71, spe: 132},
-abilities: {0: "No Ability"},
-weightkg: 40,
-requiredAbility: "Battle Bond",
-battleOnly: "Greninja",
-gen: 7,
-},
-
-bunnelby: {
-num: 659,
-name: "Bunnelby",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 38, atk: 36, def: 38, spa: 32, spd: 36, spe: 57},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-diggersby: {
-num: 660,
-name: "Diggersby",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 60, def: 77, spa: 50, spd: 80, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 42.4,
-},
-
-fletchling: {
-num: 661,
-name: "Fletchling",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 45, atk: 50, def: 43, spa: 40, spd: 38, spe: 62},
-abilities: {0: "No Ability"},
-weightkg: 1.7,
-},
-
-fletchinder: {
-num: 662,
-name: "Fletchinder",
-types: ["Fire", "Flying"],
-gender: "F",
-baseStats: {hp: 62, atk: 73, def: 55, spa: 56, spd: 52, spe: 84},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-talonflame: {
-num: 663,
-name: "Talonflame",
-types: ["Fire", "Flying"],
-gender: "F",
-baseStats: {hp: 78, atk: 81, def: 71, spa: 74, spd: 69, spe: 126},
-abilities: {0: "No Ability"},
-weightkg: 24.5,
-},
-
-scatterbug: {
-num: 664,
-name: "Scatterbug",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 38, atk: 35, def: 40, spa: 27, spd: 25, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-// TODO: Scatterbug technically has the same number of formes as Vivillon
-},
-
-spewpa: {
-num: 665,
-name: "Spewpa",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 45, atk: 22, def: 60, spa: 27, spd: 30, spe: 29},
-abilities: {0: "No Ability"},
-weightkg: 8.4,
-// TODO: Spewpa technically has the same number of formes as Vivillon
-},
-
-vivillon: {
-num: 666,
-name: "Vivillon",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 80, atk: 55, def: 50, spa: 95, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 17,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-},
-
-vivillonfancy: {
-num: 666,
-name: "Vivillon-Fancy",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 80, atk: 55, def: 50, spa: 95, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 17,
-},
-
-vivillonpokeball: {
-num: 666,
-name: "Vivillon-Pokeball",
-types: ["Bug", "Flying"],
-gender: "F",
-baseStats: {hp: 80, atk: 55, def: 50, spa: 95, spd: 55, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 17,
-},
-
-litleo: {
-num: 667,
-name: "Litleo",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 62, atk: 50, def: 58, spa: 73, spd: 54, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 13.5,
-},
-
-pyroar: {
-num: 668,
-name: "Pyroar",
-types: ["Fire", "Ground"],
-gender: "F",
-baseStats: {hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106},
-abilities: {0: "No Ability"},
-weightkg: 81.5,
-},
-
-flabebe: {
-num: 669,
-name: "Flabe\u0301be\u0301",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 44, atk: 38, def: 39, spa: 61, spd: 79, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-floette: {
-num: 670,
-name: "Floette",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 54, atk: 45, def: 47, spa: 75, spd: 98, spe: 52},
-abilities: {0: "No Ability"},
-weightkg: 0.9,
-},
-
-floetteeternal: {
-num: 670,
-name: "Floette-Eternal",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 74, atk: 65, def: 67, spa: 125, spd: 128, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 0.9,
-},
-
-florges: {
-num: 671,
-name: "Florges",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 78, atk: 65, def: 68, spa: 112, spd: 154, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 10,
-},
-
-skiddo: {
-num: 672,
-name: "Skiddo",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 66, atk: 65, def: 48, spa: 62, spd: 57, spe: 52},
-abilities: {0: "No Ability"},
-weightkg: 31,
-},
-
-gogoat: {
-num: 673,
-name: "Gogoat",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 123, atk: 100, def: 62, spa: 97, spd: 81, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 91,
-},
-
-pancham: {
-num: 674,
-name: "Pancham",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 67, atk: 82, def: 62, spa: 46, spd: 48, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-pangoro: {
-num: 675,
-name: "Pangoro",
-types: ["Dark", "Fighting"],
-gender: "F",
-baseStats: {hp: 95, atk: 124, def: 78, spa: 69, spd: 71, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 136,
-},
-
-furfrou: {
-num: 676,
-name: "Furfrou",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 60, spa: 65, spd: 90, spe: 102},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-espurr: {
-num: 677,
-name: "Espurr",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 62, atk: 48, def: 54, spa: 63, spd: 60, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-meowstic: {
-num: 678,
-name: "Meowstic",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-meowsticf: {
-num: 678,
-name: "Meowstic-F",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-honedge: {
-num: 679,
-name: "Honedge",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-doublade: {
-num: 680,
-name: "Doublade",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 4.5,
-},
-
-aegislash: {
-num: 681,
-name: "Aegislash",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 140, spa: 50, spd: 140, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 53,
-},
-
-aegislashblade: {
-num: 681,
-name: "Aegislash-Blade",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 60, atk: 140, def: 50, spa: 140, spd: 50, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 53,
-requiredAbility: "Stance Change",
-battleOnly: "Aegislash",
-},
-
-spritzee: {
-num: 682,
-name: "Spritzee",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 78, atk: 52, def: 60, spa: 63, spd: 65, spe: 23},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-aromatisse: {
-num: 683,
-name: "Aromatisse",
-types: ["Fairy", "Poison"],
-gender: "F",
-baseStats: {hp: 101, atk: 72, def: 72, spa: 99, spd: 89, spe: 29},
-abilities: {0: "No Ability"},
-weightkg: 15.5,
-},
-
-swirlix: {
-num: 684,
-name: "Swirlix",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 62, atk: 48, def: 66, spa: 59, spd: 57, spe: 49},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-slurpuff: {
-num: 685,
-name: "Slurpuff",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 82, atk: 80, def: 86, spa: 85, spd: 75, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-inkay: {
-num: 686,
-name: "Inkay",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 53, atk: 54, def: 53, spa: 37, spd: 46, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-malamar: {
-num: 687,
-name: "Malamar",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 86, atk: 92, def: 88, spa: 68, spd: 75, spe: 73},
-abilities: {0: "No Ability"},
-weightkg: 47,
-},
-
-binacle: {
-num: 688,
-name: "Binacle",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 42, atk: 52, def: 67, spa: 39, spd: 56, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 31,
-},
-
-barbaracle: {
-num: 689,
-name: "Barbaracle",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 72, atk: 105, def: 115, spa: 54, spd: 86, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 96,
-},
-
-skrelp: {
-num: 690,
-name: "Skrelp",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 60, def: 60, spa: 60, spd: 60, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 7.3,
-},
-
-dragalge: {
-num: 691,
-name: "Dragalge",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44},
-abilities: {0: "No Ability"},
-weightkg: 81.5,
-},
-
-clauncher: {
-num: 692,
-name: "Clauncher",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 62, spa: 61, spd: 63, spe: 44},
-abilities: {0: "No Ability"},
-weightkg: 8.3,
-},
-
-clawitzer: {
-num: 693,
-name: "Clawitzer",
-types: ["Fire", "Water"],
-gender: "F",
-baseStats: {hp: 71, atk: 70, def: 88, spa: 123, spd: 89, spe: 59},
-abilities: {0: "No Ability"},
-weightkg: 35.3,
-},
-
-helioptile: {
-num: 694,
-name: "Helioptile",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 44, atk: 38, def: 33, spa: 61, spd: 43, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-heliolisk: {
-num: 695,
-name: "Heliolisk",
-types: ["Electric", "Fire"],
-gender: "F",
-baseStats: {hp: 62, atk: 55, def: 52, spa: 109, spd: 94, spe: 109},
-abilities: {0: "No Ability"},
-weightkg: 21,
-},
-
-tyrunt: {
-num: 696,
-name: "Tyrunt",
-types: ["Dragon", "Rock"],
-gender: "F",
-baseStats: {hp: 58, atk: 89, def: 77, spa: 45, spd: 45, spe: 48},
-abilities: {0: "No Ability"},
-weightkg: 26,
-},
-
-tyrantrum: {
-num: 697,
-name: "Tyrantrum",
-types: ["Dragon", "Rock"],
-gender: "F",
-baseStats: {hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 270,
-},
-
-amaura: {
-num: 698,
-name: "Amaura",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 25.2,
-},
-
-aurorus: {
-num: 699,
-name: "Aurorus",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 225,
-},
-
-sylveon: {
-num: 700,
-name: "Sylveon",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 95, atk: 65, def: 65, spa: 110, spd: 130, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 23.5,
-},
-
-hawlucha: {
-num: 701,
-name: "Hawlucha",
-types: ["Fighting", "Flying"],
-gender: "F",
-baseStats: {hp: 78, atk: 92, def: 75, spa: 74, spd: 63, spe: 118},
-abilities: {0: "No Ability"},
-weightkg: 21.5,
-},
-
-dedenne: {
-num: 702,
-name: "Dedenne",
-types: ["Electric", "Fairy"],
-gender: "F",
-baseStats: {hp: 67, atk: 58, def: 57, spa: 81, spd: 67, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 2.2,
-},
-
-carbink: {
-num: 703,
-name: "Carbink",
-types: ["Fairy", "Rock"],
-gender: "F",
-baseStats: {hp: 45, atk: 45, def: 130, spa: 45, spd: 130, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 5.7,
-},
-
-goomy: {
-num: 704,
-name: "Goomy",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 2.8,
-},
-
-sliggoo: {
-num: 705,
-name: "Sliggoo",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 17.5,
-},
-
-sliggoohisui: {
-num: 705,
-name: "Sliggoo-Hisui",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 58, atk: 75, def: 83, spa: 83, spd: 113, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 68.5,
-},
-
-goodra: {
-num: 706,
-name: "Goodra",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 150.5,
-},
-
-goodrahisui: {
-num: 706,
-name: "Goodra-Hisui",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 100, spa: 110, spd: 150, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 334.1,
-},
-
-klefki: {
-num: 707,
-name: "Klefki",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 57, atk: 80, def: 91, spa: 80, spd: 87, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 3,
-},
-
-phantump: {
-num: 708,
-name: "Phantump",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38},
-abilities: {0: "No Ability"},
-weightkg: 7,
-},
-
-trevenant: {
-num: 709,
-name: "Trevenant",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56},
-abilities: {0: "No Ability"},
-weightkg: 71,
-},
-
-pumpkaboo: {
-num: 710,
-name: "Pumpkaboo",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 49, atk: 66, def: 70, spa: 44, spd: 55, spe: 51},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-pumpkaboosmall: {
-num: 710,
-name: "Pumpkaboo-Small",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 44, atk: 66, def: 70, spa: 44, spd: 55, spe: 56},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-pumpkaboolarge: {
-num: 710,
-name: "Pumpkaboo-Large",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 54, atk: 66, def: 70, spa: 44, spd: 55, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-pumpkaboosuper: {
-num: 710,
-name: "Pumpkaboo-Super",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 59, atk: 66, def: 70, spa: 44, spd: 55, spe: 41},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-gourgeist: {
-num: 711,
-name: "Gourgeist",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 65, atk: 90, def: 122, spa: 58, spd: 75, spe: 84},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-gourgeistsmall: {
-num: 711,
-name: "Gourgeist-Small",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 55, atk: 85, def: 122, spa: 58, spd: 75, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 9.5,
-},
-
-gourgeistlarge: {
-num: 711,
-name: "Gourgeist-Large",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 75, atk: 95, def: 122, spa: 58, spd: 75, spe: 69},
-abilities: {0: "No Ability"},
-weightkg: 14,
-},
-
-gourgeistsuper: {
-num: 711,
-name: "Gourgeist-Super",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 85, atk: 100, def: 122, spa: 58, spd: 75, spe: 54},
-abilities: {0: "No Ability"},
-weightkg: 39,
-},
-
-bergmite: {
-num: 712,
-name: "Bergmite",
-types: ["Bug", "Ice"],
-gender: "F",
-baseStats: {hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28},
-abilities: {0: "No Ability"},
-weightkg: 99.5,
-},
-
-avalugg: {
-num: 713,
-name: "Avalugg",
-types: ["Bug", "Ice"],
-gender: "F",
-baseStats: {hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
-abilities: {0: "No Ability"},
-weightkg: 505,
-},
-
-avalugghisui: {
-num: 713,
-name: "Avalugg-Hisui",
-types: ["Ice", "Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 127, def: 184, spa: 34, spd: 36, spe: 38},
-abilities: {0: "No Ability"},
-weightkg: 262.4,
-},
-
-noibat: {
-num: 714,
-name: "Noibat",
-types: ["Dragon", "Flying"],
-gender: "F",
-baseStats: {hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-noivern: {
-num: 715,
-name: "Noivern",
-types: ["Dragon", "Psychic"],
-gender: "F",
-baseStats: {hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123},
-abilities: {0: "No Ability"},
-weightkg: 85,
-},
-
-xerneas: {
-num: 716,
-name: "Xerneas",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 215,
-},
-
-xerneasneutral: {
-num: 716,
-name: "Xerneas-Neutral",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 215,
-},
-
-yveltal: {
-num: 717,
-name: "Yveltal",
-types: ["Flying", "Ghost"],
-gender: "F",
-baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 203,
-},
-
-zygarde: {
-num: 718,
-name: "Zygarde",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 108, atk: 100, def: 121, spa: 81, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 305,
-// forme 2 = 10% with Power Constructor ,forme 3 = 50% with Power Construct
-},
-
-zygarde10: {
-num: 718,
-name: "Zygarde-10%",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 54, atk: 100, def: 71, spa: 61, spd: 85, spe: 115},
-abilities: {0: "No Ability"},
-weightkg: 33.5,
-gen: 7,
-},
-
-zygardecomplete: {
-num: 718,
-name: "Zygarde-Complete",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 216, atk: 100, def: 121, spa: 91, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 610,
-requiredAbility: "Power Construct",
-battleOnly: ["Zygarde", "Zygarde-10%"],
-gen: 7,
-},
-
-diancie: {
-num: 719,
-name: "Diancie",
-types: ["Fairy", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 150, spa: 60, spd: 150, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 8.8,
-},
-
-dianciemega: {
-num: 719,
-name: "Diancie-Mega",
-types: ["Fairy", "Rock"],
-gender: "F",
-baseStats: {hp: 50, atk: 160, def: 110, spa: 160, spd: 110, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 27.8,
-},
-
-hoopa: {
-num: 720,
-name: "Hoopa",
-types: ["Ghost", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 110, def: 60, spa: 150, spd: 130, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-hoopaunbound: {
-num: 720,
-name: "Hoopa-Unbound",
-types: ["Dark", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 160, def: 60, spa: 170, spd: 130, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 490,
-},
-
-volcanion: {
-num: 721,
-name: "Volcanion",
-types: ["Fire", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 110, def: 120, spa: 130, spd: 90, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 195,
-},
-
-rowlet: {
-num: 722,
-name: "Rowlet",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 68, atk: 55, def: 55, spa: 50, spd: 50, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-dartrix: {
-num: 723,
-name: "Dartrix",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 78, atk: 75, def: 75, spa: 70, spd: 70, spe: 52},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-decidueye: {
-num: 724,
-name: "Decidueye",
-types: ["Flying", "Grass"],
-gender: "F",
-baseStats: {hp: 78, atk: 107, def: 75, spa: 100, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 36.6,
-},
-
-decidueyehisui: {
-num: 724,
-name: "Decidueye-Hisui",
-types: ["Fighting", "Grass"],
-gender: "F",
-baseStats: {hp: 88, atk: 112, def: 80, spa: 95, spd: 95, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 37,
-},
-
-litten: {
-num: 725,
-name: "Litten",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 45, atk: 65, def: 40, spa: 60, spd: 40, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 4.3,
-},
-
-torracat: {
-num: 726,
-name: "Torracat",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 65, atk: 85, def: 50, spa: 80, spd: 50, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-incineroar: {
-num: 727,
-name: "Incineroar",
-types: ["Dark", "Fire"],
-gender: "F",
-baseStats: {hp: 95, atk: 115, def: 90, spa: 80, spd: 90, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 83,
-},
-
-popplio: {
-num: 728,
-name: "Popplio",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 54, def: 54, spa: 66, spd: 56, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 7.5,
-},
-
-brionne: {
-num: 729,
-name: "Brionne",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 60, atk: 69, def: 69, spa: 91, spd: 81, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 17.5,
-},
-
-primarina: {
-num: 730,
-name: "Primarina",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 74, def: 74, spa: 126, spd: 116, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 44,
-},
-
-pikipek: {
-num: 731,
-name: "Pikipek",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 35, atk: 75, def: 30, spa: 30, spd: 30, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-},
-
-trumbeak: {
-num: 732,
-name: "Trumbeak",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 55, atk: 85, def: 50, spa: 40, spd: 50, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 14.8,
-},
-
-toucannon: {
-num: 733,
-name: "Toucannon",
-types: ["Flying", "Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 75, spa: 75, spd: 75, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 26,
-},
-
-yungoos: {
-num: 734,
-name: "Yungoos",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 48, atk: 70, def: 30, spa: 30, spd: 30, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-gumshoos: {
-num: 735,
-name: "Gumshoos",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 90, atk: 110, def: 65, spa: 55, spd: 65, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 14.2,
-},
-
-gumshoostotem: {
-num: 735,
-name: "Gumshoos-Totem",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 88, atk: 110, def: 60, spa: 55, spd: 60, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-grubbin: {
-num: 736,
-name: "Grubbin",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 47, atk: 62, def: 45, spa: 55, spd: 45, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 4.4,
-},
-
-charjabug: {
-num: 737,
-name: "Charjabug",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 57, atk: 82, def: 95, spa: 55, spd: 75, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-vikavolt: {
-num: 738,
-name: "Vikavolt",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 75, spa: 115, spd: 65, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 45,
-},
-
-vikavolttotem: {
-num: 738,
-name: "Vikavolt-Totem",
-types: ["Bug", "Electric"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 75, spa: 115, spd: 65, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 147.5,
-},
-
-crabrawler: {
-num: 739,
-name: "Crabrawler",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 47, atk: 82, def: 57, spa: 42, spd: 47, spe: 63},
-abilities: {0: "No Ability"},
-weightkg: 7,
-},
-
-crabominable: {
-num: 740,
-name: "Crabominable",
-types: ["Fighting", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 120, def: 80, spa: 60, spd: 55, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 180,
-},
-
-oricorio: {
-num: 741,
-name: "Oricorio",
-types: ["Fire", "Flying"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-oricoriopompom: {
-num: 741,
-name: "Oricorio-Pom-Pom",
-types: ["Electric", "Flying"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-oricoriopau: {
-num: 741,
-name: "Oricorio-Pa'u",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-oricoriosensu: {
-num: 741,
-name: "Oricorio-Sensu",
-types: ["Flying", "Ghost"],
-gender: "F",
-baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-cutiefly: {
-num: 742,
-name: "Cutiefly",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 40, spa: 55, spd: 40, spe: 84},
-abilities: {0: "No Ability"},
-weightkg: 0.2,
-},
-
-ribombee: {
-num: 743,
-name: "Ribombee",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-ribombeetotem: {
-num: 743,
-name: "Ribombee-Totem",
-types: ["Bug", "Fairy"],
-gender: "F",
-baseStats: {hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-rockruff: {
-num: 744,
-name: "Rockruff",
-types: ["Normal", "Rock"],
-gender: "F",
-baseStats: {hp: 45, atk: 65, def: 40, spa: 30, spd: 40, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 9.2,
-},
-
-lycanroc: {
-num: 745,
-name: "Lycanroc",
-types: ["Normal", "Rock"],
-gender: "F",
-baseStats: {hp: 75, atk: 115, def: 65, spa: 55, spd: 65, spe: 112},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-lycanrocmidnight: {
-num: 745,
-name: "Lycanroc-Midnight",
-types: ["Dark", "Rock"],
-gender: "F",
-baseStats: {hp: 85, atk: 115, def: 75, spa: 55, spd: 75, spe: 82},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-lycanrocdusk: {
-num: 745,
-name: "Lycanroc-Dusk",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 75, atk: 117, def: 65, spa: 55, spd: 65, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-wishiwashi: {
-num: 746,
-name: "Wishiwashi",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 20, atk: 50, def: 20, spa: 25, spd: 25, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-wishiwashischool: {
-num: 746,
-name: "Wishiwashi-School",
-types: ["Ghost", "Water"],
-gender: "F",
-baseStats: {hp: 45, atk: 135, def: 125, spa: 130, spd: 130, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 78.6,
-requiredAbility: "Schooling",
-battleOnly: "Wishiwashi",
-},
-
-mareanie: {
-num: 747,
-name: "Mareanie",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 53, def: 62, spa: 43, spd: 52, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-toxapex: {
-num: 748,
-name: "Toxapex",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 63, def: 152, spa: 53, spd: 142, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 14.5,
-},
-
-mudbray: {
-num: 749,
-name: "Mudbray",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 70, atk: 100, def: 70, spa: 45, spd: 55, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 110,
-},
-
-mudsdale: {
-num: 750,
-name: "Mudsdale",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 100, atk: 125, def: 100, spa: 55, spd: 85, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 920,
-},
-
-dewpider: {
-num: 751,
-name: "Dewpider",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 38, atk: 40, def: 52, spa: 40, spd: 72, spe: 27},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-araquanid: {
-num: 752,
-name: "Araquanid",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 82,
-},
-
-araquanidtotem: {
-num: 752,
-name: "Araquanid-Totem",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 217.5,
-},
-
-fomantis: {
-num: 753,
-name: "Fomantis",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 50, def: 35, spa: 55, spd: 35, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-lurantis: {
-num: 754,
-name: "Lurantis",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 80, def: 90, spa: 105, spd: 90, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 18.5,
-},
-
-lurantistotem: {
-num: 754,
-name: "Lurantis-Totem",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 105, def: 90, spa: 80, spd: 90, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 58,
-},
-
-morelull: {
-num: 755,
-name: "Morelull",
-types: ["Fairy", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 35, def: 55, spa: 65, spd: 75, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-shiinotic: {
-num: 756,
-name: "Shiinotic",
-types: ["Fairy", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 45, def: 85, spa: 95, spd: 105, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-salandit: {
-num: 757,
-name: "Salandit",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 48, atk: 44, def: 40, spa: 71, spd: 40, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 4.8,
-},
-
-salazzle: {
-num: 758,
-name: "Salazzle",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117},
-abilities: {0: "No Ability"},
-weightkg: 22.2,
-},
-
-salazzletotem: {
-num: 758,
-name: "Salazzle-Totem",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117},
-abilities: {0: "No Ability"},
-weightkg: 81,
-},
-
-stufful: {
-num: 759,
-name: "Stufful",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 70, atk: 75, def: 50, spa: 45, spd: 50, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 6.8,
-},
-
-bewear: {
-num: 760,
-name: "Bewear",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 120, atk: 125, def: 80, spa: 55, spd: 60, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 135,
-},
-
-bounsweet: {
-num: 761,
-name: "Bounsweet",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 42, atk: 30, def: 38, spa: 30, spd: 38, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 3.2,
-},
-
-steenee: {
-num: 762,
-name: "Steenee",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 52, atk: 40, def: 48, spa: 40, spd: 48, spe: 62},
-abilities: {0: "No Ability"},
-weightkg: 8.2,
-},
-
-tsareena: {
-num: 763,
-name: "Tsareena",
-types: ["Grass", "Steel"],
-gender: "F",
-baseStats: {hp: 72, atk: 120, def: 98, spa: 50, spd: 98, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 21.4,
-},
-
-comfey: {
-num: 764,
-name: "Comfey",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 51, atk: 52, def: 90, spa: 82, spd: 110, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-oranguru: {
-num: 765,
-name: "Oranguru",
-types: ["Ghost", "Normal"],
-gender: "F",
-baseStats: {hp: 90, atk: 60, def: 80, spa: 90, spd: 110, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 76,
-},
-
-passimian: {
-num: 766,
-name: "Passimian",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 120, def: 90, spa: 40, spd: 60, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 82.8,
-},
-
-wimpod: {
-num: 767,
-name: "Wimpod",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 25, atk: 35, def: 40, spa: 20, spd: 30, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-golisopod: {
-num: 768,
-name: "Golisopod",
-types: ["Bug", "Water"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 140, spa: 60, spd: 90, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 108,
-},
-
-sandygast: {
-num: 769,
-name: "Sandygast",
-types: ["Ghost", "Ground"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 80, spa: 70, spd: 45, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 70,
-},
-
-palossand: {
-num: 770,
-name: "Palossand",
-types: ["Ghost", "Ground"],
-gender: "F",
-baseStats: {hp: 85, atk: 75, def: 110, spa: 100, spd: 75, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 250,
-},
-
-pyukumuku: {
-num: 771,
-name: "Pyukumuku",
-types: ["Poison", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 130, spa: 40, spd: 130, spe: 5},
-abilities: {0: "No Ability"},
-weightkg: 1.2,
-},
-
-typenull: {
-num: 772,
-name: "Type: Null",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 59},
-abilities: {0: "No Ability"},
-weightkg: 120.5,
-},
-
-silvally: {
-num: 773,
-name: "Silvally",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallybug: {
-num: 773,
-name: "Silvally-Bug",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallydark: {
-num: 773,
-name: "Silvally-Dark",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallydragon: {
-num: 773,
-name: "Silvally-Dragon",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyelectric: {
-num: 773,
-name: "Silvally-Electric",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyfairy: {
-num: 773,
-name: "Silvally-Fairy",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyfighting: {
-num: 773,
-name: "Silvally-Fighting",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyfire: {
-num: 773,
-name: "Silvally-Fire",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyflying: {
-num: 773,
-name: "Silvally-Flying",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyghost: {
-num: 773,
-name: "Silvally-Ghost",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallygrass: {
-num: 773,
-name: "Silvally-Grass",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyground: {
-num: 773,
-name: "Silvally-Ground",
-types: ["Ground"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyice: {
-num: 773,
-name: "Silvally-Ice",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallypoison: {
-num: 773,
-name: "Silvally-Poison",
-types: ["Poison"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallypsychic: {
-num: 773,
-name: "Silvally-Psychic",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallyrock: {
-num: 773,
-name: "Silvally-Rock",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallysteel: {
-num: 773,
-name: "Silvally-Steel",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-silvallywater: {
-num: 773,
-name: "Silvally-Water",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 100.5,
-},
-
-minior: {
-num: 774,
-name: "Minior",
-types: ["Flying", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 100, def: 60, spa: 100, spd: 60, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-miniormeteor: {
-num: 774,
-name: "Minior-Meteor",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 100, spa: 60, spd: 100, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 40,
-requiredAbility: "Shields Down",
-battleOnly: "Minior",
-},
-
-komala: {
-num: 775,
-name: "Komala",
-types: ["Ghost", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 115, def: 65, spa: 75, spd: 95, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 19.9,
-},
-
-turtonator: {
-num: 776,
-name: "Turtonator",
-types: ["Dragon", "Fire"],
-gender: "F",
-baseStats: {hp: 60, atk: 78, def: 135, spa: 91, spd: 85, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 212,
-},
-
-togedemaru: {
-num: 777,
-name: "Togedemaru",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 3.3,
-},
-
-togedemarutotem: {
-num: 777,
-name: "Togedemaru-Totem",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-mimikyu: {
-num: 778,
-name: "Mimikyu",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 0.7,
-},
-
-mimikyubusted: {
-num: 778,
-name: "Mimikyu-Busted",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 0.7,
-requiredAbility: "Disguise",
-battleOnly: "Mimikyu",
-},
-
-mimikyutotem: {
-num: 778,
-name: "Mimikyu-Totem",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 2.8,
-},
-
-mimikyubustedtotem: {
-num: 778,
-name: "Mimikyu-Busted-Totem",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
-abilities: {0: "No Ability"},
-weightkg: 2.8,
-requiredAbility: "Disguise",
-battleOnly: "Mimikyu-Totem",
-},
-
-bruxish: {
-num: 779,
-name: "Bruxish",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 68, atk: 105, def: 70, spa: 70, spd: 70, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 19,
-},
-
-drampa: {
-num: 780,
-name: "Drampa",
-types: ["Dragon", "Normal"],
-gender: "F",
-baseStats: {hp: 78, atk: 60, def: 85, spa: 135, spd: 91, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 185,
-},
-
-dhelmise: {
-num: 781,
-name: "Dhelmise",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 131, def: 100, spa: 86, spd: 90, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 210,
-},
-
-jangmoo: {
-num: 782,
-name: "Jangmoo",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 45, atk: 55, def: 65, spa: 45, spd: 45, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 29.7,
-},
-
-hakamoo: {
-num: 783,
-name: "Hakamoo",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 55, atk: 75, def: 90, spa: 65, spd: 70, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 47,
-},
-
-kommoo: {
-num: 784,
-name: "Kommoo",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 78.2,
-},
-
-kommoototem: {
-num: 784,
-name: "Kommoo-Totem",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 207.5,
-},
-
-tapukoko: {
-num: 785,
-name: "Tapu Koko",
-types: ["Electric", "Fairy"],
-gender: "F",
-baseStats: {hp: 70, atk: 115, def: 85, spa: 95, spd: 75, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 20.5,
-},
-
-tapulele: {
-num: 786,
-name: "Tapu Lele",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 75, spa: 130, spd: 115, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 18.6,
-},
-
-tapubulu: {
-num: 787,
-name: "Tapu Bulu",
-types: ["Fairy", "Grass"],
-gender: "F",
-baseStats: {hp: 70, atk: 130, def: 115, spa: 85, spd: 95, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 45.5,
-},
-
-tapufini: {
-num: 788,
-name: "Tapu Fini",
-types: ["Fairy", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 75, def: 115, spa: 95, spd: 130, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 21.2,
-},
-
-cosmog: {
-num: 789,
-name: "Cosmog",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 63, atk: 39, def: 131, spa: 79, spd: 131, spe: 37},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-cosmoem: {
-num: 790,
-name: "Cosmoem",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 43, atk: 29, def: 131, spa: 29, spd: 131, spe: 37},
-abilities: {0: "No Ability"},
-weightkg: 999.9,
-},
-
-solgaleo: {
-num: 791,
-name: "Solgaleo",
-types: ["Psychic", "Steel"],
-gender: "F",
-baseStats: {hp: 137, atk: 137, def: 107, spa: 113, spd: 89, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 230,
-},
-
-lunala: {
-num: 792,
-name: "Lunala",
-types: ["Ghost", "Psychic"],
-gender: "F",
-baseStats: {hp: 137, atk: 113, def: 89, spa: 137, spd: 107, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-nihilego: {
-num: 793,
-name: "Nihilego",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 109, atk: 53, def: 47, spa: 127, spd: 131, spe: 103},
-abilities: {0: "No Ability"},
-weightkg: 55.5,
-},
-
-buzzwole: {
-num: 794,
-name: "Buzzwole",
-types: ["Bug", "Fighting"],
-gender: "F",
-baseStats: {hp: 107, atk: 139, def: 139, spa: 53, spd: 53, spe: 79},
-abilities: {0: "No Ability"},
-weightkg: 333.6,
-},
-
-pheromosa: {
-num: 795,
-name: "Pheromosa",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 71, atk: 137, def: 37, spa: 137, spd: 37, spe: 151},
-abilities: {0: "No Ability"},
-weightkg: 25,
-},
-
-xurkitree: {
-num: 796,
-name: "Xurkitree",
-types: ["Electric", "Ghost"],
-gender: "F",
-baseStats: {hp: 83, atk: 89, def: 71, spa: 173, spd: 71, spe: 83},
-abilities: {0: "No Ability"},
-weightkg: 100,
-},
-
-celesteela: {
-num: 797,
-name: "Celesteela",
-types: ["Flying", "Steel"],
-gender: "F",
-baseStats: {hp: 97, atk: 101, def: 103, spa: 107, spd: 101, spe: 61},
-abilities: {0: "No Ability"},
-weightkg: 999.9,
-},
-
-kartana: {
-num: 798,
-name: "Kartana",
-types: ["Grass", "Steel"],
-gender: "F",
-baseStats: {hp: 59, atk: 181, def: 131, spa: 59, spd: 31, spe: 109},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-guzzlord: {
-num: 799,
-name: "Guzzlord",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 223, atk: 101, def: 53, spa: 97, spd: 53, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 888,
-},
-
-necrozma: {
-num: 800,
-name: "Necrozma",
-types: ["Electric", "Psychic"],
-gender: "F",
-baseStats: {hp: 97, atk: 107, def: 101, spa: 127, spd: 89, spe: 79},
-abilities: {0: "No Ability"},
-weightkg: 230,
-},
-
-necrozmaduskmane: {
-num: 800,
-name: "Necrozma-Dusk-Mane",
-types: ["Electric", "Steel"],
-gender: "F",
-baseStats: {hp: 97, atk: 157, def: 127, spa: 113, spd: 109, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 460,
-},
-
-necrozmadawnwings: {
-num: 800,
-name: "Necrozma-Dawn-Wings",
-types: ["Electric", "Ghost"],
-gender: "F",
-baseStats: {hp: 97, atk: 113, def: 109, spa: 157, spd: 127, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 350,
-},
-
-necrozmaultra: {
-num: 800,
-name: "Necrozma-Ultra",
-types: ["Dragon", "Psychic"],
-gender: "F",
-baseStats: {hp: 97, atk: 167, def: 97, spa: 167, spd: 97, spe: 129},
-abilities: {0: "No Ability"},
-weightkg: 230,
-battleOnly: ["Necrozma-Dawn-Wings", "Necrozma-Dusk-Mane"],
-},
-
-magearna: {
-num: 801,
-name: "Magearna",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 80.5,
-},
-
-magearnaoriginal: {
-num: 801,
-name: "Magearna-Original",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 80.5,
-},
-
-marshadow: {
-num: 802,
-name: "Marshadow",
-types: ["Fighting", "Ghost"],
-gender: "F",
-baseStats: {hp: 90, atk: 125, def: 80, spa: 90, spd: 90, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 22.2,
-},
-
-poipole: {
-num: 803,
-name: "Poipole",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 67, atk: 73, def: 67, spa: 73, spd: 67, spe: 73},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-naganadel: {
-num: 804,
-name: "Naganadel",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121},
-abilities: {0: "No Ability"},
-weightkg: 150,
-},
-
-stakataka: {
-num: 805,
-name: "Stakataka",
-types: ["Rock", "Steel"],
-gender: "F",
-baseStats: {hp: 61, atk: 131, def: 211, spa: 53, spd: 101, spe: 13},
-abilities: {0: "No Ability"},
-weightkg: 820,
-},
-
-blacephalon: {
-num: 806,
-name: "Blacephalon",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 53, atk: 127, def: 53, spa: 151, spd: 79, spe: 107},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-zeraora: {
-num: 807,
-name: "Zeraora",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 88, atk: 112, def: 75, spa: 102, spd: 80, spe: 143},
-abilities: {0: "No Ability"},
-weightkg: 44.5,
-},
-
-meltan: {
-num: 808,
-name: "Meltan",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 46, atk: 65, def: 65, spa: 55, spd: 35, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-melmetal: {
-num: 809,
-name: "Melmetal",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 800,
-},
-
-melmetalgmax: {
-num: 809,
-name: "Melmetal-Gmax",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-grookey: {
-num: 810,
-name: "Grookey",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 50, spa: 40, spd: 40, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-thwackey: {
-num: 811,
-name: "Thwackey",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 70, spa: 55, spd: 60, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 14,
-},
-
-rillaboom: {
-num: 812,
-name: "Rillaboom",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 90,
-},
-
-rillaboomgmax: {
-num: 812,
-name: "Rillaboom-Gmax",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-scorbunny: {
-num: 813,
-name: "Scorbunny",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 71, def: 40, spa: 40, spd: 40, spe: 69},
-abilities: {0: "No Ability"},
-weightkg: 4.5,
-},
-
-raboot: {
-num: 814,
-name: "Raboot",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 65, atk: 86, def: 60, spa: 55, spd: 60, spe: 94},
-abilities: {0: "No Ability"},
-weightkg: 9,
-},
-
-cinderace: {
-num: 815,
-name: "Cinderace",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-cinderacegmax: {
-num: 815,
-name: "Cinderace-Gmax",
-types: ["Fire", "Normal"],
-gender: "F",
-baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-sobble: {
-num: 816,
-name: "Sobble",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 40, def: 40, spa: 70, spd: 40, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-drizzile: {
-num: 817,
-name: "Drizzile",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 55, spa: 95, spd: 55, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 11.5,
-},
-
-inteleon: {
-num: 818,
-name: "Inteleon",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 45.2,
-},
-
-inteleongmax: {
-num: 818,
-name: "Inteleon-Gmax",
-types: ["Poison", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-skwovet: {
-num: 819,
-name: "Skwovet",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 70, atk: 55, def: 55, spa: 35, spd: 35, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-greedent: {
-num: 820,
-name: "Greedent",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 120, atk: 95, def: 95, spa: 55, spd: 75, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-rookidee: {
-num: 821,
-name: "Rookidee",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 38, atk: 47, def: 35, spa: 33, spd: 35, spe: 57},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-corvisquire: {
-num: 822,
-name: "Corvisquire",
-types: ["Flying"],
-gender: "F",
-baseStats: {hp: 68, atk: 67, def: 55, spa: 43, spd: 55, spe: 77},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-corviknight: {
-num: 823,
-name: "Corviknight",
-types: ["Flying", "Steel"],
-gender: "F",
-baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 75,
-},
-
-corviknightgmax: {
-num: 823,
-name: "Corviknight-Gmax",
-types: ["Flying", "Steel"],
-gender: "F",
-baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-blipbug: {
-num: 824,
-name: "Blipbug",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 25, atk: 20, def: 20, spa: 25, spd: 45, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-dottler: {
-num: 825,
-name: "Dottler",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 50, atk: 35, def: 80, spa: 50, spd: 90, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 19.5,
-},
-
-orbeetle: {
-num: 826,
-name: "Orbeetle",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 40.8,
-},
-
-orbeetlegmax: {
-num: 826,
-name: "Orbeetle-Gmax",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-nickit: {
-num: 827,
-name: "Nickit",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 40, atk: 28, def: 28, spa: 47, spd: 52, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 8.9,
-},
-
-thievul: {
-num: 828,
-name: "Thievul",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 70, atk: 58, def: 58, spa: 87, spd: 92, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 19.9,
-},
-
-gossifleur: {
-num: 829,
-name: "Gossifleur",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 60, spa: 40, spd: 60, spe: 10},
-abilities: {0: "No Ability"},
-weightkg: 2.2,
-},
-
-eldegoss: {
-num: 830,
-name: "Eldegoss",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 60, atk: 50, def: 90, spa: 80, spd: 120, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-wooloo: {
-num: 831,
-name: "Wooloo",
-types: ["Normal"],
-gender: "F",
-baseStats: {hp: 42, atk: 40, def: 55, spa: 40, spd: 45, spe: 48},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-dubwool: {
-num: 832,
-name: "Dubwool",
-types: ["Normal", "Steel"],
-gender: "F",
-baseStats: {hp: 72, atk: 80, def: 100, spa: 60, spd: 90, spe: 88},
-abilities: {0: "No Ability"},
-weightkg: 43,
-},
-
-chewtle: {
-num: 833,
-name: "Chewtle",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 50, atk: 64, def: 50, spa: 38, spd: 38, spe: 44},
-abilities: {0: "No Ability"},
-weightkg: 8.5,
-},
-
-drednaw: {
-num: 834,
-name: "Drednaw",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
-abilities: {0: "No Ability"},
-weightkg: 115.5,
-},
-
-drednawgmax: {
-num: 834,
-name: "Drednaw-Gmax",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-yamper: {
-num: 835,
-name: "Yamper",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 59, atk: 45, def: 50, spa: 40, spd: 50, spe: 26},
-abilities: {0: "No Ability"},
-weightkg: 13.5,
-},
-
-boltund: {
-num: 836,
-name: "Boltund",
-types: ["Electric", "Normal"],
-gender: "F",
-baseStats: {hp: 69, atk: 90, def: 60, spa: 90, spd: 60, spe: 121},
-abilities: {0: "No Ability"},
-weightkg: 34,
-},
-
-rolycoly: {
-num: 837,
-name: "Rolycoly",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 30, atk: 40, def: 50, spa: 40, spd: 50, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-carkol: {
-num: 838,
-name: "Carkol",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 60, def: 90, spa: 60, spd: 70, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 78,
-},
-
-coalossal: {
-num: 839,
-name: "Coalossal",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 310.5,
-},
-
-coalossalgmax: {
-num: 839,
-name: "Coalossal-Gmax",
-types: ["Fire", "Rock"],
-gender: "F",
-baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-applin: {
-num: 840,
-name: "Applin",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 80, spa: 40, spd: 40, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-flapple: {
-num: 841,
-name: "Flapple",
-types: ["Bug", "Dragon"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-flapplegmax: {
-num: 841,
-name: "Flapple-Gmax",
-types: ["Bug", "Dragon"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-appletun: {
-num: 842,
-name: "Appletun",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 13,
-},
-
-appletungmax: {
-num: 842,
-name: "Appletun-Gmax",
-types: ["Dragon", "Grass"],
-gender: "F",
-baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-silicobra: {
-num: 843,
-name: "Silicobra",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 52, atk: 57, def: 75, spa: 35, spd: 50, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 7.6,
-},
-
-sandaconda: {
-num: 844,
-name: "Sandaconda",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 65.5,
-},
-
-sandacondagmax: {
-num: 844,
-name: "Sandaconda-Gmax",
-types: ["Dragon", "Ground"],
-gender: "F",
-baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-cramorant: {
-num: 845,
-name: "Cramorant",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 18,
-},
-
-cramorantgulping: {
-num: 845,
-name: "Cramorant-Gulping",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 18,
-requiredAbility: "Gulp Missile",
-battleOnly: "Cramorant",
-},
-
-cramorantgorging: {
-num: 845,
-name: "Cramorant-Gorging",
-types: ["Flying", "Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 18,
-requiredAbility: "Gulp Missile",
-battleOnly: "Cramorant",
-},
-
-arrokuda: {
-num: 846,
-name: "Arrokuda",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 41, atk: 63, def: 40, spa: 40, spd: 30, spe: 66},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-barraskewda: {
-num: 847,
-name: "Barraskewda",
-types: ["Fire", "Ice"],
-gender: "F",
-baseStats: {hp: 61, atk: 123, def: 60, spa: 60, spd: 50, spe: 136},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-toxel: {
-num: 848,
-name: "Toxel",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 38, def: 35, spa: 54, spd: 35, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 11,
-canHatch: true,
-},
-
-toxtricity: {
-num: 849,
-name: "Toxtricity",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-toxtricitylowkey: {
-num: 849,
-name: "Toxtricity-Low-Key",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-toxtricitygmax: {
-num: 849,
-name: "Toxtricity-Gmax",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-toxtricitylowkeygmax: {
-num: 849,
-name: "Toxtricity-Low-Key-Gmax",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 0,
-battleOnly: "Toxtricity-Low-Key",
-},
-
-sizzlipede: {
-num: 850,
-name: "Sizzlipede",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 50, atk: 65, def: 45, spa: 50, spd: 50, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-centiskorch: {
-num: 851,
-name: "Centiskorch",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-centiskorchgmax: {
-num: 851,
-name: "Centiskorch-Gmax",
-types: ["Bug", "Fire"],
-gender: "F",
-baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-clobbopus: {
-num: 852,
-name: "Clobbopus",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 50, atk: 68, def: 60, spa: 50, spd: 50, spe: 32},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-grapploct: {
-num: 853,
-name: "Grapploct",
-types: ["Dark", "Fighting"],
-gender: "F",
-baseStats: {hp: 80, atk: 118, def: 90, spa: 70, spd: 80, spe: 42},
-abilities: {0: "No Ability"},
-weightkg: 39,
-},
-
-sinistea: {
-num: 854,
-name: "Sinistea",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 0.2,
-},
-
-sinisteaantique: {
-num: 854,
-name: "Sinistea-Antique",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 0.2,
-},
-
-polteageist: {
-num: 855,
-name: "Polteageist",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0.4,
-},
-
-polteageistantique: {
-num: 855,
-name: "Polteageist-Antique",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 0.4,
-},
-
-hatenna: {
-num: 856,
-name: "Hatenna",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 42, atk: 30, def: 45, spa: 56, spd: 53, spe: 39},
-abilities: {0: "No Ability"},
-weightkg: 3.4,
-},
-
-hattrem: {
-num: 857,
-name: "Hattrem",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 57, atk: 40, def: 65, spa: 86, spd: 73, spe: 49},
-abilities: {0: "No Ability"},
-weightkg: 4.8,
-},
-
-hatterene: {
-num: 858,
-name: "Hatterene",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
-abilities: {0: "No Ability"},
-weightkg: 5.1,
-},
-
-hatterenegmax: {
-num: 858,
-name: "Hatterene-Gmax",
-types: ["Fairy", "Psychic"],
-gender: "F",
-baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-impidimp: {
-num: 859,
-name: "Impidimp",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 45, atk: 45, def: 30, spa: 55, spd: 40, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 5.5,
-},
-
-morgrem: {
-num: 860,
-name: "Morgrem",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 45, spa: 75, spd: 55, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 12.5,
-},
-
-grimmsnarl: {
-num: 861,
-name: "Grimmsnarl",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 61,
-},
-
-grimmsnarlgmax: {
-num: 861,
-name: "Grimmsnarl-Gmax",
-types: ["Dark", "Fairy"],
-gender: "F",
-baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-obstagoon: {
-num: 862,
-name: "Obstagoon",
-types: ["Dark", "Normal"],
-gender: "F",
-baseStats: {hp: 93, atk: 90, def: 101, spa: 60, spd: 81, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 46,
-},
-
-perrserker: {
-num: 863,
-name: "Perrserker",
-types: ["Normal", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 110, def: 100, spa: 50, spd: 60, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-cursola: {
-num: 864,
-name: "Cursola",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 95, def: 50, spa: 145, spd: 130, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0.4,
-},
-
-sirfetchd: {
-num: 865,
-name: "Sirfetch\u2019d",
-types: ["Fighting", "Flying"],
-gender: "F",
-baseStats: {hp: 62, atk: 135, def: 95, spa: 68, spd: 82, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 117,
-},
-
-mrrime: {
-num: 866,
-name: "Mr. Rime",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 80, atk: 85, def: 75, spa: 110, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 58.2,
-},
-
-runerigus: {
-num: 867,
-name: "Runerigus",
-types: ["Ghost", "Rock"],
-gender: "F",
-baseStats: {hp: 58, atk: 95, def: 145, spa: 50, spd: 105, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 66.6,
-},
-
-milcery: {
-num: 868,
-name: "Milcery",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 45, atk: 40, def: 40, spa: 50, spd: 61, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
-},
-
-alcremie: {
-num: 869,
-name: "Alcremie",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 0.5,
-},
-
-alcremiegmax: {
-num: 869,
-name: "Alcremie-Gmax",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-falinks: {
-num: 870,
-name: "Falinks",
-types: ["Fairy", "Fighting"],
-gender: "F",
-baseStats: {hp: 65, atk: 100, def: 100, spa: 70, spd: 60, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 62,
-},
-
-pincurchin: {
-num: 871,
-name: "Pincurchin",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 48, atk: 101, def: 95, spa: 91, spd: 85, spe: 15},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-snom: {
-num: 872,
-name: "Snom",
-types: ["Bug", "Ice"],
-gender: "F",
-baseStats: {hp: 30, atk: 25, def: 35, spa: 45, spd: 30, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 3.8,
-},
-
-frosmoth: {
-num: 873,
-name: "Frosmoth",
-types: ["Bug", "Ice"],
-gender: "F",
-baseStats: {hp: 70, atk: 65, def: 60, spa: 125, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 42,
-},
-
-stonjourner: {
-num: 874,
-name: "Stonjourner",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 125, def: 135, spa: 20, spd: 20, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 520,
-},
-
-eiscue: {
-num: 875,
-name: "Eiscue",
-types: ["Ghost", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 110, spa: 65, spd: 90, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 89,
-},
-
-eiscuenoice: {
-num: 875,
-name: "Eiscue-Noice",
-types: ["Ghost", "Ice"],
-gender: "F",
-baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 50, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 89,
-requiredAbility: "Ice Face",
-battleOnly: "Eiscue",
-},
-
-indeedee: {
-num: 876,
-name: "Indeedee",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 60, atk: 65, def: 55, spa: 105, spd: 95, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-indeedeef: {
-num: 876,
-name: "Indeedee-F",
-types: ["Ice", "Psychic"],
-gender: "F",
-baseStats: {hp: 70, atk: 55, def: 65, spa: 95, spd: 105, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 28,
-},
-
-morpeko: {
-num: 877,
-name: "Morpeko",
-types: ["Dark", "Electric"],
-gender: "F",
-baseStats: {hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 3,
-},
-
-morpekohangry: {
-num: 877,
-name: "Morpeko-Hangry",
-types: ["Dark", "Electric"],
-gender: "F",
-baseStats: {hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 3,
-requiredAbility: "Hunger Switch",
-battleOnly: "Morpeko",
-},
-
-cufant: {
-num: 878,
-name: "Cufant",
-types: ["Normal", "Steel"],
-gender: "F",
-baseStats: {hp: 72, atk: 80, def: 49, spa: 40, spd: 49, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 100,
-},
-
-copperajah: {
-num: 879,
-name: "Copperajah",
-types: ["Normal", "Steel"],
-gender: "F",
-baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 650,
-},
-
-copperajahgmax: {
-num: 879,
-name: "Copperajah-Gmax",
-types: ["Steel"],
-gender: "F",
-baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-dracozolt: {
-num: 880,
-name: "Dracozolt",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 90, spa: 80, spd: 70, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 190,
-},
-
-arctozolt: {
-num: 881,
-name: "Arctozolt",
-types: ["Electric", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 100, def: 90, spa: 90, spd: 80, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 150,
-},
-
-dracovish: {
-num: 882,
-name: "Dracovish",
-types: ["Dragon", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 90, def: 100, spa: 70, spd: 80, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 215,
-},
-
-arctovish: {
-num: 883,
-name: "Arctovish",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 90, def: 100, spa: 80, spd: 90, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 175,
-},
-
-duraludon: {
-num: 884,
-name: "Duraludon",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 40,
-},
-
-duraludongmax: {
-num: 884,
-name: "Duraludon-Gmax",
-types: ["Dragon", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-dreepy: {
-num: 885,
-name: "Dreepy",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 28, atk: 60, def: 30, spa: 40, spd: 30, spe: 82},
-abilities: {0: "No Ability"},
-weightkg: 2,
-},
-
-drakloak: {
-num: 886,
-name: "Drakloak",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 68, atk: 80, def: 50, spa: 60, spd: 50, spe: 102},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-dragapult: {
-num: 887,
-name: "Dragapult",
-types: ["Dragon", "Ghost"],
-gender: "F",
-baseStats: {hp: 88, atk: 120, def: 75, spa: 100, spd: 75, spe: 142},
-abilities: {0: "No Ability"},
-weightkg: 50,
-},
-
-zacian: {
-num: 888,
-name: "Zacian",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 92, atk: 120, def: 115, spa: 80, spd: 115, spe: 138},
-abilities: {0: "No Ability"},
-weightkg: 110,
-cannotDynamax: true,
-},
-
-zaciancrowned: {
-num: 888,
-name: "Zacian-Crowned",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 92, atk: 150, def: 115, spa: 80, spd: 115, spe: 148},
-abilities: {0: "No Ability"},
-weightkg: 355,
-battleOnly: "Zacian",
-cannotDynamax: true,
-},
-
-zamazenta: {
-num: 889,
-name: "Zamazenta",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 92, atk: 120, def: 115, spa: 80, spd: 115, spe: 138},
-abilities: {0: "No Ability"},
-weightkg: 210,
-cannotDynamax: true,
-},
-
-zamazentacrowned: {
-num: 889,
-name: "Zamazenta-Crowned",
-types: ["Fighting", "Steel"],
-gender: "F",
-baseStats: {hp: 92, atk: 120, def: 140, spa: 80, spd: 140, spe: 128},
-abilities: {0: "No Ability"},
-weightkg: 785,
-battleOnly: "Zamazenta",
-cannotDynamax: true,
-},
-
-eternatus: {
-num: 890,
-name: "Eternatus",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 140, atk: 85, def: 95, spa: 145, spd: 95, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 950,
-cannotDynamax: true,
-},
-
-eternatuseternamax: {
-num: 890,
-name: "Eternatus-Eternamax",
-types: ["Dragon", "Poison"],
-gender: "F",
-baseStats: {hp: 255, atk: 115, def: 250, spa: 125, spd: 250, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 0,
-cannotDynamax: true,
-},
-
-kubfu: {
-num: 891,
-name: "Kubfu",
-types: ["Fighting"],
-gender: "F",
-baseStats: {hp: 60, atk: 90, def: 60, spa: 53, spd: 50, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 12,
-},
-
-urshifu: {
-num: 892,
-name: "Urshifu",
-types: ["Dark", "Fighting"],
-gender: "F",
-baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 105,
-},
-
-urshifurapidstrike: {
-num: 892,
-name: "Urshifu-Rapid-Strike",
-types: ["Fighting", "Ghost"],
-gender: "F",
-baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 105,
-},
-
-urshifugmax: {
-num: 892,
-name: "Urshifu-Gmax",
-types: ["Dark", "Fighting"],
-gender: "F",
-baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 0,
-},
-
-urshifurapidstrikegmax: {
-num: 892,
-name: "Urshifu-Rapid-Strike-Gmax",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
-abilities: {0: "No Ability"},
-weightkg: 105,
-battleOnly: "Urshifu-Rapid-Strike",
-},
-
-zarude: {
-num: 893,
-name: "Zarude",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 70,
-},
-
-zarudedada: {
-num: 893,
-name: "Zarude-Dada",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 70,
-},
-
-regieleki: {
-num: 894,
-name: "Regieleki",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 80, atk: 100, def: 50, spa: 100, spd: 50, spe: 200},
-abilities: {0: "No Ability"},
-weightkg: 145,
-},
-
-regidrago: {
-num: 895,
-name: "Regidrago",
-types: ["Dragon"],
-gender: "F",
-baseStats: {hp: 200, atk: 100, def: 50, spa: 100, spd: 50, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 200,
-},
-
-glastrier: {
-num: 896,
-name: "Glastrier",
-types: ["Ice", "Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 145, def: 130, spa: 65, spd: 110, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 800,
-},
-
-spectrier: {
-num: 897,
-name: "Spectrier",
-types: ["Ghost", "Normal"],
-gender: "F",
-baseStats: {hp: 100, atk: 65, def: 60, spa: 145, spd: 80, spe: 130},
-abilities: {0: "No Ability"},
-weightkg: 44.5,
-},
-
-calyrex: {
-num: 898,
-name: "Calyrex",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 100, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 7.7,
-},
-
-calyrexice: {
-num: 898,
-name: "Calyrex-Ice",
-types: ["Grass", "Ice"],
-gender: "F",
-baseStats: {hp: 100, atk: 165, def: 150, spa: 85, spd: 130, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 809.1,
-},
-
-calyrexshadow: {
-num: 898,
-name: "Calyrex-Shadow",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 100, atk: 85, def: 80, spa: 165, spd: 100, spe: 150},
-abilities: {0: "No Ability"},
-weightkg: 53.6,
-},
-
-wyrdeer: {
-num: 899,
-name: "Wyrdeer",
-types: ["Normal", "Psychic"],
-gender: "F",
-baseStats: {hp: 103, atk: 117, def: 72, spa: 97, spd: 72, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 95.1,
-},
-
-kleavor: {
-num: 900,
-name: "Kleavor",
-types: ["Bug", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 135, def: 95, spa: 45, spd: 70, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 89,
-},
-
-ursaluna: {
-num: 901,
-name: "Ursaluna",
-types: ["Fighting", "Normal"],
-gender: "F",
-baseStats: {hp: 130, atk: 140, def: 105, spa: 45, spd: 80, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 290,
-},
-
-ursalunabloodmoon: {
-num: 901,
-name: "Ursaluna-Bloodmoon",
-types: ["Ground", "Normal"],
-gender: "F",
-baseStats: {hp: 113, atk: 70, def: 120, spa: 135, spd: 65, spe: 52},
-abilities: {0: "Mind's Eye"},
-heightm: 2.7,
-weightkg: 333,
-color: "Brown",
-gen: 9,
-},
-
-
-
-
-
-basculegion: {
-num: 902,
-name: "Basculegion",
-types: ["Ghost", "Ice"],
-gender: "F",
-baseStats: {hp: 120, atk: 112, def: 65, spa: 80, spd: 75, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 110,
-},
-
-basculegionf: {
-num: 902,
-name: "Basculegion-F",
-types: ["Ghost", "Ice"],
-gender: "F",
-baseStats: {hp: 120, atk: 80, def: 65, spa: 112, spd: 75, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 110,
-},
-
-sneasler: {
-num: 903,
-name: "Sneasler",
-types: ["Fighting", "Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 130, def: 60, spa: 40, spd: 80, spe: 120},
-abilities: {0: "No Ability"},
-weightkg: 43,
-},
-
-overqwil: {
-num: 904,
-name: "Overqwil",
-types: ["Dark", "Poison"],
-gender: "F",
-baseStats: {hp: 85, atk: 115, def: 95, spa: 65, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 3.9,
-},
-
-enamorus: {
-num: 905,
-name: "Enamorus",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 74, atk: 115, def: 70, spa: 135, spd: 80, spe: 106},
-abilities: {0: "No Ability"},
-weightkg: 48,
-},
-
-enamorustherian: {
-num: 905,
-name: "Enamorus-Therian",
-types: ["Fairy", "Flying"],
-gender: "F",
-baseStats: {hp: 74, atk: 115, def: 110, spa: 135, spd: 100, spe: 46},
-abilities: {0: "No Ability"},
-weightkg: 48,
-},
-
-sprigatito: {
-num: 906,
-name: "Sprigatito",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 61, def: 54, spa: 45, spd: 45, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 4.1,
-},
-
-floragato: {
-num: 907,
-name: "Floragato",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 61, atk: 80, def: 63, spa: 60, spd: 63, spe: 83},
-abilities: {0: "No Ability"},
-weightkg: 12.2,
-},
-
-meowscarada: {
-num: 908,
-name: "Meowscarada",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 76, atk: 110, def: 70, spa: 81, spd: 70, spe: 123},
-abilities: {0: "No Ability"},
-weightkg: 31.2,
-},
-
-fuecoco: {
-num: 909,
-name: "Fuecoco",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 67, atk: 45, def: 59, spa: 63, spd: 40, spe: 36},
-abilities: {0: "No Ability"},
-weightkg: 9.8,
-},
-
-crocalor: {
-num: 910,
-name: "Crocalor",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 81, atk: 55, def: 78, spa: 90, spd: 58, spe: 49},
-abilities: {0: "No Ability"},
-weightkg: 30.7,
-},
-
-skeledirge: {
-num: 911,
-name: "Skeledirge",
-types: ["Fire", "Ghost"],
-gender: "F",
-baseStats: {hp: 104, atk: 75, def: 100, spa: 110, spd: 75, spe: 66},
-abilities: {0: "No Ability"},
-weightkg: 326.5,
-},
-
-quaxly: {
-num: 912,
-name: "Quaxly",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 55, atk: 65, def: 45, spa: 50, spd: 45, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 6.1,
-},
-
-quaxwell: {
-num: 913,
-name: "Quaxwell",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 65, spa: 65, spd: 60, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 21.5,
-},
-
-quaquaval: {
-num: 914,
-name: "Quaquaval",
-types: ["Fighting", "Water"],
-gender: "F",
-baseStats: {hp: 85, atk: 120, def: 80, spa: 85, spd: 75, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 61.9,
-},
-
-lechonk: {
-num: 915,
-name: "Lechonk",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 54, atk: 45, def: 40, spa: 35, spd: 45, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 10.2,
-},
-
-oinkologne: {
-num: 916,
-name: "Oinkologne",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 110, atk: 100, def: 75, spa: 59, spd: 80, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-oinkolognef: {
-num: 916,
-name: "Oinkologne-F",
-types: ["Fairy", "Ground"],
-gender: "F",
-baseStats: {hp: 115, atk: 90, def: 70, spa: 59, spd: 90, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-tarountula: {
-num: 917,
-name: "Tarountula",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 35, atk: 41, def: 45, spa: 29, spd: 40, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-spidops: {
-num: 918,
-name: "Spidops",
-types: ["Bug", "Ground"],
-gender: "F",
-baseStats: {hp: 65, atk: 85, def: 95, spa: 55, spd: 90, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 16.5,
-},
-
-nymble: {
-num: 919,
-name: "Nymble",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 33, atk: 46, def: 40, spa: 21, spd: 25, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-lokix: {
-num: 920,
-name: "Lokix",
-types: ["Bug", "Fighting"],
-gender: "F",
-baseStats: {hp: 71, atk: 102, def: 78, spa: 52, spd: 55, spe: 92},
-abilities: {0: "No Ability"},
-weightkg: 17.5,
-},
-
-pawmi: {
-num: 921,
-name: "Pawmi",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 45, atk: 50, def: 20, spa: 40, spd: 25, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 2.5,
-},
-
-pawmo: {
-num: 922,
-name: "Pawmo",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 60, atk: 75, def: 40, spa: 50, spd: 40, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-pawmot: {
-num: 923,
-name: "Pawmot",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 70, atk: 115, def: 70, spa: 70, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 41,
-},
-
-tandemaus: {
-num: 924,
-name: "Tandemaus",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 50, atk: 50, def: 45, spa: 40, spd: 45, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-maushold: {
-num: 925,
-name: "Maushold",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 74, atk: 75, def: 70, spa: 65, spd: 75, spe: 111},
-abilities: {0: "No Ability"},
-weightkg: 2.3,
-},
-
-mausholdfour: {
-num: 925,
-name: "Maushold-Four",
-types: ["Fairy", "Normal"],
-gender: "F",
-baseStats: {hp: 74, atk: 75, def: 70, spa: 65, spd: 75, spe: 111},
-abilities: {0: "No Ability"},
-weightkg: 2.8,
-},
-
-fidough: {
-num: 926,
-name: "Fidough",
-types: ["Fairy"],
-gender: "F",
-baseStats: {hp: 37, atk: 55, def: 70, spa: 30, spd: 55, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 10.9,
-},
-
-dachsbun: {
-num: 927,
-name: "Dachsbun",
-types: ["Fairy", "Fire"],
-gender: "F",
-baseStats: {hp: 57, atk: 80, def: 115, spa: 50, spd: 80, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 14.9,
-},
-
-smoliv: {
-num: 928,
-name: "Smoliv",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 41, atk: 35, def: 45, spa: 58, spd: 51, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-dolliv: {
-num: 929,
-name: "Dolliv",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 52, atk: 53, def: 60, spa: 78, spd: 78, spe: 33},
-abilities: {0: "No Ability"},
-weightkg: 11.9,
-},
-
-arboliva: {
-num: 930,
-name: "Arboliva",
-types: ["Grass", "Normal"],
-gender: "F",
-baseStats: {hp: 78, atk: 69, def: 90, spa: 125, spd: 109, spe: 39},
-abilities: {0: "No Ability"},
-weightkg: 48.2,
-},
-
-squawkabilly: {
-num: 931,
-name: "Squawkabilly",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 100, def: 52, spa: 45, spd: 53, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 2.4,
-},
-
-squawkabillyblue: {
-num: 931,
-name: "Squawkabilly-Blue",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 100, def: 52, spa: 45, spd: 53, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 2.4,
-},
-
-squawkabillyyellow: {
-num: 931,
-name: "Squawkabilly-Yellow",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 100, def: 52, spa: 45, spd: 53, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 2.4,
-},
-
-squawkabillywhite: {
-num: 931,
-name: "Squawkabilly-White",
-types: ["Flying", "Normal"],
-gender: "F",
-baseStats: {hp: 85, atk: 100, def: 52, spa: 45, spd: 53, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 2.4,
-},
-
-nacli: {
-num: 932,
-name: "Nacli",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 75, spa: 35, spd: 35, spe: 25},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-naclstack: {
-num: 933,
-name: "Naclstack",
-types: ["Ice", "Rock"],
-gender: "F",
-baseStats: {hp: 60, atk: 60, def: 100, spa: 35, spd: 65, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 105,
-},
-
-garganacl: {
-num: 934,
-name: "Garganacl",
-types: ["Ice", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 100, def: 130, spa: 45, spd: 90, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 240,
-},
-
-charcadet: {
-num: 935,
-name: "Charcadet",
-types: ["Fire"],
-gender: "F",
-baseStats: {hp: 40, atk: 50, def: 40, spa: 50, spd: 40, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 10.5,
-},
-
-armarouge: {
-num: 936,
-name: "Armarouge",
-types: ["Fire", "Psychic"],
-gender: "F",
-baseStats: {hp: 85, atk: 60, def: 100, spa: 125, spd: 80, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 85,
-},
-
-ceruledge: {
-num: 937,
-name: "Ceruledge",
-types: ["Fire", "Steel"],
-gender: "F",
-baseStats: {hp: 75, atk: 125, def: 80, spa: 60, spd: 100, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 62,
-},
-
-tadbulb: {
-num: 938,
-name: "Tadbulb",
-types: ["Electric"],
-gender: "F",
-baseStats: {hp: 61, atk: 31, def: 41, spa: 59, spd: 35, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 0.4,
-},
-
-bellibolt: {
-num: 939,
-name: "Bellibolt",
-types: ["Electric", "Poison"],
-gender: "F",
-baseStats: {hp: 109, atk: 64, def: 91, spa: 103, spd: 83, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 113,
-},
-
-wattrel: {
-num: 940,
-name: "Wattrel",
-types: ["Electric", "Flying"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 35, spa: 55, spd: 40, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 3.6,
-},
-
-kilowattrel: {
-num: 941,
-name: "Kilowattrel",
-types: ["Electric", "Flying"],
-gender: "F",
-baseStats: {hp: 70, atk: 70, def: 60, spa: 105, spd: 60, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 38.6,
-},
-
-maschiff: {
-num: 942,
-name: "Maschiff",
-types: ["Dark"],
-gender: "F",
-baseStats: {hp: 60, atk: 78, def: 60, spa: 40, spd: 51, spe: 51},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-mabosstiff: {
-num: 943,
-name: "Mabosstiff",
-types: ["Dark", "Ground"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 90, spa: 60, spd: 70, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 61,
-},
-
-shroodle: {
-num: 944,
-name: "Shroodle",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 40, atk: 65, def: 35, spa: 40, spd: 35, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 0.7,
-},
-
-grafaiai: {
-num: 945,
-name: "Grafaiai",
-types: ["Normal", "Poison"],
-gender: "F",
-baseStats: {hp: 63, atk: 95, def: 65, spa: 80, spd: 72, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 27.2,
-},
-
-bramblin: {
-num: 946,
-name: "Bramblin",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 40, atk: 65, def: 30, spa: 45, spd: 35, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 0.6,
-},
-
-brambleghast: {
-num: 947,
-name: "Brambleghast",
-types: ["Ghost", "Grass"],
-gender: "F",
-baseStats: {hp: 55, atk: 115, def: 70, spa: 80, spd: 70, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 6,
-},
-
-toedscool: {
-num: 948,
-name: "Toedscool",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 33,
-},
-
-toedscruel: {
-num: 949,
-name: "Toedscruel",
-types: ["Grass", "Ground"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 58,
-},
-
-klawf: {
-num: 950,
-name: "Klawf",
-types: ["Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 100, def: 115, spa: 35, spd: 55, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 79,
-},
-
-capsakid: {
-num: 951,
-name: "Capsakid",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 52, atk: 62, def: 40, spa: 62, spd: 40, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 3,
-},
-
-scovillain: {
-num: 952,
-name: "Scovillain",
-types: ["Fire", "Grass"],
-gender: "F",
-baseStats: {hp: 65, atk: 108, def: 65, spa: 108, spd: 65, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-rellor: {
-num: 953,
-name: "Rellor",
-types: ["Bug"],
-gender: "F",
-baseStats: {hp: 41, atk: 50, def: 60, spa: 31, spd: 58, spe: 30},
-abilities: {0: "No Ability"},
-weightkg: 1,
-},
-
-rabsca: {
-num: 954,
-name: "Rabsca",
-types: ["Bug", "Psychic"],
-gender: "F",
-baseStats: {hp: 75, atk: 50, def: 85, spa: 115, spd: 100, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 3.5,
-},
-
-flittle: {
-num: 955,
-name: "Flittle",
-types: ["Psychic"],
-gender: "F",
-baseStats: {hp: 30, atk: 35, def: 30, spa: 55, spd: 30, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 1.5,
-},
-
-espathra: {
-num: 956,
-name: "Espathra",
-types: ["Ground", "Psychic"],
-gender: "F",
-baseStats: {hp: 95, atk: 60, def: 60, spa: 101, spd: 60, spe: 105},
-abilities: {0: "No Ability"},
-weightkg: 90,
-},
-
-tinkatink: {
-num: 957,
-name: "Tinkatink",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 64, spe: 58},
-abilities: {0: "No Ability"},
-weightkg: 8.9,
-},
-
-tinkatuff: {
-num: 958,
-name: "Tinkatuff",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 65, atk: 55, def: 55, spa: 45, spd: 82, spe: 78},
-abilities: {0: "No Ability"},
-weightkg: 59.1,
-},
-
-tinkaton: {
-num: 959,
-name: "Tinkaton",
-types: ["Fairy", "Steel"],
-gender: "F",
-baseStats: {hp: 85, atk: 75, def: 77, spa: 70, spd: 105, spe: 94},
-abilities: {0: "No Ability"},
-weightkg: 112.8,
-},
-
-wiglett: {
-num: 960,
-name: "Wiglett",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 25, spe: 95},
-abilities: {0: "No Ability"},
-weightkg: 1.8,
-},
-
-wugtrio: {
-num: 961,
-name: "Wugtrio",
-types: ["Rock", "Water"],
-gender: "F",
-baseStats: {hp: 40, atk: 105, def: 50, spa: 50, spd: 70, spe: 125},
-abilities: {0: "No Ability"},
-weightkg: 5.4,
-},
-
-bombirdier: {
-num: 962,
-name: "Bombirdier",
-types: ["Flying", "Rock"],
-gender: "F",
-baseStats: {hp: 70, atk: 103, def: 85, spa: 60, spd: 85, spe: 82},
-abilities: {0: "No Ability"},
-weightkg: 42.9,
-},
-
-finizen: {
-num: 963,
-name: "Finizen",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 70, atk: 45, def: 40, spa: 45, spd: 40, spe: 75},
-abilities: {0: "No Ability"},
-weightkg: 60.2,
-},
-
-palafin: {
-num: 964,
-name: "Palafin",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 70, def: 72, spa: 53, spd: 62, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 60.2,
-},
-
-palafinhero: {
-num: 964,
-name: "Palafin-Hero",
-types: ["Water"],
-gender: "F",
-baseStats: {hp: 100, atk: 140, def: 80, spa: 90, spd: 75, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 97.4,
-requiredAbility: "Zero to Hero",
-battleOnly: "Palafin",
-},
-
-varoom: {
-num: 965,
-name: "Varoom",
-types: ["Poison", "Steel"],
-gender: "F",
-baseStats: {hp: 45, atk: 70, def: 63, spa: 30, spd: 45, spe: 47},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-revavroom: {
-num: 966,
-name: "Revavroom",
-types: ["Poison", "Steel"],
-gender: "F",
-baseStats: {hp: 80, atk: 119, def: 90, spa: 54, spd: 67, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-cyclizar: {
-num: 967,
-name: "Cyclizar",
-types: ["Dragon", "Normal"],
-gender: "F",
-baseStats: {hp: 70, atk: 95, def: 65, spa: 85, spd: 65, spe: 121},
-abilities: {0: "No Ability"},
-weightkg: 63,
-},
-
-orthworm: {
-num: 968,
-name: "Orthworm",
-types: ["Bug", "Steel"],
-gender: "F",
-baseStats: {hp: 70, atk: 85, def: 145, spa: 60, spd: 55, spe: 65},
-abilities: {0: "No Ability"},
-weightkg: 310,
-},
-
-glimmet: {
-num: 969,
-name: "Glimmet",
-types: ["Poison", "Rock"],
-gender: "F",
-baseStats: {hp: 48, atk: 35, def: 42, spa: 105, spd: 60, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-glimmora: {
-num: 970,
-name: "Glimmora",
-types: ["Poison", "Rock"],
-gender: "F",
-baseStats: {hp: 83, atk: 55, def: 90, spa: 130, spd: 81, spe: 86},
-abilities: {0: "No Ability"},
-weightkg: 45,
-},
-
-greavard: {
-num: 971,
-name: "Greavard",
-types: ["Ghost", "Ground"],
-gender: "F",
-baseStats: {hp: 50, atk: 61, def: 60, spa: 30, spd: 55, spe: 34},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-houndstone: {
-num: 972,
-name: "Houndstone",
-types: ["Ghost", "Ground"],
-gender: "F",
-baseStats: {hp: 72, atk: 101, def: 100, spa: 50, spd: 97, spe: 68},
-abilities: {0: "No Ability"},
-weightkg: 15,
-},
-
-flamigo: {
-num: 973,
-name: "Flamigo",
-types: ["Flying", "Ground"],
-gender: "F",
-baseStats: {hp: 82, atk: 115, def: 74, spa: 75, spd: 64, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 37,
-},
-
-cetoddle: {
-num: 974,
-name: "Cetoddle",
-types: ["Ice"],
-gender: "F",
-baseStats: {hp: 108, atk: 68, def: 45, spa: 30, spd: 40, spe: 43},
-abilities: {0: "No Ability"},
-weightkg: 45,
-},
-
-cetitan: {
-num: 975,
-name: "Cetitan",
-types: ["Ground", "Ice"],
-gender: "F",
-baseStats: {hp: 170, atk: 113, def: 65, spa: 45, spd: 55, spe: 73},
-abilities: {0: "No Ability"},
-weightkg: 700,
-},
-
-veluza: {
-num: 976,
-name: "Veluza",
-types: ["Psychic", "Water"],
-gender: "F",
-baseStats: {hp: 90, atk: 102, def: 73, spa: 78, spd: 65, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 90,
-},
-
-dondozo: {
-num: 977,
-name: "Dondozo",
-types: ["Dark", "Ice"],
-gender: "F",
-baseStats: {hp: 150, atk: 100, def: 115, spa: 65, spd: 65, spe: 35},
-abilities: {0: "No Ability"},
-weightkg: 220,
-},
-
-tatsugiri: {
-num: 978,
-name: "Tatsugiri",
-types: ["Dragon", "Water"],
-gender: "F",
-baseStats: {hp: 68, atk: 50, def: 60, spa: 120, spd: 95, spe: 82},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-annihilape: {
-num: 979,
-name: "Annihilape",
-types: ["Fighting", "Ghost"],
-gender: "F",
-baseStats: {hp: 110, atk: 115, def: 80, spa: 50, spd: 90, spe: 90},
-abilities: {0: "No Ability"},
-weightkg: 56,
-},
-
-clodsire: {
-num: 980,
-name: "Clodsire",
-types: ["Ground", "Poison"],
-gender: "F",
-baseStats: {hp: 130, atk: 75, def: 60, spa: 45, spd: 100, spe: 20},
-abilities: {0: "No Ability"},
-weightkg: 223,
-},
-
-farigiraf: {
-num: 981,
-name: "Farigiraf",
-types: ["Normal", "Psychic"],
-gender: "F",
-baseStats: {hp: 120, atk: 90, def: 70, spa: 110, spd: 70, spe: 60},
-abilities: {0: "No Ability"},
-weightkg: 160,
-},
-
-dudunsparce: {
-num: 982,
-name: "Dudunsparce",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 125, atk: 100, def: 80, spa: 85, spd: 75, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 39.2,
-},
-
-dudunsparcethreesegment: {
-num: 982,
-name: "Dudunsparce-Three-Segment",
-types: ["Bug", "Normal"],
-gender: "F",
-baseStats: {hp: 125, atk: 100, def: 80, spa: 85, spd: 75, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 47.4,
-},
-
-kingambit: {
-num: 983,
-name: "Kingambit",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 100, atk: 135, def: 120, spa: 60, spd: 85, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 120,
-},
-
-greattusk: {
-num: 984,
-name: "Great Tusk",
-types: ["Ground", "Rock"],
-gender: "F",
-baseStats: {hp: 115, atk: 131, def: 131, spa: 53, spd: 53, spe: 87},
-abilities: {0: "No Ability"},
-weightkg: 320,
-},
-
-screamtail: {
-num: 985,
-name: "Scream Tail",
-types: ["Dragon", "Fairy"],
-gender: "F",
-baseStats: {hp: 115, atk: 65, def: 99, spa: 65, spd: 115, spe: 111},
-abilities: {0: "No Ability"},
-weightkg: 8,
-},
-
-brutebonnet: {
-num: 986,
-name: "Brute Bonnet",
-types: ["Ghost", "Poison"],
-gender: "F",
-baseStats: {hp: 111, atk: 127, def: 99, spa: 79, spd: 99, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 21,
-},
-
-fluttermane: {
-num: 987,
-name: "Flutter Mane",
-types: ["Fairy", "Ghost"],
-gender: "F",
-baseStats: {hp: 55, atk: 55, def: 55, spa: 135, spd: 135, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 4,
-},
-
-slitherwing: {
-num: 988,
-name: "Slither Wing",
-types: ["Bug", "Fighting"],
-gender: "F",
-baseStats: {hp: 85, atk: 135, def: 79, spa: 85, spd: 105, spe: 81},
-abilities: {0: "No Ability"},
-weightkg: 92,
-},
-
-sandyshocks: {
-num: 989,
-name: "Sandy Shocks",
-types: ["Electric", "Ground"],
-gender: "F",
-baseStats: {hp: 85, atk: 81, def: 97, spa: 121, spd: 85, spe: 101},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-irontreads: {
-num: 990,
-name: "Iron Treads",
-types: ["Ground", "Steel"],
-gender: "F",
-baseStats: {hp: 90, atk: 112, def: 120, spa: 72, spd: 70, spe: 106},
-abilities: {0: "No Ability"},
-weightkg: 240,
-},
-
-ironbundle: {
-num: 991,
-name: "Iron Bundle",
-types: ["Ice", "Water"],
-gender: "F",
-baseStats: {hp: 56, atk: 80, def: 114, spa: 124, spd: 60, spe: 136},
-abilities: {0: "No Ability"},
-weightkg: 11,
-},
-
-ironhands: {
-num: 992,
-name: "Iron Hands",
-types: ["Electric", "Fighting"],
-gender: "F",
-baseStats: {hp: 154, atk: 140, def: 108, spa: 50, spd: 68, spe: 50},
-abilities: {0: "No Ability"},
-weightkg: 380.7,
-},
-
-ironjugulis: {
-num: 993,
-name: "Iron Jugulis",
-types: ["Dark", "Steel"],
-gender: "F",
-baseStats: {hp: 94, atk: 80, def: 86, spa: 122, spd: 80, spe: 108},
-abilities: {0: "No Ability"},
-weightkg: 111,
-},
-
-ironmoth: {
-num: 994,
-name: "Iron Moth",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 80, atk: 70, def: 60, spa: 140, spd: 110, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 36,
-},
-
-ironthorns: {
-num: 995,
-name: "Iron Thorns",
-types: ["Electric", "Rock"],
-gender: "F",
-baseStats: {hp: 100, atk: 134, def: 110, spa: 70, spd: 84, spe: 72},
-abilities: {0: "No Ability"},
-weightkg: 303,
-},
-
-frigibax: {
-num: 996,
-name: "Frigibax",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 65, atk: 75, def: 45, spa: 35, spd: 45, spe: 55},
-abilities: {0: "No Ability"},
-weightkg: 17,
-},
-
-arctibax: {
-num: 997,
-name: "Arctibax",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 90, atk: 95, def: 66, spa: 45, spd: 65, spe: 62},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-baxcalibur: {
-num: 998,
-name: "Baxcalibur",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 115, atk: 145, def: 92, spa: 75, spd: 86, spe: 87},
-abilities: {0: "No Ability"},
-weightkg: 210,
-},
-
-gimmighoul: {
-num: 999,
-name: "Gimmighoul",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 70, spa: 75, spd: 70, spe: 10},
-abilities: {0: "No Ability"},
-weightkg: 5,
-},
-
-gimmighoulroaming: {
-num: 999,
-name: "Gimmighoul-Roaming",
-types: ["Ghost"],
-gender: "F",
-baseStats: {hp: 45, atk: 30, def: 25, spa: 75, spd: 45, spe: 80},
-abilities: {0: "No Ability"},
-weightkg: 0.1,
-},
-
-gholdengo: {
-num: 1000,
-name: "Gholdengo",
-types: ["Ghost", "Steel"],
-gender: "F",
-baseStats: {hp: 87, atk: 60, def: 95, spa: 133, spd: 91, spe: 84},
-abilities: {0: "No Ability"},
-weightkg: 30,
-},
-
-wochien: {
-num: 1001,
-name: "Wo-Chien",
-types: ["Dark", "Grass"],
-gender: "F",
-baseStats: {hp: 85, atk: 85, def: 100, spa: 95, spd: 135, spe: 70},
-abilities: {0: "No Ability"},
-weightkg: 74.2,
-},
-
-chienpao: {
-num: 1002,
-name: "Chien-Pao",
-types: ["Dark", "Ice"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 80, spa: 90, spd: 65, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 152.2,
-},
-
-tinglu: {
-num: 1003,
-name: "Ting-Lu",
-types: ["Ground", "Steel"],
-gender: "F",
-baseStats: {hp: 155, atk: 110, def: 125, spa: 55, spd: 80, spe: 45},
-abilities: {0: "No Ability"},
-weightkg: 699.7,
-},
-
-chiyu: {
-num: 1004,
-name: "Chi-Yu",
-types: ["Dark", "Fire"],
-gender: "F",
-baseStats: {hp: 55, atk: 80, def: 80, spa: 135, spd: 120, spe: 100},
-abilities: {0: "No Ability"},
-weightkg: 4.9,
-},
-
-roaringmoon: {
-num: 1005,
-name: "Roaring Moon",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 105, atk: 139, def: 71, spa: 55, spd: 101, spe: 119},
-abilities: {0: "No Ability"},
-weightkg: 380,
-},
-
-ironvaliant: {
-num: 1006,
-name: "Iron Valiant",
-types: ["Fairy", "Fighting"],
-gender: "F",
-baseStats: {hp: 74, atk: 130, def: 90, spa: 120, spd: 60, spe: 116},
-abilities: {0: "No Ability"},
-weightkg: 35,
-},
-
-koraidon: {
-num: 1007,
-name: "Koraidon",
-types: ["Dragon", "Fighting"],
-gender: "F",
-baseStats: {hp: 100, atk: 135, def: 115, spa: 85, spd: 100, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 303,
-},
-
-miraidon: {
-num: 1008,
-name: "Miraidon",
-types: ["Dragon", "Electric"],
-gender: "F",
-baseStats: {hp: 100, atk: 85, def: 100, spa: 135, spd: 115, spe: 135},
-abilities: {0: "No Ability"},
-weightkg: 240,
-},
-
-walkingwake: {
-num: 1009,
-name: "Walking Wake",
-types: ["Dragon", "Ice"],
-gender: "F",
-baseStats: {hp: 99, atk: 83, def: 91, spa: 125, spd: 83, spe: 109},
-abilities: {0: "No Ability"},
-weightkg: 280,
-},
-ironleaves: {
-num: 1010,
-name: "Iron Leaves",
-types: ["Grass", "Psychic"],
-gender: "F",
-baseStats: {hp: 90, atk: 130, def: 88, spa: 70, spd: 108, spe: 104},
-abilities: {0: "No Ability"},
-weightkg: 125,
-},
-
-dipplin: {
-num: 1011,
-name: "Dipplin",
-types: ["Bug", "Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 80, def: 110, spa: 95, spd: 80, spe: 40},
-abilities: {0: "No Ability"},
-weightkg: 4.4,
-color: "Green",
-},
-
-poltchageist: {
-num: 1012,
-name: "Poltchageist",
-types: ["Grass", "Ghost"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
-abilities: {0: "No Ability"},
-
-weightkg: 1.1,
-color: "Green",
-},
-
-poltchageistartisan: {
-num: 1012,
-name: "Poltchageist-Artisan",
-types: ["Grass", "Ghost"],
-gender: "F",
-baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
-abilities: {0: "No Ability"},
-
-weightkg: 1.1,
-color: "Green",
-},
-
-sinistcha: {
-num: 1013,
-name: "Sinistcha",
-types: ["Grass", "Ghost"],
-gender: "F",
-baseStats: {hp: 71, atk: 60, def: 106, spa: 121, spd: 80, spe: 70},
-abilities: {0: "No Ability"},
-
-weightkg: 2.2,
-color: "Green",
-},
-
-sinistchamasterpiece: {
-num: 1013,
-name: "Sinistcha-Masterpiece",
-types: ["Grass", "Ghost"],
-gender: "F",
-baseStats: {hp: 71, atk: 60, def: 106, spa: 121, spd: 80, spe: 70},
-abilities: {0: "No Ability"},
-
-weightkg: 2.2,
-color: "Green",
-},
-
-okidogi: {
-num: 1014,
-name: "Okidogi",
-types: ["Grass", "Poison"],
-gender: "F",
-baseStats: {hp: 88, atk: 128, def: 115, spa: 58, spd: 86, spe: 80},
-abilities: {0: "No Ability"},
-
-weightkg: 92,
-color: "Black",
-},
-
-munkidori: {
-num: 1015,
-name: "Munkidori",
-types: ["Ice", "Poison"],
-gender: "F",
-baseStats: {hp: 88, atk: 75, def: 66, spa: 130, spd: 90, spe: 106},
-abilities: {0: "No Ability"},
-
-weightkg: 12.2,
-color: "Black",
-},
-
-fezandipiti: {
-num: 1016,
-name: "Fezandipiti",
-types: ["Fire", "Poison"],
-gender: "F",
-baseStats: {hp: 88, atk: 91, def: 82, spa: 70, spd: 125, spe: 99},
-abilities: {0: "No Ability"},
-weightkg: 30.1,
-},
-
-ogerpon: {
-num: 1017,
-name: "Ogerpon",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponwellspring: {
-num: 1017,
-name: "Ogerpon-Wellspring",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponhearthflame: {
-num: 1017,
-name: "Ogerpon-Hearthflame",
-types: ["Grass", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponcornerstone: {
-num: 1017,
-name: "Ogerpon-Cornerstone",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerpontealtera: {
-num: 1017,
-name: "Ogerpon-Teal-Tera",
-types: ["Grass"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponwellspringtera: {
-num: 1017,
-name: "Ogerpon-Wellspring-Tera",
-types: ["Grass", "Water"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponhearthflametera: {
-num: 1017,
-name: "Ogerpon-Hearthflame-Tera",
-types: ["Grass", "Fire"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-ogerponcornerstonetera: {
-num: 1017,
-name: "Ogerpon-Cornerstone-Tera",
-types: ["Grass", "Rock"],
-gender: "F",
-baseStats: {hp: 80, atk: 120, def: 84, spa: 60, spd: 96, spe: 110},
-abilities: {0: "No Ability"},
-weightkg: 39.8,
-},
-
-archaludon: {
-num: 1018,
-name: "Archaludon",
-types: ["Steel", "Dragon"],
-gender: "F",
-baseStats: {hp: 90, atk: 105, def: 130, spa: 125, spd: 65, spe: 85},
-abilities: {0: "No Ability"},
-weightkg: 60,
-},
-
-hydrapple: {
-num: 1019,
-name: "Hydrapple",
-types: ["Dark", "Dragon"],
-gender: "F",
-baseStats: {hp: 106, atk: 80, def: 110, spa: 120, spd: 80, spe: 44},
-abilities: {0: "No Ability"},
-weightkg: 93,
-},
-
-gougingfire: {
-num: 1020,
-name: "Gouging Fire",
-types: ["Fire", "Dragon"],
-gender: "F",
-baseStats: {hp: 105, atk: 115, def: 121, spa: 65, spd: 93, spe: 91},
-abilities: {0: "No Ability"},
-weightkg: 590,
-},
-
-ragingbolt: {
-num: 1021,
-name: "Raging Bolt",
-types: ["Electric", "Dragon"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 480,
-},
-
-ironboulder: {
-num: 1022,
-name: "Iron Boulder",
-types: ["Rock", "Psychic"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 162.5,
-},
-
-ironcrown: {
-num: 1023,
-name: "Iron Crown",
-types: ["Steel", "Psychic"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 156,
-},
-
-terapagos: {
-num: 1024,
-name: "Terapagos",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 6.5,
-},
-
-terapagosterastal: {
-num: 1024,
-name: "Terapagos-Terastal",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 16,
-},
-
-terapagosstellar: {
-num: 1024,
-name: "Terapagos-Stellar",
-types: ["???"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 77,
-},
-
-pecharunt: {
-num: 1025,
-name: "Pecharunt",
-types: ["Poison", "Ghost"],
-gender: "F",
-baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-abilities: {0: "No Ability"},
-weightkg: 0.3,
+export const Moves: {[moveid: string]: MoveData} = {
+absorb: {
+accuracy: 95,
+basePower: 10,
+category: "Special",
+name: "Absorb",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, heal: 1},
+onHit(target, source) {
+if (target.boosts.spa === -6) return false;
+const spa = target.getStat('spa', false, true);
+const success = this.boost({spa: -1}, target, source, null, false, true);
+return !!(this.heal(spa, source, target) || success);
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+accelerock: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Accelerock",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+acid: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Acid",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondaries: [
+{
+chance: 50,
+status: 'brn',
+}, {
+chance: 50,
+boosts: {
+spd: -1,
+},
+},
+],
+target: "allAdjacentFoes",
+type: "Poison",
+},
+
+acidarmor: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Acid Armor",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+def: 2,
+},
+secondary: null,
+target: "self",
+type: "Poison",
+},
+
+aciddownpour: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Acid Downpour",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+weather: 'RainDance',
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "allAdjacent",
+type: "Poison",
+},
+
+acidspray: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Acid Spray",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondaries: [
+{
+chance: 50,
+status: 'brn',
+}, {
+chance: 50,
+boosts: {
+spd: -2,
+},
+},
+],
+target: "any",
+type: "Poison",
+},
+
+acrobatics: {
+accuracy: 95,
+basePower: 20,
+basePowerCallback(pokemon, target, move) {
+if (!pokemon.item) {
+this.debug("BP doubled for no item");
+return move.basePower * 5.5;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Acrobatics",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+acupressure: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Acupressure",
+pp: 0.625,
+priority: 0,
+flags: {},
+onHit(target) {
+const stats: BoostID[] = [];
+let stat: BoostID;
+for (stat in target.boosts) {
+if (target.boosts[stat] < 6) {
+stats.push(stat);
+}
+}
+if (stats.length) {
+const randomStat = this.sample(stats);
+const boost: SparseBoostsTable = {};
+boost[randomStat] = 2;
+this.boost(boost);
+} else {
+return false;
+}
+},
+secondary: null,
+target: "adjacentAllyOrSelf",
+type: "Normal",
+},
+
+aerialace: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Aerial Ace",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1, slicing: 1},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+aeroblast: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Aeroblast",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, distance: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+afteryou: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "After You",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1},
+onHit(target) {
+if (target.side.active.length < 2) return false; // fails in singles
+const action = this.queue.willMove(target);
+if (action) {
+this.queue.prioritizeAction(action);
+this.add('-activate', target, 'move: After You');
+} else {
+return false;
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+agility: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Agility",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spe: 2,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+aircutter: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Air Cutter",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1, wind: 1},
+critRatio: 2,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Flying",
+},
+
+airslash: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Air Slash",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, distance: 1, slicing: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Flying",
+},
+
+alloutpummeling: {
+accuracy: 85,
+basePower: 20,
+category: "Physical",
+name: "All Out Pummeling",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+multihit: [1, 15],
+multiaccuracy: 75,
+secondary: null,
+target: "randomNormal",
+type: "Fighting",
+},
+
+allyswitch: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Ally Switch",
+pp: 0.625,
+priority: 5,
+flags: {},
+stallingMove: true,
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onTryHit(source) {
+if (source.side.active.length === 1) return false;
+if (source.side.active.length === 3 && source.position === 1) return false;
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+const newPosition = (pokemon.position === 0 ? pokemon.side.active.length - 1 : 0);
+if (!pokemon.side.active[newPosition]) return false;
+if (pokemon.side.active[newPosition].fainted) return false;
+this.swapPosition(pokemon, newPosition, '[from] move: Ally Switch');
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+amnesia: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Amnesia",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 2,
+def: 2,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+anchorshot: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Anchor Shot",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
+type: "Steel",
+},
+
+ancientpower: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Ancient Power",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+self: {
+boosts: {
+atk: 1,
+def: 1,
+spa: 1,
+spd: 1,
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Rock",
+},
+
+appleacid: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Apple Acid",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 25,
+status: 'brn',
+}, {
+chance: 50,
+boosts: {
+def: -1,
+spd: -1,
+},
+},
+],
+target: "any",
+type: "Grass",
+},
+
+aquacutter: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Aqua Cutter",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Grass') return 1;
+},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+aquajet: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Aqua Jet",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+aquaring: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Aqua Ring",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'aquaring',
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Aqua Ring');
+},
+onResidualOrder: 6,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 6.666);
+},
+},
+secondary: null,
+target: "self",
+type: "Water",
+},
+
+aquastep: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Aqua Step",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Water",
+},
+
+aquatail: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Aqua Tail",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "allAdjacentFoes",
+type: "Water",
+},
+
+armorcannon: {
+accuracy: 85,
+basePower: 115,
+category: "Special",
+name: "Armor Cannon",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+self: {
+boosts: {
+def: -1,
+spd: -1,
+},
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+armthrust: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Arm Thrust",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+aromatherapy: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Aromatherapy",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, distance: 1},
+onHit(target, source, move) {
+this.add('-activate', source, 'move: Aromatherapy');
+let success = false;
+const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+for (const ally of allies) {
+if (ally !== source && ((ally.hasAbility('sapsipper')) ||
+(ally.volatiles['substitute'] && !move.infiltrates))) {
+continue;
+}
+if (ally.cureStatus()) success = true;
+}
+return success;
+},
+target: "allyTeam",
+type: "Grass",
+},
+
+aromaticmist: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Aromatic Mist",
+pp: 1.25,
+priority: 0,
+flags: {bypasssub: 1},
+selfBoost: {
+chance: 75,
+spd: 1,
+def: 1,
+},
+secondary: null,
+target: "allAdjacent",
+type: "Fairy",
+},
+
+assist: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Assist",
+pp: 0.625,
+priority: 0,
+flags: {},
+onHit(target) {
+const moves = [];
+for (const pokemon of target.side.pokemon) {
+if (pokemon === target) continue;
+for (const moveSlot of pokemon.moveSlots) {
+const moveid = moveSlot.id;
+const move = this.dex.moves.get(moveid);
+if (move.flags['noassist'] || move.isZ || move.isMax) {
+continue;
+}
+moves.push(moveid);
+}
+}
+let randomMove = '';
+if (moves.length) randomMove = this.sample(moves);
+if (!randomMove) {
+return false;
+}
+this.actions.useMove(randomMove, target);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+assurance: {
+accuracy: 95,
+basePower: 60,
+basePowerCallback(pokemon, target, move) {
+if (target.hurtThisTurn) {
+this.debug('BP doubled on damaged target');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Assurance",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+astonish: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Astonish",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Dark') return 1;
+},
+secondary: {
+chance: 50,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Ghost",
+},
+
+astralbarrage: {
+accuracy: 85,
+basePower: 120,
+category: "Special",
+name: "Astral Barrage",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ghost",
+},
+
+attackorder: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Attack Order",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+attract: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Attract",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+secondary: {
+chance: 50,
+volatileStatus: 'confusion',
+},
+target: "randomNormal",
+type: "Normal",
+},
+
+aurasphere: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Aura Sphere",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+secondary: null,
+selfBoost: {
+accuracy: 1,
+},
+target: "any",
+type: "Fighting",
+},
+
+aurawheel: {
+accuracy: 85,
+basePower: 110,
+category: "Physical",
+name: "Aura Wheel",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+onTry(source) {
+if (source.species.baseSpecies === 'Morpeko') {
+return;
+}
+this.attrLastMove('[still]');
+this.add('-fail', source, 'move: Aura Wheel');
+this.hint("Only a Pokemon whose form is Morpeko or Morpeko-Hangry can use this move.");
+return null;
+},
+onModifyType(move, pokemon) {
+if (pokemon.species.name === 'Morpeko-Hangry') {
+move.type = 'Dark';
+} else {
+move.type = 'Electric';
+}
+},
+target: "any",
+type: "Electric",
+},
+
+aurorabeam: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Aurora Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Ice",
+},
+
+auroraveil: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Aurora Veil",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'auroraveil',
+onTry() {
+return this.field.isWeather(['hail', 'snow']);
+},
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasItem('lightclay')) {
+return 8;
+}
+return 5;
+},
+onAnyModifyDamage(damage, source, target, move) {
+if (target !== source && this.effectState.target.hasAlly(target)) {
+if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
+(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
+return;
+}
+if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+this.debug('Aurora Veil weaken');
+if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+return this.chainModify(0.5);
+}
+}
+},
+onSideStart(side) {
+this.add('-sidestart', side, 'move: Aurora Veil');
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 10,
+onSideEnd(side) {
+this.add('-sideend', side, 'move: Aurora Veil');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Ice",
+},
+
+autotomize: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Autotomize",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onTryHit(pokemon) {
+const hasContrary = pokemon.hasAbility('contrary');
+if ((!hasContrary && pokemon.boosts.spe === 6) || (hasContrary && pokemon.boosts.spe === -6)) {
+return false;
+}
+},
+boosts: {
+spe: 2,
+},
+onHit(pokemon) {
+if (pokemon.weighthg > 1) {
+pokemon.weighthg = Math.max(1, pokemon.weighthg - 1000);
+this.add('-start', pokemon, 'Autotomize');
+}
+},
+secondary: null,
+target: "self",
+type: "Steel",
+},
+
+avalanche: {
+accuracy: 95,
+basePower: 60,
+basePowerCallback(pokemon, target, move) {
+const damagedByTarget = pokemon.attackedBy.some(
+p => p.source === target && p.damage > 0 && p.thisTurn
+);
+if (damagedByTarget) {
+this.debug('BP doubled for getting hit by ' + target);
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Avalanche",
+pp: 1.25,
+priority: -4,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+axekick: {
+accuracy: 75,
+basePower: 120,
+category: "Physical",
+name: "Axe Kick",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Fighting",
+},
+
+babydolleyes: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Baby Doll Eyes",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'attract',
+boosts: {
+spa: -1,
+atk: -1,
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+banefulbunker: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Baneful Bunker",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'banefulbunker',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect']) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('tox', target);
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('tox', target);
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Poison",
+},
+
+barbbarrage: {
+accuracy: 95,
+basePower: 20,
+category: "Physical",
+name: "Barb Barrage",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 7],
+multiaccuracy: 85,
+onBasePower(basePower, pokemon, target) {
+if (target.status === 'tox' || target.status === 'tox') {
+return this.chainModify(2);
+}
+},
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+barrage: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Barrage",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+multihit: [1, 7],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+barrier: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Barrier",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+def: 2,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+batonpass: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Baton Pass",
+pp: 0.625,
+priority: -2,
+flags: {},
+onTryHit(target) {
+if (!this.canSwitch(target.side) || target.volatiles['commanded']) {
+this.attrLastMove('[still]');
+this.add('-fail', target);
+return this.NOT_FAIL;
+}
+},
+self: {
+onHit(source) {
+source.skipBeforeSwitchOutEventFlag = true;
+},
+},
+selfSwitch: 'copyvolatile',
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+beakblast: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Beak Blast",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1},
+priorityChargeCallback(pokemon) {
+pokemon.addVolatile('beakblast');
+},
+condition: {
+duration: 2,
+onStart(pokemon) {
+this.add('-singleturn', pokemon, 'move: Beak Blast');
+},
+onHit(target, source, move) {
+if (this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('brn', target);
+}
+},
+},
+// FIXME: onMoveAborted(pokemon) {pokemon.removeVolatile('beakblast')},
+onAfterMove(pokemon) {
+pokemon.removeVolatile('beakblast');
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+beatup: {
+accuracy: 95,
+basePower: 15,
+basePowerCallback(pokemon, target, move) {
+const currentSpecies = move.allies!.shift()!.species;
+const bp = 15 + Math.floor(currentSpecies.baseStats.atk / 10);
+this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Beat Up",
+pp: 100.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, allyanim: 1},
+onModifyMove(move, pokemon) {
+move.allies = pokemon.side.pokemon.filter(ally => ally === pokemon || !ally.fainted && !ally.status);
+move.multihit = move.allies.length;
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+behemothbash: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Behemoth Bash",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Steel",
+},
+
+behemothblade: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Behemoth Blade",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+secondary: {
+chance: 50,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Steel",
+},
+
+belch: {
+accuracy: 85,
+basePower: 120,
+category: "Special",
+name: "Belch",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+onDisableMove(pokemon) {
+if (!pokemon.ateBerry) pokemon.disableMove('belch');
+},
+secondary: null,
+target: "allAdjacent",
+type: "Poison",
+},
+
+bellydrum: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Belly Drum",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onHit(target) {
+if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+return false;
+}
+this.directDamage(target.maxhp / 2);
+this.boost({atk: 12}, target);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+bide: {
+accuracy: 95,
+basePower: 20,
+category: "Physical",
+name: "Bide",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1},
+volatileStatus: 'bide',
+ignoreImmunity: true,
+beforeMoveCallback(pokemon) {
+if (pokemon.volatiles['bide']) return true;
+},
+condition: {
+duration: 2,
+onLockMove: 'bide',
+onStart(pokemon) {
+this.effectState.totalDamage = 0;
+this.add('-start', pokemon, 'move: Bide');
+},
+onDamagePriority: -101,
+onDamage(damage, target, source, move) {
+if (!move || move.effectType !== 'Move' || !source) return;
+this.effectState.totalDamage += damage;
+this.effectState.lastDamageSource = source;
+},
+onBeforeMove(pokemon, target, move) {
+if (this.effectState.duration === 1) {
+this.add('-end', pokemon, 'move: Bide');
+target = this.effectState.lastDamageSource;
+if (!target || !this.effectState.totalDamage) {
+this.attrLastMove('[still]');
+this.add('-fail', pokemon);
+return false;
+}
+if (!target.isActive) {
+const possibleTarget = this.getRandomTarget(pokemon, this.dex.moves.get('pound'));
+if (!possibleTarget) {
+this.add('-miss', pokemon);
+return false;
+}
+target = possibleTarget;
+}
+const moveData: Partial<ActiveMove> = {
+id: 'bide' as ID,
+name: "Bide",
+accuracy: 95,
+damage: this.effectState.totalDamage * 2,
+category: "Physical",
+priority: 1,
+flags: {contact: 1, protect: 1},
+effectType: 'Move',
+type: 'Normal',
+};
+this.actions.tryMoveHit(target, pokemon, moveData as ActiveMove);
+pokemon.removeVolatile('bide');
+return false;
+}
+this.add('-activate', pokemon, 'move: Bide');
+},
+onMoveAborted(pokemon) {
+pokemon.removeVolatile('bide');
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'move: Bide', '[silent]');
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+bind: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Bind",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+bite: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Bite",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Dark",
+},
+
+bitterblade: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Bitter Blade",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, heal: 1},
+drain: [45, 100],
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+bittermalice: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Bitter Malice",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'frz',
+},
+target: "any",
+type: "Ghost",
+},
+
+blackholeeclipse: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Black Hole Eclipse",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+blastburn: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Blast Burn",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+blazekick: {
+accuracy: 85,
+basePower: 85,
+category: "Physical",
+name: "Blaze Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+blazingtorque: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Blazing Torque",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+secondary: {
+chance: 33,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+bleakwindstorm: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Bleakwind Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+weather: 'RainDance',
+secondary: {
+chance: 25,
+boosts: {
+spe: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Flying",
+},
+
+blizzard: {
+accuracy: 75,
+basePower: 115,
+category: "Special",
+name: "Blizzard",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+onModifyMove(move) {
+if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
+},
+secondary: {
+chance: 33,
+status: 'frz',
+},
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+block: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Block",
+pp: 0.625,
+priority: -8,
+flags: {reflectable: 1, slow: 1, mirror: 1},
+onHit(target, source, move) {
+return target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+blueflare: {
+accuracy: 85,
+basePower: 110,
+category: "Special",
+name: "Blue Flare",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+bodypress: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Body Press",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+overrideOffensiveStat: 'def',
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+bodyslam: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Body Slam",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Normal",
+},
+
+boltbeak: {
+accuracy: 95,
+basePower: 85,
+basePowerCallback(pokemon, target, move) {
+if (target.newlySwitched || this.queue.willMove(target)) {
+this.debug('Bolt Beak damage boost');
+return move.basePower * 1.25;
+}
+this.debug('Bolt Beak NOT boosted');
+return move.basePower;
+},
+category: "Physical",
+name: "Bolt Beak",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [60, 100],
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+boltstrike: {
+accuracy: 75,
+basePower: 110,
+category: "Physical",
+name: "Bolt Strike",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+boneclub: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Bone Club",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Ground",
+},
+
+bonemerang: {
+accuracy: 95,
+basePower: 45,
+category: "Physical",
+name: "Bonemerang",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+multihit: [2, 4],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+bonerush: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Bone Rush",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+boomburst: {
+accuracy: 85,
+basePower: 140,
+category: "Special",
+name: "Boomburst",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+bounce: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Bounce",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+recoil: [25, 100],
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spe: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onInvulnerability(target, source, move) {
+if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+return;
+}
+return false;
+},
+onSourceBasePower(basePower, target, source, move) {
+if (move.id === 'gust' || move.id === 'twister') {
+return this.chainModify(2);
+}
+},
+},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Flying",
+},
+
+branchpoke: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Branch Poke",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Bug') return 1;
+},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+bravebird: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+let bp;
+if (ratio < 2) {
+bp = 160;
+} else if (ratio < 5) {
+bp = 140;
+} else if (ratio < 10) {
+bp = 120;
+} else if (ratio < 17) {
+bp = 100;
+} else if (ratio < 33) {
+bp = 80;
+} else {
+bp = 60;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Brave Bird",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [60, 100],
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+breakingswipe: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Breaking Swipe",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Ice') return 1;
+},
+secondary: {
+chance: 75,
+boosts: {
+atk: -1,
+spa: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+breakneckblitz: {
+accuracy: 75,
+basePower: 130,
+category: "Physical",
+name: "Breakneck Blitz",
+pp: 0.625,
+priority: 7,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [25, 100],
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "randomNormal",
+type: "Normal",
+},
+
+brickbreak: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Brick Break",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+onTryHit(pokemon) {
+// will shatter screens through sub, before you hit
+pokemon.side.removeSideCondition('reflect');
+pokemon.side.removeSideCondition('lightscreen');
+pokemon.side.removeSideCondition('auroraveil');
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+brine: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Brine",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onBasePower(basePower, pokemon, target) {
+if (target.hp * 2 <= target.maxhp) {
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+brutalswing: {
+accuracy: 85,
+basePower: 85,
+category: "Physical",
+name: "Brutal Swing",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacent",
+type: "Dark",
+},
+
+bubblebeam: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Bubble Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Water",
+},
+
+bugbite: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Bug Bite",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onHit(target, source) {
+const item = target.getItem();
+if (source.hp && item.isBerry && target.takeItem(source)) {
+this.add('-enditem', target, item.name, '[from] stealeat', '[move] Bug Bite', '[of] ' + source);
+if (this.singleEvent('Eat', item, null, source, null, null)) {
+this.runEvent('EatItem', source, null, null, item);
+if (item.id === 'leppaberry') target.staleness = 'external';
+}
+if (item.onEat) source.ateBerry = true;
+}
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+bugbuzz: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Bug Buzz",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Bug",
+},
+
+bulkup: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Bulk Up",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 1.5,
+def: 1.5,
+evasion: -1.5,
+},
+secondary: null,
+target: "self",
+type: "Fighting",
+},
+
+bulldoze: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Bulldoze",
+pp: 0.625,
+priority: -1,
+flags: {protect: 1, slow: 1, mirror: 1},
+forceSwitch: true,
+secondary: null,
+target: "allAdjacent",
+type: "Ground",
+},
+
+bulletpunch: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Bullet Punch",
+pp: 0.625,
+priority: 8,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+bulletseed: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Bullet Seed",
+pp: 1.25,
+priority: 2,
+flags: {bullet: 1, protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+burningjealousy: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Burning Jealousy",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (target?.statsRaisedThisTurn) {
+target.trySetStatus('brn', source, move);
+}
+},
+},
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+burnup: {
+accuracy: 85,
+basePower: 130,
+category: "Special",
+name: "Burn Up",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+onTryMove(pokemon, target, move) {
+if (pokemon.hasType('Fire')) return;
+this.add('-fail', pokemon, 'move: Burn Up');
+this.attrLastMove('[still]');
+return null;
+},
+self: {
+onHit(pokemon) {
+pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Burn Up');
+},
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+calmmind: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Calm Mind",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: -1,
+spa: 1,
+spd: 1,
+def: -1,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+camouflage: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Camouflage",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onHit(target) {
+let newType = 'Normal';
+if (this.field.isTerrain('electricterrain')) {
+newType = 'Electric';
+} else if (this.field.isTerrain('grassyterrain')) {
+newType = 'Grass';
+} else if (this.field.isTerrain('mistyterrain')) {
+newType = 'Fairy';
+} else if (this.field.isTerrain('psychicterrain')) {
+newType = 'Psychic';
+}
+if (target.getTypes().join() === newType || !target.setType(newType)) return false;
+this.add('-start', target, 'typechange', newType);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+ceaselessedge: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Ceaseless Edge",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+self: {
+onHit(source) {
+for (const side of source.side.foeSidesWithConditions()) {
+side.addSideCondition('spikes');
+}
+},
+},
+secondary: {}, // allows sheer force to trigger
+target: "any",
+type: "Dark",
+},
+
+charge: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Charge",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'charge',
+condition: {
+onStart(pokemon, source, effect) {
+if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+this.add('-start', pokemon, 'Charge', this.activeMove!.name, '[from] ability: ' + effect.name);
+} else {
+this.add('-start', pokemon, 'Charge');
+}
+},
+onRestart(pokemon, source, effect) {
+if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+this.add('-start', pokemon, 'Charge', this.activeMove!.name, '[from] ability: ' + effect.name);
+} else {
+this.add('-start', pokemon, 'Charge');
+}
+},
+onBasePowerPriority: 9,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Electric') {
+this.debug('charge boost');
+return this.chainModify(2);
+}
+},
+onMoveAborted(pokemon, target, move) {
+if (move.type === 'Electric' && move.id !== 'charge') {
+pokemon.removeVolatile('charge');
+}
+},
+onAfterMove(pokemon, target, move) {
+if (move.type === 'Electric' && move.id !== 'charge') {
+pokemon.removeVolatile('charge');
+}
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Charge', '[silent]');
+},
+},
+boosts: {
+spd: 2.5,
+},
+secondary: null,
+target: "self",
+type: "Electric",
+},
+
+chargebeam: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Charge Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spa: 1,
+},
+},
+},
+target: "any",
+type: "Electric",
+},
+
+charm: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Charm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+boosts: {
+atk: -2,
+spa: -2,
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+chatter: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Chatter",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, distance: 1, bypasssub: 1},
+noSketch: true,
+secondary: {
+chance: 75,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Flying",
+},
+
+chillingwater: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Chilling Water",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onHit(target) {
+if (target.hasType('Ice')) return false;
+if (!target.addType('Ice')) return false;
+this.add('-start', target, 'typeadd', 'Ice', '[from] move: Chilling Water');
+},
+secondary: {
+chance: 33,
+boosts: {
+atk: -1,
+spa: -1,
+},
+},
+target: "any",
+type: "Water",
+},
+
+chillyreception: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Chilly Reception",
+pp: 0.625,
+priority: 1,
+flags: {},
+// TODO show prepare message before the "POKEMON used MOVE!" message
+// This happens even before sleep shows its "POKEMON is fast asleep." message
+weather: 'snow',
+selfSwitch: true,
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+chipaway: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Chip Away",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Rock') return 1;
+},
+ignoreDefensive: true,
+ignoreEvasion: true,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+chloroblast: {
+accuracy: 95,
+basePower: 135,
+category: "Special",
+name: "Chloroblast",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+mindBlownRecoil: true,
+onAfterMove(pokemon, target, move) {
+if (move.mindBlownRecoil && !move.multihit) {
+const hpBeforeRecoil = pokemon.hp;
+this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Chloroblast'), true);
+if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+this.runEvent('EmergencyExit', pokemon, pokemon);
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+circlethrow: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Circle Throw",
+pp: 1.25,
+priority: -6,
+flags: {contact: 1, protect: 1, mirror: 1},
+forceSwitch: true,
+target: "any",
+type: "Fighting",
+},
+
+clamp: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Clamp",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+clangingscales: {
+accuracy: 85,
+basePower: 110,
+category: "Special",
+name: "Clanging Scales",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+selfBoost: {
+boosts: {
+def: -1,
+},
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+clangoroussoul: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Clangorous Soul",
+pp: 0.625,
+priority: 1,
+flags: {snatch: 1, sound: 1, dance: 1},
+onTry(source) {
+if (source.hp <= (source.maxhp * 50 / 100) || source.maxhp === 1) return false;
+},
+onTryHit(pokemon, target, move) {
+if (!this.boost(move.boosts as SparseBoostsTable)) return null;
+delete move.boosts;
+},
+onHit(pokemon) {
+this.directDamage(pokemon.maxhp * 33 / 100);
+},
+boosts: {
+atk: 1,
+def: 1,
+spa: 1,
+spd: 1,
+spe: 1,
+evasion: -4,
+},
+secondary: null,
+target: "self",
+type: "Dragon",
+},
+
+clangoroussoulblaze: {
+accuracy: 85,
+basePower: 120,
+category: "Special",
+name: "Clangorous Soulblaze",
+pp: 0.625,
+priority: 1,
+flags: {sound: 1, bypasssub: 1},
+chance: 75,
+selfBoost: {
+boosts: {
+atk: 1,
+spa: 1,
+},
+},
+secondary: {
+// Sheer Force negates the selfBoost even though it is not secondary
+},
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+clearsmog: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Clear Smog",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onHit(target) {
+target.clearBoosts();
+this.add('-clearboost', target);
+},
+secondary: {
+chance: 10,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+closecombat: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Close Combat",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+boosts: {
+def: -1,
+spd: -1,
+evasion: -1,
+},
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+coaching: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Coaching",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1},
+secondary: null,
+boosts: {
+atk: 1,
+spa: 1,
+spe: -1,
+spd: 1,
+def: 1,
+evasion: -1,
+},
+target: "adjacentAlly",
+type: "Fighting",
+},
+
+coil: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Coil",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 1,
+def: 1,
+accuracy: 1,
+},
+secondary: null,
+target: "self",
+type: "Poison",
+},
+
+collisioncourse: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Collision Course",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, source, target, move) {
+if (target.runEffectiveness(move) > 0) {
+// Placeholder
+this.debug(`collision course super effective buff`);
+return this.chainModify([5461, 4096]);
+}
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+combattorque: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Combat Torque",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
+type: "Fighting",
+},
+
+cometpunch: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Comet Punch",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+weather: 'sunnyday',
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+comeuppance: {
+accuracy: 95,
+basePower: 15,
+damageCallback(pokemon) {
+const lastDamagedBy = pokemon.getLastDamagedBy(true);
+if (lastDamagedBy !== undefined) {
+return (lastDamagedBy.damage * 1.75) || 1;
+}
+return 0;
+},
+category: "Physical",
+name: "Comeuppance",
+pp: 0.625,
+priority: -1,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+onTry(source) {
+const lastDamagedBy = source.getLastDamagedBy(true);
+if (lastDamagedBy === undefined || !lastDamagedBy.thisTurn) return false;
+},
+onModifyTarget(targetRelayVar, source, target, move) {
+const lastDamagedBy = source.getLastDamagedBy(true);
+if (lastDamagedBy) {
+targetRelayVar.target = this.getAtSlot(lastDamagedBy.slot);
+}
+},
+secondary: null,
+target: "scripted",
+type: "Dark",
+},
+
+confuseray: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Confuse Ray",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Ghost",
+},
+
+confusion: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Confusion",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 66,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Psychic",
+},
+
+continentalcrush: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Continental Crush",
+pp: 0.625,
+priority: -5,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+type: "Rock",
+},
+
+copycat: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Copycat",
+pp: 0.625,
+priority: 0,
+flags: {},
+onHit(pokemon) {
+let move: Move | ActiveMove | null = this.lastMove;
+if (!move) return;
+if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+if (move.flags['failcopycat'] || move.isZ || move.isMax) {
+return false;
+}
+this.actions.useMove(move.id, pokemon);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+coreenforcer: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Core Enforcer",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onHit(target) {
+if (target.getAbility().isPermanent) return;
+if (target.newlySwitched || this.queue.willMove(target)) return;
+target.addVolatile('gastroacid');
+},
+onAfterSubDamage(damage, target) {
+if (target.getAbility().isPermanent) return;
+if (target.newlySwitched || this.queue.willMove(target)) return;
+target.addVolatile('gastroacid');
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+corkscrewcrash: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Corkscrew Crash",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+corrosivegas: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Corrosive Gas",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target, source) {
+const item = target.takeItem(source);
+if (item) {
+this.add('-enditem', target, item.name, '[from] move: Corrosive Gas', '[of] ' + source);
+} else {
+this.add('-fail', target, 'move: Corrosive Gas');
+}
+},
+secondary: null,
+target: "allAdjacent",
+type: "Poison",
+},
+
+cosmicpower: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Cosmic Power",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+def: 2,
+spd: 2,
+spe: -4,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+cottonguard: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Cotton Guard",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 3,
+def: 3,
+evasion: -3,
+},
+secondary: null,
+target: "self",
+type: "Grass",
+},
+
+cottonspore: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Cotton Spore",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+spe: -2,
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Grass",
+},
+
+counter: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+if (!pokemon.volatiles['counter']) return 0;
+return pokemon.volatiles['counter'].damage || 1;
+},
+category: "Physical",
+name: "Counter",
+pp: 1.25,
+priority: -9,
+flags: {contact: 1, slow: 1, protect: 1},
+beforeTurnCallback(pokemon) {
+pokemon.addVolatile('counter');
+},
+onTry(source) {
+if (!source.volatiles['counter']) return false;
+if (source.volatiles['counter'].slot === null) return false;
+},
+condition: {
+duration: 1,
+noCopy: true,
+onStart(target, source, move) {
+this.effectState.slot = null;
+this.effectState.damage = 0;
+},
+onRedirectTargetPriority: -9,
+onRedirectTarget(target, source, source2, move) {
+if (move.id !== 'counter') return;
+if (source !== this.effectState.target || !this.effectState.slot) return;
+return this.getAtSlot(this.effectState.slot);
+},
+onDamagingHit(damage, target, source, move) {
+if (!source.isAlly(target) && this.getCategory(move) === 'Physical') {
+this.effectState.slot = source.getSlot();
+this.effectState.damage = 2 * damage;
+}
+},
+},
+secondary: null,
+target: "scripted",
+type: "Fighting",
+},
+
+courtchange: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Court Change",
+pp: 0.625,
+priority: 0,
+flags: {mirror: 1},
+onHitField(target, source) {
+const sideConditions = [
+'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+];
+let success = false;
+if (this.gameType === "freeforall") {
+// random integer from 1-3 inclusive
+const offset = this.random(3) + 1;
+// the list of all sides in counterclockwise order
+const sides = [this.sides[0], this.sides[2]!, this.sides[1], this.sides[3]!];
+const temp: {[k: number]: typeof source.side.sideConditions} = {0: {}, 1: {}, 2: {}, 3: {}};
+for (const side of sides) {
+for (const id in side.sideConditions) {
+if (!sideConditions.includes(id)) continue;
+temp[side.n][id] = side.sideConditions[id];
+delete side.sideConditions[id];
+const effectName = this.dex.conditions.get(id).name;
+this.add('-sideend', side, effectName, '[silent]');
+success = true;
+}
+}
+for (let i = 0; i < 4; i++) {
+const sourceSideConditions = temp[sides[i].n];
+const targetSide = sides[(i + offset) % 4]; // the next side in rotation
+for (const id in sourceSideConditions) {
+targetSide.sideConditions[id] = sourceSideConditions[id];
+const effectName = this.dex.conditions.get(id).name;
+let layers = sourceSideConditions[id].layers || 1;
+for (; layers > 0; layers--) this.add('-sidestart', targetSide, effectName, '[silent]');
+}
+}
+} else {
+const sourceSideConditions = source.side.sideConditions;
+const targetSideConditions = source.side.foe.sideConditions;
+const sourceTemp: typeof sourceSideConditions = {};
+const targetTemp: typeof targetSideConditions = {};
+for (const id in sourceSideConditions) {
+if (!sideConditions.includes(id)) continue;
+sourceTemp[id] = sourceSideConditions[id];
+delete sourceSideConditions[id];
+success = true;
+}
+for (const id in targetSideConditions) {
+if (!sideConditions.includes(id)) continue;
+targetTemp[id] = targetSideConditions[id];
+delete targetSideConditions[id];
+success = true;
+}
+for (const id in sourceTemp) {
+targetSideConditions[id] = sourceTemp[id];
+}
+for (const id in targetTemp) {
+sourceSideConditions[id] = targetTemp[id];
+}
+this.add('-swapsideconditions');
+}
+if (!success) return false;
+this.add('-activate', source, 'move: Court Change');
+},
+secondary: null,
+target: "all",
+type: "Normal",
+},
+
+crabhammer: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Crabhammer",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+craftyshield: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Crafty Shield",
+pp: 0.625,
+priority: 3,
+flags: {},
+sideCondition: 'craftyshield',
+onTry() {
+return !!this.queue.willAct();
+},
+condition: {
+duration: 1,
+onSideStart(target, source) {
+this.add('-singleturn', source, 'Crafty Shield');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (['self', 'all'].includes(move.target) || move.category !== 'Status') return;
+this.add('-activate', target, 'move: Crafty Shield');
+return this.NOT_FAIL;
+},
+},
+secondary: null,
+target: "allySide",
+type: "Fairy",
+},
+
+crosspoison: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Cross Poison",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+critRatio: 2,
+target: "any",
+type: "Poison",
+},
+
+crunch: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Crunch",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Dark",
+},
+
+crushclaw: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Crush Claw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Normal",
+},
+
+crushgrip: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const hp = target.hp;
+const maxHP = target.maxhp;
+const bp = Math.floor(Math.floor((120 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+return bp;
+},
+category: "Physical",
+name: "Crush Grip",
+pp: 1.25,
+priority: -2,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+curse: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Curse",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1},
+volatileStatus: 'curse',
+onModifyMove(move, source, target) {
+if (!source.hasType('Ghost')) {
+move.target = move.nonGhostTarget as MoveTarget;
+} else if (source.isAlly(target)) {
+move.target = 'randomNormal';
+}
+},
+onTryHit(target, source, move) {
+if (!source.hasType('Ghost')) {
+delete move.volatileStatus;
+delete move.onHit;
+move.self = {boosts: {spe: -1, atk: 1, def: 1}};
+} else if (move.volatileStatus && target.volatiles['curse']) {
+return false;
+}
+},
+onHit(target, source) {
+this.directDamage(source.maxhp / 2, source, source);
+},
+condition: {
+onStart(pokemon, source) {
+this.add('-start', pokemon, 'Curse', '[of] ' + source);
+},
+onResidualOrder: 12,
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 4);
+},
+},
+secondary: null,
+target: "any",
+nonGhostTarget: "self",
+type: "Ghost",
+},
+
+darkestlariat: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Darkest Lariat",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+ignoreEvasion: true,
+ignoreDefensive: true,
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+darkpulse: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Dark Pulse",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Dark",
+},
+
+darkvoid: {
+accuracy: 75,
+basePower: 40,
+category: "Special",
+name: "Dark Void",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+status: 'slp',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Dark",
+},
+
+dazzlinggleam: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Dazzling Gleam",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Fairy",
+},
+
+decorate: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Decorate",
+pp: 1.25,
+priority: 0,
+flags: {allyanim: 1},
+secondary: null,
+boosts: {
+chance: 50,
+atk: 1,
+spa: 1,
+},
+target: "any",
+type: "Fairy",
+},
+
+defendorder: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Defend Order",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+def: 1,
+spd: 1,
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+defensecurl: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Defense Curl",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 1,
+def: 1,
+evasion: -1,
+},
+volatileStatus: 'defensecurl',
+condition: {
+noCopy: true,
+onRestart: () => null,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+defog: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Defog",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+onHit(target, source, move) {
+let success = false;
+if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
+const removeTarget = [
+'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+];
+const removeAll = [
+'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+];
+for (const targetCondition of removeTarget) {
+if (target.side.removeSideCondition(targetCondition)) {
+if (!removeAll.includes(targetCondition)) continue;
+this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Defog', '[of] ' + source);
+success = true;
+}
+}
+for (const sideCondition of removeAll) {
+if (source.side.removeSideCondition(sideCondition)) {
+this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
+success = true;
+}
+}
+this.field.clearTerrain();
+return success;
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+destinybond: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Destiny Bond",
+pp: 0.625,
+priority: 5,
+flags: {bypasssub: 1},
+volatileStatus: 'destinybond',
+onPrepareHit(pokemon) {
+return !pokemon.removeVolatile('destinybond');
+},
+condition: {
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Destiny Bond');
+},
+onFaint(target, source, effect) {
+if (!source || !effect || target.isAlly(source)) return;
+if (effect.effectType === 'Move' && !effect.flags['futuremove']) {
+if (source.volatiles['dynamax']) {
+this.add('-hint', "Dynamaxed Pokémon are immune to Destiny Bond.");
+return;
+}
+this.add('-activate', target, 'move: Destiny Bond');
+source.faint();
+}
+},
+onBeforeMovePriority: 1,
+onBeforeMove(pokemon, target, move) {
+if (move.id === 'destinybond') return;
+this.debug('removing Destiny Bond before attack');
+pokemon.removeVolatile('destinybond');
+},
+onMoveAborted(pokemon, target, move) {
+pokemon.removeVolatile('destinybond');
+},
+},
+secondary: null,
+target: "self",
+type: "Ghost",
+},
+
+devastatingdrake: {
+accuracy: 75,
+basePower: 140,
+category: "Physical",
+name: "Devastating Drake",
+pp: 0.625,
+priority: 2,
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+diamondstorm: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Diamond Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+weather: 'hail',
+self: {
+chance: 50,
+boosts: {
+def: 2,
+},
+},
+secondary: {
+// Sheer Force negates the self even though it is not secondary
+},
+target: "allAdjacentFoes",
+type: "Rock",
+},
+
+dig: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Dig",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: -2, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onImmunity(type, pokemon) {
+if (type === 'sandstorm' || type === 'hail') return false;
+},
+onInvulnerability(target, source, move) {
+if (['earthquake', 'magnitude'].includes(move.id)) {
+return;
+}
+return false;
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.id === 'earthquake' || move.id === 'magnitude') {
+return this.chainModify(2);
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+
+disarmingvoice: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Disarming Voice",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+critRatio: 2,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Fairy",
+},
+
+discharge: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Discharge",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "allAdjacent",
+type: "Electric",
+},
+
+direclaw: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Dire Claw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
+secondary: {
+chance: 50,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('tox', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('slp', source);
+}
+},
+},
+target: "any",
+type: "Poison",
+},
+
+dive: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Dive",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, charge: 1, protect: 1, mirror: 1, allyanim: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+if (attacker.hasAbility('gulpmissile') && attacker.species.name === 'Cramorant' && !attacker.transformed) {
+const forme = attacker.hp <= attacker.maxhp / 2 ? 'cramorantgorging' : 'cramorantgulping';
+attacker.formeChange(forme, move);
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: -2, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onImmunity(type, pokemon) {
+if (type === 'sandstorm' || type === 'hail') return false;
+},
+onInvulnerability(target, source, move) {
+if (['surf', 'whirlpool'].includes(move.id)) {
+return;
+}
+return false;
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.id === 'surf' || move.id === 'whirlpool') {
+return this.chainModify(2);
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+dizzypunch: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Dizzy Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondaries: [
+{
+chance: 33,
+status: 'flinch',
+}, {
+chance: 33,
+volatileStatus: 'confusion',
+},
+],
+target: "any",
+type: "Normal",
+},
+
+doodle: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Doodle",
+pp: 0.625,
+priority: 0,
+flags: {},
+onHit(target, source, move) {
+let success: boolean | null = false;
+for (const pokemon of source.alliesAndSelf()) {
+if (pokemon.ability === target.ability) continue;
+const oldAbility = pokemon.setAbility(target.ability);
+if (oldAbility) {
+this.add('-ability', pokemon, target.getAbility().name, '[from] move: Doodle');
+success = true;
+} else if (!success && oldAbility === null) {
+success = null;
+}
+}
+if (!success) {
+if (success === false) {
+this.add('-fail', source);
+}
+this.attrLastMove('[still]');
+return this.NOT_FAIL;
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+doomdesire: {
+accuracy: 95,
+basePower: 140,
+category: "Special",
+name: "Doom Desire",
+pp: 0.625,
+priority: 0,
+flags: {futuremove: 1},
+onTry(source, target) {
+if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+move: 'doomdesire',
+source: source,
+moveData: {
+id: 'doomdesire',
+name: "Doom Desire",
+accuracy: 95,
+basePower: 140,
+category: "Special",
+priority: 0,
+flags: {futuremove: 1},
+effectType: 'Move',
+type: 'Steel',
+},
+});
+this.add('-start', source, 'Doom Desire');
+return this.NOT_FAIL;
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+doubleedge: {
+accuracy: 95,
+basePower: 120,
+category: "Physical",
+name: "Double Edge",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+doublehit: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Double Hit",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+doubleironbash: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Double Iron Bash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Steel",
+},
+
+doublekick: {
+accuracy: 95,
+basePower: 45,
+category: "Physical",
+name: "Double Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: {
+chance: 10,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Fighting",
+},
+
+doubleshock: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Double Shock",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTryMove(pokemon, target, move) {
+if (pokemon.hasType('Electric')) return;
+this.add('-fail', pokemon, 'move: Double Shock');
+this.attrLastMove('[still]');
+return null;
+},
+self: {
+onHit(pokemon) {
+pokemon.setType(pokemon.getTypes(true).map(type => type === "Electric" ? "???" : type));
+this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Double Shock');
+},
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+doubleteam: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Double Team",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spe: 2,
+},
+secondary: null,
+target: "adjacentAlly",
+type: "Normal",
+},
+
+dracometeor: {
+accuracy: 75,
+basePower: 130,
+category: "Special",
+name: "Draco Meteor",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+self: {
+boosts: {
+spa: -2,
+},
+},
+secondary: null,
+target: "allAdjacent",
+type: "Dragon",
+},
+
+dragonascent: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Dragon Ascent",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+self: {
+boosts: {
+def: -1,
+spd: -1,
+},
+},
+target: "any",
+type: "Flying",
+},
+
+dragonbreath: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Dragon Breath",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Dragon",
+},
+
+dragonclaw: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Dragon Claw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Dragon",
+},
+
+dragondance: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Dragon Dance",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, dance: 1},
+boosts: {
+atk: 1,
+spa: 1,
+spe: 1,
+spd: -1,
+def: -1,
+},
+secondary: null,
+target: "self",
+type: "Dragon",
+},
+
+dragondarts: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Dragon Darts",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 3],
+multiaccuracy: 85,
+smartTarget: true,
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+dragonenergy: {
+accuracy: 75,
+basePower: 145,
+basePowerCallback(pokemon, target, move) {
+const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Dragon Energy",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+dragonhammer: {
+accuracy: 95,
+basePower: 120,
+category: "Physical",
+name: "Dragon Hammer",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+dragonpulse: {
+accuracy: 95,
+basePower: 85,
+category: "Special",
+name: "Dragon Pulse",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+dragonrage: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Dragon Rage",
+pp: 0.625,
+priority: 3,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+dragonrush: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Dragon Rush",
+pp: 0.625,
+priority: 5,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [25, 100],
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Dragon",
+},
+
+dragontail: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Dragon Tail",
+pp: 1.25,
+priority: -6,
+flags: {contact: 1, protect: 1, mirror: 1},
+forceSwitch: true,
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+drainingkiss: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Draining Kiss",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+drain: [75, 100],
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+drainpunch: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Drain Punch",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1, heal: 1},
+drain: [50, 100],
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+dreameater: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Dream Eater",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, heal: 1},
+drain: [50, 100],
+onTryImmunity(target) {
+return target.status === 'slp' || target.hasAbility('comatose');
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+drillpeck: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Drill Peck",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1, heal: 1},
+drain: [70, 100],
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+drillrun: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Drill Run",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+drumbeating: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Drum Beating",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+dualchop: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Dual Chop",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+dualwingbeat: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Dual Wingbeat",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+dynamicpunch: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Dynamic Punch",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondary: {
+chance: 75,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Fighting",
+},
+
+earthpower: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Earth Power",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Ground",
+},
+
+earthquake: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Earthquake",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacent",
+type: "Ground",
+},
+
+echoedvoice: {
+accuracy: 95,
+basePower: 15,
+category: "Special",
+name: "Echoed Voice",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+multihit: [1, 10],
+multiaccuracy: 75,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+eerieimpulse: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Eerie Impulse",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+atk: -2,
+spa: -2,
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+eeriespell: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Eerie Spell",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 100,
+onHit(target, source) {
+const result = this.random(4);
+if (result === 0) {
+target.trySetStatus('brn', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else if (result === 2) {
+target.trySetStatus('tox', source);
+} else if (result === 3) {
+target.trySetStatus('slp', source);
+} else {
+target.trySetStatus('frz', source);
+}
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+eggbomb: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Egg Bomb",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+weather: 'Sandstorm',
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+electricterrain: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Electric Terrain",
+pp: 0.625,
+priority: 0,
+flags: {},
+terrain: 'electricterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
+if (effect.id === 'yawn' || (effect.effectType === 'Move' && !effect.secondaries)) {
+this.add('-activate', target, 'move: Electric Terrain');
+}
+return false;
+}
+},
+onTryAddVolatile(status, target) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (status.id === 'yawn') {
+this.add('-activate', target, 'move: Electric Terrain');
+return null;
+}
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+this.debug('electric terrain boost');
+return this.chainModify([5325, 4096]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Electric Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Electric Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Electric Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+electrify: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Electrify",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, slow: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'electrify',
+onTryHit(target) {
+if (!this.queue.willMove(target) && target.activeTurns) return false;
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Electrify');
+},
+onModifyTypePriority: -2,
+onModifyType(move) {
+if (move.id !== 'struggle') {
+this.debug('Electrify making move type electric');
+move.type = 'Electric';
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+electroball: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+let ratio = Math.floor(pokemon.getStat('spe') / target.getStat('spe'));
+if (!isFinite(ratio)) ratio = 0;
+const bp = [40, 60, 80, 120, 150][Math.min(ratio, 4)];
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Electro Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+electrodrift: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Electro Drift",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, source, target, move) {
+if (target.runEffectiveness(move) > 0) {
+// Placeholder
+this.debug(`electro drift super effective buff`);
+return this.chainModify([5461, 4096]);
+}
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+electroweb: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Electroweb",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Grass') return 1;
+},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Electric",
+},
+
+embargo: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Embargo",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'embargo',
+condition: {
+duration: 5,
+onStart(pokemon) {
+this.add('-start', pokemon, 'Embargo');
+this.singleEvent('End', pokemon.getItem(), pokemon.itemState, pokemon);
+},
+// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+onResidualOrder: 21,
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Embargo');
+},
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+ember: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Ember",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 33,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+encore: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Encore",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+volatileStatus: 'encore',
+condition: {
+duration: 3,
+noCopy: true, // doesn't get copied by Z-Baton Pass
+onStart(target) {
+let move: Move | ActiveMove | null = target.lastMove;
+if (!move || target.volatiles['dynamax']) return false;
+
+if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+const moveIndex = target.moves.indexOf(move.id);
+if (move.isZ || move.flags['failencore'] || !target.moveSlots[moveIndex] || target.moveSlots[moveIndex].pp <= 0) {
+// it failed
+return false;
+}
+this.effectState.move = move.id;
+this.add('-start', target, 'Encore');
+if (!this.queue.willMove(target)) {
+this.effectState.duration++;
+}
+},
+onOverrideAction(pokemon, target, move) {
+if (move.id !== this.effectState.move) return this.effectState.move;
+},
+onResidualOrder: 16,
+onResidual(target) {
+if (target.moves.includes(this.effectState.move) &&
+target.moveSlots[target.moves.indexOf(this.effectState.move)].pp <= 0) {
+// early termination if you run out of PP
+target.removeVolatile('encore');
+}
+},
+onEnd(target) {
+this.add('-end', target, 'Encore');
+},
+onDisableMove(pokemon) {
+if (!this.effectState.move || !pokemon.hasMove(this.effectState.move)) {
+return;
+}
+for (const moveSlot of pokemon.moveSlots) {
+if (moveSlot.id !== this.effectState.move) {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+endeavor: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon, target) {
+return target.getUndynamaxedHP() - pokemon.hp;
+},
+category: "Physical",
+name: "Endeavor",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTryImmunity(target, pokemon) {
+return pokemon.hp < target.hp;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+endure: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Endure",
+pp: 0.625,
+priority: 4,
+flags: {slow: 1},
+stallingMove: true,
+volatileStatus: 'endure',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Endure');
+},
+onDamagePriority: -10,
+onDamage(damage, target, source, effect) {
+if (effect?.effectType === 'Move' && damage >= target.hp) {
+this.add('-activate', target, 'move: Endure');
+return target.hp - 1;
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+energyball: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Energy Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+entrainment: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Entrainment",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onTryHit(target, source) {
+if (target === source || target.volatiles['dynamax']) return false;
+
+const additionalBannedSourceAbilities = [
+// Zen Mode included here for compatability with Gen 5-6
+'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+];
+if (
+target.ability === source.ability ||
+target.getAbility().isPermanent || target.ability === 'truant' ||
+source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+) {
+return false;
+}
+},
+onHit(target, source) {
+const oldAbility = target.setAbility(source.ability);
+if (oldAbility) {
+this.add('-ability', target, target.getAbility().name, '[from] move: Entrainment');
+if (!target.isAlly(source)) target.volatileStaleness = 'external';
+return;
+}
+return oldAbility as false | null;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+eruption: {
+accuracy: 85,
+basePower: 145,
+basePowerCallback(pokemon, target, move) {
+const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Eruption",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+esperwing: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Esper Wing",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+eternabeam: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Eternabeam",
+pp: 0.625,
+flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+expandingforce: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Expanding Force",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onBasePower(basePower, source) {
+if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
+this.debug('terrain buff');
+return this.chainModify(1.5);
+}
+},
+onModifyMove(move, source, target) {
+if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
+move.target = 'allAdjacentFoes';
+}
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+explosion: {
+accuracy: 95,
+basePower: 250,
+category: "Special",
+name: "Explosion",
+pp: 0.625,
+priority: -7,
+flags: {protect: 1, slow: 1, mirror: 1},
+selfdestruct: "always",
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+extrasensory: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Extrasensory",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Psychic",
+},
+
+extremespeed: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Extreme Speed",
+pp: 0.625,
+priority: 5,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [25, 100],
+target: "any",
+type: "Normal",
+},
+
+facade: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Facade",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, pokemon) {
+if (pokemon.status && pokemon.status !== 'slp') {
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+fairylock: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Fairy Lock",
+pp: 0.625,
+priority: 0,
+flags: {mirror: 1, bypasssub: 1},
+pseudoWeather: 'fairylock',
+condition: {
+duration: 5,
+onFieldStart(target) {
+this.add('-fieldactivate', 'move: Fairy Lock');
+},
+onTrapPokemon(pokemon) {
+pokemon.tryTrap();
+},
+},
+secondary: null,
+target: "all",
+type: "Fairy",
+},
+
+fairywind: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Fairy Wind",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+fakeout: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Fake Out",
+pp: 0.625,
+priority: 8,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTry(source) {
+if (source.activeMoveActions > 1) {
+this.hint("Fake Out only works on your first turn out.");
+return false;
+}
+},
+secondary: {
+chance: 75,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Normal",
+},
+
+faketears: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Fake Tears",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'attract',
+boosts: {
+spd: -2,
+def: -2,
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+falsesurrender: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "False Surrender",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+selfBoost: {
+accuracy: 1,
+},
+target: "any",
+type: "Dark",
+},
+
+featherdance: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Feather Dance",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, dance: 1},
+boosts: {
+atk: -2,
+spa: -2,
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+feintattack: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Feint Attack",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+breaksProtect: true,
+secondary: null,
+boosts: {
+chance: 75,
+accuracy: 1,
+},
+target: "any",
+type: "Dark",
+},
+
+fellstinger: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Fell Stinger",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+fierydance: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Fiery Dance",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, dance: 1},
+secondary: {
+chance: 50,
+self: {
+boosts: {
+spa: 1,
+},
+},
+},
+target: "any",
+type: "Fire",
+},
+
+fierywrath: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Fiery Wrath",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "allAdjacentFoes",
+type: "Dark",
+},
+
+filletaway: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Fillet Away",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onTry(source) {
+if (source.hp <= source.maxhp / 2 || source.maxhp === 1) return false;
+},
+onTryHit(pokemon, target, move) {
+if (!this.boost(move.boosts as SparseBoostsTable)) return null;
+delete move.boosts;
+},
+onHit(pokemon) {
+this.directDamage(pokemon.maxhp / 2);
+},
+boosts: {
+atk: 2,
+spa: 2,
+spe: 2,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+finalgambit: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+const damage = pokemon.hp;
+pokemon.faint();
+return damage;
+},
+category: "Special",
+name: "Final Gambit",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+fireblast: {
+accuracy: 85,
+basePower: 110,
+category: "Special",
+name: "Fire Blast",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+firefang: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Fire Fang",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 33,
+status: 'brn',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Fire",
+},
+
+firelash: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Fire Lash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Fire",
+},
+
+firepledge: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Fire Pledge",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+terrain: 'grassyterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+this.debug('move weakened by grassy terrain');
+return this.chainModify(0.5);
+}
+if (move.type === 'Grass' && attacker.isGrounded()) {
+this.debug('grassy terrain boost');
+return this.chainModify([5325, 4096]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Grassy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Grassy Terrain');
+}
+},
+onResidualOrder: 5,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+} else {
+this.debug(`Pokemon semi-invuln or not grounded; Grassy Terrain skipped`);
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Grassy Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+
+firepunch: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Fire Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondaries: [
+{
+chance: 33,
+status: 'brn',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Fire",
+},
+
+firstimpression: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "First Impression",
+pp: 0.625,
+priority: 2,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTry(source) {
+if (source.activeMoveActions > 1) {
+this.hint("First Impression only works on your first turn out.");
+return false;
+}
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+fishiousrend: {
+accuracy: 85,
+basePower: 75,
+basePowerCallback(pokemon, target, move) {
+if (target.newlySwitched || this.queue.willMove(target)) {
+this.debug('Fishious Rend damage boost');
+return move.basePower * 1.25;
+}
+this.debug('Fishious Rend NOT boosted');
+return move.basePower;
+},
+category: "Physical",
+name: "Fishious Rend",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [60, 100],
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+fissure: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target, move) {
+const hp = target.hp;
+const maxHP = target.maxhp;
+const bp = Math.floor(Math.floor((120 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+return bp;
+},
+category: "Physical",
+name: "Fissure",
+pp: 1.25,
+priority: -2,
+flags: {protect: 1, slow: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+flail: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+let bp;
+if (ratio < 2) {
+bp = 200;
+} else if (ratio < 5) {
+bp = 150;
+} else if (ratio < 10) {
+bp = 100;
+} else if (ratio < 17) {
+bp = 80;
+} else if (ratio < 33) {
+bp = 40;
+} else {
+bp = 20;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Flail",
+pp: 0.625,
+priority: -2,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+flamecharge: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Flame Charge",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Fire",
+},
+
+flamewheel: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Flame Wheel",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+secondaries: [
+{
+chance: 50,
+status: 'brn',
+}, {
+chance: 50,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+],
+target: "any",
+type: "Fire",
+},
+
+flamethrower: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Flamethrower",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+flareblitz: {
+accuracy: 95,
+basePower: 120,
+category: "Physical",
+name: "Flare Blitz",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+recoil: [33, 100],
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+flash: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Flash",
+pp: 0.625,
+priority: 4,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+evasion: -1,
+},
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+flashcannon: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Flash Cannon",
+pp: 0.625,
+priority: 4,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Steel",
+},
+
+flatter: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Flatter",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'confusion',
+boosts: {
+atk: 1,
+spa: 2,
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+fleurcannon: {
+accuracy: 75,
+basePower: 125,
+category: "Special",
+name: "Fleur Cannon",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, beam: 1, mirror: 1},
+self: {
+boosts: {
+spa: -2,
+},
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+fling: {
+accuracy: 85,
+basePower: 85,
+category: "Physical",
+name: "Fling",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 100,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('tox', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('slp', source);
+}
+},
+},
+volatileStatus: 'confusion',
+target: "any",
+type: "Dark",
+},
+
+flipturn: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Flip Turn",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+selfSwitch: true,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+floralhealing: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Floral Healing",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, heal: 1, allyanim: 1},
+onHit(target, source) {
+let success = false;
+if (this.field.isTerrain('grassyterrain')) {
+success = !!this.heal(this.modify(target.baseMaxhp, 0.667));
+} else {
+success = !!this.heal(Math.ceil(target.baseMaxhp * 0.5));
+}
+if (success && !target.isAlly(source)) {
+target.staleness = 'external';
+}
+if (!success) {
+this.add('-fail', target, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+flowershield: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Flower Shield",
+pp: 0.625,
+priority: 0,
+flags: {distance: 1},
+onHitField(t, source, move) {
+const targets: Pokemon[] = [];
+for (const pokemon of this.getAllActive()) {
+if (
+pokemon.hasType('Grass') &&
+(!pokemon.volatiles['maxguard'] ||
+this.runEvent('TryHit', pokemon, source, move))
+) {
+// This move affects every Grass-type Pokemon in play.
+targets.push(pokemon);
+}
+}
+let success = false;
+for (const target of targets) {
+success = this.boost({def: 1}, target, source, move) || success;
+}
+return success;
+},
+secondary: null,
+target: "all",
+type: "Fairy",
+},
+
+flowertrick: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Flower Trick",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+fly: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Fly",
+pp: 1.25,
+priority: 0,
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onInvulnerability(target, source, move) {
+if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+return;
+}
+return false;
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.id === 'gust' || move.id === 'twister') {
+return this.chainModify(2);
+}
+},
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+flyingpress: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Flying Press",
+pp: 0.625,
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+onEffectiveness(typeMod, target, type, move) {
+return typeMod + this.dex.getEffectiveness('Flying', type);
+},
+priority: 0,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+focusblast: {
+accuracy: 75,
+basePower: 120,
+category: "Special",
+name: "Focus Blast",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+focusenergy: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Focus Energy",
+pp: 0.625,
+priority: -1,
+flags: { slow: 1, snatch: 1},
+volatileStatus: 'focusenergy',
+condition: {
+onStart(target, source, effect) {
+if (effect?.id === 'zpower') {
+this.add('-start', target, 'move: Focus Energy', '[zeffect]');
+} else if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+this.add('-start', target, 'move: Focus Energy', '[silent]');
+} else {
+this.add('-start', target, 'move: Focus Energy');
+}
+},
+onModifyCritRatio(critRatio) {
+return critRatio + 4;
+},
+},
+boosts: {
+chance: 100,
+evasion: -2,
+atk: 1.5,
+spa: 1.5,
+def: -1,
+spd: -1,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+focuspunch: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Focus Punch",
+pp: 1.25,
+priority: -3,
+flags: {contact: 1, slow: 1, protect: 1, punch: 1},
+boosts: {
+chance: 75,
+accuracy: 1,
+atk: 1,
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+followme: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Follow Me",
+pp: 0.625,
+priority: 2,
+flags: {},
+volatileStatus: 'followme',
+onTry(source) {
+return this.activePerHalf > 1;
+},
+condition: {
+duration: 1,
+onStart(target, source, effect) {
+if (effect?.id === 'zpower') {
+this.add('-singleturn', target, 'move: Follow Me', '[zeffect]');
+} else {
+this.add('-singleturn', target, 'move: Follow Me');
+}
+},
+onFoeRedirectTargetPriority: 1,
+onFoeRedirectTarget(target, source, source2, move) {
+if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
+if (move.smartTarget) move.smartTarget = false;
+this.debug("Follow Me redirected target of move");
+return this.effectState.target;
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+forcepalm: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Force Palm",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Fighting",
+},
+
+forestscurse: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Forest's Curse",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+if (target.hasType('Grass')) return false;
+if (!target.addType('Grass')) return false;
+this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+foulplay: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Foul Play",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+overrideOffensivePokemon: 'target',
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+freezedry: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Freeze Dry",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+},
+secondary: {
+chance: 25,
+status: 'frz',
+},
+target: "any",
+type: "Ice",
+},
+
+freezeshock: {
+accuracy: 95,
+basePower: 140,
+category: "Physical",
+name: "Freeze Shock",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: {
+chance: 33,
+status: 'frz',
+},
+target: "any",
+type: "Ice",
+},
+
+freezingglare: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Freezing Glare",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'frz',
+},
+target: "any",
+type: "Psychic",
+},
+
+frenzyplant: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Frenzy Plant",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+frostbreath: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Frost Breath",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+furyattack: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Fury Attack",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'rage',
+},
+condition: {
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Rage');
+},
+onHit(target, source, move) {
+if (target !== source && move.category !== 'Status') {
+this.boost({atk: 2});
+}
+},
+onBeforeMovePriority: 100,
+onBeforeMove(pokemon) {
+this.debug('removing Rage before attack');
+pokemon.removeVolatile('rage');
+},
+},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+furycutter: {
+accuracy: 95,
+basePower: 15,
+basePowerCallback(pokemon, target, move) {
+return 15 * move.hit;
+},
+category: "Physical",
+name: "Fury Cutter",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+self: {
+volatileStatus: 'rage',
+},
+condition: {
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Rage');
+},
+onHit(target, source, move) {
+if (target !== source && move.category !== 'Status') {
+this.boost({atk: 2});
+}
+},
+onBeforeMovePriority: 100,
+onBeforeMove(pokemon) {
+this.debug('removing Rage before attack');
+pokemon.removeVolatile('rage');
+},
+},
+recoil: [33, 100],
+multihit: [1, 10],
+multiaccuracy: 75,
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+furyswipes: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Fury Swipes",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'rage',
+},
+condition: {
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Rage');
+},
+onHit(target, source, move) {
+if (target !== source && move.category !== 'Status') {
+this.boost({atk: 2});
+}
+},
+onBeforeMovePriority: 100,
+onBeforeMove(pokemon) {
+this.debug('removing Rage before attack');
+pokemon.removeVolatile('rage');
+},
+},
+multihit: [1, 5],
+multiaccuracy: 95,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+gastroacid: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Gastro Acid",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'gastroacid',
+onTryHit(target) {
+if (target.getAbility().isPermanent) {
+return false;
+}
+if (target.hasItem('Ability Shield')) {
+this.add('-block', target, 'item: Ability Shield');
+return null;
+}
+},
+condition: {
+// Ability suppression implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
+onStart(pokemon) {
+if (pokemon.hasItem('Ability Shield')) return false;
+this.add('-endability', pokemon);
+this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
+},
+onCopy(pokemon) {
+if (pokemon.getAbility().isPermanent) pokemon.removeVolatile('gastroacid');
+},
+},
+secondary: null,
+target: "any",
+type: "Poison",
+},
+
+geargrind: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Gear Grind",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+genesissupernova: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Genesis Supernova",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+onHit() {
+this.field.setTerrain('psychicterrain');
+},
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+geomancy: {
+accuracy: 95,
+basePower: 120,
+category: "Physical",
+name: "Geomancy",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: -2.5, def: -1, evasion: 3,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+gigadrain: {
+accuracy: 95,
+basePower: 95,
+category: "Special",
+name: "Giga Drain",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, heal: 1},
+drain: [33, 100],
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+gigaimpact: {
+accuracy: 85,
+basePower: 150,
+category: "Physical",
+name: "Giga Impact",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+gigatonhammer: {
+accuracy: 95,
+basePower: 115,
+category: "Physical",
+name: "Gigaton Hammer",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onTry(source) {
+if (source.activeMoveActions < 2) {
+this.hint("First Impression only works on your first turn out.");
+return false;
+}
+},
+onDisableMove(pokemon) {
+if (pokemon.lastMove?.id === 'gigatonhammer') pokemon.disableMove('gigatonhammer');
+},
+beforeMoveCallback(pokemon) {
+if (pokemon.lastMove?.id === 'gigatonhammer') pokemon.addVolatile('gigatonhammer');
+},
+onAfterMove(pokemon) {
+if (pokemon.removeVolatile('gigatonhammer')) {
+this.add('-hint', "Some effects can force a Pokemon to use Gigaton Hammer again in a row.");
+}
+},
+condition: {},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+gigavolthavoc: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Gigavolt Havoc",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'par',
+},
+target: "randomNormal",
+type: "Electric",
+},
+
+glaciallance: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Glacial Lance",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+glaciate: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Glaciate",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+glaiverush: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Glaive Rush",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'glaiverush',
+},
+condition: {
+noCopy: true,
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Glaive Rush', '[silent]');
+},
+onAccuracy() {
+return true;
+},
+onSourceModifyDamage() {
+return this.chainModify(2);
+},
+onBeforeMovePriority: 100,
+onBeforeMove(pokemon) {
+this.debug('removing Glaive Rush drawback before attack');
+pokemon.removeVolatile('glaiverush');
+},
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+glare: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Glare",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+status: 'par',
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+grassknot: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const targetWeight = target.getWeight();
+let bp;
+if (targetWeight >= 2000) {
+bp = 150;
+} else if (targetWeight >= 1000) {
+bp = 120;
+} else if (targetWeight >= 500) {
+bp = 100;
+} else if (targetWeight >= 250) {
+bp = 80;
+} else if (targetWeight >= 100) {
+bp = 40;
+} else {
+bp = 20;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Grass Knot",
+pp: 1.25,
+priority: -10,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+onTryHit(target, source, move) {
+if (target.volatiles['dynamax']) {
+this.add('-fail', source, 'move: Grass Knot', '[from] Dynamax');
+this.attrLastMove('[still]');
+return null;
+}
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+grasspledge: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Grass Pledge",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+weather: 'RainDance',
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+grasswhistle: {
+accuracy: 75,
+basePower: 40,
+category: "Special",
+name: "Grass Whistle",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 80,
+status: 'slp',
+},
+target: "any",
+type: "Grass",
+},
+
+grassyglide: {
+accuracy: 87,
+basePower: 60,
+category: "Physical",
+name: "Grassy Glide",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onModifyPriority(priority, source, target, move) {
+if (this.field.isTerrain('grassyterrain') && source.isGrounded()) {
+return priority + 2;
+}
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+grassyterrain: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Grassy Terrain",
+pp: 0.625,
+priority: 0,
+flags: {},
+terrain: 'grassyterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+this.debug('move weakened by grassy terrain');
+return this.chainModify(0.5);
+}
+if (move.type === 'Grass' && attacker.isGrounded()) {
+this.debug('grassy terrain boost');
+return this.chainModify([5325, 4096]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Grassy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Grassy Terrain');
+}
+},
+onResidualOrder: 5,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+} else {
+this.debug(`Pokemon semi-invuln or not grounded; Grassy Terrain skipped`);
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Grassy Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+gravapple: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Grav Apple",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onBasePower(basePower) {
+if (this.field.getPseudoWeather('gravity')) {
+return this.chainModify(1.5);
+}
+},
+secondary: {
+chance: 75,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+gravity: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Gravity",
+pp: 0.625,
+priority: 0,
+flags: {},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Flying') return 1;
+},
+pseudoWeather: 'gravity',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Gravity');
+return 7;
+}
+return 5;
+},
+onFieldStart(target, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-fieldstart', 'move: Gravity', '[persistent]');
+} else {
+this.add('-fieldstart', 'move: Gravity');
+}
+for (const pokemon of this.getAllActive()) {
+let applies = false;
+if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
+applies = true;
+this.queue.cancelMove(pokemon);
+pokemon.removeVolatile('twoturnmove');
+}
+if (pokemon.volatiles['skydrop']) {
+applies = true;
+this.queue.cancelMove(pokemon);
+
+if (pokemon.volatiles['skydrop'].source) {
+this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+}
+pokemon.removeVolatile('skydrop');
+pokemon.removeVolatile('twoturnmove');
+}
+if (pokemon.volatiles['magnetrise']) {
+applies = true;
+delete pokemon.volatiles['magnetrise'];
+}
+if (pokemon.volatiles['telekinesis']) {
+applies = true;
+delete pokemon.volatiles['telekinesis'];
+}
+if (applies) this.add('-activate', pokemon, 'move: Gravity');
+}
+},
+onModifyAccuracy(accuracy) {
+if (typeof accuracy !== 'number') return;
+return this.chainModify([6840, 4096]);
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+if (this.dex.moves.get(moveSlot.id).flags['gravity']) {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+onBeforeMovePriority: 6,
+onBeforeMove(pokemon, target, move) {
+if (move.flags['gravity'] && !move.isZ) {
+this.add('cant', pokemon, 'move: Gravity', move);
+return false;
+}
+},
+onModifyMove(move, pokemon, target) {
+if (move.flags['gravity'] && !move.isZ) {
+this.add('cant', pokemon, 'move: Gravity', move);
+return false;
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 2,
+onFieldEnd() {
+this.add('-fieldend', 'move: Gravity');
+},
+},
+secondary: null,
+target: "all",
+type: "Psychic",
+},
+
+growth: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Growth",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onModifyMove(move, pokemon) {
+if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) move.boosts = {atk: 2, spa: 2};
+},
+boosts: {
+atk: 1,
+spa: 1,
+spe: -2,
+spd: 1,
+def: 1,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+grudge: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Grudge",
+pp: 1.25,
+priority: 0,
+flags: {bypasssub: 1},
+pseudoWeather: 'fairylock',
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+guardianofalola: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon, target) {
+const hp75 = Math.floor(target.getUndynamaxedHP() * 2 / 3);
+if (
+target.volatiles['protect'] || target.volatiles['banefulbunker'] || target.volatiles['kingsshield'] ||
+target.volatiles['spikyshield'] || target.side.getSideCondition('matblock')
+) {
+this.add('-zbroken', target);
+return this.clampIntRange(Math.ceil(hp75 / 4 - 0.5), 1);
+}
+return this.clampIntRange(hp75, 1);
+},
+category: "Special",
+name: "Guardian of Alola",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+guardsplit: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Guard Split",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, allyanim: 1},
+onHit(target, source) {
+const newdef = Math.floor((target.storedStats.def + source.storedStats.def) / 2);
+target.storedStats.def = newdef;
+source.storedStats.def = newdef;
+const newspd = Math.floor((target.storedStats.spd + source.storedStats.spd) / 2);
+target.storedStats.spd = newspd;
+source.storedStats.spd = newspd;
+this.add('-activate', source, 'move: Guard Split', '[of] ' + target);
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+guardswap: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Guard Swap",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+const targetBoosts: SparseBoostsTable = {};
+const sourceBoosts: SparseBoostsTable = {};
+
+const defSpd: BoostID[] = ['def', 'spd'];
+for (const stat of defSpd) {
+targetBoosts[stat] = target.boosts[stat];
+sourceBoosts[stat] = source.boosts[stat];
+}
+
+source.setBoost(targetBoosts);
+target.setBoost(sourceBoosts);
+
+this.add('-swapboost', source, target, 'def, spd', '[from] move: Guard Swap');
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+gunkshot: {
+accuracy: 75,
+basePower: 115,
+category: "Physical",
+name: "Gunk Shot",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+gyroball: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+let power = Math.floor(25 * target.getStat('spe') / pokemon.getStat('spe')) + 1;
+if (!isFinite(power)) power = 1;
+if (power > 150) power = 150;
+this.debug('BP: ' + power);
+return power;
+},
+category: "Physical",
+name: "Gyro Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+hail: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Hail",
+pp: 0.625,
+priority: 0,
+flags: {},
+weather: 'hail',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+harden: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Harden",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spe: -1,
+spd: 1,
+def: 1,
+evasion: -1,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+haze: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Haze",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1},
+onHitField() {
+this.add('-clearallboost');
+for (const pokemon of this.getAllActive()) {
+pokemon.clearBoosts();
+}
+},
+secondary: null,
+target: "all",
+type: "Ice",
+},
+
+headbutt: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Headbutt",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Normal",
+},
+
+headcharge: {
+accuracy: 95,
+basePower: 115,
+category: "Physical",
+name: "Head Charge",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [25, 100],
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+headlongrush: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Headlong Rush",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+self: {
+boosts: {
+def: -1,
+},
+},
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+headsmash: {
+accuracy: 75,
+basePower: 135,
+category: "Physical",
+name: "Head Smash",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [50, 100],
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+healbell: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Heal Bell",
+pp: 0.625,
+priority: 1,
+flags: {snatch: 1, sound: 1, distance: 1, bypasssub: 1},
+onHit(target, source) {
+this.add('-activate', source, 'move: Heal Bell');
+let success = false;
+const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+for (const ally of allies) {
+if (ally !== source && ally.hasAbility('soundproof')) continue;
+if (ally.cureStatus()) success = true;
+}
+return success;
+},
+target: "allyTeam",
+type: "Normal",
+},
+
+healblock: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Heal Block",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'healblock',
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Heal Block');
+return 7;
+}
+return 5;
+},
+onStart(pokemon, source) {
+this.add('-start', pokemon, 'move: Heal Block');
+source.moveThisTurnResult = true;
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+if (this.dex.moves.get(moveSlot.id).flags['heal']) {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+onBeforeMovePriority: 6,
+onBeforeMove(pokemon, target, move) {
+if (move.flags['heal'] && !move.isZ && !move.isMax) {
+this.add('cant', pokemon, 'move: Heal Block', move);
+return false;
+}
+},
+onModifyMove(move, pokemon, target) {
+if (move.flags['heal'] && !move.isZ && !move.isMax) {
+this.add('cant', pokemon, 'move: Heal Block', move);
+return false;
+}
+},
+onResidualOrder: 20,
+onEnd(pokemon) {
+this.add('-end', pokemon, 'move: Heal Block');
+},
+onTryHeal(damage, target, source, effect) {
+if ((effect?.id === 'zpower') || this.effectState.isZ) return damage;
+return false;
+},
+onRestart(target, source) {
+this.add('-fail', target, 'move: Heal Block'); // Succeeds to supress downstream messages
+if (!source.moveThisTurnResult) {
+source.moveThisTurnResult = false;
+}
+},
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Psychic",
+},
+
+healorder: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Heal Order",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+heal: [50, 100],
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+healpulse: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Heal Pulse",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, pulse: 1, reflectable: 1, distance: 1, heal: 1, allyanim: 1},
+onHit(target, source) {
+let success = false;
+if (source.hasAbility('megalauncher')) {
+success = !!this.heal(this.modify(target.baseMaxhp, 0.75));
+} else {
+success = !!this.heal(Math.ceil(target.baseMaxhp * 0.5));
+}
+if (success && !target.isAlly(source)) {
+target.staleness = 'external';
+}
+if (!success) {
+this.add('-fail', target, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+heartstamp: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Heart Stamp",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Psychic",
+},
+
+heartswap: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Heart Swap",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+const targetBoosts: SparseBoostsTable = {};
+const sourceBoosts: SparseBoostsTable = {};
+
+let i: BoostID;
+for (i in target.boosts) {
+targetBoosts[i] = target.boosts[i];
+sourceBoosts[i] = source.boosts[i];
+}
+
+target.setBoost(sourceBoosts);
+source.setBoost(targetBoosts);
+
+this.add('-swapboost', source, target, '[from] move: Heart Swap');
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+heatcrash: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const targetWeight = target.getWeight();
+const pokemonWeight = pokemon.getWeight();
+let bp;
+if (pokemonWeight >= targetWeight * 5) {
+bp = 150;
+} else if (pokemonWeight >= targetWeight * 4) {
+bp = 120;
+} else if (pokemonWeight >= targetWeight * 3) {
+bp = 100;
+} else if (pokemonWeight >= targetWeight * 2) {
+bp = 80;
+} else {
+bp = 60;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Heat Crash",
+pp: 0.625,
+priority: -10,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+onTryHit(target, pokemon, move) {
+if (target.volatiles['dynamax']) {
+this.add('-fail', pokemon, 'Dynamax');
+this.attrLastMove('[still]');
+return null;
+}
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+heatwave: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Heat Wave",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 33,
+status: 'brn',
+},
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+heavyslam: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const targetWeight = target.getWeight();
+const pokemonWeight = pokemon.getWeight();
+let bp;
+if (pokemonWeight >= targetWeight * 5) {
+bp = 150;
+} else if (pokemonWeight >= targetWeight * 4) {
+bp = 120;
+} else if (pokemonWeight >= targetWeight * 3) {
+bp = 100;
+} else if (pokemonWeight >= targetWeight * 2) {
+bp = 80;
+} else {
+bp = 60;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Heavy Slam",
+pp: 0.625,
+priority: -10,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+onTryHit(target, pokemon, move) {
+if (target.volatiles['dynamax']) {
+this.add('-fail', pokemon, 'Dynamax');
+this.attrLastMove('[still]');
+return null;
+}
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+helpinghand: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Helping Hand",
+pp: 0.625,
+priority: 5,
+flags: {bypasssub: 1},
+volatileStatus: 'helpinghand',
+onTryHit(target) {
+if (!target.newlySwitched && !this.queue.willMove(target)) return false;
+},
+condition: {
+duration: 1,
+onStart(target, source) {
+this.effectState.multiplier = 1.75;
+this.add('-singleturn', target, 'Helping Hand', '[of] ' + source);
+},
+onRestart(target, source) {
+this.effectState.multiplier *= 1.75;
+this.add('-singleturn', target, 'Helping Hand', '[of] ' + source);
+},
+onBasePowerPriority: 10,
+onBasePower(basePower) {
+this.debug('Boosting from Helping Hand: ' + this.effectState.multiplier);
+return this.chainModify(this.effectState.multiplier);
+},
+},
+secondary: null,
+target: "adjacentAlly",
+type: "Normal",
+},
+
+hex: {
+accuracy: 95,
+basePower: 70,
+basePowerCallback(pokemon, target, move) {
+if (target.status || target.hasAbility('comatose')) {
+this.debug('BP doubled from status condition');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Special",
+name: "Hex",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+highhorsepower: {
+accuracy: 75,
+basePower: 140,
+category: "Physical",
+name: "High Horsepower",
+pp: 0.625,
+priority: 3,
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "randomNormal",
+type: "Ground",
+},
+
+highjumpkick: {
+accuracy: 75,
+basePower: 130,
+category: "Physical",
+name: "High Jump Kick",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+honeclaws: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Hone Claws",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 2,
+accuracy: 2,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Dark",
+},
+
+horndrill: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Horn Drill",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
+weather: 'Sandstorm',
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 2, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onImmunity(type, pokemon) {
+if (type === 'sandstorm' || type === 'hail') return false;
+},
+onInvulnerability(target, source, move) {
+if (['earthquake', 'magnitude'].includes(move.id)) {
+return;
+}
+return false;
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.id === 'earthquake' || move.id === 'magnitude') {
+return this.chainModify(2);
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+hornleech: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Horn Leech",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+drain: [40, 100],
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+howl: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Howl",
+pp: 0.625,
+priority: 1,
+flags: {snatch: 1, sound: 1},
+boosts: {
+atk: 1,
+spa: 1,
+},
+secondary: null,
+target: "allies",
+type: "Normal",
+},
+
+hurricane: {
+accuracy: 75,
+basePower: 115,
+category: "Special",
+name: "Hurricane",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, distance: 1, wind: 1},
+onModifyMove(move, pokemon, target) {
+switch (target?.effectiveWeather()) {
+case 'raindance':
+case 'primordialsea':
+move.accuracy = true;
+break;
+case 'sunnyday':
+case 'desolateland':
+move.accuracy = 50;
+break;
+}
+},
+secondary: {
+chance: 33,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Flying",
+},
+
+hydrocannon: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Hydro Cannon",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, bullet: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+hydropump: {
+accuracy: 75,
+basePower: 115,
+category: "Special",
+name: "Hydro Pump",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+hydrosteam: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Hydro Steam",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+// Damage boost in Sun applied in conditions.ts
+thawsTarget: true,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+hydrovortex: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Hydro Vortex",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+volatileStatus: 'partiallytrapped',
+target: "any",
+type: "Water",
+},
+
+hyperbeam: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Hyper Beam",
+pp: 0.625,
+flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+hyperdrill: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Hyper Drill",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+hyperfang: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Hyper Fang",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Normal",
+},
+
+hyperspacefury: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Hyperspace Fury",
+pp: 0.625,
+priority: 0,
+flags: {mirror: 1, bypasssub: 1},
+breaksProtect: true,
+onTry(source) {
+if (source.species.name === 'Hoopa-Unbound') {
+return;
+}
+this.hint("Only a Pokemon whose form is Hoopa Unbound can use this move.");
+if (source.species.name === 'Hoopa') {
+this.attrLastMove('[still]');
+this.add('-fail', source, 'move: Hyperspace Fury', '[forme]');
+return null;
+}
+this.attrLastMove('[still]');
+this.add('-fail', source, 'move: Hyperspace Fury');
+return null;
+},
+self: {
+boosts: {
+def: -1,
+},
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+hyperspacehole: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Hyperspace Hole",
+pp: 1.25,
+priority: 0,
+flags: {mirror: 1, bypasssub: 1},
+breaksProtect: true,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+hypervoice: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Hyper Voice",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+hypnosis: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Hypnosis",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+status: 'slp',
+secondary: null,
+target: "allAdjacent",
+type: "Psychic",
+},
+
+iceball: {
+accuracy: 95,
+basePower: 15,
+basePowerCallback(pokemon, target, move) {
+return 15 * move.hit;
+},
+category: "Physical",
+name: "Ice Ball",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+multihit: [1, 10],
+multiaccuracy: 75,
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+
+icebeam: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Ice Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'frz',
+},
+target: "any",
+type: "Ice",
+},
+
+iceburn: {
+accuracy: 95,
+basePower: 140,
+category: "Special",
+name: "Ice Burn",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Ice') return 1;
+},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spa: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: {
+chance: 33,
+status: 'brn',
+},
+target: "any",
+type: "Ice",
+},
+
+icefang: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Ice Fang",
+pp: 0.625,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 33,
+status: 'frz',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Ice",
+},
+
+icehammer: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Ice Hammer",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+self: {
+boosts: {
+spe: -1.5,
+},
+},
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+icepunch: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Ice Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondaries: [
+{
+chance: 33,
+status: 'frz',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Ice",
+},
+
+iceshard: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Ice Shard",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+icespinner: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Ice Spinner",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onHit() {
+this.field.clearTerrain();
+},
+onAfterSubDamage() {
+this.field.clearTerrain();
+},
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+iciclecrash: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Icicle Crash",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Ice",
+},
+
+iciclespear: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Icicle Spear",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 5],
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+icywind: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Icy Wind",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+incinerate: {
+accuracy: 85,
+basePower: 40,
+category: "Special",
+name: "Incinerate",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 1,
+onBasePower(basePower, source, target, move) {
+const item = target.getItem();
+if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+if (item.id) {
+return this.chainModify(1.5);
+}
+},
+onAfterHit(target, source) {
+if (source.hp) {
+const item = target.takeItem();
+if (item) {
+this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
+}
+}
+},
+secondary: {
+chance: 50,
+status: 'brn',
+},
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+infernalparade: {
+accuracy: 95,
+basePower: 60,
+basePowerCallback(pokemon, target, move) {
+if (target.status || target.hasAbility('comatose')) return move.basePower * 2;
+return move.basePower;
+},
+category: "Special",
+name: "Infernal Parade",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Ghost",
+},
+
+inferno: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Inferno",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+infernooverdrive: {
+accuracy: 95,
+basePower: 55,
+category: "Physical",
+name: "Inferno Overdrive",
+pp: 0.625,
+priority: 3,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+infestation: {
+accuracy: 85,
+basePower: 40,
+category: "Special",
+name: "Infestation",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+ingrain: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Ingrain",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'ingrain',
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'move: Ingrain');
+},
+onResidualOrder: 7,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 8);
+},
+onTrapPokemon(pokemon) {
+pokemon.tryTrap();
+},
+// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+onDragOut(pokemon) {
+this.add('-activate', pokemon, 'move: Ingrain');
+return null;
+},
+},
+secondary: null,
+target: "self",
+type: "Grass",
+},
+
+instruct: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Instruct",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+if (!target.lastMove || target.volatiles['dynamax']) return false;
+const lastMove = target.lastMove;
+const moveIndex = target.moves.indexOf(lastMove.id);
+if (
+lastMove.flags['failinstruct'] || lastMove.isZ || lastMove.isMax ||
+lastMove.flags['charge'] || lastMove.flags['recharge'] ||
+target.volatiles['beakblast'] || target.volatiles['focuspunch'] || target.volatiles['shelltrap'] ||
+(target.moveSlots[moveIndex] && target.moveSlots[moveIndex].pp <= 0)
+) {
+return false;
+}
+this.add('-singleturn', target, 'move: Instruct', '[of] ' + source);
+this.queue.prioritizeAction(this.queue.resolveAction({
+choice: 'move',
+pokemon: target,
+moveid: target.lastMove.id,
+targetLoc: target.lastMoveTargetLoc!,
+})[0] as MoveAction);
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+irondefense: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Iron Defense",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 2,
+def: 2,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Steel",
+},
+
+ironhead: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Iron Head",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Steel",
+},
+
+irontail: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Iron Tail",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Steel",
+},
+
+jawlock: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Jaw Lock",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+onHit(target, source, move) {
+source.addVolatile('trapped', target, move, 'trapper');
+target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+jetpunch: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Jet Punch",
+pp: 0.625,
+priority: 6,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 5, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+hasSheerForce: true,
+target: "any",
+type: "Water",
+},
+
+jumpkick: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Jump Kick",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Jump Kick'));
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+junglehealing: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Jungle Healing",
+pp: 0.625,
+priority: 0,
+flags: {heal: 1, bypasssub: 1, allyanim: 1},
+onHit(pokemon) {
+const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+return pokemon.cureStatus() || success;
+},
+secondary: null,
+target: "allies",
+type: "Grass",
+},
+
+kinesis: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Kinesis",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (!target || target.fainted || target.hp <= 0) this.boost({spa: 2}, pokemon, pokemon, move);
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+kingsshield: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "King's Shield",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'kingsshield',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect'] || move.category === 'Status') {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+this.boost({atk: -1}, source, target, this.dex.getActiveMove("King's Shield"));
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+this.boost({atk: -1}, source, target, this.dex.getActiveMove("King's Shield"));
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Steel",
+},
+
+knockoff: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Knock Off",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, source, target, move) {
+const item = target.getItem();
+if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+if (item.id) {
+return this.chainModify(1.5);
+}
+},
+onAfterHit(target, source) {
+if (source.hp) {
+const item = target.takeItem();
+if (item) {
+this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+kowtowcleave: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Kowtow Cleave",
+pp: 1.25,
+priority: -5,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+landswrath: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Land's Wrath",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+lashout: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Lash Out",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, source) {
+if (source.statsLoweredThisTurn) {
+this.debug('lashout buff');
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+lastresort: {
+accuracy: 75,
+basePower: 80,
+Damage: 50,
+category: "Physical",
+name: "Last Resort",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 3,
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 1, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+drain: [100, 100],
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+lastrespects: {
+accuracy: 95,
+basePower: 50,
+basePowerCallback(pokemon, target, move) {
+return 50 + 50 * pokemon.side.totalFainted;
+},
+category: "Physical",
+name: "Last Respects",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+lavaplume: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Lava Plume",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "allAdjacent",
+type: "Fire",
+},
+
+leafage: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Leafage",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+leafblade: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Leaf Blade",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+leafstorm: {
+accuracy: 85,
+basePower: 130,
+category: "Special",
+name: "Leaf Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+self: {
+boosts: {
+spa: -2,
+},
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+leaftornado: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Leaf Tornado",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+evasion: -1,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+leechlife: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Leech Life",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+drain: [50, 100],
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+leechseed: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Leech Seed",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'leechseed',
+condition: {
+onStart(target) {
+this.add('-start', target, 'move: Leech Seed');
+},
+onResidualOrder: 8,
+onResidual(pokemon) {
+const target = this.getAtSlot(pokemon.volatiles['leechseed'].sourceSlot);
+if (!target || target.fainted || target.hp <= 0) {
+this.debug('Nothing to leech into');
+return;
+}
+const damage = this.damage(pokemon.baseMaxhp / 6.666, pokemon, target);
+if (damage) {
+this.heal(damage, target, pokemon);
+}
+},
+},
+onTryImmunity(target) {
+return !target.hasType('Grass');
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+leer: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Leer",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+spd: -1,
+def: -1,
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+letssnuggleforever: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Let's Snuggle Forever",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
+type: "Fairy",
+},
+
+lick: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Lick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+status: 'par',
+},
+target: "any",
+type: "Ghost",
+},
+
+lifedew: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Life Dew",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1, bypasssub: 1},
+heal: [33, 100],
+secondary: null,
+target: "allies",
+type: "Water",
+},
+
+lightofruin: {
+accuracy: 85,
+basePower: 140,
+category: "Special",
+name: "Light of Ruin",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, beam: 1, mirror: 1},
+recoil: [50, 100],
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+lightscreen: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Light Screen",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'lightscreen',
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasItem('lightclay')) {
+return 8;
+}
+return 5;
+},
+onAnyModifyDamage(damage, source, target, move) {
+if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
+if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+this.debug('Light Screen weaken');
+if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+return this.chainModify(0.5);
+}
+}
+},
+onSideStart(side) {
+this.add('-sidestart', side, 'move: Light Screen');
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 2,
+onSideEnd(side) {
+this.add('-sideend', side, 'move: Light Screen');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Psychic",
+},
+
+lightthatburnsthesky: {
+accuracy: 85,
+basePower: 125,
+category: "Special",
+name: "Light That Burns the Sky",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1,},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+},
+ignoreAbility: true,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+liquidation: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Liquidation",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Water",
+},
+
+lockon: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Lock On",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onTryHit(target, source) {
+if (source.volatiles['lockon']) return false;
+},
+onHit(target, source) {
+source.addVolatile('lockon', target);
+this.add('-activate', source, 'move: Lock On', '[of] ' + target);
+},
+condition: {
+noCopy: true, // doesn't get copied by Baton Pass
+duration: 2,
+onSourceInvulnerabilityPriority: 1,
+onSourceInvulnerability(target, source, move) {
+if (move && source === this.effectState.target && target === this.effectState.source) return 0;
+},
+onSourceAccuracy(accuracy, target, source, move) {
+if (move && source === this.effectState.target && target === this.effectState.source) return true;
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+lovelykiss: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Lovely Kiss",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 90,
+status: 'slp',
+},
+target: "any",
+type: "Normal",
+},
+
+lowkick: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const targetWeight = target.getWeight();
+let bp;
+if (targetWeight >= 2000) {
+bp = 150;
+} else if (targetWeight >= 1000) {
+bp = 120;
+} else if (targetWeight >= 500) {
+bp = 100;
+} else if (targetWeight >= 250) {
+bp = 80;
+} else if (targetWeight >= 100) {
+bp = 40;
+} else {
+bp = 20;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Low Kick",
+pp: 0.625,
+priority: -10,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+onTryHit(target, pokemon, move) {
+if (target.volatiles['dynamax']) {
+this.add('-fail', pokemon, 'Dynamax');
+this.attrLastMove('[still]');
+return null;
+}
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+lowsweep: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Low Sweep",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+luminacrash: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Lumina Crash",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spd: -2,
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+lunarblessing: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Lunar Blessing",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onHit(pokemon) {
+const success = !!this.heal(this.modify(pokemon.maxhp, 0.33));
+return pokemon.cureStatus() || success;
+},
+secondary: null,
+target: "allies",
+type: "Psychic",
+},
+
+lunardance: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Lunar Dance",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+terrain: 'mistyterrain',
+selfSwitch: true,
+critRatio: 0,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+lunge: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Lunge",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Bug",
+},
+
+lusterpurge: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Luster Purge",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+machpunch: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Mach Punch",
+pp: 0.625,
+priority: 9,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+magicalleaf: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Magical Leaf",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+boosts: {
+accuracy: 1,
+},
+target: "any",
+type: "Grass",
+},
+
+magicaltorque: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Magical Torque",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+secondary: {
+chance: 33,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Fairy",
+},
+
+magiccoat: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Magic Coat",
+pp: 0.625,
+priority: 4,
+flags: {},
+volatileStatus: 'magiccoat',
+condition: {
+duration: 1,
+onStart(target, source, effect) {
+this.add('-singleturn', target, 'move: Magic Coat');
+if (effect?.effectType === 'Move') {
+this.effectState.pranksterBoosted = effect.pranksterBoosted;
+}
+},
+onTryHitPriority: 2,
+onTryHit(target, source, move) {
+if (target === source || move.hasBounced || !move.flags['reflectable']) {
+return;
+}
+const newMove = this.dex.getActiveMove(move.id);
+newMove.hasBounced = true;
+newMove.pranksterBoosted = this.effectState.pranksterBoosted;
+this.actions.useMove(newMove, target, source);
+return null;
+},
+onAllyTryHitSide(target, source, move) {
+if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+return;
+}
+const newMove = this.dex.getActiveMove(move.id);
+newMove.hasBounced = true;
+newMove.pranksterBoosted = false;
+this.actions.useMove(newMove, this.effectState.target, source);
+return null;
+},
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+magicpowder: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Magic Powder",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+if (target.getTypes().join() === 'Psychic' || !target.setType('Psychic')) return false;
+this.add('-start', target, 'typechange', 'Psychic');
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+magicroom: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Magic Room",
+pp: 0.625,
+priority: 0,
+flags: {mirror: 1},
+pseudoWeather: 'magicroom',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Magic Room');
+return 7;
+}
+return 5;
+},
+onFieldStart(target, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-fieldstart', 'move: Magic Room', '[of] ' + source, '[persistent]');
+} else {
+this.add('-fieldstart', 'move: Magic Room', '[of] ' + source);
+}
+for (const mon of this.getAllActive()) {
+this.singleEvent('End', mon.getItem(), mon.itemState, mon);
+}
+},
+onFieldRestart(target, source) {
+this.field.removePseudoWeather('magicroom');
+},
+// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 6,
+onFieldEnd() {
+this.add('-fieldend', 'move: Magic Room', '[of] ' + this.effectState.source);
+},
+},
+secondary: null,
+target: "all",
+type: "Psychic",
+},
+
+magmastorm: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Magma Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+weather: 'sunnyday',
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+magnetbomb: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Magnet Bomb",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+weather: 'Sandstorm',
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+magnetrise: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Magnet Rise",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, gravity: 1},
+volatileStatus: 'magnetrise',
+onTry(source, target, move) {
+if (target.volatiles['smackdown'] || target.volatiles['ingrain']) return false;
+
+// Additional Gravity check for Z-move variant
+if (this.field.getPseudoWeather('Gravity')) {
+this.add('cant', source, 'move: Gravity', move);
+return null;
+}
+},
+condition: {
+duration: 5,
+onStart(target) {
+this.add('-start', target, 'Magnet Rise');
+},
+onImmunity(type) {
+if (type === 'Ground') return false;
+},
+onResidualOrder: 18,
+onEnd(target) {
+this.add('-end', target, 'Magnet Rise');
+},
+},
+secondary: null,
+target: "self",
+type: "Electric",
+},
+
+magnitude: {
+accuracy: 95,
+basePower: 0,
+category: "Physical",
+name: "Magnitude",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyMove(move, pokemon) {
+const i = this.random(100);
+if (i < 5) {
+move.magnitude = 4;
+move.basePower = 10;
+} else if (i < 15) {
+move.magnitude = 5;
+move.basePower = 30;
+} else if (i < 35) {
+move.magnitude = 6;
+move.basePower = 50;
+} else if (i < 65) {
+move.magnitude = 7;
+move.basePower = 70;
+} else if (i < 85) {
+move.magnitude = 8;
+move.basePower = 90;
+} else if (i < 95) {
+move.magnitude = 9;
+move.basePower = 110;
+} else {
+move.magnitude = 10;
+move.basePower = 150;
+}
+},
+onUseMoveMessage(pokemon, target, move) {
+this.add('-activate', pokemon, 'move: Magnitude', move.magnitude);
+},
+secondary: null,
+target: "allAdjacent",
+type: "Ground",
+},
+
+makeitrain: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Make It Rain",
+pp: 0.625,
+priority: 0,
+flags: {distance: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Fire') return 1;
+},
+weather: 'RainDance',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Steel",
+},
+
+maliciousmoonsault: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Malicious Moonsault",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Fighting') return 1;
+},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Dark",
+},
+
+matblock: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Mat Block",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+stallingMove: true,
+sideCondition: 'matblock',
+onTry(source) {
+if (source.activeMoveActions > 2) {
+this.hint("Mat Block only works on your first turn out.");
+return false;
+}
+return !!this.queue.willAct();
+},
+condition: {
+duration: 1,
+onSideStart(target, source) {
+this.add('-singleturn', source, 'Mat Block');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect']) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move && (move.target === 'self' || move.category === 'Status')) return;
+this.add('-activate', target, 'move: Mat Block', move.name);
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+return this.NOT_FAIL;
+},
+},
+secondary: null,
+target: "allySide",
+type: "Fighting",
+},
+
+meanlook: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Mean Look",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1, mirror: 1},
+onHit(target, source, move) {
+return target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+meditate: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Meditate",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 2,
+spa: 2,
+def: -1,
+spd: -1,
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+megadrain: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Mega Drain",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, heal: 1},
+critRatio: 2,
+drain: [75, 100],
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+megahorn: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Megahorn",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+megakick: {
+accuracy: 75,
+basePower: 120,
+category: "Physical",
+name: "Mega Kick",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [50, 100],
+forceSwitch: true,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+megapunch: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Mega Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+recoil: [25, 100],
+forceSwitch: true,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+memento: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Memento",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+boosts: {
+atk: -2,
+spa: -2,
+},
+selfdestruct: "ifHit",
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+menacingmoonrazemaelstrom: {
+accuracy: 85,
+basePower: 125,
+category: "Special",
+name: "Menacing Moonraze Maelstrom",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, beam: 1, mirror: 1,},
+pseudoWeather: 'fairylock',
+condition: {
+duration: 5,
+onFieldStart(target) {
+this.add('-fieldactivate', 'move: Fairy Lock');
+},
+onTrapPokemon(pokemon) {
+pokemon.tryTrap();
+},
+},
+ignoreAbility: true,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+metalburst: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+const lastDamagedBy = pokemon.getLastDamagedBy(true);
+if (lastDamagedBy !== undefined) {
+return (lastDamagedBy.damage * 1.5) || 1;
+}
+return 0;
+},
+category: "Physical",
+name: "Metal Burst",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Steel') return 1;
+},
+onTry(source) {
+const lastDamagedBy = source.getLastDamagedBy(true);
+if (lastDamagedBy === undefined || !lastDamagedBy.thisTurn) return false;
+},
+onModifyTarget(targetRelayVar, source, target, move) {
+const lastDamagedBy = source.getLastDamagedBy(true);
+if (lastDamagedBy) {
+targetRelayVar.target = this.getAtSlot(lastDamagedBy.slot);
+}
+},
+secondary: null,
+target: "scripted",
+type: "Steel",
+},
+
+metalclaw: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Metal Claw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+self: {
+boosts: {
+atk: 1,
+},
+},
+},
+target: "any",
+type: "Steel",
+},
+
+metalsound: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Metal Sound",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
+boosts: {
+spd: -2,
+def: -2,
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+meteorassault: {
+accuracy: 85,
+basePower: 150,
+category: "Physical",
+name: "Meteor Assault",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, recharge: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+meteorbeam: {
+accuracy: 95,
+basePower: 120,
+category: "Special",
+name: "Meteor Beam",
+pp: 0.625,
+flags: {charge: 1, beam: 1, protect: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spa: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+meteormash: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Meteor Mash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondary: {
+chance: 25,
+self: {
+boosts: {
+atk: 1,
+},
+},
+},
+target: "any",
+type: "Steel",
+},
+
+milkdrink: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Milk Drink",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+heal: [33, 100],
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+mimic: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Mimic",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+const move = target.lastMove;
+if (source.transformed || !move || move.flags['failmimic'] || source.moves.includes(move.id)) {
+return false;
+}
+if (move.isZ || move.isMax) return false;
+const mimicIndex = source.moves.indexOf('mimic');
+if (mimicIndex < 0) return false;
+source.moveSlots[mimicIndex] = {
+move: move.name,
+id: move.id,
+pp: move.pp,
+maxpp: move.pp,
+target: move.target,
+disabled: false,
+used: false,
+virtual: true,
+};
+this.add('-start', source, 'Mimic', move.name);
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+mindblown: {
+accuracy: 95,
+basePower: 135,
+category: "Special",
+name: "Mind Blown",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+mindBlownRecoil: true,
+onAfterMove(pokemon, target, move) {
+if (move.mindBlownRecoil && !move.multihit) {
+const hpBeforeRecoil = pokemon.hp;
+this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Mind Blown'), true);
+if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+this.runEvent('EmergencyExit', pokemon, pokemon);
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+minimize: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Minimize",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'minimize',
+condition: {
+noCopy: true,
+onRestart: () => null,
+onSourceModifyDamage(damage, source, target, move) {
+const boostedMoves = [
+'stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
+];
+if (boostedMoves.includes(move.id)) {
+return this.chainModify(2);
+}
+},
+onAccuracy(accuracy, target, source, move) {
+const boostedMoves = [
+'stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
+];
+if (boostedMoves.includes(move.id)) {
+return true;
+}
+return accuracy;
+},
+},
+boosts: {
+atk: -2,
+spa: -2,
+spe: 4,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+miracleeye: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Miracle Eye",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+volatileStatus: 'miracleeye',
+onTryHit(target) {
+if (target.volatiles['foresight']) return false;
+},
+condition: {
+noCopy: true,
+onStart(pokemon) {
+this.add('-start', pokemon, 'Miracle Eye');
+},
+onNegateImmunity(pokemon, type) {
+if (pokemon.hasType('Dark') && type === 'Psychic') return false;
+},
+onModifyBoost(boosts) {
+if (boosts.evasion && boosts.evasion > 0) {
+boosts.evasion = 0;
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+mirrorcoat: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+if (!pokemon.volatiles['mirrorcoat']) return 0;
+return pokemon.volatiles['mirrorcoat'].damage || 1;
+},
+category: "Special",
+name: "Mirror Coat",
+pp: 1.25,
+priority: -9,
+flags: {slow: 1, protect: 1},
+beforeTurnCallback(pokemon) {
+pokemon.addVolatile('mirrorcoat');
+},
+onTry(source) {
+if (!source.volatiles['mirrorcoat']) return false;
+if (source.volatiles['mirrorcoat'].slot === null) return false;
+},
+condition: {
+duration: 1,
+noCopy: true,
+onStart(target, source, move) {
+this.effectState.slot = null;
+this.effectState.damage = 0;
+},
+onRedirectTargetPriority: -9,
+onRedirectTarget(target, source, source2, move) {
+if (move.id !== 'mirrorcoat') return;
+if (source !== this.effectState.target || !this.effectState.slot) return;
+return this.getAtSlot(this.effectState.slot);
+},
+onDamagingHit(damage, target, source, move) {
+if (!source.isAlly(target) && this.getCategory(move) === 'Special') {
+this.effectState.slot = source.getSlot();
+this.effectState.damage = 2 * damage;
+}
+},
+},
+secondary: null,
+target: "scripted",
+type: "Psychic",
+},
+
+mirrormove: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Mirror Move",
+pp: 0.625,
+priority: 0,
+flags: {},
+onTryHit(target, pokemon) {
+const move = target.lastMove;
+if (!move?.flags['mirror'] || move.isZ || move.isMax) {
+return false;
+}
+this.actions.useMove(move.id, pokemon, target);
+return null;
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+mirrorshot: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Mirror Shot",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+evasion: -1,
+},
+},
+target: "any",
+type: "Steel",
+},
+
+mist: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Mist",
+pp: 1.25,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'mist',
+condition: {
+duration: 7,
+onTryBoost(boost, target, source, effect) {
+if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+if (source && target !== source) {
+let showMsg = false;
+let i: BoostID;
+for (i in boost) {
+if (boost[i]! < 0) {
+delete boost[i];
+showMsg = true;
+}
+}
+if (showMsg && !(effect as ActiveMove).secondaries) {
+this.add('-activate', target, 'move: Mist');
+}
+}
+},
+onSideStart(side) {
+this.add('-sidestart', side, 'Mist');
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 4,
+onSideEnd(side) {
+this.add('-sideend', side, 'Mist');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Ice",
+},
+
+mistball: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Mist Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+spa: -1,
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+mistyexplosion: {
+accuracy: 95,
+basePower: 250,
+category: "Special",
+name: "Misty Explosion",
+pp: 0.625,
+priority: -7,
+flags: {protect: 1, slow: 1, mirror: 1},
+selfdestruct: "always",
+onBasePower(basePower, source) {
+if (this.field.isTerrain('mistyterrain') && source.isGrounded()) {
+this.debug('misty terrain boost');
+return this.chainModify(1.5);
+}
+},
+secondary: null,
+target: "allAdjacent",
+type: "Fairy",
+},
+
+mistyterrain: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Misty Terrain",
+pp: 0.625,
+priority: 0,
+flags: {},
+terrain: 'mistyterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (effect && ((effect as Move).status || effect.id === 'yawn')) {
+this.add('-activate', target, 'move: Misty Terrain');
+}
+return false;
+},
+onTryAddVolatile(status, target, source, effect) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (status.id === 'confusion') {
+if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Misty Terrain');
+return null;
+}
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Dragon' && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+this.debug('misty terrain weaken');
+return this.chainModify(0.5);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Misty Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Misty Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'Misty Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+moonblast: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Moonblast",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Fairy",
+},
+
+moongeistbeam: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Moongeist Beam",
+pp: 0.625,
+flags: {protect: 1, beam: 1, mirror: 1},
+ignoreAbility: true,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+moonlight: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Moonlight",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onHit(pokemon) {
+let factor = 0.5;
+switch (pokemon.effectiveWeather()) {
+case 'sunnyday':
+case 'desolateland':
+factor = 0.667;
+break;
+case 'raindance':
+case 'primordialsea':
+case 'sandstorm':
+case 'hail':
+case 'snow':
+factor = 0.25;
+break;
+}
+const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+if (!success) {
+this.add('-fail', pokemon, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "self",
+type: "Fairy",
+},
+
+morningsun: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Morning Sun",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onHit(pokemon) {
+let factor = 0.5;
+switch (pokemon.effectiveWeather()) {
+case 'sunnyday':
+case 'desolateland':
+factor = 0.667;
+break;
+case 'raindance':
+case 'primordialsea':
+case 'sandstorm':
+case 'hail':
+case 'snow':
+factor = 0.25;
+break;
+}
+const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+if (!success) {
+this.add('-fail', pokemon, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+mortalspin: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Mortal Spin",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterHit(target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
+onAfterSubDamage(damage, target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
+secondary: {
+chance: 75,
+status: 'tox',
+},
+target: "allAdjacentFoes",
+type: "Poison",
+},
+
+mountaingale: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Mountain Gale",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+weather: 'hail',
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Ice",
+},
+
+mudbomb: {
+accuracy: 85,
+basePower: 65,
+category: "Special",
+name: "Mud Bomb",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+pseudoWeather: 'mudsport',
+condition: {
+duration: 5,
+onFieldStart(field, source) {
+this.add('-fieldstart', 'move: Mud Sport', '[of] ' + source);
+},
+onBasePowerPriority: 1,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Electric') {
+this.debug('mud sport weaken');
+return this.chainModify([1352, 4096]);
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 4,
+onFieldEnd() {
+this.add('-fieldend', 'move: Mud Sport');
+},
+},
+secondary: {
+chance: 25,
+boosts: {
+evasion: -1,
+},
+},
+target: "any",
+type: "Ground",
+},
+
+mudshot: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Mud Shot",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -2,
+},
+},
+target: "any",
+type: "Ground",
+},
+
+mudslap: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Mud Slap",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+evasion: -2,
+},
+},
+target: "any",
+type: "Ground",
+},
+
+muddywater: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Muddy Water",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+boosts: {
+evasion: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Water",
+},
+
+mysticalfire: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Mystical Fire",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+weather: 'sunnyday',
+secondary: {
+chance: 75,
+boosts: {
+spa: -1,
+},
+},
+target: "any",
+type: "Fire",
+},
+
+mysticalpower: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Mystical Power",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spa: 1,
+},
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+nastyplot: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Nasty Plot",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 2,
+spa: 2,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Dark",
+},
+
+
+naturepower: {
+accuracy: 95,
+basePower: 0,
+category: "Special",
+name: "Nature Power",
+pp: 1.25,
+priority: 0,
+flags: {},
+onTryHit(target, pokemon) {
+let move = 'triattack';
+if (this.field.isTerrain('electricterrain')) {
+move = 'thunderbolt';
+} else if (this.field.isTerrain('grassyterrain')) {
+move = 'energyball';
+} else if (this.field.isTerrain('mistyterrain')) {
+move = 'moonblast';
+} else if (this.field.isTerrain('psychicterrain')) {
+move = 'psychic';
+}
+this.actions.useMove(move, pokemon, target);
+return null;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+naturesmadness: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon, target) {
+return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+},
+category: "Special",
+name: "Nature's Madness",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+needlearm: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Needle Arm",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Grass",
+},
+
+neverendingnightmare: {
+accuracy: 95,
+basePower: 45,
+category: "Special",
+name: "Never Ending Nightmare",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+status: 'slp',
+},
+target: "allAdjacentFoes",
+type: "Ghost",
+},
+
+nightdaze: {
+accuracy: 95,
+basePower: 85,
+category: "Special",
+name: "Night Daze",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+evasion: -1,
+},
+},
+target: "any",
+type: "Dark",
+},
+
+nightmare: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Nightmare",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+volatileStatus: 'nightmare',
+condition: {
+noCopy: true,
+onStart(pokemon) {
+if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+return false;
+}
+this.add('-start', pokemon, 'Nightmare');
+},
+onResidualOrder: 11,
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 4);
+},
+},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+nightshade: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+return (this.random(50, 150) * pokemon.level) / 100;
+},
+category: "Special",
+name: "Night Shade",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+nightslash: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Night Slash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+nobleroar: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Noble Roar",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+boosts: {
+atk: -1,
+spa: -1,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+noretreat: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "No Retreat",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'noretreat',
+onTry(source, target, move) {
+if (source.volatiles['noretreat']) return false;
+if (source.volatiles['trapped']) {
+delete move.volatileStatus;
+}
+},
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'move: No Retreat');
+},
+onTrapPokemon(pokemon) {
+pokemon.tryTrap();
+},
+},
+boosts: {
+atk: 1,
+def: 1,
+spa: 1,
+spd: 1,
+spe: 1,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Fighting",
+},
+
+noxioustorque: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Noxious Torque",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+secondary: {
+chance: 33,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+nuzzle: {
+accuracy: 95,
+basePower: 20,
+category: "Physical",
+name: "Nuzzle",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+oblivionwing: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Oblivion Wing",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, distance: 1, heal: 1},
+drain: [75, 100],
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+obstruct: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Obstruct",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'obstruct',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect'] || move.category === 'Status') {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+this.boost({def: -2}, source, target, this.dex.getActiveMove("Obstruct"));
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+this.boost({def: -2}, source, target, this.dex.getActiveMove("Obstruct"));
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Dark",
+},
+
+oceanicoperetta: {
+accuracy: 75,
+basePower: 50,
+category: "Special",
+name: "Oceanic Operetta",
+pp: 0.625,
+priority: 0,
+flags: {sound: 1, protect: 1, mirror: 1,},
+secondary: {
+chance: 75,
+status: 'slp',
+},
+target: "allAdjacentFoes",
+type: "Water",
+},
+
+octazooka: {
+accuracy: 95,
+basePower: 15,
+category: "Special",
+name: "Octazooka",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+},
+multihit: [1, 8],
+multiaccuracy: 75,
+secondary: {
+chance: 15,
+boosts: {
+evasion: -1,
+},
+},
+target: "any",
+type: "Water",
+},
+
+octolock: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Octolock",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onTryImmunity(target) {
+return this.dex.getImmunity('trapped', target);
+},
+volatileStatus: 'octolock',
+condition: {
+onStart(pokemon, source) {
+this.add('-start', pokemon, 'move: Octolock', '[of] ' + source);
+},
+onResidualOrder: 14,
+onResidual(pokemon) {
+const source = this.effectState.source;
+if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+delete pokemon.volatiles['octolock'];
+this.add('-end', pokemon, 'Octolock', '[partiallytrapped]', '[silent]');
+return;
+}
+this.boost({def: -1, spd: -1}, pokemon, source, this.dex.getActiveMove('octolock'));
+},
+onTrapPokemon(pokemon) {
+if (this.effectState.source && this.effectState.source.isActive) pokemon.tryTrap();
+},
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+odorsleuth: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Odor Sleuth",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1, allyanim: 1},
+volatileStatus: 'foresight',
+onTryHit(target) {
+if (target.volatiles['miracleeye']) return false;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+ominouswind: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Ominous Wind",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+self: {
+boosts: {
+atk: 1,
+def: 1,
+spa: 1,
+spd: 1,
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Ghost",
+},
+
+orderup: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Order Up",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (!pokemon.volatiles['commanded']) return;
+const tatsugiri = pokemon.volatiles['commanded'].source;
+if (tatsugiri.baseSpecies.baseSpecies !== 'Tatsugiri') return; // Should never happen
+switch (tatsugiri.baseSpecies.forme) {
+case 'Droopy':
+this.boost({def: 1}, pokemon, pokemon);
+break;
+case 'Stretchy':
+this.boost({spe: 1}, pokemon, pokemon);
+break;
+default:
+this.boost({atk: 1}, pokemon, pokemon);
+break;
+}
+},
+secondary: null,
+hasSheerForce: true,
+target: "any",
+type: "Dragon",
+},
+
+originpulse: {
+accuracy: 85,
+basePower: 110,
+category: "Special",
+name: "Origin Pulse",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, pulse: 1, mirror: 1},
+target: "allAdjacentFoes",
+type: "Water",
+},
+
+outrage: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Outrage",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'lockedmove',
+},
+onAfterMove(pokemon) {
+if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+pokemon.removeVolatile('lockedmove');
+}
+},
+secondary: null,
+target: "randomNormal",
+type: "Dragon",
+},
+
+overdrive: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Overdrive",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Electric",
+},
+
+overheat: {
+accuracy: 85,
+basePower: 130,
+category: "Special",
+name: "Overheat",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+self: {
+boosts: {
+spa: -2,
+},
+},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+painsplit: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Pain Split",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, allyanim: 1},
+onHit(target, pokemon) {
+const targetHP = target.getUndynamaxedHP();
+const averagehp = Math.floor((targetHP + pokemon.hp) / 2) || 1;
+const targetChange = targetHP - averagehp;
+target.sethp(target.hp - targetChange);
+this.add('-sethp', target, target.getHealth, '[from] move: Pain Split', '[silent]');
+pokemon.sethp(averagehp);
+this.add('-sethp', pokemon, pokemon.getHealth, '[from] move: Pain Split');
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+paraboliccharge: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Parabolic Charge",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, heal: 1},
+drain: [50, 100],
+secondary: null,
+target: "allAdjacent",
+type: "Electric",
+},
+
+partingshot: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Parting Shot",
+pp: 0.625,
+priority: 3,
+flags: {protect: 1, reflectable: 1, bullet: 1, mirror: 1, sound: 1, bypasssub: 1},
+onHit(target, source, move) {
+const success = this.boost({atk: -1, spa: -1}, target, source);
+if (!success && !target.hasAbility('mirrorarmor')) {
+delete move.selfSwitch;
+}
+},
+selfSwitch: true,
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+payback: {
+accuracy: 95,
+basePower: 50,
+basePowerCallback(pokemon, target, move) {
+if (target.newlySwitched || this.queue.willMove(target)) {
+this.debug('Payback NOT boosted');
+return move.basePower;
+}
+this.debug('Payback damage boost');
+return move.basePower * 2;
+},
+category: "Physical",
+name: "Payback",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+payday: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Pay Day",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 75,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Normal",
+},
+
+peck: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Peck",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+critRatio: 2,
+drain: [100, 100],
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+perishsong: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Perish Song",
+pp: 0.625,
+priority: 1,
+flags: {sound: 1, distance: 1, bypasssub: 1},
+onHitField(target, source, move) {
+let result = false;
+let message = false;
+for (const pokemon of this.getAllActive()) {
+if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+this.add('-miss', source, pokemon);
+result = true;
+} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+result = true;
+} else if (!pokemon.volatiles['perishsong']) {
+pokemon.addVolatile('perishsong');
+result = true;
+message = true;
+}
+}
+if (!result) return false;
+if (message) this.add('-fieldactivate', 'move: Perish Song');
+},
+condition: {
+duration: 3,
+onEnd(target) {
+this.add('-start', target, 'perish0');
+target.faint();
+},
+onResidualOrder: 24,
+onResidual(pokemon) {
+const duration = pokemon.volatiles['perishsong'].duration;
+this.add('-start', pokemon, 'perish' + duration);
+},
+},
+secondary: null,
+target: "all",
+type: "Normal",
+},
+
+petalblizzard: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Petal Blizzard",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 25,
+status: 'frz',
+},
+target: "allAdjacent",
+type: "Grass",
+},
+
+petaldance: {
+accuracy: 85,
+basePower: 115,
+category: "Special",
+name: "Petal Dance",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+self: {
+volatileStatus: 'lockedmove',
+},
+onAfterMove(pokemon) {
+if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+pokemon.removeVolatile('lockedmove');
+}
+},
+secondary: null,
+target: "randomNormal",
+type: "Grass",
+},
+
+phantomforce: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Phantom Force",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, charge: 1, mirror: 1},
+breaksProtect: true,
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+condition: {
+duration: 2,
+onInvulnerability: false,
+},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+photongeyser: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Photon Geyser",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+},
+ignoreAbility: true,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+pinmissile: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Pin Missile",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+plasmafists: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Plasma Fists",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Steel') return 1;
+},
+pseudoWeather: 'iondeluge',
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+playnice: {
+accuracy: 95,
+basePower: 40,
+category: "Status",
+name: "Play Nice",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1, mirror: 1, bypasssub: 1},
+boosts: {
+chance: 50,
+atk: -1,
+spa: -1,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+playrough: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Play Rough",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Fairy",
+},
+
+pluck: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Pluck",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+onHit(target, source) {
+const item = target.getItem();
+if (source.hp && item.isBerry && target.takeItem(source)) {
+this.add('-enditem', target, item.name, '[from] stealeat', '[move] Pluck', '[of] ' + source);
+if (this.singleEvent('Eat', item, null, source, null, null)) {
+this.runEvent('EatItem', source, null, null, item);
+if (item.id === 'leppaberry') target.staleness = 'external';
+}
+if (item.onEat) source.ateBerry = true;
+}
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+poisonfang: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Poison Fang",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 33,
+status: 'tox',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Poison",
+},
+
+poisonjab: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Poison Jab",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+poisonpowder: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Poison Powder",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+status: 'tox',
+secondary: null,
+target: "allAdjacent",
+type: "Poison",
+},
+
+poisonsting: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Poison Sting",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+poisontail: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Poison Tail",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 75,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+pollenpuff: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Pollen Puff",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1, allyanim: 1},
+onTryHit(target, source, move) {
+if (source.isAlly(target)) {
+move.basePower = 0;
+move.infiltrates = true;
+}
+},
+onHit(target, source) {
+if (source.isAlly(target)) {
+if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+this.add('-immune', target);
+return this.NOT_FAIL;
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+poltergeist: {
+accuracy: 85,
+basePower: 110,
+category: "Physical",
+name: "Poltergeist",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onTry(source, target) {
+return !!target.item;
+},
+onTryHit(target, source, move) {
+this.add('-activate', target, 'move: Poltergeist', this.dex.items.get(target.item).name);
+},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+populationbomb: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Population Bomb",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 15],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+pounce: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Pounce",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Bug",
+},
+
+powder: {
+accuracy: 75,
+basePower: 40,
+category: "Special",
+name: "Powder",
+pp: 0.625,
+priority: 4,
+flags: {bullet: 1, protect: 1, mirror: 1, allyanim: 1},
+critRatio: 2,
+secondary: {
+chance: 100,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('tox', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('slp', source);
+}
+},
+},
+target: "allAdjacent",
+type: "Bug",
+},
+
+powdersnow: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Powder Snow",
+pp: 1.25,
+priority: 0,
+flags: {powder: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 33,
+status: 'frz',
+},
+target: "allAdjacentFoes",
+type: "Ice",
+},
+
+powergem: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Power Gem",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
+type: "Rock",
+},
+
+powershift: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Power Shift",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'powershift',
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Power Shift');
+[pokemon.storedStats.atk, pokemon.storedStats.spa,
+pokemon.storedStats.def, pokemon.storedStats.spd] =
+[pokemon.storedStats.def, pokemon.storedStats.spd,
+pokemon.storedStats.atk, pokemon.storedStats.spa];
+},
+onCopy(pokemon) {
+[pokemon.storedStats.atk, pokemon.storedStats.spa,
+pokemon.storedStats.def, pokemon.storedStats.spd] =
+[pokemon.storedStats.def, pokemon.storedStats.spd,
+pokemon.storedStats.atk, pokemon.storedStats.spa];
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Power Shift');
+[pokemon.storedStats.atk, pokemon.storedStats.spa,
+pokemon.storedStats.def, pokemon.storedStats.spd] =
+[pokemon.storedStats.def, pokemon.storedStats.spd,
+pokemon.storedStats.atk, pokemon.storedStats.spa];
+},
+onRestart(pokemon) {
+pokemon.removeVolatile('Power Shift');
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+powerswap: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Power Swap",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+const targetBoosts: SparseBoostsTable = {};
+const sourceBoosts: SparseBoostsTable = {};
+
+const atkSpa: BoostID[] = ['atk', 'spa'];
+for (const stat of atkSpa) {
+targetBoosts[stat] = target.boosts[stat];
+sourceBoosts[stat] = source.boosts[stat];
+}
+source.setBoost(targetBoosts);
+target.setBoost(sourceBoosts);
+this.add('-swapboost', source, target, 'atk, spa', '[from] move: Power Swap');
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+powertrick: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Power Trick",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'powertrick',
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Power Trick');
+const newatk = pokemon.storedStats.def;
+const newdef = pokemon.storedStats.atk;
+pokemon.storedStats.atk = newatk;
+pokemon.storedStats.def = newdef;
+},
+onCopy(pokemon) {
+const newatk = pokemon.storedStats.def;
+const newdef = pokemon.storedStats.atk;
+pokemon.storedStats.atk = newatk;
+pokemon.storedStats.def = newdef;
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Power Trick');
+const newatk = pokemon.storedStats.def;
+const newdef = pokemon.storedStats.atk;
+pokemon.storedStats.atk = newatk;
+pokemon.storedStats.def = newdef;
+},
+onRestart(pokemon) {
+pokemon.removeVolatile('Power Trick');
+},
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+powertrip: {
+accuracy: 95,
+basePower: 20,
+basePowerCallback(pokemon, target, move) {
+const bp = move.basePower + 25 * pokemon.positiveBoosts();
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Power Trip",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+poweruppunch: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Power Up Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
+},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+atk: 1,
+evasion: -1,
+},
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+powerwhip: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Power Whip",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
+type: "Grass",
+},
+
+precipiceblades: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Precipice Blades",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Ice') return 1;
+},
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+present: {
+accuracy: 95,
+basePower: 0,
+category: "Physical",
+name: "Present",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyMove(move, pokemon, target) {
+const rand = this.random(10);
+if (rand < 2) {
+move.heal = [25, 100];
+move.infiltrates = true;
+} else if (rand < 6) {
+move.basePower = 40;
+} else if (rand < 9) {
+move.basePower = 80;
+} else {
+move.basePower = 120;
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+prismaticlaser: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Prismatic Laser",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+protect: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Protect",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'protect',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect']) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+return this.NOT_FAIL;
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+psybeam: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Psybeam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Psychic",
+},
+
+psyblade: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Psyblade",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+secondary: null,
+onBasePower(basePower, source) {
+if (this.field.isTerrain('electricterrain')) {
+this.debug('psyblade electric terrain boost');
+return this.chainModify(1.5);
+}
+},
+target: "any",
+type: "Psychic",
+},
+
+psychup: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Psych Up",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+let i: BoostID;
+for (i in target.boosts) {
+source.boosts[i] = target.boosts[i];
+}
+const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+for (const volatile of volatilesToCopy) {
+if (target.volatiles[volatile]) {
+source.addVolatile(volatile);
+if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
+} else {
+source.removeVolatile(volatile);
+}
+}
+this.add('-copyboost', source, target, '[from] move: Psych Up');
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+psychic: {
+accuracy: 95,
+basePower: 105,
+category: "Special",
+name: "Psychic",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+psychicfangs: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Psychic Fangs",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+onTryHit(pokemon) {
+// will shatter screens through sub, before you hit
+pokemon.side.removeSideCondition('reflect');
+pokemon.side.removeSideCondition('lightscreen');
+pokemon.side.removeSideCondition('auroraveil');
+},
+secondaries: [
+{
+chance: 33,
+status: 'flinch',
+}, {
+chance: 33,
+volatileStatus: 'confusion',
+},
+],
+target: "any",
+type: "Psychic",
+},
+
+psychicterrain: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Psychic Terrain",
+pp: 0.625,
+priority: 0,
+flags: {},
+terrain: 'psychicterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onTryHitPriority: 4,
+onTryHit(target, source, effect) {
+if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+return;
+}
+if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+if (!target.isGrounded()) {
+const baseMove = this.dex.moves.get(effect.id);
+if (baseMove.priority > 0) {
+this.hint("Psychic Terrain doesn't affect Pokémon immune to Ground.");
+}
+return;
+}
+this.add('-activate', target, 'move: Psychic Terrain');
+return null;
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+this.debug('psychic terrain boost');
+return this.chainModify([5325, 4096]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Psychic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Psychic Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Psychic Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+psychoboost: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Psycho Boost",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (!target || target.fainted || target.hp <= 0) this.boost({spa: 2}, pokemon, pokemon, move);
+},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spa: 1,
+evasion: -1,
+},
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+psychocut: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Psycho Cut",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+psyshieldbash: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Psyshield Bash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spd: 1,
+def: 1,
+},
+},
+},
+target: "any",
+type: "Psychic",
+},
+
+psyshock: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+overrideDefensiveStat: 'def',
+name: "Psyshock",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+psystrike: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+overrideDefensiveStat: 'def',
+name: "Psystrike",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+psywave: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+return (this.random(50, 150) * pokemon.level) / 100;
+},
+category: "Special",
+name: "Psywave",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+pulverizingpancake: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Pulverizing Pancake",
+pp: 1.25,
+priority: -2,
+flags: {slow: 1, contact: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+punishment: {
+accuracy: 95,
+basePower: 40,
+basePowerCallback(pokemon, target) {
+let power = 60 + 20 * target.positiveBoosts();
+if (power > 200) power = 200;
+this.debug('BP: ' + power);
+return power;
+},
+category: "Physical",
+name: "Punishment",
+pp: 1.25,
+priority: -2,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+purify: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Purify",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, heal: 1},
+onHit(target, source) {
+if (!target.cureStatus()) {
+this.add('-fail', source);
+this.attrLastMove('[still]');
+return this.NOT_FAIL;
+}
+this.heal(Math.ceil(source.maxhp * 0.5), source);
+},
+secondary: null,
+target: "any",
+type: "Poison",
+},
+
+pursuit: {
+accuracy: 95,
+basePower: 40,
+basePowerCallback(pokemon, target, move) {
+// You can't get here unless the pursuit succeeds
+if (target.beingCalledBack || target.switchFlag) {
+this.debug('Pursuit damage boost');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Pursuit",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+beforeTurnCallback(pokemon) {
+for (const side of this.sides) {
+if (side.hasAlly(pokemon)) continue;
+side.addSideCondition('pursuit', pokemon);
+const data = side.getSideConditionData('pursuit');
+if (!data.sources) {
+data.sources = [];
+}
+data.sources.push(pokemon);
+}
+},
+onModifyMove(move, source, target) {
+if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+},
+onTryHit(target, pokemon) {
+target.side.removeSideCondition('pursuit');
+},
+condition: {
+duration: 1,
+onBeforeSwitchOut(pokemon) {
+this.debug('Pursuit start');
+let alreadyAdded = false;
+pokemon.removeVolatile('destinybond');
+for (const source of this.effectState.sources) {
+if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+if (!alreadyAdded) {
+this.add('-activate', pokemon, 'move: Pursuit');
+alreadyAdded = true;
+}
+// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+// If it is, then Mega Evolve before moving.
+if (source.canMegaEvo || source.canUltraBurst) {
+for (const [actionIndex, action] of this.queue.entries()) {
+if (action.pokemon === source && action.choice === 'megaEvo') {
+this.actions.runMegaEvo(source);
+this.queue.list.splice(actionIndex, 1);
+break;
+}
+}
+}
+this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+pyroball: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Pyro Ball",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1, bullet: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+quash: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Quash",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onHit(target) {
+if (this.activePerHalf === 1) return false; // fails in singles
+const action = this.queue.willMove(target);
+if (!action) return false;
+action.order = 201;
+this.add('-activate', target, 'move: Quash');
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+quickattack: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Quick Attack",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+overrideOffensiveStat: 'spe',
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [20, 100],
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+quickguard: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Quick Guard",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'quickguard',
+onTry() {
+return !!this.queue.willAct();
+},
+onHitSide(side, source) {
+source.addVolatile('stall');
+},
+condition: {
+duration: 3,
+onSideStart(target, source) {
+this.add('-singleturn', source, 'Quick Guard');
+},
+onTryHitPriority: 4,
+onTryHit(target, source, move) {
+// Quick Guard blocks moves with positive priority, even those given increased priority by Prankster or Gale Wings.
+// (e.g. it blocks 0 priority moves boosted by Prankster or Gale Wings; Quick Claw/Custap Berry do not count)
+if (move.priority <= 0.1) return;
+if (!move.flags['protect']) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+this.add('-activate', target, 'move: Quick Guard');
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+return this.NOT_FAIL;
+},
+},
+secondary: null,
+target: "allySide",
+type: "Fighting",
+},
+
+quiverdance: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Quiver Dance",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, dance: 1},
+boosts: {
+spa: 1,
+spd: 1,
+spe: 1,
+},
+secondary: null,
+target: "self",
+type: "Bug",
+},
+
+ragefist: {
+accuracy: 95,
+basePower: 50,
+basePowerCallback(pokemon) {
+return Math.min(400, 50 + 50 * pokemon.timesAttacked);
+},
+category: "Physical",
+name: "Rage Fist",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+ragepowder: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Rage Powder",
+pp: 0.625,
+priority: 2,
+flags: {powder: 1},
+volatileStatus: 'ragepowder',
+onTry(source) {
+return this.activePerHalf > 1;
+},
+condition: {
+duration: 1,
+onStart(pokemon) {
+this.add('-singleturn', pokemon, 'move: Rage Powder');
+},
+onFoeRedirectTargetPriority: 1,
+onFoeRedirectTarget(target, source, source2, move) {
+const ragePowderUser = this.effectState.target;
+if (ragePowderUser.isSkyDropped()) return;
+if (source.runStatusImmunity('powder') && this.validTarget(ragePowderUser, source, move.target)) {
+if (move.smartTarget) move.smartTarget = false;
+this.debug("Rage Powder redirected target of move");
+return ragePowderUser;
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Bug",
+},
+
+ragingbull: {
+accuracy: 85,
+basePower: 90,
+category: "Physical",
+name: "Raging Bull",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'rage',
+},
+condition: {
+onStart(pokemon) {
+this.add('-singlemove', pokemon, 'Rage');
+},
+onHit(target, source, move) {
+if (target !== source && move.category !== 'Status') {
+this.boost({atk: 2});
+}
+},
+onBeforeMovePriority: 100,
+onBeforeMove(pokemon) {
+this.debug('removing Rage before attack');
+pokemon.removeVolatile('rage');
+},
+},
+onTryHit(pokemon) {
+// will shatter screens through sub, before you hit
+pokemon.side.removeSideCondition('reflect');
+pokemon.side.removeSideCondition('lightscreen');
+pokemon.side.removeSideCondition('auroraveil');
+},
+secondary: null,
+recoil: [33, 100],
+target: "any",
+type: "Normal",
+},
+
+ragingfury: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Raging Fury",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'lockedmove',
+},
+onAfterMove(pokemon) {
+if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+pokemon.removeVolatile('lockedmove');
+}
+},
+secondary: null,
+target: "randomNormal",
+type: "Fire",
+},
+
+raindance: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Rain Dance",
+pp: 0.625,
+priority: 0,
+flags: {dance: 1},
+weather: 'RainDance',
+secondary: null,
+target: "all",
+type: "Water",
+},
+
+rapidspin: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Rapid Spin",
+pp: 0.625,
+priority: 2,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterHit(target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
+onAfterSubDamage(damage, target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Normal",
+},
+
+razorleaf: {
+accuracy: 95,
+basePower: 55,
+category: "Physical",
+name: "Razor Leaf",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Grass",
+},
+
+razorshell: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Razor Shell",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+secondary: {
+chance: 50,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Water",
+},
+
+razorwind: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Razor Wind",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, mirror: 1},
+weather: 'snow',
+critRatio: 2,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+recover: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Recover",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+heal: [55, 100],
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+recycle: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Recycle",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onHit(pokemon) {
+if (pokemon.item || !pokemon.lastItem) return false;
+const item = pokemon.lastItem;
+pokemon.lastItem = '';
+this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Recycle');
+pokemon.setItem(item);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+reflect: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Reflect",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'reflect',
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasItem('lightclay')) {
+return 8;
+}
+return 5;
+},
+onAnyModifyDamage(damage, source, target, move) {
+if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Physical') {
+if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+this.debug('Reflect weaken');
+if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+return this.chainModify(0.5);
+}
+}
+},
+onSideStart(side) {
+this.add('-sidestart', side, 'Reflect');
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 1,
+onSideEnd(side) {
+this.add('-sideend', side, 'Reflect');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Psychic",
+},
+
+refresh: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Refresh",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 0,
+onModifyMove(move, pokemon, target) {
+const rand = this.random(10);
+if (rand < 3) {
+move.heal = [1, 100];
+move.infiltrates = true;
+} else if (rand < 6) {
+move.heal = [50, 100];
+} else if (rand < 9) {
+move.heal = [75, 100];
+} else {
+move.heal = [100, 100];
+}
+},
+secondary: null,
+target: "all",
+type: "Normal",
+},
+
+relicsong: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Relic Song",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 25,
+status: 'slp',
+},
+onHit(target, pokemon, move) {
+if (pokemon.baseSpecies.baseSpecies === 'Meloetta' && !pokemon.transformed) {
+move.willChangeForme = true;
+}
+},
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (move.willChangeForme) {
+const meloettaForme = pokemon.species.id === 'meloettapirouette' ? '' : '-Pirouette';
+pokemon.formeChange('Meloetta' + meloettaForme, this.effect, false, '[msg]');
+}
+},
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+rest: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Rest",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onTry(source) {
+if (source.status === 'slp' || source.hasAbility('comatose')) return false;
+if (source.hp === source.maxhp) {
+this.add('-fail', source, 'heal');
+return null;
+}
+if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+return null;
+}
+},
+onHit(target, source, move) {
+const result = target.setStatus('slp', source, move);
+if (!result) return result;
+target.statusState.time = 3;
+target.statusState.startTime = 3;
+this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+retaliate: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Retaliate",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onBasePower(basePower, pokemon) {
+if (pokemon.side.faintedLastTurn) {
+this.debug('Boosted for a faint last turn');
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+revelationdance: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Revelation Dance",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, dance: 1},
+onModifyType(move, pokemon) {
+let type = pokemon.getTypes()[0];
+if (type === "Bird") type = "???";
+move.type = type;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+revenge: {
+accuracy: 95,
+basePower: 60,
+basePowerCallback(pokemon, target, move) {
+const damagedByTarget = pokemon.attackedBy.some(
+p => p.source === target && p.damage > 0 && p.thisTurn
+);
+if (damagedByTarget) {
+this.debug('BP doubled for getting hit by ' + target);
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Revenge",
+pp: 1.25,
+priority: -8,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+reversal: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+let bp;
+if (ratio < 2) {
+bp = 200;
+} else if (ratio < 5) {
+bp = 150;
+} else if (ratio < 10) {
+bp = 100;
+} else if (ratio < 17) {
+bp = 80;
+} else if (ratio < 33) {
+bp = 40;
+} else {
+bp = 20;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Physical",
+name: "Reversal",
+pp: 0.625,
+priority: -8,
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+revivalblessing: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Revival Blessing",
+pp: 0.625,
+priority: 2,
+flags: {},
+onTryHit(source) {
+if (!source.side.pokemon.filter(ally => ally.fainted).length) {
+return false;
+}
+},
+slotCondition: 'revivalblessing',
+// No this not a real switchout move
+// This is needed to trigger a switch protocol to choose a fainted party member
+// Feel free to refactor
+selfSwitch: true,
+condition: {
+duration: 1,
+// reviving implemented in side.ts, kind of
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+risingvoltage: {
+accuracy: 95,
+basePower: 70,
+basePowerCallback(source, target, move) {
+if (this.field.isTerrain('electricterrain') && target.isGrounded()) {
+if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Special",
+name: "Rising Voltage",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+roar: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Roar",
+pp: 0.625,
+priority: 1,
+flags: {reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
+forceSwitch: true,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+roaroftime: {
+accuracy: 85,
+basePower: 150,
+category: "Special",
+name: "Roar of Time",
+pp: 0.625,
+priority: 0,
+flags: {recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+rockblast: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Rock Blast",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+rockclimb: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Rock Climb",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Normal",
+},
+
+rockpolish: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Rock Polish",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spe: 2,
+},
+secondary: null,
+target: "self",
+type: "Rock",
+},
+
+rockslide: {
+accuracy: 85,
+basePower: 75,
+category: "Physical",
+name: "Rock Slide",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "allAdjacentFoes",
+type: "Rock",
+},
+
+rocksmash: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Rock Smash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 50,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+rockthrow: {
+accuracy: 95,
+basePower: 40,
+damageCallback(pokemon) {
+return (this.random(10, 200) * pokemon.level) / 100;
+},
+category: "Physical",
+name: "Rock Throw",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "randomNormal",
+type: "Rock",
+},
+
+rocktomb: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Rock Tomb",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spe: -1,
+},
+},
+target: "any",
+type: "Rock",
+},
+
+rockwrecker: {
+accuracy: 85,
+basePower: 150,
+category: "Physical",
+name: "Rock Wrecker",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, recharge: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+roleplay: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Role Play",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1},
+onTryHit(target, source) {
+if (target.ability === source.ability) return false;
+
+const additionalBannedTargetAbilities = [
+// Zen Mode included here for compatability with Gen 5-6
+'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'zenmode',
+];
+
+if (target.getAbility().isPermanent || additionalBannedTargetAbilities.includes(target.ability) ||
+source.getAbility().isPermanent) {
+return false;
+}
+},
+onHit(target, source) {
+const oldAbility = source.setAbility(target.ability);
+if (oldAbility) {
+this.add('-ability', source, source.getAbility().name, '[from] move: Role Play', '[of] ' + target);
+return;
+}
+return oldAbility as false | null;
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+rollingkick: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Rolling Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Fighting",
+},
+
+rollout: {
+accuracy: 95,
+basePower: 15,
+basePowerCallback(pokemon, target, move) {
+return 15 * move.hit;
+},
+category: "Physical",
+name: "Rollout",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+multihit: [1, 10],
+multiaccuracy: 75,
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+roost: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Roost",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+heal: [60, 100],
+self: {
+volatileStatus: 'roost',
+},
+condition: {
+duration: 4,
+onResidualOrder: 25,
+onStart(target) {
+if (!target.terastallized) {
+this.add('-singleturn', target, 'move: Roost');
+} else if (target.terastallized === "Flying") {
+this.add('-hint', "If a Flying Terastallized Pokemon uses Roost, it remains Flying-type.");
+}
+},
+onTypePriority: -1,
+onType(types, pokemon) {
+this.effectState.typeWas = types;
+return types.filter(type => type !== 'Flying');
+},
+},
+secondary: null,
+target: "self",
+type: "Flying",
+},
+
+rototiller: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Rototiller",
+pp: 0.625,
+priority: 0,
+flags: {distance: 1},
+onHitField(target, source) {
+const targets: Pokemon[] = [];
+let anyAirborne = false;
+for (const pokemon of this.getAllActive()) {
+if (!pokemon.runImmunity('Ground')) {
+this.add('-immune', pokemon);
+anyAirborne = true;
+continue;
+}
+if (pokemon.hasType('Grass')) {
+// This move affects every grounded Grass-type Pokemon in play.
+targets.push(pokemon);
+}
+}
+if (!targets.length && !anyAirborne) return false; // Fails when there are no grounded Grass types or airborne Pokemon
+for (const pokemon of targets) {
+this.boost({atk: 1, spa: 1}, pokemon, source);
+}
+},
+secondary: null,
+target: "all",
+type: "Ground",
+},
+
+round: {
+accuracy: 95,
+basePower: 60,
+basePowerCallback(target, source, move) {
+if (move.sourceEffect === 'round') {
+this.debug('BP doubled');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Special",
+name: "Round",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+onTry(source, target, move) {
+for (const action of this.queue.list as MoveAction[]) {
+if (!action.pokemon || !action.move || action.maxMove || action.zmove) continue;
+if (action.move.id === 'round') {
+this.queue.prioritizeAction(action, move);
+return;
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+ruination: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon, target) {
+return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+},
+category: "Special",
+name: "Ruination",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+sacredfire: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Sacred Fire",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+secondary: {
+chance: 50,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+sacredsword: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Sacred Sword",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+ignoreEvasion: true,
+ignoreDefensive: true,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+safeguard: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Safeguard",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'safeguard',
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Safeguard');
+return 7;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (!effect || !source) return;
+if (effect.id === 'yawn') return;
+if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+if (target !== source) {
+this.debug('interrupting setStatus');
+if (effect.name === 'Synchronize' || (effect.effectType === 'Move' && !effect.secondaries)) {
+this.add('-activate', target, 'move: Safeguard');
+}
+return null;
+}
+},
+onTryAddVolatile(status, target, source, effect) {
+if (!effect || !source) return;
+if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+if ((status.id === 'confusion' || status.id === 'yawn') && target !== source) {
+if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Safeguard');
+return null;
+}
+},
+onSideStart(side, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-sidestart', side, 'Safeguard', '[persistent]');
+} else {
+this.add('-sidestart', side, 'Safeguard');
+}
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 3,
+onSideEnd(side) {
+this.add('-sideend', side, 'Safeguard');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Normal",
+},
+
+saltcure: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Salt Cure",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+condition: {
+noCopy: true,
+onStart(pokemon) {
+this.add('-start', pokemon, 'Salt Cure');
+},
+onResidualOrder: 13,
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Salt Cure');
+},
+},
+secondary: {
+chance: 75,
+volatileStatus: 'saltcure',
+},
+target: "any",
+type: "Rock",
+},
+
+sandattack: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Sand Attack",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+weather: 'Sandstorm',
+secondary: {
+chance: 95,
+evasion: -1,
+},
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+sandsearstorm: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Sandsear Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+sandstorm: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Sandstorm",
+pp: 0.625,
+priority: 0,
+flags: {wind: 1},
+weather: 'Sandstorm',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Rock",
+},
+
+sandtomb: {
+accuracy: 85,
+basePower: 40,
+category: "Physical",
+name: "Sand Tomb",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+sappyseed: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Sappy Seed",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+onHit(target, source) {
+if (target.hasType('Grass')) return null;
+target.addVolatile('leechseed', source);
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+savagespinout: {
+accuracy: 75,
+basePower: 90,
+category: "Physical",
+name: "Savage Spin Out",
+pp: 0.625,
+priority: 5,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+overrideOffensiveStat: 'spe',
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [25, 100],
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+scald: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Scald",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+thawsTarget: true,
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Water",
+},
+
+scaleshot: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Scale Shot",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+selfBoost: {
+boosts: {
+def: -1,
+spe: 1,
+},
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+scaryface: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Scary Face",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+boosts: {
+spe: -2,
+},
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+scorchingsands: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Scorching Sands",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+weather: 'Sandstorm',
+thawsTarget: true,
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "any",
+type: "Ground",
+},
+
+scratch: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Scratch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: {
+chance: 75,
+status: 'tox',
+},
+target: "any",
+type: "Normal",
+},
+
+screech: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Screech",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
+boosts: {
+spd: -2,
+def: -2,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+searingshot: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Searing Shot",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "allAdjacent",
+type: "Fire",
+},
+
+searingsunrazesmash: {
+accuracy: 85,
+basePower: 125,
+category: "Physical",
+name: "Searing Sunraze Smash",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1},
+weather: 'sunnyday',
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+secretpower: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Secret Power",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyMove(move, pokemon) {
+if (this.field.isTerrain('')) return;
+move.secondaries = [];
+if (this.field.isTerrain('electricterrain')) {
+move.secondaries.push({
+chance: 25,
+status: 'par',
+});
+} else if (this.field.isTerrain('grassyterrain')) {
+move.secondaries.push({
+chance: 25,
+status: 'slp',
+});
+} else if (this.field.isTerrain('mistyterrain')) {
+move.secondaries.push({
+chance: 25,
+boosts: {
+spa: -1,
+},
+});
+} else if (this.field.isTerrain('psychicterrain')) {
+move.secondaries.push({
+chance: 25,
+boosts: {
+spe: -1,
+},
+});
+}
+},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Normal",
+},
+
+secretsword: {
+accuracy: 95,
+basePower: 85,
+category: "Special",
+overrideDefensiveStat: 'def',
+name: "Secret Sword",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+seedbomb: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Seed Bomb",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+weather: 'Sandstorm',
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+seedflare: {
+accuracy: 85,
+basePower: 120,
+category: "Special",
+name: "Seed Flare",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+weather: 'sunnyday',
+secondary: {
+chance: 50,
+boosts: {
+spd: -2,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+seismictoss: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon) {
+return (this.random(50, 150) * pokemon.level) / 100;
+},
+category: "Physical",
+name: "Seismic Toss",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+selfdestruct: {
+accuracy: 95,
+basePower: 250,
+category: "Physical",
+name: "Self Destruct",
+pp: 0.625,
+priority: -7,
+flags: {protect: 1, slow: 1, mirror: 1},
+selfdestruct: "always",
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+shadowball: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Shadow Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
+type: "Ghost",
+},
+
+shadowbone: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Shadow Bone",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Ghost",
+},
+
+shadowclaw: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Shadow Claw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+shadowforce: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Shadow Force",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, charge: 1, mirror: 1},
+breaksProtect: true,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+shadowpunch: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Shadow Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondaries: [
+{
+chance: 33,
+status: 'tox',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Ghost",
+},
+
+shadowsneak: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Shadow Sneak",
+pp: 0.625,
+priority: 1,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+shadowstrike: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Shadow Strike",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Ghost",
+},
+
+shatteredpsyche: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Shattered Psyche",
+pp: 0.625,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 33,
+volatileStatus: 'confuse',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Psychic",
+},
+
+shedtail: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Shed Tail",
+pp: 0.625,
+priority: 0,
+flags: {},
+volatileStatus: 'substitute',
+onTryHit(source) {
+if (!this.canSwitch(source.side)) {
+this.add('-fail', source);
+return this.NOT_FAIL;
+}
+if (source.volatiles['substitute']) {
+this.add('-fail', source, 'move: Shed Tail');
+return this.NOT_FAIL;
+}
+if (source.hp <= Math.ceil(source.maxhp / 2)) {
+this.add('-fail', source, 'move: Shed Tail', '[weak]');
+return this.NOT_FAIL;
+}
+},
+onHit(target) {
+this.directDamage(Math.ceil(target.maxhp / 2));
+},
+self: {
+onHit(source) {
+source.skipBeforeSwitchOutEventFlag = true;
+},
+},
+selfSwitch: 'shedtail',
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+sheercold: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Sheer Cold",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+secondaries: [
+{
+chance: 25,
+status: 'frz',
+}, {
+chance: 25,
+weather: 'hail',
+}, {
+chance: 25,
+weather: 'snow',
+},
+],
+target: "any",
+type: "Ice",
+},
+
+shellsidearm: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Shell Side Arm",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onPrepareHit(target, source, move) {
+if (!source.isAlly(target)) {
+this.attrLastMove('[anim] Shell Side Arm ' + move.category);
+}
+},
+onModifyMove(move, pokemon, target) {
+if (!target) return;
+const atk = pokemon.getStat('atk', false, true);
+const spa = pokemon.getStat('spa', false, true);
+const def = target.getStat('def', false, true);
+const spd = target.getStat('spd', false, true);
+const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+if (physical > special || (physical === special && this.random(2) === 0)) {
+move.category = 'Physical';
+move.flags.contact = 1;
+}
+},
+onHit(target, source, move) {
+// Shell Side Arm normally reveals its category via animation on cart, but doesn't play either custom animation against allies
+if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
+},
+onAfterSubDamage(damage, target, source, move) {
+if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
+},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+shellsmash: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Shell Smash",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+def: -2,
+spd: -2,
+atk: 2,
+spa: 2,
+spe: 2,
+evasion: -3,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+shelltrap: {
+accuracy: 95,
+basePower: 150,
+category: "Special",
+name: "Shell Trap",
+pp: 0.625,
+priority: -3,
+flags: {slow: 1,protect: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Water') return 1;
+},
+priorityChargeCallback(pokemon) {
+pokemon.addVolatile('shelltrap');
+},
+onTryMove(pokemon) {
+if (!pokemon.volatiles['shelltrap']?.gotHit) {
+this.attrLastMove('[still]');
+this.add('cant', pokemon, 'Shell Trap', 'Shell Trap');
+return null;
+}
+},
+condition: {
+duration: 1,
+onStart(pokemon) {
+this.add('-singleturn', pokemon, 'move: Shell Trap');
+},
+onHit(pokemon, source, move) {
+if (!pokemon.isAlly(source) && move.category === 'Physical') {
+this.effectState.gotHit = true;
+const action = this.queue.willMove(pokemon);
+if (action) {
+this.queue.prioritizeAction(action);
+}
+}
+},
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+shelter: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Shelter",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 2,
+def: 2,
+evasion: -2,
+},
+secondary: null,
+target: "self",
+type: "Steel",
+},
+
+shiftgear: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Shift Gear",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spe: 2,
+atk: 1,
+spa: 1,
+spd: -2,
+def: -2,
+},
+secondary: null,
+target: "self",
+type: "Steel",
+},
+
+shockwave: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Shock Wave",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+terrain: 'electricterrain',
+condition: {
+duration: 3,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 5;
+}
+return 3;
+},
+onSetStatus(status, target, source, effect) {
+if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
+if (effect.id === 'yawn' || (effect.effectType === 'Move' && !effect.secondaries)) {
+this.add('-activate', target, 'move: Electric Terrain');
+}
+return false;
+}
+},
+onTryAddVolatile(status, target) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (status.id === 'yawn') {
+this.add('-activate', target, 'move: Electric Terrain');
+return null;
+}
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+this.debug('electric terrain boost');
+return this.chainModify([5325, 4096]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Electric Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Electric Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Electric Terrain');
+},
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+shoreup: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Shore Up",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onHit(pokemon) {
+let factor = 0.5;
+if (this.field.isWeather('sandstorm')) {
+factor = 0.667;
+}
+const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+if (!success) {
+this.add('-fail', pokemon, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "self",
+type: "Ground",
+},
+
+signalbeam: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Signal Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Bug",
+},
+
+silktrap: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Silk Trap",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'silktrap',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect'] || move.category === 'Status') {
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+this.boost({spe: -1}, source, target, this.dex.getActiveMove("Silk Trap"));
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+this.boost({spe: -1}, source, target, this.dex.getActiveMove("Silk Trap"));
+}
+},
+},
+target: "self",
+type: "Bug",
+},
+
+silverwind: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Silver Wind",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Flying') return 1;
+},
+secondary: {
+chance: 25,
+self: {
+boosts: {
+atk: 1,
+def: 1,
+spa: 1,
+spd: 1,
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Bug",
+},
+
+simplebeam: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Simple Beam",
+pp: 0.625,
+flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
+onTryHit(target) {
+if (target.getAbility().isPermanent || target.ability === 'simple' || target.ability === 'truant') {
+return false;
+}
+},
+onHit(pokemon) {
+const oldAbility = pokemon.setAbility('simple');
+if (oldAbility) {
+this.add('-ability', pokemon, 'Simple', '[from] move: Simple Beam');
+return;
+}
+return oldAbility as false | null;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+sing: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Sing",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 95,
+status: 'slp',
+},
+target: "allAdjacent",
+type: "Normal",
+},
+
+sinisterarrowraid: {
+accuracy: 95,
+basePower: 20,
+category: "Physical",
+name: "Sinister Arrow Raid",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 7],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+sizzlyslide: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Sizzly Slide",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+secondary: {
+chance: 75,
+status: 'brn',
+},
+target: "any",
+type: "Fire",
+},
+
+skittersmack: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Skitter Smack",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Bug",
+},
+
+skullbash: {
+accuracy: 95,
+basePower: 125,
+category: "Physical",
+name: "Skull Bash",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({def: 2, atk: 1, evasion: -2, spe: -1,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+skyattack: {
+accuracy: 95,
+basePower: 140,
+category: "Physical",
+name: "Sky Attack",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, mirror: 1, distance: 1},
+critRatio: 1,
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Flying",
+},
+
+skydrop: {
+accuracy: 85,
+basePower: 90,
+category: "Physical",
+name: "Sky Drop",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+onEffectiveness(typeMod, target, type) {
+if (type === 'Rock') return 1;
+},
+secondary: null,
+target: "any",
+type: "Flying",
+},
+
+skyuppercut: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Sky Uppercut",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+slackoff: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Slack Off",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+heal: [50, 100],
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+slash: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Slash",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+sleeppowder: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Sleep Powder",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+status: 'slp',
+secondary: null,
+target: "allAdjacent",
+type: "Grass",
+},
+
+sleeptalk: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Sleep Talk",
+pp: 0.625,
+priority: 0,
+flags: {},
+sleepUsable: true,
+onTry(source) {
+return source.status === 'slp' || source.hasAbility('comatose');
+},
+onHit(pokemon) {
+const moves = [];
+for (const moveSlot of pokemon.moveSlots) {
+const moveid = moveSlot.id;
+if (!moveid) continue;
+const move = this.dex.moves.get(moveid);
+if (move.flags['nosleeptalk'] || move.flags['charge'] || (move.isZ && move.basePower !== 1) || move.isMax) {
+continue;
+}
+moves.push(moveid);
+}
+let randomMove = '';
+if (moves.length) randomMove = this.sample(moves);
+if (!randomMove) {
+return false;
+}
+this.actions.useMove(randomMove, pokemon);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+sludge: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Sludge",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+sludgebomb: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Sludge Bomb",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+sludgewave: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Sludge Wave",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'tox',
+},
+target: "allAdjacent",
+type: "Poison",
+},
+
+smackdown: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Smack Down",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+volatileStatus: 'smackdown',
+condition: {
+noCopy: true,
+onStart(pokemon) {
+let applies = false;
+if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
+if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
+this.field.getPseudoWeather('gravity')) applies = false;
+if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+applies = true;
+this.queue.cancelMove(pokemon);
+pokemon.removeVolatile('twoturnmove');
+}
+if (pokemon.volatiles['magnetrise']) {
+applies = true;
+delete pokemon.volatiles['magnetrise'];
+}
+if (pokemon.volatiles['telekinesis']) {
+applies = true;
+delete pokemon.volatiles['telekinesis'];
+}
+if (!applies) return false;
+this.add('-start', pokemon, 'Smack Down');
+},
+onRestart(pokemon) {
+if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+this.queue.cancelMove(pokemon);
+pokemon.removeVolatile('twoturnmove');
+this.add('-start', pokemon, 'Smack Down');
+}
+},
+// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+},
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+smartstrike: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Smart Strike",
+pp: 0.625,
+priority: 1,
+flags: {punch: 1,protect: 1, mirror: 1},
+onPrepareHit(target, source, move) {
+if (!source.isAlly(target)) {
+this.attrLastMove('[anim] Shell Side Arm ' + move.category);
+}
+},
+onModifyMove(move, pokemon, target) {
+if (!target) return;
+const atk = pokemon.getStat('atk', false, true);
+const spa = pokemon.getStat('spa', false, true);
+const def = target.getStat('def', false, true);
+const spd = target.getStat('spd', false, true);
+const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+if (physical > special || (physical === special && this.random(2) === 0)) {
+move.category = 'Physical';
+move.flags.contact = 1;
+}
+},
+onHit(target, source, move) {
+// Shell Side Arm normally reveals its category via animation on cart, but doesn't play either custom animation against allies
+if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
+},
+onAfterSubDamage(damage, target, source, move) {
+if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+smellingsalts: {
+accuracy: 95,
+basePower: 70,
+basePowerCallback(pokemon, target, move) {
+if (target.status === 'par') {
+this.debug('BP doubled on paralyzed target');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Smelling Salts",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onHit(target) {
+if (target.status === 'par') target.cureStatus();
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+smog: {
+accuracy: 75,
+basePower: 40,
+category: "Special",
+name: "Smog",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 66,
+status: 'tox',
+},
+target: "allAdjacent",
+type: "Poison",
+},
+
+smokescreen: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Smokescreen",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+evasion: -3,
+},
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+snaptrap: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Snap Trap",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+snarl: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Snarl",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 75,
+boosts: {
+atk: -1,
+spa: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Dark",
+},
+
+snatch: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Snatch",
+pp: 0.625,
+priority: 5,
+flags: {bypasssub: 1},
+volatileStatus: 'snatch',
+condition: {
+duration: 1,
+onStart(pokemon) {
+this.add('-singleturn', pokemon, 'Snatch');
+},
+onAnyPrepareHitPriority: -1,
+onAnyPrepareHit(source, target, move) {
+const snatchUser = this.effectState.source;
+if (snatchUser.isSkyDropped()) return;
+if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
+return;
+}
+snatchUser.removeVolatile('snatch');
+this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
+this.actions.useMove(move.id, snatchUser);
+return null;
+},
+},
+secondary: null,
+target: "self",
+type: "Dark",
+},
+
+snipeshot: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Snipe Shot",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+critRatio: 2,
+tracksTarget: true,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+snore: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Snore",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+sleepUsable: true,
+onTry(source) {
+return source.status === 'slp' || source.hasAbility('comatose');
+},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Normal",
+},
+
+snowscape: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Snowscape",
+pp: 0.625,
+priority: 0,
+flags: {},
+weather: 'snow',
+secondary: null,
+target: "all",
+type: "Ice",
+},
+
+soak: {
+accuracy: 95,
+basePower: 50,
+category: "Status",
+name: "Soak",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
+// Soak should animate even when it fails.
+// Returning false would suppress the animation.
+this.add('-fail', target);
+return null;
+}
+this.add('-start', target, 'typechange', 'Water');
+},
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+softboiled: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Soft Boiled",
+pp: 0.625,
+priority: 3,
+flags: {snatch: 1, heal: 1},
+heal: [33, 100],
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+solarbeam: {
+accuracy: 95,
+basePower: 120,
+category: "Special",
+name: "Solar Beam",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, beam: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spa: 1, spd: 1, evasion: -2,}, attacker, attacker, move);
+if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+this.attrLastMove('[still]');
+this.addMove('-anim', attacker, move.name, defender);
+return;
+}
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+onBasePower(basePower, pokemon, target) {
+const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snow'];
+if (weakWeathers.includes(pokemon.effectiveWeather())) {
+this.debug('weakened by weather');
+return this.chainModify(0.5);
+}
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+solarblade: {
+accuracy: 95,
+basePower: 125,
+category: "Physical",
+name: "Solar Blade",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1, slicing: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+this.attrLastMove('[still]');
+this.addMove('-anim', attacker, move.name, defender);
+return;
+}
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+onBasePower(basePower, pokemon, target) {
+const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snow'];
+if (weakWeathers.includes(pokemon.effectiveWeather())) {
+this.debug('weakened by weather');
+return this.chainModify(0.5);
+}
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+sonicboom: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Sonic Boom",
+pp: 0.625,
+priority: 10,
+flags: {protect: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [33, 100],
+secondary: null,
+target: "randomNormal",
+type: "Normal",
+},
+
+soulstealing7starstrike: {
+accuracy: 95,
+basePower: 85,
+category: "Physical",
+name: "Soul Stealing 7 Star Strike",
+pp: 0.625,
+priority: 0,
+flags: {punch: 1, protect: 1, mirror: 1, heal: 1},
+drain: [75, 100],
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+spacialrend: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Spacial Rend",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+sparklingaria: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Sparkling Aria",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+dustproof: true,
+chance: 75,
+volatileStatus: 'sparklingaria',
+},
+onAfterMove(source, target, move) {
+for (const pokemon of this.getAllActive()) {
+if (pokemon !== source && pokemon.removeVolatile('sparklingaria') && pokemon.status === 'brn' && !source.fainted) {
+pokemon.cureStatus();
+}
+}
+},
+target: "allAdjacent",
+type: "Water",
+},
+
+spectralthief: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Spectral Thief",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, bypasssub: 1},
+stealsBoosts: true,
+// Boost stealing implemented in scripts.js
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+speedswap: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Speed Swap",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
+onHit(target, source) {
+const targetSpe = target.storedStats.spe;
+target.storedStats.spe = source.storedStats.spe;
+source.storedStats.spe = targetSpe;
+this.add('-activate', source, 'move: Speed Swap', '[of] ' + target);
+},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+spicyextract: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Spicy Extract",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+chance: 75,
+atk: 2,
+spa: 2,
+spe: 1,
+spd: -2,
+def: -2,
+evasion: -2
+},
+secondary: {
+chance: 75,
+status: 'brn',
+},
+target: "self",
+type: "Grass",
+},
+
+spiderweb: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Spider Web",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+onHit(target, source, move) {
+return target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+spikecannon: {
+accuracy: 95,
+basePower: 15,
+category: "Physical",
+name: "Spike Cannon",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+multihit: [1, 7],
+multiaccuracy: 85,
+sideCondition: 'spikes',
+condition: {
+// this is a side condition
+onSideStart(side) {
+this.add('-sidestart', side, 'Spikes');
+this.effectState.layers = 1;
+},
+onSideRestart(side) {
+if (this.effectState.layers >= 3) return false;
+this.add('-sidestart', side, 'Spikes');
+this.effectState.layers++;
+},
+onEntryHazard(pokemon) {
+if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
+const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
+this.damage(damageAmounts[this.effectState.layers] * pokemon.maxhp / 24);
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+spikes: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Spikes",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1},
+sideCondition: 'spikes',
+condition: {
+// this is a side condition
+onSideStart(side) {
+this.add('-sidestart', side, 'Spikes');
+this.effectState.layers = 1;
+},
+onSideRestart(side) {
+if (this.effectState.layers >= 3) return false;
+this.add('-sidestart', side, 'Spikes');
+this.effectState.layers++;
+},
+onEntryHazard(pokemon) {
+if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
+const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
+this.damage(damageAmounts[this.effectState.layers] * pokemon.maxhp / 24);
+},
+},
+secondary: null,
+target: "foeSide",
+type: "Ground",
+},
+
+spikyshield: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Spiky Shield",
+pp: 0.625,
+priority: 4,
+flags: {},
+stallingMove: true,
+volatileStatus: 'spikyshield',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect']) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+this.damage(source.baseMaxhp / 8, source, target);
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+this.damage(source.baseMaxhp / 8, source, target);
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Grass",
+},
+
+spinout: {
+accuracy: 85,
+basePower: 115,
+category: "Physical",
+name: "Spin Out",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+boosts: {
+spe: -2,
+},
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+spiritbreak: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Spirit Break",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+spa: -1,
+},
+},
+target: "any",
+type: "Fairy",
+},
+
+spiritshackle: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Spirit Shackle",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
+type: "Ghost",
+},
+
+spite: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Spite",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+pseudoWeather: 'fairylock',
+onHitField(target, source, move) {
+let result = false;
+let message = false;
+for (const pokemon of this.getAllActive()) {
+if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+this.add('-miss', source, pokemon);
+result = true;
+} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+result = true;
+} else if (!pokemon.volatiles['perishsong']) {
+pokemon.addVolatile('perishsong');
+this.add('-start', pokemon, 'perish3', '[silent]');
+result = true;
+message = true;
+}
+}
+if (!result) return false;
+if (message) this.add('-fieldactivate', 'move: Perish Song');
+},
+condition: {
+duration: 2,
+onEnd(target) {
+this.add('-start', target, 'perish0');
+target.faint();
+},
+onResidualOrder: 24,
+onResidual(pokemon) {
+const duration = pokemon.volatiles['perishsong'].duration;
+this.add('-start', pokemon, 'perish' + duration);
+},
+},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+splash: {
+accuracy: 75,
+basePower: 0,
+category: "Special",
+name: "Splash",
+pp: 0.625,
+priority: 3,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'confusion',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+splinteredstormshards: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Splintered Stormshards",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+onHit() {
+this.field.clearTerrain();
+},
+onAfterSubDamage() {
+this.field.clearTerrain();
+},
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+spore: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Spore",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 100,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('tox', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('slp', source);
+}
+},
+},
+target: "allAdjacent",
+type: "Grass",
+},
+
+springtidestorm: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Springtide Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 25,
+boosts: {
+spa: -1,
+},
+},
+target: "allAdjacentFoes",
+type: "Fairy",
+},
+
+stealthrock: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Stealth Rock",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1},
+sideCondition: 'stealthrock',
+condition: {
+// this is a side condition
+onSideStart(side) {
+this.add('-sidestart', side, 'move: Stealth Rock');
+},
+onEntryHazard(pokemon) {
+if (pokemon.hasItem('heavydutyboots')) return;
+const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('stealthrock')), -6, 6);
+this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+},
+},
+secondary: null,
+target: "foeSide",
+type: "Rock",
+},
+
+steameruption: {
+accuracy: 85,
+basePower: 110,
+category: "Special",
+name: "Steam Eruption",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1},
+weather: 'RainDance',
+thawsTarget: true,
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "allAdjacent",
+type: "Water",
+},
+
+steamroller: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Steamroller",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Bug",
+},
+
+steelbeam: {
+accuracy: 95,
+basePower: 135,
+category: "Special",
+name: "Steel Beam",
+pp: 0.625,
+flags: {protect: 1, beam: 1, mirror: 1},
+mindBlownRecoil: true,
+onAfterMove(pokemon, target, move) {
+if (move.mindBlownRecoil && !move.multihit) {
+const hpBeforeRecoil = pokemon.hp;
+this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Steel Beam'), true);
+if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+this.runEvent('EmergencyExit', pokemon, pokemon);
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+steelroller: {
+accuracy: 85,
+basePower: 130,
+category: "Physical",
+name: "Steel Roller",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTry() {
+return !this.field.isTerrain('');
+},
+onHit() {
+this.field.clearTerrain();
+},
+onAfterSubDamage() {
+this.field.clearTerrain();
+},
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+steelwing: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Steel Wing",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+self: {
+boosts: {
+spd: 1,
+def: 1,
+},
+},
+},
+target: "any",
+type: "Steel",
+},
+
+stickyweb: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Sticky Web",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1},
+sideCondition: 'stickyweb',
+condition: {
+onSideStart(side) {
+this.add('-sidestart', side, 'move: Sticky Web');
+},
+onEntryHazard(pokemon) {
+if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
+this.add('-activate', pokemon, 'move: Sticky Web');
+this.boost({spe: -1}, pokemon, this.effectState.source, this.dex.getActiveMove('stickyweb'));
+},
+},
+secondary: null,
+target: "foeSide",
+type: "Bug",
+},
+
+stokedsparksurfer: {
+accuracy: 85,
+basePower: 115,
+category: "Special",
+name: "Stoked Sparksurfer",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+stomp: {
+accuracy: 85,
+basePower: 85,
+category: "Physical",
+name: "Stomp",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 33,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Normal",
+},
+
+stompingtantrum: {
+accuracy: 95,
+basePower: 75,
+basePowerCallback(pokemon, target, move) {
+if (pokemon.moveLastTurnResult === false) {
+this.debug('doubling Stomping Tantrum BP due to previous move failure');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Stomping Tantrum",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Ground",
+},
+
+stoneaxe: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Stone Axe",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+self: {
+onHit(source) {
+for (const side of source.side.foeSidesWithConditions()) {
+side.addSideCondition('stealthrock');
+}
+},
+},
+secondary: {}, // allows sheer force to trigger
+target: "any",
+type: "Rock",
+},
+
+stoneedge: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Stone Edge",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+storedpower: {
+accuracy: 95,
+basePower: 20,
+basePowerCallback(pokemon, target, move) {
+const bp = move.basePower + 20 * pokemon.positiveBoosts();
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Stored Power",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+stormthrow: {
+accuracy: 95,
+basePower: 45,
+category: "Physical",
+name: "Storm Throw",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+weather: 'RainDance',
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+strangesteam: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Strange Steam",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Poison') return 1;
+},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Fairy",
+},
+
+strength: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Strength",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+self: {
+boosts: {
+atk: 1,
+},
+},
+},
+target: "any",
+type: "Normal",
+},
+
+strengthsap: {
+accuracy: 95,
+basePower: 10,
+category: "Status",
+name: "Strength Sap",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, heal: 1},
+onHit(target, source) {
+if (target.boosts.atk === -6) return false;
+const atk = target.getStat('atk', false, true);
+const success = this.boost({atk: -1}, target, source, null, false, true);
+return !!(this.heal(atk, source, target) || success);
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+stringshot: {
+accuracy: 75,
+basePower: 40,
+category: "Special",
+name: "String Shot",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, bullet: 1, reflectable: 1, mirror: 1},
+boosts: {
+spe: -2,
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Bug",
+},
+
+struggle: {
+accuracy: 25,
+basePower: 90,
+category: "Physical",
+name: "Struggle",
+pp: 50,
+noPPBoosts: true,
+priority: 0,
+flags: {contact: 1, protect: 1},
+noSketch: true,
+onModifyMove(move, pokemon, target) {
+move.type = '???';
+this.add('-activate', pokemon, 'move: Struggle');
+},
+struggleRecoil: true,
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
+target: "randomNormal",
+type: "Normal",
+},
+
+strugglebug: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Struggle Bug",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+target: "allAdjacentFoes",
+type: "Bug",
+},
+
+stuffcheeks: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Stuff Cheeks",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onDisableMove(pokemon) {
+if (!pokemon.getItem().isBerry) pokemon.disableMove('stuffcheeks');
+},
+onTry(source) {
+return source.getItem().isBerry;
+},
+onHit(pokemon) {
+if (!this.boost({def: 2})) return null;
+pokemon.eatItem(true);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+stunspore: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Stun Spore",
+pp: 0.625,
+priority: 0,
+flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+status: 'par',
+secondary: null,
+target: "allAdjacent",
+type: "Grass",
+},
+
+submission: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Submission",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+substitute: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Substitute",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+volatileStatus: 'substitute',
+onTryHit(source) {
+if (source.volatiles['substitute']) {
+this.add('-fail', source, 'move: Substitute');
+return this.NOT_FAIL;
+}
+if (source.hp <= source.maxhp / 4 || source.maxhp === 1) { // Shedinja clause
+this.add('-fail', source, 'move: Substitute', '[weak]');
+return this.NOT_FAIL;
+}
+},
+onHit(target) {
+this.directDamage(target.maxhp / 3);
+},
+condition: {
+onStart(target, source, effect) {
+if (effect?.id === 'shedtail') {
+this.add('-start', target, 'Substitute', '[from] move: Shed Tail');
+} else {
+this.add('-start', target, 'Substitute');
+}
+this.effectState.hp = Math.floor(target.maxhp / 4);
+if (target.volatiles['partiallytrapped']) {
+this.add('-end', target, target.volatiles['partiallytrapped'].sourceEffect, '[partiallytrapped]', '[silent]');
+delete target.volatiles['partiallytrapped'];
+}
+},
+onTryPrimaryHitPriority: -1,
+onTryPrimaryHit(target, source, move) {
+if (target === source || move.flags['bypasssub'] || move.infiltrates) {
+return;
+}
+let damage = this.actions.getDamage(source, target, move);
+if (!damage && damage !== 0) {
+this.add('-fail', source);
+this.attrLastMove('[still]');
+return null;
+}
+damage = this.runEvent('SubDamage', target, source, move, damage);
+if (!damage) {
+return damage;
+}
+if (damage > target.volatiles['substitute'].hp) {
+damage = target.volatiles['substitute'].hp as number;
+}
+target.volatiles['substitute'].hp -= damage;
+source.lastDamage = damage;
+if (target.volatiles['substitute'].hp <= 0) {
+if (move.ohko) this.add('-ohko');
+target.removeVolatile('substitute');
+} else {
+this.add('-activate', target, 'move: Substitute', '[damage]');
+}
+if (move.recoil) {
+this.damage(this.actions.calcRecoilDamage(damage, move), source, target, 'recoil');
+}
+if (move.drain) {
+this.heal(Math.ceil(damage * move.drain[0] / move.drain[1]), source, target, 'drain');
+}
+this.singleEvent('AfterSubDamage', move, null, target, source, move, damage);
+this.runEvent('AfterSubDamage', target, source, move, damage);
+return this.HIT_SUBSTITUTE;
+},
+onEnd(target) {
+this.add('-end', target, 'Substitute');
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+subzeroslammer: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Subzero Slammer",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'frz',
+},
+target: "any",
+type: "Ice",
+},
+
+suckerpunch: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Sucker Punch",
+pp: 0.625,
+priority: 10,
+flags: {punch: 1, contact: 1, protect: 1, mirror: 1},
+onTry(source, target) {
+const action = this.queue.willMove(target);
+const move = action?.choice === 'move' ? action.move : null;
+if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+return false;
+}
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+sunnyday: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Sunny Day",
+pp: 0.625,
+priority: 0,
+flags: {},
+weather: 'sunnyday',
+secondary: null,
+target: "allAdjacentFoes",
+type: "Fire",
+},
+
+sunsteelstrike: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Sunsteel Strike",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+ignoreAbility: true,
+secondary: {
+chance: 50,
+status: 'brn',
+},
+target: "any",
+type: "Steel",
+},
+
+superfang: {
+accuracy: 95,
+basePower: 0,
+damageCallback(pokemon, target) {
+return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+},
+category: "Physical",
+name: "Super Fang",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+superpower: {
+accuracy: 85,
+basePower: 120,
+category: "Physical",
+name: "Superpower",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+boosts: {
+atk: -1,
+def: -1,
+evasion: -1,
+},
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+supersonic: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Supersonic",
+pp: 1.25,
+priority: 1,
+flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+volatileStatus: 'confusion',
+secondary: null,
+target: "allAdjacent",
+type: "Normal",
+},
+
+supersonicskystrike: {
+accuracy: 75,
+basePower: 120,
+category: "Physical",
+name: "Supersonic Skystrike",
+pp: 0.625,
+priority: 10,
+flags: {protect: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [33, 100],
+secondary: null,
+target: "randomNormal",
+type: "Flying",
+},
+
+surf: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Surf",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacent",
+type: "Water",
+},
+
+surgingstrikes: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Surging Strikes",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 4],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+swagger: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Swagger",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+volatileStatus: 'confusion',
+boosts: {
+atk: 2,
+spa: 1,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+sweetkiss: {
+accuracy: 85,
+basePower: 50,
+category: "Physical",
+name: "Sweet Kiss",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'confusion',
+secondary: null,
+target: "any",
+type: "Fairy",
+},
+
+sweetscent: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Sweet Scent",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+evasion: -2,
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+swift: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Swift",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+chance: 75,
+selfBoost: {
+accuracy: 2,
+},
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+switcheroo: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Switcheroo",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, allyanim: 1},
+onTryImmunity(target) {
+return !target.hasAbility('stickyhold');
+},
+onHit(target, source, move) {
+const yourItem = target.takeItem(source);
+const myItem = source.takeItem();
+if (target.item || source.item || (!yourItem && !myItem)) {
+if (yourItem) target.item = yourItem.id;
+if (myItem) source.item = myItem.id;
+return false;
+}
+if (
+(myItem && !this.singleEvent('TakeItem', myItem, source.itemState, target, source, move, myItem)) ||
+(yourItem && !this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem))
+) {
+if (yourItem) target.item = yourItem.id;
+if (myItem) source.item = myItem.id;
+return false;
+}
+this.add('-activate', source, 'move: Trick', '[of] ' + target);
+if (myItem) {
+target.setItem(myItem);
+this.add('-item', target, myItem, '[from] move: Switcheroo');
+} else {
+this.add('-enditem', target, yourItem, '[silent]', '[from] move: Switcheroo');
+}
+if (yourItem) {
+source.setItem(yourItem);
+this.add('-item', source, yourItem, '[from] move: Switcheroo');
+} else {
+this.add('-enditem', source, myItem, '[silent]', '[from] move: Switcheroo');
+}
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+swordsdance: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Swords Dance",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, dance: 1},
+boosts: {
+atk: 3,
+evasion: -3,
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+synchronoise: {
+accuracy: 95,
+basePower: 115,
+category: "Special",
+name: "Synchronoise",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onTryImmunity(target, source) {
+return target.hasType(source.getTypes());
+},
+secondary: null,
+target: "allAdjacent",
+type: "Psychic",
+},
+
+synthesis: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Synthesis",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+onHit(pokemon) {
+let factor = 0.5;
+switch (pokemon.effectiveWeather()) {
+case 'sunnyday':
+case 'desolateland':
+factor = 0.667;
+break;
+case 'raindance':
+case 'primordialsea':
+case 'sandstorm':
+case 'hail':
+case 'snow':
+factor = 0.25;
+break;
+}
+const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+if (!success) {
+this.add('-fail', pokemon, 'heal');
+return this.NOT_FAIL;
+}
+return success;
+},
+secondary: null,
+target: "self",
+type: "Grass",
+},
+
+tackle: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Tackle",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+tailglow: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Tail Glow",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spa: 3,
+evasion: -3,
+},
+secondary: null,
+target: "self",
+type: "Bug",
+},
+
+tailslap: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Tail Slap",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+tailwhip: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Tail Whip",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+boosts: {
+spd: -1,
+def: -1,
+evasion: -1,
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+tailwind: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Tailwind",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, wind: 1},
+sideCondition: 'tailwind',
+condition: {
+duration: 4,
+durationCallback(target, source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
+return 6;
+}
+return 4;
+},
+onSideStart(side, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+} else {
+this.add('-sidestart', side, 'move: Tailwind');
+}
+},
+onModifySpe(spe, pokemon) {
+return this.chainModify(2);
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 5,
+onSideEnd(side) {
+this.add('-sideend', side, 'move: Tailwind');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Flying",
+},
+
+takedown: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Take Down",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [25, 100],
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+takeheart: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Take Heart",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+onHit(pokemon) {
+const success = !!this.boost({atk: 1, spa: 1});
+return pokemon.cureStatus() || success;
+},
+secondary: null,
+target: "self",
+type: "Psychic",
+},
+
+tarshot: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Tar Shot",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, slow: 1, bullet: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'tarshot',
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Tar Shot');
+},
+onEffectivenessPriority: -2,
+onEffectiveness(typeMod, target, type, move) {
+if (move.type !== 'Fire') return;
+if (!target) return;
+if (type !== target.getTypes()[0]) return;
+return typeMod + 1;
+},
+},
+boosts: {
+spe: -1,
+},
+secondary: null,
+target: "allAdjacent",
+type: "Rock",
+},
+
+taunt: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Taunt",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+volatileStatus: 'taunt',
+condition: {
+duration: 3,
+onStart(target) {
+if (target.activeTurns && !this.queue.willMove(target)) {
+this.effectState.duration++;
+}
+this.add('-start', target, 'move: Taunt');
+},
+onResidualOrder: 15,
+onEnd(target) {
+this.add('-end', target, 'move: Taunt');
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+const move = this.dex.moves.get(moveSlot.id);
+if (move.category === 'Status' && move.id !== 'mefirst') {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+onBeforeMovePriority: 5,
+onBeforeMove(attacker, defender, move) {
+if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+this.add('cant', attacker, 'move: Taunt', move);
+return false;
+}
+},
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+tearfullook: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Tearful Look",
+pp: 1.25,
+priority: 0,
+flags: {reflectable: 1, mirror: 1},
+volatileStatus: 'attract',
+boosts: {
+chance: 75,
+atk: -1,
+spa: -1,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+teatime: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Teatime",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1},
+onHitField(target, source, move) {
+const targets: Pokemon[] = [];
+for (const pokemon of this.getAllActive()) {
+if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+this.add('-miss', source, pokemon);
+} else if (this.runEvent('TryHit', pokemon, source, move) && pokemon.getItem().isBerry) {
+targets.push(pokemon);
+}
+}
+this.add('-fieldactivate', 'move: Teatime');
+if (!targets.length) {
+this.add('-fail', source, 'move: Teatime');
+this.attrLastMove('[still]');
+return this.NOT_FAIL;
+}
+for (const pokemon of targets) {
+pokemon.eatItem(true);
+}
+},
+secondary: null,
+target: "all",
+type: "Normal",
+},
+
+tectonicrage: {
+accuracy: 95,
+basePower: 55,
+category: "Physical",
+name: "Tectonic Rage",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+},
+target: "any",
+type: "Ground",
+},
+
+
+teleport: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Teleport",
+pp: 0.625,
+priority: 11,
+flags: {protect: 1},
+onTry(source) {
+return !!this.canSwitch(source.side);
+},
+selfSwitch: true,
+forceSwitch: true,
+secondary: null,
+target: "randomNormal",
+type: "Psychic",
+},
+
+terablast: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Tera Blast",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyType(move, pokemon, target) {
+if (pokemon.terastallized) {
+move.type = pokemon.teraType;
+}
+},
+onModifyMove(move, pokemon) {
+if (pokemon.terastallized && pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+terrainpulse: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Terrain Pulse",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, pulse: 1},
+onModifyType(move, pokemon) {
+if (!pokemon.isGrounded()) return;
+switch (this.field.terrain) {
+case 'electricterrain':
+move.type = 'Electric';
+break;
+case 'grassyterrain':
+move.type = 'Grass';
+break;
+case 'mistyterrain':
+move.type = 'Fairy';
+break;
+case 'psychicterrain':
+move.type = 'Psychic';
+break;
+}
+},
+onModifyMove(move, pokemon) {
+if (this.field.terrain && pokemon.isGrounded()) {
+move.basePower *= 2;
+this.debug('BP doubled in Terrain');
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+thief: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Thief",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onAfterHit(target, source, move) {
+if (source.item || source.volatiles['gem']) {
+return;
+}
+const yourItem = target.takeItem(source);
+if (!yourItem) {
+return;
+}
+if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+!source.setItem(yourItem)) {
+target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+return;
+}
+this.add('-enditem', target, yourItem, '[silent]', '[from] move: Thief', '[of] ' + source);
+this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+thousandarrows: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Thousand Arrows",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type, move) {
+if (move.type !== 'Ground') return;
+if (!target) return; // avoid crashing when called from a chat plugin
+// ignore effectiveness if the target is Flying type and immune to Ground
+if (!target.runImmunity('Ground')) {
+if (target.hasType('Flying')) return 0;
+}
+},
+volatileStatus: 'smackdown',
+ignoreImmunity: {'Ground': true},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+thousandwaves: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Thousand Waves",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Ground",
+},
+
+thrash: {
+accuracy: 95,
+basePower: 115,
+category: "Physical",
+name: "Thrash",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'lockedmove',
+},
+onAfterMove(pokemon) {
+if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+pokemon.removeVolatile('lockedmove');
+}
+},
+secondary: null,
+target: "randomNormal",
+type: "Normal",
+},
+
+throatchop: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Throat Chop",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+condition: {
+duration: 5,
+onStart(target) {
+this.add('-start', target, 'Throat Chop', '[silent]');
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+if (this.dex.moves.get(moveSlot.id).flags['sound']) {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+onBeforeMovePriority: 6,
+onBeforeMove(pokemon, target, move) {
+if (!move.isZ && !move.isMax && move.flags['sound']) {
+this.add('cant', pokemon, 'move: Throat Chop');
+return false;
+}
+},
+onModifyMove(move, pokemon, target) {
+if (!move.isZ && !move.isMax && move.flags['sound']) {
+this.add('cant', pokemon, 'move: Throat Chop');
+return false;
+}
+},
+onResidualOrder: 22,
+onEnd(target) {
+this.add('-end', target, 'Throat Chop', '[silent]');
+},
+},
+secondary: {
+chance: 75,
+onHit(target) {
+target.addVolatile('throatchop');
+},
+},
+target: "any",
+type: "Dark",
+},
+
+thunder: {
+accuracy: 75,
+basePower: 115,
+category: "Special",
+name: "Thunder",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onModifyMove(move, pokemon, target) {
+switch (target?.effectiveWeather()) {
+case 'raindance':
+case 'primordialsea':
+move.accuracy = true;
+break;
+case 'sunnyday':
+case 'desolateland':
+move.accuracy = 50;
+break;
+}
+},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+thunderbolt: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Thunderbolt",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+thundercage: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Thunder Cage",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+thunderfang: {
+accuracy: 95,
+basePower: 65,
+category: "Physical",
+name: "Thunder Fang",
+pp: 1.25,
+priority: 0,
+flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 33,
+status: 'par',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Electric",
+},
+
+thunderouskick: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Thunderous Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+def: -1,
+},
+},
+target: "any",
+type: "Fighting",
+},
+
+thunderpunch: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Thunder Punch",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+secondaries: [
+{
+chance: 33,
+status: 'par',
+}, {
+chance: 33,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Electric",
+},
+
+thunderwave: {
+accuracy: 85,
+basePower: 0,
+category: "Status",
+name: "Thunder Wave",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+status: 'par',
+ignoreImmunity: false,
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+tickle: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Tickle",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+boosts: {
+atk: -1,
+spa: -1,
+spe: 2,
+spd: -1,
+def: -1,
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+tidyup: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Tidy Up",
+pp: 0.625,
+priority: 0,
+flags: {},
+onHit(pokemon) {
+let success = false;
+for (const active of this.getAllActive()) {
+if (active.removeVolatile('substitute')) success = true;
+}
+const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
+for (const side of sides) {
+for (const sideCondition of removeAll) {
+if (side.removeSideCondition(sideCondition)) {
+this.add('-sideend', side, this.dex.conditions.get(sideCondition).name);
+success = true;
+}
+}
+}
+if (success) this.add('-activate', pokemon, 'move: Tidy Up');
+return !!this.boost({atk: 1, spe: 1}, pokemon, pokemon, null, false, true) || success;
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+topsyturvy: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Topsy Turvy",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+let success = false;
+let i: BoostID;
+for (i in target.boosts) {
+if (target.boosts[i] === 0) continue;
+target.boosts[i] = -target.boosts[i];
+success = true;
+}
+if (!success) return false;
+this.add('-invertboost', target, '[from] move: Topsy Turvy');
+},
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+torchsong: {
+accuracy: 95,
+basePower: 80,
+category: "Special",
+name: "Torch Song",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spa: 1,
+},
+},
+},
+target: "any",
+type: "Fire",
+},
+
+toxic: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Toxic",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+// No Guard-like effect for Poison-type user's implemented in Scripts#tryMoveHit
+status: 'tox',
+secondary: null,
+target: "any",
+type: "Poison",
+},
+
+toxicspikes: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Toxic Spikes",
+pp: 0.625,
+priority: 0,
+flags: {reflectable: 1},
+sideCondition: 'toxicspikes',
+condition: {
+// this is a side condition
+onSideStart(side) {
+this.add('-sidestart', side, 'move: Toxic Spikes');
+this.effectState.layers = 1;
+},
+onSideRestart(side) {
+if (this.effectState.layers >= 2) return false;
+this.add('-sidestart', side, 'move: Toxic Spikes');
+this.effectState.layers++;
+},
+onEntryHazard(pokemon) {
+if (!pokemon.isGrounded()) return;
+if (pokemon.hasType('Poison')) {
+this.add('-sideend', pokemon.side, 'move: Toxic Spikes', '[of] ' + pokemon);
+pokemon.side.removeSideCondition('toxicspikes');
+} else if (pokemon.hasType('Steel') || pokemon.hasItem('heavydutyboots')) {
+return;
+} else if (this.effectState.layers >= 2) {
+pokemon.trySetStatus('tox', pokemon.side.foe.active[0]);
+} else {
+pokemon.trySetStatus('tox', pokemon.side.foe.active[0]);
+}
+},
+},
+secondary: null,
+target: "foeSide",
+type: "Poison",
+},
+
+toxicthread: {
+accuracy: 75,
+basePower: 50,
+category: "Status",
+name: "Toxic Thread",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+status: 'tox',
+boosts: {
+spe: -1,
+},
+secondary: null,
+target: "any",
+type: "Poison",
+},
+
+trailblaze: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Trailblaze",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Grass",
+},
+
+transform: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Transform",
+pp: 0.625,
+priority: 5,
+flags: {allyanim: 1},
+onHit(target, pokemon) {
+if (!pokemon.transformInto(target)) {
+return false;
+}
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+triattack: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Tri Attack",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: {
+chance: 66,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('brn', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('frz', source);
+}
+},
+},
+target: "any",
+type: "Normal",
+},
+
+trickortreat: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Trick or Treat",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+if (target.hasType('Ghost')) return false;
+if (!target.addType('Ghost')) return false;
+this.add('-start', target, 'typeadd', 'Ghost', '[from] move: Trick or Treat');
+if (target.side.active.length === 2 && target.position === 1) {
+// Curse Glitch
+const action = this.queue.willMove(target);
+if (action && action.move.id === 'curse') {
+action.targetLoc = -1;
+}
+}
+},
+secondary: null,
+target: "any",
+type: "Ghost",
+},
+
+trickroom: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Trick Room",
+pp: 0.625,
+priority: -11,
+flags: {mirror: 1},
+pseudoWeather: 'trickroom',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
+return 7;
+}
+return 5;
+},
+onFieldStart(target, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-fieldstart', 'move: Trick Room', '[of] ' + source, '[persistent]');
+} else {
+this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+}
+},
+onFieldRestart(target, source) {
+this.field.removePseudoWeather('trickroom');
+},
+// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 1,
+onFieldEnd() {
+this.add('-fieldend', 'move: Trick Room');
+},
+},
+secondary: null,
+target: "all",
+type: "Psychic",
+},
+
+triplearrows: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Triple Arrows",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Flying') return 1;
+},
+critRatio: 1,
+secondaries: [
+{
+chance: 25,
+boosts: {
+def: -1,
+},
+}, {
+chance: 25,
+volatileStatus: 'flinch',
+},
+],
+target: "any",
+type: "Fighting",
+},
+
+tripleaxel: {
+accuracy: 95,
+basePower: 20,
+basePowerCallback(pokemon, target, move) {
+return 20 * move.hit;
+},
+category: "Physical",
+name: "Triple Axel",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 3],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Ice",
+},
+
+tripledive: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Triple Dive",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 3],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+triplekick: {
+accuracy: 95,
+basePower: 15,
+basePowerCallback(pokemon, target, move) {
+return 10 * move.hit;
+},
+category: "Physical",
+name: "Triple Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+multihit: [1, 3],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+tropkick: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Trop Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 75,
+boosts: {
+atk: -1,
+},
+},
+target: "any",
+type: "Grass",
+},
+
+twinbeam: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Twin Beam",
+pp: 1.25,
+flags: {protect: 1, beam: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Psychic",
+},
+
+twineedle: {
+accuracy: 95,
+basePower: 40,
+category: "Physical",
+name: "Twineedle",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: {
+chance: 50,
+status: 'tox',
+},
+target: "any",
+type: "Bug",
+},
+
+twinkletackle: {
+accuracy: 95,
+basePower: 55,
+category: "Physical",
+name: "Twinkle Tackle",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+forceSwitch: true,
+target: "any",
+type: "Fairy",
+},
+
+twister: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Twister",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, wind: 1},
+critRatio: 2,
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "allAdjacentFoes",
+type: "Dragon",
+},
+
+uturn: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "U turn",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+selfSwitch: true,
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+uproar: {
+accuracy: 95,
+basePower: 90,
+category: "Special",
+name: "Uproar",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+self: {
+volatileStatus: 'uproar',
+},
+onTryHit(target) {
+const activeTeam = target.side.activeTeam();
+const foeActiveTeam = target.side.foe.activeTeam();
+for (const [i, allyActive] of activeTeam.entries()) {
+if (allyActive && allyActive.status === 'slp') allyActive.cureStatus();
+const foeActive = foeActiveTeam[i];
+if (foeActive && foeActive.status === 'slp') foeActive.cureStatus();
+}
+},
+condition: {
+duration: 3,
+onStart(target) {
+this.add('-start', target, 'Uproar');
+},
+onResidual(target) {
+if (target.volatiles['throatchop']) {
+target.removeVolatile('uproar');
+return;
+}
+if (target.lastMove && target.lastMove.id === 'struggle') {
+// don't lock
+delete target.volatiles['uproar'];
+}
+this.add('-start', target, 'Uproar', '[upkeep]');
+},
+onResidualOrder: 28,
+onResidualSubOrder: 1,
+onEnd(target) {
+this.add('-end', target, 'Uproar');
+},
+onLockMove: 'uproar',
+onAnySetStatus(status, pokemon) {
+if (status.id === 'slp') {
+if (pokemon === this.effectState.target) {
+this.add('-fail', pokemon, 'slp', '[from] Uproar', '[msg]');
+} else {
+this.add('-fail', pokemon, 'slp', '[from] Uproar');
+}
+return null;
+}
+},
+},
+secondary: null,
+target: "randomNormal",
+type: "Normal",
+},
+
+vacuumwave: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Vacuum Wave",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+venomdrench: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Venom Drench",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+onHit(target, source, move) {
+if (target.status === 'tox' || target.status === 'tox') {
+return !!this.boost({atk: -1, spa: -1, spe: -1}, target, source, move);
+}
+return false;
+},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Poison",
+},
+
+venoshock: {
+accuracy: 95,
+basePower: 65,
+category: "Special",
+name: "Venoshock",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onBasePower(basePower, pokemon, target) {
+if (target.status === 'tox' || target.status === 'tox') {
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Poison",
+},
+
+vinewhip: {
+accuracy: 95,
+basePower: 50,
+category: "Physical",
+name: "Vine Whip",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "allAdjacentFoes",
+type: "Grass",
+},
+
+visegrip: {
+accuracy: 95,
+basePower: 55,
+category: "Physical",
+name: "Vise Grip",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+pseudoWeather: 'fairylock',
+condition: {
+duration: 5,
+onFieldStart(target) {
+this.add('-fieldactivate', 'move: Fairy Lock');
+},
+onTrapPokemon(pokemon) {
+pokemon.tryTrap();
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+vitalthrow: {
+accuracy: 95,
+basePower: 70,
+category: "Physical",
+name: "Vital Throw",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+forceSwitch: true,
+target: "any",
+type: "Fighting",
+},
+
+voltswitch: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Volt Switch",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+selfSwitch: true,
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+volttackle: {
+accuracy: 95,
+basePower: 115,
+category: "Physical",
+name: "Volt Tackle",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+wakeupslap: {
+accuracy: 95,
+basePower: 70,
+basePowerCallback(pokemon, target, move) {
+if (target.status === 'slp' || target.hasAbility('comatose')) {
+this.debug('BP doubled on sleeping target');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Wake Up Slap",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+onHit(target) {
+if (target.status === 'slp') target.cureStatus();
+},
+secondary: null,
+target: "any",
+type: "Fighting",
+},
+
+waterfall: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Waterfall",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Water",
+},
+
+watergun: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Water Gun",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+waterpledge: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Water Pledge",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+critRatio: 2,
+weather: 'sunnyday',
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+waterpulse: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Water Pulse",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Water",
+},
+
+watershuriken: {
+accuracy: 95,
+basePower: 15,
+category: "Special",
+name: "Water Shuriken",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+multihit: [1, 5],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+waterspout: {
+accuracy: 75,
+basePower: 145,
+basePowerCallback(pokemon, target, move) {
+const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+this.debug('BP: ' + bp);
+return bp;
+},
+category: "Special",
+name: "Water Spout",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondary: null,
+target: "allAdjacentFoes",
+type: "Water",
+},
+
+wavecrash: {
+accuracy: 95,
+basePower: 115,
+category: "Physical",
+name: "Wave Crash",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "allAdjacent",
+type: "Water",
+},
+
+weatherball: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Weather Ball",
+pp: 1.25,
+priority: 0,
+flags: {bullet: 1, protect: 1, mirror: 1},
+onModifyType(move, pokemon) {
+switch (pokemon.effectiveWeather()) {
+case 'sunnyday':
+case 'desolateland':
+move.type = 'Fire';
+break;
+case 'raindance':
+case 'primordialsea':
+move.type = 'Water';
+break;
+case 'sandstorm':
+move.type = 'Rock';
+break;
+case 'hail':
+case 'snow':
+move.type = 'Ice';
+break;
+}
+},
+onModifyMove(move, pokemon) {
+switch (pokemon.effectiveWeather()) {
+case 'sunnyday':
+case 'desolateland':
+move.basePower *= 2;
+break;
+case 'raindance':
+case 'primordialsea':
+move.basePower *= 2;
+break;
+case 'sandstorm':
+move.basePower *= 2;
+break;
+case 'hail':
+case 'snow':
+move.basePower *= 2;
+break;
+}
+this.debug('BP: ' + move.basePower);
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+whirlpool: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Whirlpool",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+volatileStatus: 'partiallytrapped',
+secondary: null,
+target: "any",
+type: "Water",
+},
+
+whirlwind: {
+accuracy: 95,
+basePower: 40,
+category: "Special",
+name: "Whirlwind",
+pp: 0.625,
+priority: -6,
+flags: {reflectable: 1, slow: 1, mirror: 1, bypasssub: 1, allyanim: 1, wind: 1},
+forceSwitch: true,
+secondary: null,
+target: "allAdjacentFoes",
+type: "Normal",
+},
+
+wickedblow: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Wicked Blow",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "Dark",
+},
+
+wickedtorque: {
+accuracy: 85,
+basePower: 105,
+category: "Physical",
+name: "Wicked Torque",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1},
+secondary: {
+chance: 33,
+status: 'slp',
+},
+target: "any",
+type: "Dark",
+},
+
+wideguard: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Wide Guard",
+pp: 0.625,
+priority: 5,
+flags: {snatch: 1},
+sideCondition: 'wideguard',
+onTry() {
+return !!this.queue.willAct();
+},
+onHitSide(side, source) {
+source.addVolatile('stall');
+},
+condition: {
+duration: 5,
+onSideStart(target, source) {
+this.add('-singleturn', source, 'Wide Guard');
+},
+onTryHitPriority: 4,
+onTryHit(target, source, move) {
+// Wide Guard blocks all spread moves
+if (move?.target !== 'allAdjacent' && move.target !== 'allAdjacentFoes') {
+return;
+}
+if (move.isZ || move.isMax) {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+this.add('-activate', target, 'move: Wide Guard');
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+return this.NOT_FAIL;
+},
+},
+secondary: null,
+target: "allySide",
+type: "Rock",
+},
+
+wildboltstorm: {
+accuracy: 85,
+basePower: 105,
+category: "Special",
+name: "Wildbolt Storm",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, wind: 1},
+secondary: {
+chance: 25,
+status: 'par',
+},
+target: "allAdjacentFoes",
+type: "Electric",
+},
+
+wildcharge: {
+accuracy: 95,
+basePower: 90,
+category: "Physical",
+name: "Wild Charge",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [25, 100],
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+wingattack: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Wing Attack",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+secondary: {
+chance: 50,
+self: {
+boosts: {
+spe: 1,
+},
+},
+},
+target: "any",
+type: "Flying",
+},
+
+wish: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Wish",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, heal: 1},
+slotCondition: 'Wish',
+condition: {
+duration: 2,
+onStart(pokemon, source) {
+this.effectState.hp = source.maxhp / 1.5;
+},
+onResidualOrder: 4,
+onEnd(target) {
+if (target && !target.fainted) {
+const damage = this.heal(this.effectState.hp, target, target);
+if (damage) {
+this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+}
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
+withdraw: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Withdraw",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+spd: 1,
+def: 1,
+evasion: -1,
+},
+secondary: null,
+target: "self",
+type: "Water",
+},
+
+wonderroom: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Wonder Room",
+pp: 0.625,
+priority: 0,
+flags: {mirror: 1},
+pseudoWeather: 'wonderroom',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Wonder Room');
+return 7;
+}
+return 5;
+},
+onModifyMove(move, source, target) {
+// This code is for moves that use defensive stats as the attacking stat; see below for most of the implementation
+if (!move.overrideOffensiveStat) return;
+const statAndBoosts = move.overrideOffensiveStat;
+if (!['def', 'spd'].includes(statAndBoosts)) return;
+move.overrideOffensiveStat = statAndBoosts === 'def' ? 'spd' : 'def';
+this.hint(`${move.name} uses ${statAndBoosts === 'def' ? '' : 'Sp. '}Def boosts when Wonder Room is active.`);
+},
+onFieldStart(field, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source, '[persistent]');
+} else {
+this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source);
+}
+},
+onFieldRestart(target, source) {
+this.field.removePseudoWeather('wonderroom');
+},
+// Swapping defenses partially implemented in sim/pokemon.js:Pokemon#calculateStat and Pokemon#getStat
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 5,
+onFieldEnd() {
+this.add('-fieldend', 'move: Wonder Room');
+},
+},
+secondary: null,
+target: "all",
+type: "Psychic",
+},
+
+woodhammer: {
+accuracy: 95,
+basePower: 120,
+category: "Physical",
+name: "Wood Hammer",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [33, 100],
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+workup: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Work Up",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+boosts: {
+atk: 1,
+spa: 1,
+evasion: -2,
+},
+secondary: null,
+target: "allySide",
+type: "Normal",
+},
+
+worryseed: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Worry Seed",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+onTryImmunity(target) {
+// Truant and Insomnia have special treatment; they fail before
+// checking accuracy and will double Stomping Tantrum's BP
+if (target.ability === 'truant' || target.ability === 'insomnia') {
+return false;
+}
+},
+onTryHit(target) {
+if (target.getAbility().isPermanent) {
+return false;
+}
+},
+onHit(pokemon) {
+const oldAbility = pokemon.setAbility('insomnia');
+if (oldAbility) {
+this.add('-ability', pokemon, 'Insomnia', '[from] move: Worry Seed');
+if (pokemon.status === 'slp') {
+pokemon.cureStatus();
+}
+return;
+}
+return oldAbility as false | null;
+},
+secondary: null,
+target: "any",
+type: "Grass",
+},
+
+wringout: {
+accuracy: 95,
+basePower: 0,
+basePowerCallback(pokemon, target, move) {
+const hp = target.hp;
+const maxHP = target.maxhp;
+const bp = Math.floor(Math.floor((120 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+return bp;
+},
+category: "Special",
+name: "Wring Out",
+pp: 1.25,
+priority: -2,
+flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+xscissor: {
+accuracy: 95,
+basePower: 45,
+category: "Physical",
+name: "X Scissor",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+multihit: [1, 2],
+multiaccuracy: 85,
+secondary: null,
+target: "any",
+type: "Bug",
+},
+
+yawn: {
+accuracy: 75,
+basePower: 0,
+category: "Status",
+name: "Yawn",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, reflectable: 1, mirror: 1},
+volatileStatus: 'yawn',
+onTryHit(target) {
+if (target.status || !target.runStatusImmunity('slp')) {
+return false;
+}
+},
+condition: {
+noCopy: true, // doesn't get copied by Baton Pass
+duration: 2,
+onStart(target, source) {
+this.add('-start', target, 'move: Yawn', '[of] ' + source);
+},
+onResidualOrder: 23,
+onEnd(target) {
+this.add('-end', target, 'move: Yawn', '[silent]');
+target.trySetStatus('slp', this.effectState.source);
+},
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
+zapcannon: {
+accuracy: 75,
+basePower: 115,
+category: "Special",
+name: "Zap Cannon",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, bullet: 1, mirror: 1},
+secondary: {
+chance: 75,
+status: 'par',
+},
+target: "any",
+type: "Electric",
+},
+
+zenheadbutt: {
+accuracy: 95,
+basePower: 80,
+category: "Physical",
+name: "Zen Headbutt",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+recoil: [25, 100],
+secondary: {
+chance: 25,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Psychic",
+},
+
+malignantchain: {
+accuracy: 85,
+basePower: 80,
+category: "Special",
+name: "Malignant Chain",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Steel') return 1;
+},
+onHit(target, source, move) {
+if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+},
+secondary: {
+chance: 75,
+status: 'tox',
+},
+target: "any",
+type: "Poison",
+},
+
+burningbulwark: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Burning Bulwark",
+pp: 0.625,
+priority: 4,
+flags: {metronome: 1, noassist: 1, failcopycat: 1},
+stallingMove: true,
+volatileStatus: 'burningbulwark',
+onPrepareHit(pokemon) {
+return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+},
+onHit(pokemon) {
+pokemon.addVolatile('stall');
+},
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-singleturn', target, 'move: Protect');
+},
+onTryHitPriority: 3,
+onTryHit(target, source, move) {
+if (!move.flags['protect'] || move.category === 'Status') {
+if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+return;
+}
+if (move.smartTarget) {
+move.smartTarget = false;
+} else {
+this.add('-activate', target, 'move: Protect');
+}
+const lockedmove = source.getVolatile('lockedmove');
+if (lockedmove) {
+// Outrage counter is reset
+if (source.volatiles['lockedmove'].duration === 2) {
+delete source.volatiles['lockedmove'];
+}
+}
+if (this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('brn', target);
+}
+return this.NOT_FAIL;
+},
+onHit(target, source, move) {
+if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+source.trySetStatus('brn', target);
+}
+},
+},
+secondary: null,
+target: "self",
+type: "Fire",
+},
+
+mightycleave: {
+accuracy: 85,
+basePower: 100,
+category: "Physical",
+name: "Mighty Cleave",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+breaksProtect: true,
+secondary: null,
+target: "any",
+type: "Rock",
+},
+
+thunderclap: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Thunderclap",
+pp: 0.625,
+priority: 1,
+flags: {protect: 1, mirror: 1},
+onTry(source, target) {
+const action = this.queue.willMove(target);
+const move = action?.choice === 'move' ? action.move : null;
+if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+return false;
+}
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+tachyoncutter: {
+accuracy: 95,
+basePower: 50,
+category: "Special",
+name: "Tachyon Cutter",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, slicing: 1},
+critRatio: 2,
+multihit: 2,
+multiaccuracy: 50,
+secondary: null,
+target: "any",
+type: "Steel",
+},
+
+electroshot: {
+accuracy: 85,
+basePower: 130,
+category: "Special",
+name: "Electro Shot",
+pp: 0.625,
+priority: 0,
+flags: {charge: 1, protect: 1, bullet: 1, mirror: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({spa: 2}, attacker, attacker, move);
+if (['raindance', 'primordialsea'].includes(attacker.effectiveWeather())) {
+this.attrLastMove('[still]');
+this.addMove('-anim', attacker, move.name, defender);
+return;
+}
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
+},
+secondary: null,
+hasSheerForce: true,
+target: "any",
+type: "Electric",
+},
+
+ficklebeam: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "Fickle Beam",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, beam: 1, mirror: 1},
+onBasePower(basePower, pokemon) {
+if (this.randomChance(3, 10)) {
+this.attrLastMove('[anim] Fickle Beam All Out');
+this.add('-activate', pokemon, 'move: Fickle Beam');
+return this.chainModify(2);
+}
+},
+secondary: null,
+target: "any",
+type: "Dragon",
+},
+
+psychicnoise: {
+accuracy: 95,
+basePower: 75,
+category: "Special",
+name: "Psychic Noise",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 95,
+volatileStatus: 'healblock',
+},
+target: "any",
+type: "Psychic",
+},
+
+upperhand: {
+accuracy: 95,
+basePower: 60,
+category: "Physical",
+name: "Upper Hand",
+pp: 0.625,
+priority: 100,
+flags: {contact: 1, protect: 1, mirror: 1},
+onTryHit(target, pokemon) {
+const action = this.queue.willMove(target);
+const move = action?.choice === 'move' ? action.move : null;
+if (!move || move.priority <= 0.1 || move.category === 'Status') {
+return false;
+}
+},
+secondary: {
+chance: 75,
+volatileStatus: 'flinch',
+},
+target: "any",
+type: "Fighting",
+},
+
+temperflare: {
+accuracy: 95,
+basePower: 70,
+basePowerCallback(pokemon, target, move) {
+if (pokemon.moveLastTurnResult === false) {
+this.debug('doubling Temper Flare BP due to previous move failure');
+return move.basePower * 2;
+}
+return move.basePower;
+},
+category: "Physical",
+name: "Temper Flare",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Fire",
+},
+
+alluringvoice: {
+accuracy: 95,
+basePower: 70,
+category: "Special",
+name: "Alluring Voice",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+secondary: {
+chance: 95,
+onHit(target, source, move) {
+if (target?.statsRaisedThisTurn) {
+target.addVolatile('confusion', source, move);
+}
+},
+},
+target: "any",
+type: "Fairy",
+},
+
+dragoncheer: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Dragon Cheer",
+pp: 0.625,
+priority: 0,
+flags: {bypasssub: 1, allyanim: 1},
+volatileStatus: 'dragoncheer',
+condition: {
+onStart(target, source, effect) {
+if (target.volatiles['focusenergy']) return false;
+if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+this.add('-start', target, 'move: Dragon Cheer', '[silent]');
+} else {
+this.add('-start', target, 'move: Dragon Cheer');
+}
+// Store at the start because the boost doesn't change if a Pokemon
+// Terastallizes into Dragon while having this volatile
+// Found by DarkFE:
+// https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9894139
+this.effectState.hasDragonType = target.hasType("Dragon");
+},
+onModifyCritRatio(critRatio, source) {
+return critRatio + (this.effectState.hasDragonType ? 2 : 1);
+},
+},
+secondary: null,
+target: "adjacentAlly",
+type: "Dragon",
+},
+
+supercellslam: {
+accuracy: 75,
+basePower: 100,
+category: "Physical",
+name: "Supercell Slam",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Supercell Slam'));
+},
+secondary: null,
+target: "any",
+type: "Electric",
+},
+
+syrupbomb: {
+accuracy: 85,
+basePower: 50,
+category: "Special",
+name: "Syrup Bomb",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1, bullet: 1},
+condition: {
+noCopy: true,
+duration: 10,
+onStart(pokemon) {
+this.add('-start', pokemon, 'Syrup Bomb');
+},
+onResidualOrder: 14,
+onResidual() {
+this.boost({spe: -1});
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Syrup Bomb', '[silent]');
+},
+},
+secondary: {
+chance: 95,
+volatileStatus: 'syrupbomb',
+},
+target: "allAdjacent",
+type: "Grass",
+},
+
+matchagotcha: {
+accuracy: 85,
+basePower: 80,
+category: "Special",
+name: "Matcha Gotcha",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1, defrost: 1, heal: 1},
+drain: [1, 2],
+thawsTarget: true,
+secondary: {
+chance: 25,
+status: 'brn',
+},
+target: "allAdjacentFoes",
+type: "Grass",
+},
+
+bloodmoon: {
+accuracy: 85,
+basePower: 140,
+category: "Special",
+name: "Blood Moon",
+pp: 0.625,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+secondaries: [
+{
+chance: 10,
+weather: 'hail',
+}, {
+chance: 10,
+weather: 'RainDance',
+}, {
+chance: 10,
+weather: 'Sandstorm',
+}, {
+chance: 10,
+weather: 'snow',
+}, {
+chance: 10,
+weather: 'sunnyday',
+},
+],
+target: "any",
+type: "Normal",
 },
 
 };
