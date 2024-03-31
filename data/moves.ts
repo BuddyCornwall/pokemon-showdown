@@ -4387,7 +4387,7 @@ pokemon.tryTrap();
 },
 },
 secondary: null,
-target: "all",
+target: "any",
 type: "Fairy",
 },
 
@@ -5995,7 +5995,7 @@ this.add('-fieldend', 'move: Gravity');
 },
 },
 secondary: null,
-target: "all",
+target: "Any",
 type: "Psychic",
 },
 
