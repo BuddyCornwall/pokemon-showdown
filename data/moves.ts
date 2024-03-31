@@ -1041,16 +1041,16 @@ type: "Flying",
 
 beatup: {
 accuracy: 95,
-basePower: 30,
+basePower: 15,
 basePowerCallback(pokemon, target, move) {
 const currentSpecies = move.allies!.shift()!.species;
-const bp = 30 + Math.floor(currentSpecies.baseStats.atk / 10);
+const bp = 15 + Math.floor(currentSpecies.baseStats.atk / 10);
 this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
 return bp;
 },
 category: "Physical",
 name: "Beat Up",
-pp: 0.625,
+pp: 100.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, allyanim: 1},
 onModifyMove(move, pokemon) {
