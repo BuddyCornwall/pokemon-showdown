@@ -6113,9 +6113,16 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Axolargel",
+rating: 4,
+num: 206,
 },
 
 ugly: {
+onPreStart(pokemon) {
+this.add(pokemon, 'is very very angry');
+this.add('-ability', pokemon, 'Sniper');
+this.add('-ability', pokemon, 'Anger Point');
+},
 onModifyDamage(damage, source, target, move) {
 if (target.getMoveHitData(move).crit) {
 this.debug('Sniper boost');
