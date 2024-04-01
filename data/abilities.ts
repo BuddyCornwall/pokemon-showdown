@@ -2753,7 +2753,7 @@ rating: 1.5,
 num: 204,
 },
 
-okaazfokrah: {
+Okaazfokrah: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
@@ -6095,5 +6095,71 @@ target.trySetStatus('tox', source);
 flags: {},
 name: "Toxic Chain",
 },
+
+axolargel: {
+onPreStart(pokemon) {
+this.add('-ability', pokemon, 'Mold Breaker');
+this.add('-ability', pokemon, 'Refrigerate');
+},
+
+onModifyMove(move) {
+move.ignoreAbility = true;
+},
+
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+const noModifyType = [
+'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
+if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+move.type = 'Ice';
+move.typeChangerBoosted = this.effect;
+}
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, pokemon, target, move) {
+if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+},
+
+name: "Axolargel",
+},
+
+ugly: {
+onPreStart(pokemon) {
+this.add('-ability', pokemon, 'Sniper');
+this.add('-ability', pokemon, 'Anger Point');
+},
+
+onModifyDamage(damage, source, target, move) {
+if (target.getMoveHitData(move).crit) {
+this.debug('Sniper boost');
+return this.chainModify(1.5);
+}
+},
+
+onHit(target, source, move) {
+if (!target.hp) return;
+if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+this.boost({atk: 12}, target, target);
+}
+},
+
+name: "UGLY",
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
