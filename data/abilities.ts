@@ -6097,11 +6097,6 @@ name: "Toxic Chain",
 },
 
 axolargel: {
-onPreStart(pokemon) {
-this.add(pokemon, 'is large & in charge');
-this.add('-ability', pokemon, 'Mold Breaker');
-this.add('-ability', pokemon, 'Refrigerate');
-},
 onModifyMove(move) {
 move.ignoreAbility = true;
 },
@@ -6124,11 +6119,6 @@ name: "Axolargel",
 },
 
 ugly: {
-onPreStart(pokemon) {
-this.add(pokemon, 'is very very angry');
-this.add('-ability', pokemon, 'Sniper');
-this.add('-ability', pokemon, 'Anger Point');
-},
 onModifyDamage(damage, source, target, move) {
 if (target.getMoveHitData(move).crit) {
 this.debug('Sniper boost');
