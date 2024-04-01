@@ -6097,6 +6097,13 @@ name: "Toxic Chain",
 },
 
 axolargel: {
+onPreStart(pokemon) {
+this.add('-ability', pokemon, 'Mold Breaker');
+this.add('-ability', pokemon, 'Refrigerate');
+},
+onModifyMove(move) {
+move.ignoreAbility = true;
+},
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 const noModifyType = [
@@ -6113,13 +6120,10 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Axolargel",
-rating: 4,
-num: 206,
 },
 
 ugly: {
 onPreStart(pokemon) {
-this.add(pokemon, 'is very very angry');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
