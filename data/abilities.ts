@@ -6097,9 +6097,6 @@ name: "Toxic Chain",
 },
 
 axolargel: {
-onModifyMove(move) {
-move.ignoreAbility = true;
-},
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 const noModifyType = [
