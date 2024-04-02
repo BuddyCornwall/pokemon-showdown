@@ -4759,6 +4759,16 @@ rating: 3.5,
 num: 220,
 },
 
+braveheart: {
+onAnyFaintPriority: 1,
+onAnyFaint() {
+this.boost({spa: 1}, this.effectState.target);
+},
+name: "Brave-Heart",
+rating: 3.5,
+num: 220,
+},
+
 hasteheart: {
 onAnyFaintPriority: 1,
 onAnyFaint() {
