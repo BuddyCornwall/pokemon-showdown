@@ -4750,8 +4750,8 @@ num: 116,
 },
 
 soulheart: {
-onAnyFaintPriority: 1,
-onAnyFaint() {
+onAllyFaintPriority: 1,
+onAllyFaint() {
 this.boost({spa: 1}, this.effectState.target);
 },
 name: "Soul-Heart",
@@ -4760,8 +4760,8 @@ num: 220,
 },
 
 braveheart: {
-onAnyFaintPriority: 1,
-onAnyFaint() {
+onAllyFaintPriority: 1,
+onAllyFaint() {
 this.boost({spa: 1}, this.effectState.target);
 },
 name: "Brave-Heart",
@@ -4770,8 +4770,8 @@ num: 220,
 },
 
 hasteheart: {
-onAnyFaintPriority: 1,
-onAnyFaint() {
+onAllyFaintPriority: 1,
+onAllyFaint() {
 this.boost({spe: 1}, this.effectState.target);
 },
 name: "Haste-Heart",
