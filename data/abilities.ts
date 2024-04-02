@@ -3045,10 +3045,42 @@ stats.push(statMinus);
 }
 }
 randomStat = stats.length ? this.sample(stats) : undefined;
-if (randomStat) boost[randomStat] = -1;
+if (randomStat) boost[randomStat] = -2;
 this.boost(boost, pokemon, pokemon);
 },
 name: "Moody",
+rating: 5,
+num: 141,
+},
+
+mardy: {
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+let stats: BoostID[] = [];
+const boost: SparseBoostsTable = {};
+let statPlus: BoostID;
+for (statPlus in pokemon.boosts) {
+if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+if (pokemon.boosts[statPlus] < 6) {
+stats.push(statPlus);
+}
+}
+let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+if (randomStat) boost[randomStat] = 1;
+stats = [];
+let statMinus: BoostID;
+for (statMinus in pokemon.boosts) {
+if (statMinus === 'accuracy' || statMinus === 'evasion') continue;
+if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+stats.push(statMinus);
+}
+}
+randomStat = stats.length ? this.sample(stats) : undefined;
+if (randomStat) boost[randomStat] = -1;
+this.boost(boost, pokemon, pokemon);
+},
+name: "Mardy",
 rating: 5,
 num: 141,
 },
@@ -4723,6 +4755,26 @@ onAnyFaint() {
 this.boost({spa: 1}, this.effectState.target);
 },
 name: "Soul-Heart",
+rating: 3.5,
+num: 220,
+},
+
+hasteheart: {
+onAnyFaintPriority: 1,
+onAnyFaint() {
+this.boost({spe: 1}, this.effectState.target);
+},
+name: "Haste-Heart",
+rating: 3.5,
+num: 220,
+},
+
+heroicheart: {
+onAnyFaintPriority: 1,
+onAnyFaint() {
+this.boost({atk: 1}, this.effectState.target);
+},
+name: "Heroic Heart",
 rating: 3.5,
 num: 220,
 },
