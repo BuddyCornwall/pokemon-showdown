@@ -6,14 +6,14 @@ section: "BUDPOW",
 name: "[PGL: Singles] BUDPOW",
 mod: 'gen9',
 gameType: 'singles',
-ruleset: ['Picked Team Size = 3','Max Move Count = 8', 'Exact HP Mo', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 3'],
+ruleset: ['Picked Team Size = 3','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 3'],
 },
 
 {
 name: "[PGL: Doubles] BUDPOW",
 mod: 'gen9',
 gameType: 'doubles',
-ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'Exact HP Mo', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
+ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
 },
 
 {
@@ -28,14 +28,14 @@ ruleset: ['Max Move Count = 8', 'Exact HP Mo', 'Cancel Mod', 'Dynamax Clause'],
 name: "[Gold Cup] BUDPOW",
 mod: 'gen9',
 gameType: 'singles',
-ruleset: ['Picked Team Size = 1','Max Move Count = 8', 'Exact HP Mo', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 1', 'Max Team Size = 1'],
+ruleset: ['Picked Team Size = 1','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 1', 'Max Team Size = 1'],
 },
 
 {
 name: "[MBSFBC] BUDPOW",
 mod: 'gen9',
 gameType: 'singles',
-ruleset: ['Max Move Count = 16', 'Exact HP Mo', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
+ruleset: ['Max Move Count = 16', 'Exact HP Mod', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
 },
 
 {
