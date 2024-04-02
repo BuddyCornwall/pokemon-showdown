@@ -20,7 +20,7 @@ ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'Exact HP Mod', 'Item Cla
 name: "[TRI*] BUDPOW",
 mod: 'gen9',
 gameType: 'triples',
-ruleset: ['Max Move Count = 8', 'Exact HP Mo', 'Cancel Mod', 'Dynamax Clause'],
+ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
 
 },
 
