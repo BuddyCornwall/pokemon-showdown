@@ -13378,17 +13378,16 @@ priority: 1,
 flags: {punch: 1,protect: 1, mirror: 1},
 basePowerCallback(pokemon, target) {
 const targetWeight = target.getWeight();
+const pokemonWeight = pokemon.getWeight();
 let bp;
-if (targetWeight >= 2000) {
-bp = 20;
-} else if (targetWeight >= 1000) {
-bp = 40;
-} else if (targetWeight >= 500) {
+if (pokemonWeight <= targetWeight * 5) {
+bp = 120;
+} else if (pokemonWeight <= targetWeight * 4) {
 bp = 80;
-} else if (targetWeight >= 250) {
-bp = 100;
-} else if (targetWeight >= 100) {
-bp = 125;
+} else if (pokemonWeight <= targetWeight * 3) {
+bp = 60;
+} else if (pokemonWeight <= targetWeight * 2) {
+bp = 40;
 } else {
 bp = 20;
 }
