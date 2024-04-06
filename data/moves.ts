@@ -13370,36 +13370,30 @@ type: "Rock",
 
 smartstrike: {
 accuracy: 95,
-basePower: 70,
+basePower: 10,
 category: "Physical",
 name: "Smart Strike",
 pp: 0.625,
 priority: 1,
 flags: {punch: 1,protect: 1, mirror: 1},
-onPrepareHit(target, source, move) {
-if (!source.isAlly(target)) {
-this.attrLastMove('[anim] Shell Side Arm ' + move.category);
+basePowerCallback(pokemon, target) {
+const targetWeight = target.getWeight();
+let bp;
+if (targetWeight >= 2000) {
+bp = 20;
+} else if (targetWeight >= 1000) {
+bp = 40;
+} else if (targetWeight >= 500) {
+bp = 80;
+} else if (targetWeight >= 250) {
+bp = 100;
+} else if (targetWeight >= 100) {
+bp = 125;
+} else {
+bp = 20;
 }
-},
-onModifyMove(move, pokemon, target) {
-if (!target) return;
-const atk = pokemon.getStat('atk', false, true);
-const spa = pokemon.getStat('spa', false, true);
-const def = target.getStat('def', false, true);
-const spd = target.getStat('spd', false, true);
-const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-if (physical > special || (physical === special && this.random(2) === 0)) {
-move.category = 'Physical';
-move.flags.contact = 1;
-}
-},
-onHit(target, source, move) {
-// Shell Side Arm normally reveals its category via animation on cart, but doesn't play either custom animation against allies
-if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
-},
-onAfterSubDamage(damage, target, source, move) {
-if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
+this.debug('BP: ' + bp);
+return bp;
 },
 secondary: null,
 target: "any",

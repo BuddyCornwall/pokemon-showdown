@@ -7152,6 +7152,24 @@ gen: 8,
 isNonstandard: "CAP",
 },
 
+lightmetal: {
+name: "Light Metal",
+onModifyWeight(weighthg) {
+return this.trunc(weighthg / 2);
+},
+isBreakable: true,
+isBreakable: true,
+},
+
+heavymetal: {
+name: "Heavy Metal",
+onModifyWeightPriority: 1,
+onModifyWeight(weighthg) {
+return weighthg * 2.5;
+},
+isBreakable: true,
+},
+
 egg: {
 name: "Egg",
 spritenum: 417,

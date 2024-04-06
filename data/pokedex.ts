@@ -560,7 +560,7 @@ types: ["Electric"],
 gender: "F",
 baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
 abilities: {0: "No Ability"},
-weightkg: 30,
+weightkg: 25.5,
 },
 
 raichualola: {
@@ -570,7 +570,7 @@ types: ["Electric", "Psychic"],
 gender: "F",
 baseStats: {hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110},
 abilities: {0: "No Ability"},
-weightkg: 21,
+weightkg: 25.5,
 },
 
 sandshrew: {
@@ -870,7 +870,7 @@ types: ["Ground"],
 gender: "F",
 baseStats: {hp: 40, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
 abilities: {0: "No Ability"},
-weightkg: 33.3,
+weightkg: 49.95 kg,
 },
 
 dugtrioalola: {
@@ -880,7 +880,7 @@ types: ["Ground", "Rock"],
 gender: "F",
 baseStats: {hp: 40, atk: 100, def: 60, spa: 50, spd: 70, spe: 110},
 abilities: {0: "No Ability"},
-weightkg: 66.6,
+weightkg: 49.95 kg,
 },
 
 meowth: {
@@ -7484,7 +7484,7 @@ types: ["Dark", "Ghost"],
 gender: "F",
 baseStats: {hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105},
 abilities: {0: "No Ability"},
-weightkg: 81.1,
+weightkg: 77,
 },
 
 zoroarkhisui: {
@@ -7494,7 +7494,7 @@ types: ["Ghost", "Normal"],
 gender: "F",
 baseStats: {hp: 55, atk: 90, def: 60, spa: 135, spd: 60, spe: 110},
 abilities: {0: "No Ability"},
-weightkg: 73,
+weightkg: 77,
 },
 
 minccino: {
@@ -9237,7 +9237,7 @@ types: ["Ice", "Rock"],
 gender: "F",
 baseStats: {hp: 95, atk: 127, def: 184, spa: 34, spd: 36, spe: 38},
 abilities: {0: "No Ability"},
-weightkg: 262.4,
+weightkg: 505,
 },
 
 noibat: {
