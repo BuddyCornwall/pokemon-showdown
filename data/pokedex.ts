@@ -870,7 +870,7 @@ types: ["Ground"],
 gender: "F",
 baseStats: {hp: 40, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
 abilities: {0: "No Ability"},
-weightkg: 49.95 kg,
+weightkg: 49.95,
 },
 
 dugtrioalola: {
@@ -880,7 +880,7 @@ types: ["Ground", "Rock"],
 gender: "F",
 baseStats: {hp: 40, atk: 100, def: 60, spa: 50, spd: 70, spe: 110},
 abilities: {0: "No Ability"},
-weightkg: 49.95 kg,
+weightkg: 49.95,
 },
 
 meowth: {

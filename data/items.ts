@@ -7158,7 +7158,6 @@ onModifyWeight(weighthg) {
 return this.trunc(weighthg / 2);
 },
 isBreakable: true,
-isBreakable: true,
 },
 
 heavymetal: {
