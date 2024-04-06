@@ -7840,11 +7840,11 @@ name: "Light That Burns the Sky",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1,},
-onModifyMove(move, pokemon) {
-if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
-},
 ignoreAbility: true,
-secondary: null,
+secondary: {
+chance: 25,
+status: 'brn',
+},
 target: "any",
 type: "Psychic",
 },
@@ -10077,9 +10077,6 @@ name: "Photon Geyser",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-onModifyMove(move, pokemon) {
-if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
-},
 ignoreAbility: true,
 secondary: null,
 target: "any",
@@ -11476,19 +11473,18 @@ name: "Refresh",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-critRatio: 0,
-onModifyMove(move, pokemon, target) {
-const rand = this.random(10);
-if (rand < 3) {
-move.heal = [1, 100];
-move.infiltrates = true;
-} else if (rand < 6) {
-move.heal = [50, 100];
-} else if (rand < 9) {
-move.heal = [75, 100];
+secondary: {
+chance: 66,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+heal: [10, 100],
+} else if (result === 1) {
+heal: [50, 100],
 } else {
-move.heal = [100, 100];
+heal: [100, 100],
 }
+},
 },
 secondary: null,
 target: "all",
@@ -15273,15 +15269,8 @@ name: "Tera Blast",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-onModifyType(move, pokemon, target) {
-if (pokemon.terastallized) {
-move.type = pokemon.teraType;
-}
-},
-onModifyMove(move, pokemon) {
-if (pokemon.terastallized && pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
-move.category = 'Physical';
-}
+onEffectiveness(typeMod, target, type) {
+if (type === 'Ground') return 1;
 },
 secondary: null,
 target: "any",
