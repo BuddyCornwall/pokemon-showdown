@@ -11465,32 +11465,6 @@ target: "allySide",
 type: "Psychic",
 },
 
-refresh: {
-accuracy: 95,
-basePower: 0,
-category: "Status",
-name: "Refresh",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
-secondary: {
-chance: 66,
-onHit(target, source) {
-const result = this.random(3);
-if (result === 0) {
-heal: [10, 100],
-} else if (result === 1) {
-heal: [50, 100],
-} else {
-heal: [100, 100],
-}
-},
-},
-secondary: null,
-target: "all",
-type: "Normal",
-},
-
 relicsong: {
 accuracy: 95,
 basePower: 75,
