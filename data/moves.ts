@@ -1586,7 +1586,26 @@ type: "Grass",
 
 bravebird: {
 accuracy: 75,
-basePower: 135,
+basePower: 0,
+basePowerCallback(pokemon, target) {
+const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+let bp;
+if (ratio < 2) {
+bp = 145;
+} else if (ratio < 5) {
+bp = 140;
+} else if (ratio < 10) {
+bp = 135;
+} else if (ratio < 17) {
+bp = 130;
+} else if (ratio < 33) {
+bp = 125;
+} else {
+bp = 120;
+}
+this.debug('BP: ' + bp);
+return bp;
+},
 category: "Physical",
 name: "Brave Bird",
 pp: 0.625,
