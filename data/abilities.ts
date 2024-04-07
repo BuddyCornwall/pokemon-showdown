@@ -2405,8 +2405,6 @@ this.add('-ability', pokemon, 'Pressure');
 onDeductPP(target, source) {
 if (target.isFoe(source)) return;
 return 1;
-},
-
 if (!this.effectState.switchingIn) return;
 const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 if (target) {
@@ -2414,10 +2412,7 @@ pokemon.transformInto(target, this.dex.abilities.get('imposter'));
 }
 this.effectState.switchingIn = false;
 },
-
-
-
-
+flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
 name: "Imposter",
 rating: 5,
 num: 150,
