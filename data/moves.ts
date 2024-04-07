@@ -1588,20 +1588,19 @@ bravebird: {
 accuracy: 95,
 basePower: 0,
 basePowerCallback(pokemon, target) {
-const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+const targetMorality = target.getMorality();
+const pokemonMorality = pokemon.getMorality();
 let bp;
-if (ratio < 2) {
-bp = 160;
-} else if (ratio < 5) {
-bp = 140;
-} else if (ratio < 10) {
+if (pokemonMorality <= targetMorality * 5) {
 bp = 120;
-} else if (ratio < 17) {
-bp = 100;
-} else if (ratio < 33) {
+} else if (pokemonMorality <= targetMorality * 4) {
 bp = 80;
-} else {
+} else if (pokemonMorality <= targetMorality * 3) {
 bp = 60;
+} else if (pokemonMorality <= targetMorality * 2) {
+bp = 40;
+} else {
+bp = 20;
 }
 this.debug('BP: ' + bp);
 return bp;
