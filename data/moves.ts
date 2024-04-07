@@ -1585,8 +1585,8 @@ type: "Grass",
 },
 
 bravebird: {
-accuracy: 95,
-basePower: 125,
+accuracy: 75,
+basePower: 135,
 category: "Physical",
 name: "Brave Bird",
 pp: 0.625,
