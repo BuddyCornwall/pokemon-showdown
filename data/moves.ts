@@ -15762,7 +15762,6 @@ volatileStatus: 'protect',
 onPrepareHit(pokemon) {
 return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 },
-onHit(pokemon) {
 pokemon.addVolatile('stall');
 },
 condition: {
