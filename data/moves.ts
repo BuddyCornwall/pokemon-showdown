@@ -1757,7 +1757,7 @@ accuracy: 95,
 basePower: 90,
 category: "Special",
 name: "Bug Buzz",
-pp: 1.25
+pp: 1.25,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
