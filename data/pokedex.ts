@@ -2066,7 +2066,7 @@ abilities: {0: "No Ability"},
 weightkg: 6.5,
 },
 
-Heevee: {
+heevee: {
 morality: 133,
 name: "Heevee",
 types: ["???"],
