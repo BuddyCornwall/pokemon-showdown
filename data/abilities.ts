@@ -2397,14 +2397,6 @@ num: 17,
 
 imposter: {
 onSwitchIn(pokemon) {
-this.effectState.switchingIn = true;
-},
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Pressure');
-},
-onDeductPP(target, source) {
-if (target.isFoe(source)) return;
-return 1;
 if (!this.effectState.switchingIn) return;
 const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 if (target) {
