@@ -1590,15 +1590,15 @@ basePower: 0,
 basePowerCallback(pokemon, target) {
 const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
 let bp;
-if (ratio < 2) {
+if (ratio < 5) {
 bp = 145;
-} else if (ratio < 5) {
-bp = 140;
 } else if (ratio < 10) {
+bp = 140;
+} else if (ratio < 25) {
 bp = 135;
-} else if (ratio < 17) {
+} else if (ratio < 50) {
 bp = 130;
-} else if (ratio < 33) {
+} else if (ratio < 75) {
 bp = 125;
 } else {
 bp = 120;
@@ -17206,5 +17206,36 @@ weather: 'sunnyday',
 target: "any",
 type: "Normal",
 },
+
+glitchblitz: {
+accuracy: 95,
+basePower: 25,
+category: "Physical",
+name: "Glitch Blitz",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+multihit: [1, 25],
+multiaccuracy: 70,
+secondary: null,
+target: "randomNormal",
+type: "???",
+},
+
+missingno: {
+accuracy: 95,
+basePower: 60,
+category: "Special",
+name: "MissingNo",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+critRatio: 2,
+secondary: null,
+target: "any",
+type: "???",
+},
+
+
 
 };
