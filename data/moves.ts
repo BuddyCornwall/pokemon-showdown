@@ -15756,7 +15756,6 @@ if (!pokemon.transformInto(target)) {
 return false;
 }
 },
-volatileStatus: 'protect',
 target: "any",
 type: "Normal",
 },

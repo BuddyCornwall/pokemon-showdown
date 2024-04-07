@@ -627,6 +627,38 @@ rating: 1.5,
 num: 123,
 },
 
+freezeinhell: {
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (!pokemon.hp) return;
+for (const target of pokemon.foes()) {
+if (target.status === 'frz' || target.hasAbility('comatose')) {
+this.damage(target.baseMaxhp / 6, target, pokemon);
+}
+}
+},
+name: "Freeze in Hell",
+rating: 1.5,
+num: 123,
+},
+
+shockingconsequences: {
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (!pokemon.hp) return;
+for (const target of pokemon.foes()) {
+if (target.status === 'frz' || target.hasAbility('comatose')) {
+this.damage(target.baseMaxhp / 6, target, pokemon);
+}
+}
+},
+name: "Shocking Consequences",
+rating: 1.5,
+num: 123,
+},
+
 ballfetch: {
 name: "Ball Fetch",
 rating: 0,
@@ -2368,17 +2400,24 @@ onSwitchIn(pokemon) {
 this.effectState.switchingIn = true;
 },
 onStart(pokemon) {
-// Imposter does not activate when Skill Swapped or when Neutralizing Gas leaves the field
+this.add('-ability', pokemon, 'Pressure');
+},
+onDeductPP(target, source) {
+if (target.isFoe(source)) return;
+return 1;
+},
+
 if (!this.effectState.switchingIn) return;
-// copies across in doubles/triples
-// (also copies across in multibattle and diagonally in free-for-all,
-// but side.foe already takes care of those)
 const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 if (target) {
 pokemon.transformInto(target, this.dex.abilities.get('imposter'));
 }
 this.effectState.switchingIn = false;
 },
+
+
+
+
 name: "Imposter",
 rating: 5,
 num: 150,
@@ -5100,7 +5139,7 @@ supremeoverlord: {
 onStart(pokemon) {
 if (pokemon.side.totalFainted) {
 this.add('-activate', pokemon, 'ability: Supreme Overlord');
-const fallen = Math.min(pokemon.side.totalFainted, 2);
+const fallen = Math.min(pokemon.side.totalFainted, 1);
 this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
 this.effectState.fallen = fallen;
 }
@@ -5165,6 +5204,21 @@ return null;
 onAllyTryAddVolatile(status, target) {
 if (status.id === 'yawn') {
 this.debug('Sweet Veil blocking yawn');
+const effectHolder = this.effectState.target;
+this.add('-block', target, 'ability: Sweet Veil', '[of] ' + effectHolder);
+return null;
+}
+},
+isBreakable: true,
+rating: 2,
+num: 175,
+},
+
+frostveil: {
+name: "Frost Veil",
+onAllySetStatus(status, target, source, effect) {
+if (status.id === 'frz') {
+this.debug('Frost Veil interrupts freeze');
 const effectHolder = this.effectState.target;
 this.add('-block', target, 'ability: Sweet Veil', '[of] ' + effectHolder);
 return null;
@@ -6160,6 +6214,7 @@ name: "Toxic Chain",
 
 axolargel: {
 onPreStart(pokemon) {
+this.debug('Axolargel is very Cold & hates Mold');
 this.add('-ability', pokemon, 'Mold Breaker');
 this.add('-ability', pokemon, 'Refrigerate');
 },
@@ -6186,6 +6241,7 @@ name: "Axolargel",
 
 ugly: {
 onPreStart(pokemon) {
+this.debug('U G L Y is VERY angry');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
