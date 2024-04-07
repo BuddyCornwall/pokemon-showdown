@@ -2056,9 +2056,9 @@ abilities: {0: "No Ability"},
 weightkg: 4,
 },
 
-eevee: {
+beevee: {
 morality: 133,
-name: "Eevee",
+name: "Beevee",
 types: ["???"],
 gender: "F",
 baseStats: {hp: 65, atk: 65, def: 60, spa: 65, spd: 75, spe: 65},
@@ -2066,9 +2066,9 @@ abilities: {0: "No Ability"},
 weightkg: 6.5,
 },
 
-eeveestarter: {
+Heevee: {
 morality: 133,
-name: "Eevee-Starter",
+name: "Heevee",
 types: ["???"],
 gender: "F",
 baseStats: {hp: 65, atk: 65, def: 60, spa: 65, spd: 75, spe: 65},
