@@ -1586,25 +1586,7 @@ type: "Grass",
 
 bravebird: {
 accuracy: 95,
-basePower: 0,
-basePowerCallback(pokemon, target) {
-const targetMorality = target.getMorality();
-const pokemonMorality = pokemon.getMorality();
-let bp;
-if (pokemonMorality <= targetMorality * 5) {
-bp = 120;
-} else if (pokemonMorality <= targetMorality * 4) {
-bp = 80;
-} else if (pokemonMorality <= targetMorality * 3) {
-bp = 60;
-} else if (pokemonMorality <= targetMorality * 2) {
-bp = 40;
-} else {
-bp = 20;
-}
-this.debug('BP: ' + bp);
-return bp;
-},
+basePower: 125,
 category: "Physical",
 name: "Brave Bird",
 pp: 0.625,
@@ -1614,7 +1596,7 @@ hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
 },
-recoil: [60, 100],
+recoil: [50, 100],
 secondary: null,
 target: "any",
 type: "Flying",
