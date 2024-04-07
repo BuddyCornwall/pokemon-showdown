@@ -1,6 +1,6 @@
 export const Pokedex: {[speciesid: string]: SpeciesData} = {
 bulbasaur: {
-num: 1,
+morality: 1,
 name: "Bulbasaur",
 types: ["Grass"],
 baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
@@ -10,7 +10,7 @@ weightkg: 6.9,
 },
 
 ivysaur: {
-num: 2,
+morality: 2,
 name: "Ivysaur",
 types: ["Grass"],
 gender: "F",
@@ -20,7 +20,7 @@ weightkg: 13,
 },
 
 venusaur: {
-num: 3,
+morality: 3,
 name: "Venusaur",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -30,7 +30,7 @@ weightkg: 100,
 },
 
 venusaurmega: {
-num: 3,
+morality: 3,
 name: "Venusaur-Mega",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -40,7 +40,7 @@ weightkg: 155.5,
 },
 
 venusaurgmax: {
-num: 3,
+morality: 3,
 name: "Venusaur-Gmax",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -50,7 +50,7 @@ weightkg: 0,
 },
 
 charmander: {
-num: 4,
+morality: 4,
 name: "Charmander",
 types: ["Fire"],
 gender: "F",
@@ -60,7 +60,7 @@ weightkg: 8.5,
 },
 
 charmeleon: {
-num: 5,
+morality: 5,
 name: "Charmeleon",
 types: ["Fire"],
 gender: "F",
@@ -70,7 +70,7 @@ weightkg: 19,
 },
 
 charizard: {
-num: 6,
+morality: 6,
 name: "Charizard",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -80,7 +80,7 @@ weightkg: 90.5,
 },
 
 charizardmegax: {
-num: 6,
+morality: 6,
 name: "Charizard-Mega-X",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -90,7 +90,7 @@ weightkg: 110.5,
 },
 
 charizardmegay: {
-num: 6,
+morality: 6,
 name: "Charizard-Mega-Y",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -100,7 +100,7 @@ weightkg: 100.5,
 },
 
 charizardgmax: {
-num: 6,
+morality: 6,
 name: "Charizard-Gmax",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -110,7 +110,7 @@ weightkg: 0,
 },
 
 squirtle: {
-num: 7,
+morality: 7,
 name: "Squirtle",
 types: ["Water"],
 gender: "F",
@@ -120,7 +120,7 @@ weightkg: 9,
 },
 
 wartortle: {
-num: 8,
+morality: 8,
 name: "Wartortle",
 types: ["Water"],
 gender: "F",
@@ -130,7 +130,7 @@ weightkg: 22.5,
 },
 
 blastoise: {
-num: 9,
+morality: 9,
 name: "Blastoise",
 types: ["Steel", "Water"],
 gender: "F",
@@ -140,7 +140,7 @@ weightkg: 85.5,
 },
 
 blastoisemega: {
-num: 9,
+morality: 9,
 name: "Blastoise-Mega",
 types: ["Steel", "Water"],
 gender: "F",
@@ -150,7 +150,7 @@ weightkg: 101.1,
 },
 
 blastoisegmax: {
-num: 9,
+morality: 9,
 name: "Blastoise-Gmax",
 types: ["Steel", "Water"],
 gender: "F",
@@ -160,7 +160,7 @@ weightkg: 0,
 },
 
 caterpie: {
-num: 10,
+morality: 10,
 name: "Caterpie",
 types: ["Bug"],
 gender: "F",
@@ -170,7 +170,7 @@ weightkg: 2.9,
 },
 
 metapod: {
-num: 11,
+morality: 11,
 name: "Metapod",
 types: ["Bug"],
 gender: "F",
@@ -180,7 +180,7 @@ weightkg: 9.9,
 },
 
 butterfree: {
-num: 12,
+morality: 12,
 name: "Butterfree",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -190,7 +190,7 @@ weightkg: 32,
 },
 
 butterfreegmax: {
-num: 12,
+morality: 12,
 name: "Butterfree-Gmax",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -200,7 +200,7 @@ weightkg: 0,
 },
 
 weedle: {
-num: 13,
+morality: 13,
 name: "Weedle",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -210,7 +210,7 @@ weightkg: 3.2,
 },
 
 kakuna: {
-num: 14,
+morality: 14,
 name: "Kakuna",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -220,7 +220,7 @@ weightkg: 10,
 },
 
 beedrill: {
-num: 15,
+morality: 15,
 name: "Beedrill",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -230,7 +230,7 @@ weightkg: 29.5,
 },
 
 beedrillmega: {
-num: 15,
+morality: 15,
 name: "Beedrill-Mega",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -240,7 +240,7 @@ weightkg: 40.5,
 },
 
 pidgey: {
-num: 16,
+morality: 16,
 name: "Pidgey",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -250,7 +250,7 @@ weightkg: 1.8,
 },
 
 pidgeotto: {
-num: 17,
+morality: 17,
 name: "Pidgeotto",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -260,7 +260,7 @@ weightkg: 30,
 },
 
 pidgeot: {
-num: 18,
+morality: 18,
 name: "Pidgeot",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -270,7 +270,7 @@ weightkg: 39.5,
 },
 
 pidgeotmega: {
-num: 18,
+morality: 18,
 name: "Pidgeot-Mega",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -280,7 +280,7 @@ weightkg: 50.5,
 },
 
 rattata: {
-num: 19,
+morality: 19,
 name: "Rattata",
 types: ["Poison"],
 gender: "F",
@@ -290,7 +290,7 @@ weightkg: 3.5,
 },
 
 rattataalola: {
-num: 19,
+morality: 19,
 name: "Rattata-Alola",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -300,7 +300,7 @@ weightkg: 3.8,
 },
 
 raticate: {
-num: 20,
+morality: 20,
 name: "Raticate",
 types: ["Ground", "Poison"],
 gender: "F",
@@ -310,7 +310,7 @@ weightkg: 18.5,
 },
 
 raticatealola: {
-num: 20,
+morality: 20,
 name: "Raticate-Alola",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -320,7 +320,7 @@ weightkg: 25.5,
 },
 
 raticatealolatotem: {
-num: 20,
+morality: 20,
 name: "Raticate-Alola-Totem",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -330,7 +330,7 @@ weightkg: 105,
 },
 
 spearow: {
-num: 21,
+morality: 21,
 name: "Spearow",
 types: ["Flying"],
 gender: "F",
@@ -340,7 +340,7 @@ weightkg: 2,
 },
 
 fearow: {
-num: 22,
+morality: 22,
 name: "Fearow",
 types: ["Flying"],
 gender: "F",
@@ -350,7 +350,7 @@ weightkg: 38,
 },
 
 ekans: {
-num: 23,
+morality: 23,
 name: "Ekans",
 types: ["Poison"],
 gender: "F",
@@ -360,7 +360,7 @@ weightkg: 6.9,
 },
 
 arbok: {
-num: 24,
+morality: 24,
 name: "Arbok",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -370,7 +370,7 @@ weightkg: 65,
 },
 
 pikachu: {
-num: 25,
+morality: 25,
 name: "Pikachu",
 types: ["Electric"],
 gender: "F",
@@ -380,7 +380,7 @@ weightkg: 6,
 },
 
 pikachucosplay: {
-num: 25,
+morality: 25,
 name: "Pikachu-Cosplay",
 types: ["Electric"],
 gender: "F",
@@ -391,7 +391,7 @@ gen: 6,
 },
 
 pikachurockstar: {
-num: 25,
+morality: 25,
 name: "Pikachu-Rock-Star",
 types: ["Electric"],
 gender: "F",
@@ -402,7 +402,7 @@ gen: 6,
 },
 
 pikachubelle: {
-num: 25,
+morality: 25,
 name: "Pikachu-Belle",
 types: ["Electric"],
 gender: "F",
@@ -413,7 +413,7 @@ gen: 6,
 },
 
 pikachupopstar: {
-num: 25,
+morality: 25,
 name: "Pikachu-Pop-Star",
 types: ["Electric"],
 gender: "F",
@@ -424,7 +424,7 @@ gen: 6,
 },
 
 pikachuphd: {
-num: 25,
+morality: 25,
 name: "Pikachu-PhD",
 types: ["Electric"],
 gender: "F",
@@ -435,7 +435,7 @@ gen: 6,
 },
 
 pikachulibre: {
-num: 25,
+morality: 25,
 name: "Pikachu-Libre",
 types: ["Electric"],
 gender: "F",
@@ -446,7 +446,7 @@ gen: 6,
 },
 
 pikachuoriginal: {
-num: 25,
+morality: 25,
 name: "Pikachu-Original",
 types: ["Electric"],
 gender: "F",
@@ -457,7 +457,7 @@ gen: 7,
 },
 
 pikachuhoenn: {
-num: 25,
+morality: 25,
 name: "Pikachu-Hoenn",
 types: ["Electric"],
 gender: "F",
@@ -468,7 +468,7 @@ gen: 7,
 },
 
 pikachusinnoh: {
-num: 25,
+morality: 25,
 name: "Pikachu-Sinnoh",
 types: ["Electric"],
 gender: "F",
@@ -479,7 +479,7 @@ gen: 7,
 },
 
 pikachuunova: {
-num: 25,
+morality: 25,
 name: "Pikachu-Unova",
 types: ["Electric"],
 gender: "F",
@@ -490,7 +490,7 @@ gen: 7,
 },
 
 pikachukalos: {
-num: 25,
+morality: 25,
 name: "Pikachu-Kalos",
 types: ["Electric"],
 gender: "F",
@@ -501,7 +501,7 @@ gen: 7,
 },
 
 pikachualola: {
-num: 25,
+morality: 25,
 name: "Pikachu-Alola",
 types: ["Electric"],
 gender: "F",
@@ -512,7 +512,7 @@ gen: 7,
 },
 
 pikachupartner: {
-num: 25,
+morality: 25,
 name: "Pikachu-Partner",
 types: ["Electric"],
 gender: "F",
@@ -523,7 +523,7 @@ gen: 7,
 },
 
 pikachustarter: {
-num: 25,
+morality: 25,
 name: "Pikachu-Starter",
 types: ["Electric"],
 gender: "F",
@@ -533,7 +533,7 @@ weightkg: 6,
 },
 
 pikachugmax: {
-num: 25,
+morality: 25,
 name: "Pikachu-Gmax",
 types: ["Electric"],
 gender: "F",
@@ -543,7 +543,7 @@ weightkg: 0,
 },
 
 pikachuworld: {
-num: 25,
+morality: 25,
 name: "Pikachu-World",
 types: ["Electric"],
 gender: "F",
@@ -554,7 +554,7 @@ gen: 8,
 },
 
 raichu: {
-num: 26,
+morality: 26,
 name: "Raichu",
 types: ["Electric"],
 gender: "F",
@@ -564,7 +564,7 @@ weightkg: 25.5,
 },
 
 raichualola: {
-num: 26,
+morality: 26,
 name: "Raichu-Alola",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -574,7 +574,7 @@ weightkg: 25.5,
 },
 
 sandshrew: {
-num: 27,
+morality: 27,
 name: "Sandshrew",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -584,7 +584,7 @@ weightkg: 12,
 },
 
 sandshrewalola: {
-num: 27,
+morality: 27,
 name: "Sandshrew-Alola",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -594,7 +594,7 @@ weightkg: 40,
 },
 
 sandslash: {
-num: 28,
+morality: 28,
 name: "Sandslash",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -604,7 +604,7 @@ weightkg: 29.5,
 },
 
 sandslashalola: {
-num: 28,
+morality: 28,
 name: "Sandslash-Alola",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -614,7 +614,7 @@ weightkg: 55,
 },
 
 nidorana: {
-num: 29,
+morality: 29,
 name: "Nidorana",
 types: ["Poison"],
 gender: "F",
@@ -624,7 +624,7 @@ weightkg: 7,
 },
 
 nidorina: {
-num: 30,
+morality: 30,
 name: "Nidorina",
 types: ["Poison"],
 gender: "F",
@@ -634,7 +634,7 @@ weightkg: 20,
 },
 
 nidoqueen: {
-num: 31,
+morality: 31,
 name: "Nidoqueen",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -644,7 +644,7 @@ weightkg: 60,
 },
 
 nidoran: {
-num: 32,
+morality: 32,
 name: "Nidoran",
 types: ["Poison"],
 gender: "F",
@@ -654,7 +654,7 @@ weightkg: 9,
 },
 
 nidorino: {
-num: 33,
+morality: 33,
 name: "Nidorino",
 types: ["Poison"],
 gender: "F",
@@ -664,7 +664,7 @@ weightkg: 19.5,
 },
 
 nidoking: {
-num: 34,
+morality: 34,
 name: "Nidoking",
 types: ["Ground", "Poison"],
 gender: "F",
@@ -674,7 +674,7 @@ weightkg: 62,
 },
 
 clefairy: {
-num: 35,
+morality: 35,
 name: "Clefairy",
 types: ["Fairy", "Rock"],
 gender: "F",
@@ -684,7 +684,7 @@ weightkg: 7.5,
 },
 
 clefable: {
-num: 36,
+morality: 36,
 name: "Clefable",
 types: ["Fairy", "Rock"],
 gender: "F",
@@ -694,7 +694,7 @@ weightkg: 40,
 },
 
 vulpix: {
-num: 37,
+morality: 37,
 name: "Vulpix",
 types: ["Fire"],
 gender: "F",
@@ -704,7 +704,7 @@ weightkg: 9.9,
 },
 
 vulpixalola: {
-num: 37,
+morality: 37,
 name: "Vulpix-Alola",
 types: ["Ice"],
 gender: "F",
@@ -714,7 +714,7 @@ weightkg: 9.9,
 },
 
 ninetales: {
-num: 38,
+morality: 38,
 name: "Ninetales",
 types: ["Fairy", "Fire"],
 gender: "F",
@@ -724,7 +724,7 @@ weightkg: 19.9,
 },
 
 ninetalesalola: {
-num: 38,
+morality: 38,
 name: "Ninetales-Alola",
 types: ["Fairy", "Ice"],
 gender: "F",
@@ -734,7 +734,7 @@ weightkg: 19.9,
 },
 
 jigglypuff: {
-num: 39,
+morality: 39,
 name: "Jigglypuff",
 types: ["Fairy", "Fire"],
 gender: "F",
@@ -744,7 +744,7 @@ weightkg: 5.5,
 },
 
 wigglytuff: {
-num: 40,
+morality: 40,
 name: "Wigglytuff",
 types: ["Fairy", "Fire"],
 gender: "F",
@@ -754,7 +754,7 @@ weightkg: 12,
 },
 
 zubat: {
-num: 41,
+morality: 41,
 name: "Zubat",
 types: ["Flying", "Poison"],
 gender: "F",
@@ -764,7 +764,7 @@ weightkg: 7.5,
 },
 
 golbat: {
-num: 42,
+morality: 42,
 name: "Golbat",
 types: ["Flying", "Poison"],
 gender: "F",
@@ -774,7 +774,7 @@ weightkg: 55,
 },
 
 oddish: {
-num: 43,
+morality: 43,
 name: "Oddish",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -784,7 +784,7 @@ weightkg: 5.4,
 },
 
 gloom: {
-num: 44,
+morality: 44,
 name: "Gloom",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -794,7 +794,7 @@ weightkg: 8.6,
 },
 
 vileplume: {
-num: 45,
+morality: 45,
 name: "Vileplume",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -804,7 +804,7 @@ weightkg: 18.6,
 },
 
 paras: {
-num: 46,
+morality: 46,
 name: "Paras",
 types: ["Bug"],
 gender: "F",
@@ -814,7 +814,7 @@ weightkg: 5.4,
 },
 
 parasect: {
-num: 47,
+morality: 47,
 name: "Parasect",
 types: ["Bug", "Ghost"],
 gender: "F",
@@ -824,7 +824,7 @@ weightkg: 29.5,
 },
 
 venonat: {
-num: 48,
+morality: 48,
 name: "Venonat",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -834,7 +834,7 @@ weightkg: 30,
 },
 
 venomoth: {
-num: 49,
+morality: 49,
 name: "Venomoth",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -844,7 +844,7 @@ weightkg: 12.5,
 },
 
 diglett: {
-num: 50,
+morality: 50,
 name: "Diglett",
 types: ["Ground"],
 gender: "F",
@@ -854,7 +854,7 @@ weightkg: 0.8,
 },
 
 diglettalola: {
-num: 50,
+morality: 50,
 name: "Diglett-Alola",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -864,7 +864,7 @@ weightkg: 1,
 },
 
 dugtrio: {
-num: 51,
+morality: 51,
 name: "Dugtrio",
 types: ["Ground"],
 gender: "F",
@@ -874,7 +874,7 @@ weightkg: 49.95,
 },
 
 dugtrioalola: {
-num: 51,
+morality: 51,
 name: "Dugtrio-Alola",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -884,7 +884,7 @@ weightkg: 49.95,
 },
 
 meowth: {
-num: 52,
+morality: 52,
 name: "Meowth",
 types: ["Normal"],
 gender: "F",
@@ -894,7 +894,7 @@ weightkg: 4.2,
 },
 
 meowthalola: {
-num: 52,
+morality: 52,
 name: "Meowth-Alola",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -904,7 +904,7 @@ weightkg: 4.2,
 },
 
 meowthgalar: {
-num: 52,
+morality: 52,
 name: "Meowth-Galar",
 types: ["Normal", "Steel"],
 gender: "F",
@@ -914,7 +914,7 @@ weightkg: 7.5,
 },
 
 meowthgmax: {
-num: 52,
+morality: 52,
 name: "Meowth-Gmax",
 types: ["Normal"],
 gender: "F",
@@ -924,7 +924,7 @@ weightkg: 0,
 },
 
 persian: {
-num: 53,
+morality: 53,
 name: "Persian",
 types: ["Normal"],
 gender: "F",
@@ -934,7 +934,7 @@ weightkg: 32,
 },
 
 persianalola: {
-num: 53,
+morality: 53,
 name: "Persian-Alola",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -944,7 +944,7 @@ weightkg: 33,
 },
 
 psyduck: {
-num: 54,
+morality: 54,
 name: "Psyduck",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -954,7 +954,7 @@ weightkg: 19.6,
 },
 
 golduck: {
-num: 55,
+morality: 55,
 name: "Golduck",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -964,7 +964,7 @@ weightkg: 76.6,
 },
 
 mankey: {
-num: 56,
+morality: 56,
 name: "Mankey",
 types: ["Fighting"],
 gender: "F",
@@ -974,7 +974,7 @@ weightkg: 28,
 },
 
 primeape: {
-num: 57,
+morality: 57,
 name: "Primeape",
 types: ["Fighting"],
 gender: "F",
@@ -984,7 +984,7 @@ weightkg: 32,
 },
 
 growlithe: {
-num: 58,
+morality: 58,
 name: "Growlithe",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -994,7 +994,7 @@ weightkg: 19,
 },
 
 growlithehisui: {
-num: 58,
+morality: 58,
 name: "Growlithe-Hisui",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -1004,7 +1004,7 @@ weightkg: 22.7,
 },
 
 arcanine: {
-num: 59,
+morality: 59,
 name: "Arcanine",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -1014,7 +1014,7 @@ weightkg: 155,
 },
 
 arcaninehisui: {
-num: 59,
+morality: 59,
 name: "Arcanine-Hisui",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -1024,7 +1024,7 @@ weightkg: 168,
 },
 
 poliwag: {
-num: 60,
+morality: 60,
 name: "Poliwag",
 types: ["Water"],
 gender: "F",
@@ -1034,7 +1034,7 @@ weightkg: 12.4,
 },
 
 poliwhirl: {
-num: 61,
+morality: 61,
 name: "Poliwhirl",
 types: ["Water"],
 gender: "F",
@@ -1044,7 +1044,7 @@ weightkg: 20,
 },
 
 poliwrath: {
-num: 62,
+morality: 62,
 name: "Poliwrath",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -1054,7 +1054,7 @@ weightkg: 54,
 },
 
 abra: {
-num: 63,
+morality: 63,
 name: "Abra",
 types: ["Psychic"],
 gender: "F",
@@ -1064,7 +1064,7 @@ weightkg: 19.5,
 },
 
 kadabra: {
-num: 64,
+morality: 64,
 name: "Kadabra",
 types: ["Psychic"],
 gender: "F",
@@ -1074,7 +1074,7 @@ weightkg: 56.5,
 },
 
 alakazam: {
-num: 65,
+morality: 65,
 name: "Alakazam",
 types: ["Psychic"],
 gender: "F",
@@ -1084,7 +1084,7 @@ weightkg: 48,
 },
 
 alakazammega: {
-num: 65,
+morality: 65,
 name: "Alakazam-Mega",
 types: ["Psychic"],
 gender: "F",
@@ -1094,7 +1094,7 @@ weightkg: 48,
 },
 
 machop: {
-num: 66,
+morality: 66,
 name: "Machop",
 types: ["Fighting"],
 gender: "F",
@@ -1104,7 +1104,7 @@ weightkg: 19.5,
 },
 
 machoke: {
-num: 67,
+morality: 67,
 name: "Machoke",
 types: ["Fighting"],
 gender: "F",
@@ -1114,7 +1114,7 @@ weightkg: 70.5,
 },
 
 machamp: {
-num: 68,
+morality: 68,
 name: "Machamp",
 types: ["Fighting"],
 gender: "F",
@@ -1124,7 +1124,7 @@ weightkg: 130,
 },
 
 machampgmax: {
-num: 68,
+morality: 68,
 name: "Machamp-Gmax",
 types: ["Fighting"],
 gender: "F",
@@ -1134,7 +1134,7 @@ weightkg: 0,
 },
 
 bellsprout: {
-num: 69,
+morality: 69,
 name: "Bellsprout",
 types: ["Grass"],
 gender: "F",
@@ -1144,7 +1144,7 @@ weightkg: 4,
 },
 
 weepinbell: {
-num: 70,
+morality: 70,
 name: "Weepinbell",
 types: ["Grass"],
 gender: "F",
@@ -1154,7 +1154,7 @@ weightkg: 6.4,
 },
 
 victreebel: {
-num: 71,
+morality: 71,
 name: "Victreebel",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -1164,7 +1164,7 @@ weightkg: 15.5,
 },
 
 tentacool: {
-num: 72,
+morality: 72,
 name: "Tentacool",
 types: ["Poison", "Water"],
 gender: "F",
@@ -1174,7 +1174,7 @@ weightkg: 45.5,
 },
 
 tentacruel: {
-num: 73,
+morality: 73,
 name: "Tentacruel",
 types: ["Poison", "Water"],
 gender: "F",
@@ -1184,7 +1184,7 @@ weightkg: 55,
 },
 
 geodude: {
-num: 74,
+morality: 74,
 name: "Geodude",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -1194,7 +1194,7 @@ weightkg: 20,
 },
 
 geodudealola: {
-num: 74,
+morality: 74,
 name: "Geodude-Alola",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -1204,7 +1204,7 @@ weightkg: 20.3,
 },
 
 graveler: {
-num: 75,
+morality: 75,
 name: "Graveler",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -1214,7 +1214,7 @@ weightkg: 105,
 },
 
 graveleralola: {
-num: 75,
+morality: 75,
 name: "Graveler-Alola",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -1224,7 +1224,7 @@ weightkg: 110,
 },
 
 golem: {
-num: 76,
+morality: 76,
 name: "Golem",
 types: ["Dragon", "Rock"],
 gender: "F",
@@ -1234,7 +1234,7 @@ weightkg: 300,
 },
 
 golemalola: {
-num: 76,
+morality: 76,
 name: "Golem-Alola",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -1244,7 +1244,7 @@ weightkg: 316,
 },
 
 ponyta: {
-num: 77,
+morality: 77,
 name: "Ponyta",
 types: ["Fire"],
 gender: "F",
@@ -1254,7 +1254,7 @@ weightkg: 30,
 },
 
 ponytagalar: {
-num: 77,
+morality: 77,
 name: "Ponyta-Galar",
 types: ["Psychic"],
 gender: "F",
@@ -1264,7 +1264,7 @@ weightkg: 24,
 },
 
 rapidash: {
-num: 78,
+morality: 78,
 name: "Rapidash",
 types: ["Fire", "Steel"],
 gender: "F",
@@ -1274,7 +1274,7 @@ weightkg: 95,
 },
 
 rapidashgalar: {
-num: 78,
+morality: 78,
 name: "Rapidash-Galar",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -1284,7 +1284,7 @@ weightkg: 80,
 },
 
 slowpoke: {
-num: 79,
+morality: 79,
 name: "Slowpoke",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -1294,7 +1294,7 @@ weightkg: 36,
 },
 
 slowpokegalar: {
-num: 79,
+morality: 79,
 name: "Slowpoke-Galar",
 types: ["Psychic"],
 gender: "F",
@@ -1304,7 +1304,7 @@ weightkg: 36,
 },
 
 slowbro: {
-num: 80,
+morality: 80,
 name: "Slowbro",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -1314,7 +1314,7 @@ weightkg: 78.5,
 },
 
 slowbromega: {
-num: 80,
+morality: 80,
 name: "Slowbro-Mega",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -1324,7 +1324,7 @@ weightkg: 120,
 },
 
 slowbrogalar: {
-num: 80,
+morality: 80,
 name: "Slowbro-Galar",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -1334,7 +1334,7 @@ weightkg: 70.5,
 },
 
 magnemite: {
-num: 81,
+morality: 81,
 name: "Magnemite",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -1344,7 +1344,7 @@ weightkg: 6,
 },
 
 magneton: {
-num: 82,
+morality: 82,
 name: "Magneton",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -1354,7 +1354,7 @@ weightkg: 60,
 },
 
 farfetchd: {
-num: 83,
+morality: 83,
 name: "Farfetch\u2019d",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -1364,7 +1364,7 @@ weightkg: 15,
 },
 
 farfetchdgalar: {
-num: 83,
+morality: 83,
 name: "Farfetch\u2019d-Galar",
 types: ["Fighting", "Flying"],
 gender: "F",
@@ -1374,7 +1374,7 @@ weightkg: 15,
 },
 
 doduo: {
-num: 84,
+morality: 84,
 name: "Doduo",
 types: ["Flying", "Ground"],
 gender: "F",
@@ -1384,7 +1384,7 @@ weightkg: 39.2,
 },
 
 dodrio: {
-num: 85,
+morality: 85,
 name: "Dodrio",
 types: ["Flying", "Ground"],
 gender: "F",
@@ -1394,7 +1394,7 @@ weightkg: 85.2,
 },
 
 seel: {
-num: 86,
+morality: 86,
 name: "Seel",
 types: ["Ice"],
 gender: "F",
@@ -1404,7 +1404,7 @@ weightkg: 90,
 },
 
 dewgong: {
-num: 87,
+morality: 87,
 name: "Dewgong",
 types: ["Ice"],
 gender: "F",
@@ -1414,7 +1414,7 @@ weightkg: 120,
 },
 
 grimer: {
-num: 88,
+morality: 88,
 name: "Grimer",
 types: ["Poison"],
 gender: "F",
@@ -1424,7 +1424,7 @@ weightkg: 30,
 },
 
 grimeralola: {
-num: 88,
+morality: 88,
 name: "Grimer-Alola",
 types: ["Dark", "Poison"],
 gender: "F",
@@ -1434,7 +1434,7 @@ weightkg: 42,
 },
 
 muk: {
-num: 89,
+morality: 89,
 name: "Muk",
 types: ["Poison"],
 gender: "F",
@@ -1444,7 +1444,7 @@ weightkg: 30,
 },
 
 mukalola: {
-num: 89,
+morality: 89,
 name: "Muk-Alola",
 types: ["Dark", "Poison"],
 gender: "F",
@@ -1454,7 +1454,7 @@ weightkg: 52,
 },
 
 shellder: {
-num: 90,
+morality: 90,
 name: "Shellder",
 types: ["Ice"],
 gender: "F",
@@ -1464,7 +1464,7 @@ weightkg: 4,
 },
 
 cloyster: {
-num: 91,
+morality: 91,
 name: "Cloyster",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -1474,7 +1474,7 @@ weightkg: 132.5,
 },
 
 gastly: {
-num: 92,
+morality: 92,
 name: "Gastly",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -1484,7 +1484,7 @@ weightkg: 0.1,
 },
 
 haunter: {
-num: 93,
+morality: 93,
 name: "Haunter",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -1494,7 +1494,7 @@ weightkg: 0.1,
 },
 
 gengar: {
-num: 94,
+morality: 94,
 name: "Gengar",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -1504,7 +1504,7 @@ weightkg: 40.5,
 },
 
 gengarmega: {
-num: 94,
+morality: 94,
 name: "Gengar-Mega",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -1514,7 +1514,7 @@ weightkg: 40.5,
 },
 
 gengargmax: {
-num: 94,
+morality: 94,
 name: "Gengar-Gmax",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -1524,7 +1524,7 @@ weightkg: 0,
 },
 
 onix: {
-num: 95,
+morality: 95,
 name: "Onix",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -1534,7 +1534,7 @@ weightkg: 210,
 },
 
 drowzee: {
-num: 96,
+morality: 96,
 name: "Drowzee",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -1544,7 +1544,7 @@ weightkg: 32.4,
 },
 
 hypno: {
-num: 97,
+morality: 97,
 name: "Hypno",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -1554,7 +1554,7 @@ weightkg: 75.6,
 },
 
 krabby: {
-num: 98,
+morality: 98,
 name: "Krabby",
 types: ["Water"],
 gender: "F",
@@ -1564,7 +1564,7 @@ weightkg: 6.5,
 },
 
 kingler: {
-num: 99,
+morality: 99,
 name: "Kingler",
 types: ["Steel", "Water"],
 gender: "F",
@@ -1574,7 +1574,7 @@ weightkg: 60,
 },
 
 kinglergmax: {
-num: 99,
+morality: 99,
 name: "Kingler-Gmax",
 types: ["Steel", "Water"],
 gender: "F",
@@ -1584,7 +1584,7 @@ weightkg: 0,
 },
 
 voltorb: {
-num: 100,
+morality: 100,
 name: "Voltorb",
 types: ["Electric"],
 gender: "F",
@@ -1594,7 +1594,7 @@ weightkg: 10.4,
 },
 
 voltorbhisui: {
-num: 100,
+morality: 100,
 name: "Voltorb-Hisui",
 types: ["Electric", "Grass"],
 gender: "F",
@@ -1604,7 +1604,7 @@ weightkg: 13,
 },
 
 electrode: {
-num: 101,
+morality: 101,
 name: "Electrode",
 types: ["Electric", "Ghost"],
 gender: "F",
@@ -1614,7 +1614,7 @@ weightkg: 66.6,
 },
 
 electrodehisui: {
-num: 101,
+morality: 101,
 name: "Electrode-Hisui",
 types: ["Electric", "Grass"],
 gender: "F",
@@ -1624,7 +1624,7 @@ weightkg: 71,
 },
 
 exeggcute: {
-num: 102,
+morality: 102,
 name: "Exeggcute",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -1634,7 +1634,7 @@ weightkg: 2.5,
 },
 
 exeggutor: {
-num: 103,
+morality: 103,
 name: "Exeggutor",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -1644,7 +1644,7 @@ weightkg: 120,
 },
 
 exeggutoralola: {
-num: 103,
+morality: 103,
 name: "Exeggutor-Alola",
 types: ["Dragon", "Psychic"],
 gender: "F",
@@ -1654,7 +1654,7 @@ weightkg: 415.6,
 },
 
 cubone: {
-num: 104,
+morality: 104,
 name: "Cubone",
 types: ["Ground"],
 gender: "F",
@@ -1664,7 +1664,7 @@ weightkg: 6.5,
 },
 
 marowak: {
-num: 105,
+morality: 105,
 name: "Marowak",
 types: ["Ghost", "Ground"],
 gender: "F",
@@ -1674,7 +1674,7 @@ weightkg: 45,
 },
 
 marowakalola: {
-num: 105,
+morality: 105,
 name: "Marowak-Alola",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -1684,7 +1684,7 @@ weightkg: 34,
 },
 
 marowakalolatotem: {
-num: 105,
+morality: 105,
 name: "Marowak-Alola-Totem",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -1694,7 +1694,7 @@ weightkg: 98,
 },
 
 hitmonlee: {
-num: 106,
+morality: 106,
 name: "Hitmonlee",
 types: ["Fighting", "Ground"],
 gender: "F",
@@ -1704,7 +1704,7 @@ weightkg: 49.8,
 },
 
 hitmonchan: {
-num: 107,
+morality: 107,
 name: "Hitmonchan",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -1714,7 +1714,7 @@ weightkg: 50.2,
 },
 
 lickitung: {
-num: 108,
+morality: 108,
 name: "Lickitung",
 types: ["Fairy", "Poison"],
 gender: "F",
@@ -1724,7 +1724,7 @@ weightkg: 65.5,
 },
 
 koffing: {
-num: 109,
+morality: 109,
 name: "Koffing",
 types: ["Poison"],
 gender: "F",
@@ -1734,7 +1734,7 @@ weightkg: 1,
 },
 
 weezing: {
-num: 110,
+morality: 110,
 name: "Weezing",
 types: ["Poison"],
 gender: "F",
@@ -1744,7 +1744,7 @@ weightkg: 9.5,
 },
 
 weezinggalar: {
-num: 110,
+morality: 110,
 name: "Weezing-Galar",
 types: ["Fairy", "Poison"],
 gender: "F",
@@ -1754,7 +1754,7 @@ weightkg: 16,
 },
 
 rhyhorn: {
-num: 111,
+morality: 111,
 name: "Rhyhorn",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -1764,7 +1764,7 @@ weightkg: 115,
 },
 
 rhydon: {
-num: 112,
+morality: 112,
 name: "Rhydon",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -1774,7 +1774,7 @@ weightkg: 120,
 },
 
 chansey: {
-num: 113,
+morality: 113,
 name: "Chansey",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -1785,7 +1785,7 @@ canHatch: true,
 },
 
 tangela: {
-num: 114,
+morality: 114,
 name: "Tangela",
 types: ["Grass"],
 gender: "F",
@@ -1795,7 +1795,7 @@ weightkg: 35,
 },
 
 kangaskhan: {
-num: 115,
+morality: 115,
 name: "Kangaskhan",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -1805,7 +1805,7 @@ weightkg: 80,
 },
 
 kangaskhanmega: {
-num: 115,
+morality: 115,
 name: "Kangaskhan-Mega",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -1815,7 +1815,7 @@ weightkg: 100,
 },
 
 horsea: {
-num: 116,
+morality: 116,
 name: "Horsea",
 types: ["Ice"],
 gender: "F",
@@ -1825,7 +1825,7 @@ weightkg: 8,
 },
 
 seadra: {
-num: 117,
+morality: 117,
 name: "Seadra",
 types: ["Ice"],
 gender: "F",
@@ -1835,7 +1835,7 @@ weightkg: 25,
 },
 
 goldeen: {
-num: 118,
+morality: 118,
 name: "Goldeen",
 types: ["Water"],
 gender: "F",
@@ -1845,7 +1845,7 @@ weightkg: 15,
 },
 
 seaking: {
-num: 119,
+morality: 119,
 name: "Seaking",
 types: ["Water"],
 gender: "F",
@@ -1855,7 +1855,7 @@ weightkg: 39,
 },
 
 staryu: {
-num: 120,
+morality: 120,
 name: "Staryu",
 types: ["Psychic", "Rock"],
 gender: "F",
@@ -1865,7 +1865,7 @@ weightkg: 34.5,
 },
 
 starmie: {
-num: 121,
+morality: 121,
 name: "Starmie",
 types: ["Psychic", "Rock"],
 gender: "F",
@@ -1875,7 +1875,7 @@ weightkg: 80,
 },
 
 mrmime: {
-num: 122,
+morality: 122,
 name: "Mr. Mime",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -1886,7 +1886,7 @@ canHatch: true,
 },
 
 mrmimegalar: {
-num: 122,
+morality: 122,
 name: "Mr. Mime-Galar",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -1897,7 +1897,7 @@ canHatch: true,
 },
 
 scyther: {
-num: 123,
+morality: 123,
 name: "Scyther",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -1907,7 +1907,7 @@ weightkg: 56,
 },
 
 jynx: {
-num: 124,
+morality: 124,
 name: "Jynx",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -1917,7 +1917,7 @@ weightkg: 40.6,
 },
 
 electabuzz: {
-num: 125,
+morality: 125,
 name: "Electabuzz",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -1927,7 +1927,7 @@ weightkg: 30,
 },
 
 magmar: {
-num: 126,
+morality: 126,
 name: "Magmar",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -1937,7 +1937,7 @@ weightkg: 44.5,
 },
 
 pinsir: {
-num: 127,
+morality: 127,
 name: "Pinsir",
 types: ["Bug"],
 gender: "F",
@@ -1947,7 +1947,7 @@ weightkg: 55,
 },
 
 pinsirmega: {
-num: 127,
+morality: 127,
 name: "Pinsir-Mega",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -1957,7 +1957,7 @@ weightkg: 59,
 },
 
 tauros: {
-num: 128,
+morality: 128,
 name: "Tauros",
 types: ["Fighting", "Ground"],
 gender: "F",
@@ -1967,7 +1967,7 @@ weightkg: 88.4,
 },
 
 taurospaldeacombat: {
-num: 128,
+morality: 128,
 name: "Tauros-Paldea-Combat",
 types: ["Fighting"],
 gender: "F",
@@ -1977,7 +1977,7 @@ weightkg: 88.4,
 },
 
 taurospaldeablaze: {
-num: 128,
+morality: 128,
 name: "Tauros-Paldea-Blaze",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -1987,7 +1987,7 @@ weightkg: 88.4,
 },
 
 taurospaldeaaqua: {
-num: 128,
+morality: 128,
 name: "Tauros-Paldea-Aqua",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -1997,7 +1997,7 @@ weightkg: 88.4,
 },
 
 magikarp: {
-num: 129,
+morality: 129,
 name: "Magikarp",
 types: ["Water"],
 gender: "F",
@@ -2007,7 +2007,7 @@ weightkg: 10,
 },
 
 gyarados: {
-num: 130,
+morality: 130,
 name: "Gyarados",
 types: ["Dragon", "Water"],
 gender: "F",
@@ -2017,7 +2017,7 @@ weightkg: 235,
 },
 
 gyaradosmega: {
-num: 130,
+morality: 130,
 name: "Gyarados-Mega",
 types: ["Dragon", "Water"],
 gender: "F",
@@ -2027,7 +2027,7 @@ weightkg: 305,
 },
 
 lapras: {
-num: 131,
+morality: 131,
 name: "Lapras",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -2037,7 +2037,7 @@ weightkg: 220,
 },
 
 laprasgmax: {
-num: 131,
+morality: 131,
 name: "Lapras-Gmax",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -2047,7 +2047,7 @@ weightkg: 0,
 },
 
 ditto: {
-num: 132,
+morality: 132,
 name: "Ditto",
 types: ["???"],
 gender: "F",
@@ -2057,7 +2057,7 @@ weightkg: 4,
 },
 
 eevee: {
-num: 133,
+morality: 133,
 name: "Eevee",
 types: ["???"],
 gender: "F",
@@ -2067,7 +2067,7 @@ weightkg: 6.5,
 },
 
 eeveestarter: {
-num: 133,
+morality: 133,
 name: "Eevee-Starter",
 types: ["???"],
 gender: "F",
@@ -2077,7 +2077,7 @@ weightkg: 6.5,
 },
 
 eeveegmax: {
-num: 133,
+morality: 133,
 name: "Eevee-Gmax",
 types: ["Normal"],
 gender: "F",
@@ -2087,7 +2087,7 @@ weightkg: 0,
 },
 
 vaporeon: {
-num: 134,
+morality: 134,
 name: "Vaporeon",
 types: ["Normal", "Water"],
 gender: "F",
@@ -2097,7 +2097,7 @@ weightkg: 29,
 },
 
 jolteon: {
-num: 135,
+morality: 135,
 name: "Jolteon",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -2107,7 +2107,7 @@ weightkg: 24.5,
 },
 
 flareon: {
-num: 136,
+morality: 136,
 name: "Flareon",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -2117,7 +2117,7 @@ weightkg: 25,
 },
 
 porygon: {
-num: 137,
+morality: 137,
 name: "Porygon",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -2127,7 +2127,7 @@ weightkg: 36.5,
 },
 
 omanyte: {
-num: 138,
+morality: 138,
 name: "Omanyte",
 types: ["Bug", "Ghost"],
 gender: "F",
@@ -2137,7 +2137,7 @@ weightkg: 7.5,
 },
 
 omastar: {
-num: 139,
+morality: 139,
 name: "Omastar",
 types: ["Bug", "Ghost"],
 gender: "F",
@@ -2147,7 +2147,7 @@ weightkg: 35,
 },
 
 kabuto: {
-num: 140,
+morality: 140,
 name: "Kabuto",
 types: ["Dark"],
 gender: "F",
@@ -2157,7 +2157,7 @@ weightkg: 11.5,
 },
 
 kabutops: {
-num: 141,
+morality: 141,
 name: "Kabutops",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -2167,7 +2167,7 @@ weightkg: 40.5,
 },
 
 aerodactyl: {
-num: 142,
+morality: 142,
 name: "Aerodactyl",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -2177,7 +2177,7 @@ weightkg: 59,
 },
 
 aerodactylmega: {
-num: 142,
+morality: 142,
 name: "Aerodactyl-Mega",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -2187,7 +2187,7 @@ weightkg: 79,
 },
 
 snorlax: {
-num: 143,
+morality: 143,
 name: "Snorlax",
 types: ["Dragon", "Normal"],
 gender: "F",
@@ -2198,7 +2198,7 @@ canHatch: true,
 },
 
 snorlaxgmax: {
-num: 143,
+morality: 143,
 name: "Snorlax-Gmax",
 types: ["Dragon", "Normal"],
 gender: "F",
@@ -2208,7 +2208,7 @@ weightkg: 0,
 },
 
 articuno: {
-num: 144,
+morality: 144,
 name: "Articuno",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -2218,7 +2218,7 @@ weightkg: 55.4,
 },
 
 articunogalar: {
-num: 144,
+morality: 144,
 name: "Articuno-Galar",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -2228,7 +2228,7 @@ weightkg: 50.9,
 },
 
 zapdos: {
-num: 145,
+morality: 145,
 name: "Zapdos",
 types: ["Electric", "Flying"],
 gender: "F",
@@ -2238,7 +2238,7 @@ weightkg: 52.6,
 },
 
 zapdosgalar: {
-num: 145,
+morality: 145,
 name: "Zapdos-Galar",
 types: ["Fighting", "Flying"],
 gender: "F",
@@ -2248,7 +2248,7 @@ weightkg: 58.2,
 },
 
 moltres: {
-num: 146,
+morality: 146,
 name: "Moltres",
 types: ["Fire", "Flying"],
 gender: "F",
@@ -2258,7 +2258,7 @@ weightkg: 60,
 },
 
 moltresgalar: {
-num: 146,
+morality: 146,
 name: "Moltres-Galar",
 types: ["Dark", "Flying"],
 gender: "F",
@@ -2268,7 +2268,7 @@ weightkg: 66,
 },
 
 dratini: {
-num: 147,
+morality: 147,
 name: "Dratini",
 types: ["Dragon"],
 gender: "F",
@@ -2278,7 +2278,7 @@ weightkg: 3.3,
 },
 
 dragonair: {
-num: 148,
+morality: 148,
 name: "Dragonair",
 types: ["Dragon"],
 gender: "F",
@@ -2288,7 +2288,7 @@ weightkg: 16.5,
 },
 
 dragonite: {
-num: 149,
+morality: 149,
 name: "Dragonite",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -2298,7 +2298,7 @@ weightkg: 210,
 },
 
 mewtwo: {
-num: 150,
+morality: 150,
 name: "Mewtwo",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -2308,7 +2308,7 @@ weightkg: 122,
 },
 
 mewtwomegax: {
-num: 150,
+morality: 150,
 name: "Mewtwo-Mega-X",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -2318,7 +2318,7 @@ weightkg: 127,
 },
 
 mewtwomegay: {
-num: 150,
+morality: 150,
 name: "Mewtwo-Mega-Y",
 types: ["Psychic"],
 gender: "F",
@@ -2328,7 +2328,7 @@ weightkg: 33,
 },
 
 mew: {
-num: 151,
+morality: 151,
 name: "Mew",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -2338,7 +2338,7 @@ weightkg: 4,
 },
 
 chikorita: {
-num: 152,
+morality: 152,
 name: "Chikorita",
 types: ["Grass"],
 gender: "F",
@@ -2348,7 +2348,7 @@ weightkg: 6.4,
 },
 
 bayleef: {
-num: 153,
+morality: 153,
 name: "Bayleef",
 types: ["Grass"],
 gender: "F",
@@ -2358,7 +2358,7 @@ weightkg: 15.8,
 },
 
 meganium: {
-num: 154,
+morality: 154,
 name: "Meganium",
 types: ["Fairy", "Grass"],
 gender: "F",
@@ -2368,7 +2368,7 @@ weightkg: 100.5,
 },
 
 cyndaquil: {
-num: 155,
+morality: 155,
 name: "Cyndaquil",
 types: ["Fire"],
 gender: "F",
@@ -2378,7 +2378,7 @@ weightkg: 7.9,
 },
 
 quilava: {
-num: 156,
+morality: 156,
 name: "Quilava",
 types: ["Fire"],
 gender: "F",
@@ -2388,7 +2388,7 @@ weightkg: 19,
 },
 
 typhlosion: {
-num: 157,
+morality: 157,
 name: "Typhlosion",
 types: ["Electric", "Fire"],
 gender: "F",
@@ -2398,7 +2398,7 @@ weightkg: 79.5,
 },
 
 typhlosionhisui: {
-num: 157,
+morality: 157,
 name: "Typhlosion-Hisui",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -2408,7 +2408,7 @@ weightkg: 69.8,
 },
 
 totodile: {
-num: 158,
+morality: 158,
 name: "Totodile",
 types: ["Water"],
 gender: "F",
@@ -2418,7 +2418,7 @@ weightkg: 9.5,
 },
 
 croconaw: {
-num: 159,
+morality: 159,
 name: "Croconaw",
 types: ["Water"],
 gender: "F",
@@ -2428,7 +2428,7 @@ weightkg: 25,
 },
 
 feraligatr: {
-num: 160,
+morality: 160,
 name: "Feraligatr",
 types: ["Fire", "Water"],
 gender: "F",
@@ -2438,7 +2438,7 @@ weightkg: 88.8,
 },
 
 sentret: {
-num: 161,
+morality: 161,
 name: "Sentret",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -2448,7 +2448,7 @@ weightkg: 6,
 },
 
 furret: {
-num: 162,
+morality: 162,
 name: "Furret",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -2458,7 +2458,7 @@ weightkg: 32.5,
 },
 
 hoothoot: {
-num: 163,
+morality: 163,
 name: "Hoothoot",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -2468,7 +2468,7 @@ weightkg: 21.2,
 },
 
 noctowl: {
-num: 164,
+morality: 164,
 name: "Noctowl",
 types: ["Flying", "Ghost"],
 gender: "F",
@@ -2478,7 +2478,7 @@ weightkg: 40.8,
 },
 
 ledyba: {
-num: 165,
+morality: 165,
 name: "Ledyba",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -2488,7 +2488,7 @@ weightkg: 10.8,
 },
 
 ledian: {
-num: 166,
+morality: 166,
 name: "Ledian",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -2498,7 +2498,7 @@ weightkg: 35.6,
 },
 
 spinarak: {
-num: 167,
+morality: 167,
 name: "Spinarak",
 types: ["Bug"],
 gender: "F",
@@ -2508,7 +2508,7 @@ weightkg: 8.5,
 },
 
 ariados: {
-num: 168,
+morality: 168,
 name: "Ariados",
 types: ["Bug", "Dark"],
 gender: "F",
@@ -2518,7 +2518,7 @@ weightkg: 33.5,
 },
 
 crobat: {
-num: 169,
+morality: 169,
 name: "Crobat",
 types: ["Flying", "Poison"],
 gender: "F",
@@ -2528,7 +2528,7 @@ weightkg: 75,
 },
 
 chinchou: {
-num: 170,
+morality: 170,
 name: "Chinchou",
 types: ["Electric", "Water"],
 gender: "F",
@@ -2538,7 +2538,7 @@ weightkg: 12,
 },
 
 lanturn: {
-num: 171,
+morality: 171,
 name: "Lanturn",
 types: ["Electric", "Water"],
 gender: "F",
@@ -2548,7 +2548,7 @@ weightkg: 22.5,
 },
 
 pichu: {
-num: 172,
+morality: 172,
 name: "Pichu",
 types: ["Electric"],
 gender: "F",
@@ -2559,7 +2559,7 @@ canHatch: true,
 },
 
 pichuspikyeared: {
-num: 172,
+morality: 172,
 name: "Pichu-Spiky-eared",
 types: ["Electric"],
 gender: "F",
@@ -2570,7 +2570,7 @@ gen: 4,
 },
 
 cleffa: {
-num: 173,
+morality: 173,
 name: "Cleffa",
 types: ["Fairy"],
 gender: "F",
@@ -2581,7 +2581,7 @@ canHatch: true,
 },
 
 igglybuff: {
-num: 174,
+morality: 174,
 name: "Igglybuff",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -2592,7 +2592,7 @@ canHatch: true,
 },
 
 togepi: {
-num: 175,
+morality: 175,
 name: "Togepi",
 types: ["Fairy"],
 gender: "F",
@@ -2603,7 +2603,7 @@ canHatch: true,
 },
 
 togetic: {
-num: 176,
+morality: 176,
 name: "Togetic",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -2613,7 +2613,7 @@ weightkg: 3.2,
 },
 
 natu: {
-num: 177,
+morality: 177,
 name: "Natu",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -2623,7 +2623,7 @@ weightkg: 2,
 },
 
 xatu: {
-num: 178,
+morality: 178,
 name: "Xatu",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -2633,7 +2633,7 @@ weightkg: 15,
 },
 
 mareep: {
-num: 179,
+morality: 179,
 name: "Mareep",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -2643,7 +2643,7 @@ weightkg: 7.8,
 },
 
 flaaffy: {
-num: 180,
+morality: 180,
 name: "Flaaffy",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -2653,7 +2653,7 @@ weightkg: 13.3,
 },
 
 ampharos: {
-num: 181,
+morality: 181,
 name: "Ampharos",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -2663,7 +2663,7 @@ weightkg: 61.5,
 },
 
 ampharosmega: {
-num: 181,
+morality: 181,
 name: "Ampharos-Mega",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -2673,7 +2673,7 @@ weightkg: 61.5,
 },
 
 bellossom: {
-num: 182,
+morality: 182,
 name: "Bellossom",
 types: ["Fire", "Grass"],
 gender: "F",
@@ -2683,7 +2683,7 @@ weightkg: 5.8,
 },
 
 marill: {
-num: 183,
+morality: 183,
 name: "Marill",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -2694,7 +2694,7 @@ canHatch: true,
 },
 
 azumarill: {
-num: 184,
+morality: 184,
 name: "Azumarill",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -2704,7 +2704,7 @@ weightkg: 28.5,
 },
 
 sudowoodo: {
-num: 185,
+morality: 185,
 name: "Sudowoodo",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -2715,7 +2715,7 @@ canHatch: true,
 },
 
 politoed: {
-num: 186,
+morality: 186,
 name: "Politoed",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -2725,7 +2725,7 @@ weightkg: 33.9,
 },
 
 hoppip: {
-num: 187,
+morality: 187,
 name: "Hoppip",
 types: ["Grass"],
 gender: "F",
@@ -2735,7 +2735,7 @@ weightkg: 0.5,
 },
 
 skiploom: {
-num: 188,
+morality: 188,
 name: "Skiploom",
 types: ["Grass"],
 gender: "F",
@@ -2745,7 +2745,7 @@ weightkg: 1,
 },
 
 jumpluff: {
-num: 189,
+morality: 189,
 name: "Jumpluff",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -2755,7 +2755,7 @@ weightkg: 3,
 },
 
 aipom: {
-num: 190,
+morality: 190,
 name: "Aipom",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -2765,7 +2765,7 @@ weightkg: 11.5,
 },
 
 sunkern: {
-num: 191,
+morality: 191,
 name: "Sunkern",
 types: ["Grass"],
 gender: "F",
@@ -2775,7 +2775,7 @@ weightkg: 1.8,
 },
 
 sunflora: {
-num: 192,
+morality: 192,
 name: "Sunflora",
 types: ["Fire", "Grass"],
 gender: "F",
@@ -2785,7 +2785,7 @@ weightkg: 8.5,
 },
 
 yanma: {
-num: 193,
+morality: 193,
 name: "Yanma",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -2795,7 +2795,7 @@ weightkg: 38,
 },
 
 wooper: {
-num: 194,
+morality: 194,
 name: "Wooper",
 types: ["Ground", "Water"],
 gender: "F",
@@ -2805,7 +2805,7 @@ weightkg: 8.5,
 },
 
 wooperpaldea: {
-num: 194,
+morality: 194,
 name: "Wooper-Paldea",
 types: ["Ground", "Poison"],
 gender: "F",
@@ -2815,7 +2815,7 @@ weightkg: 8.5,
 },
 
 quagsire: {
-num: 195,
+morality: 195,
 name: "Quagsire",
 types: ["Ground", "Water"],
 gender: "F",
@@ -2825,7 +2825,7 @@ weightkg: 75,
 },
 
 espeon: {
-num: 196,
+morality: 196,
 name: "Espeon",
 types: ["Normal", "Psychic"],
 gender: "F",
@@ -2835,7 +2835,7 @@ weightkg: 26.5,
 },
 
 umbreon: {
-num: 197,
+morality: 197,
 name: "Umbreon",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -2845,7 +2845,7 @@ weightkg: 27,
 },
 
 murkrow: {
-num: 198,
+morality: 198,
 name: "Murkrow",
 types: ["Dark", "Flying"],
 gender: "F",
@@ -2855,7 +2855,7 @@ weightkg: 2.1,
 },
 
 slowking: {
-num: 199,
+morality: 199,
 name: "Slowking",
 types: ["Poison", "Water"],
 gender: "F",
@@ -2865,7 +2865,7 @@ weightkg: 79.5,
 },
 
 slowkinggalar: {
-num: 199,
+morality: 199,
 name: "Slowking-Galar",
 types: ["Dark", "Poison"],
 gender: "F",
@@ -2875,7 +2875,7 @@ weightkg: 79.5,
 },
 
 misdreavus: {
-num: 200,
+morality: 200,
 name: "Misdreavus",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -2885,7 +2885,7 @@ weightkg: 1,
 },
 
 unown: {
-num: 201,
+morality: 201,
 name: "Unown",
 types: ["???"],
 gender: "F",
@@ -2895,7 +2895,7 @@ weightkg: 5,
 },
 
 wobbuffet: {
-num: 202,
+morality: 202,
 name: "Wobbuffet",
 types: ["???"],
 gender: "F",
@@ -2906,7 +2906,7 @@ canHatch: true,
 },
 
 girafarig: {
-num: 203,
+morality: 203,
 name: "Girafarig",
 types: ["Normal", "Psychic"],
 gender: "F",
@@ -2916,7 +2916,7 @@ weightkg: 41.5,
 },
 
 pineco: {
-num: 204,
+morality: 204,
 name: "Pineco",
 types: ["Bug"],
 gender: "F",
@@ -2926,7 +2926,7 @@ weightkg: 7.2,
 },
 
 forretress: {
-num: 205,
+morality: 205,
 name: "Forretress",
 types: ["Bug", "Ground"],
 gender: "F",
@@ -2936,7 +2936,7 @@ weightkg: 125.8,
 },
 
 dunsparce: {
-num: 206,
+morality: 206,
 name: "Dunsparce",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -2946,7 +2946,7 @@ weightkg: 14,
 },
 
 gligar: {
-num: 207,
+morality: 207,
 name: "Gligar",
 types: ["Flying", "Ground"],
 gender: "F",
@@ -2956,7 +2956,7 @@ weightkg: 64.8,
 },
 
 steelix: {
-num: 208,
+morality: 208,
 name: "Steelix",
 types: ["Ground", "Steel"],
 gender: "F",
@@ -2966,7 +2966,7 @@ weightkg: 400,
 },
 
 steelixmega: {
-num: 208,
+morality: 208,
 name: "Steelix-Mega",
 types: ["Ground", "Steel"],
 gender: "F",
@@ -2976,7 +2976,7 @@ weightkg: 740,
 },
 
 snubbull: {
-num: 209,
+morality: 209,
 name: "Snubbull",
 types: ["Fairy"],
 gender: "F",
@@ -2986,7 +2986,7 @@ weightkg: 7.8,
 },
 
 granbull: {
-num: 210,
+morality: 210,
 name: "Granbull",
 types: ["Fairy", "Fighting"],
 gender: "F",
@@ -2996,7 +2996,7 @@ weightkg: 48.7,
 },
 
 qwilfish: {
-num: 211,
+morality: 211,
 name: "Qwilfish",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -3006,7 +3006,7 @@ weightkg: 3.9,
 },
 
 qwilfishhisui: {
-num: 211,
+morality: 211,
 name: "Qwilfish-Hisui",
 types: ["Dark", "Poison"],
 gender: "F",
@@ -3016,7 +3016,7 @@ weightkg: 3.9,
 },
 
 scizor: {
-num: 212,
+morality: 212,
 name: "Scizor",
 types: ["Bug", "Steel"],
 gender: "F",
@@ -3026,7 +3026,7 @@ weightkg: 118,
 },
 
 scizormega: {
-num: 212,
+morality: 212,
 name: "Scizor-Mega",
 types: ["Bug", "Steel"],
 gender: "F",
@@ -3036,7 +3036,7 @@ weightkg: 125,
 },
 
 shuckle: {
-num: 213,
+morality: 213,
 name: "Shuckle",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -3046,7 +3046,7 @@ weightkg: 20.5,
 },
 
 heracross: {
-num: 214,
+morality: 214,
 name: "Heracross",
 types: ["Bug", "Fighting"],
 gender: "F",
@@ -3056,7 +3056,7 @@ weightkg: 54,
 },
 
 heracrossmega: {
-num: 214,
+morality: 214,
 name: "Heracross-Mega",
 types: ["Bug", "Fighting"],
 gender: "F",
@@ -3066,7 +3066,7 @@ weightkg: 62.5,
 },
 
 sneasel: {
-num: 215,
+morality: 215,
 name: "Sneasel",
 types: ["Dark", "Ice"],
 gender: "F",
@@ -3076,7 +3076,7 @@ weightkg: 28,
 },
 
 sneaselhisui: {
-num: 215,
+morality: 215,
 name: "Sneasel-Hisui",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -3086,7 +3086,7 @@ weightkg: 27,
 },
 
 teddiursa: {
-num: 216,
+morality: 216,
 name: "Teddiursa",
 types: ["Normal"],
 gender: "F",
@@ -3096,7 +3096,7 @@ weightkg: 8.8,
 },
 
 ursaring: {
-num: 217,
+morality: 217,
 name: "Ursaring",
 types: ["Normal"],
 gender: "F",
@@ -3106,7 +3106,7 @@ weightkg: 125.8,
 },
 
 slugma: {
-num: 218,
+morality: 218,
 name: "Slugma",
 types: ["Fire"],
 gender: "F",
@@ -3116,7 +3116,7 @@ weightkg: 35,
 },
 
 magcargo: {
-num: 219,
+morality: 219,
 name: "Magcargo",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -3126,7 +3126,7 @@ weightkg: 55,
 },
 
 swinub: {
-num: 220,
+morality: 220,
 name: "Swinub",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -3136,7 +3136,7 @@ weightkg: 6.5,
 },
 
 piloswine: {
-num: 221,
+morality: 221,
 name: "Piloswine",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -3146,7 +3146,7 @@ weightkg: 55.8,
 },
 
 corsola: {
-num: 222,
+morality: 222,
 name: "Corsola",
 types: ["Rock", "Water"],
 gender: "F",
@@ -3156,7 +3156,7 @@ weightkg: 5,
 },
 
 corsolagalar: {
-num: 222,
+morality: 222,
 name: "Corsola-Galar",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -3166,7 +3166,7 @@ weightkg: 0.5,
 },
 
 remoraid: {
-num: 223,
+morality: 223,
 name: "Remoraid",
 types: ["Ice"],
 gender: "F",
@@ -3176,7 +3176,7 @@ weightkg: 12,
 },
 
 octillery: {
-num: 224,
+morality: 224,
 name: "Octillery",
 types: ["Fighting", "Ice"],
 gender: "F",
@@ -3186,7 +3186,7 @@ weightkg: 28.5,
 },
 
 delibird: {
-num: 225,
+morality: 225,
 name: "Delibird",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -3196,7 +3196,7 @@ weightkg: 16,
 },
 
 mantine: {
-num: 226,
+morality: 226,
 name: "Mantine",
 types: ["Flying", "Water"],
 gender: "F",
@@ -3207,7 +3207,7 @@ canHatch: true,
 },
 
 skarmory: {
-num: 227,
+morality: 227,
 name: "Skarmory",
 types: ["Flying", "Steel"],
 gender: "F",
@@ -3217,7 +3217,7 @@ weightkg: 50.5,
 },
 
 houndour: {
-num: 228,
+morality: 228,
 name: "Houndour",
 types: ["Dark", "Fire"],
 gender: "F",
@@ -3227,7 +3227,7 @@ weightkg: 10.8,
 },
 
 houndoom: {
-num: 229,
+morality: 229,
 name: "Houndoom",
 types: ["Dark", "Fire"],
 gender: "F",
@@ -3237,7 +3237,7 @@ weightkg: 35,
 },
 
 houndoommega: {
-num: 229,
+morality: 229,
 name: "Houndoom-Mega",
 types: ["Dark", "Fire"],
 gender: "F",
@@ -3247,7 +3247,7 @@ weightkg: 49.5,
 },
 
 kingdra: {
-num: 230,
+morality: 230,
 name: "Kingdra",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -3257,7 +3257,7 @@ weightkg: 152,
 },
 
 phanpy: {
-num: 231,
+morality: 231,
 name: "Phanpy",
 types: ["Ground"],
 gender: "F",
@@ -3267,7 +3267,7 @@ weightkg: 33.5,
 },
 
 donphan: {
-num: 232,
+morality: 232,
 name: "Donphan",
 types: ["Fighting", "Ground"],
 gender: "F",
@@ -3277,7 +3277,7 @@ weightkg: 120,
 },
 
 porygon2: {
-num: 233,
+morality: 233,
 name: "Porygon2",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -3287,7 +3287,7 @@ weightkg: 32.5,
 },
 
 stantler: {
-num: 234,
+morality: 234,
 name: "Stantler",
 types: ["Normal"],
 gender: "F",
@@ -3297,7 +3297,7 @@ weightkg: 71.2,
 },
 
 smeargle: {
-num: 235,
+morality: 235,
 name: "Smeargle",
 types: ["Normal"],
 gender: "F",
@@ -3307,7 +3307,7 @@ weightkg: 58,
 },
 
 tyrogue: {
-num: 236,
+morality: 236,
 name: "Tyrogue",
 types: ["Fighting"],
 gender: "F",
@@ -3318,7 +3318,7 @@ canHatch: true,
 },
 
 hitmontop: {
-num: 237,
+morality: 237,
 name: "Hitmontop",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -3328,7 +3328,7 @@ weightkg: 48,
 },
 
 smoochum: {
-num: 238,
+morality: 238,
 name: "Smoochum",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -3339,7 +3339,7 @@ canHatch: true,
 },
 
 elekid: {
-num: 239,
+morality: 239,
 name: "Elekid",
 types: ["Electric"],
 gender: "F",
@@ -3350,7 +3350,7 @@ canHatch: true,
 },
 
 magby: {
-num: 240,
+morality: 240,
 name: "Magby",
 types: ["Fire"],
 gender: "F",
@@ -3361,7 +3361,7 @@ canHatch: true,
 },
 
 miltank: {
-num: 241,
+morality: 241,
 name: "Miltank",
 types: ["Normal", "Rock"],
 gender: "F",
@@ -3371,7 +3371,7 @@ weightkg: 75.5,
 },
 
 blissey: {
-num: 242,
+morality: 242,
 name: "Blissey",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -3381,7 +3381,7 @@ weightkg: 46.8,
 },
 
 raikou: {
-num: 243,
+morality: 243,
 name: "Raikou",
 types: ["Electric"],
 gender: "F",
@@ -3391,7 +3391,7 @@ weightkg: 178,
 },
 
 entei: {
-num: 244,
+morality: 244,
 name: "Entei",
 types: ["Fire"],
 gender: "F",
@@ -3401,7 +3401,7 @@ weightkg: 198,
 },
 
 suicune: {
-num: 245,
+morality: 245,
 name: "Suicune",
 types: ["Ice"],
 gender: "F",
@@ -3411,7 +3411,7 @@ weightkg: 187,
 },
 
 larvitar: {
-num: 246,
+morality: 246,
 name: "Larvitar",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -3421,7 +3421,7 @@ weightkg: 72,
 },
 
 pupitar: {
-num: 247,
+morality: 247,
 name: "Pupitar",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -3431,7 +3431,7 @@ weightkg: 152,
 },
 
 tyranitar: {
-num: 248,
+morality: 248,
 name: "Tyranitar",
 types: ["Dark", "Rock"],
 gender: "F",
@@ -3441,7 +3441,7 @@ weightkg: 202,
 },
 
 tyranitarmega: {
-num: 248,
+morality: 248,
 name: "Tyranitar-Mega",
 types: ["Dark", "Rock"],
 gender: "F",
@@ -3451,7 +3451,7 @@ weightkg: 255,
 },
 
 lugia: {
-num: 249,
+morality: 249,
 name: "Lugia",
 types: ["Dragon", "Water"],
 gender: "F",
@@ -3461,7 +3461,7 @@ weightkg: 216,
 },
 
 hooh: {
-num: 250,
+morality: 250,
 name: "Ho-Oh",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -3471,7 +3471,7 @@ weightkg: 199,
 },
 
 celebi: {
-num: 251,
+morality: 251,
 name: "Celebi",
 types: ["Fairy", "Grass"],
 gender: "F",
@@ -3481,7 +3481,7 @@ weightkg: 5,
 },
 
 treecko: {
-num: 252,
+morality: 252,
 name: "Treecko",
 types: ["Grass"],
 gender: "F",
@@ -3491,7 +3491,7 @@ weightkg: 5,
 },
 
 grovyle: {
-num: 253,
+morality: 253,
 name: "Grovyle",
 types: ["Grass"],
 gender: "F",
@@ -3501,7 +3501,7 @@ weightkg: 21.6,
 },
 
 sceptile: {
-num: 254,
+morality: 254,
 name: "Sceptile",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -3511,7 +3511,7 @@ weightkg: 52.2,
 },
 
 sceptilemega: {
-num: 254,
+morality: 254,
 name: "Sceptile-Mega",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -3521,7 +3521,7 @@ weightkg: 55.2,
 },
 
 torchic: {
-num: 255,
+morality: 255,
 name: "Torchic",
 types: ["Fire"],
 gender: "F",
@@ -3531,7 +3531,7 @@ weightkg: 2.5,
 },
 
 combusken: {
-num: 256,
+morality: 256,
 name: "Combusken",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -3541,7 +3541,7 @@ weightkg: 19.5,
 },
 
 blaziken: {
-num: 257,
+morality: 257,
 name: "Blaziken",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -3551,7 +3551,7 @@ weightkg: 52,
 },
 
 blazikenmega: {
-num: 257,
+morality: 257,
 name: "Blaziken-Mega",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -3561,7 +3561,7 @@ weightkg: 52,
 },
 
 mudkip: {
-num: 258,
+morality: 258,
 name: "Mudkip",
 types: ["Water"],
 gender: "F",
@@ -3571,7 +3571,7 @@ weightkg: 7.6,
 },
 
 marshtomp: {
-num: 259,
+morality: 259,
 name: "Marshtomp",
 types: ["Ground", "Water"],
 gender: "F",
@@ -3581,7 +3581,7 @@ weightkg: 28,
 },
 
 swampert: {
-num: 260,
+morality: 260,
 name: "Swampert",
 types: ["Ground", "Water"],
 gender: "F",
@@ -3591,7 +3591,7 @@ weightkg: 81.9,
 },
 
 swampertmega: {
-num: 260,
+morality: 260,
 name: "Swampert-Mega",
 types: ["Ground", "Water"],
 gender: "F",
@@ -3601,7 +3601,7 @@ weightkg: 102,
 },
 
 poochyena: {
-num: 261,
+morality: 261,
 name: "Poochyena",
 types: ["Dark"],
 gender: "F",
@@ -3611,7 +3611,7 @@ weightkg: 13.6,
 },
 
 mightyena: {
-num: 262,
+morality: 262,
 name: "Mightyena",
 types: ["Dark"],
 gender: "F",
@@ -3621,7 +3621,7 @@ weightkg: 37,
 },
 
 zigzagoon: {
-num: 263,
+morality: 263,
 name: "Zigzagoon",
 types: ["Ground"],
 gender: "F",
@@ -3631,7 +3631,7 @@ weightkg: 17.5,
 },
 
 zigzagoongalar: {
-num: 263,
+morality: 263,
 name: "Zigzagoon-Galar",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -3641,7 +3641,7 @@ weightkg: 17.5,
 },
 
 linoone: {
-num: 264,
+morality: 264,
 name: "Linoone",
 types: ["Electric", "Ground"],
 gender: "F",
@@ -3651,7 +3651,7 @@ weightkg: 32.5,
 },
 
 linoonegalar: {
-num: 264,
+morality: 264,
 name: "Linoone-Galar",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -3661,7 +3661,7 @@ weightkg: 32.5,
 },
 
 wurmple: {
-num: 265,
+morality: 265,
 name: "Wurmple",
 types: ["Bug"],
 gender: "F",
@@ -3671,7 +3671,7 @@ weightkg: 3.6,
 },
 
 silcoon: {
-num: 266,
+morality: 266,
 name: "Silcoon",
 types: ["Bug"],
 gender: "F",
@@ -3681,7 +3681,7 @@ weightkg: 10,
 },
 
 beautifly: {
-num: 267,
+morality: 267,
 name: "Beautifly",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -3691,7 +3691,7 @@ weightkg: 28.4,
 },
 
 cascoon: {
-num: 268,
+morality: 268,
 name: "Cascoon",
 types: ["Bug"],
 gender: "F",
@@ -3701,7 +3701,7 @@ weightkg: 11.5,
 },
 
 dustox: {
-num: 269,
+morality: 269,
 name: "Dustox",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -3711,7 +3711,7 @@ weightkg: 31.6,
 },
 
 lotad: {
-num: 270,
+morality: 270,
 name: "Lotad",
 types: ["Grass", "Water"],
 gender: "F",
@@ -3721,7 +3721,7 @@ weightkg: 2.6,
 },
 
 lombre: {
-num: 271,
+morality: 271,
 name: "Lombre",
 types: ["Grass", "Water"],
 gender: "F",
@@ -3731,7 +3731,7 @@ weightkg: 32.5,
 },
 
 ludicolo: {
-num: 272,
+morality: 272,
 name: "Ludicolo",
 types: ["Grass", "Water"],
 gender: "F",
@@ -3741,7 +3741,7 @@ weightkg: 55,
 },
 
 seedot: {
-num: 273,
+morality: 273,
 name: "Seedot",
 types: ["Grass"],
 gender: "F",
@@ -3751,7 +3751,7 @@ weightkg: 4,
 },
 
 nuzleaf: {
-num: 274,
+morality: 274,
 name: "Nuzleaf",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -3761,7 +3761,7 @@ weightkg: 28,
 },
 
 shiftry: {
-num: 275,
+morality: 275,
 name: "Shiftry",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -3771,7 +3771,7 @@ weightkg: 59.6,
 },
 
 taillow: {
-num: 276,
+morality: 276,
 name: "Taillow",
 types: ["Flying"],
 gender: "F",
@@ -3781,7 +3781,7 @@ weightkg: 2.3,
 },
 
 swellow: {
-num: 277,
+morality: 277,
 name: "Swellow",
 types: ["Flying"],
 gender: "F",
@@ -3791,7 +3791,7 @@ weightkg: 19.8,
 },
 
 wingull: {
-num: 278,
+morality: 278,
 name: "Wingull",
 types: ["Flying", "Water"],
 gender: "F",
@@ -3801,7 +3801,7 @@ weightkg: 9.5,
 },
 
 pelipper: {
-num: 279,
+morality: 279,
 name: "Pelipper",
 types: ["Flying", "Water"],
 gender: "F",
@@ -3811,7 +3811,7 @@ weightkg: 28,
 },
 
 ralts: {
-num: 280,
+morality: 280,
 name: "Ralts",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -3821,7 +3821,7 @@ weightkg: 6.6,
 },
 
 kirlia: {
-num: 281,
+morality: 281,
 name: "Kirlia",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -3831,7 +3831,7 @@ weightkg: 20.2,
 },
 
 gardevoir: {
-num: 282,
+morality: 282,
 name: "Gardevoir",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -3841,7 +3841,7 @@ weightkg: 48.4,
 },
 
 gardevoirmega: {
-num: 282,
+morality: 282,
 name: "Gardevoir-Mega",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -3851,7 +3851,7 @@ weightkg: 48.4,
 },
 
 surskit: {
-num: 283,
+morality: 283,
 name: "Surskit",
 types: ["Bug", "Water"],
 gender: "F",
@@ -3861,7 +3861,7 @@ weightkg: 1.7,
 },
 
 masquerain: {
-num: 284,
+morality: 284,
 name: "Masquerain",
 types: ["Bug", "Water"],
 gender: "F",
@@ -3871,7 +3871,7 @@ weightkg: 3.6,
 },
 
 shroomish: {
-num: 285,
+morality: 285,
 name: "Shroomish",
 types: ["Grass"],
 gender: "F",
@@ -3881,7 +3881,7 @@ weightkg: 4.5,
 },
 
 breloom: {
-num: 286,
+morality: 286,
 name: "Breloom",
 types: ["Fighting", "Grass"],
 gender: "F",
@@ -3891,7 +3891,7 @@ weightkg: 39.2,
 },
 
 slakoth: {
-num: 287,
+morality: 287,
 name: "Slakoth",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -3901,7 +3901,7 @@ weightkg: 24,
 },
 
 vigoroth: {
-num: 288,
+morality: 288,
 name: "Vigoroth",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -3911,7 +3911,7 @@ weightkg: 46.5,
 },
 
 slaking: {
-num: 289,
+morality: 289,
 name: "Slaking",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -3921,7 +3921,7 @@ weightkg: 130.5,
 },
 
 nincada: {
-num: 290,
+morality: 290,
 name: "Nincada",
 types: ["Bug", "Ground"],
 gender: "F",
@@ -3931,7 +3931,7 @@ weightkg: 5.5,
 },
 
 ninjask: {
-num: 291,
+morality: 291,
 name: "Ninjask",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -3941,7 +3941,7 @@ weightkg: 12,
 },
 
 shedinja: {
-num: 292,
+morality: 292,
 name: "Shedinja",
 types: ["Bug", "Ghost"],
 gender: "F",
@@ -3952,7 +3952,7 @@ weightkg: 1.2,
 },
 
 whismur: {
-num: 293,
+morality: 293,
 name: "Whismur",
 types: ["Poison"],
 gender: "F",
@@ -3962,7 +3962,7 @@ weightkg: 16.3,
 },
 
 loudred: {
-num: 294,
+morality: 294,
 name: "Loudred",
 types: ["Poison"],
 gender: "F",
@@ -3972,7 +3972,7 @@ weightkg: 40.5,
 },
 
 exploud: {
-num: 295,
+morality: 295,
 name: "Exploud",
 types: ["Poison", "Steel"],
 gender: "F",
@@ -3982,7 +3982,7 @@ weightkg: 84,
 },
 
 makuhita: {
-num: 296,
+morality: 296,
 name: "Makuhita",
 types: ["Fighting"],
 gender: "F",
@@ -3992,7 +3992,7 @@ weightkg: 86.4,
 },
 
 hariyama: {
-num: 297,
+morality: 297,
 name: "Hariyama",
 types: ["Fighting"],
 gender: "F",
@@ -4002,7 +4002,7 @@ weightkg: 253.8,
 },
 
 azurill: {
-num: 298,
+morality: 298,
 name: "Azurill",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -4013,7 +4013,7 @@ canHatch: true,
 },
 
 nosepass: {
-num: 299,
+morality: 299,
 name: "Nosepass",
 types: ["Rock"],
 gender: "F",
@@ -4023,7 +4023,7 @@ weightkg: 97,
 },
 
 skitty: {
-num: 300,
+morality: 300,
 name: "Skitty",
 types: ["Psychic"],
 gender: "F",
@@ -4033,7 +4033,7 @@ weightkg: 11,
 },
 
 delcatty: {
-num: 301,
+morality: 301,
 name: "Delcatty",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -4043,7 +4043,7 @@ weightkg: 32.6,
 },
 
 sableye: {
-num: 302,
+morality: 302,
 name: "Sableye",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -4053,7 +4053,7 @@ weightkg: 11,
 },
 
 sableyemega: {
-num: 302,
+morality: 302,
 name: "Sableye-Mega",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -4063,7 +4063,7 @@ weightkg: 161,
 },
 
 mawile: {
-num: 303,
+morality: 303,
 name: "Mawile",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -4073,7 +4073,7 @@ weightkg: 11.5,
 },
 
 mawilemega: {
-num: 303,
+morality: 303,
 name: "Mawile-Mega",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -4083,7 +4083,7 @@ weightkg: 23.5,
 },
 
 aron: {
-num: 304,
+morality: 304,
 name: "Aron",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -4093,7 +4093,7 @@ weightkg: 60,
 },
 
 lairon: {
-num: 305,
+morality: 305,
 name: "Lairon",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -4103,7 +4103,7 @@ weightkg: 120,
 },
 
 aggron: {
-num: 306,
+morality: 306,
 name: "Aggron",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -4113,7 +4113,7 @@ weightkg: 360,
 },
 
 aggronmega: {
-num: 306,
+morality: 306,
 name: "Aggron-Mega",
 types: ["Steel"],
 gender: "F",
@@ -4123,7 +4123,7 @@ weightkg: 395,
 },
 
 meditite: {
-num: 307,
+morality: 307,
 name: "Meditite",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -4133,7 +4133,7 @@ weightkg: 11.2,
 },
 
 medicham: {
-num: 308,
+morality: 308,
 name: "Medicham",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -4143,7 +4143,7 @@ weightkg: 31.5,
 },
 
 medichammega: {
-num: 308,
+morality: 308,
 name: "Medicham-Mega",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -4153,7 +4153,7 @@ weightkg: 31.5,
 },
 
 electrike: {
-num: 309,
+morality: 309,
 name: "Electrike",
 types: ["Electric", "Grass"],
 gender: "F",
@@ -4163,7 +4163,7 @@ weightkg: 15.2,
 },
 
 manectric: {
-num: 310,
+morality: 310,
 name: "Manectric",
 types: ["Electric", "Grass"],
 gender: "F",
@@ -4173,7 +4173,7 @@ weightkg: 40.2,
 },
 
 manectricmega: {
-num: 310,
+morality: 310,
 name: "Manectric-Mega",
 types: ["Electric"],
 gender: "F",
@@ -4183,7 +4183,7 @@ weightkg: 44,
 },
 
 plusle: {
-num: 311,
+morality: 311,
 name: "Plusle",
 types: ["Electric", "Fire"],
 gender: "F",
@@ -4193,7 +4193,7 @@ weightkg: 4.2,
 },
 
 minun: {
-num: 312,
+morality: 312,
 name: "Minun",
 types: ["Electric", "Water"],
 gender: "F",
@@ -4203,7 +4203,7 @@ weightkg: 4.2,
 },
 
 volbeat: {
-num: 313,
+morality: 313,
 name: "Volbeat",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -4213,7 +4213,7 @@ weightkg: 17.7,
 },
 
 illumise: {
-num: 314,
+morality: 314,
 name: "Illumise",
 types: ["Bug", "Ice"],
 gender: "F",
@@ -4223,7 +4223,7 @@ weightkg: 17.7,
 },
 
 roselia: {
-num: 315,
+morality: 315,
 name: "Roselia",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -4234,7 +4234,7 @@ canHatch: true,
 },
 
 gulpin: {
-num: 316,
+morality: 316,
 name: "Gulpin",
 types: ["Poison"],
 gender: "F",
@@ -4244,7 +4244,7 @@ weightkg: 10.3,
 },
 
 swalot: {
-num: 317,
+morality: 317,
 name: "Swalot",
 types: ["Poison"],
 gender: "F",
@@ -4254,7 +4254,7 @@ weightkg: 80,
 },
 
 carvanha: {
-num: 318,
+morality: 318,
 name: "Carvanha",
 types: ["Dark", "Water"],
 gender: "F",
@@ -4264,7 +4264,7 @@ weightkg: 20.8,
 },
 
 sharpedo: {
-num: 319,
+morality: 319,
 name: "Sharpedo",
 types: ["Dark", "Water"],
 gender: "F",
@@ -4274,7 +4274,7 @@ weightkg: 88.8,
 },
 
 sharpedomega: {
-num: 319,
+morality: 319,
 name: "Sharpedo-Mega",
 types: ["Dark", "Water"],
 gender: "F",
@@ -4284,7 +4284,7 @@ weightkg: 130.3,
 },
 
 wailmer: {
-num: 320,
+morality: 320,
 name: "Wailmer",
 types: ["Water"],
 gender: "F",
@@ -4294,7 +4294,7 @@ weightkg: 130,
 },
 
 wailord: {
-num: 321,
+morality: 321,
 name: "Wailord",
 types: ["Water"],
 gender: "F",
@@ -4304,7 +4304,7 @@ weightkg: 398,
 },
 
 numel: {
-num: 322,
+morality: 322,
 name: "Numel",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -4314,7 +4314,7 @@ weightkg: 24,
 },
 
 camerupt: {
-num: 323,
+morality: 323,
 name: "Camerupt",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -4324,7 +4324,7 @@ weightkg: 220,
 },
 
 cameruptmega: {
-num: 323,
+morality: 323,
 name: "Camerupt-Mega",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -4334,7 +4334,7 @@ weightkg: 320.5,
 },
 
 torkoal: {
-num: 324,
+morality: 324,
 name: "Torkoal",
 types: ["Fire", "Steel"],
 gender: "F",
@@ -4344,7 +4344,7 @@ weightkg: 80.4,
 },
 
 spoink: {
-num: 325,
+morality: 325,
 name: "Spoink",
 types: ["Dark", "Rock"],
 gender: "F",
@@ -4354,7 +4354,7 @@ weightkg: 30.6,
 },
 
 grumpig: {
-num: 326,
+morality: 326,
 name: "Grumpig",
 types: ["Dark", "Rock"],
 gender: "F",
@@ -4364,7 +4364,7 @@ weightkg: 71.5,
 },
 
 spinda: {
-num: 327,
+morality: 327,
 name: "Spinda",
 types: ["Ground", "Psychic"],
 gender: "F",
@@ -4374,7 +4374,7 @@ weightkg: 5,
 },
 
 trapinch: {
-num: 328,
+morality: 328,
 name: "Trapinch",
 types: ["Bug"],
 gender: "F",
@@ -4384,7 +4384,7 @@ weightkg: 15,
 },
 
 vibrava: {
-num: 329,
+morality: 329,
 name: "Vibrava",
 types: ["Bug", "Dragon"],
 gender: "F",
@@ -4394,7 +4394,7 @@ weightkg: 15.3,
 },
 
 flygon: {
-num: 330,
+morality: 330,
 name: "Flygon",
 types: ["Bug", "Dragon"],
 gender: "F",
@@ -4404,7 +4404,7 @@ weightkg: 82,
 },
 
 cacnea: {
-num: 331,
+morality: 331,
 name: "Cacnea",
 types: ["Grass"],
 gender: "F",
@@ -4414,7 +4414,7 @@ weightkg: 51.3,
 },
 
 cacturne: {
-num: 332,
+morality: 332,
 name: "Cacturne",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -4424,7 +4424,7 @@ weightkg: 77.4,
 },
 
 swablu: {
-num: 333,
+morality: 333,
 name: "Swablu",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -4434,7 +4434,7 @@ weightkg: 1.2,
 },
 
 altaria: {
-num: 334,
+morality: 334,
 name: "Altaria",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -4444,7 +4444,7 @@ weightkg: 20.6,
 },
 
 altariamega: {
-num: 334,
+morality: 334,
 name: "Altaria-Mega",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -4454,7 +4454,7 @@ weightkg: 20.6,
 },
 
 zangoose: {
-num: 335,
+morality: 335,
 name: "Zangoose",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -4464,7 +4464,7 @@ weightkg: 40.3,
 },
 
 seviper: {
-num: 336,
+morality: 336,
 name: "Seviper",
 types: ["Poison", "Steel"],
 gender: "F",
@@ -4474,7 +4474,7 @@ weightkg: 52.5,
 },
 
 lunatone: {
-num: 337,
+morality: 337,
 name: "Lunatone",
 types: ["Psychic", "Rock"],
 gender: "F",
@@ -4484,7 +4484,7 @@ weightkg: 168,
 },
 
 solrock: {
-num: 338,
+morality: 338,
 name: "Solrock",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -4494,7 +4494,7 @@ weightkg: 154,
 },
 
 barboach: {
-num: 339,
+morality: 339,
 name: "Barboach",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -4504,7 +4504,7 @@ weightkg: 1.9,
 },
 
 whiscash: {
-num: 340,
+morality: 340,
 name: "Whiscash",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -4514,7 +4514,7 @@ weightkg: 23.6,
 },
 
 corphish: {
-num: 341,
+morality: 341,
 name: "Corphish",
 types: ["Water"],
 gender: "F",
@@ -4524,7 +4524,7 @@ weightkg: 11.5,
 },
 
 crawdaunt: {
-num: 342,
+morality: 342,
 name: "Crawdaunt",
 types: ["Dark", "Water"],
 gender: "F",
@@ -4534,7 +4534,7 @@ weightkg: 32.8,
 },
 
 baltoy: {
-num: 343,
+morality: 343,
 name: "Baltoy",
 types: ["Ground", "Psychic"],
 gender: "F",
@@ -4544,7 +4544,7 @@ weightkg: 21.5,
 },
 
 claydol: {
-num: 344,
+morality: 344,
 name: "Claydol",
 types: ["Ground", "Psychic"],
 gender: "F",
@@ -4554,7 +4554,7 @@ weightkg: 108,
 },
 
 lileep: {
-num: 345,
+morality: 345,
 name: "Lileep",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -4564,7 +4564,7 @@ weightkg: 23.8,
 },
 
 cradily: {
-num: 346,
+morality: 346,
 name: "Cradily",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -4574,7 +4574,7 @@ weightkg: 60.4,
 },
 
 anorith: {
-num: 347,
+morality: 347,
 name: "Anorith",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -4584,7 +4584,7 @@ weightkg: 12.5,
 },
 
 armaldo: {
-num: 348,
+morality: 348,
 name: "Armaldo",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -4594,7 +4594,7 @@ weightkg: 68.2,
 },
 
 feebas: {
-num: 349,
+morality: 349,
 name: "Feebas",
 types: ["Water"],
 gender: "F",
@@ -4604,7 +4604,7 @@ weightkg: 7.4,
 },
 
 milotic: {
-num: 350,
+morality: 350,
 name: "Milotic",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -4614,7 +4614,7 @@ weightkg: 162,
 },
 
 castform: {
-num: 351,
+morality: 351,
 name: "Castform",
 types: ["???"],
 gender: "F",
@@ -4624,7 +4624,7 @@ weightkg: 0.8,
 },
 
 castformsunny: {
-num: 351,
+morality: 351,
 name: "Castform-Sunny",
 types: ["Fire"],
 gender: "F",
@@ -4636,7 +4636,7 @@ battleOnly: "Castform",
 },
 
 castformrainy: {
-num: 351,
+morality: 351,
 name: "Castform-Rainy",
 types: ["Water"],
 gender: "F",
@@ -4648,7 +4648,7 @@ battleOnly: "Castform",
 },
 
 castformsnowy: {
-num: 351,
+morality: 351,
 name: "Castform-Snowy",
 types: ["Ice"],
 gender: "F",
@@ -4660,7 +4660,7 @@ battleOnly: "Castform",
 },
 
 kecleon: {
-num: 352,
+morality: 352,
 name: "Kecleon",
 types: ["???"],
 gender: "F",
@@ -4670,7 +4670,7 @@ weightkg: 22,
 },
 
 shuppet: {
-num: 353,
+morality: 353,
 name: "Shuppet",
 types: ["Ghost"],
 gender: "F",
@@ -4680,7 +4680,7 @@ weightkg: 2.3,
 },
 
 banette: {
-num: 354,
+morality: 354,
 name: "Banette",
 types: ["Ghost"],
 gender: "F",
@@ -4690,7 +4690,7 @@ weightkg: 12.5,
 },
 
 banettemega: {
-num: 354,
+morality: 354,
 name: "Banette-Mega",
 types: ["Ghost"],
 gender: "F",
@@ -4700,7 +4700,7 @@ weightkg: 13,
 },
 
 duskull: {
-num: 355,
+morality: 355,
 name: "Duskull",
 types: ["Ghost"],
 gender: "F",
@@ -4710,7 +4710,7 @@ weightkg: 15,
 },
 
 dusclops: {
-num: 356,
+morality: 356,
 name: "Dusclops",
 types: ["Ghost"],
 gender: "F",
@@ -4720,7 +4720,7 @@ weightkg: 30.6,
 },
 
 tropius: {
-num: 357,
+morality: 357,
 name: "Tropius",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -4730,7 +4730,7 @@ weightkg: 100,
 },
 
 chimecho: {
-num: 358,
+morality: 358,
 name: "Chimecho",
 types: ["Ghost", "Psychic"],
 gender: "F",
@@ -4741,7 +4741,7 @@ canHatch: true,
 },
 
 absol: {
-num: 359,
+morality: 359,
 name: "Absol",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -4751,7 +4751,7 @@ weightkg: 47,
 },
 
 absolmega: {
-num: 359,
+morality: 359,
 name: "Absol-Mega",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -4761,7 +4761,7 @@ weightkg: 49,
 },
 
 wynaut: {
-num: 360,
+morality: 360,
 name: "Wynaut",
 types: ["???"],
 gender: "F",
@@ -4772,7 +4772,7 @@ canHatch: true,
 },
 
 snorunt: {
-num: 361,
+morality: 361,
 name: "Snorunt",
 types: ["Ice"],
 gender: "F",
@@ -4782,7 +4782,7 @@ weightkg: 16.8,
 },
 
 glalie: {
-num: 362,
+morality: 362,
 name: "Glalie",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -4792,7 +4792,7 @@ weightkg: 256.5,
 },
 
 glaliemega: {
-num: 362,
+morality: 362,
 name: "Glalie-Mega",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -4802,7 +4802,7 @@ weightkg: 350.2,
 },
 
 spheal: {
-num: 363,
+morality: 363,
 name: "Spheal",
 types: ["Ice", "Water"],
 gender: "F",
@@ -4812,7 +4812,7 @@ weightkg: 39.5,
 },
 
 sealeo: {
-num: 364,
+morality: 364,
 name: "Sealeo",
 types: ["Ice", "Water"],
 gender: "F",
@@ -4822,7 +4822,7 @@ weightkg: 87.6,
 },
 
 walrein: {
-num: 365,
+morality: 365,
 name: "Walrein",
 types: ["Ice", "Water"],
 gender: "F",
@@ -4832,7 +4832,7 @@ weightkg: 150.6,
 },
 
 clamperl: {
-num: 366,
+morality: 366,
 name: "Clamperl",
 types: ["Ice"],
 gender: "F",
@@ -4842,7 +4842,7 @@ weightkg: 52.5,
 },
 
 huntail: {
-num: 367,
+morality: 367,
 name: "Huntail",
 types: ["Fire", "Ice"],
 gender: "F",
@@ -4852,7 +4852,7 @@ weightkg: 27,
 },
 
 gorebyss: {
-num: 368,
+morality: 368,
 name: "Gorebyss",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -4862,7 +4862,7 @@ weightkg: 22.6,
 },
 
 relicanth: {
-num: 369,
+morality: 369,
 name: "Relicanth",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -4872,7 +4872,7 @@ weightkg: 23.4,
 },
 
 luvdisc: {
-num: 370,
+morality: 370,
 name: "Luvdisc",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -4882,7 +4882,7 @@ weightkg: 8.7,
 },
 
 bagon: {
-num: 371,
+morality: 371,
 name: "Bagon",
 types: ["Dragon"],
 gender: "F",
@@ -4892,7 +4892,7 @@ weightkg: 42.1,
 },
 
 shelgon: {
-num: 372,
+morality: 372,
 name: "Shelgon",
 types: ["Dragon"],
 gender: "F",
@@ -4902,7 +4902,7 @@ weightkg: 110.5,
 },
 
 salamence: {
-num: 373,
+morality: 373,
 name: "Salamence",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -4912,7 +4912,7 @@ weightkg: 102.6,
 },
 
 salamencemega: {
-num: 373,
+morality: 373,
 name: "Salamence-Mega",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -4922,7 +4922,7 @@ weightkg: 112.6,
 },
 
 beldum: {
-num: 374,
+morality: 374,
 name: "Beldum",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -4932,7 +4932,7 @@ weightkg: 95.2,
 },
 
 metang: {
-num: 375,
+morality: 375,
 name: "Metang",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -4942,7 +4942,7 @@ weightkg: 202.5,
 },
 
 metagross: {
-num: 376,
+morality: 376,
 name: "Metagross",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -4952,7 +4952,7 @@ weightkg: 550,
 },
 
 metagrossmega: {
-num: 376,
+morality: 376,
 name: "Metagross-Mega",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -4962,7 +4962,7 @@ weightkg: 942.9,
 },
 
 regirock: {
-num: 377,
+morality: 377,
 name: "Regirock",
 types: ["Rock"],
 gender: "F",
@@ -4972,7 +4972,7 @@ weightkg: 230,
 },
 
 regice: {
-num: 378,
+morality: 378,
 name: "Regice",
 types: ["Ice"],
 gender: "F",
@@ -4982,7 +4982,7 @@ weightkg: 175,
 },
 
 registeel: {
-num: 379,
+morality: 379,
 name: "Registeel",
 types: ["Steel"],
 gender: "F",
@@ -4992,7 +4992,7 @@ weightkg: 205,
 },
 
 latias: {
-num: 380,
+morality: 380,
 name: "Latias",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -5002,7 +5002,7 @@ weightkg: 40,
 },
 
 latiasmega: {
-num: 380,
+morality: 380,
 name: "Latias-Mega",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -5012,7 +5012,7 @@ weightkg: 52,
 },
 
 latios: {
-num: 381,
+morality: 381,
 name: "Latios",
 types: ["Dragon", "Psychic"],
 gender: "F",
@@ -5022,7 +5022,7 @@ weightkg: 60,
 },
 
 latiosmega: {
-num: 381,
+morality: 381,
 name: "Latios-Mega",
 types: ["Dragon", "Psychic"],
 gender: "F",
@@ -5032,7 +5032,7 @@ weightkg: 70,
 },
 
 kyogre: {
-num: 382,
+morality: 382,
 name: "Kyogre",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -5042,7 +5042,7 @@ weightkg: 352,
 },
 
 kyogreprimal: {
-num: 382,
+morality: 382,
 name: "Kyogre-Primal",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -5052,7 +5052,7 @@ weightkg: 430,
 },
 
 groudon: {
-num: 383,
+morality: 383,
 name: "Groudon",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -5062,7 +5062,7 @@ weightkg: 950,
 },
 
 groudonprimal: {
-num: 383,
+morality: 383,
 name: "Groudon-Primal",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -5072,7 +5072,7 @@ weightkg: 999.7,
 },
 
 rayquaza: {
-num: 384,
+morality: 384,
 name: "Rayquaza",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -5082,7 +5082,7 @@ weightkg: 206.5,
 },
 
 rayquazamega: {
-num: 384,
+morality: 384,
 name: "Rayquaza-Mega",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -5093,7 +5093,7 @@ requiredMove: "Dragon Ascent",
 },
 
 jirachi: {
-num: 385,
+morality: 385,
 name: "Jirachi",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -5103,7 +5103,7 @@ weightkg: 1.1,
 },
 
 deoxys: {
-num: 386,
+morality: 386,
 name: "Deoxys",
 types: ["Psychic"],
 gender: "F",
@@ -5113,7 +5113,7 @@ weightkg: 60.8,
 },
 
 deoxysattack: {
-num: 386,
+morality: 386,
 name: "Deoxys-Attack",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -5123,7 +5123,7 @@ weightkg: 60.8,
 },
 
 deoxysdefense: {
-num: 386,
+morality: 386,
 name: "Deoxys-Defense",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -5133,7 +5133,7 @@ weightkg: 60.8,
 },
 
 deoxysspeed: {
-num: 386,
+morality: 386,
 name: "Deoxys-Speed",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -5143,7 +5143,7 @@ weightkg: 60.8,
 },
 
 turtwig: {
-num: 387,
+morality: 387,
 name: "Turtwig",
 types: ["Grass"],
 gender: "F",
@@ -5153,7 +5153,7 @@ weightkg: 10.2,
 },
 
 grotle: {
-num: 388,
+morality: 388,
 name: "Grotle",
 types: ["Grass"],
 gender: "F",
@@ -5163,7 +5163,7 @@ weightkg: 97,
 },
 
 torterra: {
-num: 389,
+morality: 389,
 name: "Torterra",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -5173,7 +5173,7 @@ weightkg: 310,
 },
 
 chimchar: {
-num: 390,
+morality: 390,
 name: "Chimchar",
 types: ["Fire"],
 gender: "F",
@@ -5183,7 +5183,7 @@ weightkg: 6.2,
 },
 
 monferno: {
-num: 391,
+morality: 391,
 name: "Monferno",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -5193,7 +5193,7 @@ weightkg: 22,
 },
 
 infernape: {
-num: 392,
+morality: 392,
 name: "Infernape",
 types: ["Fighting", "Fire"],
 gender: "F",
@@ -5203,7 +5203,7 @@ weightkg: 55,
 },
 
 piplup: {
-num: 393,
+morality: 393,
 name: "Piplup",
 types: ["Water"],
 gender: "F",
@@ -5213,7 +5213,7 @@ weightkg: 5.2,
 },
 
 prinplup: {
-num: 394,
+morality: 394,
 name: "Prinplup",
 types: ["Water"],
 gender: "F",
@@ -5223,7 +5223,7 @@ weightkg: 23,
 },
 
 empoleon: {
-num: 395,
+morality: 395,
 name: "Empoleon",
 types: ["Steel", "Water"],
 gender: "F",
@@ -5233,7 +5233,7 @@ weightkg: 84.5,
 },
 
 starly: {
-num: 396,
+morality: 396,
 name: "Starly",
 types: ["Flying"],
 gender: "F",
@@ -5243,7 +5243,7 @@ weightkg: 2,
 },
 
 staravia: {
-num: 397,
+morality: 397,
 name: "Staravia",
 types: ["Flying"],
 gender: "F",
@@ -5253,7 +5253,7 @@ weightkg: 15.5,
 },
 
 staraptor: {
-num: 398,
+morality: 398,
 name: "Staraptor",
 types: ["Flying"],
 gender: "F",
@@ -5263,7 +5263,7 @@ weightkg: 24.9,
 },
 
 bidoof: {
-num: 399,
+morality: 399,
 name: "Bidoof",
 types: ["Normal"],
 gender: "F",
@@ -5273,7 +5273,7 @@ weightkg: 20,
 },
 
 bibarel: {
-num: 400,
+morality: 400,
 name: "Bibarel",
 types: ["Normal", "Water"],
 gender: "F",
@@ -5283,7 +5283,7 @@ weightkg: 31.5,
 },
 
 kricketot: {
-num: 401,
+morality: 401,
 name: "Kricketot",
 types: ["Bug"],
 gender: "F",
@@ -5293,7 +5293,7 @@ weightkg: 2.2,
 },
 
 kricketune: {
-num: 402,
+morality: 402,
 name: "Kricketune",
 types: ["Bug"],
 gender: "F",
@@ -5303,7 +5303,7 @@ weightkg: 25.5,
 },
 
 shinx: {
-num: 403,
+morality: 403,
 name: "Shinx",
 types: ["Electric"],
 gender: "F",
@@ -5313,7 +5313,7 @@ weightkg: 9.5,
 },
 
 luxio: {
-num: 404,
+morality: 404,
 name: "Luxio",
 types: ["Electric"],
 gender: "F",
@@ -5323,7 +5323,7 @@ weightkg: 30.5,
 },
 
 luxray: {
-num: 405,
+morality: 405,
 name: "Luxray",
 types: ["Dark", "Electric"],
 gender: "F",
@@ -5333,7 +5333,7 @@ weightkg: 42,
 },
 
 budew: {
-num: 406,
+morality: 406,
 name: "Budew",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -5344,7 +5344,7 @@ canHatch: true,
 },
 
 roserade: {
-num: 407,
+morality: 407,
 name: "Roserade",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -5354,7 +5354,7 @@ weightkg: 14.5,
 },
 
 cranidos: {
-num: 408,
+morality: 408,
 name: "Cranidos",
 types: ["Rock"],
 gender: "F",
@@ -5364,7 +5364,7 @@ weightkg: 31.5,
 },
 
 rampardos: {
-num: 409,
+morality: 409,
 name: "Rampardos",
 types: ["Dragon", "Rock"],
 gender: "F",
@@ -5374,7 +5374,7 @@ weightkg: 102.5,
 },
 
 shieldon: {
-num: 410,
+morality: 410,
 name: "Shieldon",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -5384,7 +5384,7 @@ weightkg: 57,
 },
 
 bastiodon: {
-num: 411,
+morality: 411,
 name: "Bastiodon",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -5394,7 +5394,7 @@ weightkg: 149.5,
 },
 
 burmy: {
-num: 412,
+morality: 412,
 name: "Burmy",
 types: ["Bug"],
 gender: "F",
@@ -5404,7 +5404,7 @@ weightkg: 3.4,
 },
 
 wormadam: {
-num: 413,
+morality: 413,
 name: "Wormadam",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -5414,7 +5414,7 @@ weightkg: 6.5,
 },
 
 wormadamsandy: {
-num: 413,
+morality: 413,
 name: "Wormadam-Sandy",
 types: ["Bug", "Ground"],
 gender: "F",
@@ -5424,7 +5424,7 @@ weightkg: 6.5,
 },
 
 wormadamtrash: {
-num: 413,
+morality: 413,
 name: "Wormadam-Trash",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -5434,7 +5434,7 @@ weightkg: 6.5,
 },
 
 mothim: {
-num: 414,
+morality: 414,
 name: "Mothim",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -5444,7 +5444,7 @@ weightkg: 23.3,
 },
 
 combee: {
-num: 415,
+morality: 415,
 name: "Combee",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -5454,7 +5454,7 @@ weightkg: 5.5,
 },
 
 vespiquen: {
-num: 416,
+morality: 416,
 name: "Vespiquen",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -5464,7 +5464,7 @@ weightkg: 38.5,
 },
 
 pachirisu: {
-num: 417,
+morality: 417,
 name: "Pachirisu",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -5474,7 +5474,7 @@ weightkg: 3.9,
 },
 
 buizel: {
-num: 418,
+morality: 418,
 name: "Buizel",
 types: ["Normal", "Water"],
 gender: "F",
@@ -5484,7 +5484,7 @@ weightkg: 29.5,
 },
 
 floatzel: {
-num: 419,
+morality: 419,
 name: "Floatzel",
 types: ["Normal", "Water"],
 gender: "F",
@@ -5494,7 +5494,7 @@ weightkg: 33.5,
 },
 
 cherubi: {
-num: 420,
+morality: 420,
 name: "Cherubi",
 types: ["Grass"],
 gender: "F",
@@ -5504,7 +5504,7 @@ weightkg: 3.3,
 },
 
 cherrim: {
-num: 421,
+morality: 421,
 name: "Cherrim",
 types: ["Fire", "Grass"],
 gender: "F",
@@ -5514,7 +5514,7 @@ weightkg: 9.3,
 },
 
 cherrimsunshine: {
-num: 421,
+morality: 421,
 name: "Cherrim-Sunshine",
 types: ["Fire", "Grass"],
 gender: "F",
@@ -5526,7 +5526,7 @@ battleOnly: "Cherrim",
 },
 
 shellos: {
-num: 422,
+morality: 422,
 name: "Shellos",
 types: ["Water"],
 gender: "F",
@@ -5536,7 +5536,7 @@ weightkg: 6.3,
 },
 
 gastrodon: {
-num: 423,
+morality: 423,
 name: "Gastrodon",
 types: ["Ground", "Water"],
 gender: "F",
@@ -5546,7 +5546,7 @@ weightkg: 29.9,
 },
 
 ambipom: {
-num: 424,
+morality: 424,
 name: "Ambipom",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -5556,7 +5556,7 @@ weightkg: 20.3,
 },
 
 drifloon: {
-num: 425,
+morality: 425,
 name: "Drifloon",
 types: ["Flying", "Ghost"],
 gender: "F",
@@ -5566,7 +5566,7 @@ weightkg: 1.2,
 },
 
 drifblim: {
-num: 426,
+morality: 426,
 name: "Drifblim",
 types: ["Flying", "Ghost"],
 gender: "F",
@@ -5576,7 +5576,7 @@ weightkg: 15,
 },
 
 buneary: {
-num: 427,
+morality: 427,
 name: "Buneary",
 types: ["Normal"],
 gender: "F",
@@ -5586,7 +5586,7 @@ weightkg: 5.5,
 },
 
 lopunny: {
-num: 428,
+morality: 428,
 name: "Lopunny",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -5596,7 +5596,7 @@ weightkg: 33.3,
 },
 
 lopunnymega: {
-num: 428,
+morality: 428,
 name: "Lopunny-Mega",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -5606,7 +5606,7 @@ weightkg: 28.3,
 },
 
 mismagius: {
-num: 429,
+morality: 429,
 name: "Mismagius",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -5616,7 +5616,7 @@ weightkg: 4.4,
 },
 
 honchkrow: {
-num: 430,
+morality: 430,
 name: "Honchkrow",
 types: ["Dark", "Flying"],
 gender: "F",
@@ -5626,7 +5626,7 @@ weightkg: 27.3,
 },
 
 glameow: {
-num: 431,
+morality: 431,
 name: "Glameow",
 types: ["Dark"],
 gender: "F",
@@ -5636,7 +5636,7 @@ weightkg: 3.9,
 },
 
 purugly: {
-num: 432,
+morality: 432,
 name: "Purugly",
 types: ["Dark"],
 gender: "F",
@@ -5646,7 +5646,7 @@ weightkg: 43.8,
 },
 
 chingling: {
-num: 433,
+morality: 433,
 name: "Chingling",
 types: ["Psychic"],
 gender: "F",
@@ -5657,7 +5657,7 @@ canHatch: true,
 },
 
 stunky: {
-num: 434,
+morality: 434,
 name: "Stunky",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -5667,7 +5667,7 @@ weightkg: 19.2,
 },
 
 skuntank: {
-num: 435,
+morality: 435,
 name: "Skuntank",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -5677,7 +5677,7 @@ weightkg: 38,
 },
 
 bronzor: {
-num: 436,
+morality: 436,
 name: "Bronzor",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -5687,7 +5687,7 @@ weightkg: 60.5,
 },
 
 bronzong: {
-num: 437,
+morality: 437,
 name: "Bronzong",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -5697,7 +5697,7 @@ weightkg: 187,
 },
 
 bonsly: {
-num: 438,
+morality: 438,
 name: "Bonsly",
 types: ["Rock"],
 gender: "F",
@@ -5708,7 +5708,7 @@ canHatch: true,
 },
 
 mimejr: {
-num: 439,
+morality: 439,
 name: "Mime Jr.",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -5719,7 +5719,7 @@ canHatch: true,
 },
 
 happiny: {
-num: 440,
+morality: 440,
 name: "Happiny",
 types: ["Normal"],
 gender: "F",
@@ -5730,7 +5730,7 @@ canHatch: true,
 },
 
 chatot: {
-num: 441,
+morality: 441,
 name: "Chatot",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -5740,7 +5740,7 @@ weightkg: 1.9,
 },
 
 spiritomb: {
-num: 442,
+morality: 442,
 name: "Spiritomb",
 types: ["Dark", "Ghost"],
 gender: "F",
@@ -5750,7 +5750,7 @@ weightkg: 108,
 },
 
 gible: {
-num: 443,
+morality: 443,
 name: "Gible",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -5760,7 +5760,7 @@ weightkg: 20.5,
 },
 
 gabite: {
-num: 444,
+morality: 444,
 name: "Gabite",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -5770,7 +5770,7 @@ weightkg: 56,
 },
 
 garchomp: {
-num: 445,
+morality: 445,
 name: "Garchomp",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -5780,7 +5780,7 @@ weightkg: 95,
 },
 
 garchompmega: {
-num: 445,
+morality: 445,
 name: "Garchomp-Mega",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -5790,7 +5790,7 @@ weightkg: 95,
 },
 
 munchlax: {
-num: 446,
+morality: 446,
 name: "Munchlax",
 types: ["Normal"],
 gender: "F",
@@ -5801,7 +5801,7 @@ canHatch: true,
 },
 
 riolu: {
-num: 447,
+morality: 447,
 name: "Riolu",
 types: ["Fighting"],
 gender: "F",
@@ -5812,7 +5812,7 @@ canHatch: true,
 },
 
 lucario: {
-num: 448,
+morality: 448,
 name: "Lucario",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -5822,7 +5822,7 @@ weightkg: 54,
 },
 
 lucariomega: {
-num: 448,
+morality: 448,
 name: "Lucario-Mega",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -5832,7 +5832,7 @@ weightkg: 57.5,
 },
 
 hippopotas: {
-num: 449,
+morality: 449,
 name: "Hippopotas",
 types: ["Ground"],
 gender: "F",
@@ -5842,7 +5842,7 @@ weightkg: 49.5,
 },
 
 hippowdon: {
-num: 450,
+morality: 450,
 name: "Hippowdon",
 types: ["Ground"],
 gender: "F",
@@ -5852,7 +5852,7 @@ weightkg: 300,
 },
 
 skorupi: {
-num: 451,
+morality: 451,
 name: "Skorupi",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -5862,7 +5862,7 @@ weightkg: 12,
 },
 
 drapion: {
-num: 452,
+morality: 452,
 name: "Drapion",
 types: ["Bug", "Dark"],
 gender: "F",
@@ -5872,7 +5872,7 @@ weightkg: 61.5,
 },
 
 croagunk: {
-num: 453,
+morality: 453,
 name: "Croagunk",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -5882,7 +5882,7 @@ weightkg: 23,
 },
 
 toxicroak: {
-num: 454,
+morality: 454,
 name: "Toxicroak",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -5892,7 +5892,7 @@ weightkg: 44.4,
 },
 
 carnivine: {
-num: 455,
+morality: 455,
 name: "Carnivine",
 types: ["Grass"],
 gender: "F",
@@ -5902,7 +5902,7 @@ weightkg: 27,
 },
 
 finneon: {
-num: 456,
+morality: 456,
 name: "Finneon",
 types: ["Water"],
 gender: "F",
@@ -5912,7 +5912,7 @@ weightkg: 7,
 },
 
 lumineon: {
-num: 457,
+morality: 457,
 name: "Lumineon",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -5922,7 +5922,7 @@ weightkg: 24,
 },
 
 mantyke: {
-num: 458,
+morality: 458,
 name: "Mantyke",
 types: ["Flying", "Water"],
 gender: "F",
@@ -5933,7 +5933,7 @@ canHatch: true,
 },
 
 snover: {
-num: 459,
+morality: 459,
 name: "Snover",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -5943,7 +5943,7 @@ weightkg: 50.5,
 },
 
 abomasnow: {
-num: 460,
+morality: 460,
 name: "Abomasnow",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -5953,7 +5953,7 @@ weightkg: 135.5,
 },
 
 abomasnowmega: {
-num: 460,
+morality: 460,
 name: "Abomasnow-Mega",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -5963,7 +5963,7 @@ weightkg: 185,
 },
 
 weavile: {
-num: 461,
+morality: 461,
 name: "Weavile",
 types: ["Dark", "Ice"],
 gender: "F",
@@ -5973,7 +5973,7 @@ weightkg: 34,
 },
 
 magnezone: {
-num: 462,
+morality: 462,
 name: "Magnezone",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -5983,7 +5983,7 @@ weightkg: 180,
 },
 
 lickilicky: {
-num: 463,
+morality: 463,
 name: "Lickilicky",
 types: ["Fairy", "Poison"],
 gender: "F",
@@ -5993,7 +5993,7 @@ weightkg: 140,
 },
 
 rhyperior: {
-num: 464,
+morality: 464,
 name: "Rhyperior",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -6003,7 +6003,7 @@ weightkg: 282.8,
 },
 
 tangrowth: {
-num: 465,
+morality: 465,
 name: "Tangrowth",
 types: ["Grass"],
 gender: "F",
@@ -6013,7 +6013,7 @@ weightkg: 128.6,
 },
 
 electivire: {
-num: 466,
+morality: 466,
 name: "Electivire",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -6023,7 +6023,7 @@ weightkg: 138.6,
 },
 
 magmortar: {
-num: 467,
+morality: 467,
 name: "Magmortar",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -6033,7 +6033,7 @@ weightkg: 68,
 },
 
 togekiss: {
-num: 468,
+morality: 468,
 name: "Togekiss",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -6043,7 +6043,7 @@ weightkg: 38,
 },
 
 yanmega: {
-num: 469,
+morality: 469,
 name: "Yanmega",
 types: ["Bug", "Dragon"],
 gender: "F",
@@ -6053,7 +6053,7 @@ weightkg: 51.5,
 },
 
 leafeon: {
-num: 470,
+morality: 470,
 name: "Leafeon",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -6063,7 +6063,7 @@ weightkg: 25.5,
 },
 
 glaceon: {
-num: 471,
+morality: 471,
 name: "Glaceon",
 types: ["Ice", "Normal"],
 gender: "F",
@@ -6073,7 +6073,7 @@ weightkg: 25.9,
 },
 
 gliscor: {
-num: 472,
+morality: 472,
 name: "Gliscor",
 types: ["Flying", "Ground"],
 gender: "F",
@@ -6083,7 +6083,7 @@ weightkg: 42.5,
 },
 
 mamoswine: {
-num: 473,
+morality: 473,
 name: "Mamoswine",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -6093,7 +6093,7 @@ weightkg: 291,
 },
 
 porygonz: {
-num: 474,
+morality: 474,
 name: "Porygon-Z",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -6103,7 +6103,7 @@ weightkg: 34,
 },
 
 gallade: {
-num: 475,
+morality: 475,
 name: "Gallade",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -6113,7 +6113,7 @@ weightkg: 52,
 },
 
 gallademega: {
-num: 475,
+morality: 475,
 name: "Gallade-Mega",
 types: ["Fighting", "Psychic"],
 gender: "F",
@@ -6123,7 +6123,7 @@ weightkg: 56.4,
 },
 
 probopass: {
-num: 476,
+morality: 476,
 name: "Probopass",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -6133,7 +6133,7 @@ weightkg: 340,
 },
 
 dusknoir: {
-num: 477,
+morality: 477,
 name: "Dusknoir",
 types: ["Ghost"],
 gender: "F",
@@ -6143,7 +6143,7 @@ weightkg: 106.6,
 },
 
 froslass: {
-num: 478,
+morality: 478,
 name: "Froslass",
 types: ["Ghost", "Ice"],
 gender: "F",
@@ -6153,7 +6153,7 @@ weightkg: 26.6,
 },
 
 rotombulb: {
-num: 479,
+morality: 479,
 name: "Rotom-Bulb",
 types: ["Electric", "Ghost"],
 gender: "F",
@@ -6163,7 +6163,7 @@ weightkg: 0.3,
 },
 
 rotomheat: {
-num: 479,
+morality: 479,
 name: "Rotom-Heat",
 types: ["Electric", "Fire"],
 gender: "F",
@@ -6173,7 +6173,7 @@ weightkg: 0.3,
 },
 
 rotomwash: {
-num: 479,
+morality: 479,
 name: "Rotom-Wash",
 types: ["Electric", "Water"],
 gender: "F",
@@ -6183,7 +6183,7 @@ weightkg: 0.3,
 },
 
 rotomfrost: {
-num: 479,
+morality: 479,
 name: "Rotom-Frost",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -6193,7 +6193,7 @@ weightkg: 0.3,
 },
 
 rotomfan: {
-num: 479,
+morality: 479,
 name: "Rotom-Fan",
 types: ["Electric", "Flying"],
 gender: "F",
@@ -6203,7 +6203,7 @@ weightkg: 0.3,
 },
 
 rotommow: {
-num: 479,
+morality: 479,
 name: "Rotom-Mow",
 types: ["Electric", "Grass"],
 gender: "F",
@@ -6213,7 +6213,7 @@ weightkg: 0.3,
 },
 
 uxie: {
-num: 480,
+morality: 480,
 name: "Uxie",
 types: ["Electric", "Fairy"],
 gender: "F",
@@ -6223,7 +6223,7 @@ weightkg: 0.3,
 },
 
 mesprit: {
-num: 481,
+morality: 481,
 name: "Mesprit",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -6233,7 +6233,7 @@ weightkg: 0.3,
 },
 
 azelf: {
-num: 482,
+morality: 482,
 name: "Azelf",
 types: ["Fairy", "Ice"],
 gender: "F",
@@ -6243,7 +6243,7 @@ weightkg: 0.3,
 },
 
 dialga: {
-num: 483,
+morality: 483,
 name: "Dialga",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -6253,7 +6253,7 @@ weightkg: 683,
 },
 
 dialgaorigin: {
-num: 483,
+morality: 483,
 name: "Dialga-Origin",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -6264,7 +6264,7 @@ gen: 8,
 },
 
 palkia: {
-num: 484,
+morality: 484,
 name: "Palkia",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -6274,7 +6274,7 @@ weightkg: 336,
 },
 
 palkiaorigin: {
-num: 484,
+morality: 484,
 name: "Palkia-Origin",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -6285,7 +6285,7 @@ gen: 8,
 },
 
 heatran: {
-num: 485,
+morality: 485,
 name: "Heatran",
 types: ["Fire", "Steel"],
 gender: "F",
@@ -6295,7 +6295,7 @@ weightkg: 430,
 },
 
 regigigas: {
-num: 486,
+morality: 486,
 name: "Regigigas",
 types: ["Normal"],
 gender: "F",
@@ -6305,7 +6305,7 @@ weightkg: 420,
 },
 
 giratina: {
-num: 487,
+morality: 487,
 name: "Giratina",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -6315,7 +6315,7 @@ weightkg: 750,
 },
 
 giratinaorigin: {
-num: 487,
+morality: 487,
 name: "Giratina-Origin",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -6325,7 +6325,7 @@ weightkg: 650,
 },
 
 cresselia: {
-num: 488,
+morality: 488,
 name: "Cresselia",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -6335,7 +6335,7 @@ weightkg: 85.6,
 },
 
 phione: {
-num: 489,
+morality: 489,
 name: "Phione",
 types: ["Fairy"],
 gender: "F",
@@ -6345,7 +6345,7 @@ weightkg: 3.1,
 },
 
 manaphy: {
-num: 490,
+morality: 490,
 name: "Manaphy",
 types: ["Fairy", "Ice"],
 gender: "F",
@@ -6355,7 +6355,7 @@ weightkg: 1.4,
 },
 
 darkrai: {
-num: 491,
+morality: 491,
 name: "Darkrai",
 types: ["Dark", "Ghost"],
 gender: "F",
@@ -6365,7 +6365,7 @@ weightkg: 50.5,
 },
 
 shaymin: {
-num: 492,
+morality: 492,
 name: "Shaymin",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -6375,7 +6375,7 @@ weightkg: 2.1,
 },
 
 shayminsky: {
-num: 492,
+morality: 492,
 name: "Shaymin-Sky",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -6385,7 +6385,7 @@ weightkg: 5.2,
 },
 
 arceus: {
-num: 493,
+morality: 493,
 name: "Arceus",
 types: ["???"],
 gender: "F",
@@ -6395,7 +6395,7 @@ weightkg: 320,
 },
 
 arceusbug: {
-num: 493,
+morality: 493,
 name: "Arceus-Bug",
 types: ["Bug"],
 gender: "F",
@@ -6406,7 +6406,7 @@ requiredItems: ["Insect Plate", "Buginium Z"],
 },
 
 arceusdark: {
-num: 493,
+morality: 493,
 name: "Arceus-Dark",
 types: ["Dark"],
 gender: "F",
@@ -6417,7 +6417,7 @@ requiredItems: ["Dread Plate", "Darkinium Z"],
 },
 
 arceusdragon: {
-num: 493,
+morality: 493,
 name: "Arceus-Dragon",
 types: ["Dragon"],
 gender: "F",
@@ -6428,7 +6428,7 @@ requiredItems: ["Draco Plate", "Dragonium Z"],
 },
 
 arceuselectric: {
-num: 493,
+morality: 493,
 name: "Arceus-Electric",
 types: ["Electric"],
 gender: "F",
@@ -6439,7 +6439,7 @@ requiredItems: ["Zap Plate", "Electrium Z"],
 },
 
 arceusfairy: {
-num: 493,
+morality: 493,
 name: "Arceus-Fairy",
 types: ["Fairy"],
 gender: "F",
@@ -6451,7 +6451,7 @@ gen: 6,
 },
 
 arceusfighting: {
-num: 493,
+morality: 493,
 name: "Arceus-Fighting",
 types: ["Fighting"],
 gender: "F",
@@ -6462,7 +6462,7 @@ requiredItems: ["Fist Plate", "Fightinium Z"],
 },
 
 arceusfire: {
-num: 493,
+morality: 493,
 name: "Arceus-Fire",
 types: ["Fire"],
 gender: "F",
@@ -6473,7 +6473,7 @@ requiredItems: ["Flame Plate", "Firium Z"],
 },
 
 arceusflying: {
-num: 493,
+morality: 493,
 name: "Arceus-Flying",
 types: ["Flying"],
 gender: "F",
@@ -6484,7 +6484,7 @@ requiredItems: ["Sky Plate", "Flyinium Z"],
 },
 
 arceusghost: {
-num: 493,
+morality: 493,
 name: "Arceus-Ghost",
 types: ["Ghost"],
 gender: "F",
@@ -6495,7 +6495,7 @@ requiredItems: ["Spooky Plate", "Ghostium Z"],
 },
 
 arceusgrass: {
-num: 493,
+morality: 493,
 name: "Arceus-Grass",
 types: ["Grass"],
 gender: "F",
@@ -6506,7 +6506,7 @@ requiredItems: ["Meadow Plate", "Grassium Z"],
 },
 
 arceusground: {
-num: 493,
+morality: 493,
 name: "Arceus-Ground",
 types: ["Ground"],
 gender: "F",
@@ -6517,7 +6517,7 @@ requiredItems: ["Earth Plate", "Groundium Z"],
 },
 
 arceusice: {
-num: 493,
+morality: 493,
 name: "Arceus-Ice",
 types: ["Ice"],
 gender: "F",
@@ -6528,7 +6528,7 @@ requiredItems: ["Icicle Plate", "Icium Z"],
 },
 
 arceuspoison: {
-num: 493,
+morality: 493,
 name: "Arceus-Poison",
 types: ["Poison"],
 gender: "F",
@@ -6539,7 +6539,7 @@ requiredItems: ["Toxic Plate", "Poisonium Z"],
 },
 
 arceuspsychic: {
-num: 493,
+morality: 493,
 name: "Arceus-Psychic",
 types: ["Psychic"],
 gender: "F",
@@ -6550,7 +6550,7 @@ requiredItems: ["Mind Plate", "Psychium Z"],
 },
 
 arceusrock: {
-num: 493,
+morality: 493,
 name: "Arceus-Rock",
 types: ["Rock"],
 gender: "F",
@@ -6561,7 +6561,7 @@ requiredItems: ["Stone Plate", "Rockium Z"],
 },
 
 arceussteel: {
-num: 493,
+morality: 493,
 name: "Arceus-Steel",
 types: ["Steel"],
 gender: "F",
@@ -6572,7 +6572,7 @@ requiredItems: ["Iron Plate", "Steelium Z"],
 },
 
 arceuswater: {
-num: 493,
+morality: 493,
 name: "Arceus-Water",
 types: ["Water"],
 gender: "F",
@@ -6583,7 +6583,7 @@ requiredItems: ["Splash Plate", "Waterium Z"],
 },
 
 victini: {
-num: 494,
+morality: 494,
 name: "Victini",
 types: ["Fire", "Psychic"],
 gender: "F",
@@ -6593,7 +6593,7 @@ weightkg: 4,
 },
 
 snivy: {
-num: 495,
+morality: 495,
 name: "Snivy",
 types: ["Grass"],
 gender: "F",
@@ -6603,7 +6603,7 @@ weightkg: 8.1,
 },
 
 servine: {
-num: 496,
+morality: 496,
 name: "Servine",
 types: ["Grass"],
 gender: "F",
@@ -6613,7 +6613,7 @@ weightkg: 16,
 },
 
 serperior: {
-num: 497,
+morality: 497,
 name: "Serperior",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -6623,7 +6623,7 @@ weightkg: 63,
 },
 
 tepig: {
-num: 498,
+morality: 498,
 name: "Tepig",
 types: ["Fire"],
 gender: "F",
@@ -6633,7 +6633,7 @@ weightkg: 9.9,
 },
 
 pignite: {
-num: 499,
+morality: 499,
 name: "Pignite",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -6643,7 +6643,7 @@ weightkg: 55.5,
 },
 
 emboar: {
-num: 500,
+morality: 500,
 name: "Emboar",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -6653,7 +6653,7 @@ weightkg: 150,
 },
 
 oshawott: {
-num: 501,
+morality: 501,
 name: "Oshawott",
 types: ["Water"],
 gender: "F",
@@ -6663,7 +6663,7 @@ weightkg: 5.9,
 },
 
 dewott: {
-num: 502,
+morality: 502,
 name: "Dewott",
 types: ["Water"],
 gender: "F",
@@ -6673,7 +6673,7 @@ weightkg: 24.5,
 },
 
 samurott: {
-num: 503,
+morality: 503,
 name: "Samurott",
 types: ["Ice", "Water"],
 gender: "F",
@@ -6683,7 +6683,7 @@ weightkg: 94.6,
 },
 
 samurotthisui: {
-num: 503,
+morality: 503,
 name: "Samurott-Hisui",
 types: ["Dark", "Water"],
 gender: "F",
@@ -6693,7 +6693,7 @@ weightkg: 58.2,
 },
 
 patrat: {
-num: 504,
+morality: 504,
 name: "Patrat",
 types: ["Ground"],
 gender: "F",
@@ -6703,7 +6703,7 @@ weightkg: 11.6,
 },
 
 watchog: {
-num: 505,
+morality: 505,
 name: "Watchog",
 types: ["Ground", "Psychic"],
 gender: "F",
@@ -6713,7 +6713,7 @@ weightkg: 27,
 },
 
 lillipup: {
-num: 506,
+morality: 506,
 name: "Lillipup",
 types: ["Normal"],
 gender: "F",
@@ -6723,7 +6723,7 @@ weightkg: 4.1,
 },
 
 herdier: {
-num: 507,
+morality: 507,
 name: "Herdier",
 types: ["Normal"],
 gender: "F",
@@ -6733,7 +6733,7 @@ weightkg: 14.7,
 },
 
 stoutland: {
-num: 508,
+morality: 508,
 name: "Stoutland",
 types: ["Normal"],
 gender: "F",
@@ -6743,7 +6743,7 @@ weightkg: 61,
 },
 
 purrloin: {
-num: 509,
+morality: 509,
 name: "Purrloin",
 types: ["Dark"],
 gender: "F",
@@ -6753,7 +6753,7 @@ weightkg: 10.1,
 },
 
 liepard: {
-num: 510,
+morality: 510,
 name: "Liepard",
 types: ["Dark", "Electric"],
 gender: "F",
@@ -6763,7 +6763,7 @@ weightkg: 37.5,
 },
 
 pansage: {
-num: 511,
+morality: 511,
 name: "Pansage",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -6773,7 +6773,7 @@ weightkg: 10.5,
 },
 
 simisage: {
-num: 512,
+morality: 512,
 name: "Simisage",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -6783,7 +6783,7 @@ weightkg: 30.5,
 },
 
 pansear: {
-num: 513,
+morality: 513,
 name: "Pansear",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -6793,7 +6793,7 @@ weightkg: 11,
 },
 
 simisear: {
-num: 514,
+morality: 514,
 name: "Simisear",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -6803,7 +6803,7 @@ weightkg: 28,
 },
 
 panpour: {
-num: 515,
+morality: 515,
 name: "Panpour",
 types: ["Normal", "Water"],
 gender: "F",
@@ -6813,7 +6813,7 @@ weightkg: 13.5,
 },
 
 simipour: {
-num: 516,
+morality: 516,
 name: "Simipour",
 types: ["Normal", "Water"],
 gender: "F",
@@ -6823,7 +6823,7 @@ weightkg: 29,
 },
 
 munna: {
-num: 517,
+morality: 517,
 name: "Munna",
 types: ["Ghost", "Psychic"],
 gender: "F",
@@ -6833,7 +6833,7 @@ weightkg: 23.3,
 },
 
 musharna: {
-num: 518,
+morality: 518,
 name: "Musharna",
 types: ["Ghost", "Psychic"],
 gender: "F",
@@ -6843,7 +6843,7 @@ weightkg: 60.5,
 },
 
 pidove: {
-num: 519,
+morality: 519,
 name: "Pidove",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -6853,7 +6853,7 @@ weightkg: 2.1,
 },
 
 tranquill: {
-num: 520,
+morality: 520,
 name: "Tranquill",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -6863,7 +6863,7 @@ weightkg: 15,
 },
 
 unfezant: {
-num: 521,
+morality: 521,
 name: "Unfezant",
 types: ["Flying", "Poison"],
 gender: "F",
@@ -6873,7 +6873,7 @@ weightkg: 29,
 },
 
 blitzle: {
-num: 522,
+morality: 522,
 name: "Blitzle",
 types: ["Electric"],
 gender: "F",
@@ -6883,7 +6883,7 @@ weightkg: 29.8,
 },
 
 zebstrika: {
-num: 523,
+morality: 523,
 name: "Zebstrika",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -6893,7 +6893,7 @@ weightkg: 79.5,
 },
 
 roggenrola: {
-num: 524,
+morality: 524,
 name: "Roggenrola",
 types: ["Rock"],
 gender: "F",
@@ -6903,7 +6903,7 @@ weightkg: 18,
 },
 
 boldore: {
-num: 525,
+morality: 525,
 name: "Boldore",
 types: ["Poison", "Rock"],
 gender: "F",
@@ -6913,7 +6913,7 @@ weightkg: 102,
 },
 
 gigalith: {
-num: 526,
+morality: 526,
 name: "Gigalith",
 types: ["Poison", "Rock"],
 gender: "F",
@@ -6923,7 +6923,7 @@ weightkg: 260,
 },
 
 woobat: {
-num: 527,
+morality: 527,
 name: "Woobat",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -6933,7 +6933,7 @@ weightkg: 2.1,
 },
 
 swoobat: {
-num: 528,
+morality: 528,
 name: "Swoobat",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -6943,7 +6943,7 @@ weightkg: 10.5,
 },
 
 drilbur: {
-num: 529,
+morality: 529,
 name: "Drilbur",
 types: ["Ground"],
 gender: "F",
@@ -6953,7 +6953,7 @@ weightkg: 8.5,
 },
 
 excadrill: {
-num: 530,
+morality: 530,
 name: "Excadrill",
 types: ["Ground", "Steel"],
 gender: "F",
@@ -6963,7 +6963,7 @@ weightkg: 40.4,
 },
 
 audino: {
-num: 531,
+morality: 531,
 name: "Audino",
 types: ["Fairy", "Poison"],
 gender: "F",
@@ -6973,7 +6973,7 @@ weightkg: 31,
 },
 
 audinomega: {
-num: 531,
+morality: 531,
 name: "Audino-Mega",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -6983,7 +6983,7 @@ weightkg: 32,
 },
 
 timburr: {
-num: 532,
+morality: 532,
 name: "Timburr",
 types: ["Fighting", "Grass"],
 gender: "F",
@@ -6993,7 +6993,7 @@ weightkg: 12.5,
 },
 
 gurdurr: {
-num: 533,
+morality: 533,
 name: "Gurdurr",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -7003,7 +7003,7 @@ weightkg: 40,
 },
 
 conkeldurr: {
-num: 534,
+morality: 534,
 name: "Conkeldurr",
 types: ["Fighting", "Rock"],
 gender: "F",
@@ -7013,7 +7013,7 @@ weightkg: 87,
 },
 
 tympole: {
-num: 535,
+morality: 535,
 name: "Tympole",
 types: ["Water"],
 gender: "F",
@@ -7023,7 +7023,7 @@ weightkg: 4.5,
 },
 
 palpitoad: {
-num: 536,
+morality: 536,
 name: "Palpitoad",
 types: ["Ground", "Water"],
 gender: "F",
@@ -7033,7 +7033,7 @@ weightkg: 17,
 },
 
 seismitoad: {
-num: 537,
+morality: 537,
 name: "Seismitoad",
 types: ["Ground", "Water"],
 gender: "F",
@@ -7043,7 +7043,7 @@ weightkg: 62,
 },
 
 throh: {
-num: 538,
+morality: 538,
 name: "Throh",
 types: ["Fighting", "Rock"],
 gender: "F",
@@ -7053,7 +7053,7 @@ weightkg: 55.5,
 },
 
 sawk: {
-num: 539,
+morality: 539,
 name: "Sawk",
 types: ["Fighting", "Ice"],
 gender: "F",
@@ -7063,7 +7063,7 @@ weightkg: 51,
 },
 
 sewaddle: {
-num: 540,
+morality: 540,
 name: "Sewaddle",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -7073,7 +7073,7 @@ weightkg: 2.5,
 },
 
 swadloon: {
-num: 541,
+morality: 541,
 name: "Swadloon",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -7083,7 +7083,7 @@ weightkg: 7.3,
 },
 
 leavanny: {
-num: 542,
+morality: 542,
 name: "Leavanny",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -7093,7 +7093,7 @@ weightkg: 20.5,
 },
 
 venipede: {
-num: 543,
+morality: 543,
 name: "Venipede",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -7103,7 +7103,7 @@ weightkg: 5.3,
 },
 
 whirlipede: {
-num: 544,
+morality: 544,
 name: "Whirlipede",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -7113,7 +7113,7 @@ weightkg: 58.5,
 },
 
 scolipede: {
-num: 545,
+morality: 545,
 name: "Scolipede",
 types: ["Bug", "Poison"],
 gender: "F",
@@ -7123,7 +7123,7 @@ weightkg: 200.5,
 },
 
 cottonee: {
-num: 546,
+morality: 546,
 name: "Cottonee",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -7133,7 +7133,7 @@ weightkg: 0.6,
 },
 
 whimsicott: {
-num: 547,
+morality: 547,
 name: "Whimsicott",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -7143,7 +7143,7 @@ weightkg: 6.6,
 },
 
 petilil: {
-num: 548,
+morality: 548,
 name: "Petilil",
 types: ["Grass"],
 gender: "F",
@@ -7153,7 +7153,7 @@ weightkg: 6.6,
 },
 
 lilligant: {
-num: 549,
+morality: 549,
 name: "Lilligant",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -7163,7 +7163,7 @@ weightkg: 16.3,
 },
 
 lilliganthisui: {
-num: 549,
+morality: 549,
 name: "Lilligant-Hisui",
 types: ["Fighting", "Grass"],
 gender: "F",
@@ -7173,7 +7173,7 @@ weightkg: 19.2,
 },
 
 basculin: {
-num: 550,
+morality: 550,
 name: "Basculin",
 types: ["Fire", "Water"],
 gender: "F",
@@ -7183,7 +7183,7 @@ weightkg: 18,
 },
 
 basculinbluestriped: {
-num: 550,
+morality: 550,
 name: "Basculin-Blue-Striped",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -7193,7 +7193,7 @@ weightkg: 18,
 },
 
 basculinwhitestriped: {
-num: 550,
+morality: 550,
 name: "Basculin-White-Striped",
 types: ["Ice"],
 gender: "F",
@@ -7204,7 +7204,7 @@ gen: 8,
 },
 
 sandile: {
-num: 551,
+morality: 551,
 name: "Sandile",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -7214,7 +7214,7 @@ weightkg: 15.2,
 },
 
 krokorok: {
-num: 552,
+morality: 552,
 name: "Krokorok",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -7224,7 +7224,7 @@ weightkg: 33.4,
 },
 
 krookodile: {
-num: 553,
+morality: 553,
 name: "Krookodile",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -7234,7 +7234,7 @@ weightkg: 96.3,
 },
 
 darumaka: {
-num: 554,
+morality: 554,
 name: "Darumaka",
 types: ["Fire"],
 gender: "F",
@@ -7244,7 +7244,7 @@ weightkg: 37.5,
 },
 
 darumakagalar: {
-num: 554,
+morality: 554,
 name: "Darumaka-Galar",
 types: ["Ice"],
 gender: "F",
@@ -7254,7 +7254,7 @@ weightkg: 40,
 },
 
 darmanitan: {
-num: 555,
+morality: 555,
 name: "Darmanitan",
 types: ["Fire", "Psychic"],
 gender: "F",
@@ -7264,7 +7264,7 @@ weightkg: 92.9,
 },
 
 darmanitanzen: {
-num: 555,
+morality: 555,
 name: "Darmanitan-Zen",
 types: ["Fire", "Psychic"],
 gender: "F",
@@ -7276,7 +7276,7 @@ battleOnly: "Darmanitan",
 },
 
 darmanitangalar: {
-num: 555,
+morality: 555,
 name: "Darmanitan-Galar",
 types: ["Fire", "Ice"],
 gender: "F",
@@ -7286,7 +7286,7 @@ weightkg: 120,
 },
 
 darmanitangalarzen: {
-num: 555,
+morality: 555,
 name: "Darmanitan-Galar-Zen",
 types: ["Fire", "Ice"],
 gender: "F",
@@ -7298,7 +7298,7 @@ battleOnly: "Darmanitan-Galar",
 },
 
 maractus: {
-num: 556,
+morality: 556,
 name: "Maractus",
 types: ["Grass", "Water"],
 gender: "F",
@@ -7308,7 +7308,7 @@ weightkg: 28,
 },
 
 dwebble: {
-num: 557,
+morality: 557,
 name: "Dwebble",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -7318,7 +7318,7 @@ weightkg: 14.5,
 },
 
 crustle: {
-num: 558,
+morality: 558,
 name: "Crustle",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -7328,7 +7328,7 @@ weightkg: 200,
 },
 
 scraggy: {
-num: 559,
+morality: 559,
 name: "Scraggy",
 types: ["Fighting"],
 gender: "F",
@@ -7338,7 +7338,7 @@ weightkg: 11.8,
 },
 
 scrafty: {
-num: 560,
+morality: 560,
 name: "Scrafty",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -7348,7 +7348,7 @@ weightkg: 30,
 },
 
 sigilyph: {
-num: 561,
+morality: 561,
 name: "Sigilyph",
 types: ["Flying", "Psychic"],
 gender: "F",
@@ -7358,7 +7358,7 @@ weightkg: 14,
 },
 
 yamask: {
-num: 562,
+morality: 562,
 name: "Yamask",
 types: ["Ghost"],
 gender: "F",
@@ -7368,7 +7368,7 @@ weightkg: 1.5,
 },
 
 yamaskgalar: {
-num: 562,
+morality: 562,
 name: "Yamask-Galar",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -7378,7 +7378,7 @@ weightkg: 1.5,
 },
 
 cofagrigus: {
-num: 563,
+morality: 563,
 name: "Cofagrigus",
 types: ["Ghost"],
 gender: "F",
@@ -7388,7 +7388,7 @@ weightkg: 76.5,
 },
 
 tirtouga: {
-num: 564,
+morality: 564,
 name: "Tirtouga",
 types: ["Ice", "Rock"],
 gender: "F",
@@ -7398,7 +7398,7 @@ weightkg: 16.5,
 },
 
 carracosta: {
-num: 565,
+morality: 565,
 name: "Carracosta",
 types: ["Ice", "Rock"],
 gender: "F",
@@ -7408,7 +7408,7 @@ weightkg: 81,
 },
 
 archen: {
-num: 566,
+morality: 566,
 name: "Archen",
 types: ["Flying", "Rock"],
 gender: "F",
@@ -7418,7 +7418,7 @@ weightkg: 9.5,
 },
 
 archeops: {
-num: 567,
+morality: 567,
 name: "Archeops",
 types: ["Flying", "Rock"],
 gender: "F",
@@ -7428,7 +7428,7 @@ weightkg: 32,
 },
 
 trubbish: {
-num: 568,
+morality: 568,
 name: "Trubbish",
 types: ["Poison"],
 gender: "F",
@@ -7438,7 +7438,7 @@ weightkg: 31,
 },
 
 garbodor: {
-num: 569,
+morality: 569,
 name: "Garbodor",
 types: ["Poison"],
 gender: "F",
@@ -7448,7 +7448,7 @@ weightkg: 107.3,
 },
 
 garbodorgmax: {
-num: 569,
+morality: 569,
 name: "Garbodor-Gmax",
 types: ["Poison"],
 gender: "F",
@@ -7458,7 +7458,7 @@ weightkg: 0,
 },
 
 zorua: {
-num: 570,
+morality: 570,
 name: "Zorua",
 types: ["Dark"],
 gender: "F",
@@ -7468,7 +7468,7 @@ weightkg: 12.5,
 },
 
 zoruahisui: {
-num: 570,
+morality: 570,
 name: "Zorua-Hisui",
 types: ["Ghost", "Normal"],
 gender: "F",
@@ -7478,7 +7478,7 @@ weightkg: 12.5,
 },
 
 zoroark: {
-num: 571,
+morality: 571,
 name: "Zoroark",
 types: ["Dark", "Ghost"],
 gender: "F",
@@ -7488,7 +7488,7 @@ weightkg: 77,
 },
 
 zoroarkhisui: {
-num: 571,
+morality: 571,
 name: "Zoroark-Hisui",
 types: ["Ghost", "Normal"],
 gender: "F",
@@ -7498,7 +7498,7 @@ weightkg: 77,
 },
 
 minccino: {
-num: 572,
+morality: 572,
 name: "Minccino",
 types: ["Fairy"],
 gender: "F",
@@ -7508,7 +7508,7 @@ weightkg: 5.8,
 },
 
 cinccino: {
-num: 573,
+morality: 573,
 name: "Cinccino",
 types: ["Fairy", "Fighting"],
 gender: "F",
@@ -7518,7 +7518,7 @@ weightkg: 7.5,
 },
 
 gothita: {
-num: 574,
+morality: 574,
 name: "Gothita",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -7528,7 +7528,7 @@ weightkg: 5.8,
 },
 
 gothorita: {
-num: 575,
+morality: 575,
 name: "Gothorita",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -7538,7 +7538,7 @@ weightkg: 18,
 },
 
 gothitelle: {
-num: 576,
+morality: 576,
 name: "Gothitelle",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -7548,7 +7548,7 @@ weightkg: 44,
 },
 
 solosis: {
-num: 577,
+morality: 577,
 name: "Solosis",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -7558,7 +7558,7 @@ weightkg: 1,
 },
 
 duosion: {
-num: 578,
+morality: 578,
 name: "Duosion",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -7568,7 +7568,7 @@ weightkg: 8,
 },
 
 reuniclus: {
-num: 579,
+morality: 579,
 name: "Reuniclus",
 types: ["Poison", "Psychic"],
 gender: "F",
@@ -7578,7 +7578,7 @@ weightkg: 20.1,
 },
 
 ducklett: {
-num: 580,
+morality: 580,
 name: "Ducklett",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -7588,7 +7588,7 @@ weightkg: 5.5,
 },
 
 swanna: {
-num: 581,
+morality: 581,
 name: "Swanna",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -7598,7 +7598,7 @@ weightkg: 24.2,
 },
 
 vanillite: {
-num: 582,
+morality: 582,
 name: "Vanillite",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -7608,7 +7608,7 @@ weightkg: 5.7,
 },
 
 vanillish: {
-num: 583,
+morality: 583,
 name: "Vanillish",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -7618,7 +7618,7 @@ weightkg: 41,
 },
 
 vanilluxe: {
-num: 584,
+morality: 584,
 name: "Vanilluxe",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -7628,7 +7628,7 @@ weightkg: 57.5,
 },
 
 deerling: {
-num: 585,
+morality: 585,
 name: "Deerling",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -7638,7 +7638,7 @@ weightkg: 19.5,
 },
 
 sawsbuck: {
-num: 586,
+morality: 586,
 name: "Sawsbuck",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -7648,7 +7648,7 @@ weightkg: 92.5,
 },
 
 emolga: {
-num: 587,
+morality: 587,
 name: "Emolga",
 types: ["Electric", "Ground"],
 gender: "F",
@@ -7658,7 +7658,7 @@ weightkg: 5,
 },
 
 karrablast: {
-num: 588,
+morality: 588,
 name: "Karrablast",
 types: ["Bug"],
 gender: "F",
@@ -7668,7 +7668,7 @@ weightkg: 5.9,
 },
 
 escavalier: {
-num: 589,
+morality: 589,
 name: "Escavalier",
 types: ["Bug", "Steel"],
 gender: "F",
@@ -7678,7 +7678,7 @@ weightkg: 33,
 },
 
 foongus: {
-num: 590,
+morality: 590,
 name: "Foongus",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -7688,7 +7688,7 @@ weightkg: 1,
 },
 
 amoonguss: {
-num: 591,
+morality: 591,
 name: "Amoonguss",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -7698,7 +7698,7 @@ weightkg: 10.5,
 },
 
 frillish: {
-num: 592,
+morality: 592,
 name: "Frillish",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -7708,7 +7708,7 @@ weightkg: 33,
 },
 
 jellicent: {
-num: 593,
+morality: 593,
 name: "Jellicent",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -7718,7 +7718,7 @@ weightkg: 135,
 },
 
 alomomola: {
-num: 594,
+morality: 594,
 name: "Alomomola",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -7728,7 +7728,7 @@ weightkg: 31.6,
 },
 
 joltik: {
-num: 595,
+morality: 595,
 name: "Joltik",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -7738,7 +7738,7 @@ weightkg: 0.6,
 },
 
 galvantula: {
-num: 596,
+morality: 596,
 name: "Galvantula",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -7748,7 +7748,7 @@ weightkg: 14.3,
 },
 
 ferroseed: {
-num: 597,
+morality: 597,
 name: "Ferroseed",
 types: ["Grass", "Steel"],
 gender: "F",
@@ -7758,7 +7758,7 @@ weightkg: 18.8,
 },
 
 ferrothorn: {
-num: 598,
+morality: 598,
 name: "Ferrothorn",
 types: ["Grass", "Steel"],
 gender: "F",
@@ -7768,7 +7768,7 @@ weightkg: 110,
 },
 
 klink: {
-num: 599,
+morality: 599,
 name: "Klink",
 types: ["Steel"],
 gender: "F",
@@ -7778,7 +7778,7 @@ weightkg: 21,
 },
 
 klang: {
-num: 600,
+morality: 600,
 name: "Klang",
 types: ["Steel"],
 gender: "F",
@@ -7788,7 +7788,7 @@ weightkg: 51,
 },
 
 klinklang: {
-num: 601,
+morality: 601,
 name: "Klinklang",
 types: ["Steel"],
 gender: "F",
@@ -7798,7 +7798,7 @@ weightkg: 81,
 },
 
 tynamo: {
-num: 602,
+morality: 602,
 name: "Tynamo",
 types: ["Electric"],
 gender: "F",
@@ -7808,7 +7808,7 @@ weightkg: 0.3,
 },
 
 eelektrik: {
-num: 603,
+morality: 603,
 name: "Eelektrik",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -7818,7 +7818,7 @@ weightkg: 22,
 },
 
 eelektross: {
-num: 604,
+morality: 604,
 name: "Eelektross",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -7828,7 +7828,7 @@ weightkg: 80.5,
 },
 
 elgyem: {
-num: 605,
+morality: 605,
 name: "Elgyem",
 types: ["Psychic", "Rock"],
 gender: "F",
@@ -7838,7 +7838,7 @@ weightkg: 9,
 },
 
 beheeyem: {
-num: 606,
+morality: 606,
 name: "Beheeyem",
 types: ["Psychic", "Rock"],
 gender: "F",
@@ -7848,7 +7848,7 @@ weightkg: 34.5,
 },
 
 litwick: {
-num: 607,
+morality: 607,
 name: "Litwick",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -7858,7 +7858,7 @@ weightkg: 3.1,
 },
 
 lampent: {
-num: 608,
+morality: 608,
 name: "Lampent",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -7868,7 +7868,7 @@ weightkg: 13,
 },
 
 chandelure: {
-num: 609,
+morality: 609,
 name: "Chandelure",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -7878,7 +7878,7 @@ weightkg: 34.3,
 },
 
 axew: {
-num: 610,
+morality: 610,
 name: "Axew",
 types: ["Dragon"],
 gender: "F",
@@ -7888,7 +7888,7 @@ weightkg: 18,
 },
 
 fraxure: {
-num: 611,
+morality: 611,
 name: "Fraxure",
 types: ["Dragon"],
 gender: "F",
@@ -7898,7 +7898,7 @@ weightkg: 36,
 },
 
 haxorus: {
-num: 612,
+morality: 612,
 name: "Haxorus",
 types: ["Dragon"],
 gender: "F",
@@ -7908,7 +7908,7 @@ weightkg: 105.5,
 },
 
 cubchoo: {
-num: 613,
+morality: 613,
 name: "Cubchoo",
 types: ["Ice", "Normal"],
 gender: "F",
@@ -7918,7 +7918,7 @@ weightkg: 8.5,
 },
 
 beartic: {
-num: 614,
+morality: 614,
 name: "Beartic",
 types: ["Ice", "Normal"],
 gender: "F",
@@ -7928,7 +7928,7 @@ weightkg: 260,
 },
 
 cryogonal: {
-num: 615,
+morality: 615,
 name: "Cryogonal",
 types: ["Ice", "Steel"],
 gender: "F",
@@ -7938,7 +7938,7 @@ weightkg: 148,
 },
 
 shelmet: {
-num: 616,
+morality: 616,
 name: "Shelmet",
 types: ["Bug"],
 gender: "F",
@@ -7948,7 +7948,7 @@ weightkg: 7.7,
 },
 
 accelgor: {
-num: 617,
+morality: 617,
 name: "Accelgor",
 types: ["Bug", "Ghost"],
 gender: "F",
@@ -7958,7 +7958,7 @@ weightkg: 25.3,
 },
 
 stunfisk: {
-num: 618,
+morality: 618,
 name: "Stunfisk",
 types: ["Electric", "Ground"],
 gender: "F",
@@ -7968,7 +7968,7 @@ weightkg: 11,
 },
 
 stunfiskgalar: {
-num: 618,
+morality: 618,
 name: "Stunfisk-Galar",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -7978,7 +7978,7 @@ weightkg: 20.5,
 },
 
 mienfoo: {
-num: 619,
+morality: 619,
 name: "Mienfoo",
 types: ["Fighting"],
 gender: "F",
@@ -7988,7 +7988,7 @@ weightkg: 20,
 },
 
 mienshao: {
-num: 620,
+morality: 620,
 name: "Mienshao",
 types: ["Fighting", "Ghost"],
 gender: "F",
@@ -7998,7 +7998,7 @@ weightkg: 35.5,
 },
 
 druddigon: {
-num: 621,
+morality: 621,
 name: "Druddigon",
 types: ["Dragon"],
 gender: "F",
@@ -8008,7 +8008,7 @@ weightkg: 139,
 },
 
 golett: {
-num: 622,
+morality: 622,
 name: "Golett",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8018,7 +8018,7 @@ weightkg: 92,
 },
 
 golurk: {
-num: 623,
+morality: 623,
 name: "Golurk",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8028,7 +8028,7 @@ weightkg: 330,
 },
 
 pawniard: {
-num: 624,
+morality: 624,
 name: "Pawniard",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -8038,7 +8038,7 @@ weightkg: 10.2,
 },
 
 bisharp: {
-num: 625,
+morality: 625,
 name: "Bisharp",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -8048,7 +8048,7 @@ weightkg: 70,
 },
 
 bouffalant: {
-num: 626,
+morality: 626,
 name: "Bouffalant",
 types: ["Normal", "Rock"],
 gender: "F",
@@ -8058,7 +8058,7 @@ weightkg: 94.6,
 },
 
 rufflet: {
-num: 627,
+morality: 627,
 name: "Rufflet",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -8068,7 +8068,7 @@ weightkg: 10.5,
 },
 
 braviary: {
-num: 628,
+morality: 628,
 name: "Braviary",
 types: ["Flying", "Ice"],
 gender: "F",
@@ -8078,7 +8078,7 @@ weightkg: 41,
 },
 
 braviaryhisui: {
-num: 628,
+morality: 628,
 name: "Braviary-Hisui",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -8088,7 +8088,7 @@ weightkg: 43.4,
 },
 
 vullaby: {
-num: 629,
+morality: 629,
 name: "Vullaby",
 types: ["Dark", "Flying"],
 gender: "F",
@@ -8098,7 +8098,7 @@ weightkg: 9,
 },
 
 mandibuzz: {
-num: 630,
+morality: 630,
 name: "Mandibuzz",
 types: ["Dark", "Flying"],
 gender: "F",
@@ -8108,7 +8108,7 @@ weightkg: 39.5,
 },
 
 heatmor: {
-num: 631,
+morality: 631,
 name: "Heatmor",
 types: ["Fire"],
 gender: "F",
@@ -8118,7 +8118,7 @@ weightkg: 58,
 },
 
 durant: {
-num: 632,
+morality: 632,
 name: "Durant",
 types: ["Bug", "Steel"],
 gender: "F",
@@ -8128,7 +8128,7 @@ weightkg: 33,
 },
 
 deino: {
-num: 633,
+morality: 633,
 name: "Deino",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -8138,7 +8138,7 @@ weightkg: 17.3,
 },
 
 zweilous: {
-num: 634,
+morality: 634,
 name: "Zweilous",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -8148,7 +8148,7 @@ weightkg: 50,
 },
 
 hydreigon: {
-num: 635,
+morality: 635,
 name: "Hydreigon",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -8158,7 +8158,7 @@ weightkg: 160,
 },
 
 larvesta: {
-num: 636,
+morality: 636,
 name: "Larvesta",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -8168,7 +8168,7 @@ weightkg: 28.8,
 },
 
 volcarona: {
-num: 637,
+morality: 637,
 name: "Volcarona",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -8178,7 +8178,7 @@ weightkg: 46,
 },
 
 cobalion: {
-num: 638,
+morality: 638,
 name: "Cobalion",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -8188,7 +8188,7 @@ weightkg: 250,
 },
 
 terrakion: {
-num: 639,
+morality: 639,
 name: "Terrakion",
 types: ["Fighting", "Rock"],
 gender: "F",
@@ -8198,7 +8198,7 @@ weightkg: 260,
 },
 
 virizion: {
-num: 640,
+morality: 640,
 name: "Virizion",
 types: ["Fighting", "Grass"],
 gender: "F",
@@ -8208,7 +8208,7 @@ weightkg: 200,
 },
 
 tornadus: {
-num: 641,
+morality: 641,
 name: "Tornadus",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -8218,7 +8218,7 @@ weightkg: 63,
 },
 
 tornadustherian: {
-num: 641,
+morality: 641,
 name: "Tornadus-Therian",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -8228,7 +8228,7 @@ weightkg: 63,
 },
 
 thundurus: {
-num: 642,
+morality: 642,
 name: "Thundurus",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -8238,7 +8238,7 @@ weightkg: 61,
 },
 
 thundurustherian: {
-num: 642,
+morality: 642,
 name: "Thundurus-Therian",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -8248,7 +8248,7 @@ weightkg: 61,
 },
 
 reshiram: {
-num: 643,
+morality: 643,
 name: "Reshiram",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -8258,7 +8258,7 @@ weightkg: 330,
 },
 
 zekrom: {
-num: 644,
+morality: 644,
 name: "Zekrom",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -8268,7 +8268,7 @@ weightkg: 345,
 },
 
 landorus: {
-num: 645,
+morality: 645,
 name: "Landorus",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -8278,7 +8278,7 @@ weightkg: 68,
 },
 
 landorustherian: {
-num: 645,
+morality: 645,
 name: "Landorus-Therian",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -8288,7 +8288,7 @@ weightkg: 68,
 },
 
 kyurem: {
-num: 646,
+morality: 646,
 name: "Kyurem",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -8298,7 +8298,7 @@ weightkg: 325,
 },
 
 kyuremblack: {
-num: 646,
+morality: 646,
 name: "Kyurem-Black",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -8308,7 +8308,7 @@ weightkg: 325,
 },
 
 kyuremwhite: {
-num: 646,
+morality: 646,
 name: "Kyurem-White",
 types: ["Fire", "Ice"],
 gender: "F",
@@ -8318,7 +8318,7 @@ weightkg: 325,
 },
 
 keldeo: {
-num: 647,
+morality: 647,
 name: "Keldeo",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -8328,7 +8328,7 @@ weightkg: 48.5,
 },
 
 keldeoresolute: {
-num: 647,
+morality: 647,
 name: "Keldeo-Resolute",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -8339,7 +8339,7 @@ requiredMove: "Secret Sword",
 },
 
 meloetta: {
-num: 648,
+morality: 648,
 name: "Meloetta",
 types: ["Normal", "Psychic"],
 gender: "F",
@@ -8349,7 +8349,7 @@ weightkg: 6.5,
 },
 
 meloettapirouette: {
-num: 648,
+morality: 648,
 name: "Meloetta-Pirouette",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -8361,7 +8361,7 @@ battleOnly: "Meloetta",
 },
 
 genesect: {
-num: 649,
+morality: 649,
 name: "Genesect",
 types: ["Bug", "Dark"],
 gender: "F",
@@ -8421,7 +8421,7 @@ weightkg: 82.5,
 
 
 chespin: {
-num: 650,
+morality: 650,
 name: "Chespin",
 types: ["Grass"],
 gender: "F",
@@ -8431,7 +8431,7 @@ weightkg: 9,
 },
 
 quilladin: {
-num: 651,
+morality: 651,
 name: "Quilladin",
 types: ["Grass"],
 gender: "F",
@@ -8441,7 +8441,7 @@ weightkg: 29,
 },
 
 chesnaught: {
-num: 652,
+morality: 652,
 name: "Chesnaught",
 types: ["Grass", "Steel"],
 gender: "F",
@@ -8451,7 +8451,7 @@ weightkg: 90,
 },
 
 fennekin: {
-num: 653,
+morality: 653,
 name: "Fennekin",
 types: ["Fire"],
 gender: "F",
@@ -8461,7 +8461,7 @@ weightkg: 9.4,
 },
 
 braixen: {
-num: 654,
+morality: 654,
 name: "Braixen",
 types: ["Fire"],
 gender: "F",
@@ -8471,7 +8471,7 @@ weightkg: 14.5,
 },
 
 delphox: {
-num: 655,
+morality: 655,
 name: "Delphox",
 types: ["Fire", "Psychic"],
 gender: "F",
@@ -8481,7 +8481,7 @@ weightkg: 39,
 },
 
 froakie: {
-num: 656,
+morality: 656,
 name: "Froakie",
 types: ["Water"],
 gender: "F",
@@ -8491,7 +8491,7 @@ weightkg: 7,
 },
 
 frogadier: {
-num: 657,
+morality: 657,
 name: "Frogadier",
 types: ["Water"],
 gender: "F",
@@ -8501,7 +8501,7 @@ weightkg: 10.9,
 },
 
 greninja: {
-num: 658,
+morality: 658,
 name: "Greninja",
 types: ["Dark", "Water"],
 gender: "F",
@@ -8512,7 +8512,7 @@ weightkg: 40,
 },
 
 greninjaash: {
-num: 658,
+morality: 658,
 name: "Greninja-Ash",
 types: ["Dark", "Water"],
 gender: "F",
@@ -8525,7 +8525,7 @@ gen: 7,
 },
 
 bunnelby: {
-num: 659,
+morality: 659,
 name: "Bunnelby",
 types: ["Normal"],
 gender: "F",
@@ -8535,7 +8535,7 @@ weightkg: 5,
 },
 
 diggersby: {
-num: 660,
+morality: 660,
 name: "Diggersby",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -8545,7 +8545,7 @@ weightkg: 42.4,
 },
 
 fletchling: {
-num: 661,
+morality: 661,
 name: "Fletchling",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -8555,7 +8555,7 @@ weightkg: 1.7,
 },
 
 fletchinder: {
-num: 662,
+morality: 662,
 name: "Fletchinder",
 types: ["Fire", "Flying"],
 gender: "F",
@@ -8565,7 +8565,7 @@ weightkg: 16,
 },
 
 talonflame: {
-num: 663,
+morality: 663,
 name: "Talonflame",
 types: ["Fire", "Flying"],
 gender: "F",
@@ -8575,7 +8575,7 @@ weightkg: 24.5,
 },
 
 scatterbug: {
-num: 664,
+morality: 664,
 name: "Scatterbug",
 types: ["Bug"],
 gender: "F",
@@ -8586,7 +8586,7 @@ weightkg: 2.5,
 },
 
 spewpa: {
-num: 665,
+morality: 665,
 name: "Spewpa",
 types: ["Bug"],
 gender: "F",
@@ -8597,7 +8597,7 @@ weightkg: 8.4,
 },
 
 vivillon: {
-num: 666,
+morality: 666,
 name: "Vivillon",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -8629,7 +8629,7 @@ weightkg: 17,
 },
 
 vivillonfancy: {
-num: 666,
+morality: 666,
 name: "Vivillon-Fancy",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -8639,7 +8639,7 @@ weightkg: 17,
 },
 
 vivillonpokeball: {
-num: 666,
+morality: 666,
 name: "Vivillon-Pokeball",
 types: ["Bug", "Flying"],
 gender: "F",
@@ -8649,7 +8649,7 @@ weightkg: 17,
 },
 
 litleo: {
-num: 667,
+morality: 667,
 name: "Litleo",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -8659,7 +8659,7 @@ weightkg: 13.5,
 },
 
 pyroar: {
-num: 668,
+morality: 668,
 name: "Pyroar",
 types: ["Fire", "Ground"],
 gender: "F",
@@ -8669,7 +8669,7 @@ weightkg: 81.5,
 },
 
 flabebe: {
-num: 669,
+morality: 669,
 name: "Flabe\u0301be\u0301",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -8679,7 +8679,7 @@ weightkg: 0.1,
 },
 
 floette: {
-num: 670,
+morality: 670,
 name: "Floette",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -8689,7 +8689,7 @@ weightkg: 0.9,
 },
 
 floetteeternal: {
-num: 670,
+morality: 670,
 name: "Floette-Eternal",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -8699,7 +8699,7 @@ weightkg: 0.9,
 },
 
 florges: {
-num: 671,
+morality: 671,
 name: "Florges",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -8709,7 +8709,7 @@ weightkg: 10,
 },
 
 skiddo: {
-num: 672,
+morality: 672,
 name: "Skiddo",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -8719,7 +8719,7 @@ weightkg: 31,
 },
 
 gogoat: {
-num: 673,
+morality: 673,
 name: "Gogoat",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -8729,7 +8729,7 @@ weightkg: 91,
 },
 
 pancham: {
-num: 674,
+morality: 674,
 name: "Pancham",
 types: ["Fighting"],
 gender: "F",
@@ -8739,7 +8739,7 @@ weightkg: 8,
 },
 
 pangoro: {
-num: 675,
+morality: 675,
 name: "Pangoro",
 types: ["Dark", "Fighting"],
 gender: "F",
@@ -8749,7 +8749,7 @@ weightkg: 136,
 },
 
 furfrou: {
-num: 676,
+morality: 676,
 name: "Furfrou",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -8759,7 +8759,7 @@ weightkg: 28,
 },
 
 espurr: {
-num: 677,
+morality: 677,
 name: "Espurr",
 types: ["Psychic"],
 gender: "F",
@@ -8769,7 +8769,7 @@ weightkg: 3.5,
 },
 
 meowstic: {
-num: 678,
+morality: 678,
 name: "Meowstic",
 types: ["Psychic"],
 gender: "F",
@@ -8779,7 +8779,7 @@ weightkg: 8.5,
 },
 
 meowsticf: {
-num: 678,
+morality: 678,
 name: "Meowstic-F",
 types: ["Psychic"],
 gender: "F",
@@ -8789,7 +8789,7 @@ weightkg: 8.5,
 },
 
 honedge: {
-num: 679,
+morality: 679,
 name: "Honedge",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8799,7 +8799,7 @@ weightkg: 2,
 },
 
 doublade: {
-num: 680,
+morality: 680,
 name: "Doublade",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8809,7 +8809,7 @@ weightkg: 4.5,
 },
 
 aegislash: {
-num: 681,
+morality: 681,
 name: "Aegislash",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8819,7 +8819,7 @@ weightkg: 53,
 },
 
 aegislashblade: {
-num: 681,
+morality: 681,
 name: "Aegislash-Blade",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -8831,7 +8831,7 @@ battleOnly: "Aegislash",
 },
 
 spritzee: {
-num: 682,
+morality: 682,
 name: "Spritzee",
 types: ["Fairy"],
 gender: "F",
@@ -8841,7 +8841,7 @@ weightkg: 0.5,
 },
 
 aromatisse: {
-num: 683,
+morality: 683,
 name: "Aromatisse",
 types: ["Fairy", "Poison"],
 gender: "F",
@@ -8851,7 +8851,7 @@ weightkg: 15.5,
 },
 
 swirlix: {
-num: 684,
+morality: 684,
 name: "Swirlix",
 types: ["Fairy"],
 gender: "F",
@@ -8861,7 +8861,7 @@ weightkg: 3.5,
 },
 
 slurpuff: {
-num: 685,
+morality: 685,
 name: "Slurpuff",
 types: ["Fairy"],
 gender: "F",
@@ -8871,7 +8871,7 @@ weightkg: 5,
 },
 
 inkay: {
-num: 686,
+morality: 686,
 name: "Inkay",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -8881,7 +8881,7 @@ weightkg: 3.5,
 },
 
 malamar: {
-num: 687,
+morality: 687,
 name: "Malamar",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -8891,7 +8891,7 @@ weightkg: 47,
 },
 
 binacle: {
-num: 688,
+morality: 688,
 name: "Binacle",
 types: ["Rock", "Water"],
 gender: "F",
@@ -8901,7 +8901,7 @@ weightkg: 31,
 },
 
 barbaracle: {
-num: 689,
+morality: 689,
 name: "Barbaracle",
 types: ["Rock", "Water"],
 gender: "F",
@@ -8911,7 +8911,7 @@ weightkg: 96,
 },
 
 skrelp: {
-num: 690,
+morality: 690,
 name: "Skrelp",
 types: ["Poison", "Water"],
 gender: "F",
@@ -8921,7 +8921,7 @@ weightkg: 7.3,
 },
 
 dragalge: {
-num: 691,
+morality: 691,
 name: "Dragalge",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -8931,7 +8931,7 @@ weightkg: 81.5,
 },
 
 clauncher: {
-num: 692,
+morality: 692,
 name: "Clauncher",
 types: ["Water"],
 gender: "F",
@@ -8941,7 +8941,7 @@ weightkg: 8.3,
 },
 
 clawitzer: {
-num: 693,
+morality: 693,
 name: "Clawitzer",
 types: ["Fire", "Water"],
 gender: "F",
@@ -8951,7 +8951,7 @@ weightkg: 35.3,
 },
 
 helioptile: {
-num: 694,
+morality: 694,
 name: "Helioptile",
 types: ["Electric"],
 gender: "F",
@@ -8961,7 +8961,7 @@ weightkg: 6,
 },
 
 heliolisk: {
-num: 695,
+morality: 695,
 name: "Heliolisk",
 types: ["Electric", "Fire"],
 gender: "F",
@@ -8971,7 +8971,7 @@ weightkg: 21,
 },
 
 tyrunt: {
-num: 696,
+morality: 696,
 name: "Tyrunt",
 types: ["Dragon", "Rock"],
 gender: "F",
@@ -8981,7 +8981,7 @@ weightkg: 26,
 },
 
 tyrantrum: {
-num: 697,
+morality: 697,
 name: "Tyrantrum",
 types: ["Dragon", "Rock"],
 gender: "F",
@@ -8991,7 +8991,7 @@ weightkg: 270,
 },
 
 amaura: {
-num: 698,
+morality: 698,
 name: "Amaura",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -9001,7 +9001,7 @@ weightkg: 25.2,
 },
 
 aurorus: {
-num: 699,
+morality: 699,
 name: "Aurorus",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -9011,7 +9011,7 @@ weightkg: 225,
 },
 
 sylveon: {
-num: 700,
+morality: 700,
 name: "Sylveon",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -9021,7 +9021,7 @@ weightkg: 23.5,
 },
 
 hawlucha: {
-num: 701,
+morality: 701,
 name: "Hawlucha",
 types: ["Fighting", "Flying"],
 gender: "F",
@@ -9031,7 +9031,7 @@ weightkg: 21.5,
 },
 
 dedenne: {
-num: 702,
+morality: 702,
 name: "Dedenne",
 types: ["Electric", "Fairy"],
 gender: "F",
@@ -9041,7 +9041,7 @@ weightkg: 2.2,
 },
 
 carbink: {
-num: 703,
+morality: 703,
 name: "Carbink",
 types: ["Fairy", "Rock"],
 gender: "F",
@@ -9051,7 +9051,7 @@ weightkg: 5.7,
 },
 
 goomy: {
-num: 704,
+morality: 704,
 name: "Goomy",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -9061,7 +9061,7 @@ weightkg: 2.8,
 },
 
 sliggoo: {
-num: 705,
+morality: 705,
 name: "Sliggoo",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -9071,7 +9071,7 @@ weightkg: 17.5,
 },
 
 sliggoohisui: {
-num: 705,
+morality: 705,
 name: "Sliggoo-Hisui",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -9081,7 +9081,7 @@ weightkg: 68.5,
 },
 
 goodra: {
-num: 706,
+morality: 706,
 name: "Goodra",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -9091,7 +9091,7 @@ weightkg: 150.5,
 },
 
 goodrahisui: {
-num: 706,
+morality: 706,
 name: "Goodra-Hisui",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -9101,7 +9101,7 @@ weightkg: 334.1,
 },
 
 klefki: {
-num: 707,
+morality: 707,
 name: "Klefki",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -9111,7 +9111,7 @@ weightkg: 3,
 },
 
 phantump: {
-num: 708,
+morality: 708,
 name: "Phantump",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9121,7 +9121,7 @@ weightkg: 7,
 },
 
 trevenant: {
-num: 709,
+morality: 709,
 name: "Trevenant",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9131,7 +9131,7 @@ weightkg: 71,
 },
 
 pumpkaboo: {
-num: 710,
+morality: 710,
 name: "Pumpkaboo",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9141,7 +9141,7 @@ weightkg: 5,
 },
 
 pumpkaboosmall: {
-num: 710,
+morality: 710,
 name: "Pumpkaboo-Small",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9151,7 +9151,7 @@ weightkg: 3.5,
 },
 
 pumpkaboolarge: {
-num: 710,
+morality: 710,
 name: "Pumpkaboo-Large",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9161,7 +9161,7 @@ weightkg: 7.5,
 },
 
 pumpkaboosuper: {
-num: 710,
+morality: 710,
 name: "Pumpkaboo-Super",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9171,7 +9171,7 @@ weightkg: 15,
 },
 
 gourgeist: {
-num: 711,
+morality: 711,
 name: "Gourgeist",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9181,7 +9181,7 @@ weightkg: 12.5,
 },
 
 gourgeistsmall: {
-num: 711,
+morality: 711,
 name: "Gourgeist-Small",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9191,7 +9191,7 @@ weightkg: 9.5,
 },
 
 gourgeistlarge: {
-num: 711,
+morality: 711,
 name: "Gourgeist-Large",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9201,7 +9201,7 @@ weightkg: 14,
 },
 
 gourgeistsuper: {
-num: 711,
+morality: 711,
 name: "Gourgeist-Super",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -9211,7 +9211,7 @@ weightkg: 39,
 },
 
 bergmite: {
-num: 712,
+morality: 712,
 name: "Bergmite",
 types: ["Bug", "Ice"],
 gender: "F",
@@ -9221,7 +9221,7 @@ weightkg: 99.5,
 },
 
 avalugg: {
-num: 713,
+morality: 713,
 name: "Avalugg",
 types: ["Bug", "Ice"],
 gender: "F",
@@ -9231,7 +9231,7 @@ weightkg: 505,
 },
 
 avalugghisui: {
-num: 713,
+morality: 713,
 name: "Avalugg-Hisui",
 types: ["Ice", "Rock"],
 gender: "F",
@@ -9241,7 +9241,7 @@ weightkg: 505,
 },
 
 noibat: {
-num: 714,
+morality: 714,
 name: "Noibat",
 types: ["Dragon", "Flying"],
 gender: "F",
@@ -9251,7 +9251,7 @@ weightkg: 8,
 },
 
 noivern: {
-num: 715,
+morality: 715,
 name: "Noivern",
 types: ["Dragon", "Psychic"],
 gender: "F",
@@ -9261,7 +9261,7 @@ weightkg: 85,
 },
 
 xerneas: {
-num: 716,
+morality: 716,
 name: "Xerneas",
 types: ["Fairy"],
 gender: "F",
@@ -9271,7 +9271,7 @@ weightkg: 215,
 },
 
 xerneasneutral: {
-num: 716,
+morality: 716,
 name: "Xerneas-Neutral",
 types: ["Fairy"],
 gender: "F",
@@ -9281,7 +9281,7 @@ weightkg: 215,
 },
 
 yveltal: {
-num: 717,
+morality: 717,
 name: "Yveltal",
 types: ["Flying", "Ghost"],
 gender: "F",
@@ -9291,7 +9291,7 @@ weightkg: 203,
 },
 
 zygarde: {
-num: 718,
+morality: 718,
 name: "Zygarde",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -9302,7 +9302,7 @@ weightkg: 305,
 },
 
 zygarde10: {
-num: 718,
+morality: 718,
 name: "Zygarde-10%",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -9313,7 +9313,7 @@ gen: 7,
 },
 
 zygardecomplete: {
-num: 718,
+morality: 718,
 name: "Zygarde-Complete",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -9326,7 +9326,7 @@ gen: 7,
 },
 
 diancie: {
-num: 719,
+morality: 719,
 name: "Diancie",
 types: ["Fairy", "Rock"],
 gender: "F",
@@ -9336,7 +9336,7 @@ weightkg: 8.8,
 },
 
 dianciemega: {
-num: 719,
+morality: 719,
 name: "Diancie-Mega",
 types: ["Fairy", "Rock"],
 gender: "F",
@@ -9346,7 +9346,7 @@ weightkg: 27.8,
 },
 
 hoopa: {
-num: 720,
+morality: 720,
 name: "Hoopa",
 types: ["Ghost", "Psychic"],
 gender: "F",
@@ -9356,7 +9356,7 @@ weightkg: 9,
 },
 
 hoopaunbound: {
-num: 720,
+morality: 720,
 name: "Hoopa-Unbound",
 types: ["Dark", "Psychic"],
 gender: "F",
@@ -9366,7 +9366,7 @@ weightkg: 490,
 },
 
 volcanion: {
-num: 721,
+morality: 721,
 name: "Volcanion",
 types: ["Fire", "Water"],
 gender: "F",
@@ -9376,7 +9376,7 @@ weightkg: 195,
 },
 
 rowlet: {
-num: 722,
+morality: 722,
 name: "Rowlet",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -9386,7 +9386,7 @@ weightkg: 1.5,
 },
 
 dartrix: {
-num: 723,
+morality: 723,
 name: "Dartrix",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -9396,7 +9396,7 @@ weightkg: 16,
 },
 
 decidueye: {
-num: 724,
+morality: 724,
 name: "Decidueye",
 types: ["Flying", "Grass"],
 gender: "F",
@@ -9406,7 +9406,7 @@ weightkg: 36.6,
 },
 
 decidueyehisui: {
-num: 724,
+morality: 724,
 name: "Decidueye-Hisui",
 types: ["Fighting", "Grass"],
 gender: "F",
@@ -9416,7 +9416,7 @@ weightkg: 37,
 },
 
 litten: {
-num: 725,
+morality: 725,
 name: "Litten",
 types: ["Fire"],
 gender: "F",
@@ -9426,7 +9426,7 @@ weightkg: 4.3,
 },
 
 torracat: {
-num: 726,
+morality: 726,
 name: "Torracat",
 types: ["Fire"],
 gender: "F",
@@ -9436,7 +9436,7 @@ weightkg: 25,
 },
 
 incineroar: {
-num: 727,
+morality: 727,
 name: "Incineroar",
 types: ["Dark", "Fire"],
 gender: "F",
@@ -9446,7 +9446,7 @@ weightkg: 83,
 },
 
 popplio: {
-num: 728,
+morality: 728,
 name: "Popplio",
 types: ["Water"],
 gender: "F",
@@ -9456,7 +9456,7 @@ weightkg: 7.5,
 },
 
 brionne: {
-num: 729,
+morality: 729,
 name: "Brionne",
 types: ["Water"],
 gender: "F",
@@ -9466,7 +9466,7 @@ weightkg: 17.5,
 },
 
 primarina: {
-num: 730,
+morality: 730,
 name: "Primarina",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -9476,7 +9476,7 @@ weightkg: 44,
 },
 
 pikipek: {
-num: 731,
+morality: 731,
 name: "Pikipek",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -9486,7 +9486,7 @@ weightkg: 1.2,
 },
 
 trumbeak: {
-num: 732,
+morality: 732,
 name: "Trumbeak",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -9496,7 +9496,7 @@ weightkg: 14.8,
 },
 
 toucannon: {
-num: 733,
+morality: 733,
 name: "Toucannon",
 types: ["Flying", "Poison"],
 gender: "F",
@@ -9506,7 +9506,7 @@ weightkg: 26,
 },
 
 yungoos: {
-num: 734,
+morality: 734,
 name: "Yungoos",
 types: ["Ground"],
 gender: "F",
@@ -9516,7 +9516,7 @@ weightkg: 6,
 },
 
 gumshoos: {
-num: 735,
+morality: 735,
 name: "Gumshoos",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -9526,7 +9526,7 @@ weightkg: 14.2,
 },
 
 gumshoostotem: {
-num: 735,
+morality: 735,
 name: "Gumshoos-Totem",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -9536,7 +9536,7 @@ weightkg: 60,
 },
 
 grubbin: {
-num: 736,
+morality: 736,
 name: "Grubbin",
 types: ["Bug"],
 gender: "F",
@@ -9546,7 +9546,7 @@ weightkg: 4.4,
 },
 
 charjabug: {
-num: 737,
+morality: 737,
 name: "Charjabug",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -9556,7 +9556,7 @@ weightkg: 10.5,
 },
 
 vikavolt: {
-num: 738,
+morality: 738,
 name: "Vikavolt",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -9566,7 +9566,7 @@ weightkg: 45,
 },
 
 vikavolttotem: {
-num: 738,
+morality: 738,
 name: "Vikavolt-Totem",
 types: ["Bug", "Electric"],
 gender: "F",
@@ -9576,7 +9576,7 @@ weightkg: 147.5,
 },
 
 crabrawler: {
-num: 739,
+morality: 739,
 name: "Crabrawler",
 types: ["Fighting"],
 gender: "F",
@@ -9586,7 +9586,7 @@ weightkg: 7,
 },
 
 crabominable: {
-num: 740,
+morality: 740,
 name: "Crabominable",
 types: ["Fighting", "Ice"],
 gender: "F",
@@ -9596,7 +9596,7 @@ weightkg: 180,
 },
 
 oricorio: {
-num: 741,
+morality: 741,
 name: "Oricorio",
 types: ["Fire", "Flying"],
 gender: "F",
@@ -9606,7 +9606,7 @@ weightkg: 3.4,
 },
 
 oricoriopompom: {
-num: 741,
+morality: 741,
 name: "Oricorio-Pom-Pom",
 types: ["Electric", "Flying"],
 gender: "F",
@@ -9616,7 +9616,7 @@ weightkg: 3.4,
 },
 
 oricoriopau: {
-num: 741,
+morality: 741,
 name: "Oricorio-Pa'u",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -9626,7 +9626,7 @@ weightkg: 3.4,
 },
 
 oricoriosensu: {
-num: 741,
+morality: 741,
 name: "Oricorio-Sensu",
 types: ["Flying", "Ghost"],
 gender: "F",
@@ -9636,7 +9636,7 @@ weightkg: 3.4,
 },
 
 cutiefly: {
-num: 742,
+morality: 742,
 name: "Cutiefly",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -9646,7 +9646,7 @@ weightkg: 0.2,
 },
 
 ribombee: {
-num: 743,
+morality: 743,
 name: "Ribombee",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -9656,7 +9656,7 @@ weightkg: 0.5,
 },
 
 ribombeetotem: {
-num: 743,
+morality: 743,
 name: "Ribombee-Totem",
 types: ["Bug", "Fairy"],
 gender: "F",
@@ -9666,7 +9666,7 @@ weightkg: 2,
 },
 
 rockruff: {
-num: 744,
+morality: 744,
 name: "Rockruff",
 types: ["Normal", "Rock"],
 gender: "F",
@@ -9676,7 +9676,7 @@ weightkg: 9.2,
 },
 
 lycanroc: {
-num: 745,
+morality: 745,
 name: "Lycanroc",
 types: ["Normal", "Rock"],
 gender: "F",
@@ -9686,7 +9686,7 @@ weightkg: 25,
 },
 
 lycanrocmidnight: {
-num: 745,
+morality: 745,
 name: "Lycanroc-Midnight",
 types: ["Dark", "Rock"],
 gender: "F",
@@ -9696,7 +9696,7 @@ weightkg: 25,
 },
 
 lycanrocdusk: {
-num: 745,
+morality: 745,
 name: "Lycanroc-Dusk",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -9706,7 +9706,7 @@ weightkg: 25,
 },
 
 wishiwashi: {
-num: 746,
+morality: 746,
 name: "Wishiwashi",
 types: ["Water"],
 gender: "F",
@@ -9716,7 +9716,7 @@ weightkg: 0.3,
 },
 
 wishiwashischool: {
-num: 746,
+morality: 746,
 name: "Wishiwashi-School",
 types: ["Ghost", "Water"],
 gender: "F",
@@ -9728,7 +9728,7 @@ battleOnly: "Wishiwashi",
 },
 
 mareanie: {
-num: 747,
+morality: 747,
 name: "Mareanie",
 types: ["Poison", "Water"],
 gender: "F",
@@ -9738,7 +9738,7 @@ weightkg: 8,
 },
 
 toxapex: {
-num: 748,
+morality: 748,
 name: "Toxapex",
 types: ["Poison", "Water"],
 gender: "F",
@@ -9748,7 +9748,7 @@ weightkg: 14.5,
 },
 
 mudbray: {
-num: 749,
+morality: 749,
 name: "Mudbray",
 types: ["Ground"],
 gender: "F",
@@ -9758,7 +9758,7 @@ weightkg: 110,
 },
 
 mudsdale: {
-num: 750,
+morality: 750,
 name: "Mudsdale",
 types: ["Ground"],
 gender: "F",
@@ -9768,7 +9768,7 @@ weightkg: 920,
 },
 
 dewpider: {
-num: 751,
+morality: 751,
 name: "Dewpider",
 types: ["Bug", "Water"],
 gender: "F",
@@ -9778,7 +9778,7 @@ weightkg: 4,
 },
 
 araquanid: {
-num: 752,
+morality: 752,
 name: "Araquanid",
 types: ["Bug", "Water"],
 gender: "F",
@@ -9788,7 +9788,7 @@ weightkg: 82,
 },
 
 araquanidtotem: {
-num: 752,
+morality: 752,
 name: "Araquanid-Totem",
 types: ["Bug", "Water"],
 gender: "F",
@@ -9798,7 +9798,7 @@ weightkg: 217.5,
 },
 
 fomantis: {
-num: 753,
+morality: 753,
 name: "Fomantis",
 types: ["Grass"],
 gender: "F",
@@ -9808,7 +9808,7 @@ weightkg: 1.5,
 },
 
 lurantis: {
-num: 754,
+morality: 754,
 name: "Lurantis",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -9818,7 +9818,7 @@ weightkg: 18.5,
 },
 
 lurantistotem: {
-num: 754,
+morality: 754,
 name: "Lurantis-Totem",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -9828,7 +9828,7 @@ weightkg: 58,
 },
 
 morelull: {
-num: 755,
+morality: 755,
 name: "Morelull",
 types: ["Fairy", "Grass"],
 gender: "F",
@@ -9838,7 +9838,7 @@ weightkg: 1.5,
 },
 
 shiinotic: {
-num: 756,
+morality: 756,
 name: "Shiinotic",
 types: ["Fairy", "Grass"],
 gender: "F",
@@ -9848,7 +9848,7 @@ weightkg: 11.5,
 },
 
 salandit: {
-num: 757,
+morality: 757,
 name: "Salandit",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -9858,7 +9858,7 @@ weightkg: 4.8,
 },
 
 salazzle: {
-num: 758,
+morality: 758,
 name: "Salazzle",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -9868,7 +9868,7 @@ weightkg: 22.2,
 },
 
 salazzletotem: {
-num: 758,
+morality: 758,
 name: "Salazzle-Totem",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -9878,7 +9878,7 @@ weightkg: 81,
 },
 
 stufful: {
-num: 759,
+morality: 759,
 name: "Stufful",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -9888,7 +9888,7 @@ weightkg: 6.8,
 },
 
 bewear: {
-num: 760,
+morality: 760,
 name: "Bewear",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -9898,7 +9898,7 @@ weightkg: 135,
 },
 
 bounsweet: {
-num: 761,
+morality: 761,
 name: "Bounsweet",
 types: ["Grass"],
 gender: "F",
@@ -9908,7 +9908,7 @@ weightkg: 3.2,
 },
 
 steenee: {
-num: 762,
+morality: 762,
 name: "Steenee",
 types: ["Grass"],
 gender: "F",
@@ -9918,7 +9918,7 @@ weightkg: 8.2,
 },
 
 tsareena: {
-num: 763,
+morality: 763,
 name: "Tsareena",
 types: ["Grass", "Steel"],
 gender: "F",
@@ -9928,7 +9928,7 @@ weightkg: 21.4,
 },
 
 comfey: {
-num: 764,
+morality: 764,
 name: "Comfey",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -9938,7 +9938,7 @@ weightkg: 0.3,
 },
 
 oranguru: {
-num: 765,
+morality: 765,
 name: "Oranguru",
 types: ["Ghost", "Normal"],
 gender: "F",
@@ -9948,7 +9948,7 @@ weightkg: 76,
 },
 
 passimian: {
-num: 766,
+morality: 766,
 name: "Passimian",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -9958,7 +9958,7 @@ weightkg: 82.8,
 },
 
 wimpod: {
-num: 767,
+morality: 767,
 name: "Wimpod",
 types: ["Bug", "Water"],
 gender: "F",
@@ -9968,7 +9968,7 @@ weightkg: 12,
 },
 
 golisopod: {
-num: 768,
+morality: 768,
 name: "Golisopod",
 types: ["Bug", "Water"],
 gender: "F",
@@ -9978,7 +9978,7 @@ weightkg: 108,
 },
 
 sandygast: {
-num: 769,
+morality: 769,
 name: "Sandygast",
 types: ["Ghost", "Ground"],
 gender: "F",
@@ -9988,7 +9988,7 @@ weightkg: 70,
 },
 
 palossand: {
-num: 770,
+morality: 770,
 name: "Palossand",
 types: ["Ghost", "Ground"],
 gender: "F",
@@ -9998,7 +9998,7 @@ weightkg: 250,
 },
 
 pyukumuku: {
-num: 771,
+morality: 771,
 name: "Pyukumuku",
 types: ["Poison", "Rock"],
 gender: "F",
@@ -10008,7 +10008,7 @@ weightkg: 1.2,
 },
 
 typenull: {
-num: 772,
+morality: 772,
 name: "Type: Null",
 types: ["???"],
 gender: "F",
@@ -10018,7 +10018,7 @@ weightkg: 120.5,
 },
 
 silvally: {
-num: 773,
+morality: 773,
 name: "Silvally",
 types: ["???"],
 gender: "F",
@@ -10028,7 +10028,7 @@ weightkg: 100.5,
 },
 
 silvallybug: {
-num: 773,
+morality: 773,
 name: "Silvally-Bug",
 types: ["Bug"],
 gender: "F",
@@ -10038,7 +10038,7 @@ weightkg: 100.5,
 },
 
 silvallydark: {
-num: 773,
+morality: 773,
 name: "Silvally-Dark",
 types: ["Dark"],
 gender: "F",
@@ -10048,7 +10048,7 @@ weightkg: 100.5,
 },
 
 silvallydragon: {
-num: 773,
+morality: 773,
 name: "Silvally-Dragon",
 types: ["Dragon"],
 gender: "F",
@@ -10058,7 +10058,7 @@ weightkg: 100.5,
 },
 
 silvallyelectric: {
-num: 773,
+morality: 773,
 name: "Silvally-Electric",
 types: ["Electric"],
 gender: "F",
@@ -10068,7 +10068,7 @@ weightkg: 100.5,
 },
 
 silvallyfairy: {
-num: 773,
+morality: 773,
 name: "Silvally-Fairy",
 types: ["Fairy"],
 gender: "F",
@@ -10078,7 +10078,7 @@ weightkg: 100.5,
 },
 
 silvallyfighting: {
-num: 773,
+morality: 773,
 name: "Silvally-Fighting",
 types: ["Fighting"],
 gender: "F",
@@ -10088,7 +10088,7 @@ weightkg: 100.5,
 },
 
 silvallyfire: {
-num: 773,
+morality: 773,
 name: "Silvally-Fire",
 types: ["Fire"],
 gender: "F",
@@ -10098,7 +10098,7 @@ weightkg: 100.5,
 },
 
 silvallyflying: {
-num: 773,
+morality: 773,
 name: "Silvally-Flying",
 types: ["Flying"],
 gender: "F",
@@ -10108,7 +10108,7 @@ weightkg: 100.5,
 },
 
 silvallyghost: {
-num: 773,
+morality: 773,
 name: "Silvally-Ghost",
 types: ["Ghost"],
 gender: "F",
@@ -10118,7 +10118,7 @@ weightkg: 100.5,
 },
 
 silvallygrass: {
-num: 773,
+morality: 773,
 name: "Silvally-Grass",
 types: ["Grass"],
 gender: "F",
@@ -10128,7 +10128,7 @@ weightkg: 100.5,
 },
 
 silvallyground: {
-num: 773,
+morality: 773,
 name: "Silvally-Ground",
 types: ["Ground"],
 gender: "F",
@@ -10138,7 +10138,7 @@ weightkg: 100.5,
 },
 
 silvallyice: {
-num: 773,
+morality: 773,
 name: "Silvally-Ice",
 types: ["Ice"],
 gender: "F",
@@ -10148,7 +10148,7 @@ weightkg: 100.5,
 },
 
 silvallypoison: {
-num: 773,
+morality: 773,
 name: "Silvally-Poison",
 types: ["Poison"],
 gender: "F",
@@ -10158,7 +10158,7 @@ weightkg: 100.5,
 },
 
 silvallypsychic: {
-num: 773,
+morality: 773,
 name: "Silvally-Psychic",
 types: ["Psychic"],
 gender: "F",
@@ -10168,7 +10168,7 @@ weightkg: 100.5,
 },
 
 silvallyrock: {
-num: 773,
+morality: 773,
 name: "Silvally-Rock",
 types: ["Rock"],
 gender: "F",
@@ -10178,7 +10178,7 @@ weightkg: 100.5,
 },
 
 silvallysteel: {
-num: 773,
+morality: 773,
 name: "Silvally-Steel",
 types: ["Steel"],
 gender: "F",
@@ -10188,7 +10188,7 @@ weightkg: 100.5,
 },
 
 silvallywater: {
-num: 773,
+morality: 773,
 name: "Silvally-Water",
 types: ["Water"],
 gender: "F",
@@ -10198,7 +10198,7 @@ weightkg: 100.5,
 },
 
 minior: {
-num: 774,
+morality: 774,
 name: "Minior",
 types: ["Flying", "Rock"],
 gender: "F",
@@ -10208,7 +10208,7 @@ weightkg: 0.3,
 },
 
 miniormeteor: {
-num: 774,
+morality: 774,
 name: "Minior-Meteor",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -10220,7 +10220,7 @@ battleOnly: "Minior",
 },
 
 komala: {
-num: 775,
+morality: 775,
 name: "Komala",
 types: ["Ghost", "Normal"],
 gender: "F",
@@ -10230,7 +10230,7 @@ weightkg: 19.9,
 },
 
 turtonator: {
-num: 776,
+morality: 776,
 name: "Turtonator",
 types: ["Dragon", "Fire"],
 gender: "F",
@@ -10240,7 +10240,7 @@ weightkg: 212,
 },
 
 togedemaru: {
-num: 777,
+morality: 777,
 name: "Togedemaru",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -10250,7 +10250,7 @@ weightkg: 3.3,
 },
 
 togedemarutotem: {
-num: 777,
+morality: 777,
 name: "Togedemaru-Totem",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -10260,7 +10260,7 @@ weightkg: 13,
 },
 
 mimikyu: {
-num: 778,
+morality: 778,
 name: "Mimikyu",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -10270,7 +10270,7 @@ weightkg: 0.7,
 },
 
 mimikyubusted: {
-num: 778,
+morality: 778,
 name: "Mimikyu-Busted",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -10282,7 +10282,7 @@ battleOnly: "Mimikyu",
 },
 
 mimikyutotem: {
-num: 778,
+morality: 778,
 name: "Mimikyu-Totem",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -10292,7 +10292,7 @@ weightkg: 2.8,
 },
 
 mimikyubustedtotem: {
-num: 778,
+morality: 778,
 name: "Mimikyu-Busted-Totem",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -10304,7 +10304,7 @@ battleOnly: "Mimikyu-Totem",
 },
 
 bruxish: {
-num: 779,
+morality: 779,
 name: "Bruxish",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -10314,7 +10314,7 @@ weightkg: 19,
 },
 
 drampa: {
-num: 780,
+morality: 780,
 name: "Drampa",
 types: ["Dragon", "Normal"],
 gender: "F",
@@ -10324,7 +10324,7 @@ weightkg: 185,
 },
 
 dhelmise: {
-num: 781,
+morality: 781,
 name: "Dhelmise",
 types: ["Grass", "Water"],
 gender: "F",
@@ -10334,7 +10334,7 @@ weightkg: 210,
 },
 
 jangmoo: {
-num: 782,
+morality: 782,
 name: "Jangmoo",
 types: ["Dragon"],
 gender: "F",
@@ -10344,7 +10344,7 @@ weightkg: 29.7,
 },
 
 hakamoo: {
-num: 783,
+morality: 783,
 name: "Hakamoo",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -10354,7 +10354,7 @@ weightkg: 47,
 },
 
 kommoo: {
-num: 784,
+morality: 784,
 name: "Kommoo",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -10364,7 +10364,7 @@ weightkg: 78.2,
 },
 
 kommoototem: {
-num: 784,
+morality: 784,
 name: "Kommoo-Totem",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -10374,7 +10374,7 @@ weightkg: 207.5,
 },
 
 tapukoko: {
-num: 785,
+morality: 785,
 name: "Tapu Koko",
 types: ["Electric", "Fairy"],
 gender: "F",
@@ -10384,7 +10384,7 @@ weightkg: 20.5,
 },
 
 tapulele: {
-num: 786,
+morality: 786,
 name: "Tapu Lele",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -10394,7 +10394,7 @@ weightkg: 18.6,
 },
 
 tapubulu: {
-num: 787,
+morality: 787,
 name: "Tapu Bulu",
 types: ["Fairy", "Grass"],
 gender: "F",
@@ -10404,7 +10404,7 @@ weightkg: 45.5,
 },
 
 tapufini: {
-num: 788,
+morality: 788,
 name: "Tapu Fini",
 types: ["Fairy", "Water"],
 gender: "F",
@@ -10414,7 +10414,7 @@ weightkg: 21.2,
 },
 
 cosmog: {
-num: 789,
+morality: 789,
 name: "Cosmog",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -10424,7 +10424,7 @@ weightkg: 0.1,
 },
 
 cosmoem: {
-num: 790,
+morality: 790,
 name: "Cosmoem",
 types: ["Psychic"],
 gender: "F",
@@ -10434,7 +10434,7 @@ weightkg: 999.9,
 },
 
 solgaleo: {
-num: 791,
+morality: 791,
 name: "Solgaleo",
 types: ["Psychic", "Steel"],
 gender: "F",
@@ -10444,7 +10444,7 @@ weightkg: 230,
 },
 
 lunala: {
-num: 792,
+morality: 792,
 name: "Lunala",
 types: ["Ghost", "Psychic"],
 gender: "F",
@@ -10454,7 +10454,7 @@ weightkg: 120,
 },
 
 nihilego: {
-num: 793,
+morality: 793,
 name: "Nihilego",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -10464,7 +10464,7 @@ weightkg: 55.5,
 },
 
 buzzwole: {
-num: 794,
+morality: 794,
 name: "Buzzwole",
 types: ["Bug", "Fighting"],
 gender: "F",
@@ -10474,7 +10474,7 @@ weightkg: 333.6,
 },
 
 pheromosa: {
-num: 795,
+morality: 795,
 name: "Pheromosa",
 types: ["Bug"],
 gender: "F",
@@ -10484,7 +10484,7 @@ weightkg: 25,
 },
 
 xurkitree: {
-num: 796,
+morality: 796,
 name: "Xurkitree",
 types: ["Electric", "Ghost"],
 gender: "F",
@@ -10494,7 +10494,7 @@ weightkg: 100,
 },
 
 celesteela: {
-num: 797,
+morality: 797,
 name: "Celesteela",
 types: ["Flying", "Steel"],
 gender: "F",
@@ -10504,7 +10504,7 @@ weightkg: 999.9,
 },
 
 kartana: {
-num: 798,
+morality: 798,
 name: "Kartana",
 types: ["Grass", "Steel"],
 gender: "F",
@@ -10514,7 +10514,7 @@ weightkg: 0.1,
 },
 
 guzzlord: {
-num: 799,
+morality: 799,
 name: "Guzzlord",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -10524,7 +10524,7 @@ weightkg: 888,
 },
 
 necrozma: {
-num: 800,
+morality: 800,
 name: "Necrozma",
 types: ["Electric", "Psychic"],
 gender: "F",
@@ -10534,7 +10534,7 @@ weightkg: 230,
 },
 
 necrozmaduskmane: {
-num: 800,
+morality: 800,
 name: "Necrozma-Dusk-Mane",
 types: ["Electric", "Steel"],
 gender: "F",
@@ -10544,7 +10544,7 @@ weightkg: 460,
 },
 
 necrozmadawnwings: {
-num: 800,
+morality: 800,
 name: "Necrozma-Dawn-Wings",
 types: ["Electric", "Ghost"],
 gender: "F",
@@ -10554,7 +10554,7 @@ weightkg: 350,
 },
 
 necrozmaultra: {
-num: 800,
+morality: 800,
 name: "Necrozma-Ultra",
 types: ["Dragon", "Psychic"],
 gender: "F",
@@ -10565,7 +10565,7 @@ battleOnly: ["Necrozma-Dawn-Wings", "Necrozma-Dusk-Mane"],
 },
 
 magearna: {
-num: 801,
+morality: 801,
 name: "Magearna",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -10575,7 +10575,7 @@ weightkg: 80.5,
 },
 
 magearnaoriginal: {
-num: 801,
+morality: 801,
 name: "Magearna-Original",
 types: ["Steel"],
 gender: "F",
@@ -10585,7 +10585,7 @@ weightkg: 80.5,
 },
 
 marshadow: {
-num: 802,
+morality: 802,
 name: "Marshadow",
 types: ["Fighting", "Ghost"],
 gender: "F",
@@ -10595,7 +10595,7 @@ weightkg: 22.2,
 },
 
 poipole: {
-num: 803,
+morality: 803,
 name: "Poipole",
 types: ["Ghost"],
 gender: "F",
@@ -10605,7 +10605,7 @@ weightkg: 1.8,
 },
 
 naganadel: {
-num: 804,
+morality: 804,
 name: "Naganadel",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -10615,7 +10615,7 @@ weightkg: 150,
 },
 
 stakataka: {
-num: 805,
+morality: 805,
 name: "Stakataka",
 types: ["Rock", "Steel"],
 gender: "F",
@@ -10625,7 +10625,7 @@ weightkg: 820,
 },
 
 blacephalon: {
-num: 806,
+morality: 806,
 name: "Blacephalon",
 types: ["Fire"],
 gender: "F",
@@ -10635,7 +10635,7 @@ weightkg: 13,
 },
 
 zeraora: {
-num: 807,
+morality: 807,
 name: "Zeraora",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -10645,7 +10645,7 @@ weightkg: 44.5,
 },
 
 meltan: {
-num: 808,
+morality: 808,
 name: "Meltan",
 types: ["Steel"],
 gender: "F",
@@ -10655,7 +10655,7 @@ weightkg: 8,
 },
 
 melmetal: {
-num: 809,
+morality: 809,
 name: "Melmetal",
 types: ["Steel"],
 gender: "F",
@@ -10665,7 +10665,7 @@ weightkg: 800,
 },
 
 melmetalgmax: {
-num: 809,
+morality: 809,
 name: "Melmetal-Gmax",
 types: ["Steel"],
 gender: "F",
@@ -10675,7 +10675,7 @@ weightkg: 0,
 },
 
 grookey: {
-num: 810,
+morality: 810,
 name: "Grookey",
 types: ["Grass"],
 gender: "F",
@@ -10685,7 +10685,7 @@ weightkg: 5,
 },
 
 thwackey: {
-num: 811,
+morality: 811,
 name: "Thwackey",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -10695,7 +10695,7 @@ weightkg: 14,
 },
 
 rillaboom: {
-num: 812,
+morality: 812,
 name: "Rillaboom",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -10705,7 +10705,7 @@ weightkg: 90,
 },
 
 rillaboomgmax: {
-num: 812,
+morality: 812,
 name: "Rillaboom-Gmax",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -10715,7 +10715,7 @@ weightkg: 0,
 },
 
 scorbunny: {
-num: 813,
+morality: 813,
 name: "Scorbunny",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -10725,7 +10725,7 @@ weightkg: 4.5,
 },
 
 raboot: {
-num: 814,
+morality: 814,
 name: "Raboot",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -10735,7 +10735,7 @@ weightkg: 9,
 },
 
 cinderace: {
-num: 815,
+morality: 815,
 name: "Cinderace",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -10745,7 +10745,7 @@ weightkg: 33,
 },
 
 cinderacegmax: {
-num: 815,
+morality: 815,
 name: "Cinderace-Gmax",
 types: ["Fire", "Normal"],
 gender: "F",
@@ -10755,7 +10755,7 @@ weightkg: 0,
 },
 
 sobble: {
-num: 816,
+morality: 816,
 name: "Sobble",
 types: ["Water"],
 gender: "F",
@@ -10765,7 +10765,7 @@ weightkg: 4,
 },
 
 drizzile: {
-num: 817,
+morality: 817,
 name: "Drizzile",
 types: ["Poison", "Water"],
 gender: "F",
@@ -10775,7 +10775,7 @@ weightkg: 11.5,
 },
 
 inteleon: {
-num: 818,
+morality: 818,
 name: "Inteleon",
 types: ["Poison", "Water"],
 gender: "F",
@@ -10785,7 +10785,7 @@ weightkg: 45.2,
 },
 
 inteleongmax: {
-num: 818,
+morality: 818,
 name: "Inteleon-Gmax",
 types: ["Poison", "Water"],
 gender: "F",
@@ -10795,7 +10795,7 @@ weightkg: 0,
 },
 
 skwovet: {
-num: 819,
+morality: 819,
 name: "Skwovet",
 types: ["Normal"],
 gender: "F",
@@ -10805,7 +10805,7 @@ weightkg: 2.5,
 },
 
 greedent: {
-num: 820,
+morality: 820,
 name: "Greedent",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -10815,7 +10815,7 @@ weightkg: 6,
 },
 
 rookidee: {
-num: 821,
+morality: 821,
 name: "Rookidee",
 types: ["Flying"],
 gender: "F",
@@ -10825,7 +10825,7 @@ weightkg: 1.8,
 },
 
 corvisquire: {
-num: 822,
+morality: 822,
 name: "Corvisquire",
 types: ["Flying"],
 gender: "F",
@@ -10835,7 +10835,7 @@ weightkg: 16,
 },
 
 corviknight: {
-num: 823,
+morality: 823,
 name: "Corviknight",
 types: ["Flying", "Steel"],
 gender: "F",
@@ -10845,7 +10845,7 @@ weightkg: 75,
 },
 
 corviknightgmax: {
-num: 823,
+morality: 823,
 name: "Corviknight-Gmax",
 types: ["Flying", "Steel"],
 gender: "F",
@@ -10855,7 +10855,7 @@ weightkg: 0,
 },
 
 blipbug: {
-num: 824,
+morality: 824,
 name: "Blipbug",
 types: ["Bug"],
 gender: "F",
@@ -10865,7 +10865,7 @@ weightkg: 8,
 },
 
 dottler: {
-num: 825,
+morality: 825,
 name: "Dottler",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -10875,7 +10875,7 @@ weightkg: 19.5,
 },
 
 orbeetle: {
-num: 826,
+morality: 826,
 name: "Orbeetle",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -10885,7 +10885,7 @@ weightkg: 40.8,
 },
 
 orbeetlegmax: {
-num: 826,
+morality: 826,
 name: "Orbeetle-Gmax",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -10895,7 +10895,7 @@ weightkg: 0,
 },
 
 nickit: {
-num: 827,
+morality: 827,
 name: "Nickit",
 types: ["Dark"],
 gender: "F",
@@ -10905,7 +10905,7 @@ weightkg: 8.9,
 },
 
 thievul: {
-num: 828,
+morality: 828,
 name: "Thievul",
 types: ["Dark"],
 gender: "F",
@@ -10915,7 +10915,7 @@ weightkg: 19.9,
 },
 
 gossifleur: {
-num: 829,
+morality: 829,
 name: "Gossifleur",
 types: ["Grass"],
 gender: "F",
@@ -10925,7 +10925,7 @@ weightkg: 2.2,
 },
 
 eldegoss: {
-num: 830,
+morality: 830,
 name: "Eldegoss",
 types: ["Grass"],
 gender: "F",
@@ -10935,7 +10935,7 @@ weightkg: 2.5,
 },
 
 wooloo: {
-num: 831,
+morality: 831,
 name: "Wooloo",
 types: ["Normal"],
 gender: "F",
@@ -10945,7 +10945,7 @@ weightkg: 6,
 },
 
 dubwool: {
-num: 832,
+morality: 832,
 name: "Dubwool",
 types: ["Normal", "Steel"],
 gender: "F",
@@ -10955,7 +10955,7 @@ weightkg: 43,
 },
 
 chewtle: {
-num: 833,
+morality: 833,
 name: "Chewtle",
 types: ["Water"],
 gender: "F",
@@ -10965,7 +10965,7 @@ weightkg: 8.5,
 },
 
 drednaw: {
-num: 834,
+morality: 834,
 name: "Drednaw",
 types: ["Rock", "Water"],
 gender: "F",
@@ -10975,7 +10975,7 @@ weightkg: 115.5,
 },
 
 drednawgmax: {
-num: 834,
+morality: 834,
 name: "Drednaw-Gmax",
 types: ["Rock", "Water"],
 gender: "F",
@@ -10985,7 +10985,7 @@ weightkg: 0,
 },
 
 yamper: {
-num: 835,
+morality: 835,
 name: "Yamper",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -10995,7 +10995,7 @@ weightkg: 13.5,
 },
 
 boltund: {
-num: 836,
+morality: 836,
 name: "Boltund",
 types: ["Electric", "Normal"],
 gender: "F",
@@ -11005,7 +11005,7 @@ weightkg: 34,
 },
 
 rolycoly: {
-num: 837,
+morality: 837,
 name: "Rolycoly",
 types: ["Rock"],
 gender: "F",
@@ -11015,7 +11015,7 @@ weightkg: 12,
 },
 
 carkol: {
-num: 838,
+morality: 838,
 name: "Carkol",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -11025,7 +11025,7 @@ weightkg: 78,
 },
 
 coalossal: {
-num: 839,
+morality: 839,
 name: "Coalossal",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -11035,7 +11035,7 @@ weightkg: 310.5,
 },
 
 coalossalgmax: {
-num: 839,
+morality: 839,
 name: "Coalossal-Gmax",
 types: ["Fire", "Rock"],
 gender: "F",
@@ -11045,7 +11045,7 @@ weightkg: 0,
 },
 
 applin: {
-num: 840,
+morality: 840,
 name: "Applin",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -11055,7 +11055,7 @@ weightkg: 0.5,
 },
 
 flapple: {
-num: 841,
+morality: 841,
 name: "Flapple",
 types: ["Bug", "Dragon"],
 gender: "F",
@@ -11065,7 +11065,7 @@ weightkg: 1,
 },
 
 flapplegmax: {
-num: 841,
+morality: 841,
 name: "Flapple-Gmax",
 types: ["Bug", "Dragon"],
 gender: "F",
@@ -11075,7 +11075,7 @@ weightkg: 0,
 },
 
 appletun: {
-num: 842,
+morality: 842,
 name: "Appletun",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -11085,7 +11085,7 @@ weightkg: 13,
 },
 
 appletungmax: {
-num: 842,
+morality: 842,
 name: "Appletun-Gmax",
 types: ["Dragon", "Grass"],
 gender: "F",
@@ -11095,7 +11095,7 @@ weightkg: 0,
 },
 
 silicobra: {
-num: 843,
+morality: 843,
 name: "Silicobra",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -11105,7 +11105,7 @@ weightkg: 7.6,
 },
 
 sandaconda: {
-num: 844,
+morality: 844,
 name: "Sandaconda",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -11115,7 +11115,7 @@ weightkg: 65.5,
 },
 
 sandacondagmax: {
-num: 844,
+morality: 844,
 name: "Sandaconda-Gmax",
 types: ["Dragon", "Ground"],
 gender: "F",
@@ -11125,7 +11125,7 @@ weightkg: 0,
 },
 
 cramorant: {
-num: 845,
+morality: 845,
 name: "Cramorant",
 types: ["Flying", "Water"],
 gender: "F",
@@ -11135,7 +11135,7 @@ weightkg: 18,
 },
 
 cramorantgulping: {
-num: 845,
+morality: 845,
 name: "Cramorant-Gulping",
 types: ["Flying", "Water"],
 gender: "F",
@@ -11147,7 +11147,7 @@ battleOnly: "Cramorant",
 },
 
 cramorantgorging: {
-num: 845,
+morality: 845,
 name: "Cramorant-Gorging",
 types: ["Flying", "Water"],
 gender: "F",
@@ -11159,7 +11159,7 @@ battleOnly: "Cramorant",
 },
 
 arrokuda: {
-num: 846,
+morality: 846,
 name: "Arrokuda",
 types: ["Ice"],
 gender: "F",
@@ -11169,7 +11169,7 @@ weightkg: 1,
 },
 
 barraskewda: {
-num: 847,
+morality: 847,
 name: "Barraskewda",
 types: ["Fire", "Ice"],
 gender: "F",
@@ -11179,7 +11179,7 @@ weightkg: 30,
 },
 
 toxel: {
-num: 848,
+morality: 848,
 name: "Toxel",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11190,7 +11190,7 @@ canHatch: true,
 },
 
 toxtricity: {
-num: 849,
+morality: 849,
 name: "Toxtricity",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11200,7 +11200,7 @@ weightkg: 40,
 },
 
 toxtricitylowkey: {
-num: 849,
+morality: 849,
 name: "Toxtricity-Low-Key",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11210,7 +11210,7 @@ weightkg: 40,
 },
 
 toxtricitygmax: {
-num: 849,
+morality: 849,
 name: "Toxtricity-Gmax",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11220,7 +11220,7 @@ weightkg: 0,
 },
 
 toxtricitylowkeygmax: {
-num: 849,
+morality: 849,
 name: "Toxtricity-Low-Key-Gmax",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11231,7 +11231,7 @@ battleOnly: "Toxtricity-Low-Key",
 },
 
 sizzlipede: {
-num: 850,
+morality: 850,
 name: "Sizzlipede",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -11241,7 +11241,7 @@ weightkg: 1,
 },
 
 centiskorch: {
-num: 851,
+morality: 851,
 name: "Centiskorch",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -11251,7 +11251,7 @@ weightkg: 120,
 },
 
 centiskorchgmax: {
-num: 851,
+morality: 851,
 name: "Centiskorch-Gmax",
 types: ["Bug", "Fire"],
 gender: "F",
@@ -11261,7 +11261,7 @@ weightkg: 0,
 },
 
 clobbopus: {
-num: 852,
+morality: 852,
 name: "Clobbopus",
 types: ["Fighting"],
 gender: "F",
@@ -11271,7 +11271,7 @@ weightkg: 4,
 },
 
 grapploct: {
-num: 853,
+morality: 853,
 name: "Grapploct",
 types: ["Dark", "Fighting"],
 gender: "F",
@@ -11281,7 +11281,7 @@ weightkg: 39,
 },
 
 sinistea: {
-num: 854,
+morality: 854,
 name: "Sinistea",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -11291,7 +11291,7 @@ weightkg: 0.2,
 },
 
 sinisteaantique: {
-num: 854,
+morality: 854,
 name: "Sinistea-Antique",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -11301,7 +11301,7 @@ weightkg: 0.2,
 },
 
 polteageist: {
-num: 855,
+morality: 855,
 name: "Polteageist",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -11311,7 +11311,7 @@ weightkg: 0.4,
 },
 
 polteageistantique: {
-num: 855,
+morality: 855,
 name: "Polteageist-Antique",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -11321,7 +11321,7 @@ weightkg: 0.4,
 },
 
 hatenna: {
-num: 856,
+morality: 856,
 name: "Hatenna",
 types: ["Fairy"],
 gender: "F",
@@ -11331,7 +11331,7 @@ weightkg: 3.4,
 },
 
 hattrem: {
-num: 857,
+morality: 857,
 name: "Hattrem",
 types: ["Fairy"],
 gender: "F",
@@ -11341,7 +11341,7 @@ weightkg: 4.8,
 },
 
 hatterene: {
-num: 858,
+morality: 858,
 name: "Hatterene",
 types: ["Fairy"],
 gender: "F",
@@ -11351,7 +11351,7 @@ weightkg: 5.1,
 },
 
 hatterenegmax: {
-num: 858,
+morality: 858,
 name: "Hatterene-Gmax",
 types: ["Fairy", "Psychic"],
 gender: "F",
@@ -11361,7 +11361,7 @@ weightkg: 0,
 },
 
 impidimp: {
-num: 859,
+morality: 859,
 name: "Impidimp",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -11371,7 +11371,7 @@ weightkg: 5.5,
 },
 
 morgrem: {
-num: 860,
+morality: 860,
 name: "Morgrem",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -11381,7 +11381,7 @@ weightkg: 12.5,
 },
 
 grimmsnarl: {
-num: 861,
+morality: 861,
 name: "Grimmsnarl",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -11391,7 +11391,7 @@ weightkg: 61,
 },
 
 grimmsnarlgmax: {
-num: 861,
+morality: 861,
 name: "Grimmsnarl-Gmax",
 types: ["Dark", "Fairy"],
 gender: "F",
@@ -11401,7 +11401,7 @@ weightkg: 0,
 },
 
 obstagoon: {
-num: 862,
+morality: 862,
 name: "Obstagoon",
 types: ["Dark", "Normal"],
 gender: "F",
@@ -11411,7 +11411,7 @@ weightkg: 46,
 },
 
 perrserker: {
-num: 863,
+morality: 863,
 name: "Perrserker",
 types: ["Normal", "Steel"],
 gender: "F",
@@ -11421,7 +11421,7 @@ weightkg: 28,
 },
 
 cursola: {
-num: 864,
+morality: 864,
 name: "Cursola",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -11431,7 +11431,7 @@ weightkg: 0.4,
 },
 
 sirfetchd: {
-num: 865,
+morality: 865,
 name: "Sirfetch\u2019d",
 types: ["Fighting", "Flying"],
 gender: "F",
@@ -11441,7 +11441,7 @@ weightkg: 117,
 },
 
 mrrime: {
-num: 866,
+morality: 866,
 name: "Mr. Rime",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -11451,7 +11451,7 @@ weightkg: 58.2,
 },
 
 runerigus: {
-num: 867,
+morality: 867,
 name: "Runerigus",
 types: ["Ghost", "Rock"],
 gender: "F",
@@ -11461,7 +11461,7 @@ weightkg: 66.6,
 },
 
 milcery: {
-num: 868,
+morality: 868,
 name: "Milcery",
 types: ["Fairy"],
 gender: "F",
@@ -11471,7 +11471,7 @@ weightkg: 0.3,
 },
 
 alcremie: {
-num: 869,
+morality: 869,
 name: "Alcremie",
 types: ["Fairy"],
 gender: "F",
@@ -11481,7 +11481,7 @@ weightkg: 0.5,
 },
 
 alcremiegmax: {
-num: 869,
+morality: 869,
 name: "Alcremie-Gmax",
 types: ["Fairy"],
 gender: "F",
@@ -11491,7 +11491,7 @@ weightkg: 0,
 },
 
 falinks: {
-num: 870,
+morality: 870,
 name: "Falinks",
 types: ["Fairy", "Fighting"],
 gender: "F",
@@ -11501,7 +11501,7 @@ weightkg: 62,
 },
 
 pincurchin: {
-num: 871,
+morality: 871,
 name: "Pincurchin",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -11511,7 +11511,7 @@ weightkg: 1,
 },
 
 snom: {
-num: 872,
+morality: 872,
 name: "Snom",
 types: ["Bug", "Ice"],
 gender: "F",
@@ -11521,7 +11521,7 @@ weightkg: 3.8,
 },
 
 frosmoth: {
-num: 873,
+morality: 873,
 name: "Frosmoth",
 types: ["Bug", "Ice"],
 gender: "F",
@@ -11531,7 +11531,7 @@ weightkg: 42,
 },
 
 stonjourner: {
-num: 874,
+morality: 874,
 name: "Stonjourner",
 types: ["Rock"],
 gender: "F",
@@ -11541,7 +11541,7 @@ weightkg: 520,
 },
 
 eiscue: {
-num: 875,
+morality: 875,
 name: "Eiscue",
 types: ["Ghost", "Ice"],
 gender: "F",
@@ -11551,7 +11551,7 @@ weightkg: 89,
 },
 
 eiscuenoice: {
-num: 875,
+morality: 875,
 name: "Eiscue-Noice",
 types: ["Ghost", "Ice"],
 gender: "F",
@@ -11563,7 +11563,7 @@ battleOnly: "Eiscue",
 },
 
 indeedee: {
-num: 876,
+morality: 876,
 name: "Indeedee",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -11573,7 +11573,7 @@ weightkg: 28,
 },
 
 indeedeef: {
-num: 876,
+morality: 876,
 name: "Indeedee-F",
 types: ["Ice", "Psychic"],
 gender: "F",
@@ -11583,7 +11583,7 @@ weightkg: 28,
 },
 
 morpeko: {
-num: 877,
+morality: 877,
 name: "Morpeko",
 types: ["Dark", "Electric"],
 gender: "F",
@@ -11593,7 +11593,7 @@ weightkg: 3,
 },
 
 morpekohangry: {
-num: 877,
+morality: 877,
 name: "Morpeko-Hangry",
 types: ["Dark", "Electric"],
 gender: "F",
@@ -11605,7 +11605,7 @@ battleOnly: "Morpeko",
 },
 
 cufant: {
-num: 878,
+morality: 878,
 name: "Cufant",
 types: ["Normal", "Steel"],
 gender: "F",
@@ -11615,7 +11615,7 @@ weightkg: 100,
 },
 
 copperajah: {
-num: 879,
+morality: 879,
 name: "Copperajah",
 types: ["Normal", "Steel"],
 gender: "F",
@@ -11625,7 +11625,7 @@ weightkg: 650,
 },
 
 copperajahgmax: {
-num: 879,
+morality: 879,
 name: "Copperajah-Gmax",
 types: ["Steel"],
 gender: "F",
@@ -11635,7 +11635,7 @@ weightkg: 0,
 },
 
 dracozolt: {
-num: 880,
+morality: 880,
 name: "Dracozolt",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -11645,7 +11645,7 @@ weightkg: 190,
 },
 
 arctozolt: {
-num: 881,
+morality: 881,
 name: "Arctozolt",
 types: ["Electric", "Ice"],
 gender: "F",
@@ -11655,7 +11655,7 @@ weightkg: 150,
 },
 
 dracovish: {
-num: 882,
+morality: 882,
 name: "Dracovish",
 types: ["Dragon", "Water"],
 gender: "F",
@@ -11665,7 +11665,7 @@ weightkg: 215,
 },
 
 arctovish: {
-num: 883,
+morality: 883,
 name: "Arctovish",
 types: ["Ice", "Water"],
 gender: "F",
@@ -11675,7 +11675,7 @@ weightkg: 175,
 },
 
 duraludon: {
-num: 884,
+morality: 884,
 name: "Duraludon",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -11685,7 +11685,7 @@ weightkg: 40,
 },
 
 duraludongmax: {
-num: 884,
+morality: 884,
 name: "Duraludon-Gmax",
 types: ["Dragon", "Steel"],
 gender: "F",
@@ -11695,7 +11695,7 @@ weightkg: 0,
 },
 
 dreepy: {
-num: 885,
+morality: 885,
 name: "Dreepy",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -11705,7 +11705,7 @@ weightkg: 2,
 },
 
 drakloak: {
-num: 886,
+morality: 886,
 name: "Drakloak",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -11715,7 +11715,7 @@ weightkg: 11,
 },
 
 dragapult: {
-num: 887,
+morality: 887,
 name: "Dragapult",
 types: ["Dragon", "Ghost"],
 gender: "F",
@@ -11725,7 +11725,7 @@ weightkg: 50,
 },
 
 zacian: {
-num: 888,
+morality: 888,
 name: "Zacian",
 types: ["Fairy"],
 gender: "F",
@@ -11736,7 +11736,7 @@ cannotDynamax: true,
 },
 
 zaciancrowned: {
-num: 888,
+morality: 888,
 name: "Zacian-Crowned",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -11748,7 +11748,7 @@ cannotDynamax: true,
 },
 
 zamazenta: {
-num: 889,
+morality: 889,
 name: "Zamazenta",
 types: ["Fighting"],
 gender: "F",
@@ -11759,7 +11759,7 @@ cannotDynamax: true,
 },
 
 zamazentacrowned: {
-num: 889,
+morality: 889,
 name: "Zamazenta-Crowned",
 types: ["Fighting", "Steel"],
 gender: "F",
@@ -11771,7 +11771,7 @@ cannotDynamax: true,
 },
 
 eternatus: {
-num: 890,
+morality: 890,
 name: "Eternatus",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -11782,7 +11782,7 @@ cannotDynamax: true,
 },
 
 eternatuseternamax: {
-num: 890,
+morality: 890,
 name: "Eternatus-Eternamax",
 types: ["Dragon", "Poison"],
 gender: "F",
@@ -11793,7 +11793,7 @@ cannotDynamax: true,
 },
 
 kubfu: {
-num: 891,
+morality: 891,
 name: "Kubfu",
 types: ["Fighting"],
 gender: "F",
@@ -11803,7 +11803,7 @@ weightkg: 12,
 },
 
 urshifu: {
-num: 892,
+morality: 892,
 name: "Urshifu",
 types: ["Dark", "Fighting"],
 gender: "F",
@@ -11813,7 +11813,7 @@ weightkg: 105,
 },
 
 urshifurapidstrike: {
-num: 892,
+morality: 892,
 name: "Urshifu-Rapid-Strike",
 types: ["Fighting", "Ghost"],
 gender: "F",
@@ -11823,7 +11823,7 @@ weightkg: 105,
 },
 
 urshifugmax: {
-num: 892,
+morality: 892,
 name: "Urshifu-Gmax",
 types: ["Dark", "Fighting"],
 gender: "F",
@@ -11833,7 +11833,7 @@ weightkg: 0,
 },
 
 urshifurapidstrikegmax: {
-num: 892,
+morality: 892,
 name: "Urshifu-Rapid-Strike-Gmax",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -11844,7 +11844,7 @@ battleOnly: "Urshifu-Rapid-Strike",
 },
 
 zarude: {
-num: 893,
+morality: 893,
 name: "Zarude",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -11854,7 +11854,7 @@ weightkg: 70,
 },
 
 zarudedada: {
-num: 893,
+morality: 893,
 name: "Zarude-Dada",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -11864,7 +11864,7 @@ weightkg: 70,
 },
 
 regieleki: {
-num: 894,
+morality: 894,
 name: "Regieleki",
 types: ["Electric"],
 gender: "F",
@@ -11874,7 +11874,7 @@ weightkg: 145,
 },
 
 regidrago: {
-num: 895,
+morality: 895,
 name: "Regidrago",
 types: ["Dragon"],
 gender: "F",
@@ -11884,7 +11884,7 @@ weightkg: 200,
 },
 
 glastrier: {
-num: 896,
+morality: 896,
 name: "Glastrier",
 types: ["Ice", "Normal"],
 gender: "F",
@@ -11894,7 +11894,7 @@ weightkg: 800,
 },
 
 spectrier: {
-num: 897,
+morality: 897,
 name: "Spectrier",
 types: ["Ghost", "Normal"],
 gender: "F",
@@ -11904,7 +11904,7 @@ weightkg: 44.5,
 },
 
 calyrex: {
-num: 898,
+morality: 898,
 name: "Calyrex",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -11914,7 +11914,7 @@ weightkg: 7.7,
 },
 
 calyrexice: {
-num: 898,
+morality: 898,
 name: "Calyrex-Ice",
 types: ["Grass", "Ice"],
 gender: "F",
@@ -11924,7 +11924,7 @@ weightkg: 809.1,
 },
 
 calyrexshadow: {
-num: 898,
+morality: 898,
 name: "Calyrex-Shadow",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -11934,7 +11934,7 @@ weightkg: 53.6,
 },
 
 wyrdeer: {
-num: 899,
+morality: 899,
 name: "Wyrdeer",
 types: ["Normal", "Psychic"],
 gender: "F",
@@ -11944,7 +11944,7 @@ weightkg: 95.1,
 },
 
 kleavor: {
-num: 900,
+morality: 900,
 name: "Kleavor",
 types: ["Bug", "Rock"],
 gender: "F",
@@ -11954,7 +11954,7 @@ weightkg: 89,
 },
 
 ursaluna: {
-num: 901,
+morality: 901,
 name: "Ursaluna",
 types: ["Fighting", "Normal"],
 gender: "F",
@@ -11964,7 +11964,7 @@ weightkg: 290,
 },
 
 ursalunabloodmoon: {
-num: 901,
+morality: 901,
 name: "Ursaluna-Bloodmoon",
 types: ["Ground", "Normal"],
 gender: "F",
@@ -11981,7 +11981,7 @@ gen: 9,
 
 
 basculegion: {
-num: 902,
+morality: 902,
 name: "Basculegion",
 types: ["Ghost", "Ice"],
 gender: "F",
@@ -11991,7 +11991,7 @@ weightkg: 110,
 },
 
 basculegionf: {
-num: 902,
+morality: 902,
 name: "Basculegion-F",
 types: ["Ghost", "Ice"],
 gender: "F",
@@ -12001,7 +12001,7 @@ weightkg: 110,
 },
 
 sneasler: {
-num: 903,
+morality: 903,
 name: "Sneasler",
 types: ["Fighting", "Poison"],
 gender: "F",
@@ -12011,7 +12011,7 @@ weightkg: 43,
 },
 
 overqwil: {
-num: 904,
+morality: 904,
 name: "Overqwil",
 types: ["Dark", "Poison"],
 gender: "F",
@@ -12021,7 +12021,7 @@ weightkg: 3.9,
 },
 
 enamorus: {
-num: 905,
+morality: 905,
 name: "Enamorus",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -12031,7 +12031,7 @@ weightkg: 48,
 },
 
 enamorustherian: {
-num: 905,
+morality: 905,
 name: "Enamorus-Therian",
 types: ["Fairy", "Flying"],
 gender: "F",
@@ -12041,7 +12041,7 @@ weightkg: 48,
 },
 
 sprigatito: {
-num: 906,
+morality: 906,
 name: "Sprigatito",
 types: ["Grass"],
 gender: "F",
@@ -12051,7 +12051,7 @@ weightkg: 4.1,
 },
 
 floragato: {
-num: 907,
+morality: 907,
 name: "Floragato",
 types: ["Grass"],
 gender: "F",
@@ -12061,7 +12061,7 @@ weightkg: 12.2,
 },
 
 meowscarada: {
-num: 908,
+morality: 908,
 name: "Meowscarada",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -12071,7 +12071,7 @@ weightkg: 31.2,
 },
 
 fuecoco: {
-num: 909,
+morality: 909,
 name: "Fuecoco",
 types: ["Fire"],
 gender: "F",
@@ -12081,7 +12081,7 @@ weightkg: 9.8,
 },
 
 crocalor: {
-num: 910,
+morality: 910,
 name: "Crocalor",
 types: ["Fire"],
 gender: "F",
@@ -12091,7 +12091,7 @@ weightkg: 30.7,
 },
 
 skeledirge: {
-num: 911,
+morality: 911,
 name: "Skeledirge",
 types: ["Fire", "Ghost"],
 gender: "F",
@@ -12101,7 +12101,7 @@ weightkg: 326.5,
 },
 
 quaxly: {
-num: 912,
+morality: 912,
 name: "Quaxly",
 types: ["Water"],
 gender: "F",
@@ -12111,7 +12111,7 @@ weightkg: 6.1,
 },
 
 quaxwell: {
-num: 913,
+morality: 913,
 name: "Quaxwell",
 types: ["Water"],
 gender: "F",
@@ -12121,7 +12121,7 @@ weightkg: 21.5,
 },
 
 quaquaval: {
-num: 914,
+morality: 914,
 name: "Quaquaval",
 types: ["Fighting", "Water"],
 gender: "F",
@@ -12131,7 +12131,7 @@ weightkg: 61.9,
 },
 
 lechonk: {
-num: 915,
+morality: 915,
 name: "Lechonk",
 types: ["Fairy"],
 gender: "F",
@@ -12141,7 +12141,7 @@ weightkg: 10.2,
 },
 
 oinkologne: {
-num: 916,
+morality: 916,
 name: "Oinkologne",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -12151,7 +12151,7 @@ weightkg: 120,
 },
 
 oinkolognef: {
-num: 916,
+morality: 916,
 name: "Oinkologne-F",
 types: ["Fairy", "Ground"],
 gender: "F",
@@ -12161,7 +12161,7 @@ weightkg: 120,
 },
 
 tarountula: {
-num: 917,
+morality: 917,
 name: "Tarountula",
 types: ["Bug"],
 gender: "F",
@@ -12171,7 +12171,7 @@ weightkg: 4,
 },
 
 spidops: {
-num: 918,
+morality: 918,
 name: "Spidops",
 types: ["Bug", "Ground"],
 gender: "F",
@@ -12181,7 +12181,7 @@ weightkg: 16.5,
 },
 
 nymble: {
-num: 919,
+morality: 919,
 name: "Nymble",
 types: ["Bug"],
 gender: "F",
@@ -12191,7 +12191,7 @@ weightkg: 1,
 },
 
 lokix: {
-num: 920,
+morality: 920,
 name: "Lokix",
 types: ["Bug", "Fighting"],
 gender: "F",
@@ -12201,7 +12201,7 @@ weightkg: 17.5,
 },
 
 pawmi: {
-num: 921,
+morality: 921,
 name: "Pawmi",
 types: ["Electric"],
 gender: "F",
@@ -12211,7 +12211,7 @@ weightkg: 2.5,
 },
 
 pawmo: {
-num: 922,
+morality: 922,
 name: "Pawmo",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -12221,7 +12221,7 @@ weightkg: 6.5,
 },
 
 pawmot: {
-num: 923,
+morality: 923,
 name: "Pawmot",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -12231,7 +12231,7 @@ weightkg: 41,
 },
 
 tandemaus: {
-num: 924,
+morality: 924,
 name: "Tandemaus",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -12241,7 +12241,7 @@ weightkg: 1.8,
 },
 
 maushold: {
-num: 925,
+morality: 925,
 name: "Maushold",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -12251,7 +12251,7 @@ weightkg: 2.3,
 },
 
 mausholdfour: {
-num: 925,
+morality: 925,
 name: "Maushold-Four",
 types: ["Fairy", "Normal"],
 gender: "F",
@@ -12261,7 +12261,7 @@ weightkg: 2.8,
 },
 
 fidough: {
-num: 926,
+morality: 926,
 name: "Fidough",
 types: ["Fairy"],
 gender: "F",
@@ -12271,7 +12271,7 @@ weightkg: 10.9,
 },
 
 dachsbun: {
-num: 927,
+morality: 927,
 name: "Dachsbun",
 types: ["Fairy", "Fire"],
 gender: "F",
@@ -12281,7 +12281,7 @@ weightkg: 14.9,
 },
 
 smoliv: {
-num: 928,
+morality: 928,
 name: "Smoliv",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -12291,7 +12291,7 @@ weightkg: 6.5,
 },
 
 dolliv: {
-num: 929,
+morality: 929,
 name: "Dolliv",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -12301,7 +12301,7 @@ weightkg: 11.9,
 },
 
 arboliva: {
-num: 930,
+morality: 930,
 name: "Arboliva",
 types: ["Grass", "Normal"],
 gender: "F",
@@ -12311,7 +12311,7 @@ weightkg: 48.2,
 },
 
 squawkabilly: {
-num: 931,
+morality: 931,
 name: "Squawkabilly",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -12321,7 +12321,7 @@ weightkg: 2.4,
 },
 
 squawkabillyblue: {
-num: 931,
+morality: 931,
 name: "Squawkabilly-Blue",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -12331,7 +12331,7 @@ weightkg: 2.4,
 },
 
 squawkabillyyellow: {
-num: 931,
+morality: 931,
 name: "Squawkabilly-Yellow",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -12341,7 +12341,7 @@ weightkg: 2.4,
 },
 
 squawkabillywhite: {
-num: 931,
+morality: 931,
 name: "Squawkabilly-White",
 types: ["Flying", "Normal"],
 gender: "F",
@@ -12351,7 +12351,7 @@ weightkg: 2.4,
 },
 
 nacli: {
-num: 932,
+morality: 932,
 name: "Nacli",
 types: ["Rock"],
 gender: "F",
@@ -12361,7 +12361,7 @@ weightkg: 16,
 },
 
 naclstack: {
-num: 933,
+morality: 933,
 name: "Naclstack",
 types: ["Ice", "Rock"],
 gender: "F",
@@ -12371,7 +12371,7 @@ weightkg: 105,
 },
 
 garganacl: {
-num: 934,
+morality: 934,
 name: "Garganacl",
 types: ["Ice", "Rock"],
 gender: "F",
@@ -12381,7 +12381,7 @@ weightkg: 240,
 },
 
 charcadet: {
-num: 935,
+morality: 935,
 name: "Charcadet",
 types: ["Fire"],
 gender: "F",
@@ -12391,7 +12391,7 @@ weightkg: 10.5,
 },
 
 armarouge: {
-num: 936,
+morality: 936,
 name: "Armarouge",
 types: ["Fire", "Psychic"],
 gender: "F",
@@ -12401,7 +12401,7 @@ weightkg: 85,
 },
 
 ceruledge: {
-num: 937,
+morality: 937,
 name: "Ceruledge",
 types: ["Fire", "Steel"],
 gender: "F",
@@ -12411,7 +12411,7 @@ weightkg: 62,
 },
 
 tadbulb: {
-num: 938,
+morality: 938,
 name: "Tadbulb",
 types: ["Electric"],
 gender: "F",
@@ -12421,7 +12421,7 @@ weightkg: 0.4,
 },
 
 bellibolt: {
-num: 939,
+morality: 939,
 name: "Bellibolt",
 types: ["Electric", "Poison"],
 gender: "F",
@@ -12431,7 +12431,7 @@ weightkg: 113,
 },
 
 wattrel: {
-num: 940,
+morality: 940,
 name: "Wattrel",
 types: ["Electric", "Flying"],
 gender: "F",
@@ -12441,7 +12441,7 @@ weightkg: 3.6,
 },
 
 kilowattrel: {
-num: 941,
+morality: 941,
 name: "Kilowattrel",
 types: ["Electric", "Flying"],
 gender: "F",
@@ -12451,7 +12451,7 @@ weightkg: 38.6,
 },
 
 maschiff: {
-num: 942,
+morality: 942,
 name: "Maschiff",
 types: ["Dark"],
 gender: "F",
@@ -12461,7 +12461,7 @@ weightkg: 16,
 },
 
 mabosstiff: {
-num: 943,
+morality: 943,
 name: "Mabosstiff",
 types: ["Dark", "Ground"],
 gender: "F",
@@ -12471,7 +12471,7 @@ weightkg: 61,
 },
 
 shroodle: {
-num: 944,
+morality: 944,
 name: "Shroodle",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -12481,7 +12481,7 @@ weightkg: 0.7,
 },
 
 grafaiai: {
-num: 945,
+morality: 945,
 name: "Grafaiai",
 types: ["Normal", "Poison"],
 gender: "F",
@@ -12491,7 +12491,7 @@ weightkg: 27.2,
 },
 
 bramblin: {
-num: 946,
+morality: 946,
 name: "Bramblin",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -12501,7 +12501,7 @@ weightkg: 0.6,
 },
 
 brambleghast: {
-num: 947,
+morality: 947,
 name: "Brambleghast",
 types: ["Ghost", "Grass"],
 gender: "F",
@@ -12511,7 +12511,7 @@ weightkg: 6,
 },
 
 toedscool: {
-num: 948,
+morality: 948,
 name: "Toedscool",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -12521,7 +12521,7 @@ weightkg: 33,
 },
 
 toedscruel: {
-num: 949,
+morality: 949,
 name: "Toedscruel",
 types: ["Grass", "Ground"],
 gender: "F",
@@ -12531,7 +12531,7 @@ weightkg: 58,
 },
 
 klawf: {
-num: 950,
+morality: 950,
 name: "Klawf",
 types: ["Rock"],
 gender: "F",
@@ -12541,7 +12541,7 @@ weightkg: 79,
 },
 
 capsakid: {
-num: 951,
+morality: 951,
 name: "Capsakid",
 types: ["Grass"],
 gender: "F",
@@ -12551,7 +12551,7 @@ weightkg: 3,
 },
 
 scovillain: {
-num: 952,
+morality: 952,
 name: "Scovillain",
 types: ["Fire", "Grass"],
 gender: "F",
@@ -12561,7 +12561,7 @@ weightkg: 15,
 },
 
 rellor: {
-num: 953,
+morality: 953,
 name: "Rellor",
 types: ["Bug"],
 gender: "F",
@@ -12571,7 +12571,7 @@ weightkg: 1,
 },
 
 rabsca: {
-num: 954,
+morality: 954,
 name: "Rabsca",
 types: ["Bug", "Psychic"],
 gender: "F",
@@ -12581,7 +12581,7 @@ weightkg: 3.5,
 },
 
 flittle: {
-num: 955,
+morality: 955,
 name: "Flittle",
 types: ["Psychic"],
 gender: "F",
@@ -12591,7 +12591,7 @@ weightkg: 1.5,
 },
 
 espathra: {
-num: 956,
+morality: 956,
 name: "Espathra",
 types: ["Ground", "Psychic"],
 gender: "F",
@@ -12601,7 +12601,7 @@ weightkg: 90,
 },
 
 tinkatink: {
-num: 957,
+morality: 957,
 name: "Tinkatink",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -12611,7 +12611,7 @@ weightkg: 8.9,
 },
 
 tinkatuff: {
-num: 958,
+morality: 958,
 name: "Tinkatuff",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -12621,7 +12621,7 @@ weightkg: 59.1,
 },
 
 tinkaton: {
-num: 959,
+morality: 959,
 name: "Tinkaton",
 types: ["Fairy", "Steel"],
 gender: "F",
@@ -12631,7 +12631,7 @@ weightkg: 112.8,
 },
 
 wiglett: {
-num: 960,
+morality: 960,
 name: "Wiglett",
 types: ["Rock", "Water"],
 gender: "F",
@@ -12641,7 +12641,7 @@ weightkg: 1.8,
 },
 
 wugtrio: {
-num: 961,
+morality: 961,
 name: "Wugtrio",
 types: ["Rock", "Water"],
 gender: "F",
@@ -12651,7 +12651,7 @@ weightkg: 5.4,
 },
 
 bombirdier: {
-num: 962,
+morality: 962,
 name: "Bombirdier",
 types: ["Flying", "Rock"],
 gender: "F",
@@ -12661,7 +12661,7 @@ weightkg: 42.9,
 },
 
 finizen: {
-num: 963,
+morality: 963,
 name: "Finizen",
 types: ["Water"],
 gender: "F",
@@ -12671,7 +12671,7 @@ weightkg: 60.2,
 },
 
 palafin: {
-num: 964,
+morality: 964,
 name: "Palafin",
 types: ["Water"],
 gender: "F",
@@ -12681,7 +12681,7 @@ weightkg: 60.2,
 },
 
 palafinhero: {
-num: 964,
+morality: 964,
 name: "Palafin-Hero",
 types: ["Water"],
 gender: "F",
@@ -12693,7 +12693,7 @@ battleOnly: "Palafin",
 },
 
 varoom: {
-num: 965,
+morality: 965,
 name: "Varoom",
 types: ["Poison", "Steel"],
 gender: "F",
@@ -12703,7 +12703,7 @@ weightkg: 35,
 },
 
 revavroom: {
-num: 966,
+morality: 966,
 name: "Revavroom",
 types: ["Poison", "Steel"],
 gender: "F",
@@ -12713,7 +12713,7 @@ weightkg: 120,
 },
 
 cyclizar: {
-num: 967,
+morality: 967,
 name: "Cyclizar",
 types: ["Dragon", "Normal"],
 gender: "F",
@@ -12723,7 +12723,7 @@ weightkg: 63,
 },
 
 orthworm: {
-num: 968,
+morality: 968,
 name: "Orthworm",
 types: ["Bug", "Steel"],
 gender: "F",
@@ -12733,7 +12733,7 @@ weightkg: 310,
 },
 
 glimmet: {
-num: 969,
+morality: 969,
 name: "Glimmet",
 types: ["Poison", "Rock"],
 gender: "F",
@@ -12743,7 +12743,7 @@ weightkg: 8,
 },
 
 glimmora: {
-num: 970,
+morality: 970,
 name: "Glimmora",
 types: ["Poison", "Rock"],
 gender: "F",
@@ -12753,7 +12753,7 @@ weightkg: 45,
 },
 
 greavard: {
-num: 971,
+morality: 971,
 name: "Greavard",
 types: ["Ghost", "Ground"],
 gender: "F",
@@ -12763,7 +12763,7 @@ weightkg: 35,
 },
 
 houndstone: {
-num: 972,
+morality: 972,
 name: "Houndstone",
 types: ["Ghost", "Ground"],
 gender: "F",
@@ -12773,7 +12773,7 @@ weightkg: 15,
 },
 
 flamigo: {
-num: 973,
+morality: 973,
 name: "Flamigo",
 types: ["Flying", "Ground"],
 gender: "F",
@@ -12783,7 +12783,7 @@ weightkg: 37,
 },
 
 cetoddle: {
-num: 974,
+morality: 974,
 name: "Cetoddle",
 types: ["Ice"],
 gender: "F",
@@ -12793,7 +12793,7 @@ weightkg: 45,
 },
 
 cetitan: {
-num: 975,
+morality: 975,
 name: "Cetitan",
 types: ["Ground", "Ice"],
 gender: "F",
@@ -12803,7 +12803,7 @@ weightkg: 700,
 },
 
 veluza: {
-num: 976,
+morality: 976,
 name: "Veluza",
 types: ["Psychic", "Water"],
 gender: "F",
@@ -12813,7 +12813,7 @@ weightkg: 90,
 },
 
 dondozo: {
-num: 977,
+morality: 977,
 name: "Dondozo",
 types: ["Dark", "Ice"],
 gender: "F",
@@ -12823,7 +12823,7 @@ weightkg: 220,
 },
 
 tatsugiri: {
-num: 978,
+morality: 978,
 name: "Tatsugiri",
 types: ["Dragon", "Water"],
 gender: "F",
@@ -12833,7 +12833,7 @@ weightkg: 8,
 },
 
 annihilape: {
-num: 979,
+morality: 979,
 name: "Annihilape",
 types: ["Fighting", "Ghost"],
 gender: "F",
@@ -12843,7 +12843,7 @@ weightkg: 56,
 },
 
 clodsire: {
-num: 980,
+morality: 980,
 name: "Clodsire",
 types: ["Ground", "Poison"],
 gender: "F",
@@ -12853,7 +12853,7 @@ weightkg: 223,
 },
 
 farigiraf: {
-num: 981,
+morality: 981,
 name: "Farigiraf",
 types: ["Normal", "Psychic"],
 gender: "F",
@@ -12863,7 +12863,7 @@ weightkg: 160,
 },
 
 dudunsparce: {
-num: 982,
+morality: 982,
 name: "Dudunsparce",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -12873,7 +12873,7 @@ weightkg: 39.2,
 },
 
 dudunsparcethreesegment: {
-num: 982,
+morality: 982,
 name: "Dudunsparce-Three-Segment",
 types: ["Bug", "Normal"],
 gender: "F",
@@ -12883,7 +12883,7 @@ weightkg: 47.4,
 },
 
 kingambit: {
-num: 983,
+morality: 983,
 name: "Kingambit",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -12893,7 +12893,7 @@ weightkg: 120,
 },
 
 greattusk: {
-num: 984,
+morality: 984,
 name: "Great Tusk",
 types: ["Ground", "Rock"],
 gender: "F",
@@ -12903,7 +12903,7 @@ weightkg: 320,
 },
 
 screamtail: {
-num: 985,
+morality: 985,
 name: "Scream Tail",
 types: ["Dragon", "Fairy"],
 gender: "F",
@@ -12913,7 +12913,7 @@ weightkg: 8,
 },
 
 brutebonnet: {
-num: 986,
+morality: 986,
 name: "Brute Bonnet",
 types: ["Ghost", "Poison"],
 gender: "F",
@@ -12923,7 +12923,7 @@ weightkg: 21,
 },
 
 fluttermane: {
-num: 987,
+morality: 987,
 name: "Flutter Mane",
 types: ["Fairy", "Ghost"],
 gender: "F",
@@ -12933,7 +12933,7 @@ weightkg: 4,
 },
 
 slitherwing: {
-num: 988,
+morality: 988,
 name: "Slither Wing",
 types: ["Bug", "Fighting"],
 gender: "F",
@@ -12943,7 +12943,7 @@ weightkg: 92,
 },
 
 sandyshocks: {
-num: 989,
+morality: 989,
 name: "Sandy Shocks",
 types: ["Electric", "Ground"],
 gender: "F",
@@ -12953,7 +12953,7 @@ weightkg: 60,
 },
 
 irontreads: {
-num: 990,
+morality: 990,
 name: "Iron Treads",
 types: ["Ground", "Steel"],
 gender: "F",
@@ -12963,7 +12963,7 @@ weightkg: 240,
 },
 
 ironbundle: {
-num: 991,
+morality: 991,
 name: "Iron Bundle",
 types: ["Ice", "Water"],
 gender: "F",
@@ -12973,7 +12973,7 @@ weightkg: 11,
 },
 
 ironhands: {
-num: 992,
+morality: 992,
 name: "Iron Hands",
 types: ["Electric", "Fighting"],
 gender: "F",
@@ -12983,7 +12983,7 @@ weightkg: 380.7,
 },
 
 ironjugulis: {
-num: 993,
+morality: 993,
 name: "Iron Jugulis",
 types: ["Dark", "Steel"],
 gender: "F",
@@ -12993,7 +12993,7 @@ weightkg: 111,
 },
 
 ironmoth: {
-num: 994,
+morality: 994,
 name: "Iron Moth",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -13003,7 +13003,7 @@ weightkg: 36,
 },
 
 ironthorns: {
-num: 995,
+morality: 995,
 name: "Iron Thorns",
 types: ["Electric", "Rock"],
 gender: "F",
@@ -13013,7 +13013,7 @@ weightkg: 303,
 },
 
 frigibax: {
-num: 996,
+morality: 996,
 name: "Frigibax",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -13023,7 +13023,7 @@ weightkg: 17,
 },
 
 arctibax: {
-num: 997,
+morality: 997,
 name: "Arctibax",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -13033,7 +13033,7 @@ weightkg: 30,
 },
 
 baxcalibur: {
-num: 998,
+morality: 998,
 name: "Baxcalibur",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -13043,7 +13043,7 @@ weightkg: 210,
 },
 
 gimmighoul: {
-num: 999,
+morality: 999,
 name: "Gimmighoul",
 types: ["Ghost"],
 gender: "F",
@@ -13053,7 +13053,7 @@ weightkg: 5,
 },
 
 gimmighoulroaming: {
-num: 999,
+morality: 999,
 name: "Gimmighoul-Roaming",
 types: ["Ghost"],
 gender: "F",
@@ -13063,7 +13063,7 @@ weightkg: 0.1,
 },
 
 gholdengo: {
-num: 1000,
+morality: 1000,
 name: "Gholdengo",
 types: ["Ghost", "Steel"],
 gender: "F",
@@ -13073,7 +13073,7 @@ weightkg: 30,
 },
 
 wochien: {
-num: 1001,
+morality: 1001,
 name: "Wo-Chien",
 types: ["Dark", "Grass"],
 gender: "F",
@@ -13083,7 +13083,7 @@ weightkg: 74.2,
 },
 
 chienpao: {
-num: 1002,
+morality: 1002,
 name: "Chien-Pao",
 types: ["Dark", "Ice"],
 gender: "F",
@@ -13093,7 +13093,7 @@ weightkg: 152.2,
 },
 
 tinglu: {
-num: 1003,
+morality: 1003,
 name: "Ting-Lu",
 types: ["Ground", "Steel"],
 gender: "F",
@@ -13103,7 +13103,7 @@ weightkg: 699.7,
 },
 
 chiyu: {
-num: 1004,
+morality: 1004,
 name: "Chi-Yu",
 types: ["Dark", "Fire"],
 gender: "F",
@@ -13113,7 +13113,7 @@ weightkg: 4.9,
 },
 
 roaringmoon: {
-num: 1005,
+morality: 1005,
 name: "Roaring Moon",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -13123,7 +13123,7 @@ weightkg: 380,
 },
 
 ironvaliant: {
-num: 1006,
+morality: 1006,
 name: "Iron Valiant",
 types: ["Fairy", "Fighting"],
 gender: "F",
@@ -13133,7 +13133,7 @@ weightkg: 35,
 },
 
 koraidon: {
-num: 1007,
+morality: 1007,
 name: "Koraidon",
 types: ["Dragon", "Fighting"],
 gender: "F",
@@ -13143,7 +13143,7 @@ weightkg: 303,
 },
 
 miraidon: {
-num: 1008,
+morality: 1008,
 name: "Miraidon",
 types: ["Dragon", "Electric"],
 gender: "F",
@@ -13153,7 +13153,7 @@ weightkg: 240,
 },
 
 walkingwake: {
-num: 1009,
+morality: 1009,
 name: "Walking Wake",
 types: ["Dragon", "Ice"],
 gender: "F",
@@ -13162,7 +13162,7 @@ abilities: {0: "No Ability"},
 weightkg: 280,
 },
 ironleaves: {
-num: 1010,
+morality: 1010,
 name: "Iron Leaves",
 types: ["Grass", "Psychic"],
 gender: "F",
@@ -13172,7 +13172,7 @@ weightkg: 125,
 },
 
 dipplin: {
-num: 1011,
+morality: 1011,
 name: "Dipplin",
 types: ["Bug", "Grass"],
 gender: "F",
@@ -13183,7 +13183,7 @@ color: "Green",
 },
 
 poltchageist: {
-num: 1012,
+morality: 1012,
 name: "Poltchageist",
 types: ["Grass", "Ghost"],
 gender: "F",
@@ -13195,7 +13195,7 @@ color: "Green",
 },
 
 poltchageistartisan: {
-num: 1012,
+morality: 1012,
 name: "Poltchageist-Artisan",
 types: ["Grass", "Ghost"],
 gender: "F",
@@ -13207,7 +13207,7 @@ color: "Green",
 },
 
 sinistcha: {
-num: 1013,
+morality: 1013,
 name: "Sinistcha",
 types: ["Grass", "Ghost"],
 gender: "F",
@@ -13219,7 +13219,7 @@ color: "Green",
 },
 
 sinistchamasterpiece: {
-num: 1013,
+morality: 1013,
 name: "Sinistcha-Masterpiece",
 types: ["Grass", "Ghost"],
 gender: "F",
@@ -13231,7 +13231,7 @@ color: "Green",
 },
 
 okidogi: {
-num: 1014,
+morality: 1014,
 name: "Okidogi",
 types: ["Grass", "Poison"],
 gender: "F",
@@ -13243,7 +13243,7 @@ color: "Black",
 },
 
 munkidori: {
-num: 1015,
+morality: 1015,
 name: "Munkidori",
 types: ["Ice", "Poison"],
 gender: "F",
@@ -13255,7 +13255,7 @@ color: "Black",
 },
 
 fezandipiti: {
-num: 1016,
+morality: 1016,
 name: "Fezandipiti",
 types: ["Fire", "Poison"],
 gender: "F",
@@ -13265,7 +13265,7 @@ weightkg: 30.1,
 },
 
 ogerpon: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon",
 types: ["Grass"],
 gender: "F",
@@ -13275,7 +13275,7 @@ weightkg: 39.8,
 },
 
 ogerponwellspring: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Wellspring",
 types: ["Grass", "Water"],
 gender: "F",
@@ -13285,7 +13285,7 @@ weightkg: 39.8,
 },
 
 ogerponhearthflame: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Hearthflame",
 types: ["Grass", "Fire"],
 gender: "F",
@@ -13295,7 +13295,7 @@ weightkg: 39.8,
 },
 
 ogerponcornerstone: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Cornerstone",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -13305,7 +13305,7 @@ weightkg: 39.8,
 },
 
 ogerpontealtera: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Teal-Tera",
 types: ["Grass"],
 gender: "F",
@@ -13315,7 +13315,7 @@ weightkg: 39.8,
 },
 
 ogerponwellspringtera: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Wellspring-Tera",
 types: ["Grass", "Water"],
 gender: "F",
@@ -13325,7 +13325,7 @@ weightkg: 39.8,
 },
 
 ogerponhearthflametera: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Hearthflame-Tera",
 types: ["Grass", "Fire"],
 gender: "F",
@@ -13335,7 +13335,7 @@ weightkg: 39.8,
 },
 
 ogerponcornerstonetera: {
-num: 1017,
+morality: 1017,
 name: "Ogerpon-Cornerstone-Tera",
 types: ["Grass", "Rock"],
 gender: "F",
@@ -13345,7 +13345,7 @@ weightkg: 39.8,
 },
 
 archaludon: {
-num: 1018,
+morality: 1018,
 name: "Archaludon",
 types: ["Steel", "Dragon"],
 gender: "F",
@@ -13355,7 +13355,7 @@ weightkg: 60,
 },
 
 hydrapple: {
-num: 1019,
+morality: 1019,
 name: "Hydrapple",
 types: ["Dark", "Dragon"],
 gender: "F",
@@ -13365,7 +13365,7 @@ weightkg: 93,
 },
 
 gougingfire: {
-num: 1020,
+morality: 1020,
 name: "Gouging Fire",
 types: ["Fire", "Dragon"],
 gender: "F",
@@ -13375,7 +13375,7 @@ weightkg: 590,
 },
 
 ragingbolt: {
-num: 1021,
+morality: 1021,
 name: "Raging Bolt",
 types: ["Electric", "Dragon"],
 gender: "F",
@@ -13385,7 +13385,7 @@ weightkg: 480,
 },
 
 ironboulder: {
-num: 1022,
+morality: 1022,
 name: "Iron Boulder",
 types: ["Rock", "Psychic"],
 gender: "F",
@@ -13395,7 +13395,7 @@ weightkg: 162.5,
 },
 
 ironcrown: {
-num: 1023,
+morality: 1023,
 name: "Iron Crown",
 types: ["Steel", "Psychic"],
 gender: "F",
@@ -13405,7 +13405,7 @@ weightkg: 156,
 },
 
 terapagos: {
-num: 1024,
+morality: 1024,
 name: "Terapagos",
 types: ["???"],
 gender: "F",
@@ -13415,7 +13415,7 @@ weightkg: 6.5,
 },
 
 terapagosterastal: {
-num: 1024,
+morality: 1024,
 name: "Terapagos-Terastal",
 types: ["???"],
 gender: "F",
@@ -13425,7 +13425,7 @@ weightkg: 16,
 },
 
 terapagosstellar: {
-num: 1024,
+morality: 1024,
 name: "Terapagos-Stellar",
 types: ["???"],
 gender: "F",
@@ -13435,7 +13435,7 @@ weightkg: 77,
 },
 
 pecharunt: {
-num: 1025,
+morality: 1025,
 name: "Pecharunt",
 types: ["Poison", "Ghost"],
 gender: "F",
