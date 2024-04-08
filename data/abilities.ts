@@ -2415,7 +2415,7 @@ flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
 name: "Imposter",
 rating: 5,
 num: 150,
-
+},
 
 infiltrator: {
 onModifyMove(move) {
