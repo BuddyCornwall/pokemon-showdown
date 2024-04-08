@@ -1243,8 +1243,8 @@ export class Pokemon {
 			this.moveSlots.push({
 				move: moveName,
 				id: moveSlot.id,
-				pp: moveSlot.maxpp === 1 ? 1 : 5,
-				maxpp: this.battle.gen >= 5 ? (moveSlot.maxpp === 1 ? 1 : 5) : moveSlot.maxpp,
+				pp: moveSlot.maxpp === 1 ? 1 : 1,
+				maxpp: this.battle.gen >= 1 ? (moveSlot.maxpp === 1 ? 1 : 1) : moveSlot.maxpp,
 				target: moveSlot.target,
 				disabled: false,
 				used: false,
