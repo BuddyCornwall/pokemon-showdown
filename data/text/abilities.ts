@@ -2263,4 +2263,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	
+		ugly: {
+		name: "Ugly",
+		desc: "The duration of Gravity, Heal Block, Magic Room, Safeguard, Tailwind, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
+		shortDesc: "When used, Gravity/Heal Block/Safeguard/Tailwind/Room effects last 2 more turns.",
+        start: "  U G L Y is angry, very very angry.",
+	},
+	
+	
+	
 };
