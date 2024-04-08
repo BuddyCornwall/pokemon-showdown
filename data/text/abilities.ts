@@ -2272,5 +2272,4 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	
 	
-	
 };
