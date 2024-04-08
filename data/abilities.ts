@@ -2397,7 +2397,14 @@ num: 17,
 
 imposter: {
 onSwitchIn(pokemon) {
+this.effectState.switchingIn = true;
+},
+onStart(pokemon) {
+// Imposter does not activate when Skill Swapped or when Neutralizing Gas leaves the field
 if (!this.effectState.switchingIn) return;
+// copies across in doubles/triples
+// (also copies across in multibattle and diagonally in free-for-all,
+// but side.foe already takes care of those)
 const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 if (target) {
 pokemon.transformInto(target, this.dex.abilities.get('imposter'));
@@ -2408,7 +2415,7 @@ flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
 name: "Imposter",
 rating: 5,
 num: 150,
-},
+
 
 infiltrator: {
 onModifyMove(move) {
