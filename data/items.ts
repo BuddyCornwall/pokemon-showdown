@@ -7205,7 +7205,7 @@ this.add('-message', attacker.name + "'s attack became a critical hit due to the
 
 capsule: {
 name: "Capsule",
-onUse: function (pokemon) {
+onStart: function (pokemon) {
 if (!pokemon.volatiles['capsuleused']) {
 pokemon.addVolatile('capsuleused');
 this.add('-item', pokemon, 'Capsule');
@@ -7213,9 +7213,8 @@ let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
 let randomStat = this.sample(stats);
 this.boost({[randomStat]: 2}, pokemon);
 this.add('-message', pokemon.name + "'s " + this.getStat(randomStat, pokemon, true) + " rose sharply!");
-} else {
-return false;
 }
+},
 },
 },
 
