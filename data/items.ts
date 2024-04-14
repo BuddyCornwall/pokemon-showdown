@@ -7152,16 +7152,16 @@ gen: 8,
 isNonstandard: "CAP",
 },
 
-lightmetal: {
-name: "Light Metal",
+magnesificent: {
+name: "Magnesificent", 
 onModifyWeight(weighthg) {
 return this.trunc(weighthg / 2);
 },
 isBreakable: true,
 },
 
-heavymetal: {
-name: "Heavy Metal",
+donnyosmium: {
+name: "Donny Osmium",
 onModifyWeightPriority: 1,
 onModifyWeight(weighthg) {
 return weighthg * 2.5;
@@ -7171,20 +7171,20 @@ isBreakable: true,
 
 egg: {
 name: "Egg",
-spritenum: 417,
-fling: {
-basePower: 60,
-},
-onDamagingHitOrder: 2,
-onDamagingHit(damage, target, source, move) {
-if (this.checkMoveMakesContact(move, source, target)) {
-this.damage(source.baseMaxhp / 10, source, target);
-pokemon.addVolatile('confusion');
-target.useItem();
+onDamage: function (damage, target, source, effect) {
+if (effect && effect.effectType === 'Move' && source && source !== target && !target.ateBerry) {
+this.add('-activate', target, 'item: Confuse Orb');
+source.addVolatile('confusion', target);
+let damageAmount = Math.ceil(source.maxhp / 10);
+this.damage(damageAmount, source, target);
+target.consumeItem();
 }
 },
-num: 540,
-gen: 5,
+desc: "Confuses the attacker and deals damage equal to 1/10th of the attacker's max HP when holder is hit. Single use.",
+onEat: function (pokemon) {
+pokemon.removeItem();
 },
+},
+
 
 };
