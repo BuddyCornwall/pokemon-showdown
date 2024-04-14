@@ -7176,7 +7176,7 @@ pokemon.addVolatile('eggused');
 return false;
 }
 },
-}
+},
 
 beachglass: {
 name: "Beach Glass",
