@@ -7188,7 +7188,7 @@ return false;
 },
 }
 
-"beachglass": {
+beachglass: {
 name: "Beach Glass",
 onResidualOrder: 26,
 onResidualSubOrder: 1,
