@@ -7205,7 +7205,7 @@ this.add('-message', attacker.name + "'s attack became a critical hit due to the
 
 capsule: {
 name: "Capsule",
-onStart: function (pokemon) {
+onBeforeSwitchIn: function (pokemon) {
 if (!pokemon.volatiles['capsuleused']) {
 pokemon.addVolatile('capsuleused');
 this.add('-item', pokemon, 'Capsule');
