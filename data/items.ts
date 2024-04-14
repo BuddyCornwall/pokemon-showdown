@@ -7169,7 +7169,7 @@ return weighthg * 2.5;
 isBreakable: true,
 },
 
-"egg": {
+egg: {
 name: "Egg",
 onDamagingHitOrder: 1,
 onDamagingHit: function (damage, target, source, move) {
@@ -7186,6 +7186,110 @@ pokemon.addVolatile('eggused');
 return false;
 }
 },
+}
+
+"beachglass": {
+name: "Beach Glass",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('sunnyday')) {
+this.boost({spe: 1}, pokemon);
+}
+},
+onModifyDefPriority: 6,
+onModifyDef: function (def, pokemon) {
+return this.chainModify(1.5);
+},
+desc: "Raises Defense by 50%. Raises Speed by 1 stage in sunny weather.",
+},
+
+bottlecap: {
+name: "Bottle Cap",
+onUse: function (pokemon) {
+if (!pokemon.volatiles['bottlecapused']) {
+pokemon.addVolatile('bottlecapused');
+this.add('-item', pokemon, 'Bottle Cap');
+this.add('-message', pokemon.name + " used the Bottle Cap to ensure a critical hit!");
+pokemon.addVolatile('laserfocus');
+} else {
+return false;
+}
+},
+},
+
+capsule: {
+name: "Capsule",
+onUse: function (pokemon) {
+if (!pokemon.volatiles['capsuleused']) {
+pokemon.addVolatile('capsuleused');
+this.add('-item', pokemon, 'Capsule');
+let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
+let randomStat = this.sample(stats);
+this.boost({[randomStat]: 2}, pokemon);
+this.add('-message', pokemon.name + "'s " + this.getStat(randomStat, pokemon, true) + " rose sharply!");
+} else {
+return false;
+}
+},
+},
+
+doll: {
+name: "Doll",
+onUse: function (pokemon) {
+if (!pokemon.volatiles['dollused']) {
+let foeItem = pokemon.side.foe.active[0].item;
+if (foeItem && !pokemon.item) {
+pokemon.setItem(foeItem);
+this.add('-item', pokemon, foeItem, '[from] move: Doll');
+this.add('-message', pokemon.name + " copied " + foeItem + " with the Doll!");
+pokemon.addVolatile('dollused');
+} else {
+return false;
+}
+}
+},
+},
+
+heartscale: {
+name: "Heart Scale",
+onUse: function (pokemon) {
+if (!pokemon.volatiles['heartscaleused']) {
+let moves = pokemon.moves.map(move => this.dex.moves.get(move.id));
+let randomMove = this.sample(moves);
+let oldMove = pokemon.moves[this.random(pokemon.moves.length)];
+pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].pp = pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].maxpp;
+pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].move = randomMove.name;
+this.add('-activate', pokemon, 'item: Heart Scale', randomMove.name);
+this.add('-message', pokemon.name + " learned " + randomMove.name + " with the Heart Scale!");
+pokemon.addVolatile('heartscaleused');
+} else {
+return false;
+}
+},
+},
+
+yellowcard: {
+name: "Yellow Card",
+onStart: function (pokemon) {
+pokemon.itemUsageCount = 1;
+},
+onBeforeMove: function (attacker, defender, move) {
+if (defender.side !== attacker.side && !defender.volatiles['yellowcard']) {
+defender.addVolatile('yellowcard');
+this.add('-message', defender.name + ' was shown a Yellow Card and cannot attack this turn!');
+if (defender.item) {
+let item = this.dex.items.get(defender.item);
+if (item) {
+this.add('-enditem', defender, item, '[consumed]');
+}
+}
+defender.setItem('');
+defender.itemUsageCount = 0;
+return false;
+}
+},
+desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
 };
