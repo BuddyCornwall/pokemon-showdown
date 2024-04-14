@@ -7169,8 +7169,9 @@ return weighthg * 2.5;
 isBreakable: true,
 },
 
-egg: {
+confuseorb: {
 name: "Egg",
+onDamagingHitOrder: 1,
 onDamagingHit: function (damage, target, source, move) {
 this.add('-activate', target, 'item: Egg');
 source.addVolatile('confusion', target);
@@ -7178,16 +7179,15 @@ let damageAmount = Math.ceil(source.maxhp / 10);
 this.damage(damageAmount, source, target);
 target.setItem('');
 },
-onStart: function (pokemon) {
-this.effectData.used = false;
-},
-onAfterUseItem: function (item, pokemon) {
-if (!this.effectData.used) {
-this.effectData.used = true;
-pokemon.setItem('');
+onUse: function (pokemon) {
+if (!pokemon.volatiles['eggused']) {
+pokemon.addVolatile('eggused');
+} else {
+return false;
 }
 },
-},
+}
+
 
 
 
