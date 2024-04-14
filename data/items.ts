@@ -7207,7 +7207,7 @@ capsule: {
 name: "Capsule",
 onAfterDamageOrder: 1,
 onAfterDamage: function (damage, target, source, move) {
-if (damage > 0) {
+if (damage > 1) {
 let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
 let randomStat = this.sample(stats);
 this.boost({[randomStat]: 2}, target);
