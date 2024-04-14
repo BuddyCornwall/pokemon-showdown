@@ -7169,7 +7169,7 @@ return weighthg * 2.5;
 isBreakable: true,
 },
 
-egg: {
+"egg": {
 name: "Egg",
 onDamagingHitOrder: 1,
 onDamagingHit: function (damage, target, source, move) {
@@ -7186,9 +7186,6 @@ pokemon.addVolatile('eggused');
 return false;
 }
 },
-}
-
-
-
+},
 
 };
