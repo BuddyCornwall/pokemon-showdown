@@ -7207,7 +7207,7 @@ capsule: {
 name: "Capsule",
 onAfterDamageOrder: 1,
 onAfterDamage: function (damage, target, source, move) {
-if (damage > 1) {
+if (damage > 0) {
 let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
 let randomStat = this.sample(stats);
 this.boost({[randomStat]: 2}, target);
@@ -7237,18 +7237,12 @@ return false;
 
 heartscale: {
 name: "Heart Scale",
-onUse: function (pokemon) {
-if (!pokemon.volatiles['heartscaleused']) {
-let moves = pokemon.moves.map(move => this.dex.moves.get(move.id));
-let randomMove = this.sample(moves);
-let oldMove = pokemon.moves[this.random(pokemon.moves.length)];
-pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].pp = pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].maxpp;
-pokemon.moveSlots[pokemon.moves.indexOf(oldMove)].move = randomMove.name;
-this.add('-activate', pokemon, 'item: Heart Scale', randomMove.name);
-this.add('-message', pokemon.name + " learned " + randomMove.name + " with the Heart Scale!");
-pokemon.addVolatile('heartscaleused');
-} else {
-return false;
+onFaint: function (source) {
+this.add('-message', source.side.name + "'s Heart Scale emits a radiant light, confusing all opposing Pokémon!");
+for (const foeActive of source.side.foe.active) {
+if (foeActive && foeActive.hp) {
+foeActive.addVolatile('confusion');
+}
 }
 },
 },
@@ -7274,6 +7268,43 @@ return false;
 }
 },
 desc: "Stops the foe from attacking for one turn. Single use.",
+},
+
+necromancersnecklace: {
+name: "Necromancer's Necklace",
+onFaint: function (source) {
+if (!source.side.necromancerUsed) {
+source.side.necromancerUsed = true;
+let template = this.getTemplate(source.species);
+let ghostTemplate = this.dex.getTemplate('Gengar');
+let ghostSpecies = this.species.get('gengar');
+if (template.isMega || template.forme === 'G-Max') {
+template = ghostTemplate;
+}
+let set = {
+species: ghostSpecies.name,
+ability: source.ability,
+moves: source.moves.map(moveSlot => {
+const moveName = moveSlot.id === 'struggle' ? 'hex' : moveSlot.id;
+return this.dex.getMove(moveName).name;
+}),
+nature: source.nature,
+evs: source.evs,
+ivs: source.ivs,
+level: source.level,
+shiny: source.shiny,
+item: '',
+};
+this.add('-activate', source, 'item: Necromancer\'s Necklace');
+this.add('-message', source.side.name + "'s Necromancer's Necklace revives it as a Ghost-type Pokémon with 1 HP!");
+source.hp = 1;
+source.setType(ghostTemplate.types);
+source.formeChange(ghostSpecies, set);
+source.statusData = {};
+source.clearVolatile();
+source.side.necromancer = source;
+}
+},
 },
 
 };
