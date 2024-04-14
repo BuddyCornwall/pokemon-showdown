@@ -7270,41 +7270,4 @@ return false;
 desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
-necromancersnecklace: {
-name: "Necromancer's Necklace",
-onFaint: function (source) {
-if (!source.side.necromancerUsed) {
-source.side.necromancerUsed = true;
-let template = this.getTemplate(source.species);
-let ghostTemplate = this.dex.getTemplate('Gengar');
-let ghostSpecies = this.species.get('gengar');
-if (template.isMega || template.forme === 'G-Max') {
-template = ghostTemplate;
-}
-let set = {
-species: ghostSpecies.name,
-ability: source.ability,
-moves: source.moves.map(moveSlot => {
-const moveName = moveSlot.id === 'struggle' ? 'hex' : moveSlot.id;
-return this.dex.getMove(moveName).name;
-}),
-nature: source.nature,
-evs: source.evs,
-ivs: source.ivs,
-level: source.level,
-shiny: source.shiny,
-item: '',
-};
-this.add('-activate', source, 'item: Necromancer\'s Necklace');
-this.add('-message', source.side.name + "'s Necromancer's Necklace revives it as a Ghost-type Pokémon with 1 HP!");
-source.hp = 1;
-source.setType(ghostTemplate.types);
-source.formeChange(ghostSpecies, set);
-source.statusData = {};
-source.clearVolatile();
-source.side.necromancer = source;
-}
-},
-},
-
 };
