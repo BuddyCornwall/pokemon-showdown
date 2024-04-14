@@ -7178,7 +7178,7 @@ source.addVolatile('confusion', target);
 let damageAmount = Math.ceil(source.maxhp / 10);
 this.damage(damageAmount, source, target);
 target.consumeItem();
-},
+}
 },
 onEat: function (pokemon) {
 pokemon.removeItem();
