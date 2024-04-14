@@ -7220,18 +7220,16 @@ desc: "Raises a random stat when attacked. Single use.",
 
 doll: {
 name: "Doll",
-onUse: function (pokemon) {
-if (!pokemon.volatiles['dollused']) {
-let foeItem = pokemon.side.foe.active[0].item;
-if (foeItem && !pokemon.item) {
-pokemon.setItem(foeItem);
-this.add('-item', pokemon, foeItem, '[from] move: Doll');
-this.add('-message', pokemon.name + " copied " + foeItem + " with the Doll!");
-pokemon.addVolatile('dollused');
-} else {
-return false;
-}
-}
+onStart: function (pokemon) {
+this.boost({hp: 2}, pokemon, pokemon, this.dex.getActiveMove("Doll"));
+this.add('-activate', pokemon, 'item: Doll');
+this.add('-message', pokemon.side.name + "'s " + pokemon.name + "'s HP was increased by 2 stages due to the Doll, but it became confused!");
+pokemon.addVolatile('confusion');
+},
+onResidualOrder: 999,
+onResidual: function (pokemon) {
+this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.getActiveMove("Doll"));
+this.add('-message', pokemon.name + ' was hurt by its Doll!');
 },
 },
 
@@ -7269,5 +7267,6 @@ return false;
 },
 desc: "Stops the foe from attacking for one turn. Single use.",
 },
+
 
 };
