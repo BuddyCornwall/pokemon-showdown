@@ -7187,6 +7187,7 @@ if (this.field.isWeather('sunnyday')) {
 this.boost({spe: .5}, pokemon);
 }
 },
+},
 
 bottlecap: {
 name: "Bottle Cap",
