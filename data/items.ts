@@ -7173,14 +7173,13 @@ egg: {
 name: "Egg",
 onDamage: function (damage, target, source, effect) {
 if (effect && effect.effectType === 'Move' && source && source !== target && !target.ateBerry) {
-this.add('-activate', target, 'item: Confuse Orb');
+this.add('-activate', target, 'item: Egg');
 source.addVolatile('confusion', target);
 let damageAmount = Math.ceil(source.maxhp / 10);
 this.damage(damageAmount, source, target);
 target.consumeItem();
-}
 },
-desc: "Confuses the attacker and deals damage equal to 1/10th of the attacker's max HP when holder is hit. Single use.",
+},
 onEat: function (pokemon) {
 pokemon.removeItem();
 },
