@@ -7216,7 +7216,6 @@ this.add('-message', pokemon.name + "'s " + this.getStat(randomStat, pokemon, tr
 }
 },
 },
-},
 
 doll: {
 name: "Doll",
