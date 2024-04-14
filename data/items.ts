@@ -7218,18 +7218,15 @@ target.setItem(''); // Remove the item after use
 desc: "Raises a random stat when attacked. Single use.",
 },
 
-doll: {
-name: "Doll",
-onStart: function (pokemon) {
-this.boost({hp: 2}, pokemon, pokemon, this.dex.getActiveMove("Doll"));
-this.add('-activate', pokemon, 'item: Doll');
-this.add('-message', pokemon.side.name + "'s " + pokemon.name + "'s HP was increased by 2 stages due to the Doll, but it became confused!");
-pokemon.addVolatile('confusion');
-},
-onResidualOrder: 999,
-onResidual: function (pokemon) {
-this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.getActiveMove("Doll"));
-this.add('-message', pokemon.name + ' was hurt by its Doll!');
+voodoodoll: {
+name: "Voodoo Doll",
+onDamagePriority: -100,
+onDamage: function (damage, target, source, effect) {
+if (effect && effect.effectType === 'Move' && effect.isContact && damage > 0) {
+let damageToReflect = Math.floor(damage / 4);
+this.damage(damageToReflect, source, target);
+this.add('-message', target.name + "'s Voodoo Doll reflects " + damageToReflect + " damage back at " + source.name + "!");
+}
 },
 },
 
