@@ -7186,7 +7186,7 @@ onResidual: function (pokemon) {
 if (this.field.isWeather('sunnyday')) {
 this.boost({spe: 1}, pokemon);
 } else {
-this.boost({spe: 1}, pokemon);
+this.boost({spe: -1}, pokemon);
 }
 },
 },
