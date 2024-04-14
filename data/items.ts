@@ -691,16 +691,6 @@ num: 1880,
 gen: 9,
 },
 
-bottlecap: {
-name: "Bottle Cap",
-spritenum: 696,
-fling: {
-basePower: 30,
-},
-num: 795,
-gen: 7,
-},
-
 brightpowder: {
 name: "Bright Powder",
 spritenum: 51,
@@ -7187,6 +7177,22 @@ return false;
 }
 },
 }
+
+beachglass: {
+name: "Beach Glass",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('sunnyday')) {
+this.boost({spe: 1}, pokemon);
+}
+},
+onModifyDefPriority: 6,
+onModifyDef: function (def, pokemon) {
+return this.chainModify(1.5);
+},
+desc: "Raises Defense by 50%. Raises Speed by 1 stage in sunny weather.",
+},
 
 bottlecap: {
 name: "Bottle Cap",
