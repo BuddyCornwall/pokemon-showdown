@@ -7184,14 +7184,8 @@ onResidualOrder: 26,
 onResidualSubOrder: 1,
 onResidual: function (pokemon) {
 if (this.field.isWeather('sunnyday')) {
-this.boost({spe: 1}, pokemon);
+this.boost({spe: .5}, pokemon);
 }
-},
-onModifyDefPriority: 6,
-onModifyDef: function (def, pokemon) {
-return this.chainModify(1.5);
-},
-desc: "Raises Defense by 50%. Raises Speed by 1 stage in sunny weather.",
 },
 
 bottlecap: {
