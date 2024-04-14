@@ -7184,7 +7184,9 @@ onResidualOrder: 26,
 onResidualSubOrder: 1,
 onResidual: function (pokemon) {
 if (this.field.isWeather('sunnyday')) {
-this.boost({spe: .5}, pokemon);
+this.boost({spe: 0.5}, pokemon);
+} else {
+this.boost({spe: -0.5}, pokemon);
 }
 },
 },
