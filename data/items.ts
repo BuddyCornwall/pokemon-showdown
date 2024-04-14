@@ -7169,7 +7169,7 @@ return weighthg * 2.5;
 isBreakable: true,
 },
 
-confuseorb: {
+egg: {
 name: "Egg",
 onDamagingHitOrder: 1,
 onDamagingHit: function (damage, target, source, move) {
