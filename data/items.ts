@@ -7205,16 +7205,17 @@ this.add('-message', attacker.name + "'s attack became a critical hit due to the
 
 capsule: {
 name: "Capsule",
-onBeforeTurn: function (pokemon) {
-if (pokemon.activeTurns === 1 && !pokemon.volatiles['capsuleused']) {
-pokemon.addVolatile('capsuleused');
-this.add('-item', pokemon, 'Capsule');
+onAfterDamageOrder: 1,
+onAfterDamage: function (damage, target, source, move) {
+if (damage > 0) {
 let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
 let randomStat = this.sample(stats);
-this.boost({[randomStat]: 2}, pokemon);
-this.add('-message', pokemon.name + "'s " + this.getStat(randomStat, pokemon, true) + " rose sharply!");
+this.boost({[randomStat]: 2}, target);
+this.add('-message', target.name + "'s " + this.getStat(randomStat, target, true) + " was raised by the Capsule!");
+target.setItem(''); // Remove the item after use
 }
 },
+desc: "Raises a random stat when attacked. Single use.",
 },
 
 doll: {
