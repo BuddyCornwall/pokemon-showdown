@@ -7205,17 +7205,18 @@ this.add('-message', attacker.name + "'s attack became a critical hit due to the
 
 capsule: {
 name: "Capsule",
-onAfterDamageOrder: 1,
-onAfterDamage: function (damage, target, source, move) {
-if (damage > 0) {
-let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-let randomStat = this.sample(stats);
-this.boost({[randomStat]: 2}, target);
-this.add('-message', target.name + "'s " + this.getStat(randomStat, target, true) + " was raised by the Capsule!");
-target.setItem(''); // Remove the item after use
+onStart: function (pokemon) {
+let statuses = ['par', 'brn', 'frz', 'tox', 'slp'];
+let randomStatus = this.sample(statuses);
+for (const side of this.sides) {
+for (const sidePokemon of side.active) {
+if (sidePokemon) {
+this.add('-message', sidePokemon.name + ' was affected by ' + randomStatus.toUpperCase() + ' due to the Capsule!');
+sidePokemon.addVolatile(randomStatus);
+}
+}
 }
 },
-desc: "Raises a random stat when attacked. Single use.",
 },
 
 voodoodoll: {
