@@ -7197,7 +7197,7 @@ onModifyMovePriority: -1,
 onModifyMove: function (move, attacker, defender) {
 if (!attacker.volatiles['luckycoinused'] && attacker.activeTurns === 1) {
 attacker.addVolatile('luckycoinused');
-move.critRatio = 2;
+move.critRatio = true;
 this.add('-message', attacker.name + "'s attack became a critical hit due to the Lucky Coin!");
 }
 },
