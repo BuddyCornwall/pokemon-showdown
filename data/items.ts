@@ -7191,16 +7191,14 @@ this.boost({spe: -1}, pokemon);
 },
 },
 
-bottlecap: {
-name: "Bottle Cap",
-onUse: function (pokemon) {
-if (!pokemon.volatiles['bottlecapused']) {
-pokemon.addVolatile('bottlecapused');
-this.add('-item', pokemon, 'Bottle Cap');
-this.add('-message', pokemon.name + " used the Bottle Cap to ensure a critical hit!");
-pokemon.addVolatile('laserfocus');
-} else {
-return false;
+luckycoin: {
+name: "Lucky Coin",
+onModifyMovePriority: -1,
+onModifyMove: function (move, attacker, defender) {
+if (!attacker.volatiles['luckycoinused'] && attacker.activeTurns === 1) {
+attacker.addVolatile('luckycoinused');
+move.critRatio = 2;
+this.add('-message', attacker.name + "'s attack became a critical hit due to the Lucky Coin!");
 }
 },
 },
