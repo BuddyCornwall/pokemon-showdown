@@ -7286,12 +7286,11 @@ onModifyMove(move) {
 if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
 if (!move.secondaries) move.secondaries = [];
 move.secondaries.push({
-chance: 100,
+chance: 33,
 status: 'brn',
 });
 }
 },
-desc: "33% chance to burn the target when using a contact move during a sandstorm.",
 },
 
 rainbowreflector: {
@@ -7299,7 +7298,7 @@ name: 'Rainbow Reflector',
 onTryHit(target, source, move) {
 if (move.category === 'Special') {
 this.add('-activate', target, 'item: Rainbow Reflector');
-let damage = this.actions.getDamage(source, target, move, true).damage;
+let damage = this.getDamage(source, target, move, true).damage;
 if (damage) {
 let reflectedDamage = Math.floor(damage * 0.25);
 this.damage(reflectedDamage, source, target);
