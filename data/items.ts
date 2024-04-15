@@ -7293,7 +7293,7 @@ status: 'brn',
 },
 },
 
-rainbowReflector: {
+rainbowreflector: {
 name: 'Rainbow Reflector',
 onModifyMove(move) {
 if (move.category === 'Special' && this.field.isWeather('rain')) {
