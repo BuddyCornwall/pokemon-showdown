@@ -6235,7 +6235,7 @@ name: "Axolargel",
 
 ugly: {
 onPreStart(pokemon) {
-this.debug('U G L Y is VERY angry');
+this.add('-message','U G L Y is VERY angry');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
