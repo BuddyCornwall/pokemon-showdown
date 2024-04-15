@@ -7218,18 +7218,15 @@ this.add('-message', attacker.name + "'s attack became a critical hit due to the
 
 capsule: {
 name: "Capsule",
-onStart: function (pokemon) {
-let statuses = ['par', 'brn', 'frz', 'tox', 'slp'];
-let randomStatus = this.sample(statuses);
-for (const side of this.sides) {
-for (const sidePokemon of side.active) {
-if (sidePokemon) {
-this.add('-message', sidePokemon.name + ' was affected by ' + randomStatus.toUpperCase() + ' due to the Capsule!');
-sidePokemon.addVolatile(randomStatus);
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (!target.usedCapsule) {
+const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
+const randomStatus = this.sample(statuses);
+this.add('-message', `${source.name} was affected by a Capsule!`);
+this.add('-status', source, randomStatus);
+target.usedCapsule = true;
 }
-}
-}
-},
 },
 
 voodoodoll: {
@@ -7302,6 +7299,7 @@ this.damage(source.baseMaxhp / 6, source, target);
 }
 },
 },
+
 
 
 
