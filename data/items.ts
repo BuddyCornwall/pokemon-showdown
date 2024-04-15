@@ -7279,7 +7279,7 @@ return false;
 desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
-scorchingSandsStone: {
+scorchingsandsstone: {
 name: 'Scorching Sands Stone',
 onModifyMovePriority: -1,
 onModifyMove(move) {
