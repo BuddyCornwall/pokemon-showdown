@@ -737,7 +737,7 @@ this.boost({def: 1.5});
 onFieldEnd() {
 this.add('-weather', 'none');
 },
-}
+},
 
 
 deltastream: {
