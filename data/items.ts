@@ -7297,7 +7297,7 @@ rainbowreflector: {
 name: 'Rainbow Reflector',
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
-if (move.category === 'Special') {
+if (move.category === 'Special' && this.field.isWeather('rain')) {
 this.damage(source.baseMaxhp / 6, source, target);
 }
 },
