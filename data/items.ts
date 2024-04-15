@@ -7226,9 +7226,13 @@ const randomStatus = this.sample(statuses);
 this.add('-message', `${source.name} was affected by a Capsule!`);
 this.add('-status', source, randomStatus);
 target.usedCapsule = true;
+const minDuration = 3;
+if (source.statusData && source.statusData.duration < minDuration) {
+source.setStatus(randomStatus, null, null, minDuration);
+}
 }
 },
-},
+}
 
 voodoodoll: {
 name: "Voodoo Doll",
