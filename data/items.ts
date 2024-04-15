@@ -7298,11 +7298,22 @@ name: 'Rainbow Reflector',
 onTryHit(target, source, move) {
 if (move.category === 'Special') {
 this.add('-activate', target, 'item: Rainbow Reflector');
-let damage = Math.floor(target.maxhp / 6);
-this.damage(damage, source, target);
-this.add('-damage', source, target, damage);
+this.afterMoveSecondaryEvent = function (damage, target, source, move) {
+let reflectedDamage = Math.floor(target.maxhp / 6);
+this.damage(reflectedDamage, source, target);
+this.add('-damage', source, target, reflectedDamage);
+};
 }
 },
+desc: "Reflects 1/6 of the foe's HP in damage to the attacker after being hit by a special move.",
 },
+
+
+
+
+
+
+
+
 
 };
