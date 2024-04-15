@@ -7293,24 +7293,23 @@ status: 'brn',
 },
 },
 
-rainbowreflector: {
+rainbowReflector: {
 name: 'Rainbow Reflector',
-onStart(target, source, move) {
-if (move.category === 'Special') {
-this.add('-activate', target, 'item: Rainbow Reflector');
-this.add('-message', `${target.name}'s Rainbow Reflector reflects the attack back!`);
-this.effectData.reflectDamage = Math.floor(target.maxhp / 6);
+onModifyMove(move) {
+if (move.category === 'Special' && this.field.isWeather('rain')) {
+if (!move.self) move.self = {};
+move.self.onHit = function (target, source) {
+this.damage(Math.floor(source.maxhp / 6), source, source);
+this.add('-damage', source, source, Math.floor(source.maxhp / 6), '[from] item: Rainbow Reflector');
+};
 }
 },
-onAfterMoveSecondary(target, source, move) {
-if (this.effectData.reflectDamage) {
-this.damage(this.effectData.reflectDamage, source, target);
-this.add('-damage', source, target, this.effectData.reflectDamage);
-delete this.effectData.reflectDamage;
-}
 },
-desc: "Reflects 1/6 of the foe's HP in damage to the attacker after being hit by a special move.",
-},
+
+
+
+
+
 
 
 
