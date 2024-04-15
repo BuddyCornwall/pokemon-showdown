@@ -7232,7 +7232,7 @@ source.setStatus(randomStatus, null, null, minDuration);
 }
 }
 },
-}
+},
 
 voodoodoll: {
 name: "Voodoo Doll",
