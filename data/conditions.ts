@@ -731,7 +731,7 @@ onWeather(target) {
 this.damage(target.baseMaxhp / 16);
 const pokemon = this.effectData.target;
 if (pokemon.hasType('Ice')) {
-this.boost({def: 1,});
+this.boost({def: 1.5});
 }
 },
 onFieldEnd() {
