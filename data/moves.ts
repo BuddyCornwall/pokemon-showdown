@@ -5018,7 +5018,7 @@ accuracy: 95,
 basePower: 60,
 category: "Physical",
 name: "Flip Turn",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 
