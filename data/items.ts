@@ -7295,19 +7295,13 @@ status: 'brn',
 
 rainbowreflector: {
 name: 'Rainbow Reflector',
-onModifyMove(move) {
-if (move.category === 'Special' && this.field.isWeather('rain')) {
-if (!move.self) move.self = {};
-move.self.onHit = function (target, source) {
-this.damage(Math.floor(source.maxhp / 6), source, source);
-this.add('-damage', source, source, Math.floor(source.maxhp / 6), '[from] item: Rainbow Reflector');
-};
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (move.category === 'Special') {
+this.damage(source.baseMaxhp / 6, source, target);
 }
 },
-},
-
-
-
+}
 
 
 
