@@ -3078,7 +3078,7 @@ name: "Diamond Storm",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-weather: 'hail',
+weather: 'snow',
 self: {
 chance: 50,
 boosts: {
@@ -6168,13 +6168,13 @@ type: "Steel",
 
 hail: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 40,
+category: "Physical",
 name: "Hail",
 pp: 0.625,
 priority: 0,
 flags: {},
-weather: 'hail',
+weather: 'snow',
 secondary: null,
 target: "allAdjacentFoes",
 type: "Ice",
@@ -9205,7 +9205,7 @@ name: "Mountain Gale",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-weather: 'hail',
+weather: 'snow',
 secondary: {
 chance: 25,
 volatileStatus: 'flinch',
@@ -11315,8 +11315,8 @@ type: "Fire",
 
 raindance: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 40,
+category: "Physical",
 name: "Rain Dance",
 pp: 0.625,
 priority: 0,
@@ -12186,8 +12186,8 @@ type: "Ground",
 
 sandstorm: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 40,
+category: "Physical",
 name: "Sandstorm",
 pp: 0.625,
 priority: 0,
@@ -12693,13 +12693,10 @@ flags: {protect: 1, mirror: 1},
 secondary: null,
 secondaries: [
 {
-chance: 25,
+chance: 50,
 status: 'frz',
 }, {
-chance: 25,
-weather: 'hail',
-}, {
-chance: 25,
+chance: 50,
 weather: 'snow',
 },
 ],
@@ -14673,8 +14670,8 @@ type: "Dark",
 
 sunnyday: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 40,
+category: "Physical",
 name: "Sunny Day",
 pp: 0.625,
 priority: 0,
@@ -17228,9 +17225,6 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 10,
-weather: 'hail',
-}, {
 chance: 10,
 weather: 'RainDance',
 }, {
