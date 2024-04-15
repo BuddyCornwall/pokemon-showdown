@@ -7191,6 +7191,19 @@ this.boost({spe: -1}, pokemon);
 },
 },
 
+iceskates: {
+name: "iceskates",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('snow')) {
+this.boost({spe: 1}, pokemon);
+} else {
+this.boost({spe: -1}, pokemon);
+}
+},
+},
+
 luckycoin: {
 name: "Lucky Coin",
 onModifyMovePriority: -1,
@@ -7264,6 +7277,38 @@ return false;
 }
 },
 desc: "Stops the foe from attacking for one turn. Single use.",
+},
+
+scorchingSandsStone: {
+name: 'Scorching Sands Stone',
+onModifyMovePriority: -1,
+onModifyMove(move) {
+if (move.flags['contact']) {
+if (this.field.isWeather('sandstorm')) {
+move.secondary = {
+chance: 100,
+status: 'brn',
+};
+}
+}
+},
+},
+
+rainbowReflector: {
+name: 'Rainbow Reflector',
+onTryHit(target, source, move) {
+if (move.category === 'Special') {
+this.add('-activate', target, 'item: Rainbow Reflector');
+let damage = this.actions.getDamage(source, target, move, true).damage;
+if (damage) {
+let reflectedDamage = Math.floor(damage * 0.25);
+this.damage(reflectedDamage, source, target);
+this.add('-damage', source, target, reflectedDamage);
+}
+return null;
+}
+},
+desc: "Reflects 25% of the damage taken back to the attacker when hit by a special move.",
 },
 
 
