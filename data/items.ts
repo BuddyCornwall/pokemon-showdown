@@ -7301,7 +7301,7 @@ if (move.category === 'Special') {
 this.damage(source.baseMaxhp / 6, source, target);
 }
 },
-}
+},
 
 
 
