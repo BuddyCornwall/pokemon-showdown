@@ -7295,15 +7295,14 @@ status: 'brn',
 
 rainbowreflector: {
 name: 'Rainbow Reflector',
-onDamagingHit(damage, target, source, move) {
+onTryHit(target, source, move) {
 if (move.category === 'Special') {
 this.add('-activate', target, 'item: Rainbow Reflector');
-let reflectedDamage = Math.floor(damage.amount * 0.25);
-this.damage(reflectedDamage, source, target);
-this.add('-damage', source, target, reflectedDamage);
+let damage = Math.floor(target.maxhp / 6);
+this.damage(damage, target, source);
+this.add('-damage', source, target, damage);
 }
 },
-desc: "Reflects 25% of the damage taken back to the attacker when hit by a special move.",
 },
 
 };
