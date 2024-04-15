@@ -11323,7 +11323,7 @@ priority: 0,
 flags: {dance: 1},
 weather: 'RainDance',
 secondary: null,
-target: "all",
+target: "allAdjacentFoes",
 type: "Water",
 },
 
