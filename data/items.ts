@@ -7286,7 +7286,7 @@ onModifyMove(move) {
 if (move.flags['contact']) {
 if (this.field.isWeather('sandstorm')) {
 move.secondary = {
-chance: 100,
+chance: 33,
 status: 'brn',
 };
 }
@@ -7294,7 +7294,7 @@ status: 'brn',
 },
 },
 
-rainbowReflector: {
+rainbowreflector: {
 name: 'Rainbow Reflector',
 onTryHit(target, source, move) {
 if (move.category === 'Special') {
