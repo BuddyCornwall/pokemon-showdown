@@ -7228,6 +7228,7 @@ this.add('-status', source, randomStatus);
 target.usedCapsule = true;
 }
 },
+},
 
 voodoodoll: {
 name: "Voodoo Doll",
