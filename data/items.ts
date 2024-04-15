@@ -7285,9 +7285,10 @@ onModifyMovePriority: -1,
 onModifyMove(move) {
 if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
 if (!move.secondaries) move.secondaries = [];
-chance: 100,
-status: 'brn',}
-);
+move.secondaries.push({
+chance: 33,
+status: 'brn',
+});
 }
 },
 desc: "33% chance to burn the target when using a contact move during a sandstorm.",
