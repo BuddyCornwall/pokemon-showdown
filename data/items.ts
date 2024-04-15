@@ -7279,19 +7279,18 @@ return false;
 desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
-scorchingsandsstone: {
+scorchingSandsStone: {
 name: 'Scorching Sands Stone',
 onModifyMovePriority: -1,
 onModifyMove(move) {
-if (move.flags['contact']) {
-if (this.field.isWeather('sandstorm')) {
-move.secondary = {
+if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
+if (!move.secondaries) move.secondaries = [];
 chance: 100,
-status: 'brn',
-};
-}
+status: 'brn',}
+);
 }
 },
+desc: "33% chance to burn the target when using a contact move during a sandstorm.",
 },
 
 rainbowreflector: {
