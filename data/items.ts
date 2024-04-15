@@ -7299,7 +7299,7 @@ onTryHit(target, source, move) {
 if (move.category === 'Special') {
 this.add('-activate', target, 'item: Rainbow Reflector');
 let damage = Math.floor(target.maxhp / 6);
-this.damage(damage, target, source);
+this.damage(damage, source, target);
 this.add('-damage', source, target, damage);
 }
 },
