@@ -7286,7 +7286,7 @@ onModifyMove(move) {
 if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
 if (!move.secondaries) move.secondaries = [];
 move.secondaries.push({
-chance: 33,
+chance: 100,
 status: 'brn',
 });
 }
