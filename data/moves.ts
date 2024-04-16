@@ -5017,7 +5017,6 @@ type: "Dark",
 },
 
 flipturn: {
-flipturn: {
 accuracy: 95,
 basePower: 60,
 category: "Physical",
