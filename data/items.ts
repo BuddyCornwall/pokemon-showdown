@@ -1,5 +1,22 @@
 export const Items: {[itemid: string]: ItemData} = {
 
+mattberry: {
+name: "Matt Berry",
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(1);
+},
+num: 155,
+gen: 3,
+},
+
 abilityshield: {
 name: "Ability Shield",
 spritenum: 746,
@@ -7221,17 +7238,12 @@ name: "Capsule",
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
 if (!target.usedCapsule) {
-const statuses = ['brn', 'par', 'frz', 'tox', 'slp'];
+const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
 const randomStatus = this.sample(statuses);
 this.add('-message', `${source.name} was affected by a Capsule!`);
 this.add('-status', source, randomStatus);
 target.usedCapsule = true;
-const minDuration = 3;
-if (source.statusData && source.statusData.duration < minDuration) {
-source.setStatus(randomStatus, null, null, minDuration);
 }
-}
-},
 },
 
 voodoodoll: {
