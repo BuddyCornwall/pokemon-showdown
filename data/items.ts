@@ -7241,29 +7241,7 @@ foeActive.addVolatile('confusion');
 },
 },
 
-scorchingsandsstone: {
-name: 'Scorching Sands Stone',
-onModifyMovePriority: -1,
-onModifyMove(move) {
-if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
-if (!move.secondaries) move.secondaries = [];
-move.secondaries.push({
-chance: 33,
-status: 'brn',
-});
-}
-},
-},
 
-rainbowreflector: {
-name: 'Rainbow Reflector',
-onDamagingHitOrder: 2,
-onDamagingHit(damage, target, source, move) {
-if (move.category === 'Special' && this.field.isWeather('raindance')) {
-this.damage(source.baseMaxhp / 6, source, target);
-}
-},
-},
 
 
 
