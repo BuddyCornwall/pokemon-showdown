@@ -11522,8 +11522,8 @@ name: "Refresh",
 pp: 0.625,
 priority: 0,
 onHit(pokemon) {
-const healAmount = Math.floor(Math.random() * 46) + 55; // Random number between 55 and 100
-this.heal(healAmount, pokemon, this); // Ensure the heal method is called on the Battle object
+const healAmount = Math.floor(Math.random() * 75) + 25; // Random number between 55 and 100
+this.heal(healAmount, pokemon, this);
 },
 secondary: null,
 target: "self",
