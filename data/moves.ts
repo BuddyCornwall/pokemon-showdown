@@ -447,6 +447,11 @@ name: "Aqua Step",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+
+onHit(target, source, move) {
+this.add('-message', `Step on me daddy ${source.name}!`);
+},
+
 secondary: {
 chance: 75,
 self: {
