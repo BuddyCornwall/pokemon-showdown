@@ -7238,7 +7238,7 @@ name: "Capsule",
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
 if (!target.usedCapsule) {
-const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
+const statuses = ['brn', 'par', 'frz', 'tox', 'slp'];
 const randomStatus = this.sample(statuses);
 this.add('-message', `${source.name} was affected by a Capsule!`);
 this.add('-status', source, randomStatus);
