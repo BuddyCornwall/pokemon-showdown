@@ -52,6 +52,7 @@ onUpdate(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
 pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
 pokemon.eatItem();
+this.add("-activate", target, "item: Yum tastes like a crab");
 }
 },
 onEat(pokemon) {
