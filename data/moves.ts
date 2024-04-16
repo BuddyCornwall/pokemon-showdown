@@ -11519,12 +11519,11 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Refresh",
-pp: 20,
+pp: 0.625,
 priority: 0,
-flags: {snatch: 1, heal: 1},
 onHit(pokemon) {
 const healAmount = Math.floor(Math.random() * 46) + 55; // Random number between 55 and 100
-pokemon.heal(healAmount, pokemon, this);
+this.heal(healAmount, pokemon, this); // Ensure the heal method is called on the Battle object
 },
 secondary: null,
 target: "self",
