@@ -1,5 +1,68 @@
 export const Items: {[itemid: string]: ItemData} = {
 
+siriusarmilla: {
+name: "Sirius Armilla",
+spritenum: 242,
+fling: {
+basePower: 10,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 30);
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add("-activate", target, "item: Focus Band");
+return target.hp - 1;
+}
+},
+},
+
+denebcaestus: {
+name: "Deneb Caestus",
+spritenum: 242,
+fling: {
+basePower: 10,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 30);
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add("-activate", target, "item: Focus Band");
+return target.hp - 1;
+}
+},
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 abilityshield: {
 name: "Ability Shield",
 spritenum: 746,
