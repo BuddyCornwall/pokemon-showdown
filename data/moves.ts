@@ -10792,7 +10792,7 @@ return this.chainModify(1.1);
 secondary: {
 chance: 33,
 boosts: {
-spd: -1.5,
+spd: -1,
 },
 },
 target: "any",
