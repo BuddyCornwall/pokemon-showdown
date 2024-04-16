@@ -11524,7 +11524,7 @@ priority: 0,
 flags: {snatch: 1, metronome: 1},
 onHit(pokemon) {
 const healAmount = Math.floor(Math.random() * 76) + 25; // Random number between 25 and 100
-pokemon.heal(healAmount);
+pokemon.heal(healAmount, pokemon, this);
 },
 secondary: null,
 target: "self",
