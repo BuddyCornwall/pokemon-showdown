@@ -2092,8 +2092,6 @@ name: "Chilly Reception",
 pp: 0.625,
 priority: 1,
 flags: {},
-// TODO show prepare message before the "POKEMON used MOVE!" message
-// This happens even before sleep shows its "POKEMON is fast asleep." message
 weather: 'snow',
 selfSwitch: true,
 secondary: null,
@@ -4429,6 +4427,11 @@ this.hint("Fake Out only works on your first turn out.");
 return false;
 }
 },
+
+onHit(target, source, move) {
+this.add('-message', `I can't believe ${source.name} sucker punched me!`);
+},
+
 secondary: {
 chance: 75,
 volatileStatus: 'flinch',
@@ -5013,6 +5016,7 @@ target: "any",
 type: "Dark",
 },
 
+flipturn: {
 flipturn: {
 accuracy: 95,
 basePower: 60,
