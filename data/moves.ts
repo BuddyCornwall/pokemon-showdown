@@ -11514,6 +11514,23 @@ target: "allySide",
 type: "Psychic",
 },
 
+refresh: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Refresh",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1, metronome: 1},
+onHit(pokemon) {
+const healAmount = Math.floor(Math.random() * 76) + 25; // Random number between 25 and 100
+pokemon.heal(healAmount);
+},
+secondary: null,
+target: "self",
+type: "Normal",
+},
+
 relicsong: {
 accuracy: 95,
 basePower: 75,
