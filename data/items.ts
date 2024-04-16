@@ -34,7 +34,7 @@ this.heal(pokemon.baseMaxhp / 30);
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
-this.add("-activate", target, "Deneb Caestus");
+this.add("-activate", target, "item: Deneb Caestus");
 return target.hp - 1;
 }
 },
@@ -49,7 +49,7 @@ basePower: 100,
 type: "Psychic",
 },
 onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 3 || (pokemon.hp <= pokemon.maxhp / 2 &&
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
 pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
 pokemon.eatItem();
 }
@@ -131,7 +131,7 @@ this.heal(pokemon.baseMaxhp / 40);
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (this.randomChance(10, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
-this.add("-activate", target, "item: Focus Band");
+this.add("-activate", target, "item: Captains Armband");
 return target.hp - 1;
 }
 },
