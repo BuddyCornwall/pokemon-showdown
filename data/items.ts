@@ -2630,20 +2630,6 @@ return false;
 desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
-scorchingsandsstone: {
-name: 'Scorching Sands Stone',
-onModifyMovePriority: -1,
-onModifyMove(move) {
-if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
-if (!move.secondaries) move.secondaries = [];
-move.secondaries.push({
-chance: 33,
-status: 'brn',
-});
-}
-},
-},
-
 rainbowreflector: {
 name: 'Rainbow Reflector',
 onDamagingHitOrder: 2,
