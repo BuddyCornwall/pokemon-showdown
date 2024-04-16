@@ -1,22 +1,5 @@
 export const Items: {[itemid: string]: ItemData} = {
 
-mattberry: {
-name: "Matt Berry",
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-pokemon.eatItem();
-}
-},
-onTryEatItem(item, pokemon) {
-if (!this.runEvent('TryHeal', pokemon)) return false;
-},
-onEat(pokemon) {
-this.heal(1);
-},
-num: 155,
-gen: 3,
-},
-
 abilityshield: {
 name: "Ability Shield",
 spritenum: 746,
