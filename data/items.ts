@@ -2,10 +2,6 @@ export const Items: {[itemid: string]: ItemData} = {
 
 siriusarmband: {
 name: "Sirius Armilla",
-spritenum: 242,
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -22,10 +18,6 @@ return target.hp - 1;
 
 denebarmband: {
 name: "Deneb Caestus",
-spritenum: 242,
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
