@@ -7229,17 +7229,7 @@ target.usedCapsule = true;
 }
 },
 
-heartscale: {
-name: "Heart Scale",
-onFaint: function (source) {
-this.add('-message', source.side.name + "'s Heart Scale emits a radiant light, confusing all opposing Pokémon!");
-for (const foeActive of source.side.foe.active) {
-if (foeActive && foeActive.hp) {
-foeActive.addVolatile('confusion');
-}
-}
-},
-},
+
 
 
 
