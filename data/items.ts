@@ -1,5 +1,88 @@
 export const Items: {[itemid: string]: ItemData} = {
 
+siriusarmband: {
+name: "Sirius Armilla",
+spritenum: 242,
+fling: {
+basePower: 10,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 30);
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add("-activate", target, "item: Focus Band");
+return target.hp - 1;
+}
+},
+},
+
+denebarmband: {
+name: "Deneb Caestus",
+spritenum: 242,
+fling: {
+basePower: 10,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 50);
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (this.randomChance(5, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add("-activate", target, "item: Focus Band");
+return target.hp - 1;
+}
+},
+},
+
+acrabberry: {
+name: "Acrab Berry",
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+this.heal(pokemon.baseMaxhp / 4);
+const stats: BoostID[] = [];
+let stat: BoostID;
+for (stat in pokemon.boosts) {
+if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
+stats.push(stat);
+}
+}
+if (stats.length) {
+const randomStat = this.sample(stats);
+const boost: SparseBoostsTable = {};
+boost[randomStat] = 2;
+this.boost(boost);
+}
+},
+},
+
+mattberry: {
+name: "Matt Berry",
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(1);
+},
+num: 155,
+gen: 3,
+},
+
 abilityshield: {
 name: "Ability Shield",
 spritenum: 746,
@@ -7221,17 +7304,12 @@ name: "Capsule",
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
 if (!target.usedCapsule) {
-const statuses = ['brn', 'par', 'frz', 'tox', 'slp'];
+const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
 const randomStatus = this.sample(statuses);
 this.add('-message', `${source.name} was affected by a Capsule!`);
 this.add('-status', source, randomStatus);
 target.usedCapsule = true;
-const minDuration = 3;
-if (source.statusData && source.statusData.duration < minDuration) {
-source.setStatus(randomStatus, null, null, minDuration);
 }
-}
-},
 },
 
 voodoodoll: {
