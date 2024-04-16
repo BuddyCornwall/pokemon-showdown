@@ -7142,4 +7142,70 @@ gen: 8,
 isNonstandard: "CAP",
 },
 
+magnesificent: {
+name: "Magnesificent", 
+onModifyWeight(weighthg) {
+return this.trunc(weighthg / 2);
+},
+isBreakable: true,
+},
+
+donnyosmium: {
+name: "Donny Osmium",
+onModifyWeightPriority: 1,
+onModifyWeight(weighthg) {
+return weighthg * 2.5;
+},
+isBreakable: true,
+},
+
+egg: {
+name: "Egg",
+onDamagingHitOrder: 1,
+onDamagingHit: function (damage, target, source, move) {
+this.add('-activate', target, 'item: Egg');
+source.addVolatile('confusion', target);
+let damageAmount = Math.ceil(source.maxhp / 10);
+this.damage(damageAmount, source, target);
+target.setItem('');
+},
+onUse: function (pokemon) {
+if (!pokemon.volatiles['eggused']) {
+pokemon.addVolatile('eggused');
+} else {
+return false;
+}
+},
+},
+
+beachglass: {
+name: "Beach Glass",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('sunnyday')) {
+this.boost({spe: 1}, pokemon);
+} else {
+this.boost({spe: -1}, pokemon);
+}
+},
+},
+
+iceskates: {
+name: "iceskates",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('snow')) {
+this.boost({spe: 1}, pokemon);
+} else {
+this.boost({spe: -1}, pokemon);
+}
+},
+},
+
+
+
+
+
 };
