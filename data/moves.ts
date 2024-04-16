@@ -10779,11 +10779,6 @@ name: "Psychic",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-
-onHit(target, source, move) {
-this.add('-message', `${source.name} used the best move in the game!`);
-},
-
 onBasePower(basePower, source) {
 if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
 this.debug('terrain buff');
@@ -10793,6 +10788,7 @@ secondary: {
 chance: 33,
 boosts: {
 spd: -1,
+},
 },
 },
 target: "any",
