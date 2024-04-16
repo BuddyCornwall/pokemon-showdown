@@ -11519,11 +11519,11 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Refresh",
-pp: 0.625,
+pp: 20,
 priority: 0,
-flags: {snatch: 1, metronome: 1},
+flags: {snatch: 1, heal: 1},
 onHit(pokemon) {
-const healAmount = Math.floor(Math.random() * 76) + 25; // Random number between 25 and 100
+const healAmount = Math.floor(Math.random() * 46) + 55; // Random number between 55 and 100
 pokemon.heal(healAmount, pokemon, this);
 },
 secondary: null,
