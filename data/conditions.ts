@@ -697,7 +697,7 @@ this.add('-weather', 'Hail', '[upkeep]');
 if (this.field.isWeather('hail')) this.eachEvent('Weather');
 },
 onWeather(target) {
-this.damage(target.baseMaxhp / 16);
+this.damage(target.baseMaxhp / 20);
 },
 onFieldEnd() {
 this.add('-weather', 'none');

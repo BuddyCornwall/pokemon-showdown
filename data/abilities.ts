@@ -1872,7 +1872,7 @@ num: 169,
 
 galewings: {
 onModifyPriority(priority, pokemon, target, move) {
-if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp) return priority + 1;
+if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp) return priority + 2;
 },
 name: "Gale Wings",
 rating: 1.5,
@@ -6208,7 +6208,7 @@ name: "Toxic Chain",
 
 axolargel: {
 onPreStart(pokemon) {
-this.add('-message','Axolargel is very Cold & hates Mold')
+this.add('-message', 'Axolargel is very Cold & hates Mold');
 this.add('-ability', pokemon, 'Mold Breaker');
 this.add('-ability', pokemon, 'Refrigerate');
 },
@@ -6235,7 +6235,7 @@ name: "Axolargel",
 
 ugly: {
 onPreStart(pokemon) {
-this.add('-message','U G L Y is VERY angry!');
+this.add('-message', 'U G L Y is VERY angry');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
@@ -6253,24 +6253,4 @@ this.boost({atk: 12}, target, target);
 },
 name: "UGLY",
 },
-
-bigoted: {
-onPreStart(pokemon) {
-this.add('-message','🎵 Bigoted Bigoted Bigoted Bill!');
-},
-onModifyDamage(damage, source, target, move) {
-if (target.getMoveHitData(move).crit) {
-this.debug('Sniper boost');
-return this.chainModify(1.5);
-}
-},
-onHit(target, source, move) {
-if (!target.hp) return;
-if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
-this.boost({atk: 12}, target, target);
-}
-},
-name: "Bigoted",
-},
-
 };
