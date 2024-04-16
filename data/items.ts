@@ -14,7 +14,7 @@ this.heal(pokemon.baseMaxhp / 30);
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
-this.add("-activate", target, "item: Focus Band");
+this.add("-activate", target, "item: Sirius Armilla");
 return target.hp - 1;
 }
 },
@@ -34,7 +34,7 @@ this.heal(pokemon.baseMaxhp / 30);
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
-this.add("-activate", target, "item: Focus Band");
+this.add("-activate", target, "Deneb Caestus");
 return target.hp - 1;
 }
 },
