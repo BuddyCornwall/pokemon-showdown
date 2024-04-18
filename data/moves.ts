@@ -10793,7 +10793,7 @@ onBasePower(basePower, source) {
 if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
 this.debug('terrain buff');
 return this.chainModify(1.1);
-}
+},
 secondary: {
 chance: 33,
 boosts: {
