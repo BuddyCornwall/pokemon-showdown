@@ -10803,6 +10803,7 @@ spd: -1.5,
 target: "any",
 type: "Psychic",
 },
+},
 
 psychicfangs: {
 accuracy: 95,
