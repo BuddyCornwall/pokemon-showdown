@@ -2180,6 +2180,9 @@ name: "Clanging Scales",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
 selfBoost: {
 boosts: {
 def: -1,
@@ -2227,8 +2230,11 @@ basePower: 120,
 category: "Special",
 name: "Clangorous Soulblaze",
 pp: 0.625,
-priority: 1,
+priority: 0,
 flags: {sound: 1, bypasssub: 1},
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
 chance: 75,
 selfBoost: {
 boosts: {
@@ -5649,8 +5655,8 @@ type: "Normal",
 },
 
 gigatonhammer: {
-accuracy: 95,
-basePower: 115,
+accuracy: 85,
+basePower: 130,
 category: "Physical",
 name: "Gigaton Hammer",
 pp: 0.625,
@@ -5658,7 +5664,6 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 onTry(source) {
 if (source.activeMoveActions < 2) {
-this.hint("First Impression only works on your first turn out.");
 return false;
 }
 },
@@ -5863,7 +5868,7 @@ type: "Grass",
 
 grassyterrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 60,
 category: "Physical",
 name: "Grassy Terrain",
 pp: 0.625,
@@ -7687,7 +7692,7 @@ type: "Grass",
 
 leaftornado: {
 accuracy: 95,
-basePower: 65,
+basePower: 75,
 category: "Special",
 name: "Leaf Tornado",
 pp: 1.25,
@@ -7696,7 +7701,7 @@ flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 50,
 boosts: {
-evasion: -1,
+forceSwitch: true,
 },
 },
 target: "any",
@@ -8359,7 +8364,7 @@ type: "Ground",
 
 makeitrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 60,
 category: "Special",
 name: "Make It Rain",
 pp: 0.625,
@@ -8386,7 +8391,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Fighting') return 1;
 },
 secondary: {
-chance: 25,
+chance: 50,
 volatileStatus: 'flinch',
 },
 target: "any",
@@ -9011,7 +9016,7 @@ type: "Fairy",
 
 mistyterrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 60,
 category: "Physical",
 name: "Misty Terrain",
 pp: 0.625,
@@ -10789,11 +10794,10 @@ if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
 this.debug('terrain buff');
 return this.chainModify(1.1);
 }
-},
 secondary: {
 chance: 33,
 boosts: {
-spd: -1,
+spd: -1.5,
 },
 },
 target: "any",
@@ -10829,7 +10833,7 @@ type: "Psychic",
 
 psychicterrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 60,
 category: "Physical",
 name: "Psychic Terrain",
 pp: 0.625,
@@ -11339,7 +11343,7 @@ type: "Fire",
 
 raindance: {
 accuracy: 95,
-basePower: 40,
+basePower: 60,
 category: "Physical",
 name: "Rain Dance",
 pp: 0.625,
@@ -12036,20 +12040,19 @@ basePower: 60,
 category: "Special",
 name: "Round",
 pp: 0.625,
-priority: 1,
-flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+priority: 0,
+flags: {protect: 1, mirror: 1},
 secondaries: [
 {
+chance: 33,
+volatileStatus: 'confuse',
+}, {
 chance: 20,
 self: {
 boosts: {
 spe: 2,
 },
 },
-},
-{
-chance: 33,
-volatileStatus: 'confusion',
 },
 ],
 target: "any",
@@ -12224,7 +12227,7 @@ type: "Ground",
 
 sandstorm: {
 accuracy: 95,
-basePower: 40,
+basePower: 60,
 category: "Physical",
 name: "Sandstorm",
 pp: 0.625,
@@ -14043,7 +14046,7 @@ basePower: 40,
 category: "Special",
 name: "Spite",
 pp: 0.625,
-priority: 0,
+priority: 3,
 flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 pseudoWeather: 'fairylock',
 onHitField(target, source, move) {
@@ -14814,7 +14817,12 @@ name: "Surf",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-secondary: null,
+secondary: {
+chance: 50,
+boosts: {
+forceSwitch: true,
+},
+},
 target: "allAdjacent",
 type: "Water",
 },
