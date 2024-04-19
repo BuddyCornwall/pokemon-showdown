@@ -3855,9 +3855,11 @@ boosts: {
 spa -2,
 },
 },
+},
 ],
 type: "Electric",
 },
+
 
 eeriespell: {
 accuracy: 95,
