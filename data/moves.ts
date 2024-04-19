@@ -3844,10 +3844,6 @@ name: "Eerie Impulse",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
-boosts: {
-atk: -2,
-spa: -2,
-},
 secondaries: [
 {
 chance: 50,
