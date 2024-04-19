@@ -1,7 +1,7 @@
 export const Moves: {[moveid: string]: MoveData} = {
 absorb: {
 accuracy: 95,
-basePower: 10,
+basePower: 25,
 category: "Special",
 name: "Absorb",
 pp: 0.625,
@@ -20,7 +20,7 @@ type: "Grass",
 
 accelerock: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Accelerock",
 pp: 0.625,
@@ -34,7 +34,7 @@ type: "Rock",
 
 acid: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Special",
 name: "Acid",
 pp: 1.25,
@@ -66,6 +66,7 @@ priority: 0,
 flags: {snatch: 1},
 boosts: {
 def: 2,
+spd: 2,
 },
 secondary: null,
 target: "self",
@@ -91,7 +92,7 @@ type: "Poison",
 
 acidspray: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Acid Spray",
 pp: 1.25,
@@ -115,11 +116,11 @@ type: "Poison",
 
 acrobatics: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 basePowerCallback(pokemon, target, move) {
 if (!pokemon.item) {
 this.debug("BP doubled for no item");
-return move.basePower * 5.5;
+return move.basePower * 5;
 }
 return move.basePower;
 },
@@ -135,11 +136,11 @@ type: "Flying",
 
 acupressure: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Physical",
 name: "Acupressure",
 pp: 0.625,
-priority: 0,
+priority: 2,
 flags: {},
 onHit(target) {
 const stats: BoostID[] = [];
@@ -152,20 +153,20 @@ stats.push(stat);
 if (stats.length) {
 const randomStat = this.sample(stats);
 const boost: SparseBoostsTable = {};
-boost[randomStat] = 2;
+boost[randomStat] = 3;
 this.boost(boost);
 } else {
 return false;
 }
 },
 secondary: null,
-target: "adjacentAllyOrSelf",
+target: "any",
 type: "Normal",
 },
 
 aerialace: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Aerial Ace",
 pp: 0.625,
@@ -231,7 +232,7 @@ type: "Psychic",
 
 aircutter: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Air Cutter",
 pp: 1.25,
@@ -261,7 +262,7 @@ type: "Flying",
 
 alloutpummeling: {
 accuracy: 85,
-basePower: 20,
+basePower: 25,
 category: "Physical",
 name: "All Out Pummeling",
 pp: 0.625,
@@ -321,7 +322,7 @@ type: "Psychic",
 
 anchorshot: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Anchor Shot",
 pp: 1.25,
@@ -339,7 +340,7 @@ type: "Steel",
 
 ancientpower: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Ancient Power",
 pp: 1.25,
@@ -363,7 +364,7 @@ type: "Rock",
 
 appleacid: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Apple Acid",
 pp: 1.25,
@@ -387,7 +388,7 @@ type: "Grass",
 
 aquacutter: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Aqua Cutter",
 pp: 1.25,
@@ -404,7 +405,7 @@ type: "Water",
 
 aquajet: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Aqua Jet",
 pp: 0.625,
@@ -441,7 +442,7 @@ type: "Water",
 
 aquastep: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Aqua Step",
 pp: 1.25,
@@ -466,7 +467,7 @@ type: "Water",
 
 aquatail: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Aqua Tail",
 pp: 1.25,
@@ -542,7 +543,7 @@ type: "Grass",
 
 aromaticmist: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Aromatic Mist",
 pp: 1.25,
@@ -593,7 +594,7 @@ type: "Normal",
 
 assurance: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 basePowerCallback(pokemon, target, move) {
 if (target.hurtThisTurn) {
 this.debug('BP doubled on damaged target');
@@ -613,7 +614,7 @@ type: "Dark",
 
 astonish: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Astonish",
 pp: 0.625,
@@ -632,7 +633,7 @@ type: "Ghost",
 
 astralbarrage: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Astral Barrage",
 pp: 0.625,
@@ -645,7 +646,7 @@ type: "Ghost",
 
 attackorder: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Attack Order",
 pp: 1.25,
@@ -659,7 +660,7 @@ type: "Bug",
 
 attract: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Attract",
 pp: 0.625,
@@ -675,7 +676,7 @@ type: "Normal",
 
 aurasphere: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Aura Sphere",
 pp: 1.25,
@@ -691,7 +692,7 @@ type: "Fighting",
 
 aurawheel: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Physical",
 name: "Aura Wheel",
 pp: 0.625,
@@ -819,7 +820,7 @@ type: "Steel",
 
 avalanche: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 basePowerCallback(pokemon, target, move) {
 const damagedByTarget = pokemon.attackedBy.some(
 p => p.source === target && p.damage > 0 && p.thisTurn
@@ -842,7 +843,7 @@ type: "Ice",
 
 axekick: {
 accuracy: 75,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Axe Kick",
 pp: 0.625,
@@ -936,7 +937,7 @@ type: "Poison",
 
 barbbarrage: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 category: "Physical",
 name: "Barb Barrage",
 pp: 1.25,
@@ -1102,7 +1103,7 @@ type: "Steel",
 
 belch: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Belch",
 pp: 0.625,
@@ -1138,7 +1139,7 @@ type: "Normal",
 
 bide: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 category: "Physical",
 name: "Bide",
 pp: 0.625,
@@ -1210,7 +1211,7 @@ type: "Normal",
 
 bind: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Bind",
 pp: 1.25,
@@ -1224,7 +1225,7 @@ type: "Normal",
 
 bite: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Bite",
 pp: 1.25,
@@ -1240,7 +1241,7 @@ type: "Dark",
 
 bitterblade: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Bitter Blade",
 pp: 0.625,
@@ -1271,7 +1272,7 @@ type: "Ghost",
 
 blackholeeclipse: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Black Hole Eclipse",
 pp: 0.625,
@@ -1287,7 +1288,7 @@ type: "Dark",
 
 blastburn: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Blast Burn",
 pp: 0.625,
@@ -1393,7 +1394,7 @@ type: "Normal",
 
 blueflare: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Special",
 name: "Blue Flare",
 pp: 0.625,
@@ -1410,7 +1411,7 @@ type: "Fire",
 
 bodypress: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Body Press",
 pp: 1.25,
@@ -1462,7 +1463,7 @@ type: "Electric",
 
 boltstrike: {
 accuracy: 75,
-basePower: 110,
+basePower: 115,
 category: "Physical",
 name: "Bolt Strike",
 pp: 0.625,
@@ -1524,7 +1525,7 @@ type: "Ground",
 
 boomburst: {
 accuracy: 85,
-basePower: 140,
+basePower: 145,
 category: "Special",
 name: "Boomburst",
 pp: 0.625,
@@ -1580,7 +1581,7 @@ type: "Flying",
 
 branchpoke: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Branch Poke",
 pp: 1.25,
@@ -1634,7 +1635,7 @@ type: "Flying",
 
 breakingswipe: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Breaking Swipe",
 pp: 1.25,
@@ -1656,7 +1657,7 @@ type: "Dragon",
 
 breakneckblitz: {
 accuracy: 75,
-basePower: 130,
+basePower: 135,
 category: "Physical",
 name: "Breakneck Blitz",
 pp: 0.625,
@@ -1741,7 +1742,7 @@ type: "Water",
 
 bugbite: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Bug Bite",
 pp: 1.25,
@@ -1765,7 +1766,7 @@ type: "Bug",
 
 bugbuzz: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Bug Buzz",
 pp: 0.625,
@@ -1801,7 +1802,7 @@ type: "Fighting",
 
 bulldoze: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Bulldoze",
 pp: 0.625,
@@ -1815,7 +1816,7 @@ type: "Ground",
 
 bulletpunch: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Bullet Punch",
 pp: 0.625,
@@ -1848,7 +1849,7 @@ type: "Grass",
 
 burningjealousy: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Burning Jealousy",
 pp: 1.25,
@@ -1869,7 +1870,7 @@ type: "Fire",
 
 burnup: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Special",
 name: "Burn Up",
 pp: 0.625,
@@ -2014,7 +2015,7 @@ type: "Electric",
 
 chargebeam: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Charge Beam",
 pp: 1.25,
@@ -2067,7 +2068,7 @@ type: "Flying",
 
 chillingwater: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Chilling Water",
 pp: 1.25,
@@ -2091,7 +2092,7 @@ type: "Water",
 
 chillyreception: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Chilly Reception",
 pp: 0.625,
@@ -2106,7 +2107,7 @@ type: "Ice",
 
 chipaway: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Chip Away",
 pp: 1.25,
@@ -2147,7 +2148,7 @@ type: "Grass",
 
 circlethrow: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Circle Throw",
 pp: 1.25,
@@ -2160,7 +2161,7 @@ type: "Fighting",
 
 clamp: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Clamp",
 pp: 1.25,
@@ -2174,7 +2175,7 @@ type: "Water",
 
 clangingscales: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Special",
 name: "Clanging Scales",
 pp: 0.625,
@@ -2226,7 +2227,7 @@ type: "Dragon",
 
 clangoroussoulblaze: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Clangorous Soulblaze",
 pp: 0.625,
@@ -2251,7 +2252,7 @@ type: "Dragon",
 
 clearsmog: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Clear Smog",
 pp: 1.25,
@@ -2271,7 +2272,7 @@ type: "Poison",
 
 closecombat: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Close Combat",
 pp: 0.625,
@@ -2412,7 +2413,7 @@ type: "Dark",
 
 confuseray: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Special",
 name: "Confuse Ray",
 pp: 1.25,
@@ -2428,7 +2429,7 @@ type: "Ghost",
 
 confusion: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Confusion",
 pp: 1.25,
@@ -2506,7 +2507,7 @@ type: "Dragon",
 
 corkscrewcrash: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Corkscrew Crash",
 pp: 0.625,
@@ -2520,7 +2521,7 @@ type: "Steel",
 
 corrosivegas: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Corrosive Gas",
 pp: 0.625,
@@ -2752,7 +2753,7 @@ type: "Fairy",
 
 crosspoison: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Cross Poison",
 pp: 1.25,
@@ -2769,7 +2770,7 @@ type: "Poison",
 
 crunch: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Crunch",
 pp: 1.25,
@@ -2883,7 +2884,7 @@ type: "Dark",
 
 darkpulse: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Dark Pulse",
 pp: 1.25,
@@ -2898,22 +2899,24 @@ type: "Dark",
 },
 
 darkvoid: {
-accuracy: 75,
-basePower: 40,
+accuracy: 95,
+basePower: 45,
 category: "Special",
 name: "Dark Void",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
 status: 'slp',
-secondary: null,
+},
 target: "allAdjacentFoes",
 type: "Dark",
 },
 
 dazzlinggleam: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Dazzling Gleam",
 pp: 1.25,
@@ -2926,7 +2929,7 @@ type: "Fairy",
 
 decorate: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Decorate",
 pp: 1.25,
@@ -2984,7 +2987,7 @@ type: "Normal",
 
 defog: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Defog",
 pp: 1.25,
@@ -3064,7 +3067,7 @@ type: "Ghost",
 
 devastatingdrake: {
 accuracy: 75,
-basePower: 140,
+basePower: 145,
 category: "Physical",
 name: "Devastating Drake",
 pp: 0.625,
@@ -3103,7 +3106,7 @@ type: "Rock",
 
 dig: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Dig",
 pp: 0.625,
@@ -3146,7 +3149,7 @@ type: "Ground",
 
 disarmingvoice: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Disarming Voice",
 pp: 0.625,
@@ -3160,7 +3163,7 @@ type: "Fairy",
 
 discharge: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Discharge",
 pp: 1.25,
@@ -3176,7 +3179,7 @@ type: "Electric",
 
 direclaw: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Dire Claw",
 pp: 1.25,
@@ -3201,7 +3204,7 @@ type: "Poison",
 
 dive: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Dive",
 pp: 0.625,
@@ -3247,7 +3250,7 @@ type: "Water",
 
 dizzypunch: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Dizzy Punch",
 pp: 1.25,
@@ -3301,7 +3304,7 @@ type: "Normal",
 
 doomdesire: {
 accuracy: 95,
-basePower: 140,
+basePower: 145,
 category: "Special",
 name: "Doom Desire",
 pp: 0.625,
@@ -3316,7 +3319,7 @@ moveData: {
 id: 'doomdesire',
 name: "Doom Desire",
 accuracy: 95,
-basePower: 140,
+basePower: 145,
 category: "Special",
 priority: 0,
 flags: {futuremove: 1},
@@ -3334,7 +3337,7 @@ type: "Steel",
 
 doubleedge: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Double Edge",
 pp: 0.625,
@@ -3348,7 +3351,7 @@ type: "Normal",
 
 doublehit: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Double Hit",
 pp: 1.25,
@@ -3364,7 +3367,7 @@ type: "Normal",
 
 doubleironbash: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Double Iron Bash",
 pp: 1.25,
@@ -3401,7 +3404,7 @@ type: "Fighting",
 
 doubleshock: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Double Shock",
 pp: 0.625,
@@ -3442,7 +3445,7 @@ type: "Normal",
 
 dracometeor: {
 accuracy: 75,
-basePower: 130,
+basePower: 135,
 category: "Special",
 name: "Draco Meteor",
 pp: 0.625,
@@ -3460,7 +3463,7 @@ type: "Dragon",
 
 dragonascent: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Dragon Ascent",
 pp: 0.625,
@@ -3478,15 +3481,24 @@ type: "Flying",
 
 dragonbreath: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Dragon Breath",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 25,
-status: 'par',
+chance: 75,
+onHit(target, source) {
+const result = this.random(3);
+if (result === 0) {
+target.trySetStatus('tox', source);
+} else if (result === 1) {
+target.trySetStatus('par', source);
+} else {
+target.trySetStatus('slp', source);
+}
+},
 },
 target: "any",
 type: "Dragon",
@@ -3494,7 +3506,7 @@ type: "Dragon",
 
 dragonclaw: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Dragon Claw",
 pp: 1.25,
@@ -3532,13 +3544,13 @@ type: "Dragon",
 
 dragondarts: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Physical",
 name: "Dragon Darts",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-multihit: [1, 3],
+multihit: [1, 4],
 multiaccuracy: 85,
 smartTarget: true,
 secondary: null,
@@ -3566,7 +3578,7 @@ type: "Dragon",
 
 dragonhammer: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Dragon Hammer",
 pp: 0.625,
@@ -3593,7 +3605,7 @@ type: "Dragon",
 
 dragonrage: {
 accuracy: 95,
-basePower: 55,
+basePower: 45,
 category: "Special",
 name: "Dragon Rage",
 pp: 0.625,
@@ -3627,7 +3639,7 @@ type: "Dragon",
 
 dragontail: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Dragon Tail",
 pp: 1.25,
@@ -3640,7 +3652,7 @@ type: "Dragon",
 
 drainingkiss: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Draining Kiss",
 pp: 0.625,
@@ -3685,7 +3697,7 @@ type: "Psychic",
 
 drillpeck: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Drill Peck",
 pp: 0.625,
@@ -3699,7 +3711,7 @@ type: "Flying",
 
 drillrun: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Drill Run",
 pp: 1.25,
@@ -3713,7 +3725,7 @@ type: "Ground",
 
 drumbeating: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Drum Beating",
 pp: 1.25,
@@ -3731,7 +3743,7 @@ type: "Grass",
 
 dualchop: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Dual Chop",
 pp: 1.25,
@@ -3747,7 +3759,7 @@ type: "Dragon",
 
 dualwingbeat: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Dual Wingbeat",
 pp: 1.25,
@@ -3779,7 +3791,7 @@ type: "Fighting",
 
 earthpower: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Earth Power",
 pp: 1.25,
@@ -3826,8 +3838,8 @@ type: "Normal",
 
 eerieimpulse: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 55,
+category: "Special",
 name: "Eerie Impulse",
 pp: 0.625,
 priority: 0,
@@ -3836,14 +3848,24 @@ boosts: {
 atk: -2,
 spa: -2,
 },
-secondary: null,
-target: "any",
+secondaries: [
+{
+chance: 50,
+boosts: {
+atk: -2,
+}, {
+chance: 50,
+boosts: {
+spa -2,
+},
+},
+],
 type: "Electric",
 },
 
 eeriespell: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Eerie Spell",
 pp: 0.625,
@@ -3886,7 +3908,7 @@ type: "Normal",
 
 electricterrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Special",
 name: "Electric Terrain",
 pp: 0.625,
@@ -4034,8 +4056,8 @@ type: "Electric",
 
 embargo: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Special",
 name: "Embargo",
 pp: 0.625,
 priority: 0,
@@ -4054,13 +4076,13 @@ this.add('-end', pokemon, 'Embargo');
 },
 },
 secondary: null,
-target: "any",
+target: "allAdjacentFoes",
 type: "Dark",
 },
 
 ember: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Ember",
 pp: 1.25,
@@ -4189,7 +4211,7 @@ type: "Normal",
 
 energyball: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Energy Ball",
 pp: 1.25,
@@ -4263,7 +4285,7 @@ type: "Fire",
 
 esperwing: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Esper Wing",
 pp: 1.25,
@@ -4284,7 +4306,7 @@ type: "Psychic",
 
 eternabeam: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Eternabeam",
 pp: 0.625,
@@ -4299,7 +4321,7 @@ type: "Dragon",
 
 expandingforce: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Expanding Force",
 pp: 1.25,
@@ -4337,7 +4359,7 @@ type: "Normal",
 
 extrasensory: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Extrasensory",
 pp: 1.25,
@@ -4353,7 +4375,7 @@ type: "Psychic",
 
 extremespeed: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Extreme Speed",
 pp: 0.625,
@@ -4371,7 +4393,7 @@ type: "Normal",
 
 facade: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Facade",
 pp: 1.25,
@@ -4389,7 +4411,7 @@ type: "Normal",
 
 fairylock: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Special",
 name: "Fairy Lock",
 pp: 0.625,
@@ -4412,7 +4434,7 @@ type: "Fairy",
 
 fairywind: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Fairy Wind",
 pp: 1.25,
@@ -4426,7 +4448,7 @@ type: "Fairy",
 
 fakeout: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Fake Out",
 pp: 0.625,
@@ -4471,7 +4493,7 @@ type: "Dark",
 
 falsesurrender: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "False Surrender",
 pp: 1.25,
@@ -4504,7 +4526,7 @@ type: "Flying",
 
 feintattack: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Feint Attack",
 pp: 1.25,
@@ -4522,7 +4544,7 @@ type: "Dark",
 
 fellstinger: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Fell Stinger",
 pp: 1.25,
@@ -4538,7 +4560,7 @@ type: "Bug",
 
 fierydance: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Fiery Dance",
 pp: 1.25,
@@ -4559,7 +4581,7 @@ type: "Fire",
 
 fierywrath: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Fiery Wrath",
 pp: 1.25,
@@ -4621,7 +4643,7 @@ type: "Fighting",
 
 fireblast: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Special",
 name: "Fire Blast",
 pp: 0.625,
@@ -4660,7 +4682,7 @@ type: "Fire",
 
 firelash: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Fire Lash",
 pp: 1.25,
@@ -4679,7 +4701,7 @@ type: "Fire",
 
 firepledge: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Fire Pledge",
 pp: 0.625,
@@ -4759,7 +4781,7 @@ type: "Fire",
 
 firstimpression: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "First Impression",
 pp: 0.625,
@@ -4852,7 +4874,7 @@ type: "Normal",
 
 flamecharge: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Physical",
 name: "Flame Charge",
 pp: 1.25,
@@ -4873,7 +4895,7 @@ type: "Fire",
 
 flamewheel: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Flame Wheel",
 pp: 1.25,
@@ -4898,7 +4920,7 @@ type: "Fire",
 
 flamethrower: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Flamethrower",
 pp: 1.25,
@@ -4915,7 +4937,7 @@ type: "Fire",
 
 flareblitz: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Flare Blitz",
 pp: 0.625,
@@ -4933,7 +4955,7 @@ type: "Fire",
 
 flash: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Special",
 name: "Flash",
 pp: 0.625,
@@ -4949,7 +4971,7 @@ type: "Normal",
 
 flashcannon: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Flash Cannon",
 pp: 0.625,
@@ -5029,7 +5051,7 @@ type: "Dark",
 
 flipturn: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Flip Turn",
 pp: 0.625,
@@ -5108,7 +5130,7 @@ type: "Fairy",
 
 flowertrick: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Flower Trick",
 pp: 1.25,
@@ -5122,7 +5144,7 @@ type: "Grass",
 
 fly: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Fly",
 pp: 1.25,
@@ -5181,7 +5203,7 @@ type: "Fighting",
 
 focusblast: {
 accuracy: 75,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Focus Blast",
 pp: 0.625,
@@ -5235,7 +5257,7 @@ type: "Normal",
 
 focuspunch: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Focus Punch",
 pp: 1.25,
@@ -5288,7 +5310,7 @@ type: "Normal",
 
 forcepalm: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Force Palm",
 pp: 1.25,
@@ -5304,8 +5326,8 @@ type: "Fighting",
 
 forestscurse: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 55,
+category: "Special",
 name: "Forest's Curse",
 pp: 0.625,
 priority: 0,
@@ -5315,14 +5337,20 @@ if (target.hasType('Grass')) return false;
 if (!target.addType('Grass')) return false;
 this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
 },
-secondary: null,
+secondary: {
+chance: 33,
+boosts: {
+def: -1,
+spd: -1,
+},
+},
 target: "any",
 type: "Grass",
 },
 
 foulplay: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Foul Play",
 pp: 1.25,
@@ -5336,7 +5364,7 @@ type: "Dark",
 
 freezedry: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Freeze Dry",
 pp: 1.25,
@@ -5355,7 +5383,7 @@ type: "Ice",
 
 freezeshock: {
 accuracy: 95,
-basePower: 140,
+basePower: 145,
 category: "Physical",
 name: "Freeze Shock",
 pp: 0.625,
@@ -5383,7 +5411,7 @@ type: "Ice",
 
 freezingglare: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Freezing Glare",
 pp: 1.25,
@@ -5399,7 +5427,7 @@ type: "Psychic",
 
 frenzyplant: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Frenzy Plant",
 pp: 0.625,
@@ -5415,7 +5443,7 @@ type: "Grass",
 
 frostbreath: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Frost Breath",
 pp: 1.25,
@@ -5566,13 +5594,13 @@ type: "Poison",
 
 geargrind: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Physical",
 name: "Gear Grind",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-multihit: [1, 2],
+multihit: [1, 3],
 multiaccuracy: 85,
 secondary: null,
 target: "any",
@@ -5581,7 +5609,7 @@ type: "Steel",
 
 genesissupernova: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Genesis Supernova",
 pp: 0.625,
@@ -5601,7 +5629,7 @@ type: "Psychic",
 
 geomancy: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Geomancy",
 pp: 0.625,
@@ -5640,7 +5668,7 @@ type: "Grass",
 
 gigaimpact: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Physical",
 name: "Giga Impact",
 pp: 0.625,
@@ -5656,7 +5684,7 @@ type: "Normal",
 
 gigatonhammer: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Physical",
 name: "Gigaton Hammer",
 pp: 0.625,
@@ -5686,7 +5714,7 @@ type: "Steel",
 
 gigavolthavoc: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Gigavolt Havoc",
 pp: 0.625,
@@ -5733,7 +5761,7 @@ type: "Ice",
 
 glaiverush: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Glaive Rush",
 pp: 0.625,
@@ -5819,7 +5847,7 @@ type: "Grass",
 
 grasspledge: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Grass Pledge",
 pp: 0.625,
@@ -5833,15 +5861,15 @@ type: "Grass",
 },
 
 grasswhistle: {
-accuracy: 75,
-basePower: 40,
+accuracy: 95,
+basePower: 45,
 category: "Special",
 name: "Grass Whistle",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 80,
+chance: 75,
 status: 'slp',
 },
 target: "any",
@@ -5850,7 +5878,7 @@ type: "Grass",
 
 grassyglide: {
 accuracy: 87,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Grassy Glide",
 pp: 0.625,
@@ -5868,7 +5896,7 @@ type: "Grass",
 
 grassyterrain: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Grassy Terrain",
 pp: 0.625,
@@ -5924,7 +5952,7 @@ type: "Grass",
 
 gravapple: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Grav Apple",
 pp: 1.25,
@@ -5947,7 +5975,7 @@ type: "Grass",
 
 gravity: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Gravity",
 pp: 0.625,
@@ -6062,7 +6090,7 @@ type: "Normal",
 
 grudge: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Grudge",
 pp: 1.25,
@@ -6186,11 +6214,11 @@ type: "Steel",
 
 hail: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Hail",
 pp: 0.625,
-priority: 0,
+priority: 4,
 flags: {},
 weather: 'snow',
 secondary: null,
@@ -6238,7 +6266,7 @@ type: "Ice",
 
 headbutt: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Headbutt",
 pp: 1.25,
@@ -6322,15 +6350,15 @@ type: "Normal",
 
 healblock: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Heal Block",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 volatileStatus: 'healblock',
 condition: {
-duration: 5,
+duration: 10,
 durationCallback(target, source, effect) {
 if (source?.hasAbility('persistent')) {
 this.add('-activate', source, 'ability: Persistent', '[move] Heal Block');
@@ -6427,7 +6455,7 @@ type: "Psychic",
 
 heartstamp: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Heart Stamp",
 pp: 1.25,
@@ -6443,8 +6471,8 @@ type: "Psychic",
 
 heartswap: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Physical",
 name: "Heart Swap",
 pp: 0.625,
 priority: 0,
@@ -6452,16 +6480,13 @@ flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
 onHit(target, source) {
 const targetBoosts: SparseBoostsTable = {};
 const sourceBoosts: SparseBoostsTable = {};
-
 let i: BoostID;
 for (i in target.boosts) {
 targetBoosts[i] = target.boosts[i];
 sourceBoosts[i] = source.boosts[i];
 }
-
 target.setBoost(sourceBoosts);
 source.setBoost(targetBoosts);
-
 this.add('-swapboost', source, target, '[from] move: Heart Swap');
 },
 secondary: null,
@@ -6510,7 +6535,7 @@ type: "Fire",
 
 heatwave: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Heat Wave",
 pp: 1.25,
@@ -6598,7 +6623,7 @@ type: "Normal",
 
 hex: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 basePowerCallback(pokemon, target, move) {
 if (target.status || target.hasAbility('comatose')) {
 this.debug('BP doubled from status condition');
@@ -6618,7 +6643,7 @@ type: "Ghost",
 
 highhorsepower: {
 accuracy: 75,
-basePower: 140,
+basePower: 145,
 category: "Physical",
 name: "High Horsepower",
 pp: 0.625,
@@ -6635,7 +6660,7 @@ type: "Ground",
 
 highjumpkick: {
 accuracy: 75,
-basePower: 130,
+basePower: 135,
 category: "Physical",
 name: "High Jump Kick",
 pp: 0.625,
@@ -6670,7 +6695,7 @@ type: "Dark",
 
 horndrill: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Horn Drill",
 pp: 0.625,
@@ -6772,7 +6797,7 @@ type: "Flying",
 
 hydrocannon: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Hydro Cannon",
 pp: 0.625,
@@ -6802,7 +6827,7 @@ type: "Water",
 
 hydrosteam: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Hydro Steam",
 pp: 0.625,
@@ -6836,7 +6861,7 @@ type: "Water",
 
 hyperbeam: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Hyper Beam",
 pp: 0.625,
@@ -6864,7 +6889,7 @@ type: "Normal",
 
 hyperfang: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Hyper Fang",
 pp: 1.25,
@@ -6913,7 +6938,7 @@ type: "Dark",
 
 hyperspacehole: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Hyperspace Hole",
 pp: 1.25,
@@ -6927,7 +6952,7 @@ type: "Psychic",
 
 hypervoice: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Hyper Voice",
 pp: 0.625,
@@ -6939,15 +6964,17 @@ type: "Normal",
 },
 
 hypnosis: {
-accuracy: 75,
+accuracy: 95,
 basePower: 0,
-category: "Status",
+category: "Special",
 name: "Hypnosis",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
 status: 'slp',
-secondary: null,
+},
 target: "allAdjacent",
 type: "Psychic",
 },
@@ -6974,7 +7001,7 @@ type: "Ice",
 
 icebeam: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Ice Beam",
 pp: 1.25,
@@ -6989,7 +7016,7 @@ type: "Ice",
 
 iceburn: {
 accuracy: 95,
-basePower: 140,
+basePower: 145,
 category: "Special",
 name: "Ice Burn",
 pp: 0.625,
@@ -7041,7 +7068,7 @@ type: "Ice",
 
 icehammer: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Ice Hammer",
 pp: 0.625,
@@ -7080,7 +7107,7 @@ type: "Ice",
 
 iceshard: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Ice Shard",
 pp: 0.625,
@@ -7094,7 +7121,7 @@ type: "Ice",
 
 icespinner: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Ice Spinner",
 pp: 1.25,
@@ -7161,7 +7188,7 @@ type: "Ice",
 
 incinerate: {
 accuracy: 85,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Incinerate",
 pp: 1.25,
@@ -7194,7 +7221,7 @@ type: "Fire",
 
 infernalparade: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 basePowerCallback(pokemon, target, move) {
 if (target.status || target.hasAbility('comatose')) return move.basePower * 2;
 return move.basePower;
@@ -7231,7 +7258,7 @@ type: "Fire",
 
 infernooverdrive: {
 accuracy: 95,
-basePower: 55,
+basePower: 45,
 category: "Physical",
 name: "Inferno Overdrive",
 pp: 0.625,
@@ -7248,7 +7275,7 @@ type: "Fire",
 
 infestation: {
 accuracy: 85,
-basePower: 40,
+basePower: 45,
 category: "Special",
 name: "Infestation",
 pp: 1.25,
@@ -7344,7 +7371,7 @@ type: "Steel",
 
 ironhead: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Iron Head",
 pp: 1.25,
@@ -7378,7 +7405,7 @@ type: "Steel",
 
 jawlock: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Jaw Lock",
 pp: 1.25,
@@ -7395,7 +7422,7 @@ type: "Dark",
 
 jetpunch: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Jet Punch",
 pp: 0.625,
@@ -7447,7 +7474,7 @@ type: "Grass",
 
 kinesis: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Kinesis",
 pp: 1.25,
@@ -7561,7 +7588,7 @@ type: "Dark",
 
 landswrath: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Land's Wrath",
 pp: 1.25,
@@ -7593,7 +7620,7 @@ type: "Dark",
 
 lastresort: {
 accuracy: 75,
-basePower: 80,
+basePower: 85,
 Damage: 50,
 category: "Physical",
 name: "Last Resort",
@@ -7613,7 +7640,7 @@ type: "Normal",
 
 lastrespects: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 basePowerCallback(pokemon, target, move) {
 return 50 + 50 * pokemon.side.totalFainted;
 },
@@ -7629,7 +7656,7 @@ type: "Ghost",
 
 lavaplume: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Lava Plume",
 pp: 1.25,
@@ -7646,7 +7673,7 @@ type: "Fire",
 
 leafage: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Leafage",
 pp: 1.25,
@@ -7660,7 +7687,7 @@ type: "Grass",
 
 leafblade: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Leaf Blade",
 pp: 1.25,
@@ -7674,7 +7701,7 @@ type: "Grass",
 
 leafstorm: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Special",
 name: "Leaf Storm",
 pp: 0.625,
@@ -7710,7 +7737,7 @@ type: "Grass",
 
 leechlife: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Leech Life",
 pp: 0.625,
@@ -7724,7 +7751,7 @@ type: "Bug",
 
 leechseed: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Leech Seed",
 pp: 0.625,
@@ -7775,7 +7802,7 @@ type: "Normal",
 
 letssnuggleforever: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Let's Snuggle Forever",
 pp: 1.25,
@@ -7793,7 +7820,7 @@ type: "Fairy",
 
 lick: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Lick",
 pp: 1.25,
@@ -7823,7 +7850,7 @@ type: "Water",
 
 lightofruin: {
 accuracy: 85,
-basePower: 140,
+basePower: 145,
 category: "Special",
 name: "Light of Ruin",
 pp: 0.625,
@@ -7912,7 +7939,7 @@ type: "Water",
 
 lockon: {
 accuracy: 95,
-basePower: 40,
+basePower: 15,
 category: "Physical",
 name: "Lock On",
 pp: 0.625,
@@ -7942,15 +7969,15 @@ type: "Normal",
 },
 
 lovelykiss: {
-accuracy: 75,
-basePower: 0,
-category: "Status",
+accuracy: 95,
+basePower: 35,
+category: "Physical",
 name: "Lovely Kiss",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 90,
+chance: 75,
 status: 'slp',
 },
 target: "any",
@@ -8016,7 +8043,7 @@ type: "Fighting",
 
 luminacrash: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Lumina Crash",
 pp: 1.25,
@@ -8051,7 +8078,7 @@ type: "Psychic",
 
 lunardance: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Lunar Dance",
 pp: 0.625,
@@ -8067,7 +8094,7 @@ type: "Psychic",
 
 lunge: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Lunge",
 pp: 1.25,
@@ -8085,7 +8112,7 @@ type: "Bug",
 
 lusterpurge: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Luster Purge",
 pp: 1.25,
@@ -8103,7 +8130,7 @@ type: "Psychic",
 
 machpunch: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Mach Punch",
 pp: 0.625,
@@ -8121,7 +8148,7 @@ type: "Fighting",
 
 magicalleaf: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Magical Leaf",
 pp: 1.25,
@@ -8273,7 +8300,7 @@ type: "Fire",
 
 magnetbomb: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Magnet Bomb",
 pp: 0.625,
@@ -8364,7 +8391,7 @@ type: "Ground",
 
 makeitrain: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Make It Rain",
 pp: 0.625,
@@ -8446,7 +8473,7 @@ type: "Fighting",
 
 meanlook: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Special",
 name: "Mean Look",
 pp: 0.625,
@@ -8481,7 +8508,7 @@ type: "Psychic",
 
 megadrain: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Mega Drain",
 pp: 0.625,
@@ -8496,7 +8523,7 @@ type: "Grass",
 
 megahorn: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Megahorn",
 pp: 0.625,
@@ -8510,7 +8537,7 @@ type: "Bug",
 
 megakick: {
 accuracy: 75,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Mega Kick",
 pp: 0.625,
@@ -8525,7 +8552,7 @@ type: "Normal",
 
 megapunch: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Mega Punch",
 pp: 1.25,
@@ -8615,7 +8642,7 @@ type: "Steel",
 
 metalclaw: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Physical",
 name: "Metal Claw",
 pp: 1.25,
@@ -8652,7 +8679,7 @@ type: "Steel",
 
 meteorassault: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Physical",
 name: "Meteor Assault",
 pp: 0.625,
@@ -8668,7 +8695,7 @@ type: "Fighting",
 
 meteorbeam: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Meteor Beam",
 pp: 0.625,
@@ -8692,7 +8719,7 @@ type: "Rock",
 
 meteormash: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Meteor Mash",
 pp: 1.25,
@@ -8823,7 +8850,7 @@ type: "Normal",
 
 miracleeye: {
 accuracy: 95,
-basePower: 40,
+basePower: 15,
 category: "Special",
 name: "Miracle Eye",
 pp: 0.625,
@@ -8937,7 +8964,7 @@ type: "Steel",
 
 mist: {
 accuracy: 95,
-basePower: 50,
+basePower: 45,
 category: "Special",
 name: "Mist",
 pp: 1.25,
@@ -8978,7 +9005,7 @@ type: "Ice",
 
 mistball: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Mist Ball",
 pp: 1.25,
@@ -9016,7 +9043,7 @@ type: "Fairy",
 
 mistyterrain: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Misty Terrain",
 pp: 0.625,
@@ -9072,7 +9099,7 @@ type: "Fairy",
 
 moonblast: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Moonblast",
 pp: 1.25,
@@ -9173,7 +9200,7 @@ type: "Normal",
 
 mortalspin: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Physical",
 name: "Mortal Spin",
 pp: 0.625,
@@ -9271,7 +9298,7 @@ type: "Ground",
 
 mudshot: {
 accuracy: 95,
-basePower: 55,
+basePower: 45,
 category: "Special",
 name: "Mud Shot",
 pp: 1.25,
@@ -9289,7 +9316,7 @@ type: "Ground",
 
 mudslap: {
 accuracy: 95,
-basePower: 40,
+basePower: 15,
 category: "Special",
 name: "Mud Slap",
 pp: 1.25,
@@ -9307,7 +9334,7 @@ type: "Ground",
 
 muddywater: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Muddy Water",
 pp: 1.25,
@@ -9345,7 +9372,7 @@ type: "Fire",
 
 mysticalpower: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Mystical Power",
 pp: 1.25,
@@ -9427,7 +9454,7 @@ type: "Fairy",
 
 needlearm: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Needle Arm",
 pp: 1.25,
@@ -9520,7 +9547,7 @@ type: "Ghost",
 
 nightslash: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Night Slash",
 pp: 1.25,
@@ -9603,7 +9630,7 @@ type: "Poison",
 
 nuzzle: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 category: "Physical",
 name: "Nuzzle",
 pp: 1.25,
@@ -9619,7 +9646,7 @@ type: "Electric",
 
 oblivionwing: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Oblivion Wing",
 pp: 0.625,
@@ -9688,8 +9715,8 @@ type: "Dark",
 },
 
 oceanicoperetta: {
-accuracy: 75,
-basePower: 50,
+accuracy: 85,
+basePower: 55,
 category: "Special",
 name: "Oceanic Operetta",
 pp: 0.625,
@@ -9728,7 +9755,7 @@ type: "Water",
 
 octolock: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Physical",
 name: "Octolock",
 pp: 0.625,
@@ -9780,7 +9807,7 @@ type: "Normal",
 
 ominouswind: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Ominous Wind",
 pp: 0.625,
@@ -9804,7 +9831,7 @@ type: "Ghost",
 
 orderup: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Order Up",
 pp: 1.25,
@@ -9834,7 +9861,7 @@ type: "Dragon",
 
 originpulse: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Special",
 name: "Origin Pulse",
 pp: 0.625,
@@ -9867,7 +9894,7 @@ type: "Dragon",
 
 overdrive: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Overdrive",
 pp: 0.625,
@@ -9880,7 +9907,7 @@ type: "Electric",
 
 overheat: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Special",
 name: "Overheat",
 pp: 0.625,
@@ -9935,7 +9962,7 @@ type: "Electric",
 
 partingshot: {
 accuracy: 95,
-basePower: 40,
+basePower: 15,
 category: "Special",
 name: "Parting Shot",
 pp: 0.625,
@@ -9955,7 +9982,7 @@ type: "Dark",
 
 payback: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 basePowerCallback(pokemon, target, move) {
 if (target.newlySwitched || this.queue.willMove(target)) {
 this.debug('Payback NOT boosted');
@@ -9976,7 +10003,7 @@ type: "Dark",
 
 payday: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Pay Day",
 pp: 1.25,
@@ -9993,7 +10020,7 @@ type: "Normal",
 
 peck: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Peck",
 pp: 0.625,
@@ -10024,7 +10051,9 @@ result = true;
 } else if (this.runEvent('TryHit', pokemon, source, move) === null) {
 result = true;
 } else if (!pokemon.volatiles['perishsong']) {
-pokemon.addVolatile('perishsong');
+// Generate a random duration between 2 and 5 turns
+const duration = this.random(2, 5);
+pokemon.addVolatile('perishsong', pokemon, move, 'perishsong', duration);
 result = true;
 message = true;
 }
@@ -10033,7 +10062,10 @@ if (!result) return false;
 if (message) this.add('-fieldactivate', 'move: Perish Song');
 },
 condition: {
-duration: 3,
+duration: 5,
+onStart(target) {
+this.add('-start', target, 'perish3');
+},
 onEnd(target) {
 this.add('-start', target, 'perish0');
 target.faint();
@@ -10051,7 +10083,7 @@ type: "Normal",
 
 petalblizzard: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Petal Blizzard",
 pp: 1.25,
@@ -10088,7 +10120,7 @@ type: "Grass",
 
 phantomforce: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Phantom Force",
 pp: 1.25,
@@ -10164,7 +10196,7 @@ type: "Electric",
 
 playnice: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Status",
 name: "Play Nice",
 pp: 0.625,
@@ -10182,7 +10214,7 @@ type: "Normal",
 
 playrough: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Play Rough",
 pp: 1.25,
@@ -10200,7 +10232,7 @@ type: "Fairy",
 
 pluck: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Pluck",
 pp: 1.25,
@@ -10224,7 +10256,7 @@ type: "Flying",
 
 poisonfang: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Poison Fang",
 pp: 1.25,
@@ -10245,7 +10277,7 @@ type: "Poison",
 
 poisonjab: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Poison Jab",
 pp: 1.25,
@@ -10261,13 +10293,16 @@ type: "Poison",
 
 poisonpowder: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Poison Powder",
 pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
 status: 'tox',
+},
 secondary: null,
 target: "allAdjacent",
 type: "Poison",
@@ -10292,7 +10327,7 @@ type: "Poison",
 
 poisontail: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Poison Tail",
 pp: 1.25,
@@ -10309,7 +10344,7 @@ type: "Poison",
 
 pollenpuff: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Pollen Puff",
 pp: 1.25,
@@ -10336,7 +10371,7 @@ type: "Bug",
 
 poltergeist: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Physical",
 name: "Poltergeist",
 pp: 0.625,
@@ -10371,7 +10406,7 @@ type: "Normal",
 
 pounce: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Pounce",
 pp: 1.25,
@@ -10383,13 +10418,14 @@ boosts: {
 spe: -1,
 },
 },
+forceSwitch: true,
 target: "any",
 type: "Bug",
 },
 
 powder: {
 accuracy: 75,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Powder",
 pp: 0.625,
@@ -10415,7 +10451,7 @@ type: "Bug",
 
 powdersnow: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Powder Snow",
 pp: 1.25,
@@ -10432,7 +10468,7 @@ type: "Ice",
 
 powergem: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Power Gem",
 pp: 1.25,
@@ -10552,7 +10588,7 @@ type: "Psychic",
 
 powertrip: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 basePowerCallback(pokemon, target, move) {
 const bp = move.basePower + 25 * pokemon.positiveBoosts();
 this.debug('BP: ' + bp);
@@ -10570,7 +10606,7 @@ type: "Dark",
 
 poweruppunch: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Power Up Punch",
 pp: 1.25,
@@ -10594,7 +10630,7 @@ type: "Fighting",
 
 powerwhip: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Power Whip",
 pp: 0.625,
@@ -10651,7 +10687,7 @@ type: "Normal",
 
 prismaticlaser: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Prismatic Laser",
 pp: 0.625,
@@ -10730,7 +10766,7 @@ type: "Psychic",
 
 psyblade: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Psyblade",
 pp: 1.25,
@@ -10778,7 +10814,7 @@ type: "Normal",
 
 psychic: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Psychic",
 pp: 1.25,
@@ -10828,7 +10864,7 @@ type: "Psychic",
 
 psychicterrain: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Psychic Terrain",
 pp: 0.625,
@@ -10886,7 +10922,7 @@ type: "Psychic",
 
 psychoboost: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Special",
 name: "Psycho Boost",
 pp: 1.25,
@@ -10910,7 +10946,7 @@ type: "Psychic",
 
 psychocut: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Psycho Cut",
 pp: 1.25,
@@ -10924,7 +10960,7 @@ type: "Psychic",
 
 psyshieldbash: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Psyshield Bash",
 pp: 1.25,
@@ -10945,7 +10981,7 @@ type: "Psychic",
 
 psyshock: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 overrideDefensiveStat: 'def',
 name: "Psyshock",
@@ -10989,7 +11025,7 @@ type: "Psychic",
 
 pulverizingpancake: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Pulverizing Pancake",
 pp: 1.25,
@@ -11003,7 +11039,7 @@ type: "Normal",
 
 punishment: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 basePowerCallback(pokemon, target) {
 let power = 60 + 20 * target.positiveBoosts();
 if (power > 200) power = 200;
@@ -11043,7 +11079,7 @@ type: "Poison",
 
 pursuit: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 basePowerCallback(pokemon, target, move) {
 // You can't get here unless the pursuit succeeds
 if (target.beingCalledBack || target.switchFlag) {
@@ -11145,7 +11181,7 @@ type: "Dark",
 
 quickattack: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Quick Attack",
 pp: 0.625,
@@ -11229,7 +11265,7 @@ type: "Bug",
 
 ragefist: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 basePowerCallback(pokemon) {
 return Math.min(400, 50 + 50 * pokemon.timesAttacked);
 },
@@ -11245,8 +11281,8 @@ type: "Ghost",
 
 ragepowder: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Rage Powder",
 pp: 0.625,
 priority: 2,
@@ -11278,7 +11314,7 @@ type: "Bug",
 
 ragingbull: {
 accuracy: 85,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Raging Bull",
 pp: 1.25,
@@ -11338,7 +11374,7 @@ type: "Fire",
 
 raindance: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Rain Dance",
 pp: 0.625,
@@ -11352,7 +11388,7 @@ type: "Water",
 
 rapidspin: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Rapid Spin",
 pp: 0.625,
@@ -11432,7 +11468,7 @@ type: "Water",
 
 razorwind: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Razor Wind",
 pp: 0.625,
@@ -11596,7 +11632,7 @@ type: "Psychic",
 
 retaliate: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Retaliate",
 pp: 1.25,
@@ -11615,7 +11651,7 @@ type: "Normal",
 
 revelationdance: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Revelation Dance",
 pp: 1.25,
@@ -11633,7 +11669,7 @@ type: "Normal",
 
 revenge: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 basePowerCallback(pokemon, target, move) {
 const damagedByTarget = pokemon.attackedBy.some(
 p => p.source === target && p.damage > 0 && p.thisTurn
@@ -11715,7 +11751,7 @@ type: "Normal",
 
 risingvoltage: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 basePowerCallback(source, target, move) {
 if (this.field.isTerrain('electricterrain') && target.isGrounded()) {
 if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
@@ -11735,7 +11771,7 @@ type: "Electric",
 
 roar: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Special",
 name: "Roar",
 pp: 0.625,
@@ -11749,7 +11785,7 @@ type: "Normal",
 
 roaroftime: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Roar of Time",
 pp: 0.625,
@@ -11758,6 +11794,7 @@ flags: {recharge: 1, protect: 1, mirror: 1},
 self: {
 volatileStatus: 'mustrecharge',
 },
+forceSwitch: true,
 secondary: null,
 target: "any",
 type: "Dragon",
@@ -11780,7 +11817,7 @@ type: "Rock",
 
 rockclimb: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Rock Climb",
 pp: 1.25,
@@ -11828,7 +11865,7 @@ type: "Rock",
 
 rocksmash: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Rock Smash",
 pp: 1.25,
@@ -11847,7 +11884,7 @@ type: "Fighting",
 
 rockthrow: {
 accuracy: 95,
-basePower: 40,
+basePower: 15,
 damageCallback(pokemon) {
 return (this.random(10, 200) * pokemon.level) / 100;
 },
@@ -11863,7 +11900,7 @@ type: "Rock",
 
 rocktomb: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Rock Tomb",
 pp: 1.25,
@@ -11881,7 +11918,7 @@ type: "Rock",
 
 rockwrecker: {
 accuracy: 85,
-basePower: 150,
+basePower: 145,
 category: "Physical",
 name: "Rock Wrecker",
 pp: 0.625,
@@ -11897,8 +11934,8 @@ type: "Rock",
 
 roleplay: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Role Play",
 pp: 0.625,
 priority: 0,
@@ -11931,7 +11968,7 @@ type: "Psychic",
 
 rollingkick: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Rolling Kick",
 pp: 1.25,
@@ -11977,7 +12014,7 @@ self: {
 volatileStatus: 'roost',
 },
 condition: {
-duration: 4,
+duration: 5,
 onResidualOrder: 25,
 onStart(target) {
 if (!target.terastallized) {
@@ -12031,7 +12068,7 @@ type: "Ground",
 
 round: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Round",
 pp: 0.625,
@@ -12089,7 +12126,7 @@ type: "Fire",
 
 sacredsword: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Sacred Sword",
 pp: 1.25,
@@ -12160,7 +12197,7 @@ type: "Normal",
 
 saltcure: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Salt Cure",
 pp: 1.25,
@@ -12189,7 +12226,7 @@ type: "Rock",
 
 sandattack: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Physical",
 name: "Sand Attack",
 pp: 0.625,
@@ -12222,7 +12259,7 @@ type: "Ground",
 
 sandstorm: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Sandstorm",
 pp: 0.625,
@@ -12236,7 +12273,7 @@ type: "Rock",
 
 sandtomb: {
 accuracy: 85,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Sand Tomb",
 pp: 1.25,
@@ -12267,7 +12304,7 @@ type: "Grass",
 
 savagespinout: {
 accuracy: 75,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Savage Spin Out",
 pp: 0.625,
@@ -12286,7 +12323,7 @@ type: "Bug",
 
 scald: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Scald",
 pp: 1.25,
@@ -12340,7 +12377,7 @@ type: "Normal",
 
 scorchingsands: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Scorching Sands",
 pp: 1.25,
@@ -12358,7 +12395,7 @@ type: "Ground",
 
 scratch: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Physical",
 name: "Scratch",
 pp: 1.25,
@@ -12423,7 +12460,7 @@ type: "Steel",
 
 secretpower: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Secret Power",
 pp: 1.25,
@@ -12482,7 +12519,7 @@ type: "Fighting",
 
 seedbomb: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Seed Bomb",
 pp: 0.625,
@@ -12496,7 +12533,7 @@ type: "Grass",
 
 seedflare: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Seed Flare",
 pp: 0.625,
@@ -12545,7 +12582,7 @@ type: "Normal",
 
 shadowball: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Shadow Ball",
 pp: 1.25,
@@ -12581,7 +12618,7 @@ type: "Ghost",
 
 shadowclaw: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Shadow Claw",
 pp: 1.25,
@@ -12595,7 +12632,7 @@ type: "Ghost",
 
 shadowforce: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Shadow Force",
 pp: 1.25,
@@ -12609,7 +12646,7 @@ type: "Ghost",
 
 shadowpunch: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Shadow Punch",
 pp: 1.25,
@@ -12630,7 +12667,7 @@ type: "Ghost",
 
 shadowsneak: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Physical",
 name: "Shadow Sneak",
 pp: 0.625,
@@ -12644,7 +12681,7 @@ type: "Ghost",
 
 shadowstrike: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Shadow Strike",
 pp: 1.25,
@@ -12662,7 +12699,7 @@ type: "Ghost",
 
 shatteredpsyche: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Shattered Psyche",
 pp: 0.625,
@@ -12720,7 +12757,7 @@ type: "Normal",
 
 sheercold: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Sheer Cold",
 pp: 0.625,
@@ -12742,7 +12779,7 @@ type: "Ice",
 
 shellsidearm: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Shell Side Arm",
 pp: 1.25,
@@ -12804,7 +12841,7 @@ type: "Normal",
 
 shelltrap: {
 accuracy: 95,
-basePower: 150,
+basePower: 145,
 category: "Special",
 name: "Shell Trap",
 pp: 0.625,
@@ -12884,7 +12921,7 @@ type: "Steel",
 
 shockwave: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Shock Wave",
 pp: 1.25,
@@ -12985,7 +13022,7 @@ basePower: 0,
 category: "Status",
 name: "Silk Trap",
 pp: 0.625,
-priority: 4,
+priority: 5,
 flags: {},
 stallingMove: true,
 volatileStatus: 'silktrap',
@@ -13035,7 +13072,7 @@ type: "Bug",
 
 silverwind: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Silver Wind",
 pp: 1.25,
@@ -13062,7 +13099,7 @@ type: "Bug",
 
 simplebeam: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Simple Beam",
 pp: 0.625,
@@ -13086,15 +13123,15 @@ type: "Normal",
 },
 
 sing: {
-accuracy: 75,
-basePower: 0,
-category: "Status",
+accuracy: 95,
+basePower: 35,
+category: "Special",
 name: "Sing",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 95,
+chance: 75,
 status: 'slp',
 },
 target: "allAdjacent",
@@ -13103,7 +13140,7 @@ type: "Normal",
 
 sinisterarrowraid: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 category: "Physical",
 name: "Sinister Arrow Raid",
 pp: 1.25,
@@ -13118,7 +13155,7 @@ type: "Ghost",
 
 sizzlyslide: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Sizzly Slide",
 pp: 1.25,
@@ -13135,7 +13172,7 @@ type: "Fire",
 
 skittersmack: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Skitter Smack",
 pp: 1.25,
@@ -13178,7 +13215,7 @@ type: "Normal",
 
 skyattack: {
 accuracy: 95,
-basePower: 140,
+basePower: 145,
 category: "Physical",
 name: "Sky Attack",
 pp: 0.625,
@@ -13207,7 +13244,7 @@ type: "Flying",
 
 skydrop: {
 accuracy: 85,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Sky Drop",
 pp: 1.25,
@@ -13251,7 +13288,7 @@ type: "Normal",
 
 slash: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Slash",
 pp: 1.25,
@@ -13264,14 +13301,17 @@ type: "Normal",
 },
 
 sleeppowder: {
-accuracy: 75,
-basePower: 0,
-category: "Status",
+accuracy: 95,
+basePower: 15,
+category: "Special",
 name: "Sleep Powder",
 pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
 status: 'slp',
+},
 secondary: null,
 target: "allAdjacent",
 type: "Grass",
@@ -13330,7 +13370,7 @@ type: "Poison",
 
 sludgebomb: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Sludge Bomb",
 pp: 1.25,
@@ -13346,7 +13386,7 @@ type: "Poison",
 
 sludgewave: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Sludge Wave",
 pp: 1.25,
@@ -13362,7 +13402,7 @@ type: "Poison",
 
 smackdown: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Smack Down",
 pp: 1.25,
@@ -13408,7 +13448,7 @@ type: "Rock",
 
 smartstrike: {
 accuracy: 95,
-basePower: 10,
+basePower: 25,
 category: "Physical",
 name: "Smart Strike",
 pp: 0.625,
@@ -13439,7 +13479,7 @@ type: "Steel",
 
 smellingsalts: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 basePowerCallback(pokemon, target, move) {
 if (target.status === 'par') {
 this.debug('BP doubled on paralyzed target');
@@ -13462,7 +13502,7 @@ type: "Normal",
 
 smog: {
 accuracy: 75,
-basePower: 40,
+basePower: 25,
 category: "Special",
 name: "Smog",
 pp: 1.25,
@@ -13478,7 +13518,7 @@ type: "Poison",
 
 smokescreen: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Smokescreen",
 pp: 1.25,
@@ -13494,7 +13534,7 @@ type: "Normal",
 
 snaptrap: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Snap Trap",
 pp: 1.25,
@@ -13527,7 +13567,7 @@ type: "Dark",
 
 snatch: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Snatch",
 pp: 0.625,
@@ -13559,7 +13599,7 @@ type: "Dark",
 
 snipeshot: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Snipe Shot",
 pp: 1.25,
@@ -13574,7 +13614,7 @@ type: "Water",
 
 snore: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Snore",
 pp: 0.625,
@@ -13594,8 +13634,8 @@ type: "Normal",
 
 snowscape: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 65,
+category: "Special",
 name: "Snowscape",
 pp: 0.625,
 priority: 0,
@@ -13608,7 +13648,7 @@ type: "Ice",
 
 soak: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Status",
 name: "Soak",
 pp: 0.625,
@@ -13644,7 +13684,7 @@ type: "Normal",
 
 solarbeam: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Special",
 name: "Solar Beam",
 pp: 0.625,
@@ -13718,7 +13758,7 @@ type: "Grass",
 
 sonicboom: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Sonic Boom",
 pp: 0.625,
@@ -13764,7 +13804,7 @@ type: "Dragon",
 
 sparklingaria: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Sparkling Aria",
 pp: 0.625,
@@ -13788,7 +13828,7 @@ type: "Water",
 
 spectralthief: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Spectral Thief",
 pp: 1.25,
@@ -13803,11 +13843,11 @@ type: "Ghost",
 
 speedswap: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Physical",
 name: "Speed Swap",
 pp: 0.625,
-priority: 0,
+priority: 3,
 flags: {protect: 1, mirror: 1, bypasssub: 1, allyanim: 1},
 onHit(target, source) {
 const targetSpe = target.storedStats.spe;
@@ -13847,7 +13887,7 @@ type: "Grass",
 
 spiderweb: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Spider Web",
 pp: 1.25,
@@ -13896,7 +13936,7 @@ type: "Normal",
 
 spikes: {
 accuracy: 95,
-basePower: 40,
+basePower: 25,
 category: "Physical",
 name: "Spikes",
 pp: 0.625,
@@ -14019,7 +14059,7 @@ type: "Fairy",
 
 spiritshackle: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Spirit Shackle",
 pp: 1.25,
@@ -14037,7 +14077,7 @@ type: "Ghost",
 
 spite: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Spite",
 pp: 0.625,
@@ -14096,7 +14136,7 @@ type: "Normal",
 
 splinteredstormshards: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Splintered Stormshards",
 pp: 0.625,
@@ -14115,8 +14155,8 @@ type: "Rock",
 
 spore: {
 accuracy: 75,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Physical",
 name: "Spore",
 pp: 0.625,
 priority: 0,
@@ -14183,7 +14223,7 @@ type: "Rock",
 
 steameruption: {
 accuracy: 85,
-basePower: 110,
+basePower: 115,
 category: "Special",
 name: "Steam Eruption",
 pp: 0.625,
@@ -14239,7 +14279,7 @@ type: "Steel",
 
 steelroller: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Physical",
 name: "Steel Roller",
 pp: 0.625,
@@ -14261,7 +14301,7 @@ type: "Steel",
 
 steelwing: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Steel Wing",
 pp: 1.25,
@@ -14358,7 +14398,7 @@ type: "Ground",
 
 stoneaxe: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Stone Axe",
 pp: 1.25,
@@ -14392,7 +14432,7 @@ type: "Rock",
 
 storedpower: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 basePowerCallback(pokemon, target, move) {
 const bp = move.basePower + 20 * pokemon.positiveBoosts();
 this.debug('BP: ' + bp);
@@ -14425,7 +14465,7 @@ type: "Fighting",
 
 strangesteam: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Strange Steam",
 pp: 1.25,
@@ -14444,7 +14484,7 @@ type: "Fairy",
 
 strength: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Strength",
 pp: 1.25,
@@ -14464,7 +14504,7 @@ type: "Normal",
 
 strengthsap: {
 accuracy: 95,
-basePower: 10,
+basePower: 25,
 category: "Status",
 name: "Strength Sap",
 pp: 0.625,
@@ -14483,7 +14523,7 @@ type: "Grass",
 
 stringshot: {
 accuracy: 75,
-basePower: 40,
+basePower: 25,
 category: "Special",
 name: "String Shot",
 pp: 1.25,
@@ -14499,7 +14539,7 @@ type: "Bug",
 
 struggle: {
 accuracy: 25,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Struggle",
 pp: 50,
@@ -14523,7 +14563,7 @@ type: "Normal",
 
 strugglebug: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Struggle Bug",
 pp: 1.25,
@@ -14557,14 +14597,17 @@ type: "Normal",
 },
 
 stunspore: {
-accuracy: 75,
-basePower: 0,
-category: "Status",
+accuracy: 95,
+basePower: 15,
+category: "Special",
 name: "Stun Spore",
 pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+secondary: {
+chance: 75,
 status: 'par',
+},
 secondary: null,
 target: "allAdjacent",
 type: "Grass",
@@ -14572,7 +14615,7 @@ type: "Grass",
 
 submission: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Submission",
 pp: 1.25,
@@ -14670,7 +14713,7 @@ type: "Normal",
 
 subzeroslammer: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Subzero Slammer",
 pp: 1.25,
@@ -14686,7 +14729,7 @@ type: "Ice",
 
 suckerpunch: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Sucker Punch",
 pp: 0.625,
@@ -14706,7 +14749,7 @@ type: "Dark",
 
 sunnyday: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Sunny Day",
 pp: 0.625,
@@ -14754,7 +14797,7 @@ type: "Normal",
 
 superpower: {
 accuracy: 85,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Superpower",
 pp: 0.625,
@@ -14774,7 +14817,7 @@ type: "Fighting",
 
 supersonic: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Supersonic",
 pp: 1.25,
@@ -14788,7 +14831,7 @@ type: "Normal",
 
 supersonicskystrike: {
 accuracy: 75,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Supersonic Skystrike",
 pp: 0.625,
@@ -14806,7 +14849,7 @@ type: "Flying",
 
 surf: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Surf",
 pp: 1.25,
@@ -14853,7 +14896,7 @@ type: "Normal",
 
 sweetkiss: {
 accuracy: 85,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Sweet Kiss",
 pp: 1.25,
@@ -14883,7 +14926,7 @@ type: "Normal",
 
 swift: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Swift",
 pp: 1.25,
@@ -15013,7 +15056,7 @@ type: "Grass",
 
 tackle: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Tackle",
 pp: 1.25,
@@ -15059,8 +15102,8 @@ type: "Normal",
 
 tailwhip: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 25,
+category: "Physical",
 name: "Tail Whip",
 pp: 0.625,
 priority: 0,
@@ -15085,7 +15128,7 @@ priority: 0,
 flags: {snatch: 1, wind: 1},
 sideCondition: 'tailwind',
 condition: {
-duration: 4,
+duration: 5,
 durationCallback(target, source, effect) {
 if (source?.hasAbility('persistent')) {
 this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
@@ -15116,7 +15159,7 @@ type: "Flying",
 
 takedown: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Take Down",
 pp: 1.25,
@@ -15147,7 +15190,7 @@ type: "Psychic",
 
 tarshot: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Tar Shot",
 pp: 0.625,
@@ -15218,7 +15261,7 @@ type: "Dark",
 
 tearfullook: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Tearful Look",
 pp: 1.25,
@@ -15305,7 +15348,7 @@ type: "Psychic",
 
 terablast: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Tera Blast",
 pp: 1.25,
@@ -15321,7 +15364,7 @@ type: "Normal",
 
 terrainpulse: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Terrain Pulse",
 pp: 1.25,
@@ -15357,7 +15400,7 @@ type: "Normal",
 
 thief: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Thief",
 pp: 1.25,
@@ -15386,7 +15429,7 @@ type: "Dark",
 
 thousandarrows: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Thousand Arrows",
 pp: 1.25,
@@ -15409,7 +15452,7 @@ type: "Ground",
 
 thousandwaves: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Thousand Waves",
 pp: 1.25,
@@ -15446,7 +15489,7 @@ type: "Normal",
 
 throatchop: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Throat Chop",
 pp: 1.25,
@@ -15522,7 +15565,7 @@ type: "Electric",
 
 thunderbolt: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Thunderbolt",
 pp: 1.25,
@@ -15538,7 +15581,7 @@ type: "Electric",
 
 thundercage: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Thunder Cage",
 pp: 1.25,
@@ -15573,7 +15616,7 @@ type: "Electric",
 
 thunderouskick: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Thunderous Kick",
 pp: 1.25,
@@ -15611,12 +15654,12 @@ type: "Electric",
 },
 
 thunderwave: {
-accuracy: 85,
-basePower: 0,
-category: "Status",
+accuracy: 75,
+basePower: 25,
+category: "Special",
 name: "Thunder Wave",
 pp: 0.625,
-priority: 0,
+priority: 25,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 status: 'par',
 ignoreImmunity: false,
@@ -15627,8 +15670,8 @@ type: "Electric",
 
 tickle: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 25,
+category: "Physical",
 name: "Tickle",
 pp: 0.625,
 priority: 0,
@@ -15678,8 +15721,8 @@ type: "Normal",
 
 topsyturvy: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Topsy Turvy",
 pp: 0.625,
 priority: 0,
@@ -15702,7 +15745,7 @@ type: "Dark",
 
 torchsong: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Torch Song",
 pp: 0.625,
@@ -15723,8 +15766,8 @@ type: "Fire",
 
 toxic: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Special",
 name: "Toxic",
 pp: 0.625,
 priority: 0,
@@ -15738,8 +15781,8 @@ type: "Poison",
 
 toxicspikes: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 25,
+category: "Physical",
 name: "Toxic Spikes",
 pp: 0.625,
 priority: 0,
@@ -15777,7 +15820,7 @@ type: "Poison",
 
 toxicthread: {
 accuracy: 75,
-basePower: 50,
+basePower: 55,
 category: "Status",
 name: "Toxic Thread",
 pp: 0.625,
@@ -15794,7 +15837,7 @@ type: "Poison",
 
 trailblaze: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Trailblaze",
 pp: 1.25,
@@ -15814,7 +15857,7 @@ type: "Grass",
 
 transform: {
 accuracy: 95,
-basePower: 10,
+basePower: 25,
 category: "Special",
 name: "Transform",
 pp: 0.625,
@@ -15835,7 +15878,7 @@ type: "Normal",
 
 triattack: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Tri Attack",
 pp: 1.25,
@@ -15860,8 +15903,8 @@ type: "Normal",
 
 trickortreat: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 55,
+category: "Special",
 name: "Trick or Treat",
 pp: 0.625,
 priority: 0,
@@ -15878,7 +15921,12 @@ action.targetLoc = -1;
 }
 }
 },
-secondary: null,
+secondary: {
+chance: 33,
+boosts: {
+spe: -1,
+},
+},
 target: "any",
 type: "Ghost",
 },
@@ -15925,7 +15973,7 @@ type: "Psychic",
 
 triplearrows: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Triple Arrows",
 pp: 0.625,
@@ -15952,7 +16000,7 @@ type: "Fighting",
 
 tripleaxel: {
 accuracy: 95,
-basePower: 20,
+basePower: 25,
 basePowerCallback(pokemon, target, move) {
 return 20 * move.hit;
 },
@@ -15970,7 +16018,7 @@ type: "Ice",
 
 tripledive: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Triple Dive",
 pp: 1.25,
@@ -16004,7 +16052,7 @@ type: "Fighting",
 
 tropkick: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Trop Kick",
 pp: 1.25,
@@ -16022,7 +16070,7 @@ type: "Grass",
 
 twinbeam: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Twin Beam",
 pp: 1.25,
@@ -16037,7 +16085,7 @@ type: "Psychic",
 
 twineedle: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Physical",
 name: "Twineedle",
 pp: 1.25,
@@ -16070,11 +16118,11 @@ type: "Fairy",
 
 twister: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Twister",
 pp: 0.625,
-priority: 2,
+priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 critRatio: 2,
 volatileStatus: 'flinch',
@@ -16084,7 +16132,7 @@ type: "Dragon",
 
 uturn: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "U turn",
 pp: 1.25,
@@ -16098,7 +16146,7 @@ type: "Bug",
 
 uproar: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Special",
 name: "Uproar",
 pp: 0.625,
@@ -16156,7 +16204,7 @@ type: "Normal",
 
 vacuumwave: {
 accuracy: 95,
-basePower: 40,
+basePower: 45,
 category: "Special",
 name: "Vacuum Wave",
 pp: 0.625,
@@ -16170,7 +16218,7 @@ type: "Fighting",
 
 venomdrench: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Venom Drench",
 pp: 0.625,
@@ -16207,7 +16255,7 @@ type: "Poison",
 
 vinewhip: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Physical",
 name: "Vine Whip",
 pp: 1.25,
@@ -16246,7 +16294,7 @@ type: "Normal",
 
 vitalthrow: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Physical",
 name: "Vital Throw",
 pp: 1.25,
@@ -16260,7 +16308,7 @@ type: "Fighting",
 
 voltswitch: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Volt Switch",
 pp: 1.25,
@@ -16291,7 +16339,7 @@ type: "Electric",
 
 wakeupslap: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 basePowerCallback(pokemon, target, move) {
 if (target.status === 'slp' || target.hasAbility('comatose')) {
 this.debug('BP doubled on sleeping target');
@@ -16314,7 +16362,7 @@ type: "Fighting",
 
 waterfall: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Waterfall",
 pp: 1.25,
@@ -16330,7 +16378,7 @@ type: "Water",
 
 watergun: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Water Gun",
 pp: 1.25,
@@ -16344,7 +16392,7 @@ type: "Water",
 
 waterpledge: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Water Pledge",
 pp: 0.625,
@@ -16359,7 +16407,7 @@ type: "Water",
 
 waterpulse: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Water Pulse",
 pp: 1.25,
@@ -16422,7 +16470,7 @@ type: "Water",
 
 weatherball: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Weather Ball",
 pp: 1.25,
@@ -16474,7 +16522,7 @@ type: "Normal",
 
 whirlpool: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Whirlpool",
 pp: 1.25,
@@ -16488,7 +16536,7 @@ type: "Water",
 
 whirlwind: {
 accuracy: 95,
-basePower: 40,
+basePower: 35,
 category: "Special",
 name: "Whirlwind",
 pp: 0.625,
@@ -16595,7 +16643,7 @@ type: "Electric",
 
 wildcharge: {
 accuracy: 95,
-basePower: 90,
+basePower: 95,
 category: "Physical",
 name: "Wild Charge",
 pp: 1.25,
@@ -16609,7 +16657,7 @@ type: "Electric",
 
 wingattack: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Wing Attack",
 pp: 1.25,
@@ -16724,7 +16772,7 @@ type: "Psychic",
 
 woodhammer: {
 accuracy: 95,
-basePower: 120,
+basePower: 125,
 category: "Physical",
 name: "Wood Hammer",
 pp: 0.625,
@@ -16875,7 +16923,7 @@ type: "Electric",
 
 zenheadbutt: {
 accuracy: 95,
-basePower: 80,
+basePower: 85,
 category: "Physical",
 name: "Zen Headbutt",
 pp: 1.25,
@@ -16892,7 +16940,7 @@ type: "Psychic",
 
 malignantchain: {
 accuracy: 85,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Malignant Chain",
 pp: 0.625,
@@ -16971,7 +17019,7 @@ type: "Fire",
 
 mightycleave: {
 accuracy: 85,
-basePower: 100,
+basePower: 105,
 category: "Physical",
 name: "Mighty Cleave",
 pp: 1.25,
@@ -16986,7 +17034,7 @@ type: "Rock",
 
 thunderclap: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Thunderclap",
 pp: 0.625,
@@ -17006,7 +17054,7 @@ type: "Electric",
 
 tachyoncutter: {
 accuracy: 95,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Tachyon Cutter",
 pp: 1.25,
@@ -17022,7 +17070,7 @@ type: "Steel",
 
 electroshot: {
 accuracy: 85,
-basePower: 130,
+basePower: 135,
 category: "Special",
 name: "Electro Shot",
 pp: 0.625,
@@ -17053,7 +17101,7 @@ type: "Electric",
 
 ficklebeam: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "Fickle Beam",
 pp: 1.25,
@@ -17089,7 +17137,7 @@ type: "Psychic",
 
 upperhand: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Physical",
 name: "Upper Hand",
 pp: 0.625,
@@ -17112,7 +17160,7 @@ type: "Fighting",
 
 temperflare: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 basePowerCallback(pokemon, target, move) {
 if (pokemon.moveLastTurnResult === false) {
 this.debug('doubling Temper Flare BP due to previous move failure');
@@ -17133,7 +17181,7 @@ type: "Fire",
 
 alluringvoice: {
 accuracy: 95,
-basePower: 70,
+basePower: 75,
 category: "Special",
 name: "Alluring Voice",
 pp: 1.25,
@@ -17185,7 +17233,7 @@ type: "Dragon",
 
 supercellslam: {
 accuracy: 75,
-basePower: 100,
+basePower: 105,
 category: "Physical",
 name: "Supercell Slam",
 pp: 1.25,
@@ -17202,7 +17250,7 @@ type: "Electric",
 
 syrupbomb: {
 accuracy: 85,
-basePower: 50,
+basePower: 55,
 category: "Special",
 name: "Syrup Bomb",
 pp: 1.25,
@@ -17232,7 +17280,7 @@ type: "Grass",
 
 matchagotcha: {
 accuracy: 85,
-basePower: 80,
+basePower: 85,
 category: "Special",
 name: "Matcha Gotcha",
 pp: 0.625,
@@ -17250,7 +17298,7 @@ type: "Grass",
 
 bloodmoon: {
 accuracy: 85,
-basePower: 140,
+basePower: 145,
 category: "Special",
 name: "Blood Moon",
 pp: 0.625,
@@ -17293,7 +17341,7 @@ type: "???",
 
 missingno: {
 accuracy: 95,
-basePower: 60,
+basePower: 65,
 category: "Special",
 name: "MissingNo",
 pp: 1.25,
