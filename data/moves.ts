@@ -3846,20 +3846,18 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondaries: [
 {
-chance: 50,
-boosts: {
-atk: -2,
+chance: 25,
+volatileStatus: 'flinch',
 }, {
 chance: 50,
 boosts: {
-spa -2,
-},
+def: -1,
+spd: -1,
 },
 },
 ],
 type: "Electric",
 },
-
 
 eeriespell: {
 accuracy: 95,
