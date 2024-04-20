@@ -8807,6 +8807,11 @@ name: "Minimize",
 pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
+
+onHit(target, source, move) {
+this.add('-message', `🎵 ${source.name} Broke the walls doooooown!`);
+},
+
 volatileStatus: 'minimize',
 condition: {
 noCopy: true,
@@ -8830,9 +8835,9 @@ return accuracy;
 },
 },
 boosts: {
-def: -4,
-spd: -4,
-spe: 4,
+def: -2,
+spd: -2,
+spe: 2,
 },
 secondary: null,
 target: "Any",
