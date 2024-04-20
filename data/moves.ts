@@ -8801,8 +8801,8 @@ type: "Fire",
 
 minimize: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Special",
 name: "Minimize",
 pp: 0.625,
 priority: 0,
@@ -8830,12 +8830,12 @@ return accuracy;
 },
 },
 boosts: {
-atk: -2,
-spa: -2,
+def: -4,
+spd: -4,
 spe: 4,
 },
 secondary: null,
-target: "self",
+target: "Any",
 type: "Normal",
 },
 
@@ -9781,19 +9781,12 @@ type: "Fighting",
 
 odorsleuth: {
 accuracy: 95,
-basePower: 35,
+basePower: 75,
 category: "Physical",
 name: "Odor Sleuth",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1, allyanim: 1},
-volatileStatus: 'foresight',
-onTryHit(target) {
-if (target.volatiles['miracleeye']) return false;
-},
-onEffectiveness(typeMod, target, type) {
-if (type === 'Steel') return 1;
-},
 ignoreImmunity: {'Normal': true},
 secondary: null,
 target: "any",
