@@ -8835,9 +8835,9 @@ return accuracy;
 },
 },
 boosts: {
-def: -2,
-spd: -2,
-spe: 2,
+def: -2.5,
+spd: -2.5,
+spe: 2.5,
 },
 secondary: null,
 target: "Any",
@@ -10772,8 +10772,8 @@ type: "Psychic",
 
 psychup: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 45,
+category: "Physical",
 name: "Psych Up",
 pp: 0.625,
 priority: 0,
@@ -10796,7 +10796,7 @@ this.add('-copyboost', source, target, '[from] move: Psych Up');
 },
 secondary: null,
 target: "any",
-type: "Normal",
+type: "any",
 },
 
 psychic: {
@@ -14308,8 +14308,8 @@ type: "Steel",
 
 stickyweb: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 15,
+category: "Physical",
 name: "Sticky Web",
 pp: 0.625,
 priority: 0,
