@@ -9794,7 +9794,7 @@ if (target.volatiles['miracleeye']) return false;
 onEffectiveness(typeMod, target, type) {
 if (type === 'Steel') return 1;
 },
-ignoreImmunity: {'Ghost': true},
+ignoreImmunity: {'Normal': true},
 secondary: null,
 target: "any",
 type: "Normal",
