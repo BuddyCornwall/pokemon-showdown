@@ -2194,7 +2194,6 @@ target: "allAdjacentFoes",
 type: "Dragon",
 },
 
-{
 clangoroussoul: {
 accuracy: 95,
 basePower: 105,
@@ -2218,8 +2217,8 @@ this.boost({spa: 1}, source);
 },
 },
 target: "any",
+type: "Dragon",
 },
-
 
 clangoroussoulblaze: {
 accuracy: 85,
