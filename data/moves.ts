@@ -2196,7 +2196,7 @@ type: "Dragon",
 
 clangoroussoul: {
 accuracy: 95,
-basePower: 105,
+basePower: 55,
 category: "Special",
 name: "Clangorous Soul",
 pp: 0.625,
@@ -9781,8 +9781,8 @@ type: "Fighting",
 
 odorsleuth: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Physical",
 name: "Odor Sleuth",
 pp: 0.625,
 priority: 0,
@@ -9790,6 +9790,9 @@ flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1, allyanim: 1},
 volatileStatus: 'foresight',
 onTryHit(target) {
 if (target.volatiles['miracleeye']) return false;
+},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Steel') return 1;
 },
 secondary: null,
 target: "any",
@@ -11146,11 +11149,11 @@ type: "Fire",
 
 quash: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 25,
+category: "Physical",
 name: "Quash",
 pp: 0.625,
-priority: 0,
+priority: 1,
 flags: {protect: 1, mirror: 1},
 onHit(target) {
 if (this.activePerHalf === 1) return false; // fails in singles
@@ -11200,7 +11203,7 @@ onHitSide(side, source) {
 source.addVolatile('stall');
 },
 condition: {
-duration: 3,
+duration: 10,
 onSideStart(target, source) {
 this.add('-singleturn', source, 'Quick Guard');
 },
