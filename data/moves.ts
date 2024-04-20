@@ -2194,36 +2194,32 @@ target: "allAdjacentFoes",
 type: "Dragon",
 },
 
+{
 clangoroussoul: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 105,
+category: "Special",
 name: "Clangorous Soul",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1, sound: 1, dance: 1},
-onTry(source) {
-if (source.hp <= (source.maxhp * 50 / 100) || source.maxhp === 1) return false;
+flags: {snatch: 1, dance: 1},
+secondary: {
+chance: 100,
+onHit(target, source) {
+if (this.field.isTerrain('grassyterrain')) {
+this.heal(source.maxhp / 2, source);
+} else if (this.field.isTerrain('electricterrain')) {
+target.trySetStatus('par', source);
+} else if (this.field.isTerrain('mistyterrain')) {
+target.trySetStatus('confusion', source);
+} else if (this.field.isTerrain('psychicterrain')) {
+this.boost({spa: 1}, source);
+}
 },
-onTryHit(pokemon, target, move) {
-if (!this.boost(move.boosts as SparseBoostsTable)) return null;
-delete move.boosts;
 },
-onHit(pokemon) {
-this.directDamage(pokemon.maxhp * 33 / 100);
+target: "any",
 },
-boosts: {
-atk: 1,
-def: 1,
-spa: 1,
-spd: 1,
-spe: 1,
-evasion: -4,
-},
-secondary: null,
-target: "self",
-type: "Dragon",
-},
+
 
 clangoroussoulblaze: {
 accuracy: 85,
