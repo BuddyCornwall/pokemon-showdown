@@ -17334,7 +17334,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
 critRatio: 2.25,
 secondary: {
-chance: 100,
+chance: 0,
 status: 'bld',
 },
 target: "any",
