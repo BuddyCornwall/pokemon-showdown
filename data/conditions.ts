@@ -124,19 +124,28 @@ target.cureStatus();
 },
 },
 
-psn: {
-name: 'psn',
+bld: {
+name: 'bld',
 effectType: 'Status',
 onStart(target, source, sourceEffect) {
-if (sourceEffect && sourceEffect.effectType === 'Ability') {
-this.add('-status', target, 'psn', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+this.effectState.stage = 0;
+if (sourceEffect && sourceEffect.id === 'bleedorb') {
+this.add('-status', target, 'bld', '[from] item: Bleed Orb');
+} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
+this.add('-status', target, 'bld', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 } else {
-this.add('-status', target, 'psn');
+this.add('-status', target, 'bld');
 }
+},
+onSwitchIn() {
+this.effectState.stage = 0;
 },
 onResidualOrder: 9,
 onResidual(pokemon) {
-this.damage(pokemon.baseMaxhp / 8);
+if (this.effectState.stage < 15) {
+this.effectState.stage++;
+}
+this.damage(this.clampIntRange(pokemon.baseMaxhp / 8, 1) * this.effectState.stage);
 },
 },
 
@@ -734,7 +743,7 @@ this.add('-weather', 'Snow', '[upkeep]');
 if (this.field.isWeather('snow')) this.eachEvent('Weather');
 },
 onWeather(target) {
-this.damage(target.baseMaxhp / 16);
+this.damage(target.baseMaxhp / 20);
 },
 onFieldEnd() {
 this.add('-weather', 'none');
