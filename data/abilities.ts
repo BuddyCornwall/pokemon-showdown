@@ -6249,6 +6249,15 @@ this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
 name: "Soothing Presence"
 },
 
+renewal: {
+onAfterSetStatus(status, target, source, effect) {
+if (effect && effect.status) {
+this.heal(target.baseMaxhp / 3, target, target);
+}
+},
+name: "Renewal",
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold');
