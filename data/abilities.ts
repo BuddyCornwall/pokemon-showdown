@@ -6294,6 +6294,16 @@ if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 name: "Axolargel",
 },
 
+vitalaura: {
+onResidualOrder: 5,
+onResidual(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+}
+},
+name: "Vital Aura",
+},
+
 ugly: {
 onPreStart(pokemon) {
 this.add('-message', 'U G L Y is VERY angry');
