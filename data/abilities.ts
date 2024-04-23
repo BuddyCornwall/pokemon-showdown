@@ -6266,7 +6266,13 @@ if (target !== source && target.side === source.side && target.hp) {
 const ally = target.side.pokemon.find(ally => ally !== target && ally.hp);
 if (ally) {
 this.add('-activate', target, 'ability: Phantom Shift', '[of] ' + ally);
-[target.position, ally.position] = [ally.position, target.position];
+// Swap positions
+const tempPosition = target.position;
+target.position = ally.position;
+ally.position = tempPosition;
+// Swap positions in the battle field as well
+target.side.pokemon[target.position] = target;
+target.side.pokemon[ally.position] = ally;
 }
 }
 },
