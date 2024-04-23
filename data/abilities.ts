@@ -6271,31 +6271,32 @@ name: "Elemental Absorption"
 purplerain: {
 onPreStart(pokemon) {
 this.add('-message', 'Purple rain pours from the sky 🌧️');
-},
-onStart: function (pokemon) {
-for (const side of this.sides) {
-for (const activePokemon of side.active) {
-if (!activePokemon || activePokemon.fainted) continue;
-activePokemon.trySetStatus('tox', pokemon);
-}
-}
+onStart(pokemon) {
 this.field.setWeather('raindance');
 },
-name: "Purple rain",
+onResidualOrder: 5,
+onResidual(pokemon) {
+if (this.randomChance(4, 5)) { // 20% chance to burn each turn
+this.add('-message', `${pokemon.name} is poisoned by the purple rain!`);
+pokemon.trySetStatus('tox');
+}
+},
+name: "Purple Rain",
 },
 
 blazingheat: {
 onPreStart(pokemon) {
-this.add('-message', 'it is too damn hot ☀️');
+this.add('-message', 'It is too damn hot ☀️');
 },
-onStart: function (pokemon) {
-for (const side of this.sides) {
-for (const activePokemon of side.active) {
-if (!activePokemon || activePokemon.fainted) continue;
-activePokemon.trySetStatus('brn', pokemon);
-}
-}
+onStart(pokemon) {
 this.field.setWeather('sunnyday');
+},
+onResidualOrder: 5,
+onResidual(pokemon) {
+if (this.randomChance(4, 5)) { // 20% chance to burn each turn
+this.add('-message', `${pokemon.name} is burned by the blazing heat!`);
+pokemon.trySetStatus('brn');
+}
 },
 name: "Blazing Heat",
 },
