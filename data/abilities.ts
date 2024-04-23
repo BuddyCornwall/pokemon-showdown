@@ -6284,7 +6284,6 @@ name: "Purple Rain",
 },
 
 blazingheat: {
-name: "Blazing Heat",
 onPreStart(pokemon) {
 this.add('-message', 'It is too damn hot ☀️');
 },
@@ -6297,8 +6296,9 @@ this.add('-message', `${target.name} is burned by the blazing heat!`);
 target.trySetStatus('brn');
 }
 }
-}
-}
+},
+name: "Blazing Heat",
+},
 
 axolargel: {
 onPreStart(pokemon) {
