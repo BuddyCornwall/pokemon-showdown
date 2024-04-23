@@ -6224,15 +6224,14 @@ name: "Toxic Chain",
 },
 
 regenerative: {
-// The holder regenerates 1/16 of its maximum HP at the end of each turn
 onStart(pokemon) {
 this.add('-ability', pokemon, 'Regenerative');
 },
 onResidualOrder: 5,
 onResidual(pokemon) {
 this.heal(pokemon.baseMaxhp / 16);
-name: "Regenerative",
 },
+name: "Regenerative"
 },
 
 axolargel: {
