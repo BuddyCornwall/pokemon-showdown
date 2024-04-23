@@ -6254,10 +6254,26 @@ this.boost({spe: -2.5});
 return priority + 1;
 }
 },
-onResidual(pokemon) {
-this.damage(pokemon.baseMaxhp / 4, pokemon, pokemon, this.getAbility('swiftstriker'));
-},
 name: "Swift Striker"
+},
+
+phantomshift: {
+onStart(pokemon) {
+pokemon.volatiles.phantomShiftUsed = false;
+},
+onResidualOrder: 26,
+onResidual(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles.phantomShiftUsed) {
+const allies = pokemon.side.pokemon.filter(ally => ally !== pokemon && !ally.fainted);
+if (allies.length) {
+const randomAlly = this.sample(allies);
+this.add('-activate', pokemon, 'ability: Phantom Shift', '[of] ' + randomAlly);
+[pokemon.position, randomAlly.position] = [randomAlly.position, pokemon.position];
+pokemon.volatiles.phantomShiftUsed = true;
+}
+}
+},
+name: "Phantom Shift",
 },
 
 axolargel: {
