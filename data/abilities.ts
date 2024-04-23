@@ -6259,7 +6259,7 @@ name: "Swift Striker"
 
 energyburst: {
 onAfterDamage(damage, target, source, move) {
-if (move.category === 'Special' && this.randomChance(1, 10)) {
+if (move.category === 'Special' && this.randomChance(9, 10)) {
 target.addVolatile('energyburst');
 this.add('-message', `${target.name} feels an energy surge from within!`);
 }
@@ -6267,7 +6267,7 @@ this.add('-message', `${target.name} feels an energy surge from within!`);
 condition: {
 duration: 1,
 onStart(target) {
-this.add('-ability', target, target.getAbility(), '[silent]');
+this.add('-ability', target, 'Energy Burst', '[silent]');
 },
 onEnd(target) {
 this.add('-end', target, 'Energy Burst');
@@ -6280,7 +6280,7 @@ attacker.removeVolatile('energyburst');
 return this.chainModify(1.5);
 }
 },
-name: "Energy Burst",
+name: "Energy Burst"
 },
 
 axolargel: {
