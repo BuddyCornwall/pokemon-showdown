@@ -6324,7 +6324,9 @@ if (pokemon.status === 'frz') {
 this.add('-activate', pokemon, 'ability: Unyielding Frost');
 return true;
 }
+}
 },
+name: "Unyielding Frost",
 },
 
 axolargel: {
