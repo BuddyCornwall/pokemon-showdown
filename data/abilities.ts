@@ -6259,21 +6259,18 @@ name: "Swift Striker"
 
 phantomshift: {
 onStart(pokemon) {
-pokemon.volatiles.phantomShiftUsed = false;
+this.add('-ability', pokemon, 'Phantom Shift');
 },
-onResidualOrder: 26,
-onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles.phantomShiftUsed) {
-const allies = pokemon.side.pokemon.filter(ally => ally !== pokemon && !ally.fainted);
-if (allies.length) {
-const randomAlly = this.sample(allies);
-this.add('-activate', pokemon, 'ability: Phantom Shift', '[of] ' + randomAlly);
-[pokemon.position, randomAlly.position] = [randomAlly.position, pokemon.position];
-pokemon.volatiles.phantomShiftUsed = true;
+onAnyTryHit(target, source, move) {
+if (target !== source && target.side === source.side && target.hp) {
+const ally = target.side.pokemon.find(ally => ally !== target && ally.hp);
+if (ally) {
+this.add('-activate', target, 'ability: Phantom Shift', '[of] ' + ally);
+[target.position, ally.position] = [ally.position, target.position];
 }
 }
 },
-name: "Phantom Shift",
+name: "Phantom Shift"
 },
 
 axolargel: {
