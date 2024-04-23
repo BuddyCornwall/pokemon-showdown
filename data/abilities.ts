@@ -6229,7 +6229,7 @@ this.add('-ability', pokemon, 'Regenerative');
 },
 onResidualOrder: 5,
 onResidual(pokemon) {
-this.heal(pokemon.baseMaxhp / 16);
+this.heal(pokemon.baseMaxhp / 32);
 },
 name: "Regenerative"
 },
@@ -6249,23 +6249,25 @@ this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
 name: "Soothing Presence"
 },
 
-renewal: {
-onAfterSetStatus(status, target, source, effect) {
-if (effect && effect.status) {
-this.heal(target.baseMaxhp / 5, target, target);
-}
-},
-name: "Renewal",
-},
-
 symbioticbond: {
 onFaint(target, source, effect) {
 if (source && source.side === target.side && !source.fainted) {
 this.heal(source.baseMaxhp / 4, source, source);
 }
 },
-name: "Symbiotic Bond",
+name: "Symbiotic Bond"
 },
+
+vitalaura: {
+onResidualOrder: 5,
+onResidual(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
+}
+},
+name: "Vital Aura",
+},
+
 
 axolargel: {
 onPreStart(pokemon) {
@@ -6292,16 +6294,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Axolargel",
-},
-
-vitalaura: {
-onResidualOrder: 5,
-onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
-}
-},
-name: "Vital Aura",
 },
 
 ugly: {
