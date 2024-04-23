@@ -2520,7 +2520,6 @@ for (const target of pokemon.side.foe.active) {
 if (target && !target.fainted) {
 this.add('-ability', pokemon, 'Intimidating Presence', '[of] ' + target);
 this.boost({spe: -1}, target, pokemon, null, true);
-flags: {},
 name: "Flustered",
 }
 }
@@ -6158,7 +6157,6 @@ for (const ally of pokemon.adjacentAllies()) {
 this.heal(ally.baseMaxhp / 5, ally, pokemon);
 }
 },
-flags: {},
 name: "Hospitality",
 },
 
@@ -6203,7 +6201,6 @@ this.boost({evasion: -1}, target, pokemon, null, true);
 }
 }
 },
-flags: {},
 name: "Supersweet Syrup",
 },
 
@@ -6215,7 +6212,6 @@ if (this.randomChance(3, 10)) {
 target.trySetStatus('tox', source);
 }
 },
-flags: {},
 name: "Toxic Chain",
 },
 
@@ -6227,7 +6223,6 @@ this.add('-ability', pokemon, 'Regenerative');
 onResidualOrder: 5,
 onResidual(pokemon) {
 this.heal(pokemon.baseMaxhp / 16);
-flags: {},
 name: "Regenerative",
 },
 },
@@ -6237,7 +6232,6 @@ lifedrain: {
 onTryHeal(damage, target, source, effect) {
 if (effect && ['drain', 'leechseed'].includes(effect.id)) {
 return this.chainModify(0.5);
-flags: {},
 name: "Life Drain",
 }
 },
@@ -6255,7 +6249,6 @@ for (const allyPokemon of ally) {
 this.heal(allyPokemon.baseMaxhp / 16, allyPokemon, pokemon);
 }
 this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
-flags: {},
 name: "Soothing Presence",
 },
 },
@@ -6265,7 +6258,6 @@ renewal: {
 onAfterSetStatus(status, target, source, effect) {
 if (effect && effect.status) {
 this.heal(target.baseMaxhp / 3, target, target);
-flags: {},
 name: "Renewal",
 }
 },
@@ -6276,7 +6268,6 @@ energyabsorption: {
 onTryHeal(damage, target, source, effect) {
 if (effect && effect.type === target.types[0]) {
 return this.chainModify(0.25);
-flags: {},
 name: "Energy Absorption",
 }
 },
@@ -6287,7 +6278,6 @@ symbioticbond: {
 onFaint(target, source, effect) {
 if (source && source.side === target.side && !source.fainted) {
 this.heal(source.baseMaxhp / 8, source, source);
-flags: {},
 name: "Symbiotic Bond",
 }
 },
@@ -6298,7 +6288,6 @@ mysticrecovery: {
 onTryHeal(damage, target, source, effect) {
 if (effect && effect.typeMod > 1) {
 return this.chainModify(0.5);
-flags: {},
 name: "Mystic Recovery",
 }
 },
@@ -6310,7 +6299,6 @@ onDamagePriority: -100,
 onDamage(damage, target, source, effect) {
 if (damage >= target.hp && effect && effect.effectType === 'Move' && !target.hp) {
 this.heal(target.baseMaxhp / 4, target, target);
-flags: {},
 name: "Enduring Spirit",
 }
 },
@@ -6322,7 +6310,6 @@ onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2) {
 this.heal(pokemon.baseMaxhp / 8, pokemon, pokemon);
-flags: {},
 name: "Vital Aura",
 }
 },
@@ -6333,7 +6320,6 @@ berserkerswill: {
 onAfterDamage(damage, target, source, move) {
 if (move && move.typeMod > 1) {
 this.heal(damage / 2, target, target);
-flags: {},
 name: "Berserker's Will",
 }
 },
@@ -6344,7 +6330,6 @@ resilientheart: {
 onAfterDamage(damage, target, source, move) {
 if (damage > target.hp) {
 this.heal(target.baseMaxhp / 4, target, target);
-flags: {},
 name: "Resilient Heart",
 }
 },
@@ -6360,7 +6345,6 @@ for (const volatileStatus in pokemon.volatiles) {
 if (volatileStatus.includes('status')) conditions++;
 }
 this.heal(pokemon.baseMaxhp / 16 * conditions, pokemon, pokemon);
-flags: {},
 name: "Lifebound",
 },
 },
@@ -6371,7 +6355,6 @@ onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 4) {
 this.heal(pokemon.baseMaxhp / 4, pokemon, pokemon);
-flags: {},
 name: "Rapid Regeneration",
 }
 },
@@ -6383,7 +6366,6 @@ onBasePowerPriority: 8,
 onBasePower(basePower, attacker, defender, move) {
 if (attacker.hp === attacker.maxhp) {
 return this.chainModify(1.2);
-flags: {},
 name: "Elemental Mastery",
 }
 },
@@ -6394,7 +6376,6 @@ adaptivetactics: {
 onModifySpe(spe, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
-flags: {},
 name: "Adaptive Tactics",
 }
 },
