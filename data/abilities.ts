@@ -6257,7 +6257,6 @@ this.boost({spe: -1});
 }
 }
 },
-},
 name: "Swift Striker",
 },
 
