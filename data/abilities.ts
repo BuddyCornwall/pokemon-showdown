@@ -6274,7 +6274,7 @@ for (const activePokemon of pokemon.side.active) {
 if (!activePokemon || activePokemon.fainted) continue;
 activePokemon.trySetStatus('tox', pokemon);
 }
-}
+},
 name: "Toxic Vapors",
 },
 
