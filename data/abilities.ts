@@ -6259,25 +6259,17 @@ name: "Swift Striker"
 
 energyburst: {
 onAfterDamage(damage, target, source, move) {
-if (move.category === 'Special' && this.randomChance(9, 10)) {
+if (move.category === 'Special' && this.randomChance(1, 10)) {
 target.addVolatile('energyburst');
 this.add('-message', `${target.name} feels an energy surge from within!`);
 }
 },
-condition: {
-duration: 1,
-onStart(target) {
-this.add('-ability', target, 'Energy Burst', '[silent]');
-},
-onEnd(target) {
-this.add('-end', target, 'Energy Burst');
-},
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
+onModifyMove(move, attacker, defender) {
 if (attacker.volatiles['energyburst']) {
-attacker.removeVolatile('energyburst');
-return this.chainModify(1.5);
+delete attacker.volatiles['energyburst'];
+this.add('-ability', attacker, 'Energy Burst', '[silent]');
+this.add('-message', `${attacker.name}'s next special attack is boosted by Energy Burst!`);
+move.basePower *= 1.5; // Increase the power of the next special attack by 50%
 }
 },
 name: "Energy Burst"
