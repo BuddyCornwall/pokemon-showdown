@@ -6261,6 +6261,7 @@ elementalabsorption: {
 onTryHit: function (target, source, move) {
 if (move.type === target.types[0] || move.type === target.types[1]) {
 this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1});
+this.add('-message', 'pokemon', 'Absorbs the attack & grows stronger!');
 return;
 }
 return;
