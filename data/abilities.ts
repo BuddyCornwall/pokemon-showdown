@@ -6304,6 +6304,19 @@ target.trySetStatus('brn');
 name: "Blazing Heat",
 },
 
+destinysgambit: {
+onResidualOrder: 27,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
+let randomStat = this.sample(stats);
+let randomHP = this.random(50, 100) / 100;
+this.boost({[randomStat]: 1}, pokemon);
+this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
+},
+name: "Destiny's Gambit",
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold');
