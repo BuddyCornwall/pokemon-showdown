@@ -6319,13 +6319,10 @@ name: "Destiny's Gambit",
 
 unyieldingfrost: {
 onStart(pokemon) {
-this.add('-ability', pokemon, 'Unyielding Frost');
-},
-onBeforeMovePriority: 5,
-onBeforeMove(pokemon) {
+onBeforeMove(pokemon, target, move) {
 if (pokemon.status === 'frz') {
 this.add('-activate', pokemon, 'ability: Unyielding Frost');
-return true; // Allows the move to be used even when frozen
+return true;
 }
 },
 },

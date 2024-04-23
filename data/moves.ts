@@ -6998,7 +6998,7 @@ name: "Ice Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 100,
+chance: 25,
 status: 'frz',
 },
 target: "any",
