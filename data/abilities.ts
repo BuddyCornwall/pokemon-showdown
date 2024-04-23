@@ -6255,7 +6255,7 @@ return priority + 1;
 if (pokemon.activeTurns) {
 this.boost({spe: -1});
 }
-},
+}
 },
 },
 name: "Swift Striker",
