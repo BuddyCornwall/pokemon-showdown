@@ -6248,21 +6248,15 @@ this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
 name: "Regenerative",
 },
 
-illusionaryveil: {
-onSetStatus(status, target, source, effect) {
-if (['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'electricterrain', 'mistyterrain', 'grassyterrain', 'psychicterrain'].includes(effect.id)) {
-this.add('-immune', target, '[from] ability: Illusionary Veil');
-return false;
-}
-},
-name: "Illusionary Veil",
-},
-
 swiftstriker: {
 onModifyPriority(priority, pokemon, target, move) {
 if (this.turn <= 3) {
 return priority + 1;
-}
+if (pokemon.activeTurns) {
+this.boost({spe: -1});
+},
+},
+},
 },
 name: "Swift Striker",
 },
