@@ -6317,6 +6317,17 @@ this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
 name: "Destiny's Gambit",
 },
 
+unyieldingfrost: {
+onBeforeMovePriority: 5,
+onBeforeMove(pokemon, target, move) {
+if (pokemon.status === 'frz') {
+this.add('-activate', pokemon, 'ability: Unyielding Frost');
+return true;
+}
+},
+name: "Unyielding Frost",
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold');
