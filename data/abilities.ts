@@ -6252,10 +6252,19 @@ name: "Soothing Presence"
 renewal: {
 onAfterSetStatus(status, target, source, effect) {
 if (effect && effect.status) {
-this.heal(target.baseMaxhp / 3, target, target);
+this.heal(target.baseMaxhp / 5, target, target);
 }
 },
 name: "Renewal",
+},
+
+symbioticbond: {
+onFaint(target, source, effect) {
+if (source && source.side === target.side && !source.fainted) {
+this.heal(source.baseMaxhp / 4, source, source);
+}
+},
+name: "Symbiotic Bond",
 },
 
 axolargel: {
