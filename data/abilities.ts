@@ -6257,22 +6257,14 @@ return priority + 1;
 name: "Swift Striker"
 },
 
-energyburst: {
-onAfterDamage(damage, target, source, move) {
-if (move.category === 'Special' && this.randomChance(1, 10)) {
-target.addVolatile('energyburst');
-this.add('-message', `${target.name} feels an energy surge from within!`);
+elementalabsorption: {
+onTryHit: function (target, source, move) {
+if (move.type === target.types[0] || move.type === target.types[1]) {
+this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1});
+return null;
 }
-},
-onModifyMove(move, attacker, defender) {
-if (attacker.volatiles['energyburst']) {
-delete attacker.volatiles['energyburst'];
-this.add('-ability', attacker, 'Energy Burst', '[silent]');
-this.add('-message', `${attacker.name}'s next special attack is boosted by Energy Burst!`);
-move.basePower *= 1.5; // Increase the power of the next special attack by 50%
 }
-},
-name: "Energy Burst"
+name: "Elemental Absorption",
 },
 
 axolargel: {
