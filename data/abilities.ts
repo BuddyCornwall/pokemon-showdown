@@ -6240,13 +6240,13 @@ this.add('-ability', pokemon, 'Soothing Presence');
 },
 onResidualOrder: 5,
 onResidual(pokemon) {
-const ally = pokemon.side.pokemon.filter(ally => ally !== pokemon);
-for (const allyPokemon of ally) {
+const allies = pokemon.side.pokemon.filter(ally => ally !== pokemon);
+for (const allyPokemon of allies) {
 this.heal(allyPokemon.baseMaxhp / 32, allyPokemon, pokemon);
 }
 this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
-name: "Soothing Presence",
 },
+name: "Soothing Presence"
 },
 
 axolargel: {
