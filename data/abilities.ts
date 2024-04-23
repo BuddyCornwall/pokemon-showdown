@@ -6255,6 +6255,7 @@ return priority + 1;
 }
 },
 onTrySwitchOut(pokemon) {
+console.log("Trying to switch out:", pokemon.name);
 if (pokemon.ability === 'swiftstriker') {
 this.add('-fail', pokemon, 'ability: Swift Striker');
 return false;
