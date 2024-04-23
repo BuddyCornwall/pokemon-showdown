@@ -6257,26 +6257,30 @@ return priority + 1;
 name: "Swift Striker"
 },
 
-phantomshift: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Phantom Shift');
-},
-onAnyTryHit(target, source, move) {
-if (target !== source && target.side === source.side && target.hp) {
-const ally = target.side.pokemon.find(ally => ally !== target && ally.hp);
-if (ally) {
-this.add('-activate', target, 'ability: Phantom Shift', '[of] ' + ally);
-// Swap positions
-const tempPosition = target.position;
-target.position = ally.position;
-ally.position = tempPosition;
-// Swap positions in the battle field as well
-target.side.pokemon[target.position] = target;
-target.side.pokemon[ally.position] = ally;
-}
+energyburst: {
+onModifyMove(move, pokemon) {
+if (!move || !move.category === 'Special') return;
+if (!pokemon.volatiles['energyburst'] && this.randomChance(9, 10)) { // Implementing the 10% chance
+pokemon.addVolatile('energyburst');
 }
 },
-name: "Phantom Shift"
+condition: {
+duration: 1,
+onStart(target) {
+this.add('-ability', target, target.getAbility(), '[silent]');
+},
+onEnd(target) {
+this.add('-end', target, 'Energy Burst');
+},
+},
+onModifyAtkPriority: 5,
+onModifyAtk(atk, attacker, defender, move) {
+if (attacker.volatiles['energyburst'] && move.category === 'Special') {
+attacker.removeVolatile('energyburst');
+return this.chainModify(1.5);
+}
+},
+name: "Energy Burst",
 },
 
 axolargel: {
@@ -6326,4 +6330,5 @@ this.boost({atk: 12}, target, target);
 },
 name: "UGLY",
 },
+
 };
