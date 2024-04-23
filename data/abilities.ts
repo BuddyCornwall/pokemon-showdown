@@ -6258,10 +6258,10 @@ name: "Swift Striker"
 },
 
 energyburst: {
-onModifyMove(move, pokemon) {
-if (!move || !move.category === 'Special') return;
-if (!pokemon.volatiles['energyburst'] && this.randomChance(9, 10)) { // Implementing the 10% chance
-pokemon.addVolatile('energyburst');
+onAfterDamage(damage, target, source, move) {
+if (move.category === 'Special' && this.randomChance(1, 10)) {
+target.addVolatile('energyburst');
+this.add('-message', `${target.name} feels an energy surge from within!`);
 }
 },
 condition: {
@@ -6275,7 +6275,7 @@ this.add('-end', target, 'Energy Burst');
 },
 onModifyAtkPriority: 5,
 onModifyAtk(atk, attacker, defender, move) {
-if (attacker.volatiles['energyburst'] && move.category === 'Special') {
+if (attacker.volatiles['energyburst']) {
 attacker.removeVolatile('energyburst');
 return this.chainModify(1.5);
 }
