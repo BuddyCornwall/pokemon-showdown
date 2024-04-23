@@ -6270,14 +6270,17 @@ name: "Elemental Absorption"
 
 purplerain: {
 onPreStart(pokemon) {
-this.add('-message', 'Purple rain pours from the sky 🌧️');
+this.add('-message', 'Purple rain falls from the sky 🌧️');
 this.field.setWeather('raindance');
 },
-onResidualOrder: 5,
 onResidual(pokemon) {
-if (this.randomChance(4, 5)) { // 20% chance to burn each turn
-this.add('-message', `${pokemon.name} is poisoned by the purple rain!`);
-pokemon.trySetStatus('tox');
+const allPokemon = this.getAllActive();
+for (const target of allPokemon) {
+if (!target || target.fainted) continue;
+if (this.field.isWeather('sunnyday') && this.randomChance(1, 4)) {
+this.add('-message', `${target.name} is poisoned by the purple rain!`);
+target.trySetStatus('tox');
+}
 }
 },
 name: "Purple Rain",
@@ -6292,7 +6295,7 @@ onResidual(pokemon) {
 const allPokemon = this.getAllActive();
 for (const target of allPokemon) {
 if (!target || target.fainted) continue;
-if (this.field.isWeather('sunnyday') && this.randomChance(1, 2)) {
+if (this.field.isWeather('sunnyday') && this.randomChance(1, 4)) {
 this.add('-message', `${target.name} is burned by the blazing heat!`);
 target.trySetStatus('brn');
 }
