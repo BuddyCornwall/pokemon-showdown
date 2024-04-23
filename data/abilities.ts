@@ -2514,6 +2514,19 @@ rating: 3.5,
 num: 22,
 },
 
+flustered: {
+onStart(pokemon) {
+for (const target of pokemon.side.foe.active) {
+if (target && !target.fainted) {
+this.add('-ability', pokemon, 'Intimidating Presence', '[of] ' + target);
+this.boost({spe: -1}, target, pokemon, null, true);
+flags: {},
+name: "Flustered",
+}
+}
+},
+},
+
 intrepidsword: {
 onStart(pokemon) {
 if (pokemon.swordBoost) return;
@@ -6207,7 +6220,6 @@ name: "Toxic Chain",
 },
 
 regenerative: {
-name: "Regenerative",
 // The holder regenerates 1/16 of its maximum HP at the end of each turn
 onStart(pokemon) {
 this.add('-ability', pokemon, 'Regenerative');
@@ -6215,21 +6227,23 @@ this.add('-ability', pokemon, 'Regenerative');
 onResidualOrder: 5,
 onResidual(pokemon) {
 this.heal(pokemon.baseMaxhp / 16);
+flags: {},
+name: "Regenerative",
 },
 },
 
 lifedrain: {
-name: "Life Drain",
 // The holder restores HP equal to 50% of the damage dealt when using draining moves
 onTryHeal(damage, target, source, effect) {
 if (effect && ['drain', 'leechseed'].includes(effect.id)) {
 return this.chainModify(0.5);
+flags: {},
+name: "Life Drain",
 }
 },
 },
 
 soothingpresence: {
-name: "Soothing Presence",
 // The holder restores a small amount of HP to itself and its allies at the end of each turn
 onStart(pokemon) {
 this.add('-ability', pokemon, 'Soothing Presence');
@@ -6241,93 +6255,102 @@ for (const allyPokemon of ally) {
 this.heal(allyPokemon.baseMaxhp / 16, allyPokemon, pokemon);
 }
 this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+flags: {},
+name: "Soothing Presence",
 },
 },
 
 renewal: {
-name: "Renewal",
 // The holder restores 1/3 of its maximum HP when it successfully inflicts a status condition on an opponent
 onAfterSetStatus(status, target, source, effect) {
 if (effect && effect.status) {
 this.heal(target.baseMaxhp / 3, target, target);
+flags: {},
+name: "Renewal",
 }
 },
 },
 
 energyabsorption: {
-name: "Energy Absorption",
 // The holder restores HP equal to 25% of the damage dealt when using moves that match its type
 onTryHeal(damage, target, source, effect) {
 if (effect && effect.type === target.types[0]) {
 return this.chainModify(0.25);
+flags: {},
+name: "Energy Absorption",
 }
 },
 },
 
 symbioticbond: {
-name: "Symbiotic Bond",
 // The holder restores HP equal to 1/8 of its maximum HP when its ally faints
 onFaint(target, source, effect) {
 if (source && source.side === target.side && !source.fainted) {
 this.heal(source.baseMaxhp / 8, source, source);
+flags: {},
+name: "Symbiotic Bond",
 }
 },
 },
 
 mysticrecovery: {
-name: "Mystic Recovery",
 // The holder restores HP equal to 50% of the damage dealt when using super effective moves
 onTryHeal(damage, target, source, effect) {
 if (effect && effect.typeMod > 1) {
 return this.chainModify(0.5);
+flags: {},
+name: "Mystic Recovery",
 }
 },
 },
 
 enduringspirit: {
-name: "Enduring Spirit",
 // The holder restores 1/4 of its maximum HP when it survives an attack that would have fainted it
 onDamagePriority: -100,
 onDamage(damage, target, source, effect) {
 if (damage >= target.hp && effect && effect.effectType === 'Move' && !target.hp) {
 this.heal(target.baseMaxhp / 4, target, target);
+flags: {},
+name: "Enduring Spirit",
 }
 },
 },
 
 vitalaura: {
-name: "Vital Aura",
 // The holder restores 1/8 of its maximum HP at the end of each turn if its HP is below 50%
 onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2) {
 this.heal(pokemon.baseMaxhp / 8, pokemon, pokemon);
+flags: {},
+name: "Vital Aura",
 }
 },
 },
 
 berserkerswill: {
-name: "Berserker's Will",
 // The holder restores HP equal to 50% of the damage it takes from super effective moves
 onAfterDamage(damage, target, source, move) {
 if (move && move.typeMod > 1) {
 this.heal(damage / 2, target, target);
+flags: {},
+name: "Berserker's Will",
 }
 },
 },
 
 resilientheart: {
-name: "Resilient Heart",
 // The holder restores HP equal to 25% of its maximum HP when it successfully survives a hit
 onAfterDamage(damage, target, source, move) {
 if (damage > target.hp) {
 this.heal(target.baseMaxhp / 4, target, target);
+flags: {},
+name: "Resilient Heart",
 }
 },
 },
 
 lifebound: {
-name: "Lifebound",
 // The holder restores 1/16 of its maximum HP at the end of each turn for each status condition it has
 onResidualOrder: 5,
 onResidual(pokemon) {
@@ -6337,298 +6360,52 @@ for (const volatileStatus in pokemon.volatiles) {
 if (volatileStatus.includes('status')) conditions++;
 }
 this.heal(pokemon.baseMaxhp / 16 * conditions, pokemon, pokemon);
+flags: {},
+name: "Lifebound",
 },
 },
 
 rapidregeneration: {
-name: "Rapid Regeneration",
 // The holder restores 1/4 of its maximum HP at the end of each turn if its HP is below 25%
 onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 4) {
 this.heal(pokemon.baseMaxhp / 4, pokemon, pokemon);
+flags: {},
+name: "Rapid Regeneration",
 }
 },
 },
 
 elementalmastery: {
-name: "Elemental Mastery",
 // Increases the power of the holder's damaging moves by 20% if its HP is full
 onBasePowerPriority: 8,
 onBasePower(basePower, attacker, defender, move) {
 if (attacker.hp === attacker.maxhp) {
 return this.chainModify(1.2);
+flags: {},
+name: "Elemental Mastery",
 }
 },
 },
 
 adaptivetactics: {
-name: "Adaptive Tactics",
 // Increases the holder's Speed by 50% if it has a status condition
 onModifySpe(spe, pokemon) {
 if (pokemon.status) {
 return this.chainModify(1.5);
+flags: {},
+name: "Adaptive Tactics",
 }
 },
 },
 
-intimidatingpresence: {
-name: "Intimidating Presence",
-// Lowers the Attack and Special Attack of opposing Pokémon by 1 stage upon switching in
-onStart(pokemon) {
-for (const target of pokemon.side.foe.active) {
-if (target && !target.fainted) {
-this.add('-ability', pokemon, 'Intimidating Presence', '[of] ' + target);
-this.boost({atk: -1, spa: -1}, target, pokemon, null, true);
-}
-}
-},
-},
-
-elementalsurge: {
-name: "Elemental Surge",
-// Increases the power of the holder's damaging moves by 50% during weather conditions it creates
-onBasePowerPriority: 8,
-onBasePower(basePower, attacker, defender, move) {
-if (['raindance', 'primordialsea', 'sunnyday', 'desolateland', 'sandstorm', 'hail'].includes(move.id)) {
-return this.chainModify(1.5);
-}
-},
-},
-
-subzerofocus: {
-name: "Subzero Focus",
-// Increases the holder's Defense by 50% when hit by a Fire-type move
-onTryHit(target, source, move) {
-if (move.type === 'Fire') {
-this.boost({def: 1.5}, target, target, null, true);
-}
-},
-},
-
-illusionaryveil: {
-name: "Illusionary Veil",
-// Renders the holder immune to entry hazards and terrain effects
-onSetStatus(status, target, source, effect) {
-if (['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'electricterrain', 'mistyterrain', 'grassyterrain', 'psychicterrain'].includes(effect.id)) {
-this.add('-immune', target, '[from] ability: Illusionary Veil');
-return false;
-}
-},
-},
-
-primalinstincts: {
-name: "Primal Instincts",
-// The holder's Attack is doubled if its HP falls below 25%
-onModifyAtkPriority: 5,
-onModifyAtk(atk, pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 4) {
-return this.chainModify(2);
-}
-},
-},
-
-swiftstriker: {
-name: "Swift Striker",
-// The holder's moves always strike first during the first 3 turns of battle
-onModifyPriority(priority, pokemon, target, move) {
-if (this.turn <= 3) {
-return priority + 1;
-}
-},
-},
-
-phantomshift: {
-name: "Phantom Shift",
-// The holder swaps positions with a random ally each turn if its HP falls below 25%
-onStart(pokemon) {
-pokemon.volatiles.phantomShiftUsed = false;
-},
-onResidualOrder: 26,
-onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 4 && !pokemon.volatiles.phantomShiftUsed) {
-const allies = pokemon.side.pokemon.filter(ally => ally !== pokemon && !ally.fainted);
-if (allies.length) {
-const randomAlly = this.sample(allies);
-this.add('-activate', pokemon, 'ability: Phantom Shift', '[of] ' + randomAlly);
-[pokemon.position, randomAlly.position] = [randomAlly.position, pokemon.position];
-pokemon.volatiles.phantomShiftUsed = true;
-}
-}
-},
-},
-
-residualrecovery: {
-name: "Residual Recovery",
-// The holder restores 1/8 of its maximum HP at the end of each turn if it has been on the field for at least 3 turns
-onResidualOrder: 5,
-onResidual(pokemon) {
-if (pokemon.volatiles.residualRecoveryTurns >= 3) {
-this.heal(pokemon.baseMaxhp / 8, pokemon, pokemon);
-}
-},
-onSwitchIn(pokemon) {
-pokemon.volatiles.residualRecoveryTurns = 0;
-},
-},
-
-energyburst: {
-name: "Energy Burst",
-// The holder's special attacks have a 10% chance to increase the damage of its next special attack by 50%
-onModifyMove(move, pokemon) {
-if (!move || !move.category === 'Special') return;
-if (!pokemon.volatiles['energyburst']) {
-pokemon.addVolatile('energyburst');
-}
-},
-condition: {
-duration: 1,
-onStart(target) {
-this.add('-ability', target, target.getAbility(), '[silent]');
-},
-onEnd(target) {
-this.add('-end', target, 'Energy Burst');
-},
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk, attacker, defender, move) {
-if (attacker.volatiles['energyburst'] && move.category === 'Special') {
-attacker.removeVolatile('energyburst');
-return this.chainModify(1.5);
-}
-},
-},
-
-
-
-name: "Elemental Absorption",
-desc: "This Pokémon absorbs damage from attacks of its own type, converting it into a temporary boost to its Special Attack or Attack stat.",
-onTryHit: function (target, source, move) {
-if (move.type === target.types[0] || move.type === target.types[1]) {
-this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1});
-return null;
-}
-},
-
-
-
-
-name: "Aether Veil",
-desc: "Reduces the damage taken from moves of opposing Pokémon by a fixed percentage.",
-onSourceModifyDamage: function (damage, source, target, move) {
-if (target !== source && this.activePerHalf(target)) {
-this.debug('Aether Veil weaken');
-return this.chainModify(0.75);
-}
-},
-
-
-
-
-name: "Quantum Shift",
-desc: "Randomly alters the Pokémon's typing upon entering battle.",
-onStart: function (pokemon) {
-let types = this.dex.types.names();
-let newType = this.sample(types);
-while (newType === pokemon.types[0] || newType === pokemon.types[1]) {
-newType = this.sample(types);
-}
-pokemon.setType([newType]);
-this.add('-start', pokemon, 'typechange', newType);
-},
-
-
-
-
-name: "Toxic Vapors",
-desc: "Poisons all opposing Pokémon on the field upon switching in.",
-onStart: function (source) {
-for (const foeActive of source.side.foe.active) {
-if (!foeActive || !this.isAdjacent(foeActive, source)) continue;
-foeActive.trySetStatus('tox', source);
-}
-},
-
-
-name: "Reality Warping",
-desc: "Changes the effects of moves used against this Pokémon to a random type each turn.",
-onModifyType: function (move, pokemon) {
-let types = this.dex.types.names();
-let randomType = this.sample(types);
-move.type = randomType;
-},
-
-name: "Chaos Infusion",
-desc: "Randomly changes the Pokémon's type and boosts a random stat each turn.",
-onResidualOrder: 27,
-onResidualSubOrder: 1,
-onResidual: function (pokemon) {
-let types = this.dex.types.names();
-let randomType = this.sample(types);
-while (randomType === pokemon.types[0] || randomType === pokemon.types[1]) {
-randomType = this.sample(types);
-}
-pokemon.setType([randomType]);
-this.add('-start', pokemon, 'typechange', randomType);
-
-let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-let randomStat = this.sample(stats);
-this.boost({[randomStat]: 1}, pokemon);
-},
-
-name: "Quantum Flux",
-desc: "Randomly changes the effects of moves used by this Pokémon each turn.",
-onModifyMove: function (move) {
-let randomEffect = this.sample(['par', 'brn', 'frz', 'tox', 'slp']);
-move.status = randomEffect;
-},
-
-name: "Destiny's Gambit",
-desc: "Randomly sacrifices HP to boost a random stat each turn.",
-onResidualOrder: 27,
-onResidualSubOrder: 1,
-onResidual: function (pokemon) {
-let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-let randomStat = this.sample(stats);
-let randomHP = this.random(50, 100) / 100;
-this.boost({[randomStat]: 1}, pokemon);
-this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
-},
-
-name: "Chaotic Entrance",
-desc: "Randomly applies a stat boost, a status condition, or a weather condition upon entering battle.",
-onStart: function (pokemon) {
-let effect = this.sample(['boost', 'status', 'weather']);
-if (effect === 'boost') {
-let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-let randomStat = this.sample(stats);
-this.boost({[randomStat]: 1}, pokemon);
-} else if (effect === 'status') {
-let randomStatus = this.sample(['par', 'brn', 'frz', 'tox', 'slp']);
-pokemon.setStatus(randomStatus);
-} else if (effect === 'weather') {
-let weather = this.sample(['sunnyday', 'raindance', 'sandstorm', 'hail']);
-this.field.setWeather(weather);
-}
-},
-
-name: "Entropic Surge",
-desc: "Randomly changes the field conditions upon entering battle.",
+entropicsurge: {
 onStart: function (source) {
 let fieldConditions = this.sample(['electricterrain', 'mistyterrain', 'grassyterrain', 'psychicterrain']);
 this.field.setTerrain(fieldConditions);
+name: "Entropic Surge",
 },
-
-name: "Spacial Shift",
-desc: "Randomly swaps the positions of Pokémon on the battlefield upon entering battle.",
-onStart: function () {
-let active = this.sides.flatMap(side => side.active);
-let positions = [1, 2, 3, 4, 5, 6];
-for (const pokemon of active) {
-let newPosition = this.sample(positions);
-positions.splice(positions.indexOf(newPosition), 1);
-this.swapPosition(pokemon, newPosition);
-}
 },
 
 axolargel: {
