@@ -6234,6 +6234,21 @@ this.heal(pokemon.baseMaxhp / 16);
 name: "Regenerative"
 },
 
+soothingpresence: {
+onStart(pokemon) {
+this.add('-ability', pokemon, 'Soothing Presence');
+},
+onResidualOrder: 5,
+onResidual(pokemon) {
+const ally = pokemon.side.pokemon.filter(ally => ally !== pokemon);
+for (const allyPokemon of ally) {
+this.heal(allyPokemon.baseMaxhp / 32, allyPokemon, pokemon);
+}
+this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
+name: "Soothing Presence",
+},
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold');
