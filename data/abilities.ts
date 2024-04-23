@@ -2516,14 +2516,22 @@ num: 22,
 
 flustered: {
 onStart(pokemon) {
-for (const target of pokemon.side.foe.active) {
-if (target && !target.fainted) {
-this.add('-ability', pokemon, 'Intimidating Presence', '[of] ' + target);
+let activated = false;
+for (const target of pokemon.adjacentFoes()) {
+if (!activated) {
+this.add('-ability', pokemon, 'Flustered', 'boost');
+activated = true;
+}
+if (target.volatiles['substitute']) {
+this.add('-immune', target);
+} else {
 this.boost({spe: -1}, target, pokemon, null, true);
-name: "Flustered",
 }
 }
 },
+name: "Flustered",
+rating: 3.5,
+num: 22,
 },
 
 intrepidsword: {
