@@ -6286,6 +6286,7 @@ name: "Purple Rain",
 blazingheat: {
 onPreStart(pokemon) {
 this.add('-message', 'It is too damn hot ☀️');
+this.field.setWeather('sunnyday');
 },
 onResidual(pokemon) {
 const allPokemon = this.getAllActive();
