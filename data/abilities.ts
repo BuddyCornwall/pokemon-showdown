@@ -6214,7 +6214,6 @@ name: "Supersweet Syrup",
 
 toxicchain: {
 onSourceDamagingHit(damage, target, source, move) {
-// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
 if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
 if (this.randomChance(3, 10)) {
 target.trySetStatus('tox', source);
@@ -6251,13 +6250,17 @@ name: "Regenerative",
 swiftstriker: {
 onModifyPriority(priority, pokemon, target, move) {
 if (this.turn <= 3) {
+this.boost({spe: -2.5});
 return priority + 1;
-if (pokemon.activeTurns) {
-this.boost({spe: -1});
-}
 }
 },
-name: "Swift Striker",
+onTrySwitchOut(pokemon) {
+if (pokemon.ability === 'swiftstriker') {
+this.add('-fail', pokemon, 'ability: Swift Striker');
+return false;
+}
+},
+name: "Swift Striker"
 },
 
 axolargel: {
