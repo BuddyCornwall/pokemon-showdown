@@ -6286,13 +6286,21 @@ name: "Purple Rain",
 blazingheat: {
 onPreStart(pokemon) {
 this.add('-message', 'It is too damn hot ☀️');
+},
+onStart(pokemon) {
 this.field.setWeather('sunnyday');
 },
 onResidualOrder: 5,
 onResidual(pokemon) {
-if (this.randomChance(4, 5)) { // 20% chance to burn each turn
-this.add('-message', `${pokemon.name} is burned by the blazing heat!`);
-pokemon.trySetStatus('brn');
+const allPokemon = this.getAllActive();
+for (const target of allPokemon) {
+if (!target || target.fainted) continue;
+if (this.isWeather('sunnyday')) {
+if (this.randomChance(1, 4)) { // 25% chance to burn each turn
+this.add('-message', `${target.name} is burned by the blazing heat!`);
+target.trySetStatus('brn');
+}
+}
 }
 },
 name: "Blazing Heat",
