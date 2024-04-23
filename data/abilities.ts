@@ -6254,12 +6254,8 @@ this.boost({spe: -2.5});
 return priority + 1;
 }
 },
-onTrySwitchOut(pokemon) {
-console.log("Trying to switch out:", pokemon.name);
-if (pokemon.ability === 'swiftstriker') {
-this.add('-fail', pokemon, 'ability: Swift Striker');
-return false;
-}
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 4, pokemon, pokemon, this.getAbility('swiftstriker'));
 },
 name: "Swift Striker"
 },
