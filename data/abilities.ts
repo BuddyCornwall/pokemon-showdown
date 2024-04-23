@@ -6261,7 +6261,6 @@ elementalabsorption: {
 onTryHit: function (target, source, move) {
 if (move.type === target.types[0] || move.type === target.types[1]) {
 this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1});
-this.add('-message', 'pokemon', 'Absorbs the attack & grows stronger!');
 return;
 }
 return;
@@ -6269,6 +6268,15 @@ return;
 name: "Elemental Absorption"
 },
 
+toxicvapors: {
+onStart: function (pokemon) {
+for (const activePokemon of pokemon.side.active) {
+if (!activePokemon || activePokemon.fainted) continue;
+activePokemon.trySetStatus('tox', pokemon);
+}
+}
+name: "Toxic Vapors",
+},
 
 axolargel: {
 onPreStart(pokemon) {
