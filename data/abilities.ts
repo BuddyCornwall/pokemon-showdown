@@ -6310,8 +6310,8 @@ onResidualSubOrder: 1,
 onResidual: function (pokemon) {
 let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
 let randomStat = this.sample(stats);
-let randomHP = this.random(50, 100) / 100;
-this.boost({[randomStat]: 1}, pokemon);
+let randomHP = this.random(10, 25) / 100;
+this.boost({[randomStat]: 1.5}, pokemon);
 this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
 },
 name: "Destiny's Gambit",
