@@ -6268,14 +6268,36 @@ return;
 name: "Elemental Absorption"
 },
 
-toxicvapors: {
+purplerain: {
+onPreStart(pokemon) {
+this.add('-message', 'Purple rain pours from the sky 🌧️');
+},
 onStart: function (pokemon) {
-for (const activePokemon of pokemon.side.active) {
+for (const side of this.sides) {
+for (const activePokemon of side.active) {
 if (!activePokemon || activePokemon.fainted) continue;
 activePokemon.trySetStatus('tox', pokemon);
 }
+}
+this.field.setWeather('raindance');
 },
-name: "Toxic Vapors",
+name: "Purple rain",
+},
+
+blazingheat: {
+onPreStart(pokemon) {
+this.add('-message', 'it is too damn hot ☀️');
+},
+onStart: function (pokemon) {
+for (const side of this.sides) {
+for (const activePokemon of side.active) {
+if (!activePokemon || activePokemon.fainted) continue;
+activePokemon.trySetStatus('brn', pokemon);
+}
+}
+this.field.setWeather('sunnyday');
+},
+name: "Blazing Heat",
 },
 
 axolargel: {
