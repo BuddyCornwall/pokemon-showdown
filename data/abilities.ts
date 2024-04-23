@@ -6271,7 +6271,6 @@ name: "Elemental Absorption"
 purplerain: {
 onPreStart(pokemon) {
 this.add('-message', 'Purple rain pours from the sky 🌧️');
-onStart(pokemon) {
 this.field.setWeather('raindance');
 },
 onResidualOrder: 5,
@@ -6287,8 +6286,6 @@ name: "Purple Rain",
 blazingheat: {
 onPreStart(pokemon) {
 this.add('-message', 'It is too damn hot ☀️');
-},
-onStart(pokemon) {
 this.field.setWeather('sunnyday');
 },
 onResidualOrder: 5,
