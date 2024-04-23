@@ -6223,17 +6223,6 @@ target.trySetStatus('tox', source);
 name: "Toxic Chain",
 },
 
-regenerative: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Regenerative');
-},
-onResidualOrder: 5,
-onResidual(pokemon) {
-this.heal(pokemon.baseMaxhp / 32);
-},
-name: "Regenerative"
-},
-
 soothingpresence: {
 onStart(pokemon) {
 this.add('-ability', pokemon, 'Soothing Presence');
@@ -6249,25 +6238,34 @@ this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
 name: "Soothing Presence"
 },
 
-symbioticbond: {
-onFaint(target, source, effect) {
-if (source && source.side === target.side && !source.fainted) {
-this.heal(source.baseMaxhp / 4, source, source);
-}
-},
-name: "Symbiotic Bond"
-},
-
-vitalaura: {
+regenerative: {
 onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2) {
 this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
 }
 },
-name: "Vital Aura",
+name: "Regenerative",
 },
 
+illusionaryveil: {
+onSetStatus(status, target, source, effect) {
+if (['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'electricterrain', 'mistyterrain', 'grassyterrain', 'psychicterrain'].includes(effect.id)) {
+this.add('-immune', target, '[from] ability: Illusionary Veil');
+return false;
+}
+},
+name: "Illusionary Veil",
+},
+
+swiftstriker: {
+onModifyPriority(priority, pokemon, target, move) {
+if (this.turn <= 3) {
+return priority + 1;
+}
+},
+name: "Swift Striker",
+},
 
 axolargel: {
 onPreStart(pokemon) {
