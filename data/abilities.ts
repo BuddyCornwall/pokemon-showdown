@@ -6254,7 +6254,7 @@ if (this.turn <= 3) {
 return priority + 1;
 if (pokemon.activeTurns) {
 this.boost({spe: -1});
-},
+}
 },
 },
 },
