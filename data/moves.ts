@@ -17460,7 +17460,6 @@ name: "G-Max Rapid Flow",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-secondary: null,
 secondary: {
 chance: 33,
 boosts: {
