@@ -17805,12 +17805,12 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Happy Hour",
-pp: 0.625,
+pp: 5,
 priority: 0,
 flags: {},
 boosts: {
-atk: .5,
-spa: .5,
+atk: 1,
+spa: 1,
 },
 self: {
 boosts: {
@@ -17838,7 +17838,7 @@ let activated = false;
 for (const pokemon of side.active) {
 if (pokemon && !pokemon.fainted) {
 activated = true;
-this.boost({atk: .5, spa: .5}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
+this.boost({atk: 1, spa: 1}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
 this.boost({evasion: -1}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
 }
 }
