@@ -17508,7 +17508,6 @@ name: "G-Max Depletion",
 pp: 5,
 priority: 0,
 flags: {},
-self: {
 secondary: null,
 target: "adjacentFoe",
 type: "Dragon",
