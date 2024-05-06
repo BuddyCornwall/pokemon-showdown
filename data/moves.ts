@@ -17436,39 +17436,77 @@ type: "???",
 },
 
 gmaxoneblow: {
-accuracy: 100,
-basePower: 20,
+accuracy: 65,
+basePower: 155,
 category: "Physical",
 name: "G-Max One Blow",
-pp: 5,
-priority: 0,
-flags: {},
+pp: 0.625,
+priority: -1,
+flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
-target: "adjacentFoe",
+target: "any",
 type: "Dark",
 },
 
 gmaxrapidflow: {
-accuracy: 100,
-basePower: 20,
+accuracy: 95,
+basePower: 55,
 category: "Physical",
 name: "G-Max Rapid Flow",
-pp: 5,
+pp: 1.25,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
-target: "adjacentFoe",
+secondary: {
+chance: 33,
+boosts: {
+spd: -1,
+},
+},
+target: "any",
 type: "Water",
 },
 
 maxairstream: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
+accuracy: 95,
+basePower: 45,
+category: "Special",
 name: "Max Airstream",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {},
+flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+onAfterHit(target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
+onAfterSubDamage(damage, target, pokemon) {
+if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+for (const condition of sideConditions) {
+if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
+}
+}
+if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+pokemon.removeVolatile('partiallytrapped');
+}
+},
 secondary: null,
 target: "adjacentFoe",
 type: "Flying",
@@ -17703,6 +17741,7 @@ name: "Max Wyrmwind",
 pp: 10,
 priority: 0,
 flags: {},
+},
 secondary: null,
 target: "adjacentFoe",
 type: "Dragon",
@@ -17748,35 +17787,22 @@ type: "Grass",
 },
 
 bouncybubble: {
-accuracy: 100,
-basePower: 40,
+accuracy: 95,
+basePower: 45,
 category: "Physical",
 name: "Bouncy Bubble",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
-if (this.randomChance(5, 10)) {
+if (this.randomChance(3, 10)) {
 this.attrLastMove('[anim] Fickle Beam All Out');
-this.add('-activate', pokemon, 'Bounces with their full force!');
+this.add('-activate', pokemon, 'move: Fickle Beam');
 return this.chainModify(2);
 }
 },
 secondary: null,
 target: "any",
-},
-
-dynamaxcannon: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "Dynamax Cannon",
-pp: 10,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Dragon",
 },
 
 "10000000voltthunderbolt": {
@@ -17790,45 +17816,6 @@ flags: {},
 secondary: null,
 target: "adjacentFoe",
 type: "Electric",
-},
-
-happyhour: {
-accuracy: true,
-basePower: 0,
-category: "Status",
-name: "Happy Hour",
-pp: 15,
-priority: 0,
-boosts: {
-'allySide': function (pokemon) {
-let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-let randomStats = this.sample(stats, 2);
-let boosts = {};
-for (const stat of randomStats) {
-boosts[stat] = 1;
-}
-return boosts;
-},
-},
-self: null,
-onTryMove: function (pokemon, target, move) {
-if (pokemon.side.sideConditions['happyhour']) {
-this.add('-fail', pokemon, 'move: Happy Hour');
-return null;
-}
-},
-condition: {
-duration: 1,
-onStart: function (side) {
-this.add('-sidestart', side, 'move: Happy Hour');
-},
-onEnd: function (side) {
-this.add('-sideend', side, 'move: Happy Hour');
-},
-},
-secondary: null,
-target: "allySide",
-type: "Normal",
 },
 
 bloomdoom: {
@@ -17845,29 +17832,42 @@ type: "Normal",
 },
 
 fusionflare: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
+accuracy: 85,
+basePower: 55,
+category: "Special",
 name: "Fusion Flare",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Fire') return 1;
+},
+secondary: {
+chance: 33,
+status: 'par',
+},
+target: "any",
 type: "Normal",
 },
 
 fusionbolt: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
+accuracy: 85,
+basePower: 55,
+category: "Special",
 name: "Fusion Bolt",
-pp: 10,
+pp: 1.25,
 priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Electric') return 1;
+},
+secondary: {
+chance: 33,
+status: 'brn',
+},
+target: "any",
 type: "Normal",
 },
+
 
 };
