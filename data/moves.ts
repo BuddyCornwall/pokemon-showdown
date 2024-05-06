@@ -17808,11 +17808,9 @@ name: "Happy Hour",
 pp: 10,
 priority: 0,
 boosts: {
-self: {
 atk: 1,
 spa: 1,
 evasion: -1,
-},
 },
 onHit: function (pokemon) {
 this.boost({atk: 1, spa: 1}, pokemon);
