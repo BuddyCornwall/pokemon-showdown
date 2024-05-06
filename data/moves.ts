@@ -17803,6 +17803,7 @@ return this.chainModify(2);
 },
 secondary: null,
 target: "any",
+type: "Water",
 },
 
 "10000000voltthunderbolt": {
