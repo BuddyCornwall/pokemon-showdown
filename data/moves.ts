@@ -564,7 +564,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Assist",
-pp: 0.625,
+pp: 1.25,
 priority: 0,
 flags: {},
 onHit(target) {
@@ -6865,6 +6865,21 @@ target: "any",
 type: "Normal",
 },
 
+hyperbeam: {
+accuracy: 85,
+basePower: 145,
+category: "Special",
+name: "Kamihamiha",
+pp: 0.625,
+flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+self: {
+volatileStatus: 'mustrecharge',
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
 hyperdrill: {
 accuracy: 85,
 basePower: 105,
@@ -11186,6 +11201,100 @@ target: "any",
 type: "Normal",
 },
 
+quackattack: {
+accuracy: 95,
+basePower: 35,
+category: "Physical",
+name: "Quack Attack",
+pp: 0.625,
+priority: 3,
+flags: {contact: 1, protect: 1, mirror: 1},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+recoil: [20, 100],
+critRatio: 2,
+secondary: {
+chance: 25,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Water",
+},
+
+puddlesplash: {
+accuracy: 95,
+basePower: 45,
+category: "Special",
+name: "Puddle Splash",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
+secondary: {
+chance: 33,
+volatileStatus: 'confusion',
+},
+target: "any",
+type: "Water",
+},
+
+safeguard: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Safeguard",
+pp: 0.625,
+priority: 0,
+flags: {snatch: 1},
+sideCondition: 'safeguard',
+condition: {
+duration: 5,
+durationCallback(target, source, effect) {
+if (source?.hasAbility('persistent')) {
+this.add('-activate', source, 'ability: Persistent', '[move] Safeguard');
+return 7;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (!effect || !source) return;
+if (effect.id === 'yawn') return;
+if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+if (target !== source) {
+this.debug('interrupting setStatus');
+if (effect.name === 'Synchronize' || (effect.effectType === 'Move' && !effect.secondaries)) {
+this.add('-activate', target, 'move: Safeguard');
+}
+return null;
+}
+},
+onTryAddVolatile(status, target, source, effect) {
+if (!effect || !source) return;
+if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+if ((status.id === 'confusion' || status.id === 'yawn') && target !== source) {
+if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Safeguard');
+return null;
+}
+},
+onSideStart(side, source) {
+if (source?.hasAbility('persistent')) {
+this.add('-sidestart', side, 'Safeguard', '[persistent]');
+} else {
+this.add('-sidestart', side, 'Safeguard');
+}
+},
+onSideResidualOrder: 26,
+onSideResidualSubOrder: 3,
+onSideEnd(side) {
+this.add('-sideend', side, 'Safeguard');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Normal",
+},
+
 quickguard: {
 accuracy: 95,
 basePower: 0,
@@ -12126,11 +12235,11 @@ target: "any",
 type: "Fighting",
 },
 
-safeguard: {
+downydefense: {
 accuracy: 95,
 basePower: 0,
 category: "Status",
-name: "Safeguard",
+name: "Downy Defense",
 pp: 0.625,
 priority: 0,
 flags: {snatch: 1},
@@ -12177,7 +12286,11 @@ onSideEnd(side) {
 this.add('-sideend', side, 'Safeguard');
 },
 },
-secondary: null,
+boosts: {
+spd: 1,
+def: 1,
+evasion: -1,
+},
 target: "allySide",
 type: "Normal",
 },
@@ -13744,7 +13857,7 @@ type: "Grass",
 
 sonicboom: {
 accuracy: 95,
-basePower: 55,
+basePower: 75,
 category: "Special",
 name: "Sonic Boom",
 pp: 0.625,
@@ -13754,7 +13867,6 @@ hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
 },
-recoil: [33, 100],
 secondary: null,
 target: "randomNormal",
 type: "Normal",
