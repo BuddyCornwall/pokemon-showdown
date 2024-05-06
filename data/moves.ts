@@ -6854,21 +6854,6 @@ hyperbeam: {
 accuracy: 85,
 basePower: 145,
 category: "Special",
-name: "Hyper Beam",
-pp: 0.625,
-flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
-self: {
-volatileStatus: 'mustrecharge',
-},
-secondary: null,
-target: "any",
-type: "Normal",
-},
-
-hyperbeam: {
-accuracy: 85,
-basePower: 145,
-category: "Special",
 name: "Kamihamiha",
 pp: 0.625,
 flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
