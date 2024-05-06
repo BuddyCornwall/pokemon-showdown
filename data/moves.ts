@@ -17795,7 +17795,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
-if (this.randomChance(3, 10)) {
+if (this.randomChance(5, 10)) {
 this.attrLastMove('[anim] Fickle Beam All Out');
 this.add('-activate', pokemon, 'move: Fickle Beam');
 return this.chainModify(2);
