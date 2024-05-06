@@ -17756,9 +17756,9 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
-if (this.randomChance(3, 10)) {
+if (this.randomChance(5, 10)) {
 this.attrLastMove('[anim] Fickle Beam All Out');
-this.add('-activate', pokemon, 'move: Fickle Beam');
+this.add('-activate', pokemon, 'Bounces with their full force!');
 return this.chainModify(2);
 }
 },
@@ -17793,21 +17793,38 @@ type: "Electric",
 },
 
 happyhour: {
-accuracy: 100,
+accuracy: true,
 basePower: 0,
 category: "Status",
 name: "Happy Hour",
-pp: 10,
+pp: 15,
 priority: 0,
 boosts: {
-atk: 1,
-spa: 1,
-evasion: -1,
+'allySide': function (pokemon) {
+let stats = ['atk', 'def', 'spa', 'spd', 'spe'];
+let randomStats = this.sample(stats, 2);
+let boosts = {};
+for (const stat of randomStats) {
+boosts[stat] = 1;
+}
+return boosts;
 },
-onHit: function (pokemon) {
-this.boost({atk: 1, spa: 1}, pokemon);
-this.boost({evasion: -1}, pokemon);
-this.add('-activate', pokemon, 'move: Happy Hour');
+},
+self: null,
+onTryMove: function (pokemon, target, move) {
+if (pokemon.side.sideConditions['happyhour']) {
+this.add('-fail', pokemon, 'move: Happy Hour');
+return null;
+}
+},
+condition: {
+duration: 1,
+onStart: function (side) {
+this.add('-sidestart', side, 'move: Happy Hour');
+},
+onEnd: function (side) {
+this.add('-sideend', side, 'move: Happy Hour');
+},
 },
 secondary: null,
 target: "allySide",
