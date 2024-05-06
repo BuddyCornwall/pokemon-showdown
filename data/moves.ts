@@ -17435,134 +17435,6 @@ target: "any",
 type: "???",
 },
 
-gmaxbefuddle: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Befuddle",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "any",
-type: "Bug",
-},
-
-gmaxcannonade: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Cannonade",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "any",
-type: "Water",
-},
-
-gmaxcentiferno: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Centiferno",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Fire",
-},
-
-gmaxcuddle: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Cuddle",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Normal",
-},
-
-gmaxdepletion: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Depletion",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Dragon",
-},
-
-gmaxdrumsolo: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Drum Solo",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Grass",
-},
-
-gmaxfinale: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Finale",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Fairy",
-},
-
-gmaxgravitas: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Gravitas",
-pp: 5,
-priority: 0,
-flags: {},
-target: "adjacentFoe",
-type: "Psychic",
-},
-
-gmaxhydrosnipe: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Hydrosnipe",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Water",
-},
-
-gmaxmalodor: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Malodor",
-pp: 5,
-priority: 0,
-flags: {},
-target: "adjacentFoe",
-type: "Poison",
-},
-
 gmaxoneblow: {
 accuracy: 100,
 basePower: 20,
@@ -17587,97 +17459,6 @@ flags: {},
 secondary: null,
 target: "adjacentFoe",
 type: "Water",
-},
-
-gmaxreplenish: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Replenish",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Normal",
-},
-
-gmaxresonance: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Resonance",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Ice",
-},
-
-gmaxsandblast: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Sandblast",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Ground",
-},
-
-gmaxsmite: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Smite",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Fairy",
-},
-
-gmaxsnooze: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Snooze",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Dark",
-},
-
-gmaxsteelsurge: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Steelsurge",
-pp: 5,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Steel",
-},
-
-gmaxvinelash: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "G-Max Vine Lash",
-pp: 10,
-priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
-type: "Grass",
 },
 
 maxairstream: {
@@ -17925,6 +17706,176 @@ flags: {},
 secondary: null,
 target: "adjacentFoe",
 type: "Dragon",
+},
+
+technoblast: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Techno Blast",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Normal",
+},
+
+judgment: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Judgment",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Normal",
+},
+
+ivycudgel: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Ivy Cudgel",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Grass",
+},
+
+bouncybubble: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Bouncy Bubble",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Water",
+},
+
+dynamaxcannon: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Dynamax Cannon",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Dragon",
+},
+
+"10000000voltthunderbolt": {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "10,000,000 Volt Thunderbolt",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Electric",
+},
+
+happyhour: {
+accuracy: 95,
+basePower: 0,
+category: "Status",
+name: "Happy Hour",
+pp: 0.625,
+priority: 0,
+flags: {},
+boosts: {
+atk: .5,
+spa: .5,
+},
+self: {
+boosts: {
+evasion: -1,
+},
+},
+sideCondition: 'happyhour',
+onTryMovePriority: 1,
+onTryMove: function (pokemon, target, move) {
+if (pokemon.side.sideConditions['happyhour']) {
+this.add('-fail', pokemon, 'move: Happy Hour', '[of] ' + target);
+return null;
+}
+},
+condition: {
+duration: 5,
+onStart: function (side) {
+this.add('-sidestart', side, 'move: Happy Hour');
+},
+onResidualOrder: 3,
+onResidualSubOrder: 1,
+onResidual: function (side) {
+this.add('-activate', side, 'move: Happy Hour');
+let activated = false;
+for (const pokemon of side.active) {
+if (pokemon && !pokemon.fainted) {
+activated = true;
+this.boost({atk: .5, spa: .5}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
+this.boost({evasion: -1}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
+}
+}
+if (!activated) return false;
+},
+onEnd: function (side) {
+this.add('-sideend', side, 'move: Happy Hour');
+},
+},
+secondary: null,
+target: "allySide",
+type: "Normal",
+},
+
+bloomdoom: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Bloom Doom",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Normal",
+},
+
+fusionflare: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Fusion Flare",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Normal",
+},
+
+fusionbolt: {
+accuracy: 100,
+basePower: 20,
+category: "Physical",
+name: "Fusion Bolt",
+pp: 10,
+priority: 0,
+flags: {},
+secondary: null,
+target: "adjacentFoe",
+type: "Normal",
 },
 
 };
