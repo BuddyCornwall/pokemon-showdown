@@ -17801,13 +17801,12 @@ type: "Electric",
 },
 
 happyhour: {
-accuracy: 95,
+accuracy: 100,
 basePower: 0,
 category: "Status",
 name: "Happy Hour",
-pp: 5,
+pp: 10,
 priority: 0,
-flags: {},
 boosts: {
 atk: 1,
 spa: 1,
@@ -17818,13 +17817,6 @@ evasion: -1,
 },
 },
 sideCondition: 'happyhour',
-onTryMovePriority: 1,
-onTryMove: function (pokemon, target, move) {
-if (pokemon.side.sideConditions['happyhour']) {
-this.add('-fail', pokemon, 'move: Happy Hour', '[of] ' + target);
-return null;
-}
-},
 condition: {
 duration: 5,
 onStart: function (side) {
@@ -17838,8 +17830,8 @@ let activated = false;
 for (const pokemon of side.active) {
 if (pokemon && !pokemon.fainted) {
 activated = true;
-this.boost({atk: 1, spa: 1}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
-this.boost({evasion: -1}, pokemon, pokemon, this.dex.getActiveMove('happyhour'));
+this.boost({atk: 1, spa: 1}, pokemon);
+this.boost({evasion: -1}, pokemon);
 }
 }
 if (!activated) return false;
