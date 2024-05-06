@@ -17749,29 +17749,21 @@ type: "Grass",
 
 bouncybubble: {
 accuracy: 100,
-basePower: 20,
+basePower: 40,
 category: "Physical",
 name: "Bouncy Bubble",
-pp: 10,
+pp: 0.625,
 priority: 0,
-flags: {contact: 1, charge: 1, mirror: 1},
-onPrepareHit: function (source, target, move) {
-this.attrLastMove('[still]');
-this.add('-anim', source, "Sky Attack", target);
-},
-onTryMove: function (source) {
-if (source.volatiles['twoturnmove']) return null;
-this.attrLastMove('[still]');
-this.add('-anim', source, "Fly", source);
-this.useMove('strikeandretreat', source);
-return null;
-},
-onHit: function (target, source, move) {
-source.addVolatile('twoturnmove', target);
+flags: {protect: 1, beam: 1, mirror: 1},
+onBasePower(basePower, pokemon) {
+if (this.randomChance(3, 10)) {
+this.attrLastMove('[anim] Fickle Beam All Out');
+this.add('-activate', pokemon, 'move: Fickle Beam');
+return this.chainModify(2);
+}
 },
 secondary: null,
-target: "adjacentFoe",
-type: "Water",
+target: "any",
 },
 
 dynamaxcannon: {
