@@ -17754,7 +17754,25 @@ category: "Physical",
 name: "Bouncy Bubble",
 pp: 10,
 priority: 0,
-flags: {},
+flags: {contact: 1, charge: 1, mirror: 1},
+onPrepareHit: function (target, source, move) {
+this.attrLastMove('[still]');
+this.add('-anim', source, "Sky Attack", target);
+},
+onTryMove: function (source) {
+if (source.volatiles['twoturnmove']) return null;
+this.attrLastMove('[still]');
+this.add('-anim', source, "Fly", source);
+this.useMove('strikeandretreat', source);
+return null;
+},
+onPrepareHit: function (source, target, move) {
+this.attrLastMove('[still]');
+this.add('-anim', source, "Fly", source);
+},
+onHit: function (target, source, move) {
+source.addVolatile('twoturnmove', target);
+},
 secondary: null,
 target: "adjacentFoe",
 type: "Water",
