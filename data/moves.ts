@@ -17808,37 +17808,16 @@ name: "Happy Hour",
 pp: 10,
 priority: 0,
 boosts: {
+self: {
 atk: 1,
 spa: 1,
-},
-self: {
-boosts: {
 evasion: -1,
 },
 },
-sideCondition: 'happyhour',
-condition: {
-duration: 5,
-onStart: function (side) {
-this.add('-sidestart', side, 'move: Happy Hour');
-},
-onResidualOrder: 3,
-onResidualSubOrder: 1,
-onResidual: function (side) {
-this.add('-activate', side, 'move: Happy Hour');
-let activated = false;
-for (const pokemon of side.active) {
-if (pokemon && !pokemon.fainted) {
-activated = true;
+onHit: function (pokemon) {
 this.boost({atk: 1, spa: 1}, pokemon);
 this.boost({evasion: -1}, pokemon);
-}
-}
-if (!activated) return false;
-},
-onEnd: function (side) {
-this.add('-sideend', side, 'move: Happy Hour');
-},
+this.add('-activate', pokemon, 'move: Happy Hour');
 },
 secondary: null,
 target: "allySide",
