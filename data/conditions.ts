@@ -249,11 +249,11 @@ this.add('-message', `${target.name} has been cut wide open & is bleeding!`);
 },
 onResidual(pokemon) {
 if (pokemon.volatiles['bleeding']) {
+this.add('-message', `${target.name} is bleeding out!`);
 this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon, 'bleeding');
 }
 },
 onEnd(target) {
-this.add('-message', `${target.name} is bleeding out!`);
 this.add('-end', target, 'bleeding');
 },
 },
