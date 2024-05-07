@@ -17723,7 +17723,6 @@ type: "Rock",
 },
 
 maxstarfall: {
-maxstarfall: {
 accuracy: 95,
 basePower: 35,
 category: "Physical",
