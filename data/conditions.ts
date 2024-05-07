@@ -268,6 +268,24 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 },
 
+bleeding: {
+name: 'bleeding',
+duration: 10,
+onStart(target, source, sourceEffect) {
+this.effectState.stage = 0;
+if (sourceEffect && sourceEffect.id === 'bleedorb') {
+this.add('-status', target, 'bld', '[from] item: Bleed Orb');
+} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
+this.add('-status', target, 'bld', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+} else {
+this.add('-status', target, 'bld');
+}
+},
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 16);
+},
+},
+
 lockedmove: {
 // Outrage, Thrash, Petal Dance...
 name: 'lockedmove',
