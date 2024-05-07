@@ -124,31 +124,6 @@ target.cureStatus();
 },
 },
 
-bld: {
-name: 'bld',
-effectType: 'Status',
-onStart(target, source, sourceEffect) {
-this.effectState.stage = 0;
-if (sourceEffect && sourceEffect.id === 'bleedorb') {
-this.add('-status', target, 'bld', '[from] item: Bleed Orb');
-} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
-this.add('-status', target, 'bld', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
-} else {
-this.add('-status', target, 'bld');
-}
-},
-onSwitchIn() {
-this.effectState.stage = 0;
-},
-onResidualOrder: 9,
-onResidual(pokemon) {
-if (this.effectState.stage < 15) {
-this.effectState.stage++;
-}
-this.damage(this.clampIntRange(pokemon.baseMaxhp / 8, 1) * this.effectState.stage);
-},
-},
-
 tox: {
 name: 'tox',
 effectType: 'Status',
@@ -274,7 +249,7 @@ this.add('-message', `${target.name} has been cut wide open & is bleeding!`);
 },
 onResidual(pokemon) {
 if (pokemon.volatiles['bleeding']) {
-this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon, 'bleeding');
+this.damage(this.clampIntRange(pokemon.baseMaxhp / 64, 1.1) * this.effectState.stage, pokemon, 'bleeding');
 }
 },
 onEnd(target) {
