@@ -248,7 +248,9 @@ onStart(target) {
 this.add('-message', `${target.name} has been cut wide open & is bleeding!`);
 },
 onResidual(pokemon) {
-if (pokemon.volatiles['bleeding']) {
+if (this.effectState.stage < 64) {
+this.effectState.stage++;
+}
 this.damage(this.clampIntRange(pokemon.baseMaxhp / 64, 1) * this.effectState.stage);
 }
 },
