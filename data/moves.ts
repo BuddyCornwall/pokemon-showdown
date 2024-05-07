@@ -10297,7 +10297,7 @@ type: "Poison",
 
 poisonsting: {
 accuracy: 95,
-basePower: 75,
+basePower: 55,
 category: "Physical",
 name: "Poison Sting",
 pp: 1.25,
@@ -10305,7 +10305,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 50,
+chance: 66,
 status: 'tox',
 },
 target: "any",
@@ -17794,14 +17794,12 @@ priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
 if (this.randomChance(5, 10)) {
-this.attrLastMove('[anim] Fickle Beam All Out');
 this.add('-activate', pokemon, 'move: Fickle Beam');
 return this.chainModify(2);
 }
 },
 secondary: null,
 target: "any",
-type: "Water",
 },
 
 "10000000voltthunderbolt": {
@@ -17818,15 +17816,21 @@ type: "Electric",
 },
 
 bloomdoom: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
-name: "Bloom Doom",
-pp: 10,
+accuracy: 85,
+basePower: 55,
+category: "Special",
+name: "Fusion Flare",
+pp: 1.25,
 priority: 0,
-flags: {},
-secondary: null,
-target: "adjacentFoe",
+flags: {protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Grass') return 1;
+},
+secondary: {
+chance: 33,
+status: 'slp',
+},
+target: "any",
 type: "Normal",
 },
 
