@@ -17749,7 +17749,7 @@ condition: {
 onStart(pokemon) {
 this.add('-message', `${pokemon.name} is bleeding!`);
 },
-onResidualOrder: 999,
+onResidualOrder: 24,
 onResidual(pokemon) {
 this.damage(pokemon.baseMaxhp / 12.5, pokemon, pokemon, 'move: Max Steelspike');
 },
