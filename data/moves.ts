@@ -17633,7 +17633,6 @@ accuracy: 100,
 basePower: 20,
 category: "Physical",
 name: "Max Ooze",
-
 pp: 10,
 priority: 0,
 flags: {},
@@ -17644,7 +17643,7 @@ type: "Poison",
 
 maxovergrowth: {
 accuracy: 85,
-basePower: 35,
+basePower: 25,
 category: "Physical",
 name: "Max Overgrowth",
 pp: 0.625,
@@ -17664,7 +17663,7 @@ if (!target || target.fainted || target.hp <= 0) {
 this.debug('Nothing to leech into');
 return;
 }
-const damage = this.damage(pokemon.baseMaxhp / 10, pokemon, target);
+const damage = this.damage(pokemon.baseMaxhp / 20, pokemon, target);
 if (damage) {
 this.heal(damage, target, pokemon);
 }
@@ -17732,8 +17731,26 @@ pp: 10,
 priority: 0,
 flags: {},
 secondary: null,
-target: "any",
+target: "self",
 type: "Fairy",
+multihit: [5, 10],
+onPrepareHit(target, source) {
+const targets = this.getRandomTarget(source);
+for (const target of targets) {
+this.useMove("Max Starfall", source, target);
+}
+this.add('-anim', source, 'Meteor Mash', target);
+},
+getRandomTarget(source) {
+const targets = [];
+const remainingTargets = this.getAlivePokemon().filter(pokemon => pokemon !== source);
+for (let i = 0; i < 5 && remainingTargets.length > 0; i++) {
+const randomIndex = this.random(remainingTargets.length);
+targets.push(remainingTargets[randomIndex]);
+remainingTargets.splice(randomIndex, 1);
+}
+return targets;
+},
 },
 
 maxsteelspike: {
@@ -17849,7 +17866,7 @@ bloomdoom: {
 accuracy: 85,
 basePower: 55,
 category: "Special",
-name: "Fusion Flare",
+name: "Bloom Doom",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
