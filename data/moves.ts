@@ -17730,6 +17730,7 @@ name: "Max Starfall",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
+smartTarget: true,
 multihit: [1, 10],
 multiaccuracy: 75,
 secondary: null,
@@ -17745,6 +17746,10 @@ name: "Max Steelspike",
 pp: 10,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
+condition: {
+onStart(pokemon) {
+this.add('-message', `${pokemon.name} is bleeding!`);
+},
 volatileStatus: 'bleeding',
 secondary: null,
 target: "any",
