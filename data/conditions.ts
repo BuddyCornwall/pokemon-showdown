@@ -269,20 +269,17 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 
 bleeding: {
-name: 'bleeding',
-duration: 10,
-onStart(target, source, sourceEffect) {
-this.effectState.stage = 0;
-if (sourceEffect && sourceEffect.id === 'bleedorb') {
-this.add('-status', target, 'bld', '[from] item: Bleed Orb');
-} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
-this.add('-status', target, 'bld', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
-} else {
-this.add('-status', target, 'bld');
-}
+onStart(target) {
+this.add('-message', `${target.name} has been cut wide open & is bleeding!`);
+this.add('-start', target, 'bleeding');
 },
 onResidual(pokemon) {
-this.damage(pokemon.baseMaxhp / 16);
+if (pokemon.volatiles['bleeding']) {
+this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon, 'bleeding');
+}
+},
+onEnd(target) {
+this.add('-end', target, 'bleeding');
 },
 },
 
