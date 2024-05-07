@@ -17669,12 +17669,6 @@ if (damage) {
 this.heal(damage, target, pokemon);
 }
 },
-onHit(target, source) {
-if (source.hp && !source.status) {
-source.setStatus('slp', source);
-this.add('-status', source, 'slp', '[from] move: Max Overgrowth');
-}
-},
 },
 onTryImmunity(target) {
 return !target.hasType('Grass');
@@ -17682,6 +17676,12 @@ return !target.hasType('Grass');
 secondary: null,
 target: "any",
 type: "Grass",
+onHit(target, source) {
+if (source.hp) {
+source.setStatus('slp');
+this.add('-status', source, 'slp', '[from] move: Max Overgrowth');
+}
+},
 },
 
 maxphantasm: {
