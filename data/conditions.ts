@@ -271,10 +271,9 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 bleeding: {
 onStart(target) {
 this.add('-message', `${target.name} has been cut wide open & is bleeding!`);
-this.add('-start', target, 'bleeding');
 },
 onResidual(pokemon) {
-if (pokemon.volatiles'bleeding') {
+if (pokemon.volatiles['bleeding']) {
 this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon, 'bleeding');
 }
 },
