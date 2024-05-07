@@ -17745,10 +17745,6 @@ name: "Max Steelspike",
 pp: 10,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-condition: {
-onStart(pokemon) {
-this.add('-message', `${pokemon.name} is bleeding!`);
-},
 volatileStatus: 'bleeding',
 secondary: null,
 target: "any",
