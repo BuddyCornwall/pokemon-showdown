@@ -17723,34 +17723,19 @@ type: "Rock",
 },
 
 maxstarfall: {
-accuracy: 100,
-basePower: 20,
+maxstarfall: {
+accuracy: 95,
+basePower: 35,
 category: "Physical",
 name: "Max Starfall",
-pp: 10,
+pp: 0.625,
 priority: 0,
-flags: {},
+flags: {protect: 1, mirror: 1},
+multihit: [1, 10],
+multiaccuracy: 75,
 secondary: null,
-target: "self",
+target: "randomNormal",
 type: "Fairy",
-multihit: [5, 10],
-onPrepareHit(target, source) {
-const targets = this.getRandomTarget(source);
-for (const target of targets) {
-this.useMove("Max Starfall", source, target);
-}
-this.add('-anim', source, 'Meteor Mash', target);
-},
-getRandomTarget(source) {
-const targets = [];
-const remainingTargets = this.getAlivePokemon().filter(pokemon => pokemon !== source);
-for (let i = 0; i < 5 && remainingTargets.length > 0; i++) {
-const randomIndex = this.random(remainingTargets.length);
-targets.push(remainingTargets[randomIndex]);
-remainingTargets.splice(randomIndex, 1);
-}
-return targets;
-},
 },
 
 maxsteelspike: {
@@ -17760,7 +17745,16 @@ category: "Physical",
 name: "Max Steelspike",
 pp: 10,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
+condition: {
+onStart(pokemon) {
+this.add('-message', `${pokemon.name} is bleeding!`);
+},
+onResidualOrder: 999,
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 12.5, pokemon, pokemon, 'move: Max Steelspike');
+},
+},
 secondary: null,
 target: "any",
 type: "Steel",
