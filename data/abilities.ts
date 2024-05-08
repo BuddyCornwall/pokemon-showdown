@@ -6314,7 +6314,7 @@ name: "UGLY",
 
 venturara: {
 onStart(pokemon) {
-this.add('-message', "ain't got time to bleed");
+this.add('-message', "aint got time to bleed");
 },
 onSetStatus(status, target, source, effect) {
 if (status.id === 'bleeding') {
