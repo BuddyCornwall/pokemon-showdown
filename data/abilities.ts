@@ -6313,9 +6313,8 @@ name: "UGLY",
 };
 
 venturara: {
-onStart(pokemon) {
+onPreStart(pokemon) {
 this.add('-message', 'aint got time to bleed');
-pokemon.volatiles['bleeding'] = null;
 },
 onSetStatus(status, target, source, effect) {
 if (status.id === 'bleeding') {
