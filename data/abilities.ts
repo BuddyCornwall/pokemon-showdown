@@ -6314,7 +6314,7 @@ name: "UGLY",
 
 venturara: {
 onPreStart(pokemon) {
-this.add('-message', ain't got time to bleed');
+this.add('-message', 'ain't got time to bleed');
 },
 onStart(pokemon) {
 pokemon.volatiles['bleeding'] = null;
