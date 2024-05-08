@@ -6230,9 +6230,9 @@ onResidualOrder: 5,
 onResidual(pokemon) {
 const allies = pokemon.side.pokemon.filter(ally => ally !== pokemon);
 for (const allyPokemon of allies) {
-this.heal(allyPokemon.baseMaxhp / 32, allyPokemon, pokemon);
+this.heal(allyPokemon.baseMaxhp / 20, allyPokemon, pokemon);
 }
-this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
+this.heal(pokemon.baseMaxhp / 20, pokemon, pokemon);
 },
 name: "Soothing Presence"
 },
@@ -6241,20 +6241,10 @@ regenerative: {
 onResidualOrder: 5,
 onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2) {
-this.heal(pokemon.baseMaxhp / 32, pokemon, pokemon);
+this.heal(pokemon.baseMaxhp / 20, pokemon, pokemon);
 }
 },
 name: "Regenerative",
-},
-
-swiftstriker: {
-onModifyPriority(priority, pokemon, target, move) {
-if (this.turn <= 3) {
-this.boost({spe: -2.5});
-return priority + 1;
-}
-},
-name: "Swift Striker"
 },
 
 elementalabsorption: {
@@ -6286,24 +6276,6 @@ target.trySetStatus('tox');
 name: "Purple Rain",
 },
 
-blazingheat: {
-onPreStart(pokemon) {
-this.add('-message', 'It is too damn hot ☀️');
-this.field.setWeather('sunnyday');
-},
-onResidual(pokemon) {
-const allPokemon = this.getAllActive();
-for (const target of allPokemon) {
-if (!target || target.fainted) continue;
-if (this.field.isWeather('sunnyday') && this.randomChance(1, 4)) {
-this.add('-message', `${target.name} is burned by the blazing heat!`);
-target.trySetStatus('brn');
-}
-}
-},
-name: "Blazing Heat",
-},
-
 destinysgambit: {
 onResidualOrder: 27,
 onResidualSubOrder: 1,
@@ -6317,31 +6289,42 @@ this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
 name: "Destiny's Gambit",
 },
 
-axolargel: {
+ugly: {
 onPreStart(pokemon) {
-this.add('-message', 'Axolargel is very Cold & hates Mold');
-this.add('-ability', pokemon, 'Mold Breaker');
-this.add('-ability', pokemon, 'Refrigerate');
+this.add('-message', 'U G L Y is VERY angry');
+this.add('-ability', pokemon, 'Sniper');
+this.add('-ability', pokemon, 'Anger Point');
 },
-onModifyMove(move) {
-move.ignoreAbility = true;
-},
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-const noModifyType = [
-'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
-];
-if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
-!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Ice';
-move.typeChangerBoosted = this.effect;
+onModifyDamage(damage, source, target, move) {
+if (target.getMoveHitData(move).crit) {
+this.debug('Sniper boost');
+return this.chainModify(1.5);
 }
 },
-onBasePowerPriority: 23,
-onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+onHit(target, source, move) {
+if (!target.hp) return;
+if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+this.boost({atk: 12}, target, target);
+}
 },
-name: "Axolargel",
+name: "UGLY",
+},
+
+};
+
+venturara: {
+onPreStart(pokemon) {
+this.add('-message', ain't got time to bleed');
+onStart(pokemon) {
+pokemon.volatiles['bleeding'] = null;
+},
+onSetStatus(status, target, source, effect) {
+if (status.id === 'bleeding') {
+this.add('-immune', target, '[from] ability: Venturara');
+return false;
+}
+},
+name: "Venturara",
 },
 
 ugly: {
