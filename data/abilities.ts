@@ -3642,7 +3642,7 @@ perishbody: {
 onDamagingHit(damage, target, source, move) {
 if (!this.checkMoveMakesContact(move, source, target)) return;
 let announced = false;
-for (const pokemon of [target]) {
+for (const pokemon of [source]) {
 if (pokemon.volatiles['perishsong']) continue;
 if (!announced) {
 this.add('-ability', target, 'Perish Body');
