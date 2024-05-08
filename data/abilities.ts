@@ -6313,9 +6313,6 @@ name: "UGLY",
 };
 
 venturara: {
-onPreStart(pokemon) {
-this.add('-message', 'aint got time to bleed');
-},
 onSetStatus(status, target, source, effect) {
 if (status.id === 'bleeding') {
 this.add('-immune', target, '[from] ability: Venturara');
