@@ -3639,10 +3639,10 @@ num: 257,
 },
 
 perishbody: {
-onDamagingHit(damage, target, move) {
-if (!this.checkMoveMakesContact(move, target)) return;
+onDamagingHit(damage, target, source, move) {
+if (!this.checkMoveMakesContact(move, source, target)) return;
 let announced = false;
-for (const pokemon of [target,]) {
+for (const pokemon of [target]) {
 if (pokemon.volatiles['perishsong']) continue;
 if (!announced) {
 this.add('-ability', target, 'Perish Body');
