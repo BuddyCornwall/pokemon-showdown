@@ -6313,13 +6313,33 @@ name: "UGLY",
 };
 
 venturara: {
-onSetStatus: function (status, target, source, effect) {
-if (status.id === 'bleeding') {
-this.add('-immune', target, '[from] ability: Venturara');
-return false;
+onPreStart(pokemon) {
+this.add('-message', 'aint got time to bleed.');
+},
+onUpdate(pokemon) {
+if (pokemon.volatiles['bleeding']) {
+this.add('-activate', pokemon, 'ability: Own Tempo');
+pokemon.removeVolatile('bleeding');
 }
 },
-name: "Venturara",
+onTryAddVolatile(status, pokemon) {
+if (status.id === 'bleeding') return null;
+},
+onHit(target, source, move) {
+if (move?.volatileStatus === 'bleeding') {
+this.add('-immune', target, 'bleeding', '[from] ability: Venturara');
+}
+},
+onTryBoost(boost, target, source, effect) {
+if (effect.name === 'Intimidate' && boost.atk) {
+delete boost.atk;
+this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of] ' + target);
+}
+},
+isBreakable: true,
+name: "Own Tempo",
+rating: 1.5,
+num: 20,
 },
 
 ugly: {
