@@ -6313,7 +6313,7 @@ name: "UGLY",
 };
 
 venturara: {
-onSetStatus(status, target, source, effect) {
+onSetStatus: function (status, target, source, effect) {
 if (status.id === 'bleeding') {
 this.add('-immune', target, '[from] ability: Venturara');
 return false;
