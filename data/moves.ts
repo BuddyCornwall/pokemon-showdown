@@ -18005,7 +18005,7 @@ piledriver: {
 accuracy: 85,
 basePower: 55,
 category: "Special",
-name: "Fusion Bolt",
+name: "Piledriver",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
