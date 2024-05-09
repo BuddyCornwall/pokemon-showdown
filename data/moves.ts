@@ -7605,12 +7605,6 @@ pp: 1.25,
 priority: -5,
 flags: {contact: 1, protect: 1, slow: 1, mirror: 1, slicing: 1},
 critRatio: 2,
-
-onHit(target, source, move) {
-this.add('-message', `{attacker.name} bows before ${source.name}, as their blade tries to decapitate them!`);
-},
-
-
 secondary: {
 chance: 75,
 volatileStatus: 'bleeding',
