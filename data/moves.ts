@@ -18001,5 +18001,40 @@ target: "any",
 type: "Normal",
 },
 
+piledriver: {
+accuracy: 85,
+basePower: 55,
+category: "Special",
+name: "Fusion Bolt",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+target: "any",
+type: "Face",
+},
+
+rko: {
+accuracy: 85,
+basePower: 55,
+category: "Special",
+name: "RKO",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+target: "any",
+type: "Tweener",
+},
+
+f5: {
+accuracy: 85,
+basePower: 55,
+category: "Special",
+name: "F5",
+pp: 1.25,
+priority: 0,
+flags: {protect: 1, mirror: 1},
+target: "any",
+type: "Heel",
+},
 
 };
