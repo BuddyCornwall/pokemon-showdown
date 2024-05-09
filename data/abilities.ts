@@ -6295,7 +6295,7 @@ this.add('-message', 'aint got time to bleed.');
 },
 onUpdate(pokemon) {
 if (pokemon.volatiles['bleeding']) {
-this.add('-activate', pokemon, 'ability: Own Tempo');
+this.add('-activate', pokemon, 'ability: Venturara');
 pokemon.removeVolatile('bleeding');
 }
 },
@@ -6314,7 +6314,7 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of
 }
 },
 isBreakable: true,
-name: "Own Tempo",
+name: "Venturara",
 rating: 1.5,
 num: 20,
 },
