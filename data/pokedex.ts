@@ -2,7 +2,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 bulbasaur: {
 num: 1,
 name: "Bulbasaur",
-types: ["Grass"],
+types: ["Grass", "Heel"],
 baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
 gender: "F",
 abilities: {0: "No Ability"},
@@ -12,7 +12,7 @@ weightkg: 6.9,
 ivysaur: {
 num: 2,
 name: "Ivysaur",
-types: ["Grass"],
+types: ["Grass", "Face"],
 gender: "F",
 baseStats: {hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60},
 abilities: {0: "No Ability"},
