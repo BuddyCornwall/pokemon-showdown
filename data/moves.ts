@@ -18039,24 +18039,35 @@ category: "Physical",
 name: "RKO",
 pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
 onPrepareHit: function (target, source) {
-let priority = this.random(3);
-switch (priority) {
-case 0:
-this.attrLastMove('[priority -5]');
-break;
-case 1:
-this.attrLastMove('[priority 0]');
-break;
-case 2:
-this.attrLastMove('[priority 5]');
-break;
+let hitChance = this.random(100);
+if (hitChance < 50) {
+this.attrLastMove('[still]');
+this.add('-anim', source, "Quick Attack", target);
+this.useMove('rko', source, target);
+} else {
+source.addVolatile('twoturnmove', target);
+this.add('-message', source.name + ' is preparing for the RKO!');
 }
 },
-target: "any",
-type: "Tweener",
+onTryMove: function (source) {
+if (source.volatiles['twoturnmove']) return null;
+this.add('-anim', source, "Seismic Toss", source);
+this.useMove('rko', source);
+return null;
+},
+onHit: function (target, source, move) {
+if (source.volatiles['twoturnmove']) {
+this.damage(source.baseMaxhp / 2, source, source);
+this.add('-message', source.name + "'s hits an RKO out of nowhere with devastating force!");
+delete source.volatiles['twoturnmove'];
+} else {
+this.damage(this.clampIntRange(source.baseMaxhp * 0.25, 1), source, source);
+}
+},
+secondary: null,
+target: "normal",
+type: "Normal",
 },
 
 greenmist: {
@@ -18103,16 +18114,24 @@ type: "Tweener",
 },
 
 hulkingup: {
-accuracy: 85,
-basePower: 55,
+accuracy: 95,
+basePower: 0,
 category: "Status",
 name: "Hulking Up",
 pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "Face",
+boosts: {
+atk: 1,
+spa: 1,
+},
+self: null,
+onHit: function (target, source, move) {
+this.boost({atk: 2, spa: 2}, source);
+this.add('-activate', source, 'move: Hulking Up');
+},
+secondary: null,
+target: "self",
+type: "Normal",
 },
 
 colossalresurgence: {
