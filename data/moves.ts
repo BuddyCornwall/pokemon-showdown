@@ -18041,6 +18041,20 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
+onPrepareHit: function (target, source) {
+let priority = this.random(3);
+switch (priority) {
+case 0:
+this.attrLastMove('[priority -5]');
+break;
+case 1:
+this.attrLastMove('[priority 0]');
+break;
+case 2:
+this.attrLastMove('[priority 5]');
+break;
+}
+},
 target: "any",
 type: "Tweener",
 },
@@ -18072,14 +18086,18 @@ type: "Face",
 },
 
 gts: {
-accuracy: 85,
-basePower: 55,
+accuracy: 95,
+basePower: 35,
 category: "Special",
 name: "GTS",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
+secondary: {
+chance: 50,
+status: 'slp',
+},
 target: "any",
 type: "Tweener",
 },
