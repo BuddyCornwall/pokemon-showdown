@@ -8170,6 +8170,12 @@ category: "Physical",
 name: "Lunar Dance",
 pp: 0.625,
 priority: 2,
+flags: {contact: 1, protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!`);
+},
+
 terrain: 'mistyterrain',
 condition: {
 
