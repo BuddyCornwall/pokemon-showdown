@@ -17946,9 +17946,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 
 onHit(target, source, move) {
-"this.add('-message', `${source.name} triggered Electric Terrain! 
-Electric moves are now more powerful!
-Pokémon can no longer fall asleep!`);"
+this.add('-message', `${source.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`);
 },
 
 terrain: 'electricterrain',
