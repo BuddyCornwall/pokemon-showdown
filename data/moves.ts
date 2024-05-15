@@ -3935,6 +3935,11 @@ name: "Electric Terrain",
 pp: 0.625,
 priority: 0,
 flags: {},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`);
+},
+
 terrain: 'electricterrain',
 condition: {
 duration: 5,
@@ -4728,6 +4733,11 @@ name: "Fire Pledge",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!`);
+},
+
 terrain: 'grassyterrain',
 condition: {
 duration: 5,
@@ -5639,14 +5649,13 @@ name: "Genesis Supernova",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-secondary: {
-chance: 75,
-self: {
-onHit() {
-this.field.setTerrain('psychicterrain');
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!`);
 },
-},
-},
+
+terrain: 'psychicterrain',
+
 target: "any",
 type: "Psychic",
 },
@@ -5926,6 +5935,11 @@ name: "Grassy Terrain",
 pp: 0.625,
 priority: 0,
 flags: {},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!`);
+},
+
 terrain: 'grassyterrain',
 condition: {
 duration: 5,
@@ -8114,6 +8128,11 @@ name: "Lunar Dance",
 pp: 0.625,
 priority: 2,
 flags: {contact: 1, protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!`);
+},
+
 terrain: 'mistyterrain',
 selfSwitch: true,
 critRatio: 0,
@@ -9088,7 +9107,7 @@ terrain: 'mistyterrain',
 condition: {
 
 onHit(target, source, move) {
-this.add('-message', `${source.name} used the best move in the game!`);
+this.add('-message', `${source.name} triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!`);
 },
 
 duration: 5,
@@ -10921,6 +10940,11 @@ name: "Psychic Terrain",
 pp: 0.625,
 priority: 0,
 flags: {},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!`);
+},
+
 terrain: 'psychicterrain',
 condition: {
 duration: 5,
@@ -13093,6 +13117,11 @@ name: "Shock Wave",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+this.add('-message', `${source.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`);
+},
+
 terrain: 'electricterrain',
 condition: {
 duration: 3,
@@ -17950,7 +17979,6 @@ this.add('-message', `${source.name} triggered Electric Terrain! Electric moves 
 },
 
 terrain: 'electricterrain',
-smartTarget: true,
 critRatio: 2,
 multihit: [1, 10],
 multiaccuracy: 10,
@@ -18014,160 +18042,6 @@ status: 'brn',
 },
 target: "any",
 type: "Normal",
-},
-
-piledriver: {
-accuracy: 85,
-basePower: 55,
-category: "Physical",
-name: "Piledriver",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "heel",
-},
-
-rockbottom: {
-accuracy: 85,
-basePower: 55,
-category: "Physical",
-name: "Rock Bottom",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "face",
-},
-
-rko: {
-accuracy: 85,
-basePower: 55,
-category: "Physical",
-name: "RKO",
-pp: 0.625,
-priority: 0,
-onPrepareHit: function (target, source) {
-let hitChance = this.random(100);
-if (hitChance < 50) {
-this.attrLastMove('[still]');
-this.add('-anim', source, "Quick Attack", target);
-this.useMove('rko', source, target);
-} else {
-source.addVolatile('twoturnmove', target);
-this.add('-message', source.name + ' is preparing for the RKO!');
-}
-},
-onTryMove: function (source) {
-if (source.volatiles['twoturnmove']) return null;
-this.add('-anim', source, "Seismic Toss", source);
-this.useMove('rko', source);
-return null;
-},
-onHit: function (target, source, move) {
-if (source.volatiles['twoturnmove']) {
-this.damage(source.baseMaxhp / 2, source, source);
-this.add('-message', source.name + "'s hits an RKO out of nowhere with devastating force!");
-delete source.volatiles['twoturnmove'];
-} else {
-this.damage(this.clampIntRange(source.baseMaxhp * 0.25, 1), source, source);
-}
-},
-secondary: null,
-target: "normal",
-type: "Normal",
-},
-
-greenmist: {
-accuracy: 85,
-basePower: 55,
-category: "Special",
-name: "Green Mist",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "Heel",
-},
-
-onewingedangel: {
-accuracy: 85,
-basePower: 55,
-category: "Special",
-name: "One Winged Angel",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "Face",
-},
-
-gts: {
-accuracy: 95,
-basePower: 35,
-category: "Special",
-name: "GTS",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-secondary: {
-chance: 50,
-status: 'slp',
-},
-target: "any",
-type: "Tweener",
-},
-
-hulkingup: {
-accuracy: 95,
-basePower: 0,
-category: "Status",
-name: "Hulking Up",
-pp: 0.625,
-priority: 0,
-boosts: {
-atk: 1,
-spa: 1,
-},
-self: null,
-onHit: function (target, source, move) {
-this.boost({atk: 2, spa: 2}, source);
-this.add('-activate', source, 'move: Hulking Up');
-},
-secondary: null,
-target: "self",
-type: "Normal",
-},
-
-colossalresurgence: {
-accuracy: 85,
-basePower: 55,
-category: "Status",
-name: "Colossal Resurgence",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "Tweener",
-},
-
-savagefury: {
-accuracy: 85,
-basePower: 55,
-category: "Status",
-name: "Savage Fury",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1},
-critRatio: 2,
-target: "any",
-type: "Heel",
 },
 
 };
