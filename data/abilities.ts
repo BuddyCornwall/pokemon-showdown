@@ -402,15 +402,6 @@ this.effectState.checkedAngerShell = false;
 this.effectState.checkedAngerShell = true;
 }
 },
-onTryEatItem(item) {
-const healingItems = [
-'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
-];
-if (healingItems.includes(item.id)) {
-return this.effectState.checkedAngerShell;
-}
-return true;
-},
 onAfterMoveSecondary(target, source, move) {
 this.effectState.checkedAngerShell = true;
 if (!source || source === target || !target.hp || !move.totalDamage) return;
@@ -709,15 +700,6 @@ this.effectState.checkedBerserk = false;
 this.effectState.checkedBerserk = true;
 }
 },
-onTryEatItem(item) {
-const healingItems = [
-'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
-];
-if (healingItems.includes(item.id)) {
-return this.effectState.checkedBerserk;
-}
-return true;
-},
 onAfterMoveSecondary(target, source, move) {
 this.effectState.checkedBerserk = true;
 if (!source || source === target || !target.hp || !move.totalDamage) return;
@@ -744,15 +726,6 @@ this.effectState.checkedBerserk = false;
 } else {
 this.effectState.checkedBerserk = true;
 }
-},
-onTryEatItem(item) {
-const healingItems = [
-'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
-];
-if (healingItems.includes(item.id)) {
-return this.effectState.checkedKentaromiura;
-}
-return true;
 },
 onAfterMoveSecondary(target, source, move) {
 this.effectState.checkedKentaromiura = true;
