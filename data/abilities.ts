@@ -1533,6 +1533,11 @@ electricsurge: {
 onStart(source) {
 this.field.setTerrain('electricterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
+},
+
 name: "Electric Surge",
 rating: 4,
 num: 226,
@@ -1975,6 +1980,11 @@ grassysurge: {
 onStart(source) {
 this.field.setTerrain('grassyterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
+},
+
 name: "Grassy Surge",
 rating: 4,
 num: 229,
@@ -2066,6 +2076,11 @@ hadronengine: {
 onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('electricterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
+},
+
 isPermanent: true,
 name: "Hadron Engine",
 rating: 4.5,
@@ -2076,6 +2091,11 @@ nimbusbarrier: {
 onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('mistyterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!');
+},
+
 isPermanent: true,
 name: "Nimbus Barrier",
 rating: 4.5,
@@ -2086,6 +2106,11 @@ psychicsanctum: {
 onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('psychicterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!');
+},
+
 isPermanent: true,
 name: "Psychic Sanctum",
 rating: 4.5,
@@ -3057,6 +3082,11 @@ mistysurge: {
 onStart(source) {
 this.field.setTerrain('mistyterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!');
+},
+
 name: "Misty Surge",
 rating: 3.5,
 num: 228,
@@ -3980,6 +4010,11 @@ psychicsurge: {
 onStart(source) {
 this.field.setTerrain('psychicterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!');
+},
+
 name: "Psychic Surge",
 rating: 4,
 num: 227,
@@ -4499,6 +4534,11 @@ seedsower: {
 onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('grassyterrain');
 },
+
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
+},
+
 name: "Seed Sower",
 rating: 2.5,
 num: 269,
