@@ -3743,9 +3743,6 @@ powerofalchemy: {
 onAllyFaint(target) {
 if (!this.effectState.target.hp) return;
 const ability = target.getAbility();
-const additionalBannedAbilities = [
-'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
-];
 if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 if (this.effectState.target.setAbility(ability)) {
 this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
@@ -4137,9 +4134,6 @@ receiver: {
 onAllyFaint(target) {
 if (!this.effectState.target.hp) return;
 const ability = target.getAbility();
-const additionalBannedAbilities = [
-'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
-];
 if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 if (this.effectState.target.setAbility(ability)) {
 this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
@@ -4200,10 +4194,6 @@ onTryEatItem(item, pokemon) {
 this.add('-activate', pokemon, 'ability: Ripen');
 },
 onEatItem(item, pokemon) {
-const weakenBerries = [
-'Babiri Berry', 'Charti Berry', 'Chilan Berry', 'Chople Berry', 'Coba Berry', 'Colbur Berry', 'Haban Berry', 'Kasib Berry', 'Kebia Berry', 'Occa Berry', 'Passho Berry', 'Payapa Berry', 'Rindo Berry', 'Roseli Berry', 'Shuca Berry', 'Tanga Berry', 'Wacan Berry', 'Yache Berry',
-];
-// Record if the pokemon ate a berry to resist the attack
 pokemon.abilityState.berryWeaken = weakenBerries.includes(item.name);
 },
 name: "Ripen",
@@ -5514,11 +5504,6 @@ this.effectState.gaveUp = true;
 },
 onUpdate(pokemon) {
 if (!pokemon.isStarted || this.effectState.gaveUp) return;
-
-const additionalBannedAbilities = [
-// Zen Mode included here for compatability with Gen 5-6
-'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
-];
 const possibleTargets = pokemon.adjacentFoes().filter(target => (
 !target.getAbility().isPermanent && !additionalBannedAbilities.includes(target.ability)
 ));
@@ -5738,27 +5723,6 @@ num: 10,
 },
 
 wanderingspirit: {
-onDamagingHit(damage, target, source, move) {
-const additionalBannedAbilities = ['hungerswitch', 'illusion', 'neutralizinggas', 'wonderguard'];
-if (source.getAbility().isPermanent || additionalBannedAbilities.includes(source.ability) ||
-target.volatiles['dynamax']
-) {
-return;
-}
-
-if (this.checkMoveMakesContact(move, source, target)) {
-const targetCanBeSet = this.runEvent('SetAbility', target, source, this.effect, source.ability);
-if (!targetCanBeSet) return targetCanBeSet;
-const sourceAbility = source.setAbility('wanderingspirit', target);
-if (!sourceAbility) return;
-if (target.isAlly(source)) {
-this.add('-activate', target, 'Skill Swap', '', '', '[of] ' + source);
-} else {
-this.add('-activate', target, 'ability: Wandering Spirit', this.dex.abilities.get(sourceAbility).name, 'Wandering Spirit', '[of] ' + source);
-}
-target.setAbility(sourceAbility);
-}
-},
 name: "Wandering Spirit",
 rating: 2.5,
 num: 254,
