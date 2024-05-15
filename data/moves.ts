@@ -785,7 +785,7 @@ return;
 }
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Aurora Veil weaken');
-if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+if (this.activePerHalf > 1) return this.chainModify([35, 100]);
 return this.chainModify(0.5);
 }
 }
@@ -3968,7 +3968,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('electric terrain boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 30]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -4051,7 +4051,7 @@ onBasePower(basePower, source, target, move) {
 if (target.runEffectiveness(move) > 0) {
 // Placeholder
 this.debug(`electro drift super effective buff`);
-return this.chainModify([5461, 4096]);
+return this.chainModify([100, 33]);
 }
 },
 secondary: null,
@@ -4756,7 +4756,7 @@ return this.chainModify(0.5);
 }
 if (move.type === 'Grass' && attacker.isGrounded()) {
 this.debug('grassy terrain boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 30]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -5655,7 +5655,50 @@ this.add('-message', `${source.name} triggered Psychic Terrain! Psychic moves ar
 },
 
 terrain: 'psychicterrain',
-
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onTryHitPriority: 4,
+onTryHit(target, source, effect) {
+if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+return;
+}
+if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+if (!target.isGrounded()) {
+const baseMove = this.dex.moves.get(effect.id);
+if (baseMove.priority > 0) {
+this.hint("Psychic Terrain doesn't affect Pokémon immune to Ground.");
+}
+return;
+}
+this.add('-activate', target, 'move: Psychic Terrain');
+return null;
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+this.debug('psychic terrain boost');
+return this.chainModify([100, 30]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Psychic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Psychic Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Psychic Terrain');
+},
+},
 target: "any",
 type: "Psychic",
 },
@@ -5958,7 +6001,7 @@ return this.chainModify(0.5);
 }
 if (move.type === 'Grass' && attacker.isGrounded()) {
 this.debug('grassy terrain boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 30]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -6068,7 +6111,7 @@ if (applies) this.add('-activate', pokemon, 'move: Gravity');
 },
 onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
-return this.chainModify([6840, 4096]);
+return this.chainModify([100, 69]);
 },
 onDisableMove(pokemon) {
 for (const moveSlot of pokemon.moveSlots) {
@@ -7927,7 +7970,7 @@ onAnyModifyDamage(damage, source, target, move) {
 if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Light Screen weaken');
-if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+if (this.activePerHalf > 1) return this.chainModify([33, 100]);
 return this.chainModify(0.5);
 }
 }
@@ -8134,6 +8177,47 @@ this.add('-message', `${source.name} triggered Misty Terrain! Dragon moves are n
 },
 
 terrain: 'mistyterrain',
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (effect && ((effect as Move).status || effect.id === 'yawn')) {
+this.add('-activate', target, 'move: Misty Terrain');
+}
+return false;
+},
+onTryAddVolatile(status, target, source, effect) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (status.id === 'confusion') {
+if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Misty Terrain');
+return null;
+}
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Dragon' && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+this.debug('misty terrain weaken');
+return this.chainModify(0.5);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Misty Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Misty Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'Misty Terrain');
+},
+},
 selfSwitch: true,
 critRatio: 0,
 secondary: null,
@@ -9336,7 +9420,7 @@ onBasePowerPriority: 1,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('mud sport weaken');
-return this.chainModify([1352, 4096]);
+return this.chainModify([69, 100]);
 }
 },
 onFieldResidualOrder: 27,
@@ -10974,7 +11058,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('psychic terrain boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 30]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -11716,7 +11800,7 @@ onAnyModifyDamage(damage, source, target, move) {
 if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Physical') {
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Reflect weaken');
-if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+if (this.activePerHalf > 1) return this.chainModify([33, 100]);
 return this.chainModify(0.5);
 }
 }
@@ -13150,7 +13234,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('electric terrain boost');
-return this.chainModify([5325, 4096]);
+return this.chainModify([100, 30]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -17979,6 +18063,49 @@ this.add('-message', `${source.name} triggered Electric Terrain! Electric moves 
 },
 
 terrain: 'electricterrain',
+condition: {
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('terrainextender')) {
+return 8;
+}
+return 5;
+},
+onSetStatus(status, target, source, effect) {
+if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
+if (effect.id === 'yawn' || (effect.effectType === 'Move' && !effect.secondaries)) {
+this.add('-activate', target, 'move: Electric Terrain');
+}
+return false;
+}
+},
+onTryAddVolatile(status, target) {
+if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+if (status.id === 'yawn') {
+this.add('-activate', target, 'move: Electric Terrain');
+return null;
+}
+},
+onBasePowerPriority: 6,
+onBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+this.debug('electric terrain boost');
+return this.chainModify([100, 30]);
+}
+},
+onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+this.add('-fieldstart', 'move: Electric Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+} else {
+this.add('-fieldstart', 'move: Electric Terrain');
+}
+},
+onFieldResidualOrder: 27,
+onFieldResidualSubOrder: 7,
+onFieldEnd() {
+this.add('-fieldend', 'move: Electric Terrain');
+},
+},
 critRatio: 2,
 multihit: [1, 10],
 multiaccuracy: 10,
