@@ -6324,7 +6324,7 @@ name: "Global Jones",
 
 strongbad: {
 onPreStart(pokemon) {
-this.add('-message', 'Strong Bad);
+this.add('-message', 'Strong Bad');
 this.add('-ability', pokemon, 'Flash Fire');
 this.add('-ability', pokemon, 'Umbralate');
 },
