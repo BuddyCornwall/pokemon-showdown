@@ -19,10 +19,10 @@ num: 91,
 aerolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Flying';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -37,10 +37,10 @@ num: 184,
 aqualate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Water';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -55,10 +55,10 @@ num: 206,
 dracolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Dragon';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -73,10 +73,10 @@ num: 206,
 dwaynelate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Rock';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -91,10 +91,10 @@ num: 206,
 electrolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Electric';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -109,10 +109,10 @@ num: 206,
 ferrolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Steel';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -127,12 +127,10 @@ num: 206,
 gladilate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Fighting';
-move.typeChangerBoosted = this.effect;
-}
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
@@ -145,10 +143,10 @@ num: 206,
 insectilate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Bug';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -163,10 +161,10 @@ num: 206,
 necrolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Ghost';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -181,12 +179,10 @@ num: 206,
 pixilate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Fairy';
-move.typeChangerBoosted = this.effect;
-}
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
@@ -199,12 +195,10 @@ num: 206,
 psylate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Psychic';
-move.typeChangerBoosted = this.effect;
-}
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
@@ -217,10 +211,10 @@ num: 206,
 pyrolate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
-move.type = 'Fire';
-move.typeChangerBoosted = this.effect;
 }
 },
 onBasePowerPriority: 23,
@@ -255,6 +249,8 @@ num: 206,
 terralate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 move.type = 'Ground';
