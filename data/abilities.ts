@@ -321,7 +321,6 @@ onSwitchIn(pokemon) {
 this.effectState.switchingIn = true;
 },
 onStart(pokemon) {
-// Air Lock does not activate when Skill Swapped or when Neutralizing Gas leaves the field
 if (this.effectState.switchingIn) {
 this.add('-ability', pokemon, 'Air Lock');
 this.effectState.switchingIn = false;
@@ -449,7 +448,7 @@ pokemon.tryTrap(true);
 onFoeMaybeTrapPokemon(pokemon, source) {
 if (!source) source = this.effectState.target;
 if (!source || !pokemon.isAdjacent(source)) return;
-if (pokemon.isGrounded(!pokemon.knownType)) { // Negate immunity if the type is unknown
+if (pokemon.isGrounded(!pokemon.knownType)) {
 pokemon.maybeTrapped = true;
 }
 },
@@ -848,7 +847,6 @@ onSwitchIn(pokemon) {
 this.effectState.switchingIn = true;
 },
 onStart(pokemon) {
-// Cloud Nine does not activate when Skill Swapped or when Neutralizing Gas leaves the field
 if (this.effectState.switchingIn) {
 this.add('-ability', pokemon, 'Cloud Nine');
 this.effectState.switchingIn = false;
@@ -876,7 +874,6 @@ if (!target.setType(type)) return false;
 this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
 
 if (target.side.active.length === 2 && target.position === 1) {
-// Curse Glitch
 const action = this.queue.willMove(target);
 if (action && action.move.id === 'curse') {
 action.targetLoc = -1;
@@ -899,7 +896,6 @@ this.add('-immune', target, '[from] ability: Comatose');
 }
 return false;
 },
-// Permanent sleep "status" implemented in the relevant sleep-checking effects
 isPermanent: true,
 name: "Comatose",
 rating: 4,
@@ -912,20 +908,15 @@ if (this.gameType !== 'doubles') return;
 const ally = pokemon.allies()[0];
 if (!ally || pokemon.transformed ||
 pokemon.baseSpecies.baseSpecies !== 'Tatsugiri' || ally.baseSpecies.baseSpecies !== 'Dondozo') {
-// Handle any edge cases
 if (pokemon.getVolatile('commanding')) pokemon.removeVolatile('commanding');
 return;
 }
 if (!pokemon.getVolatile('commanding')) {
-// If Dondozo already was commanded this fails
 if (ally.getVolatile('commanded')) return;
-// Cancel all actions this turn for pokemon if applicable
 this.queue.cancelAction(pokemon);
-// Add volatiles to both pokemon
 this.add('-activate', pokemon, 'ability: Commander', '[of] ' + ally);
 pokemon.addVolatile('commanding');
 ally.addVolatile('commanded', pokemon);
-// Continued in conditions.ts in the volatiles
 } else {
 if (!ally.fainted) return;
 pokemon.removeVolatile('commanding');
@@ -988,7 +979,6 @@ num: 126,
 },
 
 corrosion: {
-// Implemented in sim/pokemon.js:Pokemon#setStatus
 name: "Corrosion",
 rating: 2.5,
 num: 212,
@@ -1129,7 +1119,6 @@ num: 6,
 
 dancer: {
 name: "Dancer",
-// implemented in runMove in scripts.js
 rating: 1.5,
 num: 216,
 },
@@ -1416,7 +1405,6 @@ num: 87,
 
 earlybird: {
 name: "Early Bird",
-// Implemented in statuses.js
 rating: 1.5,
 num: 48,
 },
@@ -1563,7 +1551,7 @@ onEnd(pokemon) {
 pokemon.removeVolatile('flashfire');
 },
 condition: {
-noCopy: true, // doesn't get copied by Baton Pass
+noCopy: true,
 onStart(target) {
 this.add('-start', target, 'ability: Flash Fire');
 },
@@ -1854,7 +1842,6 @@ pokemon.abilityState.choiceLock = "";
 onBeforeMove(pokemon, target, move) {
 if (move.isZOrMaxPowered || move.id === 'struggle') return;
 if (pokemon.abilityState.choiceLock && pokemon.abilityState.choiceLock !== move.id) {
-// Fails unless ability is being ignored (these events will not run), no PP lost.
 this.addMove('move', pokemon, move.name);
 this.attrLastMove('[still]');
 this.debug("Disabled by Gorilla Tactics");
@@ -1869,7 +1856,6 @@ pokemon.abilityState.choiceLock = move.id;
 onModifyAtkPriority: 1,
 onModifyAtk(atk, pokemon) {
 if (pokemon.volatiles['dynamax']) return;
-// PLACEHOLDER
 this.debug('Gorilla Tactics Atk Boost');
 return this.chainModify(1.5);
 },
@@ -1957,7 +1943,6 @@ source.trySetStatus('par', target, move);
 target.formeChange('cramorant', move);
 }
 },
-// The Dive part of this mechanic is implemented in Dive's `onTryMove` in moves.ts
 onSourceTryPrimaryHit(target, source, effect) {
 if (
 effect && effect.id === 'surf' && source.hasAbility('gulpmissile') &&
@@ -2141,7 +2126,6 @@ num: 258,
 },
 
 hustle: {
-// This should be applied directly to the stat as opposed to chaining with the others
 onModifyAtkPriority: 5,
 onModifyAtk(atk) {
 return this.modify(atk, 1.5);
@@ -2245,7 +2229,6 @@ pokemon.formeChange('Eiscue-Noice', this.effect, true);
 }
 },
 onWeatherChange(pokemon, source, sourceEffect) {
-// snow/hail resuming because Cloud Nine/Air Lock ended does not trigger Ice Face
 if ((sourceEffect as Ability)?.suppressWeather) return;
 if (!pokemon.hp) return;
 if (this.field.isWeather(['hail', 'snow']) &&
@@ -2293,7 +2276,6 @@ num: 35,
 illusion: {
 onBeforeSwitchIn(pokemon) {
 pokemon.illusion = null;
-// yes, you can Illusion an active pokemon but only if it's to your right
 for (let i = pokemon.side.pokemon.length - 1; i > pokemon.position; i--) {
 const possibleTarget = pokemon.side.pokemon[i];
 if (!possibleTarget.fainted) {
@@ -2350,11 +2332,7 @@ onSwitchIn(pokemon) {
 this.effectState.switchingIn = true;
 },
 onStart(pokemon) {
-// Imposter does not activate when Skill Swapped or when Neutralizing Gas leaves the field
 if (!this.effectState.switchingIn) return;
-// copies across in doubles/triples
-// (also copies across in multibattle and diagonally in free-for-all,
-// but side.foe already takes care of those)
 const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 if (target) {
 pokemon.transformInto(target, this.dex.abilities.get('imposter'));
@@ -2551,7 +2529,6 @@ num: 51,
 },
 
 klutz: {
-// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
 onStart(pokemon) {
 this.singleEvent('End', pokemon.getItem(), pokemon.itemState, pokemon);
 },
@@ -2582,7 +2559,6 @@ num: 102,
 },
 
 levitate: {
-// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
 isBreakable: true,
 name: "Levitate",
 rating: 3.5,
@@ -2699,7 +2675,7 @@ num: 64,
 fosrodah: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Dragon';
 }
 },
@@ -2711,7 +2687,7 @@ num: 204,
 faetoorshul: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Fairy';
 }
 },
@@ -2723,7 +2699,7 @@ num: 204,
 yoltoorshul: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Fire';
 }
 },
@@ -2735,7 +2711,7 @@ num: 204,
 vengaarnos: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Flying';
 }
 },
@@ -2747,7 +2723,7 @@ num: 204,
 fokrahdiin: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Ice';
 }
 },
@@ -2759,7 +2735,7 @@ num: 204,
 okaazfokrah: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Water';
 }
 },
@@ -2828,7 +2804,7 @@ if (source.item || source.volatiles['gem'] || move.id === 'fling') return;
 const yourItem = target.takeItem(source);
 if (!yourItem) return;
 if (!source.setItem(yourItem)) {
-target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+target.item = yourItem.id;
 return;
 }
 this.add('-item', source, yourItem, '[from] ability: Magician', '[of] ' + target);
@@ -2981,7 +2957,6 @@ num: 58,
 
 mirrorarmor: {
 onTryBoost(boost, target, source, effect) {
-// Don't bounce self stat changes, or boosts that have already bounced
 if (!source || target === source || !boost || effect.name === 'Mirror Armor') return;
 let b: BoostID;
 for (b in boost) {
@@ -3161,7 +3136,6 @@ num: 136,
 },
 
 multitype: {
-// Multitype's type-changing itself is implemented in statuses.js
 isPermanent: true,
 name: "Multitype",
 rating: 4,
@@ -3205,60 +3179,41 @@ num: 298,
 
 naturalcure: {
 onCheckShow(pokemon) {
-// This is complicated
-// For the most part, in-game, it's obvious whether or not Natural Cure activated,
-// since you can see how many of your opponent's pokemon are statused.
-// The only ambiguous situation happens in Doubles/Triples, where multiple pokemon
-// that could have Natural Cure switch out, but only some of them get cured.
 if (pokemon.side.active.length === 1) return;
 if (pokemon.showCure === true || pokemon.showCure === false) return;
 const cureList = [];
 let noCureCount = 0;
 for (const curPoke of pokemon.side.active) {
-// pokemon not statused
 if (!curPoke?.status) {
-// this.add('-message', "" + curPoke + " skipped: not statused or doesn't exist");
 continue;
 }
 if (curPoke.showCure) {
-// this.add('-message', "" + curPoke + " skipped: Natural Cure already known");
 continue;
 }
 const species = curPoke.species;
-// pokemon can't get Natural Cure
 if (!Object.values(species.abilities).includes('Natural Cure')) {
-// this.add('-message', "" + curPoke + " skipped: no Natural Cure");
 continue;
 }
-// pokemon's ability is known to be Natural Cure
 if (!species.abilities['1'] && !species.abilities['H']) {
-// this.add('-message', "" + curPoke + " skipped: only one ability");
 continue;
 }
-// pokemon isn't switching this turn
 if (curPoke !== pokemon && !this.queue.willSwitch(curPoke)) {
-// this.add('-message', "" + curPoke + " skipped: not switching");
 continue;
 }
 
 if (curPoke.hasAbility('naturalcure')) {
-// this.add('-message', "" + curPoke + " confirmed: could be Natural Cure (and is)");
 cureList.push(curPoke);
 } else {
-// this.add('-message', "" + curPoke + " confirmed: could be Natural Cure (but isn't)");
 noCureCount++;
 }
 }
 
 if (!cureList.length || !noCureCount) {
-// It's possible to know what pokemon were cured
 for (const pkmn of cureList) {
 pkmn.showCure = true;
 }
 } else {
-// It's not possible to know what pokemon were cured
 
-// Unlike a -hint, this is real information that battlers need, so we use a -message
 this.add('-message', "(" + cureList.length + " of " + pokemon.side.name + "'s pokemon " + (cureList.length === 1 ? "was" : "were") + " cured by Natural Cure.)");
 
 for (const pkmn of cureList) {
@@ -3269,15 +3224,11 @@ pkmn.showCure = false;
 onSwitchOut(pokemon) {
 if (!pokemon.status) return;
 
-// if pokemon.showCure is undefined, it was skipped because its ability
-// is known
 if (pokemon.showCure === undefined) pokemon.showCure = true;
 
 if (pokemon.showCure) this.add('-curestatus', pokemon, pokemon.status, '[from] ability: Natural Cure');
 pokemon.clearStatus();
 
-// only reset .showCure if it's false
-// (once you know a Pokemon has Natural Cure, its cures are always known)
 if (!pokemon.showCure) pokemon.showCure = undefined;
 },
 name: "Natural Cure",
@@ -3297,7 +3248,6 @@ num: 233,
 },
 
 neutralizinggas: {
-// Ability suppression implemented in sim/pokemon.ts:Pokemon#ignoringAbility
 onPreStart(pokemon) {
 if (pokemon.transformed) return;
 this.add('-ability', pokemon, 'Neutralizing Gas');
@@ -3329,21 +3279,14 @@ return;
 }
 this.add('-end', source, 'ability: Neutralizing Gas');
 
-// FIXME this happens before the pokemon switches out, should be the opposite order.
-// Not an easy fix since we cant use a supported event. Would need some kind of special event that
-// gathers events to run after the switch and then runs them when the ability is no longer accessible.
-// (If you're tackling this, do note extreme weathers have the same issue)
 
-// Mark this pokemon's ability as ending so Pokemon#ignoringAbility skips it
 if (source.abilityState.ending) return;
 source.abilityState.ending = true;
 const sortedActive = this.getAllActive();
 this.speedSort(sortedActive);
 for (const pokemon of sortedActive) {
 if (pokemon !== source) {
-if (pokemon.getAbility().isPermanent) continue; // does not interact with e.g Ice Face, Zen Mode
 
-// Will be suppressed by Pokemon#ignoringAbility if needed
 this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
 if (pokemon.ability === "gluttony") {
 pokemon.abilityState.gluttony = false;
@@ -3376,7 +3319,6 @@ normalate: {
 onModifyTypePriority: 1,
 onModifyType(move, pokemon) {
 if (!(move.isZ && move.category !== 'Status') && !noModifyType.includes(move.id) &&
-// TODO: Figure out actual interaction
 !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 move.type = 'Normal';
 move.typeChangerBoosted = this.effect;
@@ -3401,7 +3343,6 @@ this.add('-end', pokemon, 'move: Attract', '[from] ability: Oblivious');
 if (pokemon.volatiles['taunt']) {
 this.add('-activate', pokemon, 'ability: Oblivious');
 pokemon.removeVolatile('taunt');
-// Taunt's volatile already sends the -end message when removed
 }
 },
 onImmunity(type, pokemon) {
@@ -3536,10 +3477,8 @@ move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax) return;
 move.multihit = 2;
 move.multihitType = 'parentalbond';
 },
-// Damage modifier implemented in BattleActions#modifyDamage()
 onSourceModifySecondaries(secondaries, target, source, move) {
 if (move.multihitType === 'parentalbond' && move.id === 'secretpower' && move.hit < 2) {
-// hack to prevent accidentally suppressing King's Rock/Razor Fang
 return secondaries.filter(effect => effect.volatileStatus === 'flinch');
 }
 },
@@ -3830,7 +3769,6 @@ num: 232,
 propellertail: {
 onModifyMovePriority: 1,
 onModifyMove(move) {
-// most of the implementation is in Battle#getTarget
 move.tracksTarget = move.target !== 'scripted';
 },
 name: "Propeller Tail",
@@ -3863,7 +3801,6 @@ this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
 },
 onWeatherChange(pokemon) {
 if (pokemon.transformed) return;
-// Protosynthesis is not affected by Utility Umbrella
 if (this.field.isWeather('sunnyday')) {
 pokemon.addVolatile('protosynthesis');
 } else if (!pokemon.volatiles['protosynthesis']?.fromBooster) {
@@ -4220,7 +4157,6 @@ num: 79,
 },
 
 rkssystem: {
-// RKS System's type-changing itself is implemented in statuses.js
 isPermanent: true,
 name: "RKS System",
 rating: 4,
@@ -4534,10 +4470,8 @@ sheerforce: {
 onModifyMove(move, pokemon) {
 if (move.secondaries) {
 delete move.secondaries;
-// Technically not a secondary effect, but it is negated
 delete move.self;
 if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
-// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
 move.hasSheerForce = true;
 }
 },
@@ -4881,7 +4815,6 @@ num: 100,
 stalwart: {
 onModifyMovePriority: 1,
 onModifyMove(move) {
-// most of the implementation is in Battle#getTarget
 move.tracksTarget = move.target !== 'scripted';
 },
 name: "Stalwart",
@@ -5232,8 +5165,6 @@ if (!source || source === target) return;
 if (effect && effect.id === 'toxicspikes') return;
 if (status.id === 'slp' || status.id === 'frz') return;
 this.add('-activate', target, 'ability: Synchronize');
-// Hack to make status-prevention abilities think Synchronize is a status move
-// and show messages when activating against it.
 source.trySetStatus(status, target, {status: status.id, id: 'synchronize'} as Effect);
 },
 name: "Synchronize",
@@ -5491,12 +5422,9 @@ name: "Stealthy Spike Debris",
 
 trace: {
 onStart(pokemon) {
-// n.b. only affects Hackmons
-// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
 if (pokemon.adjacentFoes().some(foeActive => foeActive.ability === 'noability')) {
 this.effectState.gaveUp = true;
 }
-// interaction with Ability Shield is similar to No Ability
 if (pokemon.hasItem('Ability Shield')) {
 this.add('-block', pokemon, 'item: Ability Shield');
 this.effectState.gaveUp = true;
@@ -5920,7 +5848,6 @@ this.boost({atk: 1}, pokemon, pokemon);
 isBreakable: true,
 name: "Wind Rider",
 rating: 3.5,
-// We do not want Brambleghast to get Infiltrator in Randbats
 num: 274,
 },
 
@@ -5967,7 +5894,7 @@ return;
 if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
 pokemon.addVolatile('zenmode');
 } else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
-pokemon.addVolatile('zenmode'); // in case of base Darmanitan-Zen
+pokemon.addVolatile('zenmode');
 pokemon.removeVolatile('zenmode');
 }
 },
@@ -6080,7 +6007,6 @@ num: -3,
 persistent: {
 isNonstandard: "CAP",
 name: "Persistent",
-// implemented in the corresponding move
 rating: 3,
 num: -4,
 },
