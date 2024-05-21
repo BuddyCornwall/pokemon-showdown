@@ -184,6 +184,8 @@ const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 onBasePowerPriority: 23,
+}
+},
 onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
@@ -200,6 +202,8 @@ const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 onBasePowerPriority: 23,
+}
+},
 onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
