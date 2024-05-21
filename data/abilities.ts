@@ -6420,12 +6420,27 @@ if (move.flags['contact']) {
 return this.chainModify([100, 33]);
 }
 },
-
-
-
-
-
-
+onDamage(damage, target, source, effect) {
+if (
+effect.effectType === "Move" &&
+!effect.multihit &&
+(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+) {
+this.effectState.checkedBerserk = false;
+} else {
+this.effectState.checkedBerserk = true;
+}
+},
+onAfterMoveSecondary(target, source, move) {
+this.effectState.checkedKentaromiura = true;
+if (!source || source === target || !target.hp || !move.totalDamage) return;
+const lastAttackedBy = target.getLastAttackedBy();
+if (!lastAttackedBy) return;
+const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+this.boost({atk: 1}, target, target);
+}
+},
 name: "Knievel",
 },
 
