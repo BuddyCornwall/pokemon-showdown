@@ -6480,12 +6480,10 @@ onPreStart(pokemon) {
 this.add('-message', 'Moira!');
 this.add('-ability', pokemon, 'Grassy Surge');
 this.add('-ability', pokemon, 'Leaf Guard');
+this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
 },
 onStart(source) {
 this.field.setTerrain('grassyterrain');
-},
-onPreStart(pokemon) {
-this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
 },
 onSetStatus(status, target, source, effect) {
 if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
