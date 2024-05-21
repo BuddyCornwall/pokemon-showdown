@@ -6512,7 +6512,7 @@ yancha: {
 onPreStart(pokemon) {
 this.add('-message', 'Yancha is faster than lightning!');
 this.add('-ability', pokemon, 'Speed Boost');
-this.add('-ability', pokemon, Lightning Rod');
+this.add('-ability', pokemon, 'Lightning Rod');
 },
 onResidualOrder: 28,
 onResidualSubOrder: 2,
