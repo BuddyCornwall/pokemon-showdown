@@ -5393,7 +5393,7 @@ num: 181,
 toxicboost: {
 onBasePowerPriority: 19,
 onBasePower(basePower, attacker, defender, move) {
-if (attacker.status === 'tox') {
+if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
 return this.chainModify(1.5);
 }
 },
@@ -6324,7 +6324,7 @@ name: "Global Jones",
 
 strongbad: {
 onPreStart(pokemon) {
-this.add('-message', 'Strong Bad');
+this.add('-message', 'Strong Bad!');
 this.add('-ability', pokemon, 'Flash Fire');
 this.add('-ability', pokemon, 'Umbralate');
 },
@@ -6446,7 +6446,7 @@ name: "Knievel",
 
 rukiaryuko: {
 onPreStart(pokemon) {
-this.add('-message', 'Rukia Ryuko!');
+this.add('-message', 'Bankai! Somebody is going to get the CLAMPS');
 this.add('-ability', pokemon, 'Sharpness');
 this.add('-ability', pokemon, 'Rough Skin');
 },
