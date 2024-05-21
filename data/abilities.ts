@@ -2113,6 +2113,14 @@ return this.chainModify(2.1);
 name: "Pure Power",
 },
 
+sonicpower: {
+onModifySpaPriority: 5,
+onModifySpa(spe) {
+return this.chainModify(2.1);
+},
+name: "Sonic Power",
+},
+
 hungerswitch: {
 onResidualOrder: 29,
 onResidual(pokemon) {
@@ -6173,7 +6181,7 @@ num: 20,
 
 axolargel: {
 onPreStart(pokemon) {
-this.add('-message', 'Axolargel is very Cold & hates Mold');
+this.add('-message', 'Axolargel is very Cold & hates Mold.');
 this.add('-ability', pokemon, 'Mold Breaker');
 this.add('-ability', pokemon, 'Refrigerate');
 },
@@ -6197,7 +6205,7 @@ name: "Axolargel",
 
 ugly: {
 onPreStart(pokemon) {
-this.add('-message', 'U G L Y is VERY angry');
+this.add('-message', 'U G L Y is VERY angry.');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
@@ -6214,6 +6222,325 @@ this.boost({atk: 12}, target, target);
 }
 },
 name: "UGLY",
+},
+
+incendiarykong: {
+onPreStart(pokemon) {
+this.add('-message', 'Incendiary Kong has fists of steel. *POW!*');
+this.add('-ability', pokemon, 'Steel Fist');
+this.add('-ability', pokemon, 'Sand Stream');
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['punch']) {
+this.debug('Steel Fist boost');
+return this.chainModify([100, 33]);
+}
+},
+onStart(source) {
+this.field.setWeather('sandstorm');
+},
+name: "Incendiary Kong",
+},
+
+beauty: {
+onPreStart(pokemon) {
+this.add('-message', 'The Toxic Queen has arrived,');
+this.add('-ability', pokemon, 'Queenly Majesty');
+this.add('-ability', pokemon, 'Toxic Boost');
+},
+onFoeTryMove(target, source, move) {
+const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+return;
+}
+const dazzlingHolder = this.effectState.target;
+if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+this.attrLastMove('[still]');
+this.add('cant', dazzlingHolder, 'ability: Queenly Majesty', move, '[of] ' + target);
+return false;
+}
+},
+isBreakable: true,
+onBasePowerPriority: 19,
+onBasePower(basePower, attacker, defender, move) {
+if (attacker.status === 'tox') {
+return this.chainModify(1.5);
+}
+},
+name: "BEAUTY",
+},
+
+flicker: {
+onPreStart(pokemon) {
+this.add('-message', 'Flicker can do this all day.');
+this.add('-ability', pokemon, 'Stamina');
+this.add('-ability', pokemon, 'Steely Spirit');
+},
+onDamagingHit(damage, target, source, effect) {
+this.boost({def: 1});
+},
+onAllyBasePowerPriority: 22,
+onAllyBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Steel') {
+this.debug('Steely Spirit boost');
+return this.chainModify(1.5);
+}
+},
+name: "Flicker",
+},
+
+globaljones: {
+onPreStart(pokemon) {
+this.add('-message', 'Global Jones is here to take over the world');
+this.add('-ability', pokemon, 'Unburden');
+this.add('-ability', pokemon, 'Yoltoorshul');
+},
+onAfterUseItem(item, pokemon) {
+if (pokemon !== this.effectState.target) return;
+pokemon.addVolatile('unburden');
+},
+onTakeItem(item, pokemon) {
+pokemon.addVolatile('unburden');
+},
+onEnd(pokemon) {
+pokemon.removeVolatile('unburden');
+},
+condition: {
+onModifySpe(spe, pokemon) {
+if (!pokemon.item && !pokemon.ignoringAbility()) {
+return this.chainModify(2);
+}
+},
+},
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
+move.type = 'Fire';
+}
+},
+name: "Global Jones",
+},
+
+strongbad: {
+onPreStart(pokemon) {
+this.add('-message', 'Strong Bad);
+this.add('-ability', pokemon, 'Flash Fire');
+this.add('-ability', pokemon, 'Umbralate');
+},
+onTryHit(target, source, move) {
+if (target !== source && move.type === 'Fire') {
+move.accuracy = true;
+if (!target.addVolatile('flashfire')) {
+this.add('-immune', target, '[from] ability: Flash Fire');
+}
+return null;
+}
+},
+onEnd(pokemon) {
+pokemon.removeVolatile('flashfire');
+},
+condition: {
+noCopy: true, // doesn't get copied by Baton Pass
+onStart(target) {
+this.add('-start', target, 'ability: Flash Fire');
+},
+onModifyAtkPriority: 5,
+onModifyAtk(atk, attacker, defender, move) {
+if (move.type === 'Fire' && attacker.hasAbility('flashfire')) {
+this.debug('Flash Fire boost');
+return this.chainModify(1.5);
+}
+},
+onModifySpAPriority: 5,
+onModifySpA(atk, attacker, defender, move) {
+if (move.type === 'Fire' && attacker.hasAbility('flashfire')) {
+this.debug('Flash Fire boost');
+return this.chainModify(1.5);
+}
+},
+onEnd(target) {
+this.add('-end', target, 'ability: Flash Fire', '[silent]');
+},
+},
+isBreakable: true,
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+move.type = 'Dark';
+move.typeChangerBoosted = this.effect;
+}
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, pokemon, target, move) {
+if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+},
+name: "Strong Bad",
+},
+
+jonsí: {
+onPreStart(pokemon) {
+this.add('-message', 'The Ice Queen approaches');
+this.add('-ability', pokemon, 'Ice Body');
+this.add('-ability', pokemon, 'Unnerve');
+},
+onWeather(target, source, effect) {
+if (effect.id === 'hail' || effect.id === 'snow') {
+this.heal(target.baseMaxhp / 9);
+}
+},
+onImmunity(type, pokemon) {
+if (type === 'hail') return false;
+},
+onPreStart(pokemon) {
+this.add('-ability', pokemon, 'Unnerve');
+this.effectState.unnerved = true;
+},
+onStart(pokemon) {
+if (this.effectState.unnerved) return;
+this.add('-ability', pokemon, 'Unnerve');
+this.effectState.unnerved = true;
+},
+onEnd() {
+this.effectState.unnerved = false;
+},
+onFoeTryEatItem() {
+return !this.effectState.unnerved;
+},
+name: "Jonsí",
+},
+
+knievel: {
+onPreStart(pokemon) {
+this.add('-message', 'Knievel!');
+this.add('-ability', pokemon, 'Tough Claws');
+this.add('-ability', pokemon, 'Early Bird');
+},
+onBasePowerPriority: 21,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['contact']) {
+return this.chainModify([100, 33]);
+}
+},
+
+
+
+
+
+
+name: "Knievel",
+},
+
+rukiaryuko: {
+onPreStart(pokemon) {
+this.add('-message', 'Rukia Ryuko!');
+this.add('-ability', pokemon, 'Sharpness');
+this.add('-ability', pokemon, 'Rough Skin');
+},
+onBasePowerPriority: 19,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['slicing']) {
+this.debug('Shapness boost');
+return this.chainModify(1.5);
+}
+},
+onDamagingHitOrder: 1,
+onDamagingHit(damage, target, source, move) {
+if (this.checkMoveMakesContact(move, source, target, true)) {
+this.damage(source.baseMaxhp / 5, source, target);
+}
+},
+name: "Rukia Ryuko",
+},
+
+happywol: {
+onPreStart(pokemon) {
+this.add('-message', 'Wol!);
+this.add('-ability', pokemon, 'Serene Grace');
+this.add('-ability', pokemon, 'Neuroforce');
+},
+onModifyMovePriority: -2,
+onModifyMove(move) {
+if (move.secondaries) {
+this.debug('doubling secondary chance');
+for (const secondary of move.secondaries) {
+if (secondary.chance) secondary.chance *= 2;
+}
+}
+if (move.self?.chance) move.self.chance *= 2;
+},
+onModifyDamage(damage, source, target, move) {
+if (move && target.getMoveHitData(move).typeMod > 0) {
+return this.chainModify([100, 33]);
+}
+},
+name: "Happy Wol",
+},
+
+moira: {
+onPreStart(pokemon) {
+this.add('-message', 'Moira!');
+this.add('-ability', pokemon, 'Grassy Surge');
+this.add('-ability', pokemon, 'Leaf Guard');
+},
+onStart(source) {
+this.field.setTerrain('grassyterrain');
+},
+onPreStart(pokemon) {
+this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
+},
+onSetStatus(status, target, source, effect) {
+if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+if ((effect as Move)?.status) {
+this.add('-immune', target, '[from] ability: Leaf Guard');
+}
+return false;
+}
+},
+onTryAddVolatile(status, target) {
+if (status.id === 'yawn' && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+this.add('-immune', target, '[from] ability: Leaf Guard');
+return null;
+}
+},
+isBreakable: true,
+name: "Moira",
+},
+
+yancha: {
+onPreStart(pokemon) {
+this.add('-message', 'Yancha is faster than lightning!');
+this.add('-ability', pokemon, 'Speed Boost');
+this.add('-ability', pokemon, Lightning Rod');
+},
+onResidualOrder: 28,
+onResidualSubOrder: 2,
+onResidual(pokemon) {
+if (pokemon.activeTurns) {
+this.boost({spe: 1});
+}
+},
+onTryHit(target, source, move) {
+if (target !== source && move.type === 'Electric') {
+if (!this.boost({spa: 1.5})) {
+this.add('-immune', target, '[from] ability: Lightning Rod');
+}
+return null;
+}
+},
+onAnyRedirectTarget(target, source, source2, move) {
+if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
+const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+if (move.smartTarget) move.smartTarget = false;
+if (this.effectState.target !== target) {
+this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
+}
+return this.effectState.target;
+}
+},
+name: "Yancha",
 },
 
 };
