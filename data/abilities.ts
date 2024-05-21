@@ -6384,17 +6384,6 @@ onPreStart(pokemon) {
 this.add('-message', 'The Ice Queen approaches');
 this.add('-ability', pokemon, 'Ice Body');
 this.add('-ability', pokemon, 'Unnerve');
-},
-onWeather(target, source, effect) {
-if (effect.id === 'hail' || effect.id === 'snow') {
-this.heal(target.baseMaxhp / 9);
-}
-},
-onImmunity(type, pokemon) {
-if (type === 'hail') return false;
-},
-onPreStart(pokemon) {
-this.add('-ability', pokemon, 'Unnerve');
 this.effectState.unnerved = true;
 },
 onStart(pokemon) {
@@ -6407,6 +6396,14 @@ this.effectState.unnerved = false;
 },
 onFoeTryEatItem() {
 return !this.effectState.unnerved;
+},
+onWeather(target, source, effect) {
+if (effect.id === 'hail' || effect.id === 'snow') {
+this.heal(target.baseMaxhp / 9);
+}
+},
+onImmunity(type, pokemon) {
+if (type === 'hail') return false;
 },
 name: "Jonsí",
 },
