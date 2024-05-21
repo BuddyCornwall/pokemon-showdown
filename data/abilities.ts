@@ -235,6 +235,8 @@ num: 206,
 refrigerate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
 if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
 !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 move.type = 'Ice';
@@ -6245,7 +6247,7 @@ name: "Incendiary Kong",
 
 beauty: {
 onPreStart(pokemon) {
-this.add('-message', 'The Toxic Queen has arrived,');
+this.add('-message', 'The Toxic Queen has arrived!');
 this.add('-ability', pokemon, 'Queenly Majesty');
 this.add('-ability', pokemon, 'Toxic Boost');
 },
@@ -6412,7 +6414,7 @@ knievel: {
 onPreStart(pokemon) {
 this.add('-message', 'Knievel!');
 this.add('-ability', pokemon, 'Tough Claws');
-this.add('-ability', pokemon, 'Early Bird');
+this.add('-ability', pokemon, 'Kentaromiura');
 },
 onBasePowerPriority: 21,
 onBasePower(basePower, attacker, defender, move) {
