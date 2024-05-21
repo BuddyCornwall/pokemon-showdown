@@ -5393,7 +5393,7 @@ num: 181,
 toxicboost: {
 onBasePowerPriority: 19,
 onBasePower(basePower, attacker, defender, move) {
-if ((attacker.status === 'tox' || attacker.status === 'tox') && move.category === 'Physical') {
+if (attacker.status === 'tox') {
 return this.chainModify(1.5);
 }
 },
@@ -6456,7 +6456,7 @@ name: "Rukia Ryuko",
 
 happywol: {
 onPreStart(pokemon) {
-this.add('-message', 'Wol!);
+this.add('-message', 'Wol!');
 this.add('-ability', pokemon, 'Serene Grace');
 this.add('-ability', pokemon, 'Neuroforce');
 },
