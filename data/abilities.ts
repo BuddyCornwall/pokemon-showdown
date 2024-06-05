@@ -3919,13 +3919,13 @@ onBasePowerPriority: 7,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['sound']) {
 this.debug('Punk Rock boost');
-return this.chainModify([100, 33]);
+return this.chainModify([100, 15]);
 }
 },
 onSourceModifyDamage(damage, source, target, move) {
 if (move.flags['sound']) {
 this.debug('Punk Rock weaken');
-return this.chainModify(0.5);
+return this.chainModify(0.15);
 }
 },
 isBreakable: true,
@@ -6236,7 +6236,7 @@ name: "Axolargel",
 
 ugly: {
 onPreStart(pokemon) {
-this.add('-message', 'U G L Y is VERY angry.');
+this.add('-message', 'UGLY is VERY angry.');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
 },
