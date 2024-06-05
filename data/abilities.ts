@@ -6355,7 +6355,7 @@ name: "Global Jones",
 
 strongbad: {
 onPreStart(pokemon) {
-this.add('-message', 'Strong Bad!');
+this.add('-message', 'Strong Bad is on Fire!');
 this.add('-ability', pokemon, 'Flash Fire');
 this.add('-ability', pokemon, 'Umbralate');
 },
@@ -6477,7 +6477,7 @@ name: "Knievel",
 
 rukiaryuko: {
 onPreStart(pokemon) {
-this.add('-message', 'Bankai! Somebody is going to get the CLAMPS');
+this.add('-message', 'B A N K A I! Somebody is going to get the CLAMPS');
 this.add('-ability', pokemon, 'Sharpness');
 this.add('-ability', pokemon, 'Rough Skin');
 },
@@ -6499,7 +6499,7 @@ name: "Rukia Ryuko",
 
 happywol: {
 onPreStart(pokemon) {
-this.add('-message', 'Wol!');
+this.add('-message', 'Wol is just happy to be here!');
 this.add('-ability', pokemon, 'Serene Grace');
 this.add('-ability', pokemon, 'Neuroforce');
 },
@@ -6523,7 +6523,7 @@ name: "Happy Wol",
 
 moira: {
 onPreStart(pokemon) {
-this.add('-message', 'Moira!');
+this.add('-message', 'Moira glides onto the scene!');
 this.add('-ability', pokemon, 'Grassy Surge');
 this.add('-ability', pokemon, 'Leaf Guard');
 this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
