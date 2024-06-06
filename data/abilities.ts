@@ -3,8 +3,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 noability: {
 isNonstandard: "Past",
 name: "No Ability",
-rating: 0.1,
-num: 0,
 },
 
 adaptability: {
@@ -12,8 +10,6 @@ onModifyMove(move) {
 move.stab = 2;
 },
 name: "Adaptability",
-rating: 4,
-num: 91,
 },
 
 aerolate: {
@@ -32,8 +28,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Aerolate",
-rating: 4,
-num: 184,
 },
 
 aqualate: {
@@ -52,8 +46,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Aqualate",
-rating: 4,
-num: 206,
 },
 
 dracolate: {
@@ -72,8 +64,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Dracolate",
-rating: 4,
-num: 206,
 },
 
 dwaynelate: {
@@ -92,8 +82,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Dwaynelate",
-rating: 4,
-num: 206,
 },
 
 electrolate: {
@@ -112,8 +100,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Electrolate",
-rating: 4,
-num: 206,
 },
 
 ferrolate: {
@@ -132,8 +118,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Ferrolate",
-rating: 4,
-num: 206,
 },
 
 gladilate: {
@@ -152,8 +136,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Gladilate",
-rating: 4,
-num: 206,
 },
 
 insectilate: {
@@ -172,8 +154,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Insectilate",
-rating: 4,
-num: 206,
 },
 
 necrolate: {
@@ -192,8 +172,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Necrolate",
-rating: 4,
-num: 206,
 },
 
 pixilate: {
@@ -211,8 +189,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Pixilate",
-rating: 4,
-num: 206,
 },
 
 psylate: {
@@ -230,8 +206,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Psylate",
-rating: 4,
-num: 206,
 },
 
 pyrolate: {
@@ -250,8 +224,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Pyrolate",
-rating: 4,
-num: 206,
 },
 
 refrigerate: {
@@ -270,8 +242,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Refrigerate",
-rating: 4,
-num: 206,
 },
 
 terralate: {
@@ -290,8 +260,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Psylate",
-rating: 4,
-num: 206,
 },
 
 umbralate: {
@@ -310,8 +278,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Umbralate",
-rating: 4,
-num: 206,
 },
 
 venelate: {
@@ -330,8 +296,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
 },
 name: "Venelate",
-rating: 4,
-num: 206,
 },
 
 aftermath: {
@@ -342,8 +306,6 @@ if (!target.hp && this.checkMoveMakesContact(move, source, target, true)) {
 this.damage(source.baseMaxhp / 3, source, target);
 }
 },
-rating: 2,
-num: 106,
 },
 
 airlock: {
@@ -362,8 +324,6 @@ this.eachEvent('WeatherChange', this.effect);
 },
 suppressWeather: true,
 name: "Air Lock",
-rating: 1.5,
-num: 76,
 },
 
 analytic: {
@@ -383,8 +343,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Analytic",
-rating: 2.5,
-num: 148,
 },
 
 angerpoint: {
@@ -395,8 +353,6 @@ this.boost({atk: 12}, target, target);
 }
 },
 name: "Anger Point",
-rating: 1,
-num: 83,
 },
 
 mobpsycho100: {
@@ -442,8 +398,6 @@ this.boost({atk: 1, spa: 1, spe: 1, def: -1, spd: -1}, target, target);
 }
 },
 name: "Anger Shell",
-rating: 3,
-num: 271,
 },
 
 anticipation: {
@@ -464,8 +418,6 @@ return;
 }
 },
 name: "Anticipation",
-rating: 0.5,
-num: 107,
 },
 
 arenatrap: {
@@ -483,8 +435,6 @@ pokemon.maybeTrapped = true;
 }
 },
 name: "Arena Trap",
-rating: 5,
-num: 71,
 },
 
 armortail: {
@@ -502,8 +452,6 @@ return false;
 },
 isBreakable: true,
 name: "Armor Tail",
-rating: 2.5,
-num: 296,
 },
 
 aromaveil: {
@@ -518,8 +466,6 @@ return null;
 },
 isBreakable: true,
 name: "Aroma Veil",
-rating: 2,
-num: 165,
 },
 
 asoneglastrier: {
@@ -541,8 +487,6 @@ this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'
 },
 isPermanent: true,
 name: "As One (Glastrier)",
-rating: 3.5,
-num: 266,
 },
 
 asonespectrier: {
@@ -564,8 +508,6 @@ this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
 },
 isPermanent: true,
 name: "As One (Spectrier)",
-rating: 3.5,
-num: 267,
 },
 
 aurabreak: {
@@ -579,8 +521,6 @@ move.hasAuraBreak = true;
 },
 isBreakable: true,
 name: "Aura Break",
-rating: 1,
-num: 188,
 },
 
 baddreams: {
@@ -595,8 +535,6 @@ this.damage(target.baseMaxhp / 6, target, pokemon);
 }
 },
 name: "Bad Dreams",
-rating: 1.5,
-num: 123,
 },
 
 freezeinhell: {
@@ -611,8 +549,6 @@ this.damage(target.baseMaxhp / 6, target, pokemon);
 }
 },
 name: "Freeze in Hell",
-rating: 1.5,
-num: 123,
 },
 
 shockingconsequences: {
@@ -627,14 +563,10 @@ this.damage(target.baseMaxhp / 6, target, pokemon);
 }
 },
 name: "Shocking Consequences",
-rating: 1.5,
-num: 123,
 },
 
 ballfetch: {
 name: "Ball Fetch",
-rating: 0,
-num: 237,
 },
 
 synergysurge: {
@@ -646,8 +578,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Synergy Surge",
-rating: 0,
-num: 217,
 },
 
 inspireaura: {
@@ -659,16 +589,12 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Inspire Aura",
-rating: 0,
-num: 217,
 },
 
 battlearmor: {
 onCriticalHit: false,
 isBreakable: true,
 name: "Battle Armor",
-rating: 1,
-num: 4,
 },
 
 battlebond: {
@@ -683,8 +609,6 @@ source.abilityState.battleBondTriggered = true;
 },
 isPermanent: true,
 name: "Battle Bond",
-rating: 3.5,
-num: 210,
 },
 
 beadsofruin: {
@@ -701,8 +625,6 @@ this.debug('Beads of Ruin SpD drop');
 return this.chainModify(0.66);
 },
 name: "Beads of Ruin",
-rating: 4.5,
-num: 284,
 },
 
 beastboost: {
@@ -713,8 +635,6 @@ this.boost({[bestStat]: length}, source);
 }
 },
 name: "Beast Boost",
-rating: 3.5,
-num: 224,
 },
 
 berserk: {
@@ -740,8 +660,6 @@ this.boost({spa: 1}, target, target);
 }
 },
 name: "Berserk",
-rating: 2,
-num: 201,
 },
 
 kentaromiura: {
@@ -767,8 +685,6 @@ this.boost({atk: 1}, target, target);
 }
 },
 name: "Kentaromiura",
-rating: 2,
-num: 201,
 },
 
 bigpecks: {
@@ -783,8 +699,6 @@ this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", "[o
 },
 isBreakable: true,
 name: "Big Pecks",
-rating: 0.5,
-num: 145,
 },
 
 blaze: {
@@ -803,8 +717,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Blaze",
-rating: 2,
-num: 66,
 },
 
 bulletproof: {
@@ -816,8 +728,6 @@ return null;
 },
 isBreakable: true,
 name: "Bulletproof",
-rating: 3,
-num: 171,
 },
 
 cheekpouch: {
@@ -825,8 +735,6 @@ onEatItem(item, pokemon) {
 this.heal(pokemon.baseMaxhp / 3);
 },
 name: "Cheek Pouch",
-rating: 2,
-num: 167,
 },
 
 chillingneigh: {
@@ -836,8 +744,6 @@ this.boost({atk: length}, source);
 }
 },
 name: "Chilling Neigh",
-rating: 3,
-num: 264,
 },
 
 chlorophyll: {
@@ -847,8 +753,6 @@ return this.chainModify(2);
 }
 },
 name: "Chlorophyll",
-rating: 3,
-num: 34,
 },
 
 clearbody: {
@@ -868,8 +772,6 @@ this.add("-fail", target, "unboost", "[from] ability: Clear Body", "[of] " + tar
 },
 isBreakable: true,
 name: "Clear Body",
-rating: 2,
-num: 29,
 },
 
 cloudnine: {
@@ -888,8 +790,6 @@ this.eachEvent('WeatherChange', this.effect);
 },
 suppressWeather: true,
 name: "Cloud Nine",
-rating: 1.5,
-num: 13,
 },
 
 colorchange: {
@@ -912,8 +812,6 @@ action.targetLoc = -1;
 }
 },
 name: "Color Change",
-rating: 0,
-num: 16,
 },
 
 comatose: {
@@ -928,8 +826,6 @@ return false;
 },
 isPermanent: true,
 name: "Comatose",
-rating: 4,
-num: 213,
 },
 
 commander: {
@@ -954,8 +850,6 @@ pokemon.removeVolatile('commanding');
 },
 isPermanent: true,
 name: "Commander",
-rating: 0,
-num: 279,
 },
 
 competitive: {
@@ -978,8 +872,6 @@ this.boost({spa: 2}, target, target, null, false, true);
 }
 },
 name: "Competitive",
-rating: 2.5,
-num: 172,
 },
 
 compoundeyes: {
@@ -990,8 +882,6 @@ this.debug('compoundeyes - enhancing accuracy');
 return this.chainModify([100, 33]);
 },
 name: "Compound Eyes",
-rating: 3,
-num: 14,
 },
 
 contrary: {
@@ -1004,14 +894,10 @@ boost[i]! *= -1;
 },
 isBreakable: true,
 name: "Contrary",
-rating: 4.5,
-num: 126,
 },
 
 corrosion: {
 name: "Corrosion",
-rating: 2.5,
-num: 212,
 },
 
 costar: {
@@ -1034,8 +920,6 @@ pokemon.removeVolatile(volatile);
 this.add('-copyboost', pokemon, ally, '[from] ability: Costar');
 },
 name: "Costar",
-rating: 0,
-num: 294,
 },
 
 cottondown: {
@@ -1051,8 +935,6 @@ this.boost({spe: -1}, pokemon, target, null, true);
 }
 },
 name: "Cotton Down",
-rating: 2,
-num: 238,
 },
 
 cudchew: {
@@ -1085,8 +967,6 @@ if (item.onEat) pokemon.ateBerry = true;
 },
 },
 name: "Cud Chew",
-rating: 2,
-num: 291,
 },
 
 curiousmedicine: {
@@ -1097,8 +977,6 @@ this.add('-clearboost', ally, '[from] ability: Curious Medicine', '[of] ' + poke
 }
 },
 name: "Curious Medicine",
-rating: 0,
-num: 261,
 },
 
 cursedbody: {
@@ -1111,8 +989,6 @@ source.addVolatile('disable', this.effectState.target);
 }
 },
 name: "Cursed Body",
-rating: 2,
-num: 130,
 },
 
 cutecharm: {
@@ -1124,8 +1000,6 @@ source.addVolatile('attract', this.effectState.target);
 }
 },
 name: "Cute Charm",
-rating: 0.5,
-num: 56,
 },
 
 damp: {
@@ -1143,14 +1017,10 @@ return false;
 },
 isBreakable: true,
 name: "Damp",
-rating: 0.5,
-num: 6,
 },
 
 dancer: {
 name: "Dancer",
-rating: 1.5,
-num: 216,
 },
 
 darkaura: {
@@ -1166,8 +1036,6 @@ if (move.auraBooster !== this.effectState.target) return;
 return this.chainModify([move.hasAuraBreak ? 100 : 100, 33]);
 },
 name: "Dark Aura",
-rating: 3,
-num: 186,
 },
 
 dauntlessshield: {
@@ -1177,8 +1045,6 @@ pokemon.shieldBoost = true;
 this.boost({def: 1}, pokemon);
 },
 name: "Dauntless Shield",
-rating: 3.5,
-num: 235,
 },
 
 dazzling: {
@@ -1196,8 +1062,6 @@ return false;
 },
 isBreakable: true,
 name: "Dazzling",
-rating: 2.5,
-num: 219,
 },
 
 defeatist: {
@@ -1214,8 +1078,6 @@ return this.chainModify(0.5);
 }
 },
 name: "Defeatist",
-rating: -1,
-num: 129,
 },
 
 defiant: {
@@ -1238,8 +1100,6 @@ this.boost({atk: 2}, target, target, null, false, true);
 }
 },
 name: "Defiant",
-rating: 3,
-num: 128,
 },
 
 deltastream: {
@@ -1262,8 +1122,6 @@ return;
 this.field.clearWeather();
 },
 name: "Delta Stream",
-rating: 4,
-num: 191,
 },
 
 desolateland: {
@@ -1286,8 +1144,6 @@ return;
 this.field.clearWeather();
 },
 name: "Desolate Land",
-rating: 4.5,
-num: 190,
 },
 
 disguise: {
@@ -1335,8 +1191,6 @@ this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get(specie
 isBreakable: true,
 isPermanent: true,
 name: "Disguise",
-rating: 3.5,
-num: 209,
 },
 
 download: {
@@ -1354,8 +1208,6 @@ this.boost({atk: 1});
 }
 },
 name: "Download",
-rating: 3.5,
-num: 88,
 },
 
 dragonsmaw: {
@@ -1374,8 +1226,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Dragon's Maw",
-rating: 3.5,
-num: 263,
 },
 
 quackdrive: {
@@ -1387,8 +1237,6 @@ if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
 this.field.setWeather('raindance');
 },
 name: "Quackdrive",
-rating: 4,
-num: 2,
 },
 
 drought: {
@@ -1400,8 +1248,6 @@ if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
 this.field.setWeather('sunnyday');
 },
 name: "Drought",
-rating: 4,
-num: 70,
 },
 
 dryskin: {
@@ -1429,14 +1275,10 @@ this.damage(target.baseMaxhp / 8, target, target);
 },
 isBreakable: true,
 name: "Dry Skin",
-rating: 3,
-num: 87,
 },
 
 earlybird: {
 name: "Early Bird",
-rating: 1.5,
-num: 48,
 },
 
 eartheater: {
@@ -1450,8 +1292,6 @@ return null;
 },
 isBreakable: true,
 name: "Earth Eater",
-rating: 3.5,
-num: 297,
 },
 
 effectspore: {
@@ -1468,8 +1308,6 @@ source.setStatus('tox', target);
 }
 },
 name: "Effect Spore",
-rating: 2,
-num: 27,
 },
 
 electricsurge: {
@@ -1482,8 +1320,6 @@ this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are n
 },
 
 name: "Electric Surge",
-rating: 4,
-num: 226,
 },
 
 electromorphosis: {
@@ -1492,8 +1328,6 @@ onDamagingHit(damage, target, source, move) {
 target.addVolatile('charge');
 },
 name: "Electromorphosis",
-rating: 2.5,
-num: 280,
 },
 
 emergencyexit: {
@@ -1508,8 +1342,6 @@ target.switchFlag = true;
 this.add('-activate', target, 'ability: Emergency Exit');
 },
 name: "Emergency Exit",
-rating: 1,
-num: 194,
 },
 
 fairyaura: {
@@ -1525,8 +1357,6 @@ if (move.auraBooster !== this.effectState.target) return;
 return this.chainModify([move.hasAuraBreak ? 100 : 100, 33]);
 },
 name: "Fairy Aura",
-rating: 3,
-num: 187,
 },
 
 filter: {
@@ -1538,8 +1368,6 @@ return this.chainModify(0.75);
 },
 isBreakable: true,
 name: "Filter",
-rating: 3,
-num: 111,
 },
 
 flamebody: {
@@ -1551,8 +1379,6 @@ source.trySetStatus('brn', target);
 }
 },
 name: "Flame Body",
-rating: 2,
-num: 49,
 },
 
 flareboost: {
@@ -1563,8 +1389,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Flare Boost",
-rating: 2,
-num: 138,
 },
 
 flashfire: {
@@ -1605,8 +1429,6 @@ this.add('-end', target, 'ability: Flash Fire', '[silent]');
 },
 isBreakable: true,
 name: "Flash Fire",
-rating: 3.5,
-num: 18,
 },
 
 flowergift: {
@@ -1642,8 +1464,6 @@ return this.chainModify(1.5);
 },
 isBreakable: true,
 name: "Flower Gift",
-rating: 1,
-num: 122,
 },
 
 flowerveil: {
@@ -1682,8 +1502,6 @@ return null;
 },
 isBreakable: true,
 name: "Flower Veil",
-rating: 0,
-num: 166,
 },
 
 fluffy: {
@@ -1695,8 +1513,6 @@ return this.chainModify(mod);
 },
 isBreakable: true,
 name: "Fluffy",
-rating: 3.5,
-num: 218,
 },
 
 forecast: {
@@ -1728,8 +1544,6 @@ pokemon.formeChange(forme, this.effect, false, '[msg]');
 }
 },
 name: "Forecast",
-rating: 2,
-num: 59,
 },
 
 forewarn: {
@@ -1757,8 +1571,6 @@ const [warnMoveName, warnTarget] = this.sample(warnMoves);
 this.add('-activate', pokemon, 'ability: Forewarn', warnMoveName, '[of] ' + warnTarget);
 },
 name: "Forewarn",
-rating: 0.5,
-num: 108,
 },
 
 friendguard: {
@@ -1770,8 +1582,6 @@ return this.chainModify(0.75);
 }
 },
 isBreakable: true,
-rating: 0,
-num: 132,
 },
 
 frisk: {
@@ -1783,8 +1593,6 @@ this.add('-item', target, target.getItem().name, '[from] ability: Frisk', '[of] 
 }
 },
 name: "Frisk",
-rating: 1.5,
-num: 119,
 },
 
 fullmetalbody: {
@@ -1803,8 +1611,6 @@ this.add("-fail", target, "unboost", "[from] ability: Full Metal Body", "[of] " 
 }
 },
 name: "Full Metal Body",
-rating: 2,
-num: 230,
 },
 
 furcoat: {
@@ -1814,8 +1620,6 @@ return this.chainModify(2);
 },
 isBreakable: true,
 name: "Fur Coat",
-rating: 4,
-num: 169,
 },
 
 galewings: {
@@ -1823,14 +1627,10 @@ onModifyPriority(priority, pokemon, target, move) {
 if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp) return priority + 2;
 },
 name: "Gale Wings",
-rating: 1.5,
-num: 177,
 },
 
 gluttony: {
 name: "Gluttony",
-rating: 1.5,
-num: 82,
 onStart(pokemon) {
 pokemon.abilityState.gluttony = true;
 },
@@ -1849,8 +1649,6 @@ return null;
 },
 isBreakable: true,
 name: "Good as Gold",
-rating: 5,
-num: 283,
 },
 
 gooey: {
@@ -1861,8 +1659,6 @@ this.boost({spe: -1}, source, target, null, true);
 }
 },
 name: "Gooey",
-rating: 2,
-num: 183,
 },
 
 gorillatactics: {
@@ -1902,8 +1698,6 @@ onEnd(pokemon) {
 pokemon.abilityState.choiceLock = "";
 },
 name: "Gorilla Tactics",
-rating: 4.5,
-num: 255,
 },
 
 grasspelt: {
@@ -1913,8 +1707,6 @@ if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
 },
 isBreakable: true,
 name: "Grass Pelt",
-rating: 0.5,
-num: 179,
 },
 
 grassysurge: {
@@ -1927,8 +1719,6 @@ this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now mo
 },
 
 name: "Grassy Surge",
-rating: 4,
-num: 229,
 },
 
 grimneigh: {
@@ -1938,8 +1728,6 @@ this.boost({spa: length}, source);
 }
 },
 name: "Grim Neigh",
-rating: 3,
-num: 265,
 },
 
 guarddog: {
@@ -1956,8 +1744,6 @@ this.boost({atk: 1}, target, target, null, false, true);
 },
 isBreakable: true,
 name: "Guard Dog",
-rating: 2,
-num: 275,
 },
 
 gulpmissile: {
@@ -1984,8 +1770,6 @@ source.formeChange(forme, effect);
 },
 isPermanent: true,
 name: "Gulp Missile",
-rating: 2.5,
-num: 241,
 },
 
 guts: {
@@ -1996,8 +1780,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Guts",
-rating: 3.5,
-num: 62,
 },
 
 griffith: {
@@ -2008,8 +1790,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Guts",
-rating: 3.5,
-num: 62,
 },
 
 hadronengine: {
@@ -2023,8 +1803,6 @@ this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are n
 
 isPermanent: true,
 name: "Hadron Engine",
-rating: 4.5,
-num: 289,
 },
 
 nimbusbarrier: {
@@ -2038,8 +1816,6 @@ this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now le
 
 isPermanent: true,
 name: "Nimbus Barrier",
-rating: 4.5,
-num: 289,
 },
 
 psychicsanctum: {
@@ -2053,8 +1829,6 @@ this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now
 
 isPermanent: true,
 name: "Psychic Sanctum",
-rating: 4.5,
-num: 289,
 },
 
 harvest: {
@@ -2070,8 +1844,6 @@ this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Harvest');
 }
 }
 },
-rating: 2.5,
-num: 139,
 },
 
 healer: {
@@ -2086,8 +1858,6 @@ allyActive.cureStatus();
 }
 }
 },
-rating: 0,
-num: 131,
 },
 
 heatproof: {
@@ -2104,8 +1874,6 @@ return damage / 2;
 },
 isBreakable: true,
 name: "Heatproof",
-rating: 2,
-num: 85,
 },
 
 heavymetal: {
@@ -2115,14 +1883,10 @@ return weighthg * 2.5;
 },
 isBreakable: true,
 name: "Heavy Metal",
-rating: 0,
-num: 134,
 },
 
 honeygather: {
 name: "Honey Gather",
-rating: 0,
-num: 118,
 },
 
 hugepower: {
@@ -2131,8 +1895,6 @@ onModifyAtk(atk) {
 return this.chainModify(2.1);
 },
 name: "Huge Power",
-rating: 5,
-num: 37,
 },
 
 purepower: {
@@ -2159,8 +1921,6 @@ const targetForme = pokemon.species.name === 'Morpeko' ? 'Morpeko-Hangry' : 'Mor
 pokemon.formeChange(targetForme);
 },
 name: "Hunger Switch",
-rating: 1,
-num: 258,
 },
 
 hustle: {
@@ -2175,8 +1935,6 @@ return this.chainModify([125, 1000]);
 }
 },
 name: "Hustle",
-rating: 3.5,
-num: 55,
 },
 
 hydration: {
@@ -2190,8 +1948,6 @@ pokemon.cureStatus();
 }
 },
 name: "Hydration",
-rating: 1.5,
-num: 93,
 },
 
 hypercutter: {
@@ -2206,8 +1962,6 @@ this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "
 },
 isBreakable: true,
 name: "Hyper Cutter",
-rating: 1.5,
-num: 52,
 },
 
 icebody: {
@@ -2220,8 +1974,6 @@ onImmunity(type, pokemon) {
 if (type === 'hail') return false;
 },
 name: "Ice Body",
-rating: 1,
-num: 115,
 },
 
 iceface: {
@@ -2279,8 +2031,6 @@ pokemon.formeChange('Eiscue', this.effect, true);
 isBreakable: true,
 isPermanent: true,
 name: "Ice Face",
-rating: 3,
-num: 248,
 },
 
 icescales: {
@@ -2291,8 +2041,6 @@ return this.chainModify(0.5);
 },
 isBreakable: true,
 name: "Ice Scales",
-rating: 4,
-num: 246,
 },
 
 metalarmour: {
@@ -2307,8 +2055,6 @@ name: "Metal Armour",
 
 illuminate: {
 name: "Illuminate",
-rating: 0,
-num: 35,
 },
 
 illusion: {
@@ -2341,8 +2087,6 @@ onFaint(pokemon) {
 pokemon.illusion = null;
 },
 name: "Illusion",
-rating: 4.5,
-num: 149,
 },
 
 immunity: {
@@ -2361,8 +2105,6 @@ return false;
 },
 isBreakable: true,
 name: "Immunity",
-rating: 2,
-num: 17,
 },
 
 imposter: {
@@ -2379,8 +2121,6 @@ this.effectState.switchingIn = false;
 },
 flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
 name: "Imposter",
-rating: 5,
-num: 150,
 },
 
 infiltrator: {
@@ -2388,8 +2128,6 @@ onModifyMove(move) {
 move.infiltrates = true;
 },
 name: "Infiltrator",
-rating: 2.5,
-num: 151,
 },
 
 innardsout: {
@@ -2400,8 +2138,6 @@ if (!target.hp) {
 this.damage(target.getUndynamaxedHP(damage), source, target);
 }
 },
-rating: 4,
-num: 215,
 },
 
 innerfocus: {
@@ -2416,8 +2152,6 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[
 },
 isBreakable: true,
 name: "Inner Focus",
-rating: 1,
-num: 39,
 },
 
 insomnia: {
@@ -2436,8 +2170,6 @@ return false;
 },
 isBreakable: true,
 name: "Insomnia",
-rating: 1.5,
-num: 15,
 },
 
 intimidate: {
@@ -2456,8 +2188,6 @@ this.boost({atk: -1}, target, pokemon, null, true);
 }
 },
 name: "Intimidate",
-rating: 3.5,
-num: 22,
 },
 
 dishearten: {
@@ -2476,8 +2206,6 @@ this.boost({spa: -1}, target, pokemon, null, true);
 }
 },
 name: "Dishearten",
-rating: 3.5,
-num: 22,
 },
 
 flustered: {
@@ -2496,8 +2224,6 @@ this.boost({spe: -1}, target, pokemon, null, true);
 }
 },
 name: "Flustered",
-rating: 3.5,
-num: 22,
 },
 
 intrepidsword: {
@@ -2507,8 +2233,6 @@ pokemon.swordBoost = true;
 this.boost({atk: 1}, pokemon);
 },
 name: "Intrepid Sword",
-rating: 4,
-num: 234,
 },
 
 ironbarbs: {
@@ -2519,8 +2243,6 @@ this.damage(source.baseMaxhp / 6, source, target);
 }
 },
 name: "Iron Barbs",
-rating: 2.5,
-num: 160,
 },
 
 ironfist: {
@@ -2532,8 +2254,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Iron Fist",
-rating: 3,
-num: 89,
 },
 
 justified: {
@@ -2543,8 +2263,6 @@ this.boost({atk: 1.5});
 }
 },
 name: "Justified",
-rating: 2.5,
-num: 154,
 },
 
 keeneye: {
@@ -2562,8 +2280,6 @@ move.ignoreEvasion = true;
 },
 isBreakable: true,
 name: "Keen Eye",
-rating: 0.5,
-num: 51,
 },
 
 klutz: {
@@ -2571,8 +2287,6 @@ onStart(pokemon) {
 this.singleEvent('End', pokemon.getItem(), pokemon.itemState, pokemon);
 },
 name: "Klutz",
-rating: -1,
-num: 103,
 },
 
 leafguard: {
@@ -2592,15 +2306,11 @@ return null;
 },
 isBreakable: true,
 name: "Leaf Guard",
-rating: 0.5,
-num: 102,
 },
 
 levitate: {
 isBreakable: true,
 name: "Levitate",
-rating: 3.5,
-num: 26,
 },
 
 libero: {
@@ -2618,8 +2328,6 @@ onSwitchIn() {
 delete this.effectState.libero;
 },
 name: "Libero",
-rating: 4,
-num: 236,
 },
 
 lightmetal: {
@@ -2628,8 +2336,6 @@ return this.trunc(weighthg / 2);
 },
 isBreakable: true,
 name: "Light Metal",
-rating: 1,
-num: 135,
 },
 
 lightningrod: {
@@ -2654,8 +2360,6 @@ return this.effectState.target;
 },
 isBreakable: true,
 name: "Lightning Rod",
-rating: 3,
-num: 31,
 },
 
 limber: {
@@ -2674,8 +2378,6 @@ return false;
 },
 isBreakable: true,
 name: "Limber",
-rating: 2,
-num: 7,
 },
 
 lingeringaroma: {
@@ -2692,8 +2394,6 @@ this.add('-activate', target, 'ability: Lingering Aroma', this.dex.abilities.get
 }
 },
 name: "Lingering Aroma",
-rating: 2,
-num: 268,
 },
 
 liquidooze: {
@@ -2706,8 +2406,6 @@ return 0;
 }
 },
 name: "Liquid Ooze",
-rating: 2.5,
-num: 64,
 },
 
 fosrodah: {
@@ -2718,8 +2416,6 @@ move.type = 'Dragon';
 }
 },
 name: "Fosrodah",
-rating: 1.5,
-num: 204,
 },
 
 faetoorshul: {
@@ -2730,8 +2426,6 @@ move.type = 'Fairy';
 }
 },
 name: "Faetoorshul",
-rating: 1.5,
-num: 204,
 },
 
 yoltoorshul: {
@@ -2742,8 +2436,6 @@ move.type = 'Fire';
 }
 },
 name: "Yoltoorshul",
-rating: 1.5,
-num: 204,
 },
 
 vengaarnos: {
@@ -2754,8 +2446,6 @@ move.type = 'Flying';
 }
 },
 name: "Vengaarnos",
-rating: 1.5,
-num: 204,
 },
 
 fokrahdiin: {
@@ -2766,8 +2456,6 @@ move.type = 'Ice';
 }
 },
 name: "Fokrahdiin",
-rating: 1.5,
-num: 204,
 },
 
 okaazfokrah: {
@@ -2778,8 +2466,6 @@ move.type = 'Water';
 }
 },
 name: "Okaazfokrah",
-rating: 1.5,
-num: 204,
 },
 
 longreach: {
@@ -2787,8 +2473,6 @@ onModifyMove(move) {
 delete move.flags['contact'];
 },
 name: "Long Reach",
-rating: 1,
-num: 203,
 },
 
 magicbounce: {
@@ -2818,8 +2502,6 @@ condition: {
 duration: 1,
 },
 isBreakable: true,
-rating: 4,
-num: 156,
 },
 
 magicguard: {
@@ -2830,8 +2512,6 @@ return false;
 }
 },
 name: "Magic Guard",
-rating: 4,
-num: 98,
 },
 
 magician: {
@@ -2849,8 +2529,6 @@ this.add('-item', source, yourItem, '[from] ability: Magician', '[of] ' + target
 }
 },
 name: "Magician",
-rating: 1,
-num: 170,
 },
 
 magmaarmor: {
@@ -2865,8 +2543,6 @@ if (type === 'frz') return false;
 },
 isBreakable: true,
 name: "Magma Armor",
-rating: 0.5,
-num: 40,
 },
 
 magneato: {
@@ -2891,8 +2567,6 @@ pokemon.maybeTrapped = true;
 }
 },
 name: "Magneato",
-rating: 4,
-num: 42,
 },
 
 marvelscale: {
@@ -2904,8 +2578,6 @@ return this.chainModify(1.5);
 },
 flags: {breakable: 1},
 name: "Marvel Scale",
-rating: 2.5,
-num: 63,
 },
 
 dcscale: {
@@ -2917,8 +2589,6 @@ return this.chainModify(1.5);
 },
 flags: {breakable: 1},
 name: "DC Scale",
-rating: 2.5,
-num: 63,
 },
 
 megalauncher: {
@@ -2929,8 +2599,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Mega Launcher",
-rating: 3,
-num: 178,
 },
 
 merciless: {
@@ -2938,8 +2606,6 @@ onModifyCritRatio(critRatio, source, target) {
 if (target && ['tox', 'tox'].includes(target.status)) return 5;
 },
 name: "Merciless",
-rating: 1.5,
-num: 196,
 },
 
 mimicry: {
@@ -2975,8 +2641,6 @@ this.add('-end', pokemon, 'typechange', '[silent]');
 }
 },
 name: "Mimicry",
-rating: 0,
-num: 250,
 },
 
 minus: {
@@ -2989,8 +2653,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Minus",
-rating: 0,
-num: 58,
 },
 
 mirrorarmor: {
@@ -3012,8 +2674,6 @@ this.boost(negativeBoost, source, target, null, true);
 },
 isBreakable: true,
 name: "Mirror Armor",
-rating: 2,
-num: 240,
 },
 
 mistysurge: {
@@ -3026,8 +2686,6 @@ this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now le
 },
 
 name: "Misty Surge",
-rating: 3.5,
-num: 228,
 },
 
 moldbreaker: {
@@ -3038,8 +2696,6 @@ onModifyMove(move) {
 move.ignoreAbility = true;
 },
 name: "Mold Breaker",
-rating: 3,
-num: 104,
 },
 
 moody: {
@@ -3070,8 +2726,6 @@ if (randomStat) boost[randomStat] = -2;
 this.boost(boost, pokemon, pokemon);
 },
 name: "Moody",
-rating: 5,
-num: 141,
 },
 
 mardy: {
@@ -3102,8 +2756,6 @@ if (randomStat) boost[randomStat] = -1;
 this.boost(boost, pokemon, pokemon);
 },
 name: "Mardy",
-rating: 5,
-num: 141,
 },
 
 motordrive: {
@@ -3117,8 +2769,6 @@ return null;
 },
 isBreakable: true,
 name: "Motor Drive",
-rating: 3,
-num: 78,
 },
 
 moxie: {
@@ -3128,8 +2778,6 @@ this.boost({atk: length}, source);
 }
 },
 name: "Moxie",
-rating: 3,
-num: 153,
 },
 
 valor: {
@@ -3139,8 +2787,6 @@ this.boost({spa: length}, source);
 }
 },
 name: "Valor",
-rating: 3,
-num: 153,
 },
 
 multiscale: {
@@ -3152,8 +2798,6 @@ return this.chainModify(0.5);
 },
 isBreakable: true,
 name: "Multiscale",
-rating: 3.5,
-num: 136,
 },
 
 invisiblescreen: {
@@ -3169,15 +2813,11 @@ this.boost({def: -.5, spd: -.5});
 },
 isBreakable: true,
 name: "Invisible Screen",
-rating: 3.5,
-num: 136,
 },
 
 multitype: {
 isPermanent: true,
 name: "Multitype",
-rating: 4,
-num: 121,
 },
 
 mummy: {
@@ -3194,8 +2834,6 @@ this.add('-activate', target, 'ability: Mummy', this.dex.abilities.get(oldAbilit
 }
 }
 },
-rating: 2,
-num: 152,
 },
 
 myceliummight: {
@@ -3211,8 +2849,6 @@ move.ignoreAbility = true;
 }
 },
 name: "Mycelium Might",
-rating: 2,
-num: 298,
 },
 
 naturalcure: {
@@ -3270,8 +2906,6 @@ pokemon.clearStatus();
 if (!pokemon.showCure) pokemon.showCure = undefined;
 },
 name: "Natural Cure",
-rating: 2.5,
-num: 30,
 },
 
 neuroforce: {
@@ -3281,8 +2915,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Neuroforce",
-rating: 2.5,
-num: 233,
 },
 
 neutralizinggas: {
@@ -3333,8 +2965,6 @@ pokemon.abilityState.gluttony = false;
 }
 },
 name: "Neutralizing Gas",
-rating: 4,
-num: 256,
 },
 
 noguard: {
@@ -3349,8 +2979,6 @@ return true;
 return accuracy;
 },
 name: "No Guard",
-rating: 4,
-num: 99,
 },
 
 normalate: {
@@ -3367,8 +2995,6 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 33]);
 },
 name: "Normalate",
-rating: 0,
-num: 96,
 },
 
 oblivious: {
@@ -3400,8 +3026,6 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Oblivious', '[of
 },
 isBreakable: true,
 name: "Oblivious",
-rating: 1.5,
-num: 12,
 },
 
 opportunist: {
@@ -3419,8 +3043,6 @@ if (Object.keys(positiveBoosts).length < 1) return;
 this.boost(positiveBoosts, pokemon);
 },
 name: "Opportunist",
-rating: 3,
-num: 290,
 },
 
 orichalcumpulse: {
@@ -3440,8 +3062,6 @@ return this.chainModify([5461, 4096]);
 },
 isPermanent: true,
 name: "Orichalcum Pulse",
-rating: 4.5,
-num: 288,
 },
 
 overcoat: {
@@ -3457,8 +3077,6 @@ return null;
 },
 isBreakable: true,
 name: "Overcoat",
-rating: 2,
-num: 142,
 },
 
 overgrow: {
@@ -3477,8 +3095,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Overgrow",
-rating: 2,
-num: 65,
 },
 
 owntempo: {
@@ -3504,8 +3120,6 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Own Tempo', '[of
 },
 isBreakable: true,
 name: "Own Tempo",
-rating: 1.5,
-num: 20,
 },
 
 parentalbond: {
@@ -3521,8 +3135,6 @@ return secondaries.filter(effect => effect.volatileStatus === 'flinch');
 }
 },
 name: "Parental Bond",
-rating: 4.5,
-num: 185,
 },
 
 pastelveil: {
@@ -3563,8 +3175,6 @@ return false;
 },
 isBreakable: true,
 name: "Pastel Veil",
-rating: 2,
-num: 257,
 },
 
 perishbody: {
@@ -3581,8 +3191,6 @@ pokemon.addVolatile('perishsong');
 }
 },
 name: "Perish Body",
-rating: 1,
-num: 253,
 },
 
 pickpocket: {
@@ -3604,8 +3212,6 @@ this.add('-item', target, yourItem, '[from] ability: Pickpocket', '[of] ' + sour
 }
 },
 name: "Pickpocket",
-rating: 1,
-num: 124,
 },
 
 pickup: {
@@ -3624,8 +3230,6 @@ this.add('-item', pokemon, this.dex.items.get(item), '[from] ability: Pickup');
 pokemon.setItem(item);
 },
 name: "Pickup",
-rating: 0.5,
-num: 53,
 },
 
 plus: {
@@ -3638,8 +3242,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Plus",
-rating: 0,
-num: 57,
 },
 
 poisonheal: {
@@ -3651,8 +3253,6 @@ return false;
 }
 },
 name: "Poison Heal",
-rating: 4,
-num: 90,
 },
 
 poisonpoint: {
@@ -3664,8 +3264,6 @@ source.trySetStatus('tox', target);
 }
 },
 name: "Poison Point",
-rating: 1.5,
-num: 38,
 },
 
 poisontouch: {
@@ -3677,8 +3275,6 @@ source.trySetStatus('tox', target);
 }
 },
 name: "Poison Touch",
-rating: 1.5,
-num: 38,
 },
 
 poisonpuppeteer: {
@@ -3691,8 +3287,6 @@ target.addVolatile('confusion');
 },
 flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1},
 name: "Poison Puppeteer",
-rating: 3,
-num: 310,
 },
 
 powerconstruct: {
@@ -3712,8 +3306,6 @@ this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
 },
 isPermanent: true,
 name: "Power Construct",
-rating: 5,
-num: 211,
 },
 
 powerofalchemy: {
@@ -3726,8 +3318,6 @@ this.add('-ability', this.effectState.target, ability, '[from] ability: Power of
 }
 },
 name: "Power of Alchemy",
-rating: 0,
-num: 223,
 },
 
 powerspot: {
@@ -3739,8 +3329,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Power Spot",
-rating: 0,
-num: 249,
 },
 
 prankster: {
@@ -3751,8 +3339,6 @@ return priority + 1;
 }
 },
 name: "Prankster",
-rating: 4,
-num: 158,
 },
 
 pressure: {
@@ -3764,8 +3350,6 @@ if (target.isAlly(source)) return;
 return 1;
 },
 name: "Pressure",
-rating: 2.5,
-num: 46,
 },
 
 primordialsea: {
@@ -3788,8 +3372,6 @@ return;
 this.field.clearWeather();
 },
 name: "Primordial Sea",
-rating: 4.5,
-num: 189,
 },
 
 prismarmor: {
@@ -3800,8 +3382,6 @@ return this.chainModify(0.75);
 }
 },
 name: "Prism Armor",
-rating: 3,
-num: 232,
 },
 
 propellertail: {
@@ -3810,8 +3390,6 @@ onModifyMove(move) {
 move.tracksTarget = move.target !== 'scripted';
 },
 name: "Propeller Tail",
-rating: 0,
-num: 239,
 },
 
 protean: {
@@ -3829,8 +3407,6 @@ onSwitchIn(pokemon) {
 delete this.effectState.protean;
 },
 name: "Protean",
-rating: 4,
-num: 168,
 },
 
 protosynthesis: {
@@ -3896,8 +3472,6 @@ this.add('-end', pokemon, 'Protosynthesis');
 },
 isPermanent: true,
 name: "Protosynthesis",
-rating: 3,
-num: 281,
 },
 
 psychicsurge: {
@@ -3910,8 +3484,6 @@ this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now
 },
 
 name: "Psychic Surge",
-rating: 4,
-num: 227,
 },
 
 punkrock: {
@@ -3922,16 +3494,8 @@ this.debug('Punk Rock boost');
 return this.chainModify([100, 15]);
 }
 },
-onSourceModifyDamage(damage, source, target, move) {
-if (move.flags['sound']) {
-this.debug('Punk Rock weaken');
-return this.chainModify(0.15);
-}
-},
 isBreakable: true,
 name: "Punk Rock",
-rating: 3.5,
-num: 244,
 },
 
 purifyingsalt: {
@@ -3963,8 +3527,6 @@ return this.chainModify(0.5);
 },
 isBreakable: true,
 name: "Purifying Salt",
-rating: 4,
-num: 272,
 },
 
 quarkdrive: {
@@ -4030,8 +3592,6 @@ this.add('-end', pokemon, 'Quark Drive');
 },
 isPermanent: true,
 name: "Quark Drive",
-rating: 3,
-num: 282,
 },
 
 queenlymajesty: {
@@ -4049,8 +3609,6 @@ return false;
 },
 isBreakable: true,
 name: "Queenly Majesty",
-rating: 2.5,
-num: 214,
 },
 
 quickdraw: {
@@ -4062,8 +3620,6 @@ return 0.1;
 }
 },
 name: "Quick Draw",
-rating: 2.5,
-num: 259,
 },
 
 quickfeet: {
@@ -4073,8 +3629,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Quick Feet",
-rating: 2.5,
-num: 95,
 },
 
 raindish: {
@@ -4085,8 +3639,6 @@ this.heal(target.baseMaxhp / 9);
 }
 },
 name: "Rain Dish",
-rating: 1.5,
-num: 44,
 },
 
 rattled: {
@@ -4101,8 +3653,6 @@ this.boost({spe: 1});
 }
 },
 name: "Rattled",
-rating: 1,
-num: 155,
 },
 
 receiver: {
@@ -4115,8 +3665,6 @@ this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver
 }
 },
 name: "Receiver",
-rating: 0,
-num: 222,
 },
 
 reckless: {
@@ -4128,8 +3676,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Reckless",
-rating: 3,
-num: 120,
 },
 
 regenerator: {
@@ -4137,8 +3683,6 @@ onSwitchOut(pokemon) {
 pokemon.heal(pokemon.baseMaxhp / 3.333);
 },
 name: "Regenerator",
-rating: 4.5,
-num: 144,
 },
 
 ripen: {
@@ -4172,8 +3716,6 @@ onEatItem(item, pokemon) {
 pokemon.abilityState.berryWeaken = weakenBerries.includes(item.name);
 },
 name: "Ripen",
-rating: 2,
-num: 247,
 },
 
 rivalry: {
@@ -4190,15 +3732,11 @@ return this.chainModify(0.75);
 }
 },
 name: "Rivalry",
-rating: 0,
-num: 79,
 },
 
 rkssystem: {
 isPermanent: true,
 name: "RKS System",
-rating: 4,
-num: 225,
 },
 
 rockhead: {
@@ -4209,8 +3747,6 @@ if (this.activeMove.id !== 'struggle') return null;
 }
 },
 name: "Rock Head",
-rating: 3,
-num: 69,
 },
 
 rockypayload: {
@@ -4229,8 +3765,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Rocky Payload",
-rating: 3.5,
-num: 276,
 },
 
 roughskin: {
@@ -4241,14 +3775,10 @@ this.damage(source.baseMaxhp / 5, source, target);
 }
 },
 name: "Rough Skin",
-rating: 2.5,
-num: 24,
 },
 
 runaway: {
 name: "Run Away",
-rating: 0,
-num: 50,
 },
 
 sandforce: {
@@ -4265,8 +3795,6 @@ onImmunity(type, pokemon) {
 if (type === 'sandstorm') return false;
 },
 name: "Sand Force",
-rating: 2,
-num: 159,
 },
 
 sandrush: {
@@ -4279,8 +3807,6 @@ onImmunity(type, pokemon) {
 if (type === 'sandstorm') return false;
 },
 name: "Sand Rush",
-rating: 3,
-num: 146,
 },
 
 sandspit: {
@@ -4288,8 +3814,6 @@ onDamagingHit(damage, target, source, move) {
 this.field.setWeather('sandstorm');
 },
 name: "Sand Spit",
-rating: 1,
-num: 245,
 },
 
 sandstream: {
@@ -4297,8 +3821,6 @@ onStart(source) {
 this.field.setWeather('sandstorm');
 },
 name: "Sand Stream",
-rating: 4,
-num: 45,
 },
 
 sandveil: {
@@ -4315,8 +3837,6 @@ return this.chainModify([125, 1000]);
 },
 isBreakable: true,
 name: "Sand Veil",
-rating: 1.5,
-num: 8,
 },
 
 sapsipper: {
@@ -4337,8 +3857,6 @@ this.boost({atk: 1}, this.effectState.target);
 },
 isBreakable: true,
 name: "Sap Sipper",
-rating: 3,
-num: 157,
 },
 
 schooling: {
@@ -4372,8 +3890,6 @@ pokemon.formeChange('Wishiwashi');
 },
 isPermanent: true,
 name: "Schooling",
-rating: 3,
-num: 208,
 },
 
 scrappy: {
@@ -4392,8 +3908,6 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Scrappy', '[of] 
 }
 },
 name: "Scrappy",
-rating: 3,
-num: 113,
 },
 
 screencleaner: {
@@ -4412,8 +3926,6 @@ side.removeSideCondition(sideCondition);
 }
 },
 name: "Screen Cleaner",
-rating: 2,
-num: 251,
 },
 
 seedsower: {
@@ -4426,8 +3938,6 @@ this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now mo
 },
 
 name: "Seed Sower",
-rating: 2.5,
-num: 269,
 },
 
 serenegrace: {
@@ -4442,8 +3952,6 @@ if (secondary.chance) secondary.chance *= 2;
 if (move.self?.chance) move.self.chance *= 2;
 },
 name: "Serene Grace",
-rating: 3.5,
-num: 32,
 },
 
 shadowshield: {
@@ -4454,8 +3962,6 @@ return this.chainModify(0.5);
 }
 },
 name: "Shadow Shield",
-rating: 3.5,
-num: 231,
 },
 
 shadowtag: {
@@ -4472,8 +3978,6 @@ pokemon.maybeTrapped = true;
 }
 },
 name: "Shadow Tag",
-rating: 5,
-num: 23,
 },
 
 sharpness: {
@@ -4485,8 +3989,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Sharpness",
-rating: 3.5,
-num: 292,
 },
 
 shedskin: {
@@ -4500,8 +4002,6 @@ pokemon.cureStatus();
 }
 },
 name: "Shed Skin",
-rating: 3,
-num: 61,
 },
 
 sheerforce: {
@@ -4518,16 +4018,12 @@ onBasePower(basePower, pokemon, target, move) {
 if (move.hasSheerForce) return this.chainModify([100, 33]);
 },
 name: "Sheer Force",
-rating: 3.5,
-num: 125,
 },
 
 shellarmor: {
 onCriticalHit: false,
 isBreakable: true,
 name: "Shell Armor",
-rating: 1,
-num: 75,
 },
 
 shielddust: {
@@ -4537,8 +4033,6 @@ return secondaries.filter(effect => !!(effect.self || effect.dustproof));
 },
 isBreakable: true,
 name: "Shield Dust",
-rating: 2,
-num: 19,
 },
 
 shieldsdown: {
@@ -4582,8 +4076,6 @@ return null;
 },
 isPermanent: true,
 name: "Shields Down",
-rating: 3,
-num: 197,
 },
 
 simple: {
@@ -4596,8 +4088,6 @@ boost[i]! *= 2;
 },
 isBreakable: true,
 name: "Simple",
-rating: 4,
-num: 86,
 },
 
 skilllink: {
@@ -4610,8 +4100,6 @@ delete move.multiaccuracy;
 }
 },
 name: "Skill Link",
-rating: 3,
-num: 92,
 },
 
 slowstart: {
@@ -4641,8 +4129,6 @@ this.add('-end', target, 'Slow Start');
 },
 },
 name: "Slow Start",
-rating: -1,
-num: 112,
 },
 
 slushrush: {
@@ -4652,8 +4138,6 @@ return this.chainModify(2);
 }
 },
 name: "Slush Rush",
-rating: 3,
-num: 202,
 },
 
 sniper: {
@@ -4664,8 +4148,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Sniper",
-rating: 2,
-num: 97,
 },
 
 snowcloak: {
@@ -4682,8 +4164,6 @@ return this.chainModify([125, 1000]);
 },
 isBreakable: true,
 name: "Snow Cloak",
-rating: 1.5,
-num: 81,
 },
 
 snowwarning: {
@@ -4691,8 +4171,6 @@ onStart(source) {
 this.field.setWeather('snow');
 },
 name: "Snow Warning",
-rating: 4,
-num: 117,
 },
 
 solarpower: {
@@ -4709,8 +4187,6 @@ this.damage(target.baseMaxhp / 8, target, target);
 }
 },
 name: "Solar Power",
-rating: 2,
-num: 94,
 },
 
 solidrock: {
@@ -4722,8 +4198,6 @@ return this.chainModify(0.75);
 },
 isBreakable: true,
 name: "Solid Rock",
-rating: 3,
-num: 116,
 },
 
 soulheart: {
@@ -4732,8 +4206,6 @@ onAllyFaint() {
 this.boost({spa: 1}, this.effectState.target);
 },
 name: "Soul-Heart",
-rating: 3.5,
-num: 220,
 },
 
 braveheart: {
@@ -4742,8 +4214,6 @@ onAllyFaint() {
 this.boost({spa: 1}, this.effectState.target);
 },
 name: "Brave-Heart",
-rating: 3.5,
-num: 220,
 },
 
 hasteheart: {
@@ -4752,8 +4222,6 @@ onAllyFaint() {
 this.boost({spe: 1}, this.effectState.target);
 },
 name: "Haste-Heart",
-rating: 3.5,
-num: 220,
 },
 
 heroicheart: {
@@ -4762,8 +4230,6 @@ onAnyFaint() {
 this.boost({atk: 1}, this.effectState.target);
 },
 name: "Heroic Heart",
-rating: 3.5,
-num: 220,
 },
 
 soundproof: {
@@ -4780,8 +4246,6 @@ this.add('-immune', this.effectState.target, '[from] ability: Soundproof');
 },
 isBreakable: true,
 name: "Soundproof",
-rating: 2,
-num: 43,
 },
 
 speedboost: {
@@ -4793,8 +4257,6 @@ this.boost({spe: 1});
 }
 },
 name: "Speed Boost",
-rating: 4.5,
-num: 3,
 },
 
 boilingrage: {
@@ -4806,8 +4268,6 @@ this.boost({atk: 1, spe: -2, evasion: -2});
 }
 },
 name: "Boiling Rage",
-rating: 4.5,
-num: 3,
 },
 
 risingpower: {
@@ -4819,8 +4279,6 @@ this.boost({spa: 1, spe: -2, evasion: -2});
 }
 },
 name: "Rising Power",
-rating: 4.5,
-num: 3,
 },
 
 stakeout: {
@@ -4839,15 +4297,11 @@ return this.chainModify(2);
 }
 },
 name: "Stakeout",
-rating: 4.5,
-num: 198,
 },
 
 stall: {
 onFractionalPriority: -0.1,
 name: "Stall",
-rating: -1,
-num: 100,
 },
 
 stalwart: {
@@ -4856,8 +4310,6 @@ onModifyMove(move) {
 move.tracksTarget = move.target !== 'scripted';
 },
 name: "Stalwart",
-rating: 0,
-num: 242,
 },
 
 stamina: {
@@ -4865,8 +4317,6 @@ onDamagingHit(damage, target, source, effect) {
 this.boost({def: 1});
 },
 name: "Stamina",
-rating: 3.5,
-num: 192,
 },
 
 endurance: {
@@ -4874,8 +4324,6 @@ onDamagingHit(damage, target, source, effect) {
 this.boost({spd: 1});
 },
 name: "Endurance",
-rating: 3.5,
-num: 192,
 },
 
 stancechange: {
@@ -4888,8 +4336,6 @@ if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
 isPermanent: true,
 name: "Stance Change",
-rating: 4,
-num: 176,
 },
 
 static: {
@@ -4901,8 +4347,6 @@ source.trySetStatus('par', target);
 }
 },
 name: "Static",
-rating: 2,
-num: 9,
 },
 
 steadfast: {
@@ -4910,8 +4354,6 @@ onFlinch(pokemon) {
 this.boost({spe: 2});
 },
 name: "Steadfast",
-rating: 1,
-num: 80,
 },
 
 steamengine: {
@@ -4921,8 +4363,6 @@ this.boost({spe: 6});
 }
 },
 name: "Steam Engine",
-rating: 2,
-num: 243,
 },
 
 steelworker: {
@@ -4941,8 +4381,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Steelworker",
-rating: 3.5,
-num: 200,
 },
 
 steelyspirit: {
@@ -4954,8 +4392,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Steely Spirit",
-rating: 3.5,
-num: 252,
 },
 
 stench: {
@@ -4974,8 +4410,6 @@ volatileStatus: 'flinch',
 }
 },
 name: "Stench",
-rating: 0.5,
-num: 1,
 },
 
 stickyhold: {
@@ -4989,8 +4423,6 @@ return false;
 },
 isBreakable: true,
 name: "Sticky Hold",
-rating: 1.5,
-num: 60,
 },
 
 stormdrain: {
@@ -5015,8 +4447,6 @@ return this.effectState.target;
 },
 isBreakable: true,
 name: "Storm Drain",
-rating: 3,
-num: 114,
 },
 
 strongjaw: {
@@ -5027,8 +4457,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Strong Jaw",
-rating: 3.5,
-num: 173,
 },
 
 sturdy: {
@@ -5047,8 +4475,6 @@ return target.hp - 1;
 },
 isBreakable: true,
 name: "Sturdy",
-rating: 3,
-num: 5,
 },
 
 suctioncups: {
@@ -5059,8 +4485,6 @@ return null;
 },
 isBreakable: true,
 name: "Suction Cups",
-rating: 1,
-num: 21,
 },
 
 superluck: {
@@ -5068,8 +4492,6 @@ onModifyCritRatio(critRatio) {
 return critRatio + 1;
 },
 name: "Super Luck",
-rating: 1.5,
-num: 105,
 },
 
 supremeoverlord: {
@@ -5093,8 +4515,6 @@ return this.chainModify([powMod[this.effectState.fallen], 4096]);
 }
 },
 name: "Supreme Overlord",
-rating: 4,
-num: 293,
 },
 
 surgesurfer: {
@@ -5104,8 +4524,6 @@ return this.chainModify(2);
 }
 },
 name: "Surge Surfer",
-rating: 3,
-num: 207,
 },
 
 swarm: {
@@ -5124,8 +4542,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Swarm",
-rating: 2,
-num: 68,
 },
 
 sweetveil: {
@@ -5147,8 +4563,6 @@ return null;
 }
 },
 isBreakable: true,
-rating: 2,
-num: 175,
 },
 
 frostveil: {
@@ -5162,8 +4576,6 @@ return null;
 }
 },
 isBreakable: true,
-rating: 2,
-num: 175,
 },
 
 swiftswim: {
@@ -5173,8 +4585,6 @@ return this.chainModify(2);
 }
 },
 name: "Swift Swim",
-rating: 3,
-num: 33,
 },
 
 symbiosis: {
@@ -5193,8 +4603,6 @@ return;
 this.add('-activate', source, 'ability: Symbiosis', myItem, '[of] ' + pokemon);
 },
 name: "Symbiosis",
-rating: 0,
-num: 180,
 },
 
 synchronize: {
@@ -5206,8 +4614,6 @@ this.add('-activate', target, 'ability: Synchronize');
 source.trySetStatus(status, target, {status: status.id, id: 'synchronize'} as Effect);
 },
 name: "Synchronize",
-rating: 2,
-num: 28,
 },
 
 swordofruin: {
@@ -5224,8 +4630,6 @@ this.debug('Sword of Ruin Def drop');
 return this.chainModify(0.66);
 },
 name: "Sword of Ruin",
-rating: 4.5,
-num: 285,
 },
 
 sheildofruin: {
@@ -5242,8 +4646,6 @@ this.debug('Sheild of Ruin Spe drop');
 return this.chainModify(0.66);
 },
 name: "Sword of Ruin",
-rating: 4.5,
-num: 285,
 },
 
 tabletsofruin: {
@@ -5260,8 +4662,6 @@ this.debug('Tablets of Ruin Atk drop');
 return this.chainModify(0.66);
 },
 name: "Tablets of Ruin",
-rating: 4.5,
-num: 284,
 },
 
 tangledfeet: {
@@ -5275,8 +4675,6 @@ return this.chainModify(0.5);
 },
 isBreakable: true,
 name: "Tangled Feet",
-rating: 1,
-num: 77,
 },
 
 tanglinghair: {
@@ -5287,8 +4685,6 @@ this.boost({spe: -1}, source, target, null, true);
 }
 },
 name: "Tangling Hair",
-rating: 2,
-num: 221,
 },
 
 technician: {
@@ -5302,8 +4698,6 @@ return this.chainModify(1.55);
 }
 },
 name: "Technician",
-rating: 3.5,
-num: 101,
 },
 
 telepathy: {
@@ -5315,8 +4709,6 @@ return null;
 },
 isBreakable: true,
 name: "Telepathy",
-rating: 0,
-num: 140,
 },
 
 teravolt: {
@@ -5327,8 +4719,6 @@ onModifyMove(move) {
 move.ignoreAbility = true;
 },
 name: "Teravolt",
-rating: 3,
-num: 164,
 },
 
 thermalexchange: {
@@ -5351,8 +4741,6 @@ this.add('-immune', target, '[from] ability: Thermal Exchange');
 return false;
 },
 name: "Thermal Exchange",
-rating: 2.5,
-num: 270,
 },
 
 thickfat: {
@@ -5372,8 +4760,6 @@ return this.chainModify(0.5);
 },
 isBreakable: true,
 name: "Thick Fat",
-rating: 3.5,
-num: 47,
 },
 
 tintedlens: {
@@ -5384,8 +4770,6 @@ return this.chainModify(2);
 }
 },
 name: "Tinted Lens",
-rating: 4,
-num: 110,
 },
 
 torrent: {
@@ -5404,8 +4788,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Torrent",
-rating: 2,
-num: 67,
 },
 
 toughclaws: {
@@ -5416,8 +4798,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Tough Claws",
-rating: 3.5,
-num: 181,
 },
 
 toxicboost: {
@@ -5428,8 +4808,6 @@ return this.chainModify(1.5);
 }
 },
 name: "Toxic Boost",
-rating: 3,
-num: 137,
 },
 
 toxicdebris: {
@@ -5442,8 +4820,6 @@ side.addSideCondition('toxicspikes', target);
 }
 },
 name: "Toxic Debris",
-rating: 3.5,
-num: 295,
 },
 
 stealthyspikedebris: {
@@ -5482,8 +4858,6 @@ this.add('-ability', pokemon, ability, '[from] ability: Trace', '[of] ' + target
 }
 },
 name: "Trace",
-rating: 2.5,
-num: 36,
 },
 
 transistor: {
@@ -5502,8 +4876,6 @@ return this.chainModify([100, 33]);
 }
 },
 name: "Transistor",
-rating: 3.5,
-num: 262,
 },
 
 triage: {
@@ -5511,8 +4883,6 @@ onModifyPriority(priority, pokemon, target, move) {
 if (move?.flags['heal']) return priority + 3;
 },
 name: "Triage",
-rating: 3.5,
-num: 205,
 },
 
 truant: {
@@ -5532,8 +4902,6 @@ pokemon.addVolatile('truant');
 },
 condition: {},
 name: "Truant",
-rating: -1,
-num: 54,
 },
 
 turboblaze: {
@@ -5544,8 +4912,6 @@ onModifyMove(move) {
 move.ignoreAbility = true;
 },
 name: "Turboblaze",
-rating: 3,
-num: 163,
 },
 
 unaware: {
@@ -5566,8 +4932,6 @@ boosts['accuracy'] = 0;
 }
 },
 isBreakable: true,
-rating: 4,
-num: 109,
 },
 
 unburden: {
@@ -5589,8 +4953,6 @@ return this.chainModify(2);
 },
 },
 name: "Unburden",
-rating: 3.5,
-num: 84,
 },
 
 unnerve: {
@@ -5610,8 +4972,6 @@ onFoeTryEatItem() {
 return !this.effectState.unnerved;
 },
 name: "Unnerve",
-rating: 1,
-num: 127,
 },
 
 unseenfist: {
@@ -5619,8 +4979,6 @@ onModifyMove(move) {
 if (move.flags['contact']) delete move.flags['protect'];
 },
 name: "Unseen Fist",
-rating: 2,
-num: 260,
 },
 
 vesselofruin: {
@@ -5637,8 +4995,6 @@ this.debug('Vessel of Ruin SpA drop');
 return this.chainModify(0.66);
 },
 name: "Vessel of Ruin",
-rating: 4.5,
-num: 284,
 },
 
 victorystar: {
@@ -5649,8 +5005,6 @@ return this.chainModify([4506, 4096]);
 }
 },
 name: "Victory Star",
-rating: 2,
-num: 162,
 },
 
 vitalspirit: {
@@ -5669,8 +5023,6 @@ return false;
 },
 isBreakable: true,
 name: "Vital Spirit",
-rating: 1.5,
-num: 72,
 },
 
 voltabsorb: {
@@ -5684,14 +5036,10 @@ return null;
 },
 isBreakable: true,
 name: "Volt Absorb",
-rating: 3.5,
-num: 10,
 },
 
 wanderingspirit: {
 name: "Wandering Spirit",
-rating: 2.5,
-num: 254,
 },
 
 waterabsorb: {
@@ -5705,8 +5053,6 @@ return null;
 },
 isBreakable: true,
 name: "Water Absorb",
-rating: 3.5,
-num: 11,
 },
 
 waterbubble: {
@@ -5747,8 +5093,6 @@ return false;
 },
 isBreakable: true,
 name: "Water Bubble",
-rating: 4.5,
-num: 199,
 },
 
 watercompaction: {
@@ -5758,8 +5102,6 @@ this.boost({def: 2});
 }
 },
 name: "Water Compaction",
-rating: 1.5,
-num: 195,
 },
 
 waterveil: {
@@ -5778,8 +5120,6 @@ return false;
 },
 isBreakable: true,
 name: "Water Veil",
-rating: 2,
-num: 41,
 },
 
 weakarmor: {
@@ -5789,8 +5129,6 @@ this.boost({def: -1, spe: 2}, target, target);
 }
 },
 name: "Weak Armor",
-rating: 1,
-num: 133,
 },
 
 wellbakedbody: {
@@ -5804,8 +5142,6 @@ return null;
 },
 isBreakable: true,
 name: "Well-Baked Body",
-rating: 3.5,
-num: 273,
 },
 
 whitesmoke: {
@@ -5825,8 +5161,6 @@ this.add("-fail", target, "unboost", "[from] ability: White Smoke", "[of] " + ta
 },
 isBreakable: true,
 name: "White Smoke",
-rating: 2,
-num: 73,
 },
 
 wimpout: {
@@ -5841,8 +5175,6 @@ target.switchFlag = true;
 this.add('-activate', target, 'ability: Wimp Out');
 },
 name: "Wimp Out",
-rating: 1,
-num: 193,
 },
 
 windpower: {
@@ -5859,8 +5191,6 @@ pokemon.addVolatile('charge');
 }
 },
 name: "Wind Power",
-rating: 1,
-num: 277,
 },
 
 windrider: {
@@ -5885,8 +5215,6 @@ this.boost({atk: 1}, pokemon, pokemon);
 },
 isBreakable: true,
 name: "Wind Rider",
-rating: 3.5,
-num: 274,
 },
 
 wonderguard: {
@@ -5905,8 +5233,6 @@ return null;
 },
 isBreakable: true,
 name: "Wonder Guard",
-rating: 5,
-num: 25,
 },
 
 wonderskin: {
@@ -5919,8 +5245,6 @@ return 50;
 },
 isBreakable: true,
 name: "Wonder Skin",
-rating: 2,
-num: 147,
 },
 
 zenmode: {
@@ -5960,8 +5284,6 @@ pokemon.formeChange(pokemon.species.battleOnly as string);
 },
 isPermanent: true,
 name: "Zen Mode",
-rating: 0,
-num: 161,
 },
 
 zerotohero: {
@@ -5985,8 +5307,6 @@ this.effectState.heroMessageDisplayed = true;
 },
 isPermanent: true,
 name: "Zero to Hero",
-rating: 5,
-num: 278,
 },
 
 mountaineer: {
@@ -6004,8 +5324,6 @@ return null;
 isNonstandard: "CAP",
 isBreakable: true,
 name: "Mountaineer",
-rating: 3,
-num: -2,
 },
 
 rebound: {
@@ -6038,15 +5356,11 @@ condition: {
 duration: 1,
 },
 isBreakable: true,
-rating: 3,
-num: -3,
 },
 
 persistent: {
 isNonstandard: "CAP",
 name: "Persistent",
-rating: 3,
-num: -4,
 },
 
 hospitality: {
@@ -6205,8 +5519,6 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of
 },
 isBreakable: true,
 name: "Venturara",
-rating: 1.5,
-num: 20,
 },
 
 axolargel: {
