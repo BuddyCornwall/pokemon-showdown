@@ -6950,6 +6950,21 @@ flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
 self: {
 volatileStatus: 'mustrecharge',
 },
+
+onHit(target, source, move) {
+// List of Pokémon names that are exempt from selfdestruct
+const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];  // Add your exempt Pokémon names here
+
+// Check if the Pokémon's name is in the exempt list
+if (!exemptPokemon.includes(source.name)) {
+// 10% chance to selfdestruct if the Pokémon is not exempt
+if (this.randomChance(10, 10)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: null,
 target: "any",
 type: "Normal",
