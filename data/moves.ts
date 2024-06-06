@@ -1547,7 +1547,7 @@ type: "Ground",
 
 boomburst: {
 accuracy: 85,
-basePower: 145,
+basePower: 95,
 category: "Special",
 name: "Boomburst",
 pp: 0.625,
@@ -1787,7 +1787,7 @@ type: "Bug",
 },
 
 bugbuzz: {
-accuracy: 95,
+accuracy: 85,
 basePower: 95,
 category: "Special",
 name: "Bug Buzz",
@@ -2200,7 +2200,7 @@ type: "Water",
 
 clangingscales: {
 accuracy: 85,
-basePower: 115,
+basePower: 95,
 category: "Special",
 name: "Clanging Scales",
 pp: 0.625,
@@ -7032,7 +7032,7 @@ type: "Psychic",
 },
 
 hypervoice: {
-accuracy: 95,
+accuracy: 85,
 basePower: 95,
 category: "Special",
 name: "Hyper Voice",
@@ -16036,8 +16036,8 @@ type: "Dark",
 },
 
 torchsong: {
-accuracy: 95,
-basePower: 85,
+accuracy: 85,
+basePower: 95,
 category: "Special",
 name: "Torch Song",
 pp: 0.625,
@@ -16437,7 +16437,7 @@ type: "Bug",
 },
 
 uproar: {
-accuracy: 95,
+accuracy: 85,
 basePower: 95,
 category: "Special",
 name: "Uproar",
