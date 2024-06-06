@@ -3494,6 +3494,11 @@ this.debug('Punk Rock boost');
 return this.chainModify([100, 15]);
 }
 },
+onModifyMove(move, attacker) {
+if (move.flags['sound']) {
+move.recoil = [1, 3];  // This means 1/3 of the damage dealt will be taken as recoil
+}
+},
 isBreakable: true,
 name: "Punk Rock",
 },
