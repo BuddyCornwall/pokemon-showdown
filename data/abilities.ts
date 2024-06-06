@@ -6052,7 +6052,7 @@ num: -4,
 hospitality: {
 onStart(pokemon) {
 for (const ally of pokemon.adjacentAllies()) {
-this.heal(ally.baseMaxhp / 5, ally, pokemon);
+this.heal(ally.baseMaxhp / 4, ally, pokemon);
 }
 },
 name: "Hospitality",
@@ -6258,13 +6258,13 @@ name: "UGLY",
 incendiarykong: {
 onPreStart(pokemon) {
 this.add('-message', 'Incendiary Kong has fists of steel. *POW!*');
-this.add('-ability', pokemon, 'Steel Fist');
+this.add('-ability', pokemon, 'Iron Fist');
 this.add('-ability', pokemon, 'Sand Stream');
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
-this.debug('Steel Fist boost');
+this.debug('Iron Fist boost');
 return this.chainModify([100, 33]);
 }
 },
