@@ -677,7 +677,7 @@ this.effectState.checkedBerserk = true;
 onAfterMoveSecondary(target, source, move) {
 if (!source || source === target || !target.hp || !move.totalDamage) return;
 const lastAttackedBy = target.getLastAttackedBy();
-if (!lastAttackedBy) return;
+if (!lastAttackedBy || !lastAttackedBy.source) return;
 const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
 if (target.baseStats.atk >= target.baseStats.spa) {
