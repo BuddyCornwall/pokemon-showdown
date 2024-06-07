@@ -746,13 +746,13 @@ this.boost({atk: length}, source);
 name: "Chilling Neigh",
 },
 
-chlorophyll: {
+solrush: {
 onModifySpe(spe, pokemon) {
 if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 return this.chainModify(2);
 }
 },
-name: "Chlorophyll",
+name: "Sol Rush",
 },
 
 clearbody: {
@@ -1889,20 +1889,15 @@ honeygather: {
 name: "Honey Gather",
 },
 
-hugepower: {
+hugepurepower: {
 onModifyAtkPriority: 5,
+onPreStart(pokemon) {
+this.add('-message', 'pokemon, 'is surging with power!');
+},
 onModifyAtk(atk) {
 return this.chainModify(2.1);
 },
-name: "Huge Power",
-},
-
-purepower: {
-onModifySpaPriority: 5,
-onModifySpa(spa) {
-return this.chainModify(2.1);
-},
-name: "Pure Power",
+name: "Huge Pure Power",
 },
 
 sonicpower: {
@@ -3494,11 +3489,6 @@ this.debug('Punk Rock boost');
 return this.chainModify([100, 15]);
 }
 },
-onModifyMove(move, attacker) {
-if (move.flags['sound']) {
-move.recoil = [1, 10];
-}
-},
 isBreakable: true,
 name: "Punk Rock",
 },
@@ -4583,13 +4573,13 @@ return null;
 isBreakable: true,
 },
 
-swiftswim: {
+surfrush: {
 onModifySpe(spe, pokemon) {
 if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
 return this.chainModify(2);
 }
 },
-name: "Swift Swim",
+name: "Surf Rush",
 },
 
 symbiosis: {
@@ -5525,6 +5515,31 @@ this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of
 isBreakable: true,
 name: "Venturara",
 },
+
+unstablepower: {
+onPreStart(pokemon) {
+this.add('-message', pokemon, 'glows with an unstable energy.');
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name: "Unstable Power",
+},
+
+
 
 axolargel: {
 onPreStart(pokemon) {
