@@ -13536,15 +13536,12 @@ this.add('-message', `${source.name} self-destructed due to the strain of using 
 }
 }
 
-
-onHit(pokemon) {
 const oldAbility = pokemon.setAbility('simple');
 if (oldAbility) {
 this.add('-ability', pokemon, 'Simple', '[from] move: Simple Beam');
 return;
 }
 return oldAbility as false | null;
-},
 },
 secondary: null,
 target: "any",
