@@ -13537,11 +13537,6 @@ this.add('-message', `${source.name} self-destructed due to the strain of using 
 }
 },
 
-onTryHit(target) {
-if (target.getAbility().isPermanent || target.ability === 'simple' || target.ability === 'truant') {
-return false;
-}
-},
 onHit(pokemon) {
 const oldAbility = pokemon.setAbility('simple');
 if (oldAbility) {
