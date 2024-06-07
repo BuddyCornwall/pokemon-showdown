@@ -675,7 +675,6 @@ this.effectState.checkedBerserk = true;
 }
 },
 onAfterMoveSecondary(target, source, move) {
-this.effectState.checkedKentaromiura = true;
 if (!source || source === target || !target.hp || !move.totalDamage) return;
 const lastAttackedBy = target.getLastAttackedBy();
 if (!lastAttackedBy) return;
