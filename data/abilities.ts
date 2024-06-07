@@ -681,7 +681,11 @@ const lastAttackedBy = target.getLastAttackedBy();
 if (!lastAttackedBy) return;
 const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+if (target.baseStats.atk >= target.baseStats.spa) {
 this.boost({atk: 1}, target, target);
+} else {
+this.boost({spa: 1}, target, target);
+}
 }
 },
 name: "Kentaromiura",
@@ -5528,26 +5532,30 @@ unstablepower: {
 onPreStart(pokemon) {
 this.add('-message', pokemon, 'glows with an unstable energy.');
 },
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual(pokemon) {
+if (!pokemon.hp) return;
 
+const stats = ['atk', 'spa', 'spe'];
+const randomStat = this.sample(stats);
+this.boost({[randomStat]: 2}, pokemon);
 
+if (this.randomChance(20, 100)) {
+this.add('-message', `${pokemon.name}'s unstable power caused it to self-destruct!`);
+const damage = pokemon.hp;
+pokemon.faint();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const targets = pokemon.side.foe.active;
+for (const target of targets) {
+if (target && !target.fainted) {
+this.damage(damage, target, pokemon, 'Unstable Power');
+}
+}
+}
+},
 name: "Unstable Power",
 },
-
-
 
 axolargel: {
 onPreStart(pokemon) {
