@@ -747,6 +747,16 @@ category: "Special",
 name: "Aurora Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 25,
 boosts: {
@@ -1752,6 +1762,16 @@ category: "Special",
 name: "Bubble Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 50,
 boosts: {
@@ -2045,6 +2065,16 @@ category: "Special",
 name: "Charge Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 75,
 self: {
@@ -4337,6 +4367,16 @@ category: "Special",
 name: "Eternabeam",
 pp: 0.625,
 flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 self: {
 volatileStatus: 'mustrecharge',
 },
@@ -5008,6 +5048,16 @@ name: "Flash Cannon",
 pp: 0.625,
 priority: 4,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 25,
 boosts: {
@@ -5044,6 +5094,16 @@ name: "Fleur Cannon",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 self: {
 boosts: {
 spa: -2,
@@ -6947,18 +7007,10 @@ category: "Special",
 name: "Hyper Beam",
 pp: 0.625,
 flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
-self: {
-volatileStatus: 'mustrecharge',
-},
 
 onHit(target, source, move) {
-// List of Pokémon names that are exempt from selfdestruct
-const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];  // Add your exempt Pokémon names here
-
-// Check if the Pokémon's name is in the exempt list
 if (!exemptPokemon.includes(source.name)) {
-// 10% chance to selfdestruct if the Pokémon is not exempt
-if (this.randomChance(10, 10)) {
+if (this.randomChance(75, 100)) {
 source.faint();  // Cause the Pokémon to faint (selfdestruct)
 this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
 }
@@ -7102,6 +7154,16 @@ category: "Special",
 name: "Ice Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 25,
 status: 'frz',
@@ -7958,6 +8020,16 @@ name: "Light of Ruin",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 recoil: [50, 100],
 secondary: null,
 target: "any",
@@ -8746,6 +8818,16 @@ name: "Menacing Moonraze Maelstrom",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1,},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 pseudoWeather: 'fairylock',
 condition: {
 duration: 5,
@@ -8855,6 +8937,16 @@ category: "Special",
 name: "Meteor Beam",
 pp: 0.625,
 flags: {charge: 1, beam: 1, protect: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
@@ -9287,6 +9379,16 @@ category: "Special",
 name: "Moongeist Beam",
 pp: 0.625,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 ignoreAbility: true,
 secondary: null,
 target: "any",
@@ -10929,6 +11031,16 @@ category: "Special",
 name: "Psybeam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 25,
 volatileStatus: 'confusion',
@@ -13309,6 +13421,16 @@ category: "Special",
 name: "Signal Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 secondary: {
 chance: 25,
 volatileStatus: 'confusion',
@@ -13405,6 +13527,16 @@ category: "Special",
 name: "Simple Beam",
 pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 onTryHit(target) {
 if (target.getAbility().isPermanent || target.ability === 'simple' || target.ability === 'truant') {
 return false;
@@ -13993,6 +14125,16 @@ name: "Solar Beam",
 pp: 0.625,
 priority: 0,
 flags: {charge: 1, protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
@@ -14567,6 +14709,16 @@ category: "Special",
 name: "Steel Beam",
 pp: 0.625,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 mindBlownRecoil: true,
 onAfterMove(pokemon, target, move) {
 if (move.mindBlownRecoil && !move.multihit) {
@@ -16382,6 +16534,16 @@ category: "Special",
 name: "Twin Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 critRatio: 2,
 multihit: [1, 2],
 multiaccuracy: 85,
@@ -17423,6 +17585,16 @@ name: "Fickle Beam",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();  // Cause the Pokémon to faint (selfdestruct)
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
+
 onBasePower(basePower, pokemon) {
 if (this.randomChance(3, 10)) {
 this.attrLastMove('[anim] Fickle Beam All Out');
@@ -18060,7 +18232,7 @@ category: "Physical",
 name: "Bouncy Bubble",
 pp: 0.625,
 priority: 0,
-flags: {protect: 1, beam: 1, mirror: 1},
+flags: {protect: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
 if (this.randomChance(5, 10)) {
 this.add('-activate', pokemon, 'move: Fickle Beam');
