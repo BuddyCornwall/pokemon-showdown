@@ -13535,7 +13535,7 @@ source.faint();  // Cause the Pokémon to faint (selfdestruct)
 this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
 }
 }
-},
+
 
 onHit(pokemon) {
 const oldAbility = pokemon.setAbility('simple');
@@ -13544,6 +13544,7 @@ this.add('-ability', pokemon, 'Simple', '[from] move: Simple Beam');
 return;
 }
 return oldAbility as false | null;
+},
 },
 secondary: null,
 target: "any",
