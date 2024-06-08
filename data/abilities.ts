@@ -663,28 +663,17 @@ name: "Berserk",
 },
 
 kentaromiura: {
-onDamage(damage, target, source, effect) {
-if (
-effect.effectType === "Move" &&
-!effect.multihit &&
-(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
-) {
-this.effectState.checkedBerserk = false;
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles['powersurge']) {
+pokemon.addVolatile('powersurge');
+if (pokemon.baseStats.atk >= pokemon.baseStats.spa) {
+this.boost({ atk: 2 }, pokemon);
+this.add('-message', `${pokemon.name} surged with power! Its ATK rose!`);
 } else {
-this.effectState.checkedBerserk = true;
-}
-},
-onAfterMoveSecondary(target, source, move) {
-this.effectState.checkedBerserk = true;
-if (!source || source === target || !target.hp || !move.totalDamage) return;
-const lastAttackedBy = target.getLastAttackedBy();
-if (!lastAttackedBy) return;
-const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
-if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-if (target.baseStats.atk >= target.baseStats.spa) {
-this.boost({atk: 1}, target, target);
-} else {
-this.boost({spa: 1}, target, target);
+this.boost({ spa: 2 }, pokemon);
+this.add('-message', `${pokemon.name} surged with power! Its SPA rose!`);
 }
 }
 },
