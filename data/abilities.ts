@@ -666,8 +666,8 @@ kentaromiura: {
 onResidualOrder: 26,
 onResidualSubOrder: 1,
 onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles['powersurge']) {
-pokemon.addVolatile('powersurge');
+if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles['kentaromiura']) {
+pokemon.addVolatile('kentaromiura');
 if (pokemon.baseStats.atk >= pokemon.baseStats.spa) {
 this.boost({ atk: 2 }, pokemon);
 this.add('-message', `${pokemon.name} surged with power! Its ATK rose!`);
