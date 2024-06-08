@@ -669,11 +669,11 @@ onResidual(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles['kentaromiura']) {
 pokemon.addVolatile('kentaromiura');
 if (pokemon.baseStats.atk >= pokemon.baseStats.spa) {
-this.boost({ atk: 2 }, pokemon);
-this.add('-message', `${pokemon.name} surged with power! Its ATK rose!`);
+this.boost({ atk: 1 }, pokemon);
+this.add('-message', `${pokemon.name} surged with power! Its Attack rose!`);
 } else {
-this.boost({ spa: 2 }, pokemon);
-this.add('-message', `${pokemon.name} surged with power! Its SPA rose!`);
+this.boost({ spa: 1 }, pokemon);
+this.add('-message', `${pokemon.name} surged with power! Its Special Attack rose!`);
 }
 }
 },
