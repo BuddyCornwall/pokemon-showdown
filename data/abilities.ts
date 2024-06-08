@@ -637,7 +637,7 @@ this.boost({[bestStat]: length}, source);
 name: "Beast Boost",
 },
 
-berserk: {
+kentaromiura: {
 onDamage(damage, target, source, effect) {
 if (
 effect.effectType === "Move" &&
@@ -656,25 +656,7 @@ const lastAttackedBy = target.getLastAttackedBy();
 if (!lastAttackedBy) return;
 const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-this.boost({spa: 1}, target, target);
-}
-},
-name: "Berserk",
-},
-
-kentaromiura: {
-onResidualOrder: 26,
-onResidualSubOrder: 1,
-onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.volatiles['kentaromiura']) {
-pokemon.addVolatile('kentaromiura');
-if (pokemon.baseStats.atk >= pokemon.baseStats.spa) {
-this.boost({ atk: 1 }, pokemon);
-this.add('-message', `${pokemon.name} surged with power! Its Attack rose!`);
-} else {
-this.boost({ spa: 1 }, pokemon);
-this.add('-message', `${pokemon.name} surged with power! Its Special Attack rose!`);
-}
+this.boost({spa: 1, atk: 1}, target, target);
 }
 },
 name: "Kentaromiura",
