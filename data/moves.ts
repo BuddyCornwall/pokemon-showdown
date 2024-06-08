@@ -6955,6 +6955,15 @@ flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
+onHit(target, source, move) {
+const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(75, 100)) {
+source.faint();
+this.add('-message', `${source.name} self-destructed due to the strain of using ${move.name}!`);
+}
+}
+},
 },
 
 hyperdrill: {
