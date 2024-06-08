@@ -13535,10 +13535,9 @@ source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
 }
-},
-const oldAbility = pokemon.setAbility('simple');
+const oldAbility = target.setAbility('simple');
 if (oldAbility) {
-this.add('-ability', pokemon, 'Simple', '[from] move: Simple Beam');
+this.add('-ability', target, 'Simple', '[from] move: Simple Beam');
 return;
 }
 return oldAbility as false | null;
