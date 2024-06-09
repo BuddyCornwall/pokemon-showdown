@@ -1895,20 +1895,20 @@ name: "Honey Gather",
 },
 
 purepower: {
-name: "Pure Power",
 onPreStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
-onModifySpAPriority: 5,
-onModifySpA(spa) {
+},
+onModifyAtkPriority: 5,
+onModifyAtk(atk) {
 return this.chainModify(2);
 },
 name: "Pure Power",
 },
 
 hugepower: {
-name: "Huge Power",
 onPreStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
+},
 onModifyAtkPriority: 5,
 onModifyAtk(atk) {
 return this.chainModify(2);
