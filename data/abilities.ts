@@ -5540,25 +5540,24 @@ name: "Unstable Power",
 },
 
 chaoticseal: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Chaotic Seal');
-},
-onResidualOrder: 26,
-onResidual(pokemon) {
-const foeActive = pokemon.side.foe.active[0];
-if (!foeActive) return;
-const disabledMoves = [];
-while (disabledMoves.length < 2) {
-const moveslot = this.sample(foeActive.moves);
-if (moveslot.disabled) continue;
-disabledMoves.push(moveslot.move);
-// Assuming foeActive.disableMove exists and works
-foeActive.disableMove(moveslot.id);
+onDamagingHit(damage, target, source, move) {
+if (source.volatiles['disable'] && source.volatiles['disable'].length >= 2) return;
+if (!move.isMax && !move.flags['futuremove'] && move.id !== 'struggle') {
+const movesDisabled = [];
+while (movesDisabled.length < 2) {
+const randomMoveSlot = this.sample(target.moves);
+if (!movesDisabled.includes(randomMoveSlot.id)) {
+movesDisabled.push(randomMoveSlot.id);
+source.addVolatile('disable', this.effectState.target, randomMoveSlot.id);
 }
-this.add('-message', `${foeActive.name}'s moves were disabled!`);
-this.add('-message', `${foeActive.name} can't use ${disabledMoves[0]} and ${disabledMoves[1]}!`);
+}
+this.add('-message', `${source.name} disabled ${target.name}'s ${movesDisabled[0]} and ${movesDisabled[1]} with Chaotic Seal!`);
+}
 },
+flags: {},
 name: "Chaotic Seal",
+rating: 2,
+num: 130,
 },
 
 axolargel: {
