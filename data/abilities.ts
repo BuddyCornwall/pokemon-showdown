@@ -4495,8 +4495,8 @@ return target.hp - 1;
 },
 onAfterDamage(damage, target, source, move) {
 if (target.hp === target.maxhp && damage >= target.hp && move && move.effectType === 'Move') {
-this.add('-message', "🎵Anti-ti-ti-ti fragile"
-},
+this.add('-message', "🎵Anti-ti-ti-ti fragile");
+}
 },
 isBreakable: true,
 name: "Antifragile",
