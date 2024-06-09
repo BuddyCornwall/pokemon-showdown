@@ -1832,10 +1832,10 @@ name: "Psychic Sanctum",
 terrainweaver: {
 onDamagingHit(damage, target, source, move) {
 const abilities = [
-{effect: 'electricterrain', message: 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!'},
-{effect: 'grassyterrain', message: 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!'},
-{effect: 'mistyterrain', message: 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!'},
-{effect: 'psychicterrain', message: 'pokemon','triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!'}
+{effect: 'electricterrain', message: `${target.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`},
+{effect: 'grassyterrain', message: `${target.name} triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!`},
+{effect: 'mistyterrain', message: `${target.name} triggered Misty Terrain! Dragon moves are now less powerful! Pokémon cannot be inflicted with non-volatile status conditions!`},
+{effect: 'psychicterrain', message: `${target.name} triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon cannot use priority moves!`}
 ];
 
 const randomEffect = this.sample(abilities);
