@@ -650,7 +650,7 @@ this.effectState.checkedBerserk = true;
 }
 },
 onAfterMoveSecondary(target, source, move) {
-this.effectState.checkedBerserk = true;
+this.effectState.checkedkentaromiura = true;
 if (!source || source === target || !target.hp || !move.totalDamage) return;
 const lastAttackedBy = target.getLastAttackedBy();
 if (!lastAttackedBy) return;
@@ -2352,7 +2352,7 @@ name: "Light Metal",
 lightningrod: {
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Electric') {
-if (!this.boost({spa: 1.5})) {
+if (!this.boost({atk: 1.5,spa: 1.5})) {
 this.add('-immune', target, '[from] ability: Lightning Rod');
 }
 return null;
@@ -5838,13 +5838,13 @@ this.effectState.checkedBerserk = true;
 }
 },
 onAfterMoveSecondary(target, source, move) {
-this.effectState.checkedKentaromiura = true;
+this.effectState.checkedkentaromiura = true;
 if (!source || source === target || !target.hp || !move.totalDamage) return;
 const lastAttackedBy = target.getLastAttackedBy();
 if (!lastAttackedBy) return;
 const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-this.boost({atk: 1}, target, target);
+this.boost({spa: 1, atk: 1}, target, target);
 }
 },
 name: "Knievel",
@@ -5939,7 +5939,7 @@ this.boost({spe: 1});
 },
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Electric') {
-if (!this.boost({spa: 1.5})) {
+if (!this.boost({atk: 1.5,spa: 1.5})) {
 this.add('-immune', target, '[from] ability: Lightning Rod');
 }
 return null;
