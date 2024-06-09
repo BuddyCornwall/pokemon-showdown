@@ -3159,26 +3159,26 @@ name: "Parental Bond",
 pastelveil: {
 onStart(pokemon) {
 for (const ally of pokemon.alliesAndSelf()) {
-if (['tox', 'tox'].includes(ally.status)) {
+if (['tox', 'slp', 'brn', 'par'].includes(ally.status)) {
 this.add('-activate', pokemon, 'ability: Pastel Veil');
 ally.cureStatus();
 }
 }
 },
 onUpdate(pokemon) {
-if (['tox', 'tox'].includes(pokemon.status)) {
+if (['tox', 'slp', 'brn', 'par'].includes(pokemon.status)) {
 this.add('-activate', pokemon, 'ability: Pastel Veil');
 pokemon.cureStatus();
 }
 },
 onAllySwitchIn(pokemon) {
-if (['tox', 'tox'].includes(pokemon.status)) {
+if (['tox', 'slp', 'brn', 'par'].includes(pokemon.status)) {
 this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
 pokemon.cureStatus();
 }
 },
 onSetStatus(status, target, source, effect) {
-if (!['tox', 'tox'].includes(status.id)) return;
+if (!['tox', 'slp', 'brn', 'par'].includes(status.id)) return;
 if ((effect as Move)?.status) {
 this.add('-immune', target, '[from] ability: Pastel Veil');
 }
@@ -4586,40 +4586,6 @@ return this.chainModify(1.5);
 name: "Swarm",
 },
 
-sweetveil: {
-name: "Sweet Veil",
-onAllySetStatus(status, target, source, effect) {
-if (status.id === 'slp') {
-this.debug('Sweet Veil interrupts sleep');
-const effectHolder = this.effectState.target;
-this.add('-block', target, 'ability: Sweet Veil', '[of] ' + effectHolder);
-return null;
-}
-},
-onAllyTryAddVolatile(status, target) {
-if (status.id === 'yawn') {
-this.debug('Sweet Veil blocking yawn');
-const effectHolder = this.effectState.target;
-this.add('-block', target, 'ability: Sweet Veil', '[of] ' + effectHolder);
-return null;
-}
-},
-isBreakable: true,
-},
-
-frostveil: {
-name: "Frost Veil",
-onAllySetStatus(status, target, source, effect) {
-if (status.id === 'frz') {
-this.debug('Frost Veil interrupts freeze');
-const effectHolder = this.effectState.target;
-this.add('-block', target, 'ability: Sweet Veil', '[of] ' + effectHolder);
-return null;
-}
-},
-isBreakable: true,
-},
-
 surfrush: {
 onModifySpe(spe, pokemon) {
 if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
@@ -5144,24 +5110,6 @@ this.boost({def: 1.5,spd: 1.5});
 }
 },
 name: "Water Compaction",
-},
-
-waterveil: {
-onUpdate(pokemon) {
-if (pokemon.status === 'brn') {
-this.add('-activate', pokemon, 'ability: Water Veil');
-pokemon.cureStatus();
-}
-},
-onSetStatus(status, target, source, effect) {
-if (status.id !== 'brn') return;
-if ((effect as Move)?.status) {
-this.add('-immune', target, '[from] ability: Water Veil');
-}
-return false;
-},
-isBreakable: true,
-name: "Water Veil",
 },
 
 weakarmor: {
