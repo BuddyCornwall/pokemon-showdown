@@ -349,20 +349,10 @@ angerpoint: {
 onHit(target, source, move) {
 if (!target.hp) return;
 if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
-this.boost({atk: 12}, target, target);
+this.boost({atk: 12,spa: 12}, target, target);
 }
 },
 name: "Anger Point",
-},
-
-mobpsycho100: {
-onHit(target, source, move) {
-if (!target.hp) return;
-if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
-this.boost({spa: 12}, target, target);
-}
-},
-name: "Mob Psycho 100",
 },
 
 borsalino : {
@@ -5589,7 +5579,7 @@ return this.chainModify(1.5);
 onHit(target, source, move) {
 if (!target.hp) return;
 if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
-this.boost({atk: 12}, target, target);
+this.boost({atk: 12,spa: 12}, target, target);
 }
 },
 name: "UGLY",
