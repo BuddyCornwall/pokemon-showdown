@@ -5552,6 +5552,7 @@ while (disabledMoves.length < 2) {
 const moveslot = this.sample(foeActive.moves);
 if (moveslot.disabled) continue;
 disabledMoves.push(moveslot.move);
+// Assuming foeActive.disableMove exists and works
 foeActive.disableMove(moveslot.id);
 }
 this.add('-message', `${foeActive.name}'s moves were disabled!`);
