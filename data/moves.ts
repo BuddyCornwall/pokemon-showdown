@@ -15881,7 +15881,7 @@ type: "Dark",
 
 thousandarrows: {
 accuracy: 95,
-basePower: 95,
+basePower: 15,
 category: "Physical",
 name: "Thousand Arrows",
 pp: 1.25,
@@ -15889,15 +15889,15 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type, move) {
 if (move.type !== 'Ground') return;
-if (!target) return; // avoid crashing when called from a chat plugin
-// ignore effectiveness if the target is Flying type and immune to Ground
+if (!target) return;
 if (!target.runImmunity('Ground')) {
 if (target.hasType('Flying')) return 0;
 }
 },
 volatileStatus: 'smackdown',
 ignoreImmunity: {'Ground': true},
-secondary: null,
+multihit: [3, 15],
+multiaccuracy: 75,
 target: "any",
 type: "Ground",
 },
