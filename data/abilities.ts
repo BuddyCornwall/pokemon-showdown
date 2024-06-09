@@ -5917,4 +5917,33 @@ return this.effectState.target;
 name: "Yancha",
 },
 
+dangdadangdang: {
+onPreStart(pokemon) {
+this.add('-message', '🎵 meoriga ttinghae dangdadangdang!');
+this.add('-ability', pokemon, 'Multiscale');
+this.add('-ability', pokemon, 'Lightning Rod');
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (target.hp >= target.maxhp) {
+this.debug('Multiscale weaken');
+return this.chainModify(0.5);
+}
+},
+noguard: {
+onAnyInvulnerabilityPriority: 1,
+onAnyInvulnerability(target, source, move) {
+if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+},
+onAnyAccuracy(accuracy, target, source, move) {
+if (move && (source === this.effectState.target || target === this.effectState.target)) {
+return true;
+}
+return accuracy;
+},
+name: "No Guard",
+},
+name: "Dangdadangdang",
+},
+
+
 };
