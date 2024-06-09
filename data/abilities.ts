@@ -1898,19 +1898,15 @@ name: "Honey Gather",
 name: "Huge Pure Power",
 onPreStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
-},
 onModifyAtkPriority: 5,
-onModifyAtk(atk, pokemon) {
-if (pokemon.baseStats.atk >= pokemon.baseStats.spa) {
-return this.chainModify(2.1);
-}
+onModifyAtk(atk) {
+return this.chainModify(2);
 },
 onModifySpAPriority: 5,
-onModifySpA(spa, pokemon) {
-if (pokemon.baseStats.spa > pokemon.baseStats.atk) {
-return this.chainModify(2.1);
-}
+onModifySpA(spa) {
+return this.chainModify(2);
 },
+name: "Huge Pure Power",
 },
 
 sonicpower: {
