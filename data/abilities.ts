@@ -3821,7 +3821,7 @@ name: "Sand Rush",
 omniarush: {
 onModifySpe(spe, pokemon) {
 if (this.field.isWeather('sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea')) {
-return this.chainModify(2);
+return this.chainModify(1.5);
 }
 },
 onImmunity(type, pokemon) {
@@ -5537,27 +5537,6 @@ this.damage(damage, target, pokemon, 'Unstable Power');
 }
 },
 name: "Unstable Power",
-},
-
-chaoticseal: {
-onDamagingHit(damage, target, source, move) {
-if (source.volatiles['disable'] && source.volatiles['disable'].length >= 2) return;
-if (!move.isMax && !move.flags['futuremove'] && move.id !== 'struggle') {
-const movesDisabled = [];
-while (movesDisabled.length < 2) {
-const randomMoveSlot = this.sample(target.moves);
-if (!movesDisabled.includes(randomMoveSlot.id)) {
-movesDisabled.push(randomMoveSlot.id);
-source.addVolatile('disable', this.effectState.target, randomMoveSlot.id);
-}
-}
-this.add('-message', `${source.name} disabled ${target.name}'s ${movesDisabled[0]} and ${movesDisabled[1]} with Chaotic Seal!`);
-}
-},
-flags: {},
-name: "Chaotic Seal",
-rating: 2,
-num: 130,
 },
 
 axolargel: {
