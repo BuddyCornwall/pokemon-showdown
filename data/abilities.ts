@@ -5568,7 +5568,7 @@ const stats = ['atk', 'spa', 'spe'];
 const randomStat = this.sample(stats);
 this.boost({[randomStat]: 0.75}, pokemon);
 
-if (this.randomChance(10, 100)) {
+if (this.randomChance(20, 100)) {
 this.add('-message', `${pokemon.name}'s unstable power caused it to self-destruct!`);
 const damage = pokemon.hp;
 pokemon.faint();
