@@ -1894,19 +1894,26 @@ honeygather: {
 name: "Honey Gather",
 },
 
-'hugepurepower': {
-name: "Huge Pure Power",
+purepower: {
+name: "Pure Power",
+onPreStart(pokemon) {
+this.add('-message', `${pokemon.name} is surging with power!`);
+onModifySpAPriority: 5,
+onModifySpA(spa) {
+return this.chainModify(2);
+},
+name: "Pure Power",
+},
+
+hugepower: {
+name: "Huge Power",
 onPreStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
 onModifyAtkPriority: 5,
 onModifyAtk(atk) {
 return this.chainModify(2);
 },
-onModifySpAPriority: 5,
-onModifySpA(spa) {
-return this.chainModify(2);
-},
-name: "Huge Pure Power",
+name: "Huge Power",
 },
 
 sonicpower: {
