@@ -913,7 +913,7 @@ delete pokemon.volatiles['cudchew'];
 },
 condition: {
 noCopy: true,
-duration: 2,
+duration: 3,
 onRestart() {
 this.effectState.duration = 2;
 },
@@ -2317,7 +2317,7 @@ return false;
 }
 },
 onTryAddVolatile(status, target) {
-if (status.id === 'yawn' && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+if (status.id === 'yawn' && ['sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea'].includes(target.effectiveWeather())) {
 this.add('-immune', target, '[from] ability: Leaf Guard');
 return null;
 }
@@ -5539,6 +5539,27 @@ this.damage(damage, target, pokemon, 'Unstable Power');
 name: "Unstable Power",
 },
 
+chaoticseal: {
+onStart(pokemon) {
+this.add('-ability', pokemon, 'Chaotic Seal');
+},
+onResidualOrder: 26,
+onResidual(pokemon) {
+const foeActive = pokemon.side.foe.active[0];
+if (!foeActive) return;
+const disabledMoves = [];
+while (disabledMoves.length < 2) {
+const moveslot = this.sample(foeActive.moves);
+if (moveslot.disabled) continue;
+disabledMoves.push(moveslot.move);
+foeActive.disableMove(moveslot.id);
+}
+this.add('-message', `${foeActive.name}'s moves were disabled!`);
+this.add('-message', `${foeActive.name} can't use ${disabledMoves[0]} and ${disabledMoves[1]}!`);
+},
+name: "Chaotic Seal",
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
@@ -5870,7 +5891,7 @@ return false;
 }
 },
 onTryAddVolatile(status, target) {
-if (status.id === 'yawn' && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+if (status.id === 'yawn' && ['sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea'].includes(target.effectiveWeather())) {
 this.add('-immune', target, '[from] ability: Leaf Guard');
 return null;
 }
