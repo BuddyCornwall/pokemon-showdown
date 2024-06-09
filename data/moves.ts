@@ -15898,7 +15898,7 @@ if (target.hasType('Flying')) return 0;
 volatileStatus: 'smackdown',
 ignoreImmunity: {'Ground': true},
 secondary: null,
-target: "allAdjacentFoes",
+target: "any",
 type: "Ground",
 },
 
