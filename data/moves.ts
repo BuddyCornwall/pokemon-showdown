@@ -699,6 +699,7 @@ flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
 secondary: {
 selfBoost: {
 accuracy: 1,
+}
 },
 target: "any",
 type: "Fighting",
