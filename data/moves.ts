@@ -224,7 +224,7 @@ category: "Status",
 name: "Agility",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1, kicking 1},
+flags: {snatch: 1, kicking: 1},
 boosts: {
 spe: 2,
 },
