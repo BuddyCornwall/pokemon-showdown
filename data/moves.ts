@@ -173,7 +173,7 @@ pp: 0.625,
 priority: 2,
 flags: {contact: 1, protect: 1, mirror: 1, distance: 1, slicing: 1},
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -224,7 +224,7 @@ category: "Status",
 name: "Agility",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1},
+flags: {snatch: 1, kicking 1},
 boosts: {
 spe: 2,
 },
@@ -243,7 +243,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, slicing: 1, wind: 1},
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "allAdjacentFoes",
@@ -260,7 +260,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, distance: 1, slicing: 1},
 secondaries: [
 {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 }, {
 chance: 25,
@@ -410,7 +410,7 @@ if (type === 'Grass') return 1;
 },
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -461,7 +461,7 @@ category: "Physical",
 name: "Aqua Step",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+flags: {contact: 1, protect: 1, mirror: 1, dance: 1, kicking 1},
 
 onHit(target, source, move) {
 this.add('-message', `Step on me daddy ${source.name}!`);
@@ -752,7 +752,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -873,7 +873,7 @@ category: "Physical",
 name: "Axe Kick",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -1280,7 +1280,7 @@ flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, heal: 1},
 drain: [45, 100],
 thawsTarget: true,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -1343,7 +1343,7 @@ category: "Physical",
 name: "Blaze Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 critRatio: 2,
 secondary: {
 chance: 25,
@@ -1767,7 +1767,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -2070,7 +2070,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -2813,7 +2813,7 @@ flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondaries: [
 {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 }, {
 chance: 50,
@@ -3446,7 +3446,7 @@ category: "Physical",
 name: "Double Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 critRatio: 2,
 multihit: [1, 2],
 multiaccuracy: 85,
@@ -4372,7 +4372,7 @@ flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -5053,7 +5053,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -5099,7 +5099,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -5613,7 +5613,7 @@ recoil: [33, 100],
 multihit: [1, 10],
 multiaccuracy: 75,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -6807,7 +6807,7 @@ category: "Physical",
 name: "High Jump Kick",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kicking 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -7158,7 +7158,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -7585,7 +7585,7 @@ category: "Physical",
 name: "Jet Punch",
 pp: 0.625,
 priority: 6,
-flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1, sound: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 5, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -7603,7 +7603,7 @@ category: "Physical",
 name: "Jump Kick",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kicking 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Jump Kick'));
@@ -7856,7 +7856,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -8024,7 +8024,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -8184,7 +8184,7 @@ category: "Physical",
 name: "Low Kick",
 pp: 0.625,
 priority: -10,
-flags: {contact: 1, protect: 1, slow: 1, mirror: 1},
+flags: {contact: 1, protect: 1, slow: 1, mirror: 1, kicking 1},
 onTryHit(target, pokemon, move) {
 if (target.volatiles['dynamax']) {
 this.add('-fail', pokemon, 'Dynamax');
@@ -8204,7 +8204,7 @@ category: "Physical",
 name: "Low Sweep",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 secondary: {
 chance: 75,
 boosts: {
@@ -8361,7 +8361,7 @@ category: "Physical",
 name: "Mach Punch",
 pp: 0.625,
 priority: 9,
-flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1, sound: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -8768,7 +8768,7 @@ category: "Physical",
 name: "Mega Kick",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 recoil: [50, 100],
 forceSwitch: true,
 secondary: null,
@@ -8822,7 +8822,7 @@ flags: {protect: 1, beam: 1, mirror: 1,},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -8899,17 +8899,17 @@ type: "Steel",
 
 metalsound: {
 accuracy: 85,
-basePower: 0,
-category: "Status",
+basePower: 35,
+category: "Speical",
 name: "Metal Sound",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
-boosts: {
+secondary: {
+chance: 75,
 spd: -2,
 def: -2,
 },
-secondary: null,
 target: "any",
 type: "Steel",
 },
@@ -8941,7 +8941,7 @@ flags: {charge: 1, beam: 1, protect: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -9383,7 +9383,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -9823,7 +9823,7 @@ flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondaries: [
 {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 }, {
 chance: 25,
@@ -9836,17 +9836,17 @@ type: "Dark",
 
 nobleroar: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 45,
+category: "Special",
 name: "Noble Roar",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
-boosts: {
-atk: -1,
-spa: -1,
+secondary: {
+chance: 75,
+spd: -2,
+def: -2,
 },
-secondary: null,
 target: "any",
 type: "Normal",
 },
@@ -10927,7 +10927,7 @@ this.add('-message', `${source.name} stabs violently with their Perceptible Blad
 },
 
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "allAdjacentFoes",
@@ -11035,7 +11035,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -11064,7 +11064,7 @@ return this.chainModify(1.5);
 }
 },
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -11247,7 +11247,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -11502,7 +11502,7 @@ category: "Physical",
 name: "Quack Attack",
 pp: 0.625,
 priority: 3,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -11834,7 +11834,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "allAdjacentFoes",
@@ -12371,7 +12371,7 @@ category: "Physical",
 name: "Rolling Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 secondary: {
 chance: 25,
 volatileStatus: 'flinch',
@@ -12533,7 +12533,7 @@ flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 ignoreEvasion: true,
 ignoreDefensive: true,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -12918,7 +12918,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, slicing: 1},
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -13425,7 +13425,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -13531,7 +13531,7 @@ flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -13722,7 +13722,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -14122,7 +14122,7 @@ flags: {charge: 1, protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -14190,7 +14190,7 @@ return this.chainModify(0.5);
 }
 },
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -14706,7 +14706,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -14862,7 +14862,7 @@ side.addSideCondition('stealthrock');
 },
 },
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -15258,8 +15258,7 @@ flags: {contact: 1, protect: 1, mirror: 1},
 self: {
 boosts: {
 atk: -1,
-def: -1,
-evasion: -1,
+spe: -1,
 },
 },
 secondary: null,
@@ -15288,7 +15287,7 @@ category: "Physical",
 name: "Supersonic Skystrike",
 pp: 0.625,
 priority: 10,
-flags: {protect: 1, mirror: 1},
+flags: {protect: 1, mirror: 1,sound: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -15884,7 +15883,7 @@ accuracy: 95,
 basePower: 15,
 category: "Physical",
 name: "Thousand Arrows",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type, move) {
@@ -15901,6 +15900,7 @@ multiaccuracy: 75,
 target: "any",
 type: "Ground",
 },
+
 
 thousandwaves: {
 accuracy: 95,
@@ -16073,7 +16073,7 @@ category: "Physical",
 name: "Thunderous Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 secondary: {
 chance: 75,
 boosts: {
@@ -16494,7 +16494,7 @@ category: "Physical",
 name: "Triple Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 multihit: [1, 3],
 multiaccuracy: 85,
 secondary: null,
@@ -16509,7 +16509,7 @@ category: "Physical",
 name: "Trop Kick",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1, kicking 1},
 secondary: {
 chance: 75,
 boosts: {
@@ -16531,7 +16531,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
@@ -17332,7 +17332,7 @@ critRatio: 2,
 multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -17532,7 +17532,7 @@ critRatio: 2,
 multihit: 2,
 multiaccuracy: 50,
 secondary: {
-chance: 10,
+chance: 20,
 volatileStatus: 'bleeding',
 },
 target: "any",
@@ -17582,7 +17582,7 @@ flags: {protect: 1, beam: 1, mirror: 1},
 onHit(target, source, move) {
 const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
 if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(33, 100)) {
+if (this.randomChance(50, 100)) {
 source.faint();
 this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
 }
