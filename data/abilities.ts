@@ -5662,31 +5662,6 @@ isBreakable: true,
 name: "Venturara",
 },
 
-unstablepower: {
-onPreStart(pokemon) {
-this.add('-message', pokemon, 'glows with an unstable energy.');
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-name: "Unstable Power",
-},
-
-
-
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
