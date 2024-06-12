@@ -5655,6 +5655,7 @@ name: "Venturara",
 
 intrepidsword: {
 noCopy: true,
+onPreStart(pokemon) {
 this.add('-message', pokemon, 'intrepidsword' + this.effectState.bestStat);
 },
 onModifyAtkPriority: 5,
