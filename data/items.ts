@@ -191,7 +191,7 @@ spritenum: 741,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -215,7 +215,7 @@ basePower: 60,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 itemUser: ["Dialga"],
@@ -618,7 +618,7 @@ onTryHealPriority: 1,
 onTryHeal(damage, target, source, effect) {
 const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
 if (heals.includes(effect.id)) {
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 num: 296,
@@ -645,7 +645,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fighting') {
-return this.chainModify([100, 20]);
+return this.chainModify([130, 100]);
 }
 },
 num: 241,
@@ -661,7 +661,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dark') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 240,
@@ -910,7 +910,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fire') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 249,
@@ -1531,7 +1531,7 @@ onPlate: 'Dragon',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dragon') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -1554,7 +1554,7 @@ basePower: 70,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dragon') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 250,
@@ -1624,7 +1624,7 @@ onPlate: 'Dark',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dark') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -1696,7 +1696,7 @@ onPlate: 'Ground',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Ground') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -2113,7 +2113,7 @@ onPlate: 'Fighting',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fighting') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -2150,7 +2150,7 @@ onPlate: 'Fire',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fire') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -2612,7 +2612,7 @@ spritenum: 743,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -2636,7 +2636,7 @@ basePower: 60,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 itemUser: ["Giratina"],
@@ -2737,7 +2737,7 @@ basePower: 100,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Rock') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 238,
@@ -2911,7 +2911,7 @@ onPlate: 'Ice',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ice') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -2967,7 +2967,7 @@ onPlate: 'Bug',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Bug') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -3007,7 +3007,7 @@ onPlate: 'Steel',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Steel') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -3370,7 +3370,7 @@ fling: {
 basePower: 30,
 },
 onModifyDamage(damage, source, target, move) {
-return this.chainModify([100, 25]);
+return this.chainModify([125, 100]);
 },
 onAfterMoveSecondarySelf(source, target, move) {
 if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
@@ -3567,7 +3567,7 @@ spritenum: 742,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -3591,7 +3591,7 @@ basePower: 60,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 itemUser: ["Palkia"],
@@ -3654,7 +3654,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Electric') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 242,
@@ -3802,7 +3802,7 @@ onPlate: 'Grass',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Grass') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -3894,7 +3894,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Steel') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 233,
@@ -4029,7 +4029,7 @@ if (!move.ohko) {
 this.add('-enditem', source, 'Micle Berry');
 source.removeVolatile('micleberry');
 if (typeof accuracy === 'number') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 }
 },
@@ -4058,7 +4058,7 @@ onPlate: 'Psychic',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Psychic') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -4081,7 +4081,7 @@ spritenum: 292,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Grass') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 239,
@@ -4165,7 +4165,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Water') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 243,
@@ -4211,7 +4211,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ice') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 246,
@@ -4290,7 +4290,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Psychic') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 314,
@@ -4551,7 +4551,7 @@ onPlate: 'Fairy',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fairy') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -4586,7 +4586,7 @@ status: 'psn',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Poison') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 245,
@@ -4893,7 +4893,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
 this.debug('Punching Glove boost');
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 onModifyMovePriority: 1,
@@ -4914,7 +4914,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['bullet']) {
 this.debug('Golden Bullet boost');
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 onModifyMovePriority: 1,
@@ -4935,7 +4935,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['slow']) {
 this.debug('Skates boost');
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 onModifyMovePriority: 1,
@@ -4955,7 +4955,7 @@ basePower: 10,
 onBasePowerPriority: 16,
 onBasePower(basePower, user, target, move) {
 if (move.category === 'Special') {
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 num: 267,
@@ -4971,7 +4971,7 @@ basePower: 10,
 onBasePowerPriority: 16,
 onBasePower(basePower, user, target, move) {
 if (move.category === 'Physical') {
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 num: 266,
@@ -4988,7 +4988,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['beam']) {
 this.debug('Dragon Ball boost');
-return this.chainModify([100, 11]);
+return this.chainModify([110, 100]);
 }
 },
 onModifyMovePriority: 1,
@@ -5007,7 +5007,7 @@ basePower: 10,
 },
 onModifyDamage(damage, source, target, move) {
 if (move && target.getMoveHitData(move).typeMod > 0) {
-return this.chainModify([100, 11]);
+return this.chainModify([110, 10]);
 }
 },
 num: 268,
@@ -5301,7 +5301,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Rock') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 315,
@@ -5399,7 +5399,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Grass') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 318,
@@ -5633,7 +5633,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Water') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 254,
@@ -5650,7 +5650,7 @@ basePower: 50,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Flying') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 244,
@@ -5762,7 +5762,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Normal') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 251,
@@ -5778,7 +5778,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Bug') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 222,
@@ -5826,7 +5826,7 @@ onPlate: 'Flying',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Flying') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -5981,7 +5981,7 @@ basePower: 10,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ground') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 237,
@@ -6012,7 +6012,7 @@ if (
 move && (user.baseSpecies.num === 380 || user.baseSpecies.num === 381) &&
 (move.type === 'Psychic' || move.type === 'Dragon')
 ) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 itemUser: ["Latios", "Latias"],
@@ -6030,7 +6030,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ghost') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 247,
@@ -6058,7 +6058,7 @@ onPlate: 'Water',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Water') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -6079,7 +6079,7 @@ onPlate: 'Ghost',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ghost') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -6253,7 +6253,7 @@ onPlate: 'Rock',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Rock') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -6488,7 +6488,7 @@ onPlate: 'Poison',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Poison') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -6511,7 +6511,7 @@ basePower: 30,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Psychic') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 248,
@@ -6812,7 +6812,7 @@ basePower: 10,
 onSourceModifyAccuracyPriority: -2,
 onSourceModifyAccuracy(accuracy) {
 if (typeof accuracy === 'number') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 265,
@@ -6877,7 +6877,7 @@ onPlate: 'Electric',
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Electric') {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {
@@ -6901,7 +6901,7 @@ onSourceModifyAccuracyPriority: -2,
 onSourceModifyAccuracy(accuracy, target) {
 if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
 this.debug('Zoom Lens boosting accuracy');
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 num: 276,
@@ -7222,7 +7222,7 @@ basePower: 60,
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === -66 && ['Poison', 'Flying'].includes(move.type)) {
-return this.chainModify([100, 20]);
+return this.chainModify([120, 100]);
 }
 },
 onTakeItem(item, pokemon, source) {

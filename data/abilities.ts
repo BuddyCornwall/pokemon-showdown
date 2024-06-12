@@ -25,7 +25,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Aerolate",
 },
@@ -43,7 +43,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Aqualate",
 },
@@ -61,7 +61,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Dracolate",
 },
@@ -79,7 +79,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Dwaynelate",
 },
@@ -97,7 +97,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Electrolate",
 },
@@ -115,7 +115,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Ferrolate",
 },
@@ -133,7 +133,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Gladilate",
 },
@@ -151,7 +151,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Insectilate",
 },
@@ -169,7 +169,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Necrolate",
 },
@@ -186,7 +186,7 @@ move.typeChangerBoosted = this.effect;
 }
 },
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Pixilate",
 },
@@ -203,7 +203,7 @@ move.typeChangerBoosted = this.effect;
 }
 },
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Psylate",
 },
@@ -221,7 +221,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Pyrolate",
 },
@@ -239,7 +239,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Refrigerate",
 },
@@ -257,7 +257,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Psylate",
 },
@@ -275,7 +275,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Umbralate",
 },
@@ -293,7 +293,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Venelate",
 },
@@ -339,7 +339,7 @@ break;
 }
 if (boosted) {
 this.debug('Analytic boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Analytic",
@@ -574,7 +574,7 @@ onAllyBasePowerPriority: 22,
 onAllyBasePower(basePower, attacker, defender, move) {
 if (attacker !== this.effectState.target && move.category === 'Special' && move.category === 'Physical') {
 this.debug('Synergy Surge boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Synergy Surge",
@@ -585,7 +585,7 @@ onAllyBasePowerPriority: 22,
 onAllyBasePower(basePower, attacker, defender, move) {
 if (attacker !== this.effectState.target && move.category === 'Physical') {
 this.debug('Inspire Aura boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Inspire Aura",
@@ -735,7 +735,7 @@ onBasePowerPriority: 7,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['bullet']) {
 this.debug('Deadlands boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 isBreakable: true,
@@ -891,7 +891,7 @@ onSourceModifyAccuracyPriority: -1,
 onSourceModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
 this.debug('compoundeyes - enhancing accuracy');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 },
 name: "Compound Eyes",
 },
@@ -2309,7 +2309,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
 this.debug('Iron Fist boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Iron Fist",
@@ -2320,7 +2320,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['kick']) {
 this.debug('Super Kick Party boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Super Kick Party",
@@ -2991,7 +2991,7 @@ name: "Natural Cure",
 neuroforce: {
 onModifyDamage(damage, source, target, move) {
 if (move && target.getMoveHitData(move).typeMod > 0) {
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Neuroforce",
@@ -3072,7 +3072,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 33]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([133, 100]);
 },
 name: "Normalate",
 },
@@ -3405,7 +3405,7 @@ onAllyBasePowerPriority: 22,
 onAllyBasePower(basePower, attacker, defender, move) {
 if (attacker !== this.effectState.target) {
 this.debug('Power Spot boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Power Spot",
@@ -3521,25 +3521,25 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
 this.debug('Protosynthesis atk boost');
-return this.chainModify([100, 13]);
+return this.chainModify([110, 100]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
 this.debug('Protosynthesis def boost');
-return this.chainModify([100, 13]);
+return this.chainModify([110, 100]);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
 this.debug('Protosynthesis spa boost');
-return this.chainModify([100, 13]);
+return this.chainModify([110, 100]);
 },
 onModifySpDPriority: 6,
 onModifySpD(relayVar, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
 this.debug('Protosynthesis spd boost');
-return this.chainModify([100, 13]);
+return this.chainModify([110, 100]);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
@@ -3571,7 +3571,7 @@ onBasePowerPriority: 7,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['sound']) {
 this.debug('Punk Rock boost');
-return this.chainModify([100, 15]);
+return this.chainModify([115, 100]);
 }
 },
 isBreakable: true,
@@ -3641,30 +3641,30 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
 this.debug('Quark Drive atk boost');
-return this.chainModify([100, 13]);
+return this.chainModify([150, 100]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
 this.debug('Quark Drive def boost');
-return this.chainModify([100, 13]);
+return this.chainModify([150, 100]);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
 this.debug('Quark Drive spa boost');
-return this.chainModify([100, 13]);
+return this.chainModify([150, 100]);
 },
 onModifySpDPriority: 6,
 onModifySpD(relayVar, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
 this.debug('Quark Drive spd boost');
-return this.chainModify([100, 13]);
+return this.chainModify([150, 100]);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
 this.debug('Quark Drive spe boost');
-return this.chainModify(1.5);
+return this.chainModify([150, 100]);
 },
 onEnd(pokemon) {
 this.add('-end', pokemon, 'Quark Drive');
@@ -3764,7 +3764,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.recoil || move.hasCrashDamage) {
 this.debug('Reckless boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Reckless",
@@ -3879,7 +3879,7 @@ onBasePower(basePower, attacker, defender, move) {
 if (this.field.isWeather('sandstorm')) {
 if (move.type === 'Rock' || move.type === 'Ground' || move.type === 'Steel') {
 this.debug('Sand Force boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 }
 },
@@ -4107,7 +4107,7 @@ move.hasSheerForce = true;
 },
 onBasePowerPriority: 21,
 onBasePower(basePower, pokemon, target, move) {
-if (move.hasSheerForce) return this.chainModify([100, 33]);
+if (move.hasSheerForce) return this.chainModify([133, 100]);
 },
 name: "Sheer Force",
 },
@@ -4888,7 +4888,7 @@ toughclaws: {
 onBasePowerPriority: 21,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['contact']) {
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Tough Claws",
@@ -4959,14 +4959,14 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('Transistor boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 onModifySpAPriority: 5,
 onModifySpA(atk, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('Transistor boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Transistor",
@@ -5642,12 +5642,12 @@ noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify([100, 25]);
+return this.chainModify(1.5);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify([100, 25]);
+return this.chainModify(1.5);
 },
 isPermanent: true,
 name: "Intrepid Sword",
@@ -5695,7 +5695,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Axolargel",
 },
@@ -5731,7 +5731,7 @@ onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
 this.debug('Iron Fist boost');
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 onStart(source) {
@@ -5871,7 +5871,7 @@ move.typeChangerBoosted = this.effect;
 },
 onBasePowerPriority: 23,
 onBasePower(basePower, pokemon, target, move) {
-if (move.typeChangerBoosted === this.effect) return this.chainModify([100, 20]);
+if (move.typeChangerBoosted === this.effect) return this.chainModify([120, 100]);
 },
 name: "Strong Bad",
 },
@@ -5914,7 +5914,7 @@ this.add('-ability', pokemon, 'Kentaromiura');
 onBasePowerPriority: 21,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['contact']) {
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 onDamage(damage, target, source, effect) {
@@ -5981,7 +5981,7 @@ if (move.self?.chance) move.self.chance *= 2;
 },
 onModifyDamage(damage, source, target, move) {
 if (move && target.getMoveHitData(move).typeMod > 0) {
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 name: "Happy Wol",
@@ -6077,5 +6077,4 @@ name: "No Guard",
 },
 name: "Dangdadangdang",
 },
-
 };

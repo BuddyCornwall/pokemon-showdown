@@ -3999,7 +3999,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('electric terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -4082,7 +4082,7 @@ onBasePower(basePower, source, target, move) {
 if (target.runEffectiveness(move) > 0) {
 // Placeholder
 this.debug(`electro drift super effective buff`);
-return this.chainModify([100, 33]);
+return this.chainModify([133, 100]);
 }
 },
 secondary: null,
@@ -4797,7 +4797,7 @@ return this.chainModify(0.5);
 }
 if (move.type === 'Grass' && attacker.isGrounded()) {
 this.debug('grassy terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -5744,7 +5744,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('psychic terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -6062,7 +6062,7 @@ return this.chainModify(0.5);
 }
 if (move.type === 'Grass' && attacker.isGrounded()) {
 this.debug('grassy terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -6172,7 +6172,7 @@ if (applies) this.add('-activate', pokemon, 'move: Gravity');
 },
 onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
-return this.chainModify([100, 69]);
+return this.chainModify([150, 100]);
 },
 onDisableMove(pokemon) {
 for (const moveSlot of pokemon.moveSlots) {
@@ -11192,7 +11192,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('psychic terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -13368,7 +13368,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('electric terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
@@ -18277,7 +18277,7 @@ onBasePowerPriority: 6,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
 this.debug('electric terrain boost');
-return this.chainModify([100, 30]);
+return this.chainModify([130, 100]);
 }
 },
 onFieldStart(field, source, effect) {
