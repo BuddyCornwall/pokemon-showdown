@@ -5642,12 +5642,12 @@ noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-return this.boost({atk: 1}, pokemon);
+return this.chainModify([100, 25]);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-return this.boost({spa: 1}, pokemon);
+return this.chainModify([100, 25]);
 },
 isPermanent: true,
 name: "Intrepid Sword",
