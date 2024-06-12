@@ -5666,7 +5666,6 @@ testdrive: {
 noCopy: true,
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'testdrive' + this.effectState.bestStat);
 },
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
