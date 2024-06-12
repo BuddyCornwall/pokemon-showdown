@@ -5654,6 +5654,10 @@ name: "Venturara",
 },
 
 intrepidsword: {
+onPreStart(pokemon) {
+this.add('-message', pokemon, 's Sword has boosted their highest attacking stat.');
+this.add('-ability', pokemon, 'Intrepid Sword');
+},
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
 },
