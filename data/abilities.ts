@@ -5418,29 +5418,6 @@ isPermanent: true,
 name: "Zen Mode",
 },
 
-zerotohero: {
-onSwitchOut(pokemon) {
-if (pokemon.baseSpecies.baseSpecies !== 'Palafin' || pokemon.transformed) return;
-if (pokemon.species.forme !== 'Hero') {
-pokemon.formeChange('Palafin-Hero', this.effect, true);
-}
-},
-onSwitchIn() {
-this.effectState.switchingIn = true;
-},
-onStart(pokemon) {
-if (!this.effectState.switchingIn) return;
-this.effectState.switchingIn = false;
-if (pokemon.baseSpecies.baseSpecies !== 'Palafin' || pokemon.transformed) return;
-if (!this.effectState.heroMessageDisplayed && pokemon.species.forme === 'Hero') {
-this.add('-activate', pokemon, 'ability: Zero to Hero');
-this.effectState.heroMessageDisplayed = true;
-}
-},
-isPermanent: true,
-name: "Zero to Hero",
-},
-
 mountaineer: {
 onDamage(damage, target, source, effect) {
 if (effect && effect.id === 'stealthrock') {
@@ -5655,7 +5632,7 @@ name: "Venturara",
 
 intrepidsword: {
 onPreStart(pokemon) {
-this.add('-message', pokemon, 's Sword has boosted their highest attacking stat.');
+this.add('-message', 'Intrepid Sword has boosted ${pokemon.name} highest attacking stat.');
 this.add('-ability', pokemon, 'Intrepid Sword');
 },
 onStart(pokemon, source, effect) {
@@ -5665,18 +5642,37 @@ noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify(1.5);
+this.boost({atk: 1}, pokemon);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify(1.5);
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Intrepid Sword');
+this.boost({spa: 1}, pokemon);
 },
 isPermanent: true,
 name: "Intrepid Sword",
+},
+
+hugepurepower: {
+onPreStart(pokemon) {
+this.add('-message', `${pokemon.name} is surging with power!`);
+},
+onStart(pokemon, source, effect) {
+this.effectState.bestStat = pokemon.getBestStat(false, true);
+},
+noCopy: true,
+onModifyAtkPriority: 5,
+onModifyAtk(atk, source, target, move) {
+if (this.effectState.bestStat !== 'atk') return;
+return this.chainModify(2);
+},
+onModifySpAPriority: 5,
+onModifySpA(relayVar, source, target, move) {
+if (this.effectState.bestStat !== 'spa') return;
+return this.chainModify(2);
+},
+isPermanent: true,
+name: "Huge Pure Power",
 },
 
 axolargel: {
