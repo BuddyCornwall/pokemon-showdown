@@ -5632,7 +5632,7 @@ name: "Venturara",
 
 intrepidsword: {
 onPreStart(pokemon) {
-this.add('-message', 'Intrepid Sword has boosted ${pokemon.name} highest attacking stat.');
+this.add('-message', 'Intrepid Sword has boosted their highest attacking stat.');
 this.add('-ability', pokemon, 'Intrepid Sword');
 },
 onStart(pokemon, source, effect) {
@@ -5642,12 +5642,12 @@ noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-this.boost({atk: 1}, pokemon);
+return this.boost({atk: 1}, pokemon);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-this.boost({spa: 1}, pokemon);
+return this.boost({spa: 1}, pokemon);
 },
 isPermanent: true,
 name: "Intrepid Sword",
