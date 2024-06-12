@@ -5654,6 +5654,9 @@ name: "Venturara",
 },
 
 intrepidsword: {
+onStart(pokemon, source, effect) {
+this.effectState.bestStat = pokemon.getBestStat(false, true);
+},
 noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
