@@ -5655,19 +5655,14 @@ name: "Venturara",
 
 intrepidsword: {
 noCopy: true,
-onPreStart(pokemon) {
-this.add('-message', pokemon, 'intrepidsword' + this.effectState.bestStat);
-},
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-this.debug('Intrepid Sword atk boost');
 return this.chainModify(1.5);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-this.debug('Intrepid Sword spa boost');
 return this.chainModify(1.5);
 },
 onEnd(pokemon) {
