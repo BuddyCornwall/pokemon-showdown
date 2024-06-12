@@ -2294,15 +2294,6 @@ this.boost({spe: -1}, target, pokemon, null, true);
 name: "Flustered",
 },
 
-intrepidsword: {
-onStart(pokemon) {
-if (pokemon.swordBoost) return;
-pokemon.swordBoost = true;
-this.boost({atk: 1, spa: 1}, pokemon);
-},
-name: "Intrepid Sword",
-},
-
 ironbarbs: {
 onDamagingHitOrder: 1,
 onDamagingHit(damage, target, source, move) {
@@ -5662,41 +5653,30 @@ isBreakable: true,
 name: "Venturara",
 },
 
-testdrive: {
+intrepidsword: {
+condition: {
 noCopy: true,
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
+this.add('-start', pokemon, 'intrepidsword' + this.effectState.bestStat);
 },
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify(1.5);
-},
-onModifyDefPriority: 6,
-onModifyDef(def, target, source, move) {
-if (this.effectState.bestStat !== 'def') return;
+this.debug('Intrepid Sword atk boost');
 return this.chainModify(1.5);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify(1.5);
-},
-onModifySpDPriority: 6,
-onModifySpD(relayVar, target, source, move) {
-if (this.effectState.bestStat !== 'spd') return;
-return this.chainModify(1.5);
-},
-onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat !== 'spe') return;
+this.debug('Intrepid Sword spa boost');
 return this.chainModify(1.5);
 },
 onEnd(pokemon) {
-this.add('-end', pokemon, 'Test Drive');
- 
+this.add('-end', pokemon, 'Intrepid Sword');
 },
 isPermanent: true,
-name: "Test Drive",
+name: "Intrepid Sword",
 },
 
 axolargel: {
