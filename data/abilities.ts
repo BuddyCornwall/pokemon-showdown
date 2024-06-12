@@ -5662,7 +5662,6 @@ isBreakable: true,
 name: "Venturara",
 },
 
-
 testdrive: {
 noCopy: true,
 onStart(pokemon, source, effect) {
@@ -5672,30 +5671,25 @@ this.add('-start', pokemon, 'testdrive' + this.effectState.bestStat);
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-this.debug('Test Drive atk boost');
-return this.chainModify([100, 13]);
+return this.chainModify(1.5);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
-this.debug('Test Drive def boost');
-return this.chainModify([100, 13]);
+return this.chainModify(1.5);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-this.debug('Test Drive spa boost');
-return this.chainModify([100, 13]);
+return this.chainModify(1.5);
 },
 onModifySpDPriority: 6,
 onModifySpD(relayVar, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
-this.debug('Test Drive spd boost');
-return this.chainModify([100, 13]);
+return this.chainModify(1.5);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
-this.debug('Test Drive spe boost');
 return this.chainModify(1.5);
 },
 onEnd(pokemon) {
