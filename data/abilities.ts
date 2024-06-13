@@ -4610,6 +4610,7 @@ this.add('-ability', target, 'Antifragile');
 return target.hp - 1;
 }
 },
+},
 isBreakable: true,
 name: "Antifragile",
 },
