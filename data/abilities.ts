@@ -4281,7 +4281,7 @@ sniper: {
 onModifyDamage(damage, source, target, move) {
 if (target.getMoveHitData(move).crit) {
 this.debug('Sniper boost');
-return this.chainModify(1.5);
+return this.chainModify(2);
 }
 },
 name: "Sniper",
@@ -4833,7 +4833,7 @@ const basePowerAfterMultiplier = this.modify(basePower, this.event.modifier);
 this.debug('Base Power: ' + basePowerAfterMultiplier);
 if (basePowerAfterMultiplier <= 60) {
 this.debug('Technician boost');
-return this.chainModify(1.55);
+return this.chainModify(1.5);
 }
 },
 name: "Technician",
@@ -5004,14 +5004,14 @@ onModifyAtkPriority: 5,
 onModifyAtk(atk, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('Transistor boost');
-return this.chainModify([133,100]);
+return this.chainModify([150,100]);
 }
 },
 onModifySpAPriority: 5,
 onModifySpA(atk, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('Transistor boost');
-return this.chainModify([133,100]);
+return this.chainModify([150,100]);
 }
 },
 name: "Transistor",
@@ -6077,6 +6077,31 @@ dangdadangdang: {
 onPreStart(pokemon) {
 this.add('-message', '🎵 meoriga ttinghae dangdadangdang!');
 this.add('-ability', pokemon, 'Multiscale');
+this.add('-ability', pokemon, 'No Guard');
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (target.hp >= target.maxhp) {
+this.debug('Multiscale weaken');
+return this.chainModify(0.5);
+}
+},
+noguard: {
+onAnyInvulnerabilityPriority: 1,
+onAnyInvulnerability(target, source, move) {
+if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+},
+onAnyAccuracy(accuracy, target, source, move) {
+if (move && (source === this.effectState.target || target === this.effectState.target)) {
+return true;
+}
+return accuracy;
+},
+name: "No Guard",
+},
+name: "Dangdadangdang",
+},
+
+};
 this.add('-ability', pokemon, 'No Guard');
 },
 onSourceModifyDamage(damage, source, target, move) {
