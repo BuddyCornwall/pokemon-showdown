@@ -2027,7 +2027,7 @@ return this.chainModify(1.5);
 onSourceModifyAccuracyPriority: -1,
 onSourceModifyAccuracy(accuracy, target, source, move) {
 if (move.category === 'Physical' && typeof accuracy === 'number') {
-return this.chainModify([125, 1000]);
+return this.chainModify([100, 125]);
 }
 },
 name: "Hustle",
