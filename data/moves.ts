@@ -796,7 +796,7 @@ return;
 }
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Aurora Veil weaken');
-if (this.activePerHalf > 1) return this.chainModify([35, 100]);
+if (this.activePerHalf > 1) return this.chainModify([100, 135]);
 return this.chainModify(0.5);
 }
 }
@@ -4082,7 +4082,7 @@ onBasePower(basePower, source, target, move) {
 if (target.runEffectiveness(move) > 0) {
 // Placeholder
 this.debug(`electro drift super effective buff`);
-return this.chainModify([133, 100]);
+return this.chainModify([133,100]);
 }
 },
 secondary: null,
@@ -6172,7 +6172,7 @@ if (applies) this.add('-activate', pokemon, 'move: Gravity');
 },
 onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
-return this.chainModify([150, 100]);
+return this.chainModify([169, 100]);
 },
 onDisableMove(pokemon) {
 for (const moveSlot of pokemon.moveSlots) {
@@ -7585,7 +7585,7 @@ category: "Physical",
 name: "Jet Punch",
 pp: 0.625,
 priority: 6,
-flags: {contact: 1, protect: 1, mirror: 1, punch: 1, sound: 1},
+flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 5, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -8057,7 +8057,7 @@ onAnyModifyDamage(damage, source, target, move) {
 if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Light Screen weaken');
-if (this.activePerHalf > 1) return this.chainModify([33, 100]);
+if (this.activePerHalf > 1) return this.chainModify([100, 133]);
 return this.chainModify(0.5);
 }
 }
@@ -9544,7 +9544,7 @@ onBasePowerPriority: 1,
 onBasePower(basePower, attacker, defender, move) {
 if (move.type === 'Electric') {
 this.debug('mud sport weaken');
-return this.chainModify([69, 100]);
+return this.chainModify([100, 169]);
 }
 },
 onFieldResidualOrder: 27,
@@ -11934,7 +11934,7 @@ onAnyModifyDamage(damage, source, target, move) {
 if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Physical') {
 if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 this.debug('Reflect weaken');
-if (this.activePerHalf > 1) return this.chainModify([33, 100]);
+if (this.activePerHalf > 1) return this.chainModify([100, 133]);
 return this.chainModify(0.5);
 }
 }
