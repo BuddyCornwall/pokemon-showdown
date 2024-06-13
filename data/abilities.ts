@@ -6101,29 +6101,5 @@ name: "No Guard",
 name: "Dangdadangdang",
 },
 
-};
-this.add('-ability', pokemon, 'No Guard');
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (target.hp >= target.maxhp) {
-this.debug('Multiscale weaken');
-return this.chainModify(0.5);
-}
-},
-noguard: {
-onAnyInvulnerabilityPriority: 1,
-onAnyInvulnerability(target, source, move) {
-if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
-},
-onAnyAccuracy(accuracy, target, source, move) {
-if (move && (source === this.effectState.target || target === this.effectState.target)) {
-return true;
-}
-return accuracy;
-},
-name: "No Guard",
-},
-name: "Dangdadangdang",
-},
 
 };
