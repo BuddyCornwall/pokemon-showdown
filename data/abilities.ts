@@ -1958,7 +1958,7 @@ name: "Pure Power",
 
 hugepurepower: {
 onPreStart(pokemon) {
-this.add('-message', `${pokemon.name} is surging with power!`);
+this.add('-message', `Oh shit! ${pokemon.name} is surging with power!`);
 },
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
