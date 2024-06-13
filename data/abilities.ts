@@ -1045,7 +1045,7 @@ onAnyBasePower(basePower, source, target, move) {
 if (target === source || move.category === 'Status' || move.type !== 'Dark') return;
 if (!move.auraBooster?.hasAbility('Dark Aura')) move.auraBooster = this.effectState.target;
 if (move.auraBooster !== this.effectState.target) return;
-return this.chainModify([133:100]);
+return this.chainModify([133,100]);
 },
 name: "Dark Aura",
 },
@@ -1366,7 +1366,7 @@ onAnyBasePower(basePower, source, target, move) {
 if (target === source || move.category === 'Status' || move.type !== 'Fairy') return;
 if (!move.auraBooster?.hasAbility('Fairy Aura')) move.auraBooster = this.effectState.target;
 if (move.auraBooster !== this.effectState.target) return;
-return this.chainModify([133:100]);
+return this.chainModify([133,100]);
 },
 name: "Fairy Aura",
 },
@@ -1911,7 +1911,7 @@ onAnyBasePower(basePower, source, target, move) {
 if (target === source || move.category === 'Status' || move.type !== 'Dragon') return;
 if (!move.auraBooster?.hasAbility('Imagine Dragons')) move.auraBooster = this.effectState.target;
 if (move.auraBooster !== this.effectState.target) return;
-return this.chainModify([133:100]);
+return this.chainModify([133,100]);
 },
 name: "Imagine Dragons",
 },
