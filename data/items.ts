@@ -1108,66 +1108,6 @@ num: 189,
 gen: 4,
 },
 
-clawfossil: {
-name: "Claw Fossil",
-fling: {
-basePower: 100,
-},
-num: 100,
-gen: 3,
-isNonstandard: "Past",
-},
-
-clearamulet: {
-name: "Clear Amulet",
-fling: {
-basePower: 30,
-},
-onTryBoost(boost, target, source, effect) {
-if (source && target === source) return;
-let showMsg = false;
-let i: BoostID;
-for (i in boost) {
-if (boost[i]! < 0) {
-delete boost[i];
-name: "Dragonium Z",
-onPlate: 'Dragon',
-onTakeItem: false,
-zMove: true,
-zMoveType: "Dragon",
-forcedForme: "Arceus-Dragon",
-num: 790,
-gen: 7,
-isNonstandard: "Past",
-},
-
-dreadplate: {
-name: "Dread Plate",
-onPlate: 'Dark',
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Dark') {
-return this.chainModify([120, 100]);
-}
-},
-onTakeItem(item, pokemon, source) {
-if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
-return false;
-}
-return true;
-},
-forcedForme: "Arceus-Dark",
-num: 312,
-gen: 4,
-},
-
-dreamball: {
-name: "Dream Ball",
-num: 576,
-gen: 5,
-isPokeball: true,
-},
-
 dubiousdisc: {
 name: "Dubious Disc",
 fling: {
