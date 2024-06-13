@@ -2909,9 +2909,28 @@ name: "Motor Drive",
 },
 
 moxie: {
+onStart(pokemon, source, effect) {
+this.effectState.bestStat = pokemon.getBestStat(false, true);
+},
+noCopy: true,
+onModifyAtkPriority: 5,
+onModifyAtk(atk, source, target, move) {
+if (this.effectState.bestStat === 'atk') {
+return this.chainModify(1.5);
+}
+},
+onModifySpAPriority: 5,
+onModifySpA(relayVar, source, target, move) {
+if (this.effectState.bestStat === 'spa') {
+return this.chainModify(1.5);
+}
+},
 onSourceAfterFaint(length, target, source, effect) {
 if (effect && effect.effectType === 'Move') {
-this.boost({atk: length,spa: length}, source);
+const highestStat = source.getStat('atk') >= source.getStat('spa') ? 'atk' : 'spa';
+const boost = {};
+boost[highestStat] = length;
+this.boost(boost, source);
 }
 },
 name: "Moxie",
