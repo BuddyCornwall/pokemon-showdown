@@ -1976,6 +1976,7 @@ return this.chainModify(2);
 },
 isPermanent: true,
 name: "Huge Pure Power",
+},
 
 hugepower: {
 onPreStart(pokemon) {
