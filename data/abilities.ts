@@ -1945,18 +1945,7 @@ honeygather: {
 name: "Honey Gather",
 },
 
-purepower: {
-onPreStart(pokemon) {
-this.add('-message', `${pokemon.name} is surging with power!`);
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk) {
-return this.chainModify(2);
-},
-name: "Pure Power",
-},
-
-hugepurepower: {
+hugepower: {
 onPreStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
 },
@@ -1975,17 +1964,6 @@ if (this.effectState.bestStat !== 'spa') return;
 return this.chainModify(2);
 },
 isPermanent: true,
-name: "Huge Pure Power",
-},
-
-hugepower: {
-onPreStart(pokemon) {
-this.add('-message', `${pokemon.name} is surging with power!`);
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk) {
-return this.chainModify(2);
-},
 name: "Huge Power",
 },
 
