@@ -2014,17 +2014,15 @@ this.effectState.bestStat = pokemon.getBestStat(false, true);
 noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
+if (this.effectState.bestStat === 'atk') {
 return this.chainModify(1.5);
+}
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
+if (this.effectState.bestStat === 'spa') {
 return this.chainModify(1.5);
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk) {
-return this.modify(atk, 1.5);
+}
 },
 onSourceModifyAccuracyPriority: -1,
 onSourceModifyAccuracy(accuracy, target, source, move) {
