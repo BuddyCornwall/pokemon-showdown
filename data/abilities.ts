@@ -2380,50 +2380,15 @@ return this.chainModify([133,100]);
 name: "Super Kick Party",
 },
 
-justified: {
-condition: {
-onStart(pokemon, source, effect) {
-this.effectState.bestStat = pokemon.getBestStat(false, true);
+zushizushinomi: {
+onPreStart(pokemon) {
+this.add('-message', 'Zushi Zushi no Mi! Gravity has been turned upto 11');
 },
-onModifyAtkPriority: 5,
-onModifyAtk(atk, pokemon) {
-if (this.effectState.bestStat === 'atk') {
-return this.chainModify(2);
-}
+onStart(pokemon) {
+this.addPseudoWeather('gravity', pokemon);
+this.add('-ability', pokemon, 'Zushi Zushi no Mi');
 },
-onModifyDefPriority: 6,
-onModifyDef(def, pokemon) {
-if (this.effectState.bestStat === 'def') {
-return this.chainModify(2);
-}
-},
-onModifySpAPriority: 5,
-onModifySpA(spa, pokemon) {
-if (this.effectState.bestStat === 'spa') {
-return this.chainModify(2);
-}
-},
-onModifySpDPriority: 6,
-onModifySpD(spd, pokemon) {
-if (this.effectState.bestStat === 'spd') {
-return this.chainModify(2);
-}
-},
-onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat === 'spe') {
-return this.chainModify(2);
-}
-},
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Dark') {
-const highestStat = target.getBestStat();
-if (highestStat) {
-this.boost({ [bestStat]: 2 }, target);
-}
-}
-},
-name: "Justified",
+name: "Zushi Zushi no Mi",
 },
 
 keeneye: {
