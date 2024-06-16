@@ -2385,7 +2385,7 @@ onDamagingHit(damage, target, source, move) {
 if (move.type === 'Dark') {
 const highestStat = target.getHighestStat();
 if (highestStat) {
-this.boost({ [highestStat]: 2 }, target);
+this.boost({ [highestStat]: 2 });
 }
 }
 },
