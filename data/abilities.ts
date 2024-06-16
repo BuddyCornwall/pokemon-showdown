@@ -2383,35 +2383,44 @@ name: "Super Kick Party",
 justified: {
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Dark') {
+const highestStat = target.getHighestStat();
+if (highestStat) {
+this.boost({ [highestStat]: 2 }, target);
 }
 }
+},
 condition: {
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
 },
 onModifyAtkPriority: 5,
-onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify([200, 100]);
+onModifyAtk(atk, pokemon) {
+if (this.effectState.bestStat === 'atk') {
+return this.chainModify(2);
+}
 },
 onModifyDefPriority: 6,
-onModifyDef(def, target, source, move) {
-if (this.effectState.bestStat !== 'def') return;
-return this.chainModify([200, 100]);
+onModifyDef(def, pokemon) {
+if (this.effectState.bestStat === 'def') {
+return this.chainModify(2);
+}
 },
 onModifySpAPriority: 5,
-onModifySpA(relayVar, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify([200, 100]);
+onModifySpA(spa, pokemon) {
+if (this.effectState.bestStat === 'spa') {
+return this.chainModify(2);
+}
 },
 onModifySpDPriority: 6,
-onModifySpD(relayVar, target, source, move) {
-if (this.effectState.bestStat !== 'spd') return;
-return this.chainModify([200, 100]);
+onModifySpD(spd, pokemon) {
+if (this.effectState.bestStat === 'spd') {
+return this.chainModify(2);
+}
 },
 onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat !== 'spe') return;
-return this.chainModify([200, 100]);
+if (this.effectState.bestStat === 'spe') {
+return this.chainModify(2);
+}
 },
 },
 name: "Justified",
