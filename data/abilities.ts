@@ -2382,10 +2382,12 @@ name: "Super Kick Party",
 
 justified: {
 onDamagingHit(damage, target, source, move) {
-const bestStats = target.getStats().slice(1)
-.sort((a, b) => b - a)
-.slice(0, 2)
-.map(stat => this.boost({[stat.id]: 1.5}));
+if (move.type === 'Dark') {
+const highestStat = target.getHighestStat();
+if (highestStat) {
+this.boost({ [highestStat]: 2 }, target);
+}
+}
 },
 name: "Justified",
 },
