@@ -6085,7 +6085,8 @@ this.boost({spe: 1});
 },
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Electric') {
-if (!this.boost({atk: 1.5,spa: 1.5})) {
+const bestStat = target.getBestStat(false, true);
+if (!this.boost(bestStat === 'atk' ? { atk: 1.5 } : { spa: 1.5 })) {
 this.add('-immune', target, '[from] ability: Lightning Rod');
 }
 return null;
@@ -6102,6 +6103,7 @@ this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
 return this.effectState.target;
 }
 },
+isBreakable: true,
 name: "Yancha",
 },
 
