@@ -2383,9 +2383,9 @@ name: "Super Kick Party",
 justified: {
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Dark') {
-const highestStat = target.getHighestStat();
+const highestStat = target.getBestStat();
 if (highestStat) {
-this.boost({ [highestStat]: 2 }, target);
+this.boost({ [bestStat]: 2 }, target);
 }
 }
 },
