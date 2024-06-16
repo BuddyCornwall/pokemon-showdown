@@ -1397,10 +1397,11 @@ flareboost: {
 onBasePowerPriority: 19,
 onBasePower(basePower, attacker, defender, move) {
 if (attacker.status === 'brn') {
-if (move.category === 'Special') {
+const bestStat = attacker.getBestStat(false, true);
+if (move.category === 'Special' && bestStat === 'spa') {
 this.chainModify(1.5);
-} else if (move.category === 'Physical') {
-this.boost({atk: 1.5}, attacker);
+} else if (move.category === 'Physical' && bestStat === 'atk') {
+this.chainModify(1.5);
 }
 }
 },
