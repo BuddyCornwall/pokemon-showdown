@@ -2381,14 +2381,6 @@ name: "Super Kick Party",
 },
 
 justified: {
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Dark') {
-const highestStat = target.getBestStat();
-if (highestStat) {
-this.boost({ [bestStat]: 2 }, target);
-}
-}
-},
 condition: {
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
@@ -2422,6 +2414,14 @@ if (this.effectState.bestStat === 'spe') {
 return this.chainModify(2);
 }
 },
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Dark') {
+const highestStat = target.getBestStat();
+if (highestStat) {
+this.boost({ [bestStat]: 2 }, target);
+}
+}
 },
 name: "Justified",
 },
