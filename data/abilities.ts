@@ -2466,23 +2466,12 @@ name: "Light Metal",
 },
 
 lightningrod: {
-onStart(pokemon, source, effect) {
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-},
-noCopy: true,
-onModifyAtkPriority: 5,
-onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify(1.5);
-},
-onModifySpAPriority: 5,
-onModifySpA(relayVar, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify(1.5);
-},
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Electric') {
+const bestStat = target.getBestStat(false, true);
+if (!this.boost(bestStat === 'atk' ? { atk: 1.5 } : { spa: 1.5 })) {
 this.add('-immune', target, '[from] ability: Lightning Rod');
+}
 return null;
 }
 },
