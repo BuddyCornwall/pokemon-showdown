@@ -2380,15 +2380,23 @@ return this.chainModify([133,100]);
 name: "Super Kick Party",
 },
 
-zushizushinomi: {
-onPreStart(pokemon) {
-this.add('-message', 'Zushi Zushi no Mi! Gravity has been turned upto 11');
+justified: {
+onSourceModifyAtkPriority: 6,
+onSourceModifyAtk(atk, attacker, defender, move) {
+if (move.type === 'Fairy' || move.type === 'Bug' || move.type === 'Fighting') {
+this.debug('Justified boost');
+return this.chainModify(0.33);
+}
 },
-onStart(pokemon) {
-this.addPseudoWeather('gravity', pokemon);
-this.add('-ability', pokemon, 'Zushi Zushi no Mi');
+onSourceModifySpAPriority: 5,
+onSourceModifySpA(spa, attacker, defender, move) {
+if (move.type === 'Fairy' || move.type === 'Bug' || move.type === 'Fighting') {
+this.debug('Justified boost');
+return this.chainModify(0.33);
+}
 },
-name: "Zushi Zushi no Mi",
+isBreakable: true,
+name: "Justified",
 },
 
 keeneye: {
