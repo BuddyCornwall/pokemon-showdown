@@ -2385,14 +2385,14 @@ onSourceModifyAtkPriority: 6,
 onSourceModifyAtk(atk, attacker, defender, move) {
 if (move.type === 'Fairy' || move.type === 'Bug' || move.type === 'Fighting') {
 this.debug('Justified boost');
-return this.chainModify(0.33);
+return this.chainModify(0.25);
 }
 },
 onSourceModifySpAPriority: 5,
 onSourceModifySpA(spa, attacker, defender, move) {
 if (move.type === 'Fairy' || move.type === 'Bug' || move.type === 'Fighting') {
 this.debug('Justified boost');
-return this.chainModify(0.33);
+return this.chainModify(0.25);
 }
 },
 isBreakable: true,
