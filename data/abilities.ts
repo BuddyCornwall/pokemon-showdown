@@ -2484,8 +2484,8 @@ isPermanent: true,
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Electric')
 this.add('-immune', target, '[from] ability: Lightning Rod');
-}
 return null;
+}
 onAnyRedirectTarget(target, source, source2, move) {
 if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
 const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
