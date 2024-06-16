@@ -2473,19 +2473,19 @@ noCopy: true,
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
-return this.chainModify(2);
+return this.chainModify(1.5);
 },
 onModifySpAPriority: 5,
 onModifySpA(relayVar, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
-return this.chainModify(2);
+return this.chainModify(1.5);
 },
-isPermanent: true,
 onTryHit(target, source, move) {
-if (target !== source && move.type === 'Electric')
+if (target !== source && move.type === 'Electric') {
 this.add('-immune', target, '[from] ability: Lightning Rod');
 return null;
 }
+},
 onAnyRedirectTarget(target, source, source2, move) {
 if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
 const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
