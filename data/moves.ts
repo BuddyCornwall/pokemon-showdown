@@ -13432,24 +13432,6 @@ target: "any",
 type: "Bug",
 },
 
-simplebeam: {
-accuracy: 95,
-basePower: 55,
-category: "Special",
-name: "Simple Beam",
-pp: 0.625,
-flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
-const oldAbility = target.setAbility('simple');
-if (oldAbility) {
-this.add('-ability', target, 'Simple', '[from] move: Simple Beam');
-return;
-return oldAbility as false | null;
-},
-secondary: null,
-target: "any",
-type: "Normal",
-},
-
 sing: {
 accuracy: 95,
 basePower: 35,
