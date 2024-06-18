@@ -174,6 +174,24 @@ if (move.typeChangerBoosted === this.effect) return this.chainModify([125, 100])
 name: "Necrolate",
 },
 
+phytolate: {
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+const noModifyType = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+];
+if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+move.type = 'Grass';
+move.typeChangerBoosted = this.effect;
+}
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, pokemon, target, move) {
+if (move.typeChangerBoosted === this.effect) return this.chainModify([125, 100]);
+},
+name: "Phytolate",
+},
+
 pixilate: {
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
