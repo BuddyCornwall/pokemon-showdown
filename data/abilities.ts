@@ -4653,6 +4653,15 @@ this.add('-immune', pokemon, '[from] ability: Sturdy');
 return null;
 }
 },
+onDamagePriority: -30,
+onDamage(damage, target, source, effect) {
+if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add('-ability', target, 'Sturdy');
+return target.hp - 1;
+}
+},
+flags: {breakable: 1},
+name: "Sturdy",
 },
 
 suctioncups: {
