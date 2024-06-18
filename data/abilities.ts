@@ -6143,7 +6143,7 @@ isBreakable: true,
 name: "Yancha",
 },
 
-dangdadangdang: {
+dangdaedangdang: {
 onPreStart(pokemon) {
 this.add('-message', '🎵 meoriga ttinghae dangdadangdang!');
 this.add('-ability', pokemon, 'Multiscale');
@@ -6155,7 +6155,6 @@ this.debug('Multiscale weaken');
 return this.chainModify(0.5);
 }
 },
-noguard: {
 onAnyInvulnerabilityPriority: 1.5,
 onAnyInvulnerability(target, source, move) {
 if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
@@ -6166,9 +6165,7 @@ return true;
 }
 return accuracy;
 },
-name: "No Guard",
-},
-name: "Dangdadangdang",
+name: "Dangdaedangdang",
 },
 
 };
