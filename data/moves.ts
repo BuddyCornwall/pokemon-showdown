@@ -750,7 +750,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -1765,7 +1765,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -2068,7 +2068,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -4370,7 +4370,7 @@ pp: 0.625,
 flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -7007,12 +7007,12 @@ basePower: 145,
 category: "Special",
 name: "Hyper Beam",
 pp: 0.625,
-flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+flags: {beam: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(75, 100)) {
 source.faint();
@@ -7028,12 +7028,33 @@ basePower: 145,
 category: "Physical",
 name: "Hyper Punch",
 pp: 0.625,
-flags: {recharge: 1, beam: 1, protect: 1, mirror: 1},
+flags: {punch: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(75, 100)) {
+source.faint();
+this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
+}
+}
+},
+},
+
+hyperkick: {
+accuracy: 85,
+basePower: 145,
+category: "Physical",
+name: "Hyper Kick",
+pp: 0.625,
+flags: {kick: 1, protect: 1, mirror: 1},
+secondary: null,
+target: "any",
+type: "Normal",
+onHit(target, source, move) {
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(75, 100)) {
 source.faint();
@@ -7177,7 +7198,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -8043,7 +8064,7 @@ priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -8841,7 +8862,7 @@ priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1,},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -8960,7 +8981,7 @@ pp: 0.625,
 flags: {charge: 1, beam: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -9402,7 +9423,7 @@ pp: 0.625,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -11054,7 +11075,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -13444,7 +13465,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -13550,7 +13571,7 @@ pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -14141,7 +14162,7 @@ priority: 0,
 flags: {charge: 1, protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -14725,7 +14746,7 @@ pp: 0.625,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -16550,7 +16571,7 @@ pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -17601,7 +17622,7 @@ priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Azurill', 'Houndoom', 'Gardevoir', 'Meditite', 'Kommoo', 'Armarouge', 'Ceruledge', 'Palafin'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
@@ -17891,313 +17912,419 @@ type: "Water",
 },
 
 maxairstream: {
-accuracy: 95,
-basePower: 45,
+accuracy: 50,
+basePower: 165,
 category: "Special",
 name: "Max Airstream",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
-flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
-onAfterHit(target, pokemon) {
-if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
-}
-const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-for (const condition of sideConditions) {
-if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
-}
-}
-if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-pokemon.removeVolatile('partiallytrapped');
+flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
 }
 },
-onAfterSubDamage(damage, target, pokemon) {
-if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
-}
-const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-for (const condition of sideConditions) {
-if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
-}
-}
-if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-pokemon.removeVolatile('partiallytrapped');
-}
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
 },
 secondary: null,
-target: "adjacentFoe",
+target: "any",
 type: "Flying",
 },
 
 maxdarkness: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Darkness",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Dark",
 },
 
 maxflare: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Flare",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Fire",
 },
 
 maxflutterby: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Flutterby",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Bug",
 },
 
 maxgeyser: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Geyser",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Water",
 },
 
 maxguard: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Status",
 name: "Max Guard",
-pp: 10,
-priority: 4,
+pp: 0.625,
+priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
-type: "Normal",
 },
 
 maxhailstorm: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Hailstorm",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Ice",
 },
 
 maxknuckle: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Knuckle",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Fighting",
 },
 
 maxlightning: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Lightning",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Electric",
 },
 
 maxmindstorm: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Mindstorm",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Psychic",
 },
 
 maxooze: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Ooze",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Poison",
 },
 
 maxovergrowth: {
-accuracy: 85,
-basePower: 25,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Overgrowth",
 pp: 0.625,
 priority: 0,
-flags: { protect: 1, reflectable: 1, mirror: 1 },
-terrain: 'grassyterrain',
-weather: 'sunnyday',
-volatileStatus: 'leechseed',
-condition: {
-onStart(target) {
-this.add('-start', target, 'move: Leech Seed');
-},
-onResidualOrder: 8,
-onResidual(pokemon) {
-const target = this.getAtSlot(pokemon.volatiles['leechseed'].sourceSlot);
-if (!target || target.fainted || target.hp <= 0) {
-this.debug('Nothing to leech into');
-return;
-}
-const damage = this.damage(pokemon.baseMaxhp / 20, pokemon, target);
-if (damage) {
-this.heal(damage, target, pokemon);
+flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
 }
 },
-},
-onTryImmunity(target) {
-return !target.hasType('Grass');
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
 },
 secondary: null,
 target: "any",
 type: "Grass",
-onHit(target, source) {
-if (source.hp) {
-source.setStatus('slp');
-this.add('-status', source, 'slp', '[from] move: Max Overgrowth');
-}
-},
 },
 
 maxphantasm: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Phantasm",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Ghost",
 },
 
 maxquake: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Quake",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Ground",
 },
 
 maxrockfall: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Rockfall",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Rock",
 },
 
 maxstarfall: {
-accuracy: 95,
-basePower: 35,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Starfall",
 pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1},
-multihit: [1, 10],
-multiaccuracy: 75,
-smartTarget: true,
+flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
-target: "randomNormal",
+target: "any",
 type: "Fairy",
 },
 
 maxsteelspike: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Steelspike",
-pp: 10,
+pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
-secondary: {
-chance: 50,
-volatileStatus: 'bleeding',
+flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
 },
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
+secondary: null,
 target: "any",
 type: "Steel",
 },
 
 maxstrike: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Strike",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
 type: "Normal",
 },
 
 maxwyrmwind: {
-accuracy: 100,
-basePower: 20,
+accuracy: 50,
+basePower: 165,
 category: "Physical",
 name: "Max Wyrmwind",
-pp: 10,
+pp: 0.625,
 priority: 0,
 flags: {},
+onModifyMove(move, pokemon) {
+if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+move.category = 'Physical';
+}
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp * 0.75, source, source, this.dex.conditions.get('Supercell Slam'));
+},
 secondary: null,
 target: "any",
-type: "Dragon",
 },
 
 technoblast: {
