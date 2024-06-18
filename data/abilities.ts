@@ -4646,25 +4646,12 @@ return this.chainModify([133,100]);
 name: "Strong Jaw",
 },
 
-antifragile: {
+sturdy: {
 onTryHit(pokemon, target, move) {
 if (move.ohko) {
-this.add('-immune', pokemon, '[from] ability: Antifragile');
+this.add('-immune', pokemon, '[from] ability: Sturdy');
 return null;
 }
-},
-onDamagePriority: -30,
-onDamage(damage, target, source, effect) {
-if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
-if (target.hp === target.maxhp && damage >= target.hp && move && move.effectType === 'Move') {
-this.add('-message', "🎵Anti-ti-ti-ti fragile");
-this.add('-ability', target, 'Antifragile');
-return target.hp - 1;
-}
-}
-},
-isBreakable: true,
-name: "Antifragile",
 },
 
 suctioncups: {
