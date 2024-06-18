@@ -1355,7 +1355,7 @@ weightkg: 60,
 
 farfetchd: {
 num: 83,
-name: "Farfetch\u2019d",
+name: "Farfetchd",
 types: ["Flying", "Grass"],
 gender: "F",
 baseStats: {hp: 60, atk: 105, def: 55, spa: 60, spd: 70, spe: 70},
@@ -1365,7 +1365,7 @@ weightkg: 15,
 
 farfetchdgalar: {
 num: 83,
-name: "Farfetch\u2019d-Galar",
+name: "Farfetchd-Galar",
 types: ["Fighting", "Flying"],
 gender: "F",
 baseStats: {hp: 52, atk: 95, def: 55, spa: 58, spd: 62, spe: 55},
@@ -11432,7 +11432,7 @@ weightkg: 0.4,
 
 sirfetchd: {
 num: 865,
-name: "Sirfetch\u2019d",
+name: "Sirfetchd",
 types: ["Fighting", "Flying"],
 gender: "F",
 baseStats: {hp: 62, atk: 135, def: 95, spa: 68, spd: 82, spe: 65},
