@@ -5051,7 +5051,7 @@ priority: 4,
 flags: {protect: 1, beam: 1, mirror: 1},
 
 onHit(target, source, move) {
-const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
+const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
 if (!exemptPokemon.includes(source.name)) {
 if (this.randomChance(50, 100)) {
 source.faint();
