@@ -4653,6 +4653,7 @@ this.add('-immune', pokemon, '[from] ability: Sturdy');
 return null;
 }
 },
+},
 
 suctioncups: {
 onDragOutPriority: 1.5,
