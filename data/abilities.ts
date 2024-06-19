@@ -4543,6 +4543,18 @@ isPermanent: true,
 name: "Stance Change",
 },
 
+slowbros: {
+onModifyMovePriority: 1.5,
+onModifyMove(move, attacker, defender) {
+if (attacker.species.baseSpecies !== 'Slowbro' || attacker.transformed) return;
+if (move.category === 'Status' && move.id !== 'kingsshield') return;
+const targetForme = (move.id === 'slowbrotect' ? 'Slowbro' : 'Slowbro-Galar');
+if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+},
+isPermanent: true,
+name: "Slow Bros",
+},
+
 static: {
 onDamagingHit(damage, target, source, move) {
 if (this.checkMoveMakesContact(move, source, target)) {
