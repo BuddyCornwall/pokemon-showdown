@@ -5045,6 +5045,16 @@ name: "Fleur Cannon",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1},
+
+onHit(target, source, move) {
+const exemptPokemon = ['Venusaur', 'Charizard', 'Machop', 'Mew', 'Carbink'];
+if (!exemptPokemon.includes(source.name)) {
+if (this.randomChance(50, 100)) {
+source.faint();
+this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
+}
+}
+},
 self: {
 boosts: {
 spa: -2,
@@ -6951,15 +6961,6 @@ flags: {beam: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
-onHit(target, source, move) {
-const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
-if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(75, 100)) {
-source.faint();
-this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
-}
-}
-},
 },
 
 hyperpunch: {
@@ -6972,15 +6973,6 @@ flags: {punch: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
-onHit(target, source, move) {
-const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
-if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(75, 100)) {
-source.faint();
-this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
-}
-}
-},
 },
 
 hyperkick: {
@@ -6993,15 +6985,6 @@ flags: {kick: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
-onHit(target, source, move) {
-const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
-if (!exemptPokemon.includes(source.name)) {
-if (this.randomChance(75, 100)) {
-source.faint();
-this.add('-message', `${source.name} collapsed due to the strain of using ${move.name}!`);
-}
-}
-},
 },
 
 hyperdrill: {
@@ -7131,13 +7114,13 @@ type: "Ice",
 
 icebeam: {
 accuracy: 95,
-basePower: 95,
+basePower: 85,
 category: "Special",
 name: "Ice Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 25,
+chance: 33,
 status: 'frz',
 },
 target: "any",
@@ -13432,6 +13415,25 @@ target: "any",
 type: "Bug",
 },
 
+simplebeam: {
+accuracy: 95,
+basePower: 55,
+category: "Special",
+name: "Simple Beam",
+pp: 0.625,
+flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
+const oldAbility = target.setAbility('simple');
+if (oldAbility) {
+this.add('-ability', target, 'Simple', '[from] move: Simple Beam');
+return;
+}
+return oldAbility as false | null;
+},
+secondary: null,
+target: "any",
+type: "Normal",
+},
+
 sing: {
 accuracy: 95,
 basePower: 35,
@@ -14002,10 +14004,6 @@ name: "Solar Beam",
 pp: 0.625,
 priority: 0,
 flags: {charge: 1, protect: 1, beam: 1, mirror: 1},
-
-onHit(target, source, move) {
-const exemptPokemon = ['Charizard', 'Nidoking', 'Clefable', 'Crobat', 'Golduck', 'Arcanine', 'Arcanine (Hisuian)', 'Alakazam', 'Machop', 'Machoke', 'Machamp', 'Slowbro', 'Slowbro (Galarian)', 'Farfetchd (Kantonian)', 'Farfetchd', 'Cloyster', 'Gengar', 'Marowak', 'Kangaskhan', 'Starmie', 'Scizor', 'Electivire', 'Lapras', 'Porygon2', 'Ampharos', 'Houndoom', 'Gardevoir', 'Crawdaunt', 'Milotic', 'Infernape', 'Spiritomb', 'Riolu', 'Swoobat', 'Excadrill', 'Sawk', 'Sewaddle', 'Crustle', 'Zoroark', 'Eelektross', 'Beheeyem', 'Hawlucha', 'Golisopod', 'Komala', 'Kommoo', 'Rillaboom', 'Boltund', 'Centiskorch', 'Armarouge', 'Ceruledge', 'Palafin'];
-},
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
