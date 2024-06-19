@@ -13422,14 +13422,23 @@ category: "Special",
 name: "Simple Beam",
 pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
-const oldAbility = target.setAbility('simple');
-if (oldAbility) {
-this.add('-ability', target, 'Simple', '[from] move: Simple Beam');
-return;
-}
-return oldAbility as false | null;
-},
-secondary: null,
+secondaries: [
+{
+chance: 10,
+atk: -1,
+},{
+chance: 10,
+spa: -1,
+},{
+chance: 10,
+spe: -1,
+},{
+chance: 10,
+spd: -1,
+},{
+chance: 10,
+def: -1,
+},],
 target: "any",
 type: "Normal",
 },
