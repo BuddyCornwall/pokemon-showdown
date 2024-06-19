@@ -4548,7 +4548,7 @@ onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
 if (attacker.species.baseSpecies !== 'Slowbro' || attacker.transformed) return;
 if (move.category === 'Status' && move.id !== 'slowbrotect') return;
-const targetForme = (move.id === 'slowbrotect' ? 'Slowbro' : 'Slowbro-Galar');
+const targetForme = (move.id === 'slowbrotect' ? 'Slowbro-Galar' : 'Slowbro');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
 isPermanent: true,
