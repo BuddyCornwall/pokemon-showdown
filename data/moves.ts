@@ -13417,27 +13417,32 @@ type: "Bug",
 
 simplebeam: {
 accuracy: 95,
-basePower: 55,
+basePower: 45,
 category: "Special",
 name: "Simple Beam",
 pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
 secondaries: [
 {
-chance: 100,
-atk: -1,
+boosts: {
+chance: 10,
+atk: -2,
 },{
-chance: 100,
-spa: -1,
+boosts: {
+chance: 10,
+spa: -2,
 },{
-chance: 100,
-spe: -1,
+boosts: {
+chance: 10,
+spe: -2,
 },{
-chance: 100,
-spd: -1,
+boosts: {
+chance: 10,
+spd: -2,
 },{
-chance: 100,
-def: -1,
+boosts: {
+chance: 10,
+def: -2,
 },],
 target: "any",
 type: "Normal",
