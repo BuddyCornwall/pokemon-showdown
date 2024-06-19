@@ -13424,19 +13424,19 @@ pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
 secondaries: [
 {
-chance: 10,
+chance: 100,
 atk: -1,
 },{
-chance: 10,
+chance: 100,
 spa: -1,
 },{
-chance: 10,
+chance: 100,
 spe: -1,
 },{
-chance: 10,
+chance: 100,
 spd: -1,
 },{
-chance: 10,
+chance: 100,
 def: -1,
 },],
 target: "any",
