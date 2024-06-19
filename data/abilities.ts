@@ -4547,7 +4547,7 @@ slowbros: {
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
 if (attacker.species.baseSpecies !== 'Slowbro' || attacker.transformed) return;
-if (move.category === 'Status' && move.id !== 'kingsshield') return;
+if (move.category === 'Status' && move.id !== 'slowbrotect') return;
 const targetForme = (move.id === 'slowbrotect' ? 'Slowbro' : 'Slowbro-Galar');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
@@ -6172,7 +6172,7 @@ name: "Yancha",
 
 dangdaedangdang: {
 onPreStart(pokemon) {
-this.add('-message', '🎵 meoriga ttinghae dangdadangdang!');
+this.add('-message', '🎵Dangdadangdang!');
 this.add('-ability', pokemon, 'Multiscale');
 this.add('-ability', pokemon, 'No Guard');
 },
