@@ -13423,27 +13423,25 @@ name: "Simple Beam",
 pp: 0.625,
 flags: {protect: 1, reflectable: 1, beam: 1, mirror: 1, allyanim: 1},
 secondaries: [
-{
-boosts: {
-chance: 10,
-atk: -2,
+{chance: 50,
+boosts: {spa: -2,},
 },{
-boosts: {
-chance: 10,
-spa: -2,
+chance: 50,
+boosts: {atk: -2,},
 },{
-boosts: {
-chance: 10,
-spe: -2,
+chance: 50,
+boosts: {spe: -2,},
 },{
-boosts: {
-chance: 10,
-spd: -2,
+chance: 50,
+boosts: {spd: -2,},
 },{
-boosts: {
-chance: 10,
-def: -2,
-},],
+chance: 50,
+boosts: {def: -2,},
+},{
+chance: 50,
+boosts: {spd: -2,},
+},
+],
 target: "any",
 type: "Normal",
 },
