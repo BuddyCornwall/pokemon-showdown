@@ -6213,7 +6213,6 @@ if (this.field.isTerrain('grassyterrain')) {
 return this.chainModify(1.5);
 }
 },
-isBreakable: true,
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
