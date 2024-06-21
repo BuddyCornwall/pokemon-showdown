@@ -6195,4 +6195,80 @@ return accuracy;
 name: "Dangdaedangdang",
 },
 
+tush: {
+onPreStart(pokemon) {
+this.add('-message', 'TUUUUUUUUSH!');
+this.add('-ability', pokemon, 'Grass Pelt');
+this.add('-ability', pokemon, 'Qosrodah');
+},
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
+move.type = 'Electric';
+onModifyDefPriority: 6,
+onModifyDef(pokemon) {
+if (this.field.isTerrain('grassyterrain')) {
+return this.chainModify(1.5);
+}
+},
+onModifySpDPriority: 6,
+onModifySpD(pokemon) {
+if (this.field.isTerrain('grassyterrain')) {
+return this.chainModify(1.5);
+}
+},
+isBreakable: true,
+name: "Tush",
+},
+
+tush: {
+onPreStart(pokemon) {
+this.add('-message', 'TUUUUUUUUSH!');
+this.add('-ability', pokemon, 'Grass Pelt');
+this.add('-ability', pokemon, 'Qosrodah');
+},
+onModifyTypePriority: -1,
+onModifyType(move, pokemon) {
+if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
+move.type = 'Electric';
+onModifyDefPriority: 6,
+onModifyDef(pokemon) {
+if (this.field.isTerrain('grassyterrain')) {
+return this.chainModify(1.5);
+}
+},
+onModifySpDPriority: 6,
+onModifySpD(pokemon) {
+if (this.field.isTerrain('grassyterrain')) {
+return this.chainModify(1.5);
+}
+},
+isBreakable: true,
+name: "Tush",
+},
+
+scarface: {
+onPreStart(pokemon) {
+this.add('-message', 'TUUUUUUUUSH!');
+this.add('-ability', pokemon, 'Synchronize');
+this.add('-ability', pokemon, 'Elemental Absorption');
+},
+onAfterSetStatus(status, target, source, effect) {
+if (!source || source === target) return;
+if (effect && effect.id === 'toxicspikes') return;
+if (status.id === 'slp' || status.id === 'frz') return;
+this.add('-activate', target, 'ability: Synchronize');
+source.trySetStatus(status, target, {status: status.id, id: 'synchronize'} as Effect);
+},
+onTryHit: function (target, source, move) {
+if (move.type === target.types[0] || move.type === target.types[1]) {
+this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1.5});
+return;
+}
+return;
+},
+isBreakable: true,
+name: "Scarface",
+},
+
 };
