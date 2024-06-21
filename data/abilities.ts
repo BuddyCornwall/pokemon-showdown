@@ -5350,22 +5350,18 @@ isBreakable: true,
 name: "Water Veil",
 },
 
-weakarmor: {
+weakmagearmor: {
 onDamagingHit(damage, target, source, move) {
 if (move.category === 'Physical') {
 this.boost({def: -1, spe: 2}, target, target);
 }
 },
-name: "Weak Armor",
-},
-
-magearmor: {
 onDamagingHit(damage, target, source, move) {
 if (move.category === 'Special') {
 this.boost({spd: -1, spe: 2}, target, target);
 }
 },
-name: "Mage Armor",
+name: "Weak Mage Armor",
 },
 
 wellbakedbody: {
