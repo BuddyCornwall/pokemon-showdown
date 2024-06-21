@@ -6201,10 +6201,6 @@ this.add('-message', 'TUUUUUUUUSH!');
 this.add('-ability', pokemon, 'Grass Pelt');
 this.add('-ability', pokemon, 'Qosrodah');
 },
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
-move.type = 'Electric';
 onModifyDefPriority: 6,
 onModifyDef(pokemon) {
 if (this.field.isTerrain('grassyterrain')) {
@@ -6218,29 +6214,10 @@ return this.chainModify(1.5);
 }
 },
 isBreakable: true,
-name: "Tush",
-},
-
-tush: {
-onPreStart(pokemon) {
-this.add('-message', 'TUUUUUUUUSH!');
-this.add('-ability', pokemon, 'Grass Pelt');
-this.add('-ability', pokemon, 'Qosrodah');
-},
 onModifyTypePriority: -1,
 onModifyType(move, pokemon) {
 if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
 move.type = 'Electric';
-onModifyDefPriority: 6,
-onModifyDef(pokemon) {
-if (this.field.isTerrain('grassyterrain')) {
-return this.chainModify(1.5);
-}
-},
-onModifySpDPriority: 6,
-onModifySpD(pokemon) {
-if (this.field.isTerrain('grassyterrain')) {
-return this.chainModify(1.5);
 }
 },
 isBreakable: true,
