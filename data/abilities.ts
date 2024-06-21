@@ -5732,6 +5732,26 @@ return priority;
 name: "Lemon Jelly",
 },
 
+darude: {
+onModifyPriority(priority, pokemon, target, move) {
+if (move?.tags?.includes('kick') && this.field.isWeather('sandstorm')) {
+return priority + 2;
+}
+return priority;
+},
+name: "Darude",
+},
+
+singinintherain: {
+onModifyPriority(priority, pokemon, target, move) {
+if (move?.tags?.includes('kick') && this.field.isWeather('raindance')) {
+return priority + 2;
+}
+return priority;
+},
+name: "Singin in the Rain",
+},
+
 purplerain: {
 onPreStart(pokemon) {
 this.add('-message', 'Purple rain falls from the sky 🌧️');
