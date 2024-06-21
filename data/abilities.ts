@@ -5727,7 +5727,7 @@ lemonjelly: {
   onModifyMove(move, pokemon) {
     if (move.flags['duck'] && this.field.isWeather('sunnyday')) {
       this.debug('🎵 All the ducks are swimming in the water...Fal de ral de ral do..Fal de ral de ral do');
-      move.priority = (move.priority || 0) + 2;
+return priority + 2;
     }
   },
   name: "Lemon Jelly",
@@ -5738,7 +5738,7 @@ darude: {
   onModifyMove(move, pokemon) {
     if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
       this.debug('🎵 dudududududu');
-      move.priority = (move.priority || 0) - 3;
+return priority + 1;
     }
   },
   onBasePowerPriority: 10,
@@ -5755,7 +5755,7 @@ singinintherain: {
   onModifyMove(move, pokemon) {
     if (move.flags['sound'] && this.field.isWeather('raindance')) {
       this.debug('🎵 dodeedodo deedodeedodododo');
-      move.priority = (move.priority || 0) - 3;
+return priority - 3;
     }
   },
   onBasePowerPriority: 10,
