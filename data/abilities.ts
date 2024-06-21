@@ -5723,48 +5723,13 @@ name: "Elemental Absorption"
 },
 
 lemonjelly: {
-  onModifyMovePriority: -1,
-  onModifyMove(move, pokemon) {
-    if (move.flags['duck'] && this.field.isWeather('sunnyday')) {
-      this.debug('🎵 All the ducks are swimming in the water...Fal de ral de ral do..Fal de ral de ral do');
+onModifyPriority(priority, pokemon, target, move) {
+if (move?.tags?.includes('duck') && this.field.isWeather('sunnyday')) {
 return priority + 2;
-    }
-  },
-  name: "Lemon Jelly",
+}
+return priority;
 },
-
-darude: {
-  onModifyMovePriority: -1,
-  onModifyMove(move, pokemon) {
-    if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
-      this.debug('🎵 dudududududu');
-return priority + 1;
-    }
-  },
-  onBasePowerPriority: 10,
-  onBasePower(basePower, pokemon, target, move) {
-    if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
-      return this.chainModify([133, 100]);
-    }
-  },
-  name: "Darude",
-},
-
-singinintherain: {
-  onModifyMovePriority: -1,
-  onModifyMove(move, pokemon) {
-    if (move.flags['sound'] && this.field.isWeather('raindance')) {
-      this.debug('🎵 dodeedodo deedodeedodododo');
-return priority - 3;
-    }
-  },
-  onBasePowerPriority: 10,
-  onBasePower(basePower, pokemon, target, move) {
-    if (move.flags['sound'] && this.field.isWeather('raindance')) {
-      return this.chainModify([133, 100]);
-    }
-  },
-  name: "Singin in the Rain",
+name: "Lemon Jelly",
 },
 
 purplerain: {
