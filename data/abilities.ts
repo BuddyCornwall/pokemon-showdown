@@ -5764,7 +5764,7 @@ singinintherain: {
       return this.chainModify([133, 100]);
     }
   },
-  name: "Singin\' in the Rain',
+  name: "Singin in the Rain",
 },
 
 purplerain: {
