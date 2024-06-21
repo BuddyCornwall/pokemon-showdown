@@ -6249,7 +6249,7 @@ name: "Tush",
 
 scarface: {
 onPreStart(pokemon) {
-this.add('-message', 'TUUUUUUUUSH!');
+this.add('-message', 'All I have in this world is my balls and my word, and I break em for no one!');
 this.add('-ability', pokemon, 'Synchronize');
 this.add('-ability', pokemon, 'Elemental Absorption');
 },
