@@ -5722,6 +5722,49 @@ return;
 name: "Elemental Absorption"
 },
 
+lemonjelly: {
+onModifyMovePriority: -1,
+onModifyMove(move, pokemon) {
+if (move.flags['duck'] && this.field.isWeather('sunnyday')) {
+this.debug('🎵 All the ducks are swimming in the water...Fal de ral de ral do..Fal de ral de ral do');
+if (move.priority !== undefined) {
+move.priority += 2;
+} else {
+move.priority = 2;
+}
+}
+},
+name: "Lemon Jelly",
+},
+
+darude: {
+onModifyMovePriority: -1,
+onModifyMove(move, pokemon) {
+if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
+this.debug('🎵 dudududududu');
+return this.chainModify([133,100]);
+if (move.priority !== undefined) {
+move.priority -= 3;
+}
+}
+},
+name: "Darude",
+},
+
+singinintherain: {
+onModifyMovePriority: -1,
+onModifyMove(move, pokemon) {
+if (move.flags['sound'] && this.field.isWeather('raindance')) {
+this.debug('🎵 dodeedodo deedodeedodododo');
+return this.chainModify([133,100]);
+if (move.priority !== undefined) {
+move.priority -= 3;
+}
+}
+},
+name: "Singin' in the Rain",
+},
+
 purplerain: {
 onPreStart(pokemon) {
 this.add('-message', 'Purple rain falls from the sky 🌧️');
