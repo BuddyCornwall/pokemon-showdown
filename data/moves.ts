@@ -264,7 +264,7 @@ chance: 20,
 volatileStatus: 'bleeding',
 }, {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -489,7 +489,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "allAdjacentFoes",
 type: "Water",
@@ -639,7 +639,7 @@ if (type === 'Dark') return 1;
 },
 secondary: {
 chance: 50,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Ghost",
@@ -1253,7 +1253,7 @@ priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Dark",
@@ -1510,7 +1510,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Ground",
@@ -2533,7 +2533,7 @@ category: "Physical",
 name: "Corkscrew Crash",
 pp: 0.625,
 priority: 2,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {duck: 1, contact: 1, protect: 1, mirror: 1},
 recoil: [33, 100],
 secondary: null,
 target: "any",
@@ -2918,7 +2918,7 @@ priority: 0,
 flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Dark",
@@ -3285,7 +3285,7 @@ flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondaries: [
 {
 chance: 33,
-status: 'flinch',
+status: 'Flinch',
 }, {
 chance: 33,
 volatileStatus: 'confusion',
@@ -3403,7 +3403,7 @@ multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Steel",
@@ -3422,7 +3422,7 @@ multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
 chance: 10,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Fighting",
@@ -3657,7 +3657,7 @@ this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High 
 },
 recoil: [25, 100],
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Dragon",
@@ -3873,7 +3873,7 @@ flags: {protect: 1, reflectable: 1, mirror: 1},
 secondaries: [
 {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 }, {
 chance: 50,
 boosts: {
@@ -4394,7 +4394,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Psychic",
@@ -4494,7 +4494,7 @@ this.add('-message', `I can't believe ${source.name} sucker punched me!`);
 
 secondary: {
 chance: 75,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -4616,7 +4616,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "allAdjacentFoes",
 type: "Dark",
@@ -4700,7 +4700,7 @@ chance: 33,
 status: 'brn',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -4804,7 +4804,7 @@ chance: 33,
 status: 'brn',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -6314,7 +6314,7 @@ priority: 4,
 flags: {},
 weather: 'snow',
 secondary: null,
-target: "allAdjacentFoes",
+target: "any",
 type: "Ice",
 },
 
@@ -6366,7 +6366,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -6555,7 +6555,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Psychic",
@@ -7010,7 +7010,7 @@ priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -7172,7 +7172,7 @@ chance: 33,
 status: 'frz',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -7211,7 +7211,7 @@ chance: 33,
 status: 'frz',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -7261,7 +7261,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Ice",
@@ -7492,7 +7492,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Steel",
@@ -8590,7 +8590,7 @@ if (type === 'Fighting') return 1;
 },
 secondary: {
 chance: 50,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Dark",
@@ -9435,7 +9435,7 @@ flags: {protect: 1, mirror: 1},
 weather: 'snow',
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Ice",
@@ -9644,7 +9644,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Grass",
@@ -9742,7 +9742,7 @@ chance: 20,
 volatileStatus: 'bleeding',
 }, {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -10450,7 +10450,7 @@ chance: 33,
 status: 'tox',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -11045,7 +11045,7 @@ pokemon.side.removeSideCondition('auroraveil');
 secondaries: [
 {
 chance: 33,
-status: 'flinch',
+status: 'Flinch',
 }, {
 chance: 33,
 volatileStatus: 'confusion',
@@ -11407,7 +11407,7 @@ category: "Physical",
 name: "Quack Attack",
 pp: 0.625,
 priority: 3,
-flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+flags: {duck: 1, contact: 1, protect: 1, mirror: 1, sound: 1},
 hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -11677,7 +11677,7 @@ priority: 0,
 flags: {dance: 1},
 weather: 'RainDance',
 secondary: null,
-target: "allAdjacentFoes",
+target: "any",
 type: "Water",
 },
 
@@ -12160,7 +12160,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "allAdjacentFoes",
 type: "Rock",
@@ -12279,7 +12279,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Fighting",
@@ -12452,7 +12452,7 @@ category: "Status",
 name: "Downy Defense",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1},
+flags: {duck: 1, snatch: 1},
 sideCondition: 'safeguard',
 condition: {
 duration: 5,
@@ -12577,7 +12577,7 @@ priority: 0,
 flags: {wind: 1},
 weather: 'Sandstorm',
 secondary: null,
-target: "allAdjacentFoes",
+target: "any",
 type: "Rock",
 },
 
@@ -12971,7 +12971,7 @@ chance: 33,
 status: 'tox',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -13024,7 +13024,7 @@ chance: 33,
 volatileStatus: 'confuse',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -13552,7 +13552,7 @@ return null;
 },
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Flying",
@@ -13944,7 +13944,7 @@ return source.status === 'slp' || source.hasAbility('comatose');
 },
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -14569,7 +14569,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Bug",
@@ -14690,7 +14690,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -15080,7 +15080,7 @@ flags: {},
 weather: 'sunnyday',
 thawsTarget: true,
 secondary: null,
-target: "allAdjacentFoes",
+target: "Any",
 type: "Fire",
 },
 
@@ -15929,7 +15929,7 @@ chance: 33,
 status: 'par',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -15968,7 +15968,7 @@ chance: 33,
 status: 'par',
 }, {
 chance: 33,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -16192,7 +16192,7 @@ return false;
 },
 secondary: {
 chance: 75,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Normal",
@@ -16313,7 +16313,7 @@ def: -1,
 },
 }, {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 ],
 target: "any",
@@ -16447,7 +16447,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 critRatio: 2,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 target: "allAdjacentFoes",
 type: "Dragon",
 },
@@ -16585,7 +16585,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "allAdjacentFoes",
 type: "Grass",
@@ -16692,7 +16692,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Water",
@@ -17257,7 +17257,7 @@ flags: {contact: 1, protect: 1, mirror: 1},
 recoil: [25, 100],
 secondary: {
 chance: 25,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Psychic",
@@ -17483,7 +17483,7 @@ return false;
 },
 secondary: {
 chance: 75,
-volatileStatus: 'flinch',
+volatileStatus: 'Flinch',
 },
 target: "any",
 type: "Fighting",
@@ -18327,5 +18327,133 @@ volatileStatus: 'protect',
 target: "self",
 type: "Normal",
 },
+
+waterkick: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Water Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+thawsTarget: true,
+secondaries: [
+{
+chance: 33,
+weather: 'RainDance',
+}, {
+chance: 33,
+volatileStatus: 'Flinch',
+},
+],
+target: "any",
+type: "Water",
+},
+
+icekick: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Ice Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+thawsTarget: true,
+secondaries: [
+{
+chance: 33,
+status: 'frz',
+}, {
+chance: 33,
+volatileStatus: 'Flinch',
+},
+],
+target: "any",
+type: "Ice",
+},
+
+superkick: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Super Kick",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+thawsTarget: true,
+secondaries: [
+{
+chance: 33,
+weather: 'RainDance',
+}, {
+chance: 33,
+volatileStatus: 'Flinch',
+},
+],
+target: "any",
+type: "Dark",
+},
+
+yeetkick: {
+accuracy: 95,
+basePower: 75,
+category: "Physical",
+name: "Yeet Kick",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+thawsTarget: true,
+forceSwitch: true,
+target: "any",
+type: "Rock",
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
