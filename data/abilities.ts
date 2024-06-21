@@ -5723,46 +5723,48 @@ name: "Elemental Absorption"
 },
 
 lemonjelly: {
-onModifyMovePriority: -1,
-onModifyMove(move, pokemon) {
-if (move.flags['duck'] && this.field.isWeather('sunnyday')) {
-this.debug('🎵 All the ducks are swimming in the water...Fal de ral de ral do..Fal de ral de ral do');
-if (move.priority !== undefined) {
-move.priority += 2;
-} else {
-move.priority = 2;
-}
-}
-},
-name: "Lemon Jelly",
+  onModifyMovePriority: -1,
+  onModifyMove(move, pokemon) {
+    if (move.flags['duck'] && this.field.isWeather('sunnyday')) {
+      this.debug('🎵 All the ducks are swimming in the water...Fal de ral de ral do..Fal de ral de ral do');
+      move.priority = (move.priority || 0) + 2;
+    }
+  },
+  name: "Lemon Jelly",
 },
 
 darude: {
-onModifyMovePriority: -1,
-onModifyMove(move, pokemon) {
-if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
-this.debug('🎵 dudududududu');
-return this.chainModify([133,100]);
-if (move.priority !== undefined) {
-move.priority -= 3;
-}
-}
-},
-name: "Darude",
+  onModifyMovePriority: -1,
+  onModifyMove(move, pokemon) {
+    if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
+      this.debug('🎵 dudududududu');
+      move.priority = (move.priority || 0) - 3;
+    }
+  },
+  onBasePowerPriority: 10,
+  onBasePower(basePower, pokemon, target, move) {
+    if (move.flags['kick'] && this.field.isWeather('sandstorm')) {
+      return this.chainModify([133, 100]);
+    }
+  },
+  name: "Darude",
 },
 
 singinintherain: {
-onModifyMovePriority: -1,
-onModifyMove(move, pokemon) {
-if (move.flags['sound'] && this.field.isWeather('raindance')) {
-this.debug('🎵 dodeedodo deedodeedodododo');
-return this.chainModify([133,100]);
-if (move.priority !== undefined) {
-move.priority -= 3;
-}
-}
-},
-name: "Singin' in the Rain",
+  onModifyMovePriority: -1,
+  onModifyMove(move, pokemon) {
+    if (move.flags['sound'] && this.field.isWeather('raindance')) {
+      this.debug('🎵 dodeedodo deedodeedodododo');
+      move.priority = (move.priority || 0) - 3;
+    }
+  },
+  onBasePowerPriority: 10,
+  onBasePower(basePower, pokemon, target, move) {
+    if (move.flags['sound'] && this.field.isWeather('raindance')) {
+      return this.chainModify([133, 100]);
+    }
+  },
+  name: "Singin\' in the Rain',
 },
 
 purplerain: {
