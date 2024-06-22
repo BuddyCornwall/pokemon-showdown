@@ -2126,8 +2126,8 @@ type: "Electric",
 
 charm: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 45,
+category: "Special",
 name: "Charm",
 pp: 0.625,
 priority: 0,
@@ -2137,16 +2137,17 @@ atk: -2,
 spa: -2,
 },
 volatileStatus: 'attract',
-condition: {
+conditions: {
+attract: {
 noCopy: true,
 onStart(pokemon, source, effect) {
 if (!this.runEvent('Attract', pokemon, source)) {
 this.debug('Attract event failed');
 return false;
 }
-if (effect?.name === 'Cute Charm') {
+if (effect.name === 'Cute Charm') {
 this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
-} else if (effect?.name === 'Destiny Knot') {
+} else if (effect.name === 'Destiny Knot') {
 this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
 } else {
 this.add('-start', pokemon, 'Attract');
@@ -2170,6 +2171,8 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Attract', '[silent]');
 },
 },
+}
+secondary: null,
 target: "any",
 type: "Fairy",
 },
@@ -3783,6 +3786,42 @@ name: "Draining Kiss",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+volatileStatus: 'attract',
+condition: {
+onStart(pokemon, source, effect) {
+if (!this.runEvent('Attract', pokemon, source)) {
+this.debug('Attract event failed');
+return false;
+}
+if (effect.name === 'Cute Charm') {
+this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
+} else if (effect.name === 'Destiny Knot') {
+this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
+} else {
+this.add('-start', pokemon, 'Attract');
+}
+},
+onUpdate(pokemon) {
+if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
+this.debug('Removing Attract volatile on ' + pokemon);
+pokemon.removeVolatile('attract');
+}
+},
+onBeforeMovePriority: 2,
+onBeforeMove(pokemon, target, move) {
+this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
+if (this.randomChance(1, 2)) {
+this.add('cant', pokemon, 'Attract');
+return false;
+}
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Attract', '[silent]');
+},
+},
+onTryImmunity(target, source) {
+return true;
+},
 drain: [75, 100],
 secondary: null,
 target: "any",
@@ -4604,7 +4643,7 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Fake Tears",
-pp: 1, // PP should be a whole number
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 volatileStatus: 'attract',
@@ -4649,7 +4688,6 @@ secondary: null,
 target: "any",
 type: "Dark",
 },
-
 
 falsesurrender: {
 accuracy: 95,
@@ -8228,10 +8266,46 @@ name: "Lovely Kiss",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
-secondary: {
+volatileStatus: 'attract',
+condition: {
+onStart(pokemon, source, effect) {
+if (!this.runEvent('Attract', pokemon, source)) {
+this.debug('Attract event failed');
+return false;
+}
+if (effect.name === 'Cute Charm') {
+this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
+} else if (effect.name === 'Destiny Knot') {
+this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
+} else {
+this.add('-start', pokemon, 'Attract');
+}
+},
+onUpdate(pokemon) {
+if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
+this.debug('Removing Attract volatile on ' + pokemon);
+pokemon.removeVolatile('attract');
+}
+},
+onBeforeMovePriority: 2,
+onBeforeMove(pokemon, target, move) {
+this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
+if (this.randomChance(1, 2)) {
+this.add('cant', pokemon, 'Attract');
+return false;
+}
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Attract', '[silent]');
+},
+},
+onTryImmunity(target, source) {
+return true;
+},
 chance: 75,
 status: 'slp',
 },
+secondary: null,
 target: "any",
 type: "Normal",
 },
@@ -15357,6 +15431,42 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 volatileStatus: 'confusion',
+volatileStatus: 'attract',
+condition: {
+onStart(pokemon, source, effect) {
+if (!this.runEvent('Attract', pokemon, source)) {
+this.debug('Attract event failed');
+return false;
+}
+if (effect.name === 'Cute Charm') {
+this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
+} else if (effect.name === 'Destiny Knot') {
+this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
+} else {
+this.add('-start', pokemon, 'Attract');
+}
+},
+onUpdate(pokemon) {
+if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
+this.debug('Removing Attract volatile on ' + pokemon);
+pokemon.removeVolatile('attract');
+}
+},
+onBeforeMovePriority: 2,
+onBeforeMove(pokemon, target, move) {
+this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
+if (this.randomChance(1, 2)) {
+this.add('cant', pokemon, 'Attract');
+return false;
+}
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Attract', '[silent]');
+},
+},
+onTryImmunity(target, source) {
+return true;
+},
 secondary: null,
 target: "any",
 type: "Fairy",
@@ -15718,7 +15828,7 @@ accuracy: 95,
 basePower: 55,
 category: "Special",
 name: "Tearful Look",
-pp: 5, // Adjusted PP to a whole number
+pp: 0.625,
 priority: 0,
 flags: {reflectable: 1, mirror: 1},
 volatileStatus: 'attract',
