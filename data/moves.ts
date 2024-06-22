@@ -918,17 +918,23 @@ pp: 0.625,
 priority: 2,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 volatileStatus: 'attract',
-conditions: {
-attract: {
+boosts: {
+spa: -1,
+atk: -1,
+},
+secondary: null,
+target: "any",
+type: "Fairy",
+condition: {
 noCopy: true,
 onStart(pokemon, source, effect) {
 if (!this.runEvent('Attract', pokemon, source)) {
 this.debug('Attract event failed');
 return false;
 }
-if (effect.name === 'Cute Charm') {
+if (effect?.name === 'Cute Charm') {
 this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
-} else if (effect.name === 'Destiny Knot') {
+} else if (effect?.name === 'Destiny Knot') {
 this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
 } else {
 this.add('-start', pokemon, 'Attract');
@@ -952,14 +958,6 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Attract', '[silent]');
 },
 },
-}
-boosts: {
-spa: -1,
-atk: -1,
-},
-secondary: null,
-target: "any",
-type: "Fairy",
 },
 
 banefulbunker: {
