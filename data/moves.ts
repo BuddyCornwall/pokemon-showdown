@@ -2170,7 +2170,6 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Attract', '[silent]');
 },
 },
-},
 secondary: null,
 target: "any",
 type: "Fairy",
