@@ -4604,21 +4604,20 @@ accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Fake Tears",
-pp: 0.625,
+pp: 1, // PP should be a whole number
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 volatileStatus: 'attract',
-conditions: {
-attract: {
+condition: {
 noCopy: true,
 onStart(pokemon, source, effect) {
 if (!this.runEvent('Attract', pokemon, source)) {
 this.debug('Attract event failed');
 return false;
 }
-if (effect.name === 'Cute Charm') {
+if (effect?.name === 'Cute Charm') {
 this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
-} else if (effect.name === 'Destiny Knot') {
+} else if (effect?.name === 'Destiny Knot') {
 this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
 } else {
 this.add('-start', pokemon, 'Attract');
@@ -4642,7 +4641,6 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Attract', '[silent]');
 },
 },
-}
 boosts: {
 spd: -2,
 def: -2,
@@ -4651,6 +4649,7 @@ secondary: null,
 target: "any",
 type: "Dark",
 },
+
 
 falsesurrender: {
 accuracy: 95,
