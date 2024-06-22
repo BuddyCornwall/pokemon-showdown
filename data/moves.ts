@@ -8302,7 +8302,6 @@ return true;
 },
 chance: 75,
 status: 'slp',
-},
 secondary: null,
 target: "any",
 type: "Normal",
