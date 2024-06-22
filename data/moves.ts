@@ -15427,7 +15427,6 @@ name: "Sweet Kiss",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
-volatileStatus: 'confusion',
 volatileStatus: 'attract',
 condition: {
 onStart(pokemon, source, effect) {
