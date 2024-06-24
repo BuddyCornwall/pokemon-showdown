@@ -5770,18 +5770,27 @@ name: "Venturara",
 },
 
 'rotomswitch': {
-onResidualOrder: 999,
-onResidual(pokemon) {
-const move = this.dex.getMove('rswitch');
-this.useMove(move, pokemon);},
-isPermanent: true,
-onModifyMovePriority: 1.5,
-onModifyMove(move, attacker, defender) {
-if (attacker.species.baseSpecies !== 'Rotom' || attacker.transformed) return;
-if (move.category === 'Status' && move.id !== 'rswitch') return;
-const targetForme = (move.id === 'rswitch' ? 'Slowbro-Galar' : 'Rotom');
-if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+onStart(pokemon) {
+this.add('ability', pokemon, 'Type Switch');
 },
+onModifyMove(move, pokemon) {
+// Modify the move's type based on Rotom's current form
+if (pokemon.species.name.startsWith('Rotom-')) {
+const form = pokemon.species.name.split('-')[1]; // Extract Rotom's form
+if (form === 'Heat') {
+move.type = 'Fire';
+} else if (form === 'Wash') {
+move.type = 'Water';
+} else if (form === 'Frost') {
+move.type = 'Ice';
+} else if (form === 'Fan') {
+move.type = 'Flying';
+} else if (form === 'Mow') {
+move.type = 'Grass';
+}
+}
+},
+isPermanent: true,
 name: "Rotom Switch",
 },
 
