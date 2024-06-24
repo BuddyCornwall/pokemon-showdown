@@ -2129,7 +2129,7 @@ accuracy: 95,
 basePower: 45,
 category: "Special",
 name: "Charm",
-pp: 16,
+pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 boosts: {

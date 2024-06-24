@@ -5781,6 +5781,35 @@ isBreakable: true,
 name: "Venturara",
 },
 
+rotomswitch: {
+onResidualOrder: 29,
+onResidual(pokemon) {
+if (!pokemon.volatiles['rotomformchange']) {
+pokemon.addVolatile('rotomformchange');
+pokemon.volatiles['rotomformchange'].turns = 0;}
+pokemon.volatiles['rotomformchange'].turns++;    
+if (pokemon.volatiles['rotomformchange'].turns < 2) return;  
+pokemon.volatiles['rotomformchange'].turns = 0;
+const rotomForms = [
+'Rotom', 
+'Rotom-Heat', 
+'Rotom-Wash', 
+'Rotom-Frost', 
+'Rotom-Fan', 
+'Rotom-Mow'
+];   
+const targetForme = this.sample(rotomForms);
+pokemon.formeChange(targetForme);
+},
+name: "Rotom Switch",
+},
+
+
+
+
+
+
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
