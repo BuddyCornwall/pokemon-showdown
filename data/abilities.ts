@@ -5772,11 +5772,43 @@ name: "Venturara",
 'rotomswitch': {
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
-if (move.category === 'Status' && move.id !== 'rotombolla') return;
-const targetForme = (move.id === 'rotombolla' ? 'Rotom-Wash' : 'Rotom');
-if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
-},
-isPermanent: true,
+        if (move.category === 'Status' && move.id === 'rotombolla') {
+            // Determine the current form of Rotom
+            const currentForm = attacker.species.name;
+            
+            // Determine the target form based on the current form
+            let targetForme;
+            switch (currentForm) {
+                case 'Rotom':
+                    targetForme = 'Rotom-Wash';
+                    break;
+                case 'Rotom-Wash':
+                    targetForme = 'Rotom-Heat';
+                    break;
+                case 'Rotom-Heat':
+                    targetForme = 'Rotom-Frost';
+                    break;
+                case 'Rotom-Frost':
+                    targetForme = 'Rotom-Fan';
+                    break;
+                case 'Rotom-Fan':
+                    targetForme = 'Rotom-Mow';
+                    break;
+                case 'Rotom-Mow':
+                    targetForme = 'Rotom';
+                    break;
+                default:
+                    // If current form is not recognized, default to 'Rotom'
+                    targetForme = 'Rotom';
+                    break;
+            }
+            
+            // Change attacker's form to the target form if it's different
+            if (currentForm !== targetForme) {
+                attacker.formeChange(targetForme);
+            }
+        }
+    },
 name: "Rotom Switch",
 },
 
