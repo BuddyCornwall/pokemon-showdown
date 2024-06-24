@@ -5770,24 +5770,18 @@ name: "Venturara",
 },
 
 'rotomswitch': {
-onStart(pokemon) {
-this.add('ability', pokemon, 'Type Switch');
-},
 onModifyMove(move, pokemon) {
-// Modify the move's type based on Rotom's current form
-if (pokemon.species.name.startsWith('Rotom-')) {
-const form = pokemon.species.name.split('-')[1]; // Extract Rotom's form
-if (form === 'Heat') {
+const form = pokemon.species.name;
+if (form === 'Rotom-Heat') {
 move.type = 'Fire';
-} else if (form === 'Wash') {
+} else if (form === 'Rotom-Wash') {
 move.type = 'Water';
-} else if (form === 'Frost') {
+} else if (form === 'Rotom-Frost') {
 move.type = 'Ice';
-} else if (form === 'Fan') {
+} else if (form === 'Rotom-Fan') {
 move.type = 'Flying';
-} else if (form === 'Mow') {
+} else if (form === 'Rotom-Mow') {
 move.type = 'Grass';
-}
 }
 },
 isPermanent: true,
