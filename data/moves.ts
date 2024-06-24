@@ -18600,6 +18600,19 @@ target: "self",
 type: "Normal",
 },
 
+rswitch: {
+accuracy: 50,
+basePower: 0,
+category: "Status",
+name: "Rswitch",
+pp: 100,
+priority: 0,
+flags: {},
+target: "self",
+type: "Normal",
+},
+
+
 waterkick: {
 accuracy: 95,
 basePower: 75,

@@ -4543,18 +4543,6 @@ isPermanent: true,
 name: "Stance Change",
 },
 
-slowbros: {
-onModifyMovePriority: 1.5,
-onModifyMove(move, attacker, defender) {
-if (attacker.species.baseSpecies !== 'Slowbro' || attacker.transformed) return;
-if (move.category === 'Status' && move.id !== 'slowbrotect') return;
-const targetForme = (move.id === 'slowbrotect' ? 'Slowbro-Galar' : 'Slowbro');
-if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
-},
-isPermanent: true,
-name: "Slow Bros",
-},
-
 static: {
 onDamagingHit(damage, target, source, move) {
 if (this.checkMoveMakesContact(move, source, target)) {
@@ -5781,28 +5769,35 @@ isBreakable: true,
 name: "Venturara",
 },
 
-rotomswitch: {
-onResidualOrder: 28,
-onResidualSubOrder: 1,
+'rotomswitch': {
+onResidualOrder: 999,
 onResidual(pokemon) {
-const formes = [
-'Rotom',
-'Rotom-Heat',
-'Rotom-Wash',
-'Rotom-Frost',
-'Rotom-Fan',
-'Rotom-Mow'
-];
-const newForme = formes[Math.floor(Math.random() * formes.length)];
-if (pokemon.species.name !== newForme) {
-pokemon.formeChange(newForme);
-this.add('-formechange', pokemon, newForme, '[from] ability: Rotom Switch');
-}
+const move = this.dex.getMove('rswitch');
+this.useMove(move, pokemon);},
+isPermanent: true,
+onModifyMovePriority: 1.5,
+onModifyMove(move, attacker, defender) {
+if (attacker.species.baseSpecies !== 'Rotom' || attacker.transformed) return;
+if (move.category === 'Status' && move.id !== 'rswitch') return;
+const targetForme = (move.id === 'rswitch' ? 'Slowbro-Galar' : 'Rotom');
+if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
+isPermanent: true,
 name: "Rotom Switch",
 },
 
 
+slowbros: {
+onModifyMovePriority: 1.5,
+onModifyMove(move, attacker, defender) {
+if (attacker.species.baseSpecies !== 'Slowbro' || attacker.transformed) return;
+if (move.category === 'Status' && move.id !== 'slowbrotect') return;
+const targetForme = (move.id === 'slowbrotect' ? 'Slowbro-Galar' : 'Slowbro');
+if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+},
+isPermanent: true,
+name: "Slow Bros",
+},
 
 
 
