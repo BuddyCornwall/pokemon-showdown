@@ -5791,7 +5791,7 @@ pokemon.volatiles['rotomformchange'].turns++;
 if (pokemon.volatiles['rotomformchange'].turns < 2) return;  
 pokemon.volatiles['rotomformchange'].turns = 0;
 const rotomForms = [
-'Rotom', 
+'Rotom-Bulb', 
 'Rotom-Heat', 
 'Rotom-Wash', 
 'Rotom-Frost', 

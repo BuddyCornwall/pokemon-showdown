@@ -6152,7 +6152,7 @@ abilities: {0: "No Ability"},
 weightkg: 26.6,
 },
 
-rotombulb: {
+rotom: {
 num: 479,
 name: "Rotom-Bulb",
 types: ["Electric", "Ghost"],
