@@ -5799,12 +5799,13 @@ targetForme = 'Rotom';
 break;
 }
 if (currentForm !== targetForme) {
-attacker.formeChange(targetForme);
+pokemon.formeChange(targetForme);
+this.add('-formechange', pokemon, targetForme);
 }
 },
+isPermanent: true,
 name: "Rotom Switch",
 },
-
 
 slowbros: {
 onModifyMovePriority: 1.5,
