@@ -613,7 +613,7 @@ abilities: {0: "No Ability"},
 weightkg: 55,
 },
 
-nidorana: {
+nidoranf: {
 num: 29,
 name: "Nidorana",
 types: ["Poison"],
@@ -6152,9 +6152,9 @@ abilities: {0: "No Ability"},
 weightkg: 26.6,
 },
 
-rotom: {
+rotombulb: {
 num: 479,
-name: "Rotom-Bulb",
+name: "Rotom",
 types: ["Electric", "Ghost"],
 gender: "F",
 baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
