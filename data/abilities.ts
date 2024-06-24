@@ -5773,7 +5773,7 @@ name: "Venturara",
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
 if (move.category === 'Status' && move.id !== 'rotombolla') return;
-const targetForme = (move.type === 'rotombolla' ? 'Rotom-Wash' : 'Rotom');
+const targetForme = (move.id === 'rotombolla' ? 'Rotom-Wash' : 'Rotom');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
 isPermanent: true,
