@@ -5773,8 +5773,8 @@ name: "Venturara",
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
 if (attacker.species.baseSpecies !== 'Rotom' || attacker.transformed) return;
-if (move.type === 'water') return;
-const targetForme = (move.type === 'water' ? 'Rotom-Wash' : 'Rotom');
+if (move.category === 'Status' && move.id !== 'slowbrotect') return;
+const targetForme = (move.id === 'slowbrotect' ? 'Rotom-Wash' : 'Rotom');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
 isPermanent: true,
