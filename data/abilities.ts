@@ -5774,7 +5774,7 @@ onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
 if (attacker.species.baseSpecies !== 'Rotom' || attacker.transformed) return;
 if (move.type === 'Water' || move.type === 'Dark') {
-const targetForme = 'Rotom-Wash';
+const targetForme = (move.type === 'Water' ? 'Rotom-Wash' : 'Rotom');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 }
 },
