@@ -5788,10 +5788,6 @@ if (pokemon.baseSpecies.baseSpecies !== 'Rotom' || pokemon.transformed) return;
 if (!pokemon.volatiles['rotomformchange']) {
 pokemon.addVolatile('rotomformchange');
 }
-const turns = pokemon.volatiles['rotomformchange'].turns || 0;
-pokemon.volatiles['rotomformchange'].turns = turns + 1;
-if (pokemon.volatiles['rotomformchange'].turns < 2) return;
-pokemon.volatiles['rotomformchange'].turns = 0;
 const rotomForms = [
 'Rotom', 
 'Rotom-Heat', 
