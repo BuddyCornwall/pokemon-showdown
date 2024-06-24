@@ -18600,21 +18600,6 @@ target: "self",
 type: "Normal",
 },
 
-rotombolla: {
-accuracy: 95,
-basePower: 0,
-category: "Status",
-name: "Rotombolla",
-pp: 1.25,
-priority: 0,
-flags: {},
-stallingMove: true,
-volatileStatus: 'protect',
-target: "self",
-type: "Normal",
-},
-
-
 waterkick: {
 accuracy: 95,
 basePower: 75,

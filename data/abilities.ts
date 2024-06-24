@@ -5769,7 +5769,7 @@ isBreakable: true,
 name: "Venturara",
 },
 
-'rotomswitch': {
+rotombola: {
 onResidualOrder: 999,
 onResidual(pokemon) {
 if (!this.turn) return;
@@ -5804,7 +5804,7 @@ this.add('-formechange', pokemon, targetForme);
 }
 },
 isPermanent: true,
-name: "Rotom Switch",
+name: "Rotombola",
 },
 
 slowbros: {
