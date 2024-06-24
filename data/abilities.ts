@@ -5770,45 +5770,38 @@ name: "Venturara",
 },
 
 'rotomswitch': {
-onModifyMovePriority: 1.5,
-onModifyMove(move, attacker, defender) {
-        if (move.category === 'Status' && move.id === 'rotombolla') {
-            // Determine the current form of Rotom
-            const currentForm = attacker.species.name;
-            
-            // Determine the target form based on the current form
-            let targetForme;
-            switch (currentForm) {
-                case 'Rotom':
-                    targetForme = 'Rotom-Wash';
-                    break;
-                case 'Rotom-Wash':
-                    targetForme = 'Rotom-Heat';
-                    break;
-                case 'Rotom-Heat':
-                    targetForme = 'Rotom-Frost';
-                    break;
-                case 'Rotom-Frost':
-                    targetForme = 'Rotom-Fan';
-                    break;
-                case 'Rotom-Fan':
-                    targetForme = 'Rotom-Mow';
-                    break;
-                case 'Rotom-Mow':
-                    targetForme = 'Rotom';
-                    break;
-                default:
-                    // If current form is not recognized, default to 'Rotom'
-                    targetForme = 'Rotom';
-                    break;
-            }
-            
-            // Change attacker's form to the target form if it's different
-            if (currentForm !== targetForme) {
-                attacker.formeChange(targetForme);
-            }
-        }
-    },
+onResidualOrder: 999,
+onResidual(pokemon) {
+if (!this.turn) return;
+const currentForm = pokemon.species.name;
+let targetForme;
+switch (currentForm) {
+case 'Rotom':
+targetForme = 'Rotom-Wash';
+break;
+case 'Rotom-Wash':
+targetForme = 'Rotom-Heat';
+break;
+case 'Rotom-Heat':
+targetForme = 'Rotom-Frost';
+break;
+case 'Rotom-Frost':
+targetForme = 'Rotom-Fan';
+break;
+case 'Rotom-Fan':
+targetForme = 'Rotom-Mow';
+break;
+case 'Rotom-Mow':
+targetForme = 'Rotom';
+break;
+default:
+targetForme = 'Rotom';
+break;
+}
+if (currentForm !== targetForme) {
+attacker.formeChange(targetForme);
+}
+},
 name: "Rotom Switch",
 },
 
