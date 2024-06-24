@@ -5782,7 +5782,6 @@ if (move.category === 'Status' && move.id !== 'rswitch') return;
 const targetForme = (move.id === 'rswitch' ? 'Slowbro-Galar' : 'Rotom');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
-isPermanent: true,
 name: "Rotom Switch",
 },
 
