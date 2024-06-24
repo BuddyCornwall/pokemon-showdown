@@ -5784,11 +5784,13 @@ name: "Venturara",
 rotomswitch: {
 onResidualOrder: 29,
 onResidual(pokemon) {
+if (pokemon.baseSpecies.baseSpecies !== 'Rotom' || pokemon.transformed) return;
 if (!pokemon.volatiles['rotomformchange']) {
 pokemon.addVolatile('rotomformchange');
-pokemon.volatiles['rotomformchange'].turns = 0;}
-pokemon.volatiles['rotomformchange'].turns++;    
-if (pokemon.volatiles['rotomformchange'].turns < 2) return;  
+}
+const turns = pokemon.volatiles['rotomformchange'].turns || 0;
+pokemon.volatiles['rotomformchange'].turns = turns + 1;
+if (pokemon.volatiles['rotomformchange'].turns < 2) return;
 pokemon.volatiles['rotomformchange'].turns = 0;
 const rotomForms = [
 'Rotom', 
@@ -5797,9 +5799,12 @@ const rotomForms = [
 'Rotom-Frost', 
 'Rotom-Fan', 
 'Rotom-Mow'
-];   
-const targetForme = this.sample(rotomForms);
-pokemon.formeChange(targetForme);
+];
+let newForm = this.sample(rotomForms);
+while (newForm === pokemon.species.name) {
+newForm = this.sample(rotomForms);
+}
+pokemon.formeChange(newForm, this.effect);
 },
 name: "Rotom Switch",
 },
