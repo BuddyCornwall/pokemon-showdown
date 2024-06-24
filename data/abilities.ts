@@ -5772,8 +5772,8 @@ name: "Venturara",
 'rotomswitch': {
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
-if (move.category === 'Status' && move.id !== 'rotombola') return;
-const targetForme = (move.type === 'rotombola' ? 'Rotom-Wash' : 'Rotom');
+if (move.category === 'Status' && move.id !== 'rotombolla') return;
+const targetForme = (move.type === 'rotombolla' ? 'Rotom-Wash' : 'Rotom');
 if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 },
 isPermanent: true,
