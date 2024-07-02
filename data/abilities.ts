@@ -5798,10 +5798,6 @@ default:
 targetForme = 'Rotom';
 break;
 }
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme);
-this.add('-formechange', pokemon, targetForme);
-}
 },
 isPermanent: true,
 name: "Rotombola",
