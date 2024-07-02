@@ -5450,7 +5450,7 @@ this.add('-start', target, 'move: Focus Energy');
 }
 },
 onModifyCritRatio(critRatio) {
-return critRatio + 4;
+return critRatio + 1.5;
 },
 },
 boosts: {
