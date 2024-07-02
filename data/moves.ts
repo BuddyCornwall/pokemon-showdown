@@ -704,7 +704,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -949,7 +949,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -2161,7 +2161,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -3808,7 +3808,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -4669,7 +4669,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -8288,7 +8288,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -15451,7 +15451,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -15852,7 +15852,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 2)) {
+if (this.randomChance(1, 4)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
