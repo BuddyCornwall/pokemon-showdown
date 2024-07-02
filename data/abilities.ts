@@ -893,7 +893,7 @@ statsLowered = true;
 }
 }
 if (statsLowered) {
-this.boost({atk: 2, spa: 2}, target, target, null, false, true);
+this.boost({atk: 1, spa: 1}, target, target, null, false, true);
 }
 },
 name: "Competitive",
