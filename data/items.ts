@@ -76,7 +76,7 @@ basePower: 80,
 type: "Poison",
 },
 onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
+if (pokemon.hp <= pokemon.maxhp / 100) {
 pokemon.eatItem();
 }
 },
