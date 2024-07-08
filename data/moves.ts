@@ -9135,9 +9135,7 @@ return this.chainModify(2);
 }
 },
 onAccuracy(accuracy, target, source, move) {
-const boostedMoves = [
-stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
-];
+const boostedMoves = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',];
 if (boostedMoves.includes(move.id)) {
 return true;
 }
