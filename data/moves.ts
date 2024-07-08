@@ -2269,7 +2269,7 @@ category: "Special",
 name: "Clangorous Soul",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1, dance: 1, contact: 1, protect: 1, mirror: 1}
+flags: {snatch: 1, dance: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 100,
 onHit(target, source) {
