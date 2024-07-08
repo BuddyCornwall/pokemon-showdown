@@ -1231,7 +1231,6 @@ name: "Bide",
 pp: 0.625,
 priority: 2,
 flags: {contact: 1, protect: 1},
-flags: {contact: 1, protect: 1},
 secondary: null,
 target: "self",
 type: "Normal",
@@ -18383,7 +18382,7 @@ secondary: null,
 target: "any",
 },
 
-"10000000voltthunderbolt"
+"10000000voltthunderbolt": {
 accuracy: 95,
 basePower: 55,
 category: "Special",
@@ -18492,7 +18491,6 @@ basePower: 55,
 category: "Special",
 name: "Fusion Bolt",
 pp: 1.25,
-flags: {contact: 1, protect: 1, mirror: 1},
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Electric') return 1;
