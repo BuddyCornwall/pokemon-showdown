@@ -9129,9 +9129,7 @@ condition: {
 noCopy: true,
 onRestart: () => null,
 onSourceModifyDamage(damage, source, target, move) {
-const boostedMoves = [
-stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
-];
+const boostedMoves = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',];
 if (boostedMoves.includes(move.id)) {
 return this.chainModify(2);
 }
