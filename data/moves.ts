@@ -18383,7 +18383,7 @@ secondary: null,
 target: "any",
 },
 
-10,000,000 Volt Thunderbolt: {
+10000000voltthunderbolt: {
 accuracy: 95,
 basePower: 55,
 category: "Special",
