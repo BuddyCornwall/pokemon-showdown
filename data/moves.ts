@@ -3057,9 +3057,7 @@ flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 onHit(target, source, move) {
 let success = false;
 if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
-const removeTarget = [
-reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
-];
+const removeTarget = ['reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',];
 const removeAll = [
 spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
 ];
