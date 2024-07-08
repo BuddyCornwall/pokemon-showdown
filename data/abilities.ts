@@ -2840,12 +2840,12 @@ name: "Mirror Armor",
 },
 
 mistysurge: {
-onStart(source) {
-this.field.setTerrain('mistyterrain');
-},
-
 onPreStart(pokemon) {
 this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!');
+},
+
+onStart(source) {
+this.field.setTerrain('mistyterrain');
 },
 
 name: "Misty Surge",

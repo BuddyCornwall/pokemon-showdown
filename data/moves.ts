@@ -141,7 +141,7 @@ category: "Physical",
 name: "Acupressure",
 pp: 0.625,
 priority: 2,
-flags: {},
+flags: {contact: 1, protect: 1,},
 onHit(target) {
 const stats: BoostID[] = [];
 let stat: BoostID;
@@ -1231,65 +1231,7 @@ name: "Bide",
 pp: 0.625,
 priority: 2,
 flags: {contact: 1, protect: 1},
-volatileStatus: 'bide',
-ignoreImmunity: true,
-beforeMoveCallback(pokemon) {
-if (pokemon.volatiles['bide']) return true;
-},
-condition: {
-duration: 2,
-onLockMove: 'bide',
-onStart(pokemon) {
-this.effectState.totalDamage = 0;
-this.add('-start', pokemon, 'move: Bide');
-},
-onDamagePriority: -101,
-onDamage(damage, target, source, move) {
-if (!move || move.effectType !== 'Move' || !source) return;
-this.effectState.totalDamage += damage;
-this.effectState.lastDamageSource = source;
-},
-onBeforeMove(pokemon, target, move) {
-if (this.effectState.duration === 1) {
-this.add('-end', pokemon, 'move: Bide');
-target = this.effectState.lastDamageSource;
-if (!target || !this.effectState.totalDamage) {
-this.attrLastMove('[still]');
-this.add('-fail', pokemon);
-return false;
-}
-if (!target.isActive) {
-const possibleTarget = this.getRandomTarget(pokemon, this.dex.moves.get('pound'));
-if (!possibleTarget) {
-this.add('-miss', pokemon);
-return false;
-}
-target = possibleTarget;
-}
-const moveData: Partial<ActiveMove> = {
-id: 'bide' as ID,
-name: "Bide",
-accuracy: 95,
-damage: this.effectState.totalDamage * 2,
-category: "Physical",
-priority: 1,
 flags: {contact: 1, protect: 1},
-effectType: 'Move',
-type: 'Normal',
-};
-this.actions.tryMoveHit(target, pokemon, moveData as ActiveMove);
-pokemon.removeVolatile('bide');
-return false;
-}
-this.add('-activate', pokemon, 'move: Bide');
-},
-onMoveAborted(pokemon) {
-pokemon.removeVolatile('bide');
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'move: Bide', '[silent]');
-},
-},
 secondary: null,
 target: "self",
 type: "Normal",
@@ -2223,7 +2165,7 @@ category: "Physical",
 name: "Chilly Reception",
 pp: 0.625,
 priority: 2,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'snow',
 selfSwitch: true,
 secondary: null,
@@ -2327,7 +2269,7 @@ category: "Special",
 name: "Clangorous Soul",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1, dance: 1},
+flags: {snatch: 1, dance: 1, contact: 1, protect: 1, mirror: 1}
 secondary: {
 chance: 100,
 onHit(target, source) {
@@ -2767,7 +2709,7 @@ priority: 0,
 flags: {mirror: 1},
 onHitField(target, source) {
 const sideConditions = [
-'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
 ];
 let success = false;
 if (this.gameType === "freeforall") {
@@ -3060,13 +3002,8 @@ category: "Physical",
 name: "Decorate",
 pp: 1.25,
 priority: 0,
-flags: {allyanim: 1},
+flags: {},
 secondary: null,
-boosts: {
-chance: 50,
-atk: 1,
-spa: 1,
-},
 target: "any",
 type: "Fairy",
 },
@@ -3123,10 +3060,10 @@ onHit(target, source, move) {
 let success = false;
 if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 const removeTarget = [
-'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
 ];
 const removeAll = [
-'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
 ];
 for (const targetCondition of removeTarget) {
 if (target.side.removeSideCondition(targetCondition)) {
@@ -4071,7 +4008,7 @@ category: "Special",
 name: "Electric Terrain",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
 this.add('-message', `${source.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`);
@@ -4403,7 +4340,7 @@ if (target === source || target.volatiles['dynamax']) return false;
 
 const additionalBannedSourceAbilities = [
 // Zen Mode included here for compatability with Gen 5-6
-'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
 ];
 if (
 target.ability === source.ability ||
@@ -5890,7 +5827,7 @@ category: "Physical",
 name: "Geomancy",
 pp: 0.625,
 priority: 0,
-flags: {charge: 1},
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
@@ -6157,7 +6094,7 @@ category: "Physical",
 name: "Grassy Terrain",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
 this.add('-message', `${source.name} triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!`);
@@ -6241,7 +6178,7 @@ category: "Special",
 name: "Gravity",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Flying') return 1;
 },
@@ -6480,7 +6417,7 @@ category: "Physical",
 name: "Hail",
 pp: 0.625,
 priority: 4,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'snow',
 secondary: null,
 target: "any",
@@ -7917,7 +7854,7 @@ hasCrashDamage: true,
 onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 1, source, source, this.dex.conditions.get('High Jump Kick'));
 },
-drain: [100, 100],
+drain: [99, 100],
 secondary: null,
 target: "any",
 type: "Normal",
@@ -8771,7 +8708,7 @@ category: "Special",
 name: "Make It Rain",
 pp: 0.625,
 priority: 0,
-flags: {distance: 1, mirror: 1},
+flags: {distance: 1, mirror: 1, protect: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Fire') return 1;
 },
@@ -8853,7 +8790,7 @@ category: "Special",
 name: "Mean Look",
 pp: 0.625,
 priority: 0,
-flags: {reflectable: 1, mirror: 1},
+flags: {reflectable: 1, mirror: 1, protect: 1},
 onHit(target, source, move) {
 return target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -9191,7 +9128,7 @@ category: "Special",
 name: "Minimize",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1},
+flags: {snatch: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
 this.add('-message', `🎵 ${source.name} Broke the walls doooooown!`);
@@ -9203,7 +9140,7 @@ noCopy: true,
 onRestart: () => null,
 onSourceModifyDamage(damage, source, target, move) {
 const boostedMoves = [
-'stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
+stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
 ];
 if (boostedMoves.includes(move.id)) {
 return this.chainModify(2);
@@ -9211,7 +9148,7 @@ return this.chainModify(2);
 },
 onAccuracy(accuracy, target, source, move) {
 const boostedMoves = [
-'stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
+stomp', 'steamroller', 'bodyslam', 'flyingpress', 'dragonrush', 'heatcrash', 'heavyslam', 'maliciousmoonsault',
 ];
 if (boostedMoves.includes(move.id)) {
 return true;
@@ -9350,7 +9287,7 @@ category: "Special",
 name: "Mist",
 pp: 1.25,
 priority: 0,
-flags: {snatch: 1},
+flags: {snatch: 1, protect: 1, mirror: 1},
 sideCondition: 'mist',
 condition: {
 duration: 7,
@@ -9429,7 +9366,7 @@ category: "Physical",
 name: "Misty Terrain",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 terrain: 'mistyterrain',
 condition: {
 
@@ -9802,7 +9739,7 @@ category: "Special",
 name: "Nature Power",
 pp: 1.25,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onTryHit(target, pokemon) {
 let move = 'triattack';
 if (this.field.isTerrain('electricterrain')) {
@@ -11266,7 +11203,7 @@ category: "Physical",
 name: "Psychic Terrain",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
 this.add('-message', `${source.name} triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!`);
@@ -11878,7 +11815,7 @@ category: "Physical",
 name: "Rain Dance",
 pp: 0.625,
 priority: 0,
-flags: {dance: 1},
+flags: {dance: 1, protect: 1},
 weather: 'RainDance',
 secondary: null,
 target: "any",
@@ -12452,7 +12389,7 @@ if (target.ability === source.ability) return false;
 
 const additionalBannedTargetAbilities = [
 // Zen Mode included here for compatability with Gen 5-6
-'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'zenmode',
+flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'zenmode',
 ];
 
 if (target.getAbility().isPermanent || additionalBannedTargetAbilities.includes(target.ability) ||
@@ -12778,7 +12715,7 @@ category: "Physical",
 name: "Sandstorm",
 pp: 0.625,
 priority: 0,
-flags: {wind: 1},
+flags: {wind: 1, protect: 1, mirror: 1},
 weather: 'Sandstorm',
 secondary: null,
 target: "any",
@@ -12965,7 +12902,7 @@ category: "Physical",
 name: "Searing Sunraze Smash",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'sunnyday',
 secondary: null,
 target: "any",
@@ -14161,7 +14098,7 @@ category: "Special",
 name: "Snowscape",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'snow',
 secondary: null,
 target: "all",
@@ -15280,7 +15217,7 @@ category: "Physical",
 name: "Sunny Day",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'sunnyday',
 thawsTarget: true,
 secondary: null,
@@ -15826,7 +15763,7 @@ category: "Special",
 name: "Tearful Look",
 pp: 0.625,
 priority: 0,
-flags: {reflectable: 1, mirror: 1},
+flags: {reflectable: 1, mirror: 1, contact: 1, protect: 1},
 volatileStatus: 'attract',
 condition: {
 noCopy: true,
@@ -17276,7 +17213,7 @@ category: "Status",
 name: "Wish",
 pp: 0.625,
 priority: 0,
-flags: {snatch: 1, heal: 1},
+flags: {snatch: 1, heal: 1, wish: 1},
 slotCondition: 'Wish',
 condition: {
 duration: 2,
@@ -17998,7 +17935,7 @@ category: "Special",
 name: "Max Airstream",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18020,7 +17957,7 @@ category: "Physical",
 name: "Max Darkness",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18042,7 +17979,7 @@ category: "Physical",
 name: "Max Flare",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18064,7 +18001,7 @@ category: "Physical",
 name: "Max Flutterby",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18086,7 +18023,7 @@ category: "Physical",
 name: "Max Geyser",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18108,7 +18045,7 @@ category: "Status",
 name: "Max Guard",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18129,7 +18066,7 @@ category: "Physical",
 name: "Max Hailstorm",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18151,7 +18088,7 @@ category: "Physical",
 name: "Max Knuckle",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18173,7 +18110,7 @@ category: "Physical",
 name: "Max Lightning",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18195,7 +18132,7 @@ category: "Physical",
 name: "Max Mindstorm",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18217,7 +18154,7 @@ category: "Physical",
 name: "Max Ooze",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18239,7 +18176,7 @@ category: "Physical",
 name: "Max Overgrowth",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18261,7 +18198,7 @@ category: "Physical",
 name: "Max Phantasm",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18283,7 +18220,7 @@ category: "Physical",
 name: "Max Quake",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18305,7 +18242,7 @@ category: "Physical",
 name: "Max Rockfall",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18327,7 +18264,7 @@ category: "Physical",
 name: "Max Starfall",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18349,7 +18286,7 @@ category: "Physical",
 name: "Max Steelspike",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18371,7 +18308,7 @@ category: "Physical",
 name: "Max Strike",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18393,7 +18330,7 @@ category: "Physical",
 name: "Max Wyrmwind",
 pp: 0.625,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 onModifyMove(move, pokemon) {
 if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 move.category = 'Physical';
@@ -18414,7 +18351,7 @@ category: "Physical",
 name: "Techno Blast",
 pp: 10,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
@@ -18427,7 +18364,7 @@ category: "Physical",
 name: "Judgment",
 pp: 10,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Normal",
@@ -18440,7 +18377,7 @@ category: "Physical",
 name: "Ivy Cudgel",
 pp: 10,
 priority: 0,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Grass",
@@ -18453,6 +18390,7 @@ category: "Physical",
 name: "Bouncy Bubble",
 pp: 0.625,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {protect: 1, mirror: 1},
 onBasePower(basePower, pokemon) {
 if (this.randomChance(5, 10)) {
@@ -18464,7 +18402,7 @@ secondary: null,
 target: "any",
 },
 
-"10000000voltthunderbolt": {
+10000000voltthunderbolt: {
 accuracy: 95,
 basePower: 55,
 category: "Special",
@@ -18472,6 +18410,7 @@ name: "10,000,000 Volt Thunderbolt",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 
 onHit(target, source, move) {
 this.add('-message', `${source.name} triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!`);
@@ -18536,6 +18475,7 @@ category: "Special",
 name: "Bloom Doom",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Grass') return 1;
@@ -18555,6 +18495,7 @@ category: "Special",
 name: "Fusion Flare",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Fire') return 1;
@@ -18574,6 +18515,7 @@ category: "Special",
 name: "Fusion Bolt",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Electric') return 1;
@@ -18593,7 +18535,7 @@ category: "Status",
 name: "Slowbrotect",
 pp: 0.625,
 priority: 4,
-flags: {},
+flags: {contact: 1, protect: 1, mirror: 1},
 stallingMove: true,
 volatileStatus: 'protect',
 target: "self",
@@ -18607,6 +18549,7 @@ category: "Physical",
 name: "Water Kick",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
@@ -18629,6 +18572,7 @@ category: "Physical",
 name: "Ice Kick",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
@@ -18651,6 +18595,7 @@ category: "Physical",
 name: "Super Kick",
 pp: 1.25,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
@@ -18673,6 +18618,7 @@ category: "Physical",
 name: "Yeet Kick",
 pp: 0.625,
 priority: 0,
+flags: {contact: 1, protect: 1, mirror: 1},
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 forceSwitch: true,
