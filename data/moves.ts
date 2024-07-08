@@ -4331,6 +4331,7 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 onTryHit(target, source) {
 if (target === source || target.volatiles['dynamax']) return false;
+
 const additionalBannedSourceAbilities = ['flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',];
 if (
 target.ability === source.ability ||
@@ -12372,12 +12373,7 @@ priority: 0,
 flags: {bypasssub: 1, allyanim: 1},
 onTryHit(target, source) {
 if (target.ability === source.ability) return false;
-
-const additionalBannedTargetAbilities = [
-// Zen Mode included here for compatability with Gen 5-6
-flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'zenmode',
-];
-
+const additionalBannedTargetAbilities = ['flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'zenmode',];
 if (target.getAbility().isPermanent || additionalBannedTargetAbilities.includes(target.ability) ||
 source.getAbility().isPermanent) {
 return false;
