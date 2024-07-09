@@ -5645,8 +5645,14 @@ basePower: 10,
 onSourceModifyAccuracyPriority: -2,
 onSourceModifyAccuracy(accuracy, target) {
 if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
-this.debug('Zoom Lens boosting accuracy');
+this.debug('Critical Zoom Lens boosting accuracy');
 return this.chainModify([115, 100]);
+}
+},
+onModifyCritRatio(critRatio, source, target) {
+if (!this.queue.willMove(target)) {
+this.debug('Critical Zoom Lens boosting critical hit ratio');
+return critRatio + 1;
 }
 },
 },
@@ -6106,25 +6112,7 @@ return this.chainModify([115, 100]);
 },
 },
 
-zoomlens: {
-name: "Zoom Lens",
-fling: {
-basePower: 10,
-},
-onSourceModifyAccuracyPriority: -2,
-onSourceModifyAccuracy(accuracy, target) {
-if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
-this.debug('Critical Zoom Lens boosting accuracy');
-return this.chainModify([115, 100]);
-}
-},
-onModifyCritRatio(critRatio, source, target) {
-if (!this.queue.willMove(target)) {
-this.debug('Critical Zoom Lens boosting critical hit ratio');
-return critRatio + 1;
-}
-},
-},
+
 
 
 
