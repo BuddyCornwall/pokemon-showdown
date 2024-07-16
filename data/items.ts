@@ -6044,14 +6044,72 @@ target.usedCapsule = true;
 
 voodoodoll: {
 name: "Voodoo Doll",
-onDamagePriority: -100,
-onDamage: function (damage, target, source, effect) {
-if (effect && effect.effectType === 'Move' && effect.isContact && damage > 0) {
-let damageToReflect = Math.floor(damage / 4);
-this.damage(damageToReflect, source, target);
-this.add('-message', target.name + "'s Voodoo Doll reflects " + damageToReflect + " damage back at " + source.name + "!");
+onDamagingHit(damage, target, source, move) {
+const reflectedDamage = Math.floor(damage / 3);
+this.damage(reflectedDamage, source, target);
+this.add('-item', target, 'Voodoo Doll');
+this.add('-damage', source, `-${reflectedDamage} HP [from Voodoo Doll]`);
+},
+},
+
+earbuds: {
+name: "Earbuds",
+onTryHit(target, source, move) {
+if (move.flags['sound']) {
+this.add('-immune', target, '[from] item: Earbuds');
+target.takeItem();
+return null;
 }
 },
+},
+
+nightvisiongoggles: {
+name: "Night Vision Goggles",
+onTryHit(target, source, move) {
+if (move.type === 'Dark') {
+this.add('-immune', target, '[from] item: Night Vision Goggles');
+target.takeItem();
+return null;
+}
+},
+},
+
+spring: {
+name: "Spring",
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.id === 'bounce' && !this.effectState.used) {
+this.effectState.used = true;
+this.add('-item', user, 'Spring');
+return this.chainModify(2);
+}
+},
+},
+
+fishhook: {
+name: "Fish Hook",
+onFoeTrapPokemon(pokemon) {
+if (pokemon.hasType('Water')) {
+pokemon.tryTrap(true);
+}
+},
+onFoeMaybeTrapPokemon(pokemon, source) {
+if (source.hasItem('fishhook') && pokemon.hasType('Water')) {
+pokemon.maybeTrapped = true;
+}
+},
+},
+
+goldleaf: {
+name: "Gold Leaf",
+onPrepareHit(source, target, move) {
+if (move.type === 'Grass' && !this.effectState.used) {
+this.add('-item', source, 'Gold Leaf');
+move.type = 'Steel';
+this.add('-start', source, 'typechange', move.name, '[from] item: Gold Leaf');
+this.effectState.used = true;
+source.takeItem();
+}
 },
 
 heartscale: {
