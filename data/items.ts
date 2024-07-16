@@ -6104,11 +6104,10 @@ name: "Gold Leaf",
 onStart(item) {
 item.used = false;
 },
-onPrepareHit(source, target, move) {
+onHit(source, target, move) {
 if (move.type === 'Grass' && !this.effectState.used) {
 this.add('-item', source, 'Gold Leaf');
 move.type = 'Steel';
-this.add('-start', source, 'typechange', move.name, '[from] item: Gold Leaf');
 this.effectState.used = true;
 source.takeItem();
 }
