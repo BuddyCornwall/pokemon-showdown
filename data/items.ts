@@ -71,10 +71,6 @@ this.boost(boost);
 mattberry: {
 name: "Matt Berry",
 isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Poison",
-},
 onUpdate(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2.1) {
 pokemon.eatItem();
@@ -84,7 +80,17 @@ onTryEatItem(item, pokemon) {
 if (!this.runEvent('TryHeal', pokemon)) return false;
 },
 onEat(pokemon) {
-this.heal(1);
+const quotes = [
+ "Hello, I'm Matt Berry!",
+"This is a Matt Berry quote!",
+"Another fantastic day!",
+"You can't handle the Berry!",
+"Prepare for hilarity!",
+"Witness my brilliance!"
+];
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+this.add('-message', pokemon, randomQuote);
+this.heal(pokemon.baseMaxhp / 8); // Heals 1/8 of the Pokémon's max HP
 },
 },
 
