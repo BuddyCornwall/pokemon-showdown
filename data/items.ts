@@ -6099,20 +6099,44 @@ name: "Gold Leaf",
 
 honorofkanto: {
 name: "Honor of Kanto",
-onModifySpDPriority: 1,
-onModifySpD(spd, pokemon) {
-if (this.dex.getSpecies(pokemon.species).gen <= 1) {
-return this.chainModify(1.25);
-}
-},
 },
 
 honorofjohto: {
 name: "Honor of Johto",
-onModifyDefPriority: 1,
-onModifyDef(def, pokemon) {
-if (this.dex.getSpecies(pokemon.species).gen === 2) {
-return this.chainModify(1.25);
+},
+
+romansreigns: {
+name: "Roman's Reigns",
+onBasePowerPriority: 8,
+onModifySpe(spe, pokemon) {
+return this.chainModify(.75);
+},
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags && move.flags['dog']) {
+this.debug('Roman\'s Reigns boost');
+return this.chainModify([115, 100]);
+}
+},
+},
+
+scanner5000: {
+name: "Scanner 5000",
+onBasePowerPriority: 8,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags && move.flags['hightech']) {
+this.debug('Scanner 5000 boost');
+return this.chainModify([115, 100]);
+}
+},
+},
+
+xring: {
+name: "X-Ring",
+onBasePowerPriority: 8,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags && move.flags['recharge']) {
+this.debug('X-Ring boost');
+return this.chainModify([115, 100]);
 }
 },
 },
