@@ -2995,13 +2995,23 @@ type: "Fairy",
 decorate: {
 accuracy: 95,
 basePower: 55,
-category: "Physical",
+category: "Special",
 name: "Decorate",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
-flags: {},
-secondary: null,
-target: "any",
+flags: {protect: 1, mirror: 1},
+onHit(target, source) {
+const possibleTypes = ["Normal", "Fairy", "Bug", "Dark", "Dragon", "Electric", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Poison", "Psychic", "Rock", "Steel", "Water"];
+let randomType = possibleTypes[Math.floor(Math.random() * possibleTypes.length)];
+target.setType(randomType);
+this.add('-start', target, 'typechange', randomType);
+}
+},
+secondary: {
+chance: 30,
+volatileStatus: 'confusion',
+},
+target: "allAdjacent",
 type: "Fairy",
 },
 
@@ -18326,39 +18336,55 @@ target: "any",
 },
 
 technoblast: {
-accuracy: 100,
-basePower: 20,
-category: "Physical",
+accuracy: 85,
+basePower: 65,
+category: "Special",
 name: "Techno Blast",
-pp: 1.25,
+pp: 0.625,
 priority: 0,
 flags: {hightech: 1, contact: 1, protect: 1, mirror: 1},
+onEffectiveness(typeMod, target, type) {
+if (type === 'Ghost') return 1;
+},
 secondary: null,
 target: "any",
 type: "Normal",
 },
 
 judgment: {
-accuracy: 100,
-basePower: 20,
+accuracy: 85,
+basePower: 65,
 category: "Physical",
 name: "Judgment",
 pp: 1.25,
 priority: 0,
-flags: {contact: 1, protect: 1, mirror: 1},
+flags: {protect: 1, mirror: 1, contact: 1},
+multihit: 2,
+onModifyMove(move, pokemon) {
+move.type = 'Dark';
+},
+onAfterHit(target, source, move) {
+if (move.hit === 2) {
+move.type = 'Fairy';
+}
+},
 secondary: null,
 target: "any",
 type: "Normal",
 },
 
 ivycudgel: {
-accuracy: 100,
-basePower: 20,
+accuracy: 85,
+basePower: 55,
 category: "Physical",
 name: "Ivy Cudgel",
 pp: 1.25,
-priority: 0,
+priority: -1,
 flags: {contact: 1, protect: 1, mirror: 1},
+secondary: {
+chance: 50,
+status: 'tox',
+},
 secondary: null,
 target: "any",
 type: "Grass",
@@ -18491,6 +18517,7 @@ basePower: 55,
 category: "Special",
 name: "Fusion Bolt",
 pp: 1.25,
+priority: 0,
 flags: {protect: 1, mirror: 1},
 onEffectiveness(typeMod, target, type) {
 if (type === 'Electric') return 1;
@@ -18591,7 +18618,6 @@ name: "Yeet Kick",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-thawsTarget: true,
 forceSwitch: true,
 target: "any",
 type: "Rock",
