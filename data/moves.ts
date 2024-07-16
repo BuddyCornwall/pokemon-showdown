@@ -3006,11 +3006,6 @@ let randomType = possibleTypes[Math.floor(Math.random() * possibleTypes.length)]
 target.setType(randomType);
 this.add('-start', target, 'typechange', randomType);
 }
-},
-secondary: {
-chance: 30,
-volatileStatus: 'confusion',
-},
 target: "allAdjacent",
 type: "Fairy",
 },
