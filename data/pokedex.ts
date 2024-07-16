@@ -7185,7 +7185,7 @@ weightkg: 18,
 basculinbluestriped: {
 num: 550,
 name: "Basculin-Blue-Striped",
-types: ["Ghost", "Water"],
+types: ["Ice", "Water"],
 gender: "F",
 baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
 abilities: {0: "No Ability"},
