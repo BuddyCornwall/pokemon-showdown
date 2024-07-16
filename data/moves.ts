@@ -3005,7 +3005,7 @@ const possibleTypes = ["Normal", "Fairy", "Bug", "Dark", "Dragon", "Electric", "
 let randomType = possibleTypes[Math.floor(Math.random() * possibleTypes.length)];
 target.setType(randomType);
 this.add('-start', target, 'typechange', randomType);
-}
+},
 target: "allAdjacent",
 type: "Fairy",
 },
