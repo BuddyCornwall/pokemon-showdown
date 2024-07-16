@@ -6110,6 +6110,7 @@ this.add('-start', source, 'typechange', move.name, '[from] item: Gold Leaf');
 this.effectState.used = true;
 source.takeItem();
 }
+}
 },
 
 heartscale: {
