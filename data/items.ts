@@ -6088,14 +6088,13 @@ return this.chainModify(2);
 
 fishhook: {
 name: "Fish Hook",
-onFoeTrapPokemon(pokemon) {
-if (pokemon.hasType('Water')) {
-pokemon.tryTrap(true);
-}
+onStart(pokemon) {
+pokemon.trapped = true;
 },
-onFoeMaybeTrapPokemon(pokemon, source) {
-if (source.hasItem('fishhook') && pokemon.hasType('Water')) {
-pokemon.maybeTrapped = true;
+onFoeSwitchOut(pokemon) {
+if (pokemon.hasType('Water')) {
+this.add('-activate', pokemon, 'item: Fish Hook');
+return false;
 }
 },
 },
@@ -6106,7 +6105,6 @@ onPrepareHit(source, target, move) {
 if (move.type === 'Grass' && !this.effectState.used) {
 this.add('-item', source, 'Gold Leaf');
 move.type = 'Steel';
-this.add('-start', source, 'typechange', move.name, '[from] item: Gold Leaf');
 this.effectState.used = true;
 source.takeItem();
 }
