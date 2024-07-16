@@ -571,7 +571,39 @@ onResidual(pokemon) {
 if (pokemon.hasType('Poison')) {
 this.heal(pokemon.baseMaxhp / 13.34);
 } else {
-this.damage(pokemon.baseMaxhp / 3);
+this.damage(pokemon.baseMaxhp / 4);
+}
+},
+},
+
+superspicycurry: {
+name: "Superspicy Curry",
+fling: {
+basePower: 30,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+if (pokemon.hasType('fire')) {
+this.heal(pokemon.baseMaxhp / 13.34);
+} else {
+this.damage(pokemon.baseMaxhp / 4);
+}
+},
+},
+
+benjerryum: {
+name: "BenJerryum",
+fling: {
+basePower: 30,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+if (pokemon.hasType('ice')) {
+this.heal(pokemon.baseMaxhp / 13.34);
+} else {
+this.damage(pokemon.baseMaxhp / 4);
 }
 },
 },
@@ -5151,22 +5183,6 @@ basePower: 30,
 },
 },
 
-superspicycurry: {
-name: "Superspicy Curry",
-fling: {
-basePower: 30,
-},
-onResidualOrder: 5,
-onResidualSubOrder: 4,
-onResidual(pokemon) {
-if (pokemon.hasType('fire')) {
-this.heal(pokemon.baseMaxhp / 13.34);
-} else {
-this.damage(pokemon.baseMaxhp / 3);
-}
-},
-},
-
 swampertite: {
 name: "Swampertite",
 megaStone: "Swampert-Mega",
@@ -6056,25 +6072,14 @@ foeActive.addVolatile('confusion');
 
 yellowcard: {
 name: "Yellow Card",
-onStart: function (pokemon) {
-pokemon.itemUsageCount = 1;
-},
-onBeforeMove: function (attacker, defender, move) {
-if (defender.side !== attacker.side && !defender.volatiles['yellowcard']) {
-defender.addVolatile('yellowcard');
-this.add('-message', defender.name + ' was shown a Yellow Card and cannot attack this turn!');
-if (defender.item) {
-let item = this.dex.items.get(defender.item);
-if (item) {
-this.add('-enditem', defender, item, '[consumed]');
+onDamagingHit(damage, target, source, move) {
+if (!target.itemState.used) {
+this.add('-item', target, 'Yellow Card');
+this.boost({atk: -1, def: -1, spa: -1, spd: -1, spe: -1}, source, target, null, true);
+target.itemState.used = true;
+target.takeItem(); // Remove the item after it has been used
 }
 }
-defender.setItem('');
-defender.itemUsageCount = 0;
-return false;
-}
-},
-desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
 scorchingsandsstone: {
