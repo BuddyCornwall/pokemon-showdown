@@ -6095,15 +6095,24 @@ return false;
 
 goldleaf: {
 name: "Gold Leaf",
-onStart(item) {
-item.used = false;
 },
-onHit(source, target, move) {
-if (move.type === 'Grass' && !this.effectState.used) {
-this.add('-item', source, 'Gold Leaf');
-move.type = 'Steel';
-this.effectState.used = true;
-source.takeItem();
+
+honorofkanto: {
+name: "Honor of Kanto",
+onModifySpDPriority: 1,
+onModifySpD(spd, pokemon) {
+if (this.dex.getSpecies(pokemon.species).gen <= 1) {
+return this.chainModify(1.25);
+}
+},
+},
+
+honorofjohto: {
+name: "Honor of Johto",
+onModifyDefPriority: 1,
+onModifyDef(def, pokemon) {
+if (this.dex.getSpecies(pokemon.species).gen === 2) {
+return this.chainModify(1.25);
 }
 },
 },
