@@ -18380,7 +18380,6 @@ secondary: {
 chance: 50,
 status: 'tox',
 },
-secondary: null,
 target: "any",
 type: "Grass",
 },
