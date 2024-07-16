@@ -6044,14 +6044,6 @@ target.usedCapsule = true;
 
 voodoodoll: {
 name: "Voodoo Doll",
-onDamagingHit(damage, target, source, move) {
-const reflectedDamage = Math.floor(damage / 3);
-if (reflectedDamage > 0) {
-this.damage(reflectedDamage, source, target);
-this.add('-item', target, 'Voodoo Doll');
-this.add('-damage', source, `${reflectedDamage} HP [from Voodoo Doll]`);
-}
-},
 },
 
 earbuds: {
