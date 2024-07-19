@@ -35,7 +35,7 @@ ruleset: ['Picked Team Size = 1','Max Move Count = 8', 'Exact HP Mod', 'Item Cla
 name: "[MBSFBC] BUDPOW",
 mod: 'gen9',
 gameType: 'singles',
-ruleset: ['Max Move Count = 16', 'Exact HP Mod', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
+ruleset: ['Max Move Count = 16', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
 },
 
 {
