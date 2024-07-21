@@ -13583,7 +13583,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacent",
