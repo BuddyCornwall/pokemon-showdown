@@ -10054,7 +10054,7 @@ pp: 0.625,
 priority: 1,
 flags: {sound: 1, protect: 1, mirror: 1,},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacentFoes",
