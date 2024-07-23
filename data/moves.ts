@@ -1108,7 +1108,7 @@ priorityChargeCallback(pokemon) {
 pokemon.addVolatile('beakblast');
 },
 condition: {
-duration: 2,
+duration: 3,
 onStart(pokemon) {
 this.add('-singleturn', pokemon, 'move: Beak Blast');
 },
@@ -2126,7 +2126,7 @@ priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, distance: 1, bypasssub: 1},
 noSketch: true,
 secondary: {
-chance: 75,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2482,7 +2482,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2498,7 +2498,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 66,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2972,7 +2972,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacentFoes",
@@ -3549,7 +3549,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 onHit(target, source) {
 const result = this.random(3);
 if (result === 0) {
@@ -3879,7 +3879,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondary: {
-chance: 75,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -6057,7 +6057,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'slp',
 },
 target: "any",
@@ -6399,7 +6399,7 @@ category: "Physical",
 name: "Gyro Ball",
 pp: 1.25,
 priority: 0,
-flags: {bullet: 1, contact: 1, protect: 1, mirror: 1},
+flags: {contact: 1, protect: 1, mirror: 1},
 secondary: null,
 target: "any",
 type: "Steel",
@@ -7472,7 +7472,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 75,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -8056,7 +8056,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -8241,7 +8241,7 @@ this.add('-end', pokemon, 'Attract', '[silent]');
 onTryImmunity(target, source) {
 return true;
 },
-chance: 75,
+chance: 50,
 status: 'slp',
 secondary: null,
 target: "any",
@@ -9793,14 +9793,14 @@ type: "Grass",
 
 neverendingnightmare: {
 accuracy: 95,
-basePower: 45,
+basePower: 55,
 category: "Special",
 name: "Never Ending Nightmare",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacentFoes",
@@ -10752,7 +10752,7 @@ category: "Special",
 name: "Powder",
 pp: 0.625,
 priority: 4,
-flags: {bullet: 1, protect: 1, mirror: 1, allyanim: 1},
+flags: {protect: 1, mirror: 1, allyanim: 1},
 critRatio: 2,
 secondary: {
 chance: 100,
@@ -11491,7 +11491,7 @@ category: "Physical",
 name: "Pyro Ball",
 pp: 0.625,
 priority: 0,
-flags: {protect: 1, mirror: 1, defrost: 1, bullet: 1},
+flags: {protect: 1, mirror: 1, defrost: 1},
 thawsTarget: true,
 secondary: {
 chance: 25,
@@ -13153,7 +13153,7 @@ category: "Physical",
 name: "Shattered Psyche",
 pp: 0.625,
 priority: 0,
-flags: {bullet: 1, protect: 1, mirror: 1},
+flags: {protect: 1, mirror: 1},
 secondaries: [
 {
 chance: 33,
@@ -14096,7 +14096,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'snow',
 secondary: null,
-target: "all",
+target: "any",
 type: "Ice",
 },
 
@@ -14318,26 +14318,16 @@ type: "Psychic",
 
 spicyextract: {
 accuracy: 95,
-basePower: 0,
-category: "Status",
+basePower: 75,
+category: "Physical",
 name: "Spicy Extract",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
-boosts: {
-chance: 75,
-atk: 2,
-spa: 2,
-spe: 1,
-spd: -2,
-def: -2,
-evasion: -2
+onEffectiveness(typeMod, target, type) {
+if (type === 'Fire') return 1;
 },
-secondary: {
-chance: 75,
-status: 'brn',
-},
-target: "self",
+target: "any",
 type: "Grass",
 },
 
@@ -14648,7 +14638,7 @@ boosts: {
 spa: -1,
 },
 },
-target: "allAdjacentFoes",
+target: "any",
 type: "Fairy",
 },
 
@@ -16644,14 +16634,17 @@ type: "Fairy",
 
 twister: {
 accuracy: 95,
-basePower: 35,
+basePower: 45,
 category: "Special",
 name: "Twister",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 critRatio: 2,
+secondary: {
+chance: 50,
 volatileStatus: 'flinch ',
+},
 target: "allAdjacentFoes",
 type: "Dragon",
 },
@@ -17443,7 +17436,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 75,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -18347,8 +18340,8 @@ name: "Techno Blast",
 pp: 0.625,
 priority: 0,
 flags: {hightech: 1, contact: 1, protect: 1, mirror: 1},
-onEffectiveness(typeMod, target, type) {
-if (type === 'Ghost') return 1;
+onEffectiveness(typeMod, target, type, move) {
+if (move.type === 'Normal' && type === 'Ghost') return 1;
 },
 secondary: null,
 target: "any",
@@ -18569,11 +18562,11 @@ target: "any",
 type: "Water",
 },
 
-icekick: {
+muckkick: {
 accuracy: 95,
 basePower: 75,
 category: "Physical",
-name: "Ice Kick",
+name: "Muckkick",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
@@ -18581,14 +18574,14 @@ thawsTarget: true,
 secondaries: [
 {
 chance: 33,
-status: 'frz',
+weather: 'Sandstorm',
 }, {
 chance: 33,
 volatileStatus: 'flinch ',
 },
 ],
 target: "any",
-type: "Ice",
+type: "Ground",
 },
 
 superkick: {
