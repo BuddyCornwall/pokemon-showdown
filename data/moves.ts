@@ -5552,7 +5552,7 @@ chance: 100,
 status: 'par',
 },
 },
-},
+}
 ],
 target: "any",
 type: "Ice",
