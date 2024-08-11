@@ -1407,16 +1407,13 @@ name: "Block",
 pp: 0.625,
 priority: 5,
 flags: {reflectable: 1, slow: 1, mirror: 1},
-secondaries: [
-{
+secondary: {
 onHit(target, source, move) {
-return target.addVolatile('trapped', source, move, 'trapper');
-}, {
+target.addVolatile('trapped', source, move, 'trapper');
+},
 self: {
 volatileStatus: 'protect',
 },
-},
-],
 },
 target: "any",
 type: "Normal",
