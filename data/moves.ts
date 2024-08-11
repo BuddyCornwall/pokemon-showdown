@@ -5536,24 +5536,23 @@ if (attacker.removeVolatile(move.id)) {
 return;
 }
 this.add('-prepare', attacker, move.name);
-this.boost({atk: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+this.boost({atk: 1, spe: 1, evasion: -2}, attacker, attacker, move);
 if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-return;
+return false;
 }
 attacker.addVolatile('twoturnmove', defender);
 return null;
 },
-secondaries: [
-{
-chance: 33,
-status: 'frz',
-}, {
-chance: 100,
-status: 'par',
-},
-},
+onHit(target) {
+if (target.hasType('Ice') && Math.random() < 0.33) {
+this.add('-status', target, 'freeze');
+target.setStatus('frz');
 }
-],
+if (Math.random() < 1) {
+this.add('-status', target, 'paralyze');
+target.setStatus('par');
+}
+},
 target: "any",
 type: "Ice",
 },
