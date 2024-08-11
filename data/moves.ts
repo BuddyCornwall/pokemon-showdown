@@ -4523,7 +4523,6 @@ pokemon.tryTrap();
 },
 },
 },
-secondary: null,
 target: "any",
 type: "Fairy",
 },
