@@ -7248,7 +7248,7 @@ accuracy: 53.2,
 basePower: 145,
 category: "Special",
 name: "Ice Burn",
-pp: 0.625,
+pp: 5,
 priority: 0,
 flags: {charge: 1, protect: 1, mirror: 1},
 onTryMove(attacker, defender, move) {
@@ -7256,24 +7256,23 @@ if (attacker.removeVolatile(move.id)) {
 return;
 }
 this.add('-prepare', attacker, move.name);
-this.boost({spa: 1, spe: 1, evasion: -2,}, attacker, attacker, move);
+this.boost({spa: 1, spe: 1, evasion: -2}, attacker, attacker, move);
 if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-return;
+return false;
 }
 attacker.addVolatile('twoturnmove', defender);
 return null;
 },
-secondaries: [
-{
-chance: 33,
-status: 'frz',
-}, {
-chance: 100,
-status: 'brn',
+onHit(target) {
+if (Math.random() < 0.33) {
+this.add('-status', target, 'freeze');
+target.setStatus('frz');
+}
+if (Math.random() < 1) {
+this.add('-status', target, 'burn');
+target.setStatus('brn');
+}
 },
-},
-},
-],
 target: "any",
 type: "Ice",
 },
