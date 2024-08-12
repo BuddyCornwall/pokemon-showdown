@@ -5872,24 +5872,14 @@ name: "Dawn",
 },
 
 ghostlygoodbye: {
-onFaint(pokemon) {
+onAfterFaint(pokemon) {
 if (pokemon.species.name === 'Ninjask') {
-let shedinja = this.getTemplate('Shedinja');
-let shedinjaAbility = 'wonderguard';
-this.add('message', `${pokemon.name} has transformed into Shedinja!`);
-pokemon.side.addSlotPokemon(this.addPokemon(shedinja, pokemon.position, pokemon.side));
-pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
-pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
-this.add('-ability', pokemon.side.active[pokemon.position], shedinjaAbility);
-pokemon.side.active[pokemon.position].setStats({
-hp: pokemon.side.active[pokemon.position].hp,
-});
-this.add('-heal', pokemon.side.active[pokemon.position], pokemon.side.active[pokemon.position].hp, '[from] ability: Ghostly Goodbye');
-pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
-this.add('-formechange', pokemon.side.active[pokemon.position], 'Shedinja');
+this.add('-message', `${pokemon.name} has transformed into Shedinja with Wonder Guard!`);
+pokemon.formeChange('Shedinja');
+pokemon.ability = 'wonderguard';
+this.add('-ability', pokemon, 'Wonder Guard');
 }
 },
-isPermanent: true,
 name: "Ghostly Goodbye",
 },
 
