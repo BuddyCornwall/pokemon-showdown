@@ -5871,6 +5871,28 @@ isPermanent: true,
 name: "Dawn",
 },
 
+ghostlygoodbye: {
+onFaint(pokemon) {
+if (pokemon.species.name === 'Ninjask') {
+let shedinja = this.getTemplate('Shedinja');
+let shedinjaAbility = 'wonderguard';
+this.add('message', `${pokemon.name} has transformed into Shedinja!`);
+pokemon.side.addSlotPokemon(this.addPokemon(shedinja, pokemon.position, pokemon.side));
+pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
+pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
+this.add('-ability', pokemon.side.active[pokemon.position], shedinjaAbility);
+pokemon.side.active[pokemon.position].setStats({
+hp: pokemon.side.active[pokemon.position].hp,
+});
+this.add('-heal', pokemon.side.active[pokemon.position], pokemon.side.active[pokemon.position].hp, '[from] ability: Ghostly Goodbye');
+pokemon.side.active[pokemon.position].setAbility(shedinjaAbility);
+this.add('-formechange', pokemon.side.active[pokemon.position], 'Shedinja');
+}
+},
+isPermanent: true,
+name: "Ghostly Goodbye",
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
