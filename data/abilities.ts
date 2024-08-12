@@ -5827,13 +5827,13 @@ pokemon.addVolatile('dusk');
 onResidualOrder: 28,
 onResidualSubOrder: 1,
 onResidual(pokemon) {
-if (pokemon.volatiles['dusk'] && pokemon.volatiles['dusk'].duration === 2) {
+if (pokemon.volatiles['dusk'] && pokemon.volatiles['dusk'].duration === 1) {
 this.add('-message', `${pokemon.name} is transforming!`);
-if (pokemon.species.id === 'lunatone') {
-pokemon.formeChange('solrock', this.effect, true);
+if (pokemon.species.id === 'solrock') {
+pokemon.formeChange('Lunatone', this.effect, true);
 pokemon.setAbility('dusk');
-} else if (pokemon.species.id === 'solrock') {
-pokemon.formeChange('lunatone', this.effect, true);
+} else if (pokemon.species.id === 'lunatone') {
+pokemon.formeChange('Solrock', this.effect, true);
 pokemon.setAbility('dusk');
 }
 this.add('-transform', pokemon, pokemon.getSpecies());
@@ -5843,7 +5843,6 @@ pokemon.addVolatile('dusk');
 },
 name: "Dusk",
 },
-
 
 dawn: {
 onStart(pokemon) {
