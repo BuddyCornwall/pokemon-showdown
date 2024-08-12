@@ -5845,32 +5845,31 @@ isPermanent: true,
 name: "Dusk",
 },
 
-
 dawn: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Dawn');
-pokemon.addVolatile('dawn');
-},
-onResidualOrder: 28,
-onResidualSubOrder: 1,
+onResidualOrder: 999,
 onResidual(pokemon) {
-if (pokemon.volatiles['dawn'] && pokemon.volatiles['dawn'].duration === 2) {
-this.add('-message', `${pokemon.name} is transforming!`);
-if (pokemon.species.id === 'solrock') {
-pokemon.formeChange('lunatone', this.effect, true);
-pokemon.setAbility('dawn');
-} else if (pokemon.species.id === 'lunatone') {
-pokemon.formeChange('solrock', this.effect, true);
-pokemon.setAbility('dawn');
+if (!this.turn) return;
+const currentForm = pokemon.species.name;
+let targetForme;
+switch (currentForm) {
+case 'Lunatone':
+targetForme = 'Solrock';
+break;
+case 'Solrock':
+targetForme = 'Lunatone';
+break;
+default:
+targetForme = 'Lunatone'; // Default to Lunatone
+break;
 }
-this.add('-transform', pokemon, pokemon.getSpecies());
-pokemon.removeVolatile('dawn');
-pokemon.addVolatile('dawn');
+if (currentForm !== targetForme) {
+pokemon.formeChange(targetForme);
+this.add('-formechange', pokemon, targetForme);
 }
 },
+isPermanent: true,
 name: "Dawn",
 },
-
 
 axolargel: {
 onPreStart(pokemon) {
