@@ -5820,27 +5820,31 @@ name: "Slow Bros",
 },
 
 dusk: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Dusk');
-pokemon.addVolatile('dusk');
-},
-onResidualOrder: 28,
-onResidualSubOrder: 1,
+onResidualOrder: 999,
 onResidual(pokemon) {
-if (pokemon.volatiles['dusk'] && pokemon.volatiles['dusk'].duration === 1) {
-this.add('-message', `${pokemon.name} is transforming!`);
-if (pokemon.species.id === 'solrock') {
-pokemon.formeChange('Lunatone', this.effect);
-} else if (pokemon.species.id === 'lunatone') {
-pokemon.formeChange('Solrock', this.effect);
+if (!this.turn) return;
+const currentForm = pokemon.species.name;
+let targetForme;
+switch (currentForm) {
+case 'Solrock':
+targetForme = 'Lunatone';
+break;
+case 'Lunatone':
+targetForme = 'Solrock';
+break;
+default:
+targetForme = 'Solrock';
+break;
 }
-pokemon.setAbility('dusk');
-pokemon.removeVolatile('dusk');
-pokemon.addVolatile('dusk');
+if (currentForm !== targetForme) {
+pokemon.formeChange(targetForme);
+this.add('-formechange', pokemon, targetForme);
 }
 },
+isPermanent: true,
 name: "Dusk",
 },
+
 
 dawn: {
 onStart(pokemon) {
