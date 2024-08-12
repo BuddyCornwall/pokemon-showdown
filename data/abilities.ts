@@ -5872,11 +5872,11 @@ name: "Dawn",
 },
 
 ghostlygoodbye: {
-onAfterFaint(pokemon) {
-if (pokemon.species.name === 'Ninjask') {
-this.add('-message', `${pokemon.name} has transformed into Shedinja with Wonder Guard!`);
+onUpdate(pokemon) {
+if (pokemon.species.name === 'Ninjask' && pokemon.hp / pokemon.maxhp <= 0.10) {
+this.add('-message', `${pokemon.name} is transforming into Shedinja!`);
 pokemon.formeChange('Shedinja');
-pokemon.ability = 'wonderguard';
+pokemon.setAbility('wonderguard');
 this.add('-ability', pokemon, 'Wonder Guard');
 }
 },
