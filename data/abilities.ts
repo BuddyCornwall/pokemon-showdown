@@ -5819,9 +5819,57 @@ isPermanent: true,
 name: "Slow Bros",
 },
 
+dusk: {
+onStart(pokemon) {
+this.add('-ability', pokemon, 'Dusk');
+pokemon.addVolatile('dusk');
+},
+onResidualOrder: 28,
+onResidualSubOrder: 1,
+onResidual(pokemon) {
+if (pokemon.volatiles['dualtransform'] && pokemon.volatiles['dusk'].duration === 1) {
+this.add('-message', `${pokemon.name} is transforming!`);
+if (pokemon.species.id === 'lunatone') {
+pokemon.formeChange('solrock', this.effect, true);
+pokemon.setAbility('dusk');
+} else if (pokemon.species.id === 'solrock') {
+pokemon.formeChange('lunatone', this.effect, true);
+pokemon.setAbility('dualtransform');
+}
+this.add('-transform', pokemon, pokemon.getSpecies());
+}
+},
+onEnd(pokemon) {
+delete pokemon.volatiles['dusk'];
+},
+name: "Dusk",
+},
 
-
-
+dawn: {
+onStart(pokemon) {
+this.add('-ability', pokemon, 'Dawn');
+pokemon.addVolatile('dawn');
+},
+onResidualOrder: 28,
+onResidualSubOrder: 1,
+onResidual(pokemon) {
+if (pokemon.volatiles['dawn'] && pokemon.volatiles['dawn'].duration === 1) {
+this.add('-message', `${pokemon.name} is transforming!`);
+if (pokemon.species.id === 'solrock') {
+pokemon.formeChange('lunatone', this.effect, true);
+pokemon.setAbility('dawn');
+} else if (pokemon.species.id === 'lunatone') {
+pokemon.formeChange('solrock', this.effect, true);
+pokemon.setAbility('dawn');
+}
+this.add('-transform', pokemon, pokemon.getSpecies());
+}
+},
+onEnd(pokemon) {
+delete pokemon.volatiles['dawn'];
+},
+name: "Dawn",
+},
 
 axolargel: {
 onPreStart(pokemon) {
