@@ -1,4 +1,3 @@
-secondaries: [
 export const Moves: {[moveid: string]: MoveData} = {
 absorb: {
 accuracy: 95,
