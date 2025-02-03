@@ -1,6 +1,6 @@
 export const Formats: FormatList = [
 {
-section: "BUDPOW",
+section: "PGL",
 },
 {
 name: "[PGL: Singles] BUDPOW",
@@ -29,16 +29,10 @@ this.add('-message', `I choose you ${pokemon.name}!! `);
 },
 },
 
-{
-name: "[tristan] BUDPOW",
-mod: 'gen9',
-gameType: 'triples',
-ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
-onBeforeSwitchIn(pokemon) {
-this.add('-message', `I choose you ${pokemon.name}!! `);
-},
-},
 
+{
+section: "Cups",
+}
 {
 name: "[Gold Cup] BUDPOW",
 mod: 'gen9',
@@ -60,6 +54,16 @@ this.add('-message', `I choose you ${pokemon.name}!! `);
 },
 
 {
+name: "[tristan] BUDPOW",
+mod: 'gen9',
+gameType: 'triples',
+ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
+onBeforeSwitchIn(pokemon) {
+this.add('-message', `I choose you ${pokemon.name}!! `);
+},
+},
+
+{
 section: "S/V Singles",
 },
 {
@@ -73,33 +77,5 @@ mod: 'gen9',
 team: 'random',
 ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 },
-
-
-{
-    name: "[TRI*] BUDPOW (Rotation Mode)",
-    mod: 'gen9',
-    gameType: 'triples',
-    ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
-
-    onSwitch(pokemon) {
-        if (pokemon.side.active.length > 3) {
-            this.add('-message', `${pokemon.name} moves to the reserve slot.`);
-        }
-    },
-
-    onBeforeSwitchIn(pokemon) {
-        this.add('-message', `${pokemon.name} rotates into battle!`);
-    },
-
-    onModifyCanSwitch(source) {
-        if (source.side.active.length >= 3) {
-            this.add('-message', `${source.name} is rotating in freely!`);
-            return true; // Allows switch without using up a turn
-        }
-    },
-},
-
-
-
 
 ];
