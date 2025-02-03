@@ -6,13 +6,13 @@ export const Formats: FormatList = [
     name: "[PGL: Singles] BUDPOW",
     mod: 'gen9',
     gameType: 'singles',
-    ruleset: ['Picked Team Size = 3','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 3'],
+    ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
 },
 {
     name: "[PGL: Doubles] BUDPOW",
     mod: 'gen9',
     gameType: 'doubles',
-    ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
+    ruleset: ['Picked Team Size = 6','Max Move Count = 8', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 6', 'Max Team Size = 6'],
     onBeforeSwitchIn(pokemon) {
         this.add('-message', `I choose you ${pokemon.name}!! `);
     },
@@ -21,7 +21,7 @@ export const Formats: FormatList = [
     name: "[PGL: Trios] BUDPOW",
     mod: 'gen9',
     gameType: 'triples',
-    ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
+    ruleset: ['Picked Team Size = 8','Max Move Count = 8', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 8', 'Max Team Size = 8'],
     onBeforeSwitchIn(pokemon) {
         this.add('-message', `I choose you ${pokemon.name}!! `);
     },
@@ -33,7 +33,7 @@ export const Formats: FormatList = [
     name: "[Gold Cup] BUDPOW",
     mod: 'gen9',
     gameType: 'singles',
-    ruleset: ['Picked Team Size = 1','Max Move Count = 8', 'Exact HP Mod', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 1', 'Max Team Size = 1'],
+    ruleset: ['Picked Team Size = 1','Max Move Count = 8', 'Item Clause', 'Cancel Mod', 'VGC Timer', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 1', 'Max Team Size = 1'],
     onBeforeSwitchIn(pokemon) {
         this.add('-message', `I choose you ${pokemon.name}!! `);
     },
@@ -42,16 +42,16 @@ export const Formats: FormatList = [
     name: "[MBSFBC] BUDPOW",
     mod: 'gen9',
     gameType: 'singles',
-    ruleset: ['Max Move Count = 16', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
+    ruleset: ['Max Move Count = 16', 'Cancel Mod', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 3', 'Max Team Size = 18'],
     onBeforeSwitchIn(pokemon) {
-        this.add('-message', `I choose you ${pokemon.name}!! `);
+    this.add('-message', `I choose you ${pokemon.name}!! `);
     },
 },
 {
-    name: "[tristan] BUDPOW",
+    name: "[Tristan] BUDPOW",
     mod: 'gen9',
     gameType: 'triples',
-    ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
+    ruleset: ['Max Move Count = 8', 'Cancel Mod', 'Dynamax Clause'],
     onBeforeSwitchIn(pokemon) {
         this.add('-message', `I choose you ${pokemon.name}!! `);
     },
@@ -70,4 +70,18 @@ export const Formats: FormatList = [
     team: 'random',
     ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 },
+
+{
+  name: "[Battle Royale] BUDPOW",
+  mod: 'gen9',
+  gameType: 'freeforall',
+  ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
+  onSwitchIn(pokemon) {
+    this.add('-message', `${pokemon.name} enters the fray!`);
+  },
+  onBeforeSwitchIn(pokemon) {
+    this.add('-message', `I choose you ${pokemon.name}!!`);
+  },
+
+}
 ];
