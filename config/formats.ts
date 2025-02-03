@@ -53,4 +53,25 @@ team: 'random',
 ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 },
 
+
+    {
+        name: "[Gen 9] Rotation 4v4",
+        desc: "4 Pokémon per team, but only 3 are active at a time. The 4th Pokémon can be rotated in freely without consuming a turn.",
+        gameType: "doubles",
+        teamLength: {
+            battle: 4, // Forces 4 Pokémon per team
+        },
+        ruleset: ['Standard Doubles'],
+        onSwitch(pokemon) {
+            if (pokemon.side.active.length > 3) {
+                this.add('-message', `${pokemon.name} moves to the reserve slot.`);
+            }
+        },
+        onBeforeSwitch(pokemon) {
+            this.add('-message', `${pokemon.name} rotates into battle!`);
+            return false; // Prevents switch turn penalty
+        },
+    },
+
+
 ];
