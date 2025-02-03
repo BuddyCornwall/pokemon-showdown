@@ -59,7 +59,6 @@ ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel M
         desc: "4 Pokémon per team, but only 3 are active at a time. The 4th Pokémon can be rotated in freely without consuming a turn.",
         gameType: "doubles",
         ruleset: [
-            'Standard Doubles',
             'Min Team Size = 4',
             'Max Team Size = 4',
             'Picked Team Size = 4',
