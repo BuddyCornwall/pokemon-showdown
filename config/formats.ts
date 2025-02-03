@@ -54,32 +54,30 @@ ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel M
 },
 
 
-    {
-        name: "[Gen 9] Rotation 4v4",
-        desc: "4 Pokémon per team, but only 3 are active at a time. The 4th Pokémon can be rotated in freely without consuming a turn.",
-        gameType: "doubles",
-        ruleset: [
-            'Min Team Size = 4',
-            'Max Team Size = 4',
-            'Picked Team Size = 4',
-        ],
+{
+    name: "[TRI*] BUDPOW (Rotation Mode)",
+    mod: 'gen9',
+    gameType: 'triples',
+    ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
 
-        onValidateTeam(team) {
-            if (team.length !== 4) {
-                return [`Your team must have exactly 4 Pokémon.`];
-            }
-        },
-
-        onSwitch(pokemon) {
-            if (pokemon.side.active.length > 3) {
-                this.add('-message', `${pokemon.name} moves to the reserve slot.`);
-            }
-        },
-
-        onBeforeSwitchIn(pokemon) {
-            this.add('-message', `${pokemon.name} rotates into battle!`);
-        },
+    onSwitch(pokemon) {
+        if (pokemon.side.active.length > 3) {
+            this.add('-message', `${pokemon.name} moves to the reserve slot.`);
+        }
     },
+
+    onBeforeSwitchIn(pokemon) {
+        this.add('-message', `${pokemon.name} rotates into battle!`);
+    },
+
+    onModifyCanSwitch(source) {
+        if (source.side.active.length >= 3) {
+            this.add('-message', `${source.name} is rotating in freely!`);
+            return true; // Allows switch without using up a turn
+        }
+    },
+},
+
 
 
 
