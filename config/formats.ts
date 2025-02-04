@@ -76,12 +76,5 @@ export const Formats: FormatList = [
   mod: 'gen9',
   gameType: 'freeforall',
   ruleset: ['Max Move Count = 8', 'Exact HP Mod', 'Cancel Mod', 'Dynamax Clause'],
-  onSwitchIn(pokemon) {
-    this.add('-message', `${pokemon.name} enters the fray!`);
-  },
-  onBeforeSwitchIn(pokemon) {
-    this.add('-message', `I choose you ${pokemon.name}!!`);
-  },
-
 }
 ];
