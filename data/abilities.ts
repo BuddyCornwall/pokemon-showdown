@@ -3720,7 +3720,12 @@ onStart(pokemon) {
 this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
 },
 onTerrainChange(pokemon) {
-if (this.field.isTerrain('mistyterrain')) {
+if (
+this.field.isTerrain('electricterrain') ||
+this.field.isTerrain('grassyterrain') ||
+this.field.isTerrain('mistyterrain') ||
+this.field.isTerrain('psychicterrain')
+) {
 pokemon.addVolatile('quarkdrive');
 } else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
 pokemon.removeVolatile('quarkdrive');
