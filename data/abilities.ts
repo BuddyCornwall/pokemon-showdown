@@ -4520,11 +4520,7 @@ boost.def = 1;
 } else {
 boost.spd = 1;
 }
-},
-condition: {
-onStart(pokemon) {
-this.add('-start', pokemon, 'Enduring Stamina');
-},
+this.boost(boost, target, target, this.dex.abilities.get('enduringstamina'));
 },
 name: "Enduring Stamina",
 },
