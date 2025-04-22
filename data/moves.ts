@@ -5374,35 +5374,34 @@ accuracy: 97,
 basePower: 0,
 category: "Status",
 name: "Focus Energy",
-pp: 0.625,
-priority: -1,
-flags: {slow: 1, snatch: 1},
+pp: 5,
+priority: 0,
+flags: {snatch: 1},
 volatileStatus: 'focusenergy',
 condition: {
-onStart(target, source, effect) {
-if (effect?.id === 'zpower') {
-this.add('-start', target, 'move: Focus Energy', '[zeffect]');
-} else if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
-this.add('-start', target, 'move: Focus Energy', '[silent]');
-} else {
+onStart(target) {
 this.add('-start', target, 'move: Focus Energy');
-}
 },
 onModifyCritRatio(critRatio) {
-return critRatio + 1.5;
+return critRatio + 2;
 },
 },
-boosts: {
-evasion: -2,
-atk: 1.5,
-spa: 1.5,
-def: -1,
-spd: -1,
+onHit(pokemon) {
+const atk = pokemon.getStat('atk', false, true);
+const spa = pokemon.getStat('spa', false, true);
+const boost: SparseBoostsTable = {spe: 1, def: -1, spd: -1};
+if (atk >= spa) {
+boost.atk = 1;
+} else {
+boost.spa = 1;
+}
+this.boost(boost, pokemon);
 },
 secondary: null,
 target: "self",
 type: "Normal",
 },
+
 
 focuspunch: {
 accuracy: 85,
