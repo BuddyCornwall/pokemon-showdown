@@ -5993,8 +5993,16 @@ this.add('-message', 'Flicker can do this all day.');
 this.add('-ability', pokemon, 'Enduring Stamina Stamina');
 this.add('-ability', pokemon, 'Steely Spirit');
 },
-onDamagingHit(damage, target, source, effect) {
-this.boost({def: 1.5});
+onDamagingHit(damage, target, source, move) {
+const def = target.getStat('def', false, true);
+const spd = target.getStat('spd', false, true);
+const boost: SparseBoostsTable = {};
+if (def >= spd) {
+boost.def = 1;
+} else {
+boost.spd = 1;
+}
+this.boost(boost, target, target, this.dex.abilities.get('flicker'));
 },
 onAllyBasePowerPriority: 22,
 onAllyBasePower(basePower, attacker, defender, move) {
@@ -6126,7 +6134,7 @@ name: "Jonsí",
 
 knievel: {
 onPreStart(pokemon) {
-this.add('-message', 'Knievel!');
+this.add('-message', 'Fury & focus surge through Kenivals veins!');
 this.add('-ability', pokemon, 'Tough Claws');
 this.add('-ability', pokemon, 'Kentaromiura');
 },
