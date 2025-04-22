@@ -4520,14 +4520,6 @@ boost.def = 1;
 } else {
 boost.spd = 1;
 }
-this.add('-ability', target, 'Enduring Stamina');
-this.add('-message', `${target.name} steadies its stance and becomes more resilient!`);
-this.boost(boost, target, target, this.dex.abilities.get('enduringstamina'));
-},
-condition: {
-onStart(pokemon) {
-this.add('-start', pokemon, 'Enduring Stamina');
-},
 },
 name: "Enduring Stamina",
 },
