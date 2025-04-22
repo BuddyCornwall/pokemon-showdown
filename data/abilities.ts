@@ -4511,9 +4511,6 @@ name: "Stalwart",
 },
 
 enduringstamina: {
-onStart(pokemon) {
-pokemon.addVolatile('enduringstamina');
-},
 onDamagingHit(damage, target, source, move) {
 const def = target.getStat('def', false, true);
 const spd = target.getStat('spd', false, true);
