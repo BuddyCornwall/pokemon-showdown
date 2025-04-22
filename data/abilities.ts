@@ -3715,72 +3715,24 @@ name: "Purifying Salt",
 },
 
 quarkdrive: {
-  onStart(pokemon) {
-    // Do nothing on start, will trigger during terrain change
-  },
-  onTerrainChange(pokemon) {
-    if (pokemon.transformed) return;
-
-    // If the terrain is one of the valid types, activate Quark Drive
-    if (this.field.isTerrain('electricterrain', 'mistyterrain', 'psychicterrain', 'grassyterrain')) {
-      // Determine the best stat to boost
-      this.effectState.bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
-        if (pokemon.getStat(stat) > pokemon.getStat(best)) return stat;
-        return best;
-      }, 'spe'); // Default to 'spe' if all stats are equal
-
-      // Apply the volatile status to the Pokémon and trigger the boost
-      pokemon.addVolatile('quarkdrive');
-      this.add('-activate', pokemon, 'ability: Quark Drive');
-      this.add('-start', pokemon, 'quarkdrive' + this.effectState.bestStat);
-    } else {
-      // If terrain is no longer one of the valid types, remove the volatile status
-      if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
-        pokemon.removeVolatile('quarkdrive');
-      }
-    }
-  },
-  onEnd(pokemon) {
-    delete pokemon.volatiles['quarkdrive'];
-    this.add('-end', pokemon, 'Quark Drive', '[silent]');
-  },
-  condition: {
-    noCopy: true,
-    onStart(pokemon) {
-      // This method should only get triggered if the terrain is active and the Pokémon is in a valid terrain
-    },
-    onModifyAtkPriority: 5,
-    onModifyAtk(atk, source, target, move) {
-      if (this.effectState.bestStat !== 'atk') return atk;
-      this.debug('Quark Drive atk boost');
-      return this.chainModify([150, 100]);
-    },
-    onModifyDefPriority: 6,
-    onModifyDef(def, target, source, move) {
-      if (this.effectState.bestStat !== 'def') return def;
-      this.debug('Quark Drive def boost');
-      return this.chainModify([150, 100]);
-    },
-    onModifySpAPriority: 5,
-    onModifySpA(spa, source, target, move) {
-      if (this.effectState.bestStat !== 'spa') return spa;
-      this.debug('Quark Drive spa boost');
-      return this.chainModify([150, 100]);
-    },
-    onModifySpDPriority: 6,
-    onModifySpD(spd, target, source, move) {
-      if (this.effectState.bestStat !== 'spd') return spd;
-      this.debug('Quark Drive spd boost');
-      return this.chainModify([150, 100]);
-    },
-    onModifySpe(spe, pokemon) {
-      if (this.effectState.bestStat !== 'spe') return spe;
-      this.debug('Quark Drive spe boost');
-      return this.chainModify([150, 100]);
-    },
-  },
-  isPermanent: true,
-  name: "Quark Drive",
+onStart(pokemon) {
+if (this.field.isTerrain('electricterrain', 'mistyterrain', 'psychicterrain', 'grassyterrain')) {
+const stats = ['atk', 'spa', 'def', 'spd', 'spe'];
+let bestStat = stats.reduce((best, stat) => pokemon.getStat(stat) > pokemon.getStat(best) ? stat : best, 'spe');
+this.boost({ [bestStat]: 1 }, pokemon);
+this.add('-activate', pokemon, 'ability: Quark Drive');
+}
+},
+onTerrainChange(pokemon) {
+if (this.field.isTerrain('electricterrain', 'mistyterrain', 'psychicterrain', 'grassyterrain')) {
+const stats = ['atk', 'spa', 'def', 'spd', 'spe'];
+let bestStat = stats.reduce((best, stat) => pokemon.getStat(stat) > pokemon.getStat(best) ? stat : best, 'spe');
+this.boost({ [bestStat]: 1 }, pokemon);
+this.add('-activate', pokemon, 'ability: Quark Drive');
+}
+},
+name: "Quark Drive",
+isPermanent: true,
 },
 
 queenlymajesty: {
