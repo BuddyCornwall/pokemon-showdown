@@ -3720,7 +3720,7 @@ this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
 },
 onTerrainChange(pokemon) {
 if (pokemon.transformed) return;
-if (this.field.isTerrain('electricterrain','mistyterrain','psychicterrain','grassyterrain')) {
+if (this.field.isTerrain('electricterrain', 'mistyterrain', 'psychicterrain', 'grassyterrain')) {
 pokemon.addVolatile('quarkdrive');
 } else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
 pokemon.removeVolatile('quarkdrive');
@@ -3740,44 +3740,42 @@ this.add('-activate', pokemon, 'ability: Quark Drive', '[fromitem]');
 this.add('-activate', pokemon, 'ability: Quark Drive');
 }
 this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'quarkdrive' + this.effectState.bestStat);
+this.add('-start', pokemon, `quarkdrive${this.effectState.bestStat}`);
 },
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
 this.debug('Quark Drive atk boost');
-return this.chainModify([150,100]);
+return this.chainModify([150, 100]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
 if (this.effectState.bestStat !== 'def') return;
 this.debug('Quark Drive def boost');
-return this.chainModify([150,100]);
+return this.chainModify([150, 100]);
 },
 onModifySpAPriority: 5,
-onModifySpA(relayVar, source, target, move) {
+onModifySpA(spa, source, target, move) {
 if (this.effectState.bestStat !== 'spa') return;
 this.debug('Quark Drive spa boost');
-return this.chainModify([150,100]);
+return this.chainModify([150, 100]);
 },
 onModifySpDPriority: 6,
-onModifySpD(relayVar, target, source, move) {
+onModifySpD(spd, target, source, move) {
 if (this.effectState.bestStat !== 'spd') return;
 this.debug('Quark Drive spd boost');
-return this.chainModify([150,100]);
+return this.chainModify([150, 100]);
 },
 onModifySpe(spe, pokemon) {
 if (this.effectState.bestStat !== 'spe') return;
 this.debug('Quark Drive spe boost');
-return this.chainModify([150,100]);
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Quark Drive');
+return this.chainModify([150, 100]);
 },
 },
 isPermanent: true,
 name: "Quark Drive",
 },
+
 
 queenlymajesty: {
 onFoeTryMove(target, source, move) {
