@@ -5742,54 +5742,6 @@ this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
 name: "Destiny's Gambit",
 },
 
-venturara: {
-onImmunity: function (status, pokemon) {
-if (status === 'bleeding') return false;
-},
-onModifyDamage: function (damage, move, pokemon) {
-if (move.status === 'bleeding') {
-return damage * 0.5;
-}
-return damage;
-},
-},
-
-concussiveshield: {
-onImmunity: function (status, pokemon) {
-if (status === 'confusion') return false;
-},
-onModifyDamage: function (damage, move, pokemon) {
-if (move.status === 'confusion') {
-return damage * 0.5;
-}
-return damage;
-},
-},
-
-innerfocus: {
-onImmunity: function (status, pokemon) {
-if (status === 'flinch') return false;
-},
-onModifyDamage: function (damage, move, pokemon) {
-if (move.status === 'flinch') {
-return damage * 0.5;
-}
-return damage;
-},
-},
-
-escapeartistsneverdie: {
-onImmunity: function (status, pokemon) {
-if (status === 'partiallytrapped') return false;
-},
-onModifyDamage: function (damage, move, pokemon) {
-if (move.status === 'partiallytrapped') {
-return damage * 0.5;
-}
-return damage;
-},
-},
-
 rotombola: {
 onResidualOrder: 999,
 onResidual(pokemon) {
