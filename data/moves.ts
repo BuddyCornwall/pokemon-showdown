@@ -1421,15 +1421,15 @@ type: "Normal",
 
 blueflare: {
 accuracy: 85,
-basePower: 95,
+basePower: 75,
 category: "Special",
 name: "Blue Flare",
-pp: 0.625,
+pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 39,
+chance: 53,
 status: 'brn',
 },
 target: "any",
@@ -1566,7 +1566,6 @@ type: "Normal",
 bounce: {
 accuracy: 85,
 basePower: 75,
-damage: 85,
 category: "Physical",
 name: "Bounce",
 pp: 1.25,
@@ -1574,14 +1573,10 @@ priority: 0,
 flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
 recoil: [25, 100],
 onTryMove(attacker, defender, move) {
-if (attacker.removeVolatile(move.id)) {
-return;
-}
+if (attacker.removeVolatile(move.id)) return;
 this.add('-prepare', attacker, move.name);
-this.boost({spe: 1, evasion: -2,}, attacker, attacker, move);
-if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-return;
-}
+this.boost({spe: 1, evasion: -2}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) return;
 attacker.addVolatile('twoturnmove', defender);
 return null;
 },
@@ -1603,9 +1598,22 @@ secondary: {
 chance: 53,
 status: 'par',
 },
+onModifyMove(move, attacker, defender) {
+// Dynamically set to use the higher of atk or spa
+if (attacker.getStat('atk', false, true) >= attacker.getStat('spa', false, true)) {
+move.overrideOffensiveStat = 'atk';
+move.category = 'Physical';
+} else {
+move.overrideOffensiveStat = 'spa';
+move.category = 'Special';
+}
+},
 target: "any",
 type: "Flying",
 },
+
+
+
 
 branchpoke: {
 accuracy: 95,
