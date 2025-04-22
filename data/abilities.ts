@@ -2260,6 +2260,20 @@ this.damage(target.getUndynamaxedHP(damage), source, target);
 },
 },
 
+innerfocus: {
+onTryAddVolatile(status, pokemon) {
+if (status.id === 'flinch') return null;
+},
+onTryBoost(boost, target, source, effect) {
+if (effect.name === 'Intimidate' && boost.atk) {
+delete boost.atk;
+this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
+}
+},
+isBreakable: true,
+name: "Inner Focus",
+},
+
 insomnia: {
 onUpdate(pokemon) {
 if (pokemon.status === 'slp') {
@@ -5740,6 +5754,34 @@ this.boost({[randomStat]: 1.5}, pokemon);
 this.damage(pokemon.maxhp * randomHP, pokemon, pokemon);
 },
 name: "Destiny's Gambit",
+},
+
+venturara: {
+onPreStart(pokemon) {
+this.add('-message', 'aint got time to bleed.');
+},
+onUpdate(pokemon) {
+if (pokemon.volatiles['bleeding']) {
+this.add('-activate', pokemon, 'ability: Venturara');
+pokemon.removeVolatile('bleeding');
+}
+},
+onTryAddVolatile(status, pokemon) {
+if (status.id === 'bleeding') return null;
+},
+onHit(target, source, move) {
+if (move?.volatileStatus === 'bleeding') {
+this.add('-immune', target, 'bleeding', '[from] ability: Venturara');
+}
+},
+onTryBoost(boost, target, source, effect) {
+if (effect.name === 'Intimidate' && boost.atk) {
+delete boost.atk;
+this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of] ' + target);
+}
+},
+isBreakable: true,
+name: "Venturara",
 },
 
 rotombola: {
