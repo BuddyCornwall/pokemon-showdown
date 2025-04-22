@@ -5402,7 +5402,6 @@ target: "self",
 type: "Normal",
 },
 
-
 focuspunch: {
 accuracy: 85,
 basePower: 85,
