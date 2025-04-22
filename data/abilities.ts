@@ -2260,20 +2260,6 @@ this.damage(target.getUndynamaxedHP(damage), source, target);
 },
 },
 
-innerfocus: {
-onTryAddVolatile(status, pokemon) {
-if (status.id === 'flinch') return null;
-},
-onTryBoost(boost, target, source, effect) {
-if (effect.name === 'Intimidate' && boost.atk) {
-delete boost.atk;
-this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
-}
-},
-isBreakable: true,
-name: "Inner Focus",
-},
-
 insomnia: {
 onUpdate(pokemon) {
 if (pokemon.status === 'slp') {
@@ -5757,31 +5743,51 @@ name: "Destiny's Gambit",
 },
 
 venturara: {
-onPreStart(pokemon) {
-this.add('-message', 'aint got time to bleed.');
+onImmunity: function (status, pokemon) {
+if (status === 'bleeding') return false;
 },
-onUpdate(pokemon) {
-if (pokemon.volatiles['bleeding']) {
-this.add('-activate', pokemon, 'ability: Venturara');
-pokemon.removeVolatile('bleeding');
+onModifyDamage: function (damage, move, pokemon) {
+if (move.status === 'bleeding') {
+return damage * 0.5;
 }
+return damage;
 },
-onTryAddVolatile(status, pokemon) {
-if (status.id === 'bleeding') return null;
 },
-onHit(target, source, move) {
-if (move?.volatileStatus === 'bleeding') {
-this.add('-immune', target, 'bleeding', '[from] ability: Venturara');
+
+concussiveshield: {
+onImmunity: function (status, pokemon) {
+if (status === 'confusion') return false;
+},
+onModifyDamage: function (damage, move, pokemon) {
+if (move.status === 'confusion') {
+return damage * 0.5;
 }
+return damage;
 },
-onTryBoost(boost, target, source, effect) {
-if (effect.name === 'Intimidate' && boost.atk) {
-delete boost.atk;
-this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Venturara', '[of] ' + target);
+},
+
+innerfocus: {
+onImmunity: function (status, pokemon) {
+if (status === 'flinch') return false;
+},
+onModifyDamage: function (damage, move, pokemon) {
+if (move.status === 'flinch') {
+return damage * 0.5;
 }
+return damage;
 },
-isBreakable: true,
-name: "Venturara",
+},
+
+escapeartistsneverdie: {
+onImmunity: function (status, pokemon) {
+if (status === 'partiallytrapped') return false;
+},
+onModifyDamage: function (damage, move, pokemon) {
+if (move.status === 'partiallytrapped') {
+return damage * 0.5;
+}
+return damage;
+},
 },
 
 rotombola: {
