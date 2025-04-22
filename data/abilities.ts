@@ -3714,7 +3714,14 @@ isBreakable: true,
 name: "Purifying Salt",
 },
 
-atile('quarkdrive');
+quarkdrive: {
+onSwitchInPriority: -2,
+onStart(pokemon) {
+this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+},
+onTerrainChange(pokemon) {
+if (this.field.terrain) {
+pokemon.addVolatile('quarkdrive');
 } else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
 pokemon.removeVolatile('quarkdrive');
 }
@@ -3768,15 +3775,9 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Quark Drive');
 },
 },
-onTerrainChange(terrain, pokemon) {
-this.add('-activate', pokemon, 'ability: Quark Drive', '[fromterrain]');
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'quarkdrive' + this.effectState.bestStat);
-},
 flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 name: "Quark Drive",
-
-
+}
 
 queenlymajesty: {
 onFoeTryMove(target, source, move) {
