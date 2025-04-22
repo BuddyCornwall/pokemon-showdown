@@ -3720,7 +3720,7 @@ onStart(pokemon) {
 this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
 },
 onTerrainChange(pokemon) {
-if (this.field.isTerrain('electricterrain')) {
+if (this.field.isTerrain('electricterrain','grassyterrain','mistyterrain','psychicterrain')) {
 pokemon.addVolatile('quarkdrive');
 } else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
 pokemon.removeVolatile('quarkdrive');
@@ -3775,10 +3775,7 @@ onEnd(pokemon) {
 this.add('-end', pokemon, 'Quark Drive');
 },
 },
-flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 name: "Quark Drive",
-rating: 3,
-num: 282,
 },
 
 queenlymajesty: {
