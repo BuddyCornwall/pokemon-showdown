@@ -4521,6 +4521,11 @@ boost.def = 1;
 boost.spd = 1;
 }
 },
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Enduring Stamina');
+},
+},
 name: "Enduring Stamina",
 },
 
