@@ -886,14 +886,17 @@ this.hint("Court Change Sticky Web counts as lowering your own Speed, and Compet
 return;
 }
 let statsLowered = false;
-let i: BoostID;
-for (i in boost) {
+for (const i in boost) {
 if (boost[i]! < 0) {
 statsLowered = true;
+break;
 }
 }
 if (statsLowered) {
-this.boost({atk: 1, spa: 1}, target, target, null, false, true);
+const atk = target.getStat('atk', false, true);
+const spa = target.getStat('spa', false, true);
+const bestStat = atk >= spa ? 'atk' : 'spa';
+this.boost({ [bestStat]: 2 }, target, target, null, false, true);
 }
 },
 name: "Competitive",
