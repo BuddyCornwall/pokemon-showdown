@@ -4510,11 +4510,29 @@ move.tracksTarget = move.target !== 'scripted';
 name: "Stalwart",
 },
 
-stamina: {
-onDamagingHit(damage, target, source, effect) {
-this.boost({def: 1.5});
+enduringstamina: {
+onStart(pokemon) {
+pokemon.addVolatile('enduringstamina');
 },
-name: "Stamina",
+onDamagingHit(damage, target, source, move) {
+const def = target.getStat('def', false, true);
+const spd = target.getStat('spd', false, true);
+const boost: SparseBoostsTable = {};
+if (def >= spd) {
+boost.def = 1;
+} else {
+boost.spd = 1;
+}
+this.add('-ability', target, 'Enduring Stamina');
+this.add('-message', `${target.name} steadies its stance and becomes more resilient!`);
+this.boost(boost, target, target, this.dex.abilities.get('enduringstamina'));
+},
+condition: {
+onStart(pokemon) {
+this.add('-start', pokemon, 'Enduring Stamina');
+},
+},
+name: "Enduring Stamina",
 },
 
 punchdrunk: {
@@ -5982,7 +6000,7 @@ name: "BEAUTY",
 flicker: {
 onPreStart(pokemon) {
 this.add('-message', 'Flicker can do this all day.');
-this.add('-ability', pokemon, 'Stamina');
+this.add('-ability', pokemon, 'Enduring Stamina Stamina');
 this.add('-ability', pokemon, 'Steely Spirit');
 },
 onDamagingHit(damage, target, source, effect) {
