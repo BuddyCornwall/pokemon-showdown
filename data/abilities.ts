@@ -3739,35 +3739,53 @@ this.add('-activate', pokemon, 'ability: Quark Drive', '[fromitem]');
 } else {
 this.add('-activate', pokemon, 'ability: Quark Drive');
 }
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, `quarkdrive${this.effectState.bestStat}`);
 },
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
+const bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
+if (source.getStat(stat) > source.getStat(best)) return stat;
+return best;
+}, 'spe'); // Default to 'spe' if all stats are equal
+if (bestStat !== 'atk') return atk;
 this.debug('Quark Drive atk boost');
 return this.chainModify([150, 100]);
 },
 onModifyDefPriority: 6,
 onModifyDef(def, target, source, move) {
-if (this.effectState.bestStat !== 'def') return;
+const bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
+if (source.getStat(stat) > source.getStat(best)) return stat;
+return best;
+}, 'spe'); // Default to 'spe' if all stats are equal
+if (bestStat !== 'def') return def;
 this.debug('Quark Drive def boost');
 return this.chainModify([150, 100]);
 },
 onModifySpAPriority: 5,
 onModifySpA(spa, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
+const bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
+if (source.getStat(stat) > source.getStat(best)) return stat;
+return best;
+}, 'spe'); // Default to 'spe' if all stats are equal
+if (bestStat !== 'spa') return spa;
 this.debug('Quark Drive spa boost');
 return this.chainModify([150, 100]);
 },
 onModifySpDPriority: 6,
 onModifySpD(spd, target, source, move) {
-if (this.effectState.bestStat !== 'spd') return;
+const bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
+if (source.getStat(stat) > source.getStat(best)) return stat;
+return best;
+}, 'spe'); // Default to 'spe' if all stats are equal
+if (bestStat !== 'spd') return spd;
 this.debug('Quark Drive spd boost');
 return this.chainModify([150, 100]);
 },
 onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat !== 'spe') return;
+const bestStat = ['atk', 'spa', 'def', 'spd', 'spe'].reduce((best, stat) => {
+if (pokemon.getStat(stat) > pokemon.getStat(best)) return stat;
+return best;
+}, 'spe'); // Default to 'spe' if all stats are equal
+if (bestStat !== 'spe') return spe;
 this.debug('Quark Drive spe boost');
 return this.chainModify([150, 100]);
 },
