@@ -6110,7 +6110,7 @@ if (move.typeChangerBoosted === this.effect) return this.chainModify([125, 100])
 name: "Strong Bad",
 },
 
-jonsí: {
+jonsi: {
 onPreStart(pokemon) {
 this.add('-message', 'The Ice Queen approaches');
 this.add('-ability', pokemon, 'Ice Body');
@@ -6136,7 +6136,7 @@ this.heal(target.baseMaxhp / 9);
 onImmunity(type, pokemon) {
 if (type === 'hail') return false;
 },
-name: "Jonsí",
+name: "Jonsi",
 },
 
 knievel: {
