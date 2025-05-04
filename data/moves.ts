@@ -42,10 +42,10 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 74,
+chance: 75,
 status: 'brn',
 }, {
-chance: 74,
+chance: 75,
 boosts: {
 spd: -1,
 },
@@ -82,7 +82,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 weather: 'RainDance',
 secondary: {
-chance: 60,
+chance: 50,
 status: 'tox',
 },
 target: "allAdjacent",
@@ -99,10 +99,10 @@ priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 81,
+chance: 75,
 status: 'brn',
 }, {
-chance: 81,
+chance: 75,
 boosts: {
 spd: -2,
 },
@@ -258,10 +258,10 @@ priority: 0,
 flags: {protect: 1, mirror: 1, distance: 1, slicing: 1},
 secondaries: [
 {
-chance: 25,
+chance: 50,
 volatileStatus: 'bleeding',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -338,7 +338,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -356,7 +356,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 25,
 self: {
 boosts: {
 atk: 1,
@@ -381,10 +381,10 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 46,
+chance: 50,
 status: 'brn',
 }, {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 spd: -1,
@@ -464,9 +464,8 @@ flags: {contact: 1, protect: 1, mirror: 1, dance: 1, kicking: 1},
 onHit(target, source, move) {
 this.add('-message', `Step on me daddy ${source.name}!`);
 },
-
 secondary: {
-chance: 46,
+chance: 50,
 self: {
 boosts: {
 spe: 1,
@@ -486,7 +485,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "allAdjacentFoes",
@@ -562,7 +561,7 @@ pp: 1.25,
 priority: 0,
 flags: {bypasssub: 1},
 selfBoost: {
-chance: 74,
+chance: 75,
 spd: 1,
 def: 1,
 },
@@ -636,7 +635,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Dark') return 1;
 },
 secondary: {
-chance: 81,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -779,7 +778,7 @@ name: "Aurora Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 atk: -1,
 },
@@ -1025,7 +1024,7 @@ return this.chainModify(2);
 }
 },
 secondary: {
-chance: 95,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -1236,7 +1235,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -1252,7 +1251,7 @@ pp: 1.25,
 priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -1286,7 +1285,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 status: 'frz',
 },
 target: "any",
@@ -1336,7 +1335,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 critRatio: 2,
 secondary: {
-chance: 46,
+chance: 50,
 status: 'brn',
 },
 thawsTarget: true,
@@ -1353,7 +1352,7 @@ pp: 0.625,
 priority: 0,
 flags: {hightech: 1, protect: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'brn',
 },
 target: "any",
@@ -1371,7 +1370,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 weather: 'RainDance',
 secondary: {
-chance: 39,
+chance: 25,
 boosts: {
 spe: -1,
 },
@@ -1392,7 +1391,7 @@ onModifyMove(move) {
 if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
 },
 secondary: {
-chance: 32,
+chance: 25,
 status: 'frz',
 },
 target: "allAdjacentFoes",
@@ -1429,7 +1428,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 53,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -1459,7 +1458,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -1497,7 +1496,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'par',
 },
 target: "any",
@@ -1513,7 +1512,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -1595,7 +1594,7 @@ return this.chainModify(2);
 },
 },
 secondary: {
-chance: 53,
+chance: 25,
 status: 'par',
 },
 onModifyMove(move, attacker, defender) {
@@ -1681,7 +1680,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Ice') return 1;
 },
 secondary: {
-chance: 60,
+chance: 50,
 boosts: {
 atk: -1,
 spa: -1,
@@ -1767,7 +1766,7 @@ name: "Bubble Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 boosts: {
 spe: -1,
 },
@@ -1809,7 +1808,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -1892,7 +1891,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 onHit(target, source, move) {
 if (target?.statsRaisedThisTurn) {
 target.trySetStatus('brn', source, move);
@@ -2060,7 +2059,7 @@ name: "Charge Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 self: {
 boosts: {
 spa: 1,
@@ -2132,7 +2131,7 @@ priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, distance: 1, bypasssub: 1},
 noSketch: true,
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2153,7 +2152,7 @@ if (!target.addType('Ice')) return false;
 this.add('-start', target, 'typeadd', 'Ice', '[from] move: Chilling Water');
 },
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 atk: -1,
 spa: -1,
@@ -2241,7 +2240,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -2332,7 +2331,7 @@ target.clearBoosts();
 this.add('-clearboost', target);
 },
 secondary: {
-chance: 67,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -2427,7 +2426,7 @@ pp: 0.625,
 priority: 0,
 flags: {hightech: 1, protect: 1},
 secondary: {
-chance: 32,
+chance: 25,
 status: 'par',
 },
 target: "any",
@@ -2489,7 +2488,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 81,
+chance: 75,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2505,7 +2504,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -2521,7 +2520,7 @@ pp: 0.625,
 priority: -5,
 flags: {contact: 1, slow: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 25,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -2832,7 +2831,7 @@ secondaries: [
 chance: 25,
 volatileStatus: 'bleeding',
 }, {
-chance: 60,
+chance: 75,
 status: 'tox',
 },
 ],
@@ -2849,7 +2848,7 @@ pp: 1.25,
 priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -2867,7 +2866,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 boosts: {
 def: -1,
 },
@@ -2963,7 +2962,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -2979,7 +2978,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacentFoes",
@@ -3160,7 +3159,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 weather: 'snow',
 self: {
-chance: 46,
+chance: 50,
 boosts: {
 def: 2,
 },
@@ -3238,7 +3237,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 status: 'par',
 },
 target: "allAdjacent",
@@ -3254,7 +3253,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 onHit(target, source) {
 const result = this.random(3);
 if (result === 0) {
@@ -3326,10 +3325,10 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondaries: [
 {
-chance: 67,
+chance: 50,
 status: 'flinch ',
 }, {
-chance: 67,
+chance: 50,
 volatileStatus: 'confusion',
 },
 ],
@@ -3444,7 +3443,7 @@ flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -3463,7 +3462,7 @@ critRatio: 2,
 multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -3556,7 +3555,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 onHit(target, source) {
 const result = this.random(3);
 if (result === 0) {
@@ -3581,7 +3580,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 spe: -1,
 },
@@ -3698,7 +3697,7 @@ onMoveFail(target, source, move) {
 this.damage(source.baseMaxhp / 3, source, source, this.dex.conditions.get('High Jump Kick'));
 },
 recoil: [25, 100],
-chance: 39,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -3836,7 +3835,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 spe: -1,
 },
@@ -3886,7 +3885,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondary: {
-chance: 32,
+chance: 25,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -3902,7 +3901,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -3950,10 +3949,10 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondaries: [
 {
-chance: 67,
+chance: 50,
 volatileStatus: 'flinch ',
 }, {
-chance: 67,
+chance: 50,
 boosts: {
 atk: -1,
 spa: -1,
@@ -4149,7 +4148,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Grass') return 1;
 },
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -4194,7 +4193,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 81,
+chance: 75,
 thawsTarget: true,
 status: 'brn',
 },
@@ -4322,7 +4321,7 @@ pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 boosts: {
 spd: -1,
 },
@@ -4394,7 +4393,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 46,
+chance: 50,
 self: {
 boosts: {
 spe: 1,
@@ -4467,7 +4466,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -4519,7 +4518,7 @@ pp: 0.625,
 priority: 0,
 flags: {mirror: 1, bypasssub: 1},
 secondary: {
-chance: 60,
+chance: 75,
 pseudoWeather: 'fairylock',
 condition: {
 duration: 5,
@@ -4563,13 +4562,11 @@ this.hint("Fake Out only works on your first turn out.");
 return false;
 }
 },
-
 onHit(target, source, move) {
 this.add('-message', `I can't believe ${source.name} sucker punched me!`);
 },
-
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -4671,7 +4668,7 @@ flags: {contact: 1, protect: 1, mirror: 1},
 breaksProtect: true,
 secondary: null,
 boosts: {
-chance: 60,
+chance: 75,
 accuracy: 1,
 },
 target: "any",
@@ -4704,7 +4701,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, dance: 1},
 thawsTarget: true,
 secondary: {
-chance: 46,
+chance: 50,
 self: {
 boosts: {
 spa: 1,
@@ -4724,7 +4721,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 volatileStatus: 'flinch ',
 },
 target: "allAdjacentFoes",
@@ -4787,7 +4784,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 32,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -4805,10 +4802,10 @@ flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 thawsTarget: true,
 secondaries: [
 {
-chance: 60,
+chance: 50,
 status: 'brn',
 }, {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -4826,7 +4823,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -4909,10 +4906,10 @@ flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 thawsTarget: true,
 secondaries: [
 {
-chance: 53,
+chance: 50,
 status: 'brn',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -5023,7 +5020,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 81,
+chance: 75,
 self: {
 boosts: {
 spe: 1,
@@ -5044,10 +5041,10 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
 secondaries: [
 {
-chance: 67,
+chance: 75,
 status: 'brn',
 }, {
-chance: 67,
+chance: 75,
 self: {
 boosts: {
 spe: 1,
@@ -5069,7 +5066,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 39,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -5119,7 +5116,7 @@ pp: 0.625,
 priority: 4,
 flags: {hightech: 1, protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -5360,7 +5357,7 @@ pp: 0.625,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -5411,7 +5408,7 @@ pp: 1.25,
 priority: -3,
 flags: {contact: 1, slow: 1, protect: 1, punch: 1},
 boosts: {
-chance: 46,
+chance: 50,
 accuracy: 1,
 atk: 1,
 },
@@ -5464,7 +5461,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 status: 'par',
 },
 target: "any",
@@ -5485,7 +5482,7 @@ if (!target.addType('Grass')) return false;
 this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
 },
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 def: -1,
 spd: -1,
@@ -5521,7 +5518,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Water') return 1;
 },
 secondary: {
-chance: 53,
+chance: 50,
 status: 'frz',
 },
 target: "any",
@@ -5571,7 +5568,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'frz',
 },
 target: "any",
@@ -5919,7 +5916,7 @@ pp: 0.625,
 priority: 2,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'par',
 },
 target: "randomNormal",
@@ -5948,7 +5945,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 boosts: {
 spe: -1,
 },
@@ -6067,7 +6064,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 74,
+chance: 75,
 status: 'slp',
 },
 target: "any",
@@ -6299,7 +6296,7 @@ pp: 1.25,
 priority: 0,
 flags: {bypasssub: 1},
 secondary: {
-chance: 60,
+chance: 75,
 pseudoWeather: 'fairylock',
 },
 target: "any",
@@ -6389,7 +6386,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 50,
 status: 'tox',
 },
 target: "any",
@@ -6477,7 +6474,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -6666,7 +6663,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -6747,7 +6744,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 thawsTarget: true,
 secondary: {
-chance: 39,
+chance: 50,
 status: 'brn',
 },
 target: "allAdjacentFoes",
@@ -6992,7 +6989,7 @@ break;
 }
 },
 secondary: {
-chance: 32,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -7053,7 +7050,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 75,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -7130,7 +7127,7 @@ pp: 1.25,
 priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -7206,7 +7203,7 @@ pp: 0.625,
 priority: -1,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'slp',
 },
 target: "allAdjacent",
@@ -7241,7 +7238,7 @@ name: "Ice Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 status: 'frz',
 },
 target: "any",
@@ -7292,10 +7289,10 @@ priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 60,
+chance: 50,
 status: 'frz',
 }, {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -7331,10 +7328,10 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondaries: [
 {
-chance: 53,
+chance: 50,
 status: 'frz',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -7384,7 +7381,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -7414,7 +7411,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -7449,7 +7446,7 @@ this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + sour
 },
 thawsTarget: true,
 secondary: {
-chance: 81,
+chance: 75,
 status: 'brn',
 },
 target: "allAdjacentFoes",
@@ -7469,7 +7466,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 status: 'brn',
 },
 target: "any",
@@ -7486,7 +7483,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 32,
+chance: 25,
 status: 'brn',
 },
 target: "any",
@@ -7503,7 +7500,7 @@ priority: 3,
 flags: {hightech: 1, contact: 1, protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 74,
+chance: 75,
 status: 'brn',
 },
 target: "any",
@@ -7519,7 +7516,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -7617,7 +7614,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -7633,7 +7630,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -7906,7 +7903,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 46,
+chance: 50,
 status: 'brn',
 },
 target: "allAdjacent",
@@ -7971,7 +7968,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 75,
 boosts: {
 forceSwitch: true,
 },
@@ -8054,7 +8051,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1},
 secondary: {
-chance: 53,
+chance: 75,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -8072,7 +8069,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 74,
+chance: 75,
 status: 'par',
 },
 target: "any",
@@ -8173,7 +8170,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -8257,7 +8254,7 @@ this.add('-end', pokemon, 'Attract', '[silent]');
 onTryImmunity(target, source) {
 return true;
 },
-chance: 81,
+chance: 75,
 status: 'slp',
 secondary: null,
 target: "any",
@@ -8312,7 +8309,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -8330,7 +8327,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 spd: -2,
 },
@@ -8433,7 +8430,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 atk: -1,
 },
@@ -8451,7 +8448,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -8503,7 +8500,7 @@ pp: 0.625,
 priority: 0,
 flags: {hightech: 1, protect: 1},
 secondary: {
-chance: 32,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -8623,7 +8620,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 75,
 weather: 'sunnyday',
 volatileStatus: 'partiallytrapped',
 },
@@ -8752,7 +8749,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Fighting') return 1;
 },
 secondary: {
-chance: 32,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -8927,7 +8924,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, beam: 1, mirror: 1,},
 secondary: {
-chance: 46,
+chance: 50,
 pseudoWeather: 'fairylock',
 condition: {
 duration: 5,
@@ -8986,7 +8983,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 81,
+chance: 75,
 self: {
 boosts: {
 atk: 1,
@@ -9006,7 +9003,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
 secondary: {
-chance: 81,
+chance: 75,
 spd: -2,
 def: -2,
 },
@@ -9063,7 +9060,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondary: {
-chance: 39,
+chance: 50,
 self: {
 boosts: {
 atk: 1,
@@ -9291,7 +9288,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 evasion: -1,
 },
@@ -9350,7 +9347,7 @@ pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 spa: -1,
 },
@@ -9449,7 +9446,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -9578,7 +9575,7 @@ pokemon.removeVolatile('partiallytrapped');
 }
 },
 secondary: {
-chance: 88,
+chance: 75,
 status: 'tox',
 },
 target: "allAdjacentFoes",
@@ -9595,7 +9592,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 weather: 'snow',
 secondary: {
-chance: 32,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -9630,7 +9627,7 @@ this.add('-fieldend', 'move: Mud Sport');
 },
 },
 secondary: {
-chance: 60,
+chance: 75,
 boosts: {
 evasion: -1,
 },
@@ -9648,7 +9645,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 74,
+chance: 75,
 boosts: {
 spe: -2,
 },
@@ -9666,7 +9663,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 95,
+chance: 75,
 boosts: {
 evasion: -2,
 },
@@ -9684,7 +9681,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 evasion: -1,
 },
@@ -9704,7 +9701,7 @@ flags: {protect: 1, mirror: 1},
 weather: 'sunnyday',
 thawsTarget: true,
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 spa: -1,
 },
@@ -9722,7 +9719,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 self: {
 boosts: {
 spa: 1,
@@ -9804,7 +9801,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -9820,7 +9817,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 75,
 status: 'slp',
 },
 target: "allAdjacentFoes",
@@ -9836,7 +9833,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 evasion: -1,
 },
@@ -9902,7 +9899,7 @@ secondaries: [
 chance: 25,
 volatileStatus: 'bleeding',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -9919,7 +9916,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 74,
+chance: 75,
 spd: -2,
 def: -2,
 },
@@ -9972,7 +9969,7 @@ pp: 0.625,
 priority: 0,
 flags: {hightech: 1, protect: 1},
 secondary: {
-chance: 32,
+chance: 50,
 status: 'tox',
 },
 target: "any",
@@ -9988,7 +9985,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'par',
 },
 target: "any",
@@ -10074,7 +10071,7 @@ pp: 0.625,
 priority: 1,
 flags: {sound: 1, protect: 1, mirror: 1,},
 secondary: {
-chance: 60,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacentFoes",
@@ -10095,7 +10092,7 @@ if (type === 'Water') return 1;
 multihit: [1, 8],
 multiaccuracy: 75,
 secondary: {
-chance: 95,
+chance: 75,
 boosts: {
 evasion: -1,
 },
@@ -10162,7 +10159,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 25,
 self: {
 boosts: {
 atk: 1,
@@ -10359,7 +10356,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -10433,7 +10430,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'frz',
 },
 target: "allAdjacent",
@@ -10546,7 +10543,7 @@ pp: 0.625,
 priority: 0,
 flags: {reflectable: 1, mirror: 1, bypasssub: 1},
 boosts: {
-chance: 88,
+chance: 75,
 atk: -1,
 spa: -1,
 },
@@ -10564,7 +10561,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 atk: -1,
 },
@@ -10607,10 +10604,10 @@ priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 67,
+chance: 50,
 status: 'tox',
 }, {
-chance: 67,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -10627,7 +10624,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -10643,7 +10640,7 @@ pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'tox',
 },
 target: "allAdjacent",
@@ -10660,7 +10657,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 67,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -10677,7 +10674,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 67,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -10755,7 +10752,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -10800,7 +10797,7 @@ priority: 0,
 flags: {powder: 1, protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 81,
+chance: 50,
 status: 'frz',
 },
 target: "allAdjacentFoes",
@@ -10816,7 +10813,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -10957,7 +10954,7 @@ onAfterMoveSecondarySelf(pokemon, target, move) {
 if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
 },
 secondary: {
-chance: 74,
+chance: 75,
 self: {
 boosts: {
 atk: 1,
@@ -10978,7 +10975,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 33,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -11107,7 +11104,7 @@ name: "Psybeam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -11173,13 +11170,11 @@ name: "Psychic",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-
 onHit(target, source, move) {
 this.add('-message', `${source.name} used the best move in the game!`);
 },
-
 secondary: {
-chance: 39,
+chance: 25,
 boosts: {
 spd: -1.5,
 },
@@ -11204,10 +11199,10 @@ pokemon.side.removeSideCondition('auroraveil');
 },
 secondaries: [
 {
-chance: 46,
+chance: 50,
 status: 'flinch ',
 }, {
-chance: 46,
+chance: 50,
 volatileStatus: 'confusion',
 },
 ],
@@ -11290,7 +11285,7 @@ onAfterMoveSecondarySelf(pokemon, target, move) {
 if (!target || target.fainted || target.hp <= 0) this.boost({spa: 2}, pokemon, pokemon, move);
 },
 secondary: {
-chance: 74,
+chance: 75,
 self: {
 boosts: {
 spa: 1,
@@ -11328,7 +11323,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 self: {
 boosts: {
 spd: 1,
@@ -11513,7 +11508,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, defrost: 1},
 thawsTarget: true,
 secondary: {
-chance: 39,
+chance: 25,
 status: 'brn',
 },
 target: "any",
@@ -11575,7 +11570,7 @@ this.damage(source.baseMaxhp / 4, source, source, this.dex.conditions.get('High 
 recoil: [20, 100],
 critRatio: 2,
 secondary: {
-chance: 81,
+chance: 75,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -11591,7 +11586,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -11878,7 +11873,7 @@ pokemon.removeVolatile('partiallytrapped');
 }
 },
 secondary: {
-chance: 74,
+chance: 75,
 self: {
 boosts: {
 spe: 1,
@@ -11919,7 +11914,7 @@ secondaries: [
 chance: 25,
 volatileStatus: 'bleeding',
 }, {
-chance: 53,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -12044,7 +12039,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 53,
+chance: 50,
 status: 'slp',
 },
 onHit(target, pokemon, move) {
@@ -12287,7 +12282,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -12319,7 +12314,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "allAdjacentFoes",
@@ -12336,7 +12331,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 81,
+chance: 75,
 boosts: {
 def: -1,
 },
@@ -12370,7 +12365,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 50,
 boosts: {
 spe: -1,
 },
@@ -12433,7 +12428,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -12534,10 +12529,10 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 67,
+chance: 50,
 volatileStatus: 'confuse',
 }, {
-chance: 67,
+chance: 50,
 self: {
 boosts: {
 spe: 2,
@@ -12575,7 +12570,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, defrost: 1},
 thawsTarget: true,
 secondary: {
-chance: 32,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -12682,7 +12677,7 @@ this.add('-end', pokemon, 'Salt Cure');
 },
 },
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'saltcure',
 },
 target: "any",
@@ -12699,7 +12694,7 @@ priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
 weather: 'Sandstorm',
 secondary: {
-chance: 88,
+chance: 75,
 evasion: -1,
 },
 target: "allAdjacentFoes",
@@ -12715,7 +12710,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 secondary: {
-chance: 32,
+chance: 25,
 status: 'brn',
 },
 target: "allAdjacentFoes",
@@ -12745,7 +12740,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -12798,7 +12793,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, defrost: 1},
 thawsTarget: true,
 secondary: {
-chance: 46,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -12853,7 +12848,7 @@ flags: {protect: 1, mirror: 1, defrost: 1},
 weather: 'Sandstorm',
 thawsTarget: true,
 secondary: {
-chance: 53,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -12870,8 +12865,8 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 critRatio: 2,
 secondary: {
-chance: 88,
-status: 'tox',
+chance: 75,
+volatileStatus: 'bleeding',
 },
 target: "any",
 type: "Normal",
@@ -12904,7 +12899,7 @@ priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 thawsTarget: true,
 secondary: {
-chance: 32,
+chance: 25,
 status: 'brn',
 },
 target: "allAdjacent",
@@ -12938,24 +12933,24 @@ if (this.field.isTerrain('')) return;
 move.secondaries = [];
 if (this.field.isTerrain('electricterrain')) {
 move.secondaries.push({
-chance: 53,
+chance: 75,
 status: 'par',
 });
 } else if (this.field.isTerrain('grassyterrain')) {
 move.secondaries.push({
-chance: 53,
+chance: 75,
 status: 'slp',
 });
 } else if (this.field.isTerrain('mistyterrain')) {
 move.secondaries.push({
-chance: 53,
+chance: 75,
 boosts: {
 spa: -1,
 },
 });
 } else if (this.field.isTerrain('psychicterrain')) {
 move.secondaries.push({
-chance: 53,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -12963,7 +12958,7 @@ spe: -1,
 }
 },
 secondary: {
-chance: 53,
+chance: 75,
 status: 'par',
 },
 target: "any",
@@ -13059,7 +13054,7 @@ pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -13077,7 +13072,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -13124,10 +13119,10 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondaries: [
 {
-chance: 60,
+chance: 50,
 status: 'tox',
 }, {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -13158,7 +13153,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -13177,10 +13172,10 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 67,
+chance: 75,
 volatileStatus: 'confuse',
 }, {
-chance: 67,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 ],
@@ -13236,10 +13231,10 @@ flags: {protect: 1, mirror: 1},
 secondary: null,
 secondaries: [
 {
-chance: 53,
+chance: 50,
 status: 'frz',
 }, {
-chance: 53,
+chance: 50,
 weather: 'snow',
 },
 ],
@@ -13281,7 +13276,7 @@ onAfterSubDamage(damage, target, source, move) {
 if (!source.isAlly(target)) this.hint(move.category + " Shell Side Arm");
 },
 secondary: {
-chance: 39,
+chance: 25,
 status: 'tox',
 },
 target: "any",
@@ -13484,7 +13479,7 @@ name: "Signal Beam",
 pp: 1.25,
 flags: {protect: 1, beam: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -13557,7 +13552,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Flying') return 1;
 },
 secondary: {
-chance: 60,
+chance: 25,
 self: {
 boosts: {
 atk: 1,
@@ -13604,7 +13599,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 67,
+chance: 50,
 status: 'slp',
 },
 target: "allAdjacent",
@@ -13636,7 +13631,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
 thawsTarget: true,
 secondary: {
-chance: 60,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -13652,7 +13647,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 atk: -1,
 },
@@ -13781,7 +13776,7 @@ pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'slp',
 },
 target: "allAdjacent",
@@ -13832,7 +13827,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -13848,7 +13843,7 @@ pp: 1.25,
 priority: 0,
 flags: {bullet: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 status: 'tox',
 },
 target: "any",
@@ -13864,7 +13859,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 status: 'tox',
 },
 target: "allAdjacent",
@@ -13980,7 +13975,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'tox',
 },
 target: "allAdjacent",
@@ -14012,7 +14007,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -14028,7 +14023,7 @@ pp: 0.625,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 67,
+chance: 50,
 boosts: {
 atk: -1,
 spa: -1,
@@ -14098,7 +14093,7 @@ onTry(source) {
 return source.status === 'slp' || source.hasAbility('comatose');
 },
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -14287,7 +14282,7 @@ priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
 dustproof: true,
-chance: 67,
+chance: 75,
 volatileStatus: 'sparklingaria',
 },
 onAfterMove(source, target, move) {
@@ -14513,7 +14508,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 75,
 boosts: {
 spa: -1,
 },
@@ -14531,7 +14526,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 75,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -14651,7 +14646,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 secondary: {
-chance: 32,
+chance: 25,
 boosts: {
 spa: -1,
 },
@@ -14696,7 +14691,7 @@ flags: {protect: 1, mirror: 1, defrost: 1},
 weather: 'RainDance',
 thawsTarget: true,
 secondary: {
-chance: 32,
+chance: 50,
 status: 'brn',
 },
 target: "allAdjacent",
@@ -14712,7 +14707,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 60,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -14772,7 +14767,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 50,
 self: {
 boosts: {
 spd: 1,
@@ -14817,7 +14812,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -14833,7 +14828,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -14942,7 +14937,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Poison') return 1;
 },
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -14958,7 +14953,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 75,
 self: {
 boosts: {
 atk: 1,
@@ -15072,7 +15067,7 @@ pp: 0.625,
 priority: 0,
 flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 secondary: {
-chance: 88,
+chance: 75,
 status: 'par',
 },
 target: "allAdjacent",
@@ -15088,7 +15083,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 75,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -15186,7 +15181,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 50,
 status: 'frz',
 },
 target: "any",
@@ -15238,7 +15233,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 ignoreAbility: true,
 secondary: {
-chance: 32,
+chance: 25,
 status: 'brn',
 },
 target: "any",
@@ -15432,7 +15427,7 @@ name: "Swift",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
-chance: 74,
+chance: 75,
 selfBoost: {
 accuracy: 2,
 },
@@ -15802,7 +15797,7 @@ this.add('-end', pokemon, 'Attract', '[silent]');
 },
 },
 boosts: {
-chance: 67,
+chance: 50,
 atk: -1,
 spa: -1,
 },
@@ -15852,7 +15847,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
@@ -16060,7 +16055,7 @@ this.add('-end', target, 'Throat Chop', '[silent]');
 },
 },
 secondary: {
-chance: 74,
+chance: 75,
 onHit(target) {
 target.addVolatile('throatchop');
 },
@@ -16106,7 +16101,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 39,
+chance: 25,
 status: 'par',
 },
 target: "any",
@@ -16122,7 +16117,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -16139,10 +16134,10 @@ priority: 0,
 flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 60,
+chance: 50,
 status: 'par',
 }, {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -16159,7 +16154,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 secondary: {
-chance: 39,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -16178,10 +16173,10 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 secondaries: [
 {
-chance: 53,
+chance: 50,
 status: 'par',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -16287,14 +16282,12 @@ name: "Torch Song",
 pp: 0.625,
 priority: 1,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
-
 onHit(target, source, move) {
 this.add('-message', `${source.name} used the real best move in the game!`);
 },
-
 thawsTarget: true,
 secondary: {
-chance: 39,
+chance: 25,
 self: {
 boosts: {
 spa: 1,
@@ -16385,7 +16378,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 self: {
 boosts: {
 spe: 1,
@@ -16410,7 +16403,7 @@ return false;
 }
 },
 secondary: {
-chance: 88,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -16426,7 +16419,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 53,
+chance: 75,
 onHit(target, source) {
 const result = this.random(3);
 if (result === 0) {
@@ -16463,7 +16456,7 @@ action.targetLoc = -1;
 }
 },
 secondary: {
-chance: 67,
+chance: 75,
 boosts: {
 spe: -1,
 },
@@ -16526,12 +16519,12 @@ if (type === 'Flying') return 1;
 critRatio: 1,
 secondaries: [
 {
-chance: 46,
+chance: 50,
 boosts: {
 def: -1,
 },
 }, {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -16600,7 +16593,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, kicking: 1},
 secondary: {
-chance: 53,
+chance: 50,
 boosts: {
 atk: -1,
 },
@@ -16636,7 +16629,7 @@ critRatio: 2,
 multihit: [1, 2],
 multiaccuracy: 85,
 secondary: {
-chance: 81,
+chance: 75,
 status: 'tox',
 },
 target: "any",
@@ -16667,7 +16660,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 critRatio: 2,
 secondary: {
-chance: 74,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "allAdjacentFoes",
@@ -16806,7 +16799,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "allAdjacentFoes",
@@ -16822,7 +16815,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 75,
 pseudoWeather: 'fairylock',
 condition: {
 duration: 5,
@@ -16915,7 +16908,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -16960,7 +16953,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'confusion',
 },
 target: "any",
@@ -17075,7 +17068,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1},
 secondary: {
-chance: 81,
+chance: 75,
 volatileStatus: 'partiallytrapped',
 },
 target: "any",
@@ -17119,7 +17112,7 @@ pp: 0.625,
 priority: 0,
 flags: {hightech: 1, protect: 1},
 secondary: {
-chance: 32,
+chance: 25,
 status: 'slp',
 },
 target: "any",
@@ -17182,8 +17175,16 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, mirror: 1, wind: 1},
 secondary: {
-chance: 32,
-status: 'par',
+chance: 50,
+onHit(target, source, move) {
+const battle = source.battle;
+if (battle.field.weather !== 'raindance') {
+battle.field.setWeather('raindance', source, move);
+}
+if (battle.field.terrain !== 'electricterrain') {
+battle.field.setTerrain('electricterrain', source, move);
+}
+},
 },
 target: "allAdjacentFoes",
 type: "Electric",
@@ -17212,7 +17213,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
 secondary: {
-chance: 60,
+chance: 50,
 self: {
 boosts: {
 spe: 1,
@@ -17465,7 +17466,7 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, bullet: 1, mirror: 1},
 secondary: {
-chance: 32,
+chance: 25,
 status: 'par',
 },
 target: "any",
@@ -17482,7 +17483,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 recoil: [25, 100],
 secondary: {
-chance: 46,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -17504,7 +17505,7 @@ onHit(target, source, move) {
 if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 },
 secondary: {
-chance: 46,
+chance: 50,
 status: 'tox',
 },
 target: "any",
@@ -17685,7 +17686,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 53,
+chance: 50,
 volatileStatus: 'healblock',
 },
 target: "any",
@@ -17708,7 +17709,7 @@ return false;
 }
 },
 secondary: {
-chance: 60,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 target: "any",
@@ -17745,7 +17746,7 @@ pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 secondary: {
-chance: 53,
+chance: 50,
 onHit(target, source, move) {
 if (target?.statsRaisedThisTurn) {
 target.addVolatile('confusion', source, move);
@@ -17828,7 +17829,7 @@ this.add('-end', pokemon, 'Syrup Bomb', '[silent]');
 },
 },
 secondary: {
-chance: 67,
+chance: 75,
 volatileStatus: 'syrupbomb',
 },
 target: "allAdjacent",
@@ -17846,7 +17847,7 @@ flags: {protect: 1, mirror: 1, defrost: 1, heal: 1},
 drain: [1, 2],
 thawsTarget: true,
 secondary: {
-chance: 46,
+chance: 50,
 status: 'brn',
 },
 target: "allAdjacentFoes",
@@ -17863,16 +17864,16 @@ priority: 0,
 flags: {protect: 1, mirror: 1},
 secondaries: [
 {
-chance: 10,
+chance: 25,
 weather: 'RainDance',
 }, {
-chance: 10,
+chance: 25,
 weather: 'Sandstorm',
 }, {
-chance: 10,
+chance: 25,
 weather: 'snow',
 }, {
-chance: 10,
+chance: 25,
 weather: 'sunnyday',
 },
 ],
@@ -17919,7 +17920,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 64.2,
+chance: 50,
 boosts: {
 def: -1,
 },
@@ -17937,7 +17938,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 50,
 boosts: {
 spd: -1,
 },
@@ -18409,7 +18410,7 @@ pp: 1.25,
 priority: -1,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
-chance: 67,
+chance: 50,
 status: 'tox',
 },
 target: "any",
@@ -18511,7 +18512,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Grass') return 1;
 },
 secondary: {
-chance: 67,
+chance: 50,
 status: 'slp',
 },
 target: "any",
@@ -18530,7 +18531,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Fire') return 1;
 },
 secondary: {
-chance: 67,
+chance: 50,
 status: 'par',
 },
 target: "any",
@@ -18549,7 +18550,7 @@ onEffectiveness(typeMod, target, type) {
 if (type === 'Electric') return 1;
 },
 secondary: {
-chance: 67,
+chance: 50,
 status: 'brn',
 },
 target: "any",
@@ -18581,10 +18582,10 @@ flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
 {
-chance: 53,
+chance: 50,
 weather: 'RainDance',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -18603,10 +18604,10 @@ flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
 {
-chance: 53,
+chance: 50,
 weather: 'Sandstorm',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
@@ -18625,10 +18626,10 @@ flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 thawsTarget: true,
 secondaries: [
 {
-chance: 53,
+chance: 50,
 status: 'slp',
 }, {
-chance: 53,
+chance: 50,
 volatileStatus: 'flinch ',
 },
 ],
