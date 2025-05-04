@@ -17166,30 +17166,6 @@ target: "allySide",
 type: "Rock",
 },
 
-wildboltstorm: {
-accuracy: 75,
-basePower: 105,
-category: "Special",
-name: "Wildbolt Storm",
-pp: 0.625,
-priority: 0,
-flags: {protect: 1, mirror: 1, wind: 1},
-secondary: {
-chance: 50,
-onHit(target, source, move) {
-const battle = source.battle;
-if (battle.field.weather !== 'raindance') {
-battle.field.setWeather('raindance', source, move);
-}
-if (battle.field.terrain !== 'electricterrain') {
-battle.field.setTerrain('electricterrain', source, move);
-}
-},
-},
-target: "allAdjacentFoes",
-type: "Electric",
-},
-
 wildcharge: {
 accuracy: 85,
 basePower: 95,
