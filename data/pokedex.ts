@@ -182,6 +182,7 @@ weightkg: 9.9,
 butterfree: {
 num: 12,
 name: "Butterfree",
+forme: "Gmax",
 types: ["Bug", "Psychic"],
 gender: "F",
 baseStats: {hp: 75, atk: 40, def: 55, spa: 111, spd: 95, spe: 85},
