@@ -5898,8 +5898,7 @@ this.add('-ability', pokemon, 'Wonder Guard');
 name: "Ghostly Goodbye",
 },
 
-{
-name: "Toxic Blood",
+toxicblood: {
 onAfterDamage(damage, target, source, move) {
 if (target.status === 'bleeding' && move.contact) {
 source.setStatus('tox', target);
