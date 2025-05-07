@@ -11307,7 +11307,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, slicing: 1},
 critRatio: 2,
 secondary: {
-chance: 25,
+chance: 100,
 volatileStatus: 'bleeding',
 },
 target: "any",
