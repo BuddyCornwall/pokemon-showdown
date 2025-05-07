@@ -5898,6 +5898,19 @@ this.add('-ability', pokemon, 'Wonder Guard');
 name: "Ghostly Goodbye",
 },
 
+{
+name: "Toxic Blood",
+onAfterDamage(damage, target, source, move) {
+if (target.status === 'bleeding' && move.contact) {
+source.setStatus('tox', target);
+}
+},
+name: "Toxic Blood",
+}
+
+
+
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
@@ -5965,7 +5978,7 @@ name: "Incendiary Kong",
 
 beauty: {
 onPreStart(pokemon) {
-this.add('-message', 'The Toxic Queen has arrived!');
+this.add('-message', 'The Toxic Queen is here!');
 this.add('-ability', pokemon, 'Queenly Majesty');
 this.add('-ability', pokemon, 'Toxic Boost');
 },
@@ -6180,7 +6193,7 @@ name: "Knievel",
 
 rukiaryuko: {
 onPreStart(pokemon) {
-this.add('-message', 'B A N K A I! Somebody is going to get the CLAMPS');
+this.add('-message', 'B A N K A I!');
 this.add('-ability', pokemon, 'Sharpness');
 this.add('-ability', pokemon, 'Rough Skin');
 },
@@ -6254,7 +6267,7 @@ name: "Moira",
 
 yancha: {
 onPreStart(pokemon) {
-this.add('-message', 'Yancha is faster than lightning!');
+this.add('-message', 'Yancha is a lightning rod for success!');
 this.add('-ability', pokemon, 'Speed Boost');
 this.add('-ability', pokemon, 'Lightning Rod');
 },
