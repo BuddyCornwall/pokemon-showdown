@@ -5898,17 +5898,6 @@ this.add('-ability', pokemon, 'Wonder Guard');
 name: "Ghostly Goodbye",
 },
 
-toxicblood: {
-onAfterDamage(damage, target, source, move) {
-if (target.status === 'bleeding' && move.contact) {
-source.setStatus('tox', target);
-}
-},
-name: "Toxic Blood",
-},
-
-
-
 
 axolargel: {
 onPreStart(pokemon) {
