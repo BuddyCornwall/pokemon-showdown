@@ -2079,8 +2079,8 @@ pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 boosts: {
-atk: -2,
-spa: -2,
+atk: -1,
+spa: -1,
 },
 volatileStatus: 'attract',
 condition: {
@@ -8744,17 +8744,51 @@ category: "Physical",
 name: "Malicious Moonsault",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1},
-onEffectiveness(typeMod, target, type) {
-if (type === 'Fighting') return 1;
+flags: {charge: 1, contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+onTryMove(attacker, defender, move) {
+if (attacker.removeVolatile(move.id)) {
+return;
+}
+this.add('-prepare', attacker, move.name);
+this.boost({atk: 1, evasion: -2,}, attacker, attacker, move);
+if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+return;
+}
+attacker.addVolatile('twoturnmove', defender);
+return null;
 },
-secondary: {
-chance: 50,
-volatileStatus: 'flinch ',
+condition: {
+duration: 2,
+onInvulnerability(target, source, move) {
+if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+return;
+}
+return false;
 },
+onSourceModifyDamage(damage, source, target, move) {
+if (move.id === 'gust' || move.id === 'twister') {
+return this.chainModify(2);
+}
+},
+},
+hasCrashDamage: true,
+onMoveFail(target, source, move) {
+this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+},
+secondary: null,
 target: "any",
 type: "Dark",
 },
+
+
+
+
+
+
+
+
+
+
 
 matblock: {
 accuracy: 97,
@@ -15000,7 +15034,7 @@ type: "Bug",
 },
 
 struggle: {
-accuracy: 25,
+accuracy: 50,
 basePower: 95,
 category: "Physical",
 name: "Struggle",
