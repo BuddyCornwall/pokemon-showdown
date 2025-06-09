@@ -6398,7 +6398,7 @@ name: "Dre",
 
 wougfrey: {
 onPreStart(pokemon) {
-this.add('-message', 'Wougers wiggles into battle.');
+this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
 this.add('-ability', pokemon, 'Protosynthesis');
 },
