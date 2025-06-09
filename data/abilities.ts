@@ -6422,16 +6422,6 @@ if (type === 'sandstorm') return false;
 },
 condition: {
 noCopy: true,
-onStart(pokemon, source, effect) {
-if (effect?.id === 'boosterenergy') {
-this.effectState.fromBooster = true;
-this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
-} else {
-this.add('-activate', pokemon, 'ability: Protosynthesis');
-}
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
-},
 onModifyAtkPriority: 5,
 onModifyAtk(atk, source, target, move) {
 if (this.effectState.bestStat !== 'atk') return;
