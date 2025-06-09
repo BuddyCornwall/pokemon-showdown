@@ -5899,6 +5899,8 @@ name: "Ghostly Goodbye",
 },
 
 
+
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
@@ -6366,5 +6368,111 @@ return;
 isBreakable: true,
 name: "Scarface",
 },
+
+dre: {
+onPreStart(pokemon) {
+this.add('-message', 'Once again you forgot about Dre');
+this.add('-ability', pokemon, 'Analytic');
+this.add('-ability', pokemon, 'Unseen Fist');
+},
+onBasePowerPriority: 21,
+onBasePower(basePower, pokemon) {
+let boosted = true;
+for (const target of this.getAllActive()) {
+if (target === pokemon) continue;
+if (this.queue.willMove(target)) {
+boosted = false;
+break;
+}
+}
+if (boosted) {
+this.debug('Analytic boost');
+return this.chainModify([133,100]);
+}
+},
+onModifyMove(move) {
+if (move.flags['contact']) delete move.flags['protect'];
+},
+name: "Dre",
+},
+
+wougfrey: {
+onPreStart(pokemon) {
+this.add('-message', 'Wougers wiggles into battle.');
+this.add('-ability', pokemon, 'Analytic');
+this.add('-ability', pokemon, 'Protosynthesis');
+},
+onStart(pokemon) {
+this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+},
+onWeatherChange(pokemon) {
+if (pokemon.transformed) return;
+if (this.field.isWeather('sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea')) {
+pokemon.addVolatile('protosynthesis');
+} else if (!pokemon.volatiles['protosynthesis']?.fromBooster) {
+pokemon.removeVolatile('protosynthesis');
+}
+},
+onEnd(pokemon) {
+delete pokemon.volatiles['protosynthesis'];
+this.add('-end', pokemon, 'Protosynthesis', '[silent]');
+},
+condition: {
+noCopy: true,
+onStart(pokemon, source, effect) {
+if (effect?.id === 'boosterenergy') {
+this.effectState.fromBooster = true;
+this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
+} else {
+this.add('-activate', pokemon, 'ability: Protosynthesis');
+}
+this.effectState.bestStat = pokemon.getBestStat(false, true);
+this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
+},
+onModifyAtkPriority: 5,
+onModifyAtk(atk, source, target, move) {
+if (this.effectState.bestStat !== 'atk') return;
+this.debug('Protosynthesis atk boost');
+return this.chainModify([150, 100]);
+},
+onModifyDefPriority: 6,
+onModifyDef(def, target, source, move) {
+if (this.effectState.bestStat !== 'def') return;
+this.debug('Protosynthesis def boost');
+return this.chainModify([150, 100]);
+},
+onModifySpAPriority: 5,
+onModifySpA(relayVar, source, target, move) {
+if (this.effectState.bestStat !== 'spa') return;
+this.debug('Protosynthesis spa boost');
+return this.chainModify([150, 100]);
+},
+onModifySpDPriority: 6,
+onModifySpD(relayVar, target, source, move) {
+if (this.effectState.bestStat !== 'spd') return;
+this.debug('Protosynthesis spd boost');
+return this.chainModify([150, 100]);
+},
+onModifySpe(spe, pokemon) {
+if (this.effectState.bestStat !== 'spe') return;
+this.debug('Protosynthesis spe boost');
+return this.chainModify([150, 100]);
+},
+onEnd(pokemon) {
+this.add('-end', pokemon, 'Protosynthesis');
+},
+},
+isPermanent: true,
+onModifySpe(spe, pokemon) {
+if (this.field.isWeather('sandstorm')) {
+return this.chainModify(2);
+}
+},
+onImmunity(type, pokemon) {
+name: "Wougfrey",
+},
+
+
+
 
 };
