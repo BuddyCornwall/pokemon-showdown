@@ -6386,8 +6386,8 @@ onPreStart(pokemon) {
 this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
 this.add('-ability', pokemon, 'Protosynthesis');
+},
 condition: {
-noCopy: true,
 onStart(pokemon, source, effect) {
 this.effectState.bestStat = pokemon.getBestStat(false, true);
 },
