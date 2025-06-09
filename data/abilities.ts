@@ -3594,71 +3594,6 @@ delete this.effectState.protean;
 name: "Protean",
 },
 
-protosynthesis: {
-onStart(pokemon) {
-this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
-},
-onWeatherChange(pokemon) {
-if (pokemon.transformed) return;
-if (this.field.isWeather('sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea')) {
-pokemon.addVolatile('protosynthesis');
-} else if (!pokemon.volatiles['protosynthesis']?.fromBooster) {
-pokemon.removeVolatile('protosynthesis');
-}
-},
-onEnd(pokemon) {
-delete pokemon.volatiles['protosynthesis'];
-this.add('-end', pokemon, 'Protosynthesis', '[silent]');
-},
-condition: {
-noCopy: true,
-onStart(pokemon, source, effect) {
-if (effect?.id === 'boosterenergy') {
-this.effectState.fromBooster = true;
-this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
-} else {
-this.add('-activate', pokemon, 'ability: Protosynthesis');
-}
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
-},
-onModifyAtkPriority: 5,
-onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
-this.debug('Protosynthesis atk boost');
-return this.chainModify([150, 100]);
-},
-onModifyDefPriority: 6,
-onModifyDef(def, target, source, move) {
-if (this.effectState.bestStat !== 'def') return;
-this.debug('Protosynthesis def boost');
-return this.chainModify([150, 100]);
-},
-onModifySpAPriority: 5,
-onModifySpA(relayVar, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
-this.debug('Protosynthesis spa boost');
-return this.chainModify([150, 100]);
-},
-onModifySpDPriority: 6,
-onModifySpD(relayVar, target, source, move) {
-if (this.effectState.bestStat !== 'spd') return;
-this.debug('Protosynthesis spd boost');
-return this.chainModify([150, 100]);
-},
-onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat !== 'spe') return;
-this.debug('Protosynthesis spe boost');
-return this.chainModify([150, 100]);
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Protosynthesis');
-},
-},
-isPermanent: true,
-name: "Protosynthesis",
-},
-
 psychicsurge: {
 onStart(source) {
 this.field.setTerrain('psychicterrain');
@@ -6400,78 +6335,21 @@ wougfrey: {
 onPreStart(pokemon) {
 this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
-this.add('-ability', pokemon, 'Protosynthesis');
+this.add('-ability', pokemon, 'Shield Dust');
 },
-onStart(pokemon) {
-this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
-},
-onWeatherChange(pokemon) {
-if (pokemon.transformed) return;
-if (this.field.isWeather('sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea')) {
-pokemon.addVolatile('protosynthesis');
-} else if (!pokemon.volatiles['protosynthesis']?.fromBooster) {
-pokemon.removeVolatile('protosynthesis');
+onModifySpe(spe, pokemon) {
+if (this.field.isWeather('sandstorm')) {
+return this.chainModify(2);
 }
-},
-onEnd(pokemon) {
-delete pokemon.volatiles['protosynthesis'];
-this.add('-end', pokemon, 'Protosynthesis', '[silent]');
 },
 onImmunity(type, pokemon) {
 if (type === 'sandstorm') return false;
 },
-condition: {
-noCopy: true,
-onStart(pokemon, source, effect) {
-if (effect?.id === 'boosterenergy') {
-this.effectState.fromBooster = true;
-this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
-} else {
-this.add('-activate', pokemon, 'ability: Protosynthesis');
-}
-this.effectState.bestStat = pokemon.getBestStat(false, true);
-this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
+onModifySecondaries(secondaries) {
+this.debug('Shield Dust prevent secondary');
+return secondaries.filter(effect => !!(effect.self || effect.dustproof));
 },
-onModifyAtkPriority: 5,
-onModifyAtk(atk, source, target, move) {
-if (this.effectState.bestStat !== 'atk') return;
-this.debug('Protosynthesis atk boost');
-return this.chainModify([150, 100]);
-},
-onModifyDefPriority: 6,
-onModifyDef(def, target, source, move) {
-if (this.effectState.bestStat !== 'def') return;
-this.debug('Protosynthesis def boost');
-return this.chainModify([150, 100]);
-},
-onModifySpAPriority: 5,
-onModifySpA(relayVar, source, target, move) {
-if (this.effectState.bestStat !== 'spa') return;
-this.debug('Protosynthesis spa boost');
-return this.chainModify([150, 100]);
-},
-onModifySpDPriority: 6,
-onModifySpD(relayVar, target, source, move) {
-if (this.effectState.bestStat !== 'spd') return;
-this.debug('Protosynthesis spd boost');
-return this.chainModify([150, 100]);
-},
-onModifySpe(spe, pokemon) {
-if (this.effectState.bestStat === 'spe') {
-this.debug('Protosynthesis spe boost');
-spe = this.chainModify([150, 100]);
-}
-if (this.field.isWeather('sandstorm')) {
-this.debug('Sand Rush spe boost in sandstorm');
-return this.chainModify(2);
-}
-return spe;
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Protosynthesis');
-}
-},
-isPermanent: true,
+isBreakable: true,
 name: "Wougfrey",
 },
 
