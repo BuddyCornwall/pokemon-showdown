@@ -3934,21 +3934,13 @@ name: "Sand Force",
 },
 
 sandrush: {
-onStart(pokemon) {
+onModifySpe(spe, pokemon) {
 if (this.field.isWeather('sandstorm')) {
-pokemon.addVolatile('sandrushboost');
+return this.chainModify(2);
 }
 },
-condition: {
-onStart(pokemon) {
-this.add('-start', pokemon, 'Sand Rush');
-},
-onModifySpe(spe, pokemon) {
-return this.chainModify(2);
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Sand Rush');
-},
+onImmunity(type, pokemon) {
+if (type === 'sandstorm') return false;
 },
 name: "Sand Rush",
 },
@@ -6345,21 +6337,10 @@ this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
 this.add('-ability', pokemon, 'Shield Dust');
 },
-onStart(pokemon) {
-if (this.field.isWeather('sandstorm')) {
-pokemon.addVolatile('sandrushboost');
-}
-},
-condition: {
-onStart(pokemon) {
-this.add('-start', pokemon, 'Sand Rush');
-},
 onModifySpe(spe, pokemon) {
-return this.chainModify(2);
-},
-onEnd(pokemon) {
-this.add('-end', pokemon, 'Sand Rush');
-},
+if (this.field.isWeather('sandstorm')) {
+return this.chainModify([200,100]);
+}
 },
 onImmunity(type, pokemon) {
 if (type === 'sandstorm') return false;
