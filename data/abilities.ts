@@ -6339,7 +6339,7 @@ this.add('-ability', pokemon, 'Shield Dust');
 },
 onModifySpe(spe, pokemon) {
 if (this.field.isWeather('sandstorm')) {
-return this.chainModify(2);
+return this.chainModify([200,100]);
 }
 },
 onImmunity(type, pokemon) {
