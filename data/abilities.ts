@@ -6386,25 +6386,6 @@ onPreStart(pokemon) {
 this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
 this.add('-ability', pokemon, 'Protosynthesis');
-},
-onStart(pokemon) {
-this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
-},
-onWeatherChange(pokemon) {
-if (pokemon.transformed) return;
-if (this.field.isWeather('sandstorm','hail','snow','sunnyday','desolateland','raindance','primordialsea')) {
-pokemon.addVolatile('protosynthesiswougfrey');
-} else if (!pokemon.volatiles['protosynthesiswougfrey']?.fromBooster) {
-pokemon.removeVolatile('protosynthesiswougfrey');
-}
-},
-onEnd(pokemon) {
-delete pokemon.volatiles['protosynthesiswougfrey'];
-this.add('-end', pokemon, 'Protosynthesiswougfrey', '[silent]');
-},
-onImmunity(type, pokemon) {
-if (type === 'sandstorm') return false;
-},
 condition: {
 noCopy: true,
 onStart(pokemon, source, effect) {
@@ -6440,7 +6421,7 @@ return this.chainModify(2);
 return spe;
 },
 onEnd(pokemon) {
-this.add('-end', pokemon, 'Protosynthesiswougfrey');
+this.add('-end', pokemon, 'Protosynthesis');
 }
 },
 isPermanent: true,
