@@ -460,7 +460,6 @@ name: "Aqua Step",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, dance: 1, kicking: 1},
-
 onHit(target, source, move) {
 this.add('-message', `Step on me daddy ${source.name}!`);
 },
@@ -3597,6 +3596,9 @@ name: "Dragon Dance",
 pp: 0.625,
 priority: 0,
 flags: {snatch: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 boosts: {
 atk: 1,
 spa: 1,
@@ -4648,6 +4650,9 @@ name: "Feather Dance",
 pp: 0.625,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 boosts: {
 atk: -2,
 spa: -2,
@@ -4699,6 +4704,9 @@ name: "Fiery Dance",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 thawsTarget: true,
 secondary: {
 chance: 50,
@@ -10479,6 +10487,9 @@ name: "Petal Dance",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 self: {
 volatileStatus: 'lockedmove',
 },
@@ -11737,6 +11748,9 @@ name: "Quiver Dance",
 pp: 0.625,
 priority: 0,
 flags: {snatch: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 boosts: {
 spa: 1,
 spd: 1,
@@ -11864,6 +11878,9 @@ name: "Rain Dance",
 pp: 0.625,
 priority: 0,
 flags: {dance: 1, protect: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 weather: 'RainDance',
 secondary: null,
 target: "any",
@@ -12149,6 +12166,9 @@ name: "Revelation Dance",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, mirror: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 onModifyType(move, pokemon) {
 let type = pokemon.getTypes()[0];
 if (type === "Bird") type = "???";
@@ -15523,6 +15543,9 @@ name: "Swords Dance",
 pp: 0.625,
 priority: 0,
 flags: {snatch: 1, dance: 1},
+onHit(target, source, move) {
+this.add('-message', `${source.name} is doing their dance!`);
+},
 boosts: {
 atk: 3,
 evasion: -3,
