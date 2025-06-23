@@ -15,6 +15,12 @@ ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'HP Percentage Mod', 'Can
 },
 
 {
+name: "PGL: Rotation",
+gameType: 'rotation',
+ruleset: ['Picked Team Size = 4','Max Move Count = 8', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Team Preview', 'Min Team Size = 4', 'Max Team Size = 4'],
+},
+
+{
 name: "TRISTAN",
 gameType: 'triples',
 ruleset: ['Max Move Count = 8', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause'],
