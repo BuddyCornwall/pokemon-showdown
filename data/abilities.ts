@@ -477,7 +477,7 @@ name: "Aroma Veil",
 },
 
 asoneglastrier: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-ability', pokemon, 'As One');
 this.add('-ability', pokemon, 'Unnerve');
 this.effectState.unnerved = true;
@@ -498,7 +498,7 @@ name: "As One (Glastrier)",
 },
 
 asonespectrier: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-ability', pokemon, 'As One');
 this.add('-ability', pokemon, 'Unnerve');
 this.effectState.unnerved = true;
@@ -1343,7 +1343,7 @@ onStart(source) {
 this.field.setTerrain('electricterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
 },
 
@@ -1410,7 +1410,7 @@ name: "Flame Body",
 },
 
 flareboost: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', `${pokemon.name} is all fired up!`);
 },
 onBasePowerPriority: 1.59,
@@ -1756,7 +1756,7 @@ onStart(source) {
 this.field.setTerrain('grassyterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
 },
 
@@ -1856,7 +1856,7 @@ onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('electricterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
 },
 
@@ -1869,7 +1869,7 @@ onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('mistyterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!');
 },
 
@@ -1882,7 +1882,7 @@ onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('psychicterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!');
 },
 
@@ -1964,7 +1964,7 @@ name: "Honey Gather",
 },
 
 purepower: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
 },
 onModifyAtkPriority: 5,
@@ -1975,7 +1975,7 @@ name: "Pure Power",
 },
 
 hugepurepower: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', `Oh shit! ${pokemon.name} is surging with power!`);
 },
 onStart(pokemon, source, effect) {
@@ -1997,7 +1997,7 @@ name: "Huge Pure Power",
 },
 
 hugepower: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', `${pokemon.name} is surging with power!`);
 },
 onModifyAtkPriority: 5,
@@ -2347,7 +2347,7 @@ name: "Flustered",
 },
 
 intrepidsword: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Intrepid Sword has boosted their highest attacking stat.');
 this.add('-ability', pokemon, 'Intrepid Sword');
 },
@@ -2843,7 +2843,7 @@ name: "Mirror Armor",
 },
 
 mistysurge: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Misty Terrain! Dragon moves are now less powerful! Pokémon can not be inflicted with non volatile status conditions!');
 },
 
@@ -3103,7 +3103,7 @@ name: "Neuroforce",
 },
 
 neutralizinggas: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 if (pokemon.transformed) return;
 this.add('-ability', pokemon, 'Neutralizing Gas');
 pokemon.abilityState.ending = false;
@@ -3599,7 +3599,7 @@ onStart(source) {
 this.field.setTerrain('psychicterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Psychic Terrain! Psychic moves are now more powerful! Pokémon can not use priority moves!');
 },
 
@@ -4075,7 +4075,7 @@ onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('grassyterrain');
 },
 
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'pokemon','triggered Grassy Terrain! Grass moves are now more powerful! Pokémon restore HP each turn!');
 },
 
@@ -4961,7 +4961,7 @@ name: "Tough Claws",
 },
 
 toxicboost: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', `${pokemon.name} has venom running through their veins!`);
 },
 onBasePowerPriority: 1.59,
@@ -5122,7 +5122,7 @@ name: "Unburden",
 },
 
 unnerve: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-ability', pokemon, 'Unnerve');
 this.effectState.unnerved = true;
 },
@@ -5333,7 +5333,7 @@ name: "White Smoke",
 },
 
 unstablepower: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', pokemon, 'glows with an unstable energy.');
 },
 onResidualOrder: 26,
@@ -5661,7 +5661,7 @@ name: "Elemental Absorption"
 },
 
 purplerain: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Purple rain falls from the sky 🌧️');
 this.field.setWeather('raindance');
 },
@@ -5692,7 +5692,7 @@ name: "Destiny's Gambit",
 },
 
 venturara: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'aint got time to bleed.');
 },
 onUpdate(pokemon) {
@@ -5837,7 +5837,7 @@ name: "Ghostly Goodbye",
 
 
 axolargel: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
 this.add('-ability', pokemon, 'Mold Breaker');
 this.add('-ability', pokemon, 'Refrigerate');
@@ -5862,7 +5862,7 @@ name: "Axolargel",
 },
 
 ugly: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'UGLY is VERY angry.');
 this.add('-ability', pokemon, 'Sniper');
 this.add('-ability', pokemon, 'Anger Point');
@@ -5883,7 +5883,7 @@ name: "UGLY",
 },
 
 incendiarykong: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Incendiary Kong has fists of steel. *POW!*');
 this.add('-ability', pokemon, 'Iron Fist');
 this.add('-ability', pokemon, 'Sand Stream');
@@ -5902,7 +5902,7 @@ name: "Incendiary Kong",
 },
 
 beauty: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'The Toxic Queen is here!');
 this.add('-ability', pokemon, 'Queenly Majesty');
 this.add('-ability', pokemon, 'Toxic Boost');
@@ -5933,7 +5933,7 @@ name: "BEAUTY",
 },
 
 flicker: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Flicker can do this all day.');
 this.add('-ability', pokemon, 'Enduring Stamina Stamina');
 this.add('-ability', pokemon, 'Steely Spirit');
@@ -5960,7 +5960,7 @@ name: "Flicker",
 },
 
 globaljones: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Global Jones is here to take over the world');
 this.add('-ability', pokemon, 'Unburden');
 this.add('-ability', pokemon, 'Yoltoorshul');
@@ -5992,7 +5992,7 @@ name: "Global Jones",
 },
 
 strongbad: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Strong Bad is on Fire!');
 this.add('-ability', pokemon, 'Flash Fire');
 this.add('-ability', pokemon, 'Umbralate');
@@ -6049,7 +6049,7 @@ name: "Strong Bad",
 },
 
 jonsi: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'The Ice Queen approaches');
 this.add('-ability', pokemon, 'Ice Body');
 this.add('-ability', pokemon, 'Unnerve');
@@ -6078,7 +6078,7 @@ name: "Jonsi",
 },
 
 knievel: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Fury & focus surge through Kenivals veins!');
 this.add('-ability', pokemon, 'Tough Claws');
 this.add('-ability', pokemon, 'Kentaromiura');
@@ -6117,7 +6117,7 @@ name: "Knievel",
 },
 
 rukiaryuko: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'B A N K A I!');
 this.add('-ability', pokemon, 'Sharpness');
 this.add('-ability', pokemon, 'Rough Skin');
@@ -6139,7 +6139,7 @@ name: "Rukia Ryuko",
 },
 
 happywol: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Wol is just happy to be here!');
 this.add('-ability', pokemon, 'Serene Grace');
 this.add('-ability', pokemon, 'Neuroforce');
@@ -6163,7 +6163,7 @@ name: "Happy Wol",
 },
 
 moira: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Moira glides onto the scene!');
 this.add('-ability', pokemon, 'Grassy Surge');
 this.add('-ability', pokemon, 'Leaf Guard');
@@ -6191,7 +6191,7 @@ name: "Moira",
 },
 
 yancha: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Yancha is a lightning rod for success!');
 this.add('-ability', pokemon, 'Speed Boost');
 this.add('-ability', pokemon, 'Lightning Rod');
@@ -6228,7 +6228,7 @@ name: "Yancha",
 },
 
 dangdaedangdang: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', '🎵Dangdadangdang!');
 this.add('-ability', pokemon, 'Multiscale');
 this.add('-ability', pokemon, 'No Guard');
@@ -6253,7 +6253,7 @@ name: "Dangdaedangdang",
 },
 
 tush: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'TUUUUUUUUSH!');
 this.add('-ability', pokemon, 'Grass Pelt');
 this.add('-ability', pokemon, 'Qosrodah');
@@ -6281,7 +6281,7 @@ name: "Tush",
 },
 
 scarface: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'All I have in this world is my balls and my word, and I break em for no one!');
 this.add('-ability', pokemon, 'Synchronize');
 this.add('-ability', pokemon, 'Elemental Absorption');
@@ -6305,7 +6305,7 @@ name: "Scarface",
 },
 
 dre: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Once again you forgot about Dre');
 this.add('-ability', pokemon, 'Analytic');
 this.add('-ability', pokemon, 'Unseen Fist');
@@ -6332,7 +6332,7 @@ name: "Dre",
 },
 
 wougfrey: {
-onPreStart(pokemon) {
+onStart(pokemon) {
 this.add('-message', 'Wouggers wiggles into battle.');
 this.add('-ability', pokemon, 'Sand Rush');
 this.add('-ability', pokemon, 'Shield Dust');
