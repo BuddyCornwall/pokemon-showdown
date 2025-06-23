@@ -1,4 +1,4 @@
-export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	asoneglastrier: {
 		inherit: true,
 		isNonstandard: "Past",

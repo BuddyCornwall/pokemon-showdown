@@ -1,15 +1,15 @@
-export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	commander: {
 		inherit: true,
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 },
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 	},
 	gulpmissile: {
 		inherit: true,
-		flags: { cantsuppress: 1, notransform: 1 },
+		flags: {cantsuppress: 1, notransform: 1},
 	},
 	hadronengine: {
 		inherit: true,
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 },
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 	},
 	illuminate: {
 		inherit: true,
@@ -24,7 +24,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	orichalcumpulse: {
 		inherit: true,
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 },
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 	},
 	supersweetsyrup: {
 		inherit: true,
@@ -38,19 +38,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: "Future",
 	},
-	embodyaspectcornerstone: {
-		inherit: true,
-		isNonstandard: "Future",
-	},
-	embodyaspecthearthflame: {
-		inherit: true,
-		isNonstandard: "Future",
-	},
-	embodyaspectteal: {
-		inherit: true,
-		isNonstandard: "Future",
-	},
-	embodyaspectwellspring: {
+	embodyaspect: {
 		inherit: true,
 		isNonstandard: "Future",
 	},

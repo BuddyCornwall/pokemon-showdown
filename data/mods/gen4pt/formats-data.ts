@@ -1,4 +1,4 @@
-export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable = {
+export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	pichuspikyeared: {
 		isNonstandard: "Future",
 		tier: "Illegal",

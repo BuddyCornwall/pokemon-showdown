@@ -1,4 +1,4 @@
-export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
+export const Moves: {[k: string]: ModdedMoveData} = {
 	aeroblast: {
 		inherit: true,
 		isNonstandard: "Unobtainable",

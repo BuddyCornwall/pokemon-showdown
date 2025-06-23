@@ -1,4 +1,4 @@
-export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	aerilate: {
 		inherit: true,
 		onModifyType(move, pokemon) {
@@ -98,7 +98,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		onDamagingHit(damage, target, source, move) {
 			if (['Dark', 'Grass', 'Psychic'].includes(move.type)) {
-				this.boost({ spe: 1 });
+				this.boost({spe: 1});
 			}
 		},
 	},

@@ -1,4 +1,4 @@
-export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable = {
+export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	vivillonfancy: {
 		inherit: true,
 		eventOnly: true,

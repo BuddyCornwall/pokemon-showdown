@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable = {
+export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	bulbasaur: {
 		learnset: {
 			amnesia: ["8E"],
@@ -24396,27 +24396,27 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
 	},
 	rotomheat: {
 		learnset: {
-			overheat: ["8R"],
+			overheat: ["8T"],
 		},
 	},
 	rotomwash: {
 		learnset: {
-			hydropump: ["8R"],
+			hydropump: ["8T"],
 		},
 	},
 	rotomfrost: {
 		learnset: {
-			blizzard: ["8R"],
+			blizzard: ["8T"],
 		},
 	},
 	rotomfan: {
 		learnset: {
-			airslash: ["8R"],
+			airslash: ["8T"],
 		},
 	},
 	rotommow: {
 		learnset: {
-			leafstorm: ["8R"],
+			leafstorm: ["8T"],
 		},
 	},
 	uxie: {

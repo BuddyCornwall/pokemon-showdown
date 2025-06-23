@@ -1,17 +1,15 @@
-export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	airlock: {
 		inherit: true,
 		onSwitchIn() {},
-		onStart(pokemon) {
-			pokemon.abilityState.ending = false;
-		},
+		onStart() {},
 	},
 	angerpoint: {
 		inherit: true,
 		onAfterSubDamage(damage, target, source, move) {
 			if (!target.hp) return;
 			if (move && move.effectType === 'Move' && target.getMoveHitData(move).crit) {
-				target.setBoost({ atk: 6 });
+				target.setBoost({atk: 6});
 				this.add('-setboost', target, 'atk', 12, '[from] ability: Anger Point');
 			}
 		},
@@ -37,9 +35,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	cloudnine: {
 		inherit: true,
 		onSwitchIn() {},
-		onStart(pokemon) {
-			pokemon.abilityState.ending = false;
-		},
+		onStart() {},
 	},
 	colorchange: {
 		inherit: true,
@@ -69,23 +65,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				if (this.randomChance(3, 10)) {
 					source.addVolatile('attract', this.effectState.target);
 				}
-			}
-		},
-	},
-	download: {
-		inherit: true,
-		onStart(pokemon) {
-			let totaldef = 0;
-			let totalspd = 0;
-			for (const target of pokemon.foes()) {
-				if (target.volatiles.substitute) continue;
-				totaldef += target.getStat('def', false, true);
-				totalspd += target.getStat('spd', false, true);
-			}
-			if (totaldef && totaldef >= totalspd) {
-				this.boost({ spa: 1 });
-			} else if (totalspd) {
-				this.boost({ atk: 1 });
 			}
 		},
 	},
@@ -155,11 +134,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return this.chainModify(1.5);
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {breakable: 1},
 	},
 	forecast: {
 		inherit: true,
-		flags: { notrace: 1 },
+		flags: {notrace: 1},
 	},
 	forewarn: {
 		inherit: true,
@@ -189,9 +168,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	frisk: {
 		inherit: true,
 		onStart(pokemon) {
-			const target = pokemon.side.randomFoe();
-			if (target?.item && !target.itemState.knockedOff) {
-				this.add('-item', '', target.getItem().name, '[from] ability: Frisk', `[of] ${pokemon}`);
+			for (const target of pokemon.foes()) {
+				if (target.item && !target.itemState.knockedOff) {
+					this.add('-item', target, target.getItem().name, '[from] ability: Frisk', '[of] ' + pokemon, '[identify]');
+				}
 			}
 		},
 	},
@@ -238,7 +218,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				} else if (target.volatiles['substitutebroken']?.move === 'uturn') {
 					this.hint("In Gen 4, if U-turn breaks Substitute the incoming Intimidate does nothing.");
 				} else {
-					this.boost({ atk: -1 }, target, pokemon, null, true);
+					this.boost({atk: -1}, target, pokemon, null, true);
 				}
 			}
 		},
@@ -247,7 +227,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		onSetStatus(status, target, source, effect) {
 			if (effect && effect.id === 'rest') {
-				// do nothing
+				return;
 			} else if (this.field.isWeather('sunnyday')) {
 				return false;
 			}
@@ -261,7 +241,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	liquidooze: {
 		inherit: true,
 		onSourceTryHeal(damage, target, source, effect) {
-			this.debug(`Heal is occurring: ${target} <- ${source} :: ${effect.id}`);
+			this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
 			const canOoze = ['drain', 'leechseed'];
 			if (canOoze.includes(effect.id) && this.activeMove?.id !== 'dreameater') {
 				this.damage(damage, null, null, null, true);
@@ -390,7 +370,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	serenegrace: {
 		inherit: true,
 		onModifyMove(move) {
-			if (move.secondaries && move.id !== 'chatter') {
+			if (move.secondaries) {
 				this.debug('doubling secondary chance');
 				for (const secondary of move.secondaries) {
 					if (secondary.chance) secondary.chance *= 2;
@@ -410,7 +390,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				boosts[key]! *= 2;
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {breakable: 1},
 		name: "Simple",
 		rating: 4,
 		num: 86,
@@ -506,7 +486,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return this.chainModify(0.5);
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {breakable: 1},
 		name: "Thick Fat",
 		rating: 3.5,
 		num: 47,
@@ -526,7 +506,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	trace: {
 		inherit: true,
 		onUpdate(pokemon) {
-			if (!this.effectState.seek) return;
+			if (!pokemon.isStarted) return;
 			const target = pokemon.side.randomFoe();
 			if (!target || target.fainted) return;
 			const ability = target.getAbility();
@@ -535,10 +515,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return;
 			}
 			if (pokemon.setAbility(ability)) {
-				this.add('-ability', pokemon, ability, '[from] ability: Trace', `[of] ${target}`);
+				this.add('-ability', pokemon, ability, '[from] ability: Trace', '[of] ' + target);
 			}
 		},
-		flags: { notrace: 1 },
+		flags: {notrace: 1},
 	},
 	unburden: {
 		inherit: true,
@@ -558,12 +538,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		onTryHit(target, source, move) {
 			if (move.id === 'firefang') {
-				this.hint("In Gen 4, Fire Fang is always able to hit through Wonder Guard.", true, target.side);
+				this.hint("In Gen 4, Fire Fang is always able to hit through Wonder Guard.");
 				return;
 			}
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
 			this.debug('Wonder Guard immunity: ' + move.id);
-			if (target.runEffectiveness(move) <= 0 || !target.runImmunity(move)) {
+			if (target.runEffectiveness(move) <= 0) {
 				this.add('-immune', target, '[from] ability: Wonder Guard');
 				return null;
 			}

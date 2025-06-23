@@ -1,4 +1,4 @@
-export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
+export const Moves: {[k: string]: ModdedMoveData} = {
 	camouflage: {
 		inherit: true,
 		onHit(target) {
@@ -84,7 +84,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				if (target.hasType('Normal')) return 0;
 			}
 		},
-		ignoreImmunity: { 'Fighting': true },
+		ignoreImmunity: {'Fighting': true},
 	},
 	trickortreat: {
 		inherit: true,
@@ -113,7 +113,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			case 'raindance':
 			case 'primordialsea':
 			case 'hail':
-			case 'snowscape':
+			case 'snow':
 				move.type = 'Water';
 				break;
 			case 'sandstorm':

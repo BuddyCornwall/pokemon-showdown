@@ -1,4 +1,4 @@
-export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
+export const Moves: {[k: string]: ModdedMoveData} = {
 	absorb: {
 		inherit: true,
 		basePower: 40,

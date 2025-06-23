@@ -1,4 +1,4 @@
-export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
+export const Items: {[k: string]: ModdedItemData} = {
 	airballoon: {
 		inherit: true,
 		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
@@ -6,7 +6,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-enditem', target, 'Air Balloon');
 			if (target.item === 'airballoon') {
 				target.item = '';
-				this.clearEffectState(target.itemState);
+				target.itemState = {id: '', target};
 			} else {
 				delete target.volatiles['item:airballoon'];
 				target.m.sharedItemsUsed.push('airballoon');
@@ -19,7 +19,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 				this.add('-enditem', target, 'Air Balloon');
 				if (target.item === 'airballoon') {
 					target.item = '';
-					this.clearEffectState(target.itemState);
+					target.itemState = {id: '', target};
 				} else {
 					delete target.volatiles['item:airballoon'];
 					target.m.sharedItemsUsed.push('airballoon');

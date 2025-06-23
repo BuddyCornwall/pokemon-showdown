@@ -1,4 +1,4 @@
-export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	disguise: {
 		inherit: true,
 		onDamage(damage, target, source, effect) {
@@ -19,22 +19,25 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (['mimikyu', 'mimikyutotem'].includes(pokemon.species.id) && this.effectState.busted) {
 				const speciesid = pokemon.species.id === 'mimikyutotem' ? 'Mimikyu-Busted-Totem' : 'Mimikyu-Busted';
 				pokemon.formeChange(speciesid, this.effect, true);
-				pokemon.formeRegression = true;
 			}
 		},
 	},
 	darkaura: {
 		inherit: true,
-		flags: { breakable: 1 },
+		flags: {breakable: 1},
 	},
 	fairyaura: {
 		inherit: true,
-		flags: { breakable: 1 },
+		flags: {breakable: 1},
 	},
 	innerfocus: {
 		inherit: true,
 		rating: 1,
 		onTryBoost() {},
+	},
+	intimidate: {
+		inherit: true,
+		rating: 4,
 	},
 	moody: {
 		inherit: true,
@@ -74,7 +77,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	rattled: {
 		onDamagingHit(damage, target, source, move) {
 			if (['Dark', 'Bug', 'Ghost'].includes(move.type)) {
-				this.boost({ spe: 1 });
+				this.boost({spe: 1});
 			}
 		},
 		name: "Rattled",

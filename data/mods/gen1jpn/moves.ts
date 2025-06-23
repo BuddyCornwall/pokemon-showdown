@@ -2,7 +2,7 @@
  * The japanese version of Blizzard in Gen 1 had a 30% chance to freeze
  */
 
-export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
+export const Moves: {[k: string]: ModdedMoveData} = {
 	blizzard: {
 		inherit: true,
 		secondary: {
@@ -39,8 +39,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				// NOTE: In future generations the damage is capped to the remaining HP of the
 				// Substitute, here we deliberately use the uncapped damage when tracking lastDamage etc.
 				// Also, multi-hit moves must always deal the same damage as the first hit for any subsequent hits
-				const uncappedDamage = move.hit > 1 ? this.lastDamage : this.actions.getDamage(source, target, move);
+				let uncappedDamage = move.hit > 1 ? this.lastDamage : this.actions.getDamage(source, target, move);
 				if (!uncappedDamage && uncappedDamage !== 0) return null;
+				uncappedDamage = this.runEvent('SubDamage', target, source, move, uncappedDamage);
+				if (!uncappedDamage && uncappedDamage !== 0) return uncappedDamage;
 				this.lastDamage = uncappedDamage;
 				target.volatiles['substitute'].hp -= uncappedDamage > target.volatiles['substitute'].hp ?
 					target.volatiles['substitute'].hp : uncappedDamage;
@@ -63,7 +65,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				// Add here counter damage
 				const lastAttackedBy = target.getLastAttackedBy();
 				if (!lastAttackedBy) {
-					target.attackedBy.push({ source, move: move.id, damage: uncappedDamage, thisTurn: true, slot: source.getSlot() });
+					target.attackedBy.push({source: source, move: move.id, damage: uncappedDamage, thisTurn: true, slot: source.getSlot()});
 				} else {
 					lastAttackedBy.move = move.id;
 					lastAttackedBy.damage = uncappedDamage;

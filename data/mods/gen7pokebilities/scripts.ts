@@ -92,14 +92,13 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.boosts[boostName] = pokemon.boosts[boostName];
 			}
 			if (this.battle.gen >= 6) {
-				// we need to be sure to remove all the overlapping crit volatiles before trying to add any of them
-				const volatilesToCopy = ['dragoncheer', 'focusenergy', 'gmaxchistrike', 'laserfocus'];
-				for (const volatile of volatilesToCopy) this.removeVolatile(volatile);
+				const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
 				for (const volatile of volatilesToCopy) {
 					if (pokemon.volatiles[volatile]) {
 						this.addVolatile(volatile);
 						if (volatile === 'gmaxchistrike') this.volatiles[volatile].layers = pokemon.volatiles[volatile].layers;
-						if (volatile === 'dragoncheer') this.volatiles[volatile].hasDragonType = pokemon.volatiles[volatile].hasDragonType;
+					} else {
+						this.removeVolatile(volatile);
 					}
 				}
 			}
@@ -169,14 +168,15 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.illusion ? this.illusion.species.name : species.baseSpecies;
 			if (isPermanent) {
 				this.baseSpecies = rawSpecies;
-				this.details = this.getUpdatedDetails();
+				this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
+					(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
 				this.battle.add('detailschange', this, (this.illusion || this).details);
 				if (source.effectType === 'Item') {
 					this.canTerastallize = null; // National Dex behavior
 					if (source.zMove) {
 						this.battle.add('-burst', this, apparentSpecies, species.requiredItem);
 						this.moveThisTurnResult = true; // Ultra Burst counts as an action for Truant
-					} else if (source.isPrimalOrb) {
+					} else if (source.onPrimal) {
 						if (this.illusion) {
 							this.ability = '';
 							this.battle.add('-primal', this.illusion);
