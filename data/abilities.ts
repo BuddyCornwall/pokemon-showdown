@@ -5776,11 +5776,11 @@ dusktodawn: {
 
     if (attacker.species.baseSpecies !== 'Lunatone' && attacker.species.baseSpecies !== 'Solrock') return;
 
-    if (move.id === 'dusk') {
+    if (move.id === 'dawn') {
       if (attacker.species.baseSpecies === 'Lunatone' && attacker.species.name !== 'Solrock') {
         attacker.formeChange('Solrock', this.effect, true);
       }
-    } else if (move.id === 'dawn') {
+    } else if (move.id === 'dusk') {
       if (attacker.species.baseSpecies === 'Solrock' && attacker.species.name !== 'Lunatone') {
         attacker.formeChange('Lunatone', this.effect, true);
       }
