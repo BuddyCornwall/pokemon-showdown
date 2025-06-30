@@ -5720,42 +5720,38 @@ name: "Venturara",
 },
 
 rotombola: {
-onResidualOrder: 999,
-onResidual(pokemon) {
-if (!this.turn) return;
-const currentForm = pokemon.species.name;
-let targetForme;
-switch (currentForm) {
-case 'Rotom':
-targetForme = 'Rotom-Wash';
-break;
-case 'Rotom-Wash':
-targetForme = 'Rotom-Heat';
-break;
-case 'Rotom-Heat':
-targetForme = 'Rotom-Frost';
-break;
-case 'Rotom-Frost':
-targetForme = 'Rotom-Fan';
-break;
-case 'Rotom-Fan':
-targetForme = 'Rotom-Mow';
-break;
-case 'Rotom-Mow':
-targetForme = 'Rotom';
-break;
-default:
-targetForme = 'Rotom';
-break;
-}
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme);
-this.add('-formechange', pokemon, targetForme);
-}
+  onResidualOrder: 999,
+  onResidual(pokemon) {
+    if (!this.turn) return;
+
+    // Define all possible Rotom forms
+    const forms = [
+      'Rotom',
+      'Rotom-Wash',
+      'Rotom-Heat',
+      'Rotom-Frost',
+      'Rotom-Fan',
+      'Rotom-Mow',
+    ];
+
+    const currentForm = pokemon.species.name;
+
+    // Filter out the current form so it always changes
+    const possibleForms = forms.filter(f => f !== currentForm);
+
+    // Choose a random new form
+    const targetForme = this.sample(possibleForms);
+
+    // Change form
+    if (currentForm !== targetForme) {
+      pokemon.formeChange(targetForme, this.effect, true);
+      this.add('-formechange', pokemon, targetForme);
+    }
+  },
+  isPermanent: true,
+  name: "Rotombola",
 },
-isPermanent: true,
-name: "Rotombola",
-},
+
 
 slowbros: {
 onModifyMovePriority: 1.5,
