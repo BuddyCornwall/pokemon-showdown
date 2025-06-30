@@ -5720,38 +5720,28 @@ name: "Venturara",
 },
 
 rotombola: {
-  onResidualOrder: 999,
-  onResidual(pokemon) {
-    if (!this.turn) return;
-
-    // Define all possible Rotom forms
-    const forms = [
-      'Rotom',
-      'Rotom-Wash',
-      'Rotom-Heat',
-      'Rotom-Frost',
-      'Rotom-Fan',
-      'Rotom-Mow',
-    ];
-
-    const currentForm = pokemon.species.name;
-
-    // Filter out the current form so it always changes
-    const possibleForms = forms.filter(f => f !== currentForm);
-
-    // Choose a random new form
-    const targetForme = this.sample(possibleForms);
-
-    // Change form
-    if (currentForm !== targetForme) {
-      pokemon.formeChange(targetForme, this.effect, true);
-      this.add('-formechange', pokemon, targetForme);
-    }
-  },
-  isPermanent: true,
-  name: "Rotombola",
+onResidualOrder: 999,
+onResidual(pokemon) {
+if (!this.turn) return;
+const forms = [
+'Rotom',
+'Rotom-Wash',
+'Rotom-Heat',
+'Rotom-Frost',
+'Rotom-Fan',
+'Rotom-Mow',
+];
+const currentForm = pokemon.species.name;
+const possibleForms = forms.filter(f => f !== currentForm);
+const targetForme = this.sample(possibleForms);
+if (currentForm !== targetForme) {
+pokemon.formeChange(targetForme, this.effect, true);
+this.add('-formechange', pokemon, targetForme);
+}
 },
-
+isPermanent: true,
+name: "Rotombola",
+},
 
 slowbros: {
 onModifyMovePriority: 1.5,
@@ -5766,26 +5756,23 @@ name: "Slow Bros",
 },
 
 dusktodawn: {
-  onModifyMovePriority: 1.5,
-  onModifyMove(move, attacker, defender) {
-    if (attacker.transformed) return;
-
-    if (attacker.species.baseSpecies !== 'Lunatone' && attacker.species.baseSpecies !== 'Solrock') return;
-
-    if (move.id === 'dawn') {
-      if (attacker.species.baseSpecies === 'Lunatone' && attacker.species.name !== 'Solrock') {
-        attacker.formeChange('Solrock', this.effect, true);
-      }
-    } else if (move.id === 'dusk') {
-      if (attacker.species.baseSpecies === 'Solrock' && attacker.species.name !== 'Lunatone') {
-        attacker.formeChange('Lunatone', this.effect, true);
-      }
-    }
-  },
-  isPermanent: true,
-  name: "Dusk to Dawn",
+onModifyMovePriority: 1.5,
+onModifyMove(move, attacker, defender) {
+if (attacker.transformed) return;
+if (attacker.species.baseSpecies !== 'Lunatone' && attacker.species.baseSpecies !== 'Solrock') return;
+if (move.id === 'dawn') {
+if (attacker.species.baseSpecies === 'Lunatone' && attacker.species.name !== 'Solrock') {
+attacker.formeChange('Solrock', this.effect, true);
+}
+} else if (move.id === 'dusk') {
+if (attacker.species.baseSpecies === 'Solrock' && attacker.species.name !== 'Lunatone') {
+attacker.formeChange('Lunatone', this.effect, true);
+}
+}
 },
-
+isPermanent: true,
+name: "Dusk to Dawn",
+},
 
 ghostlygoodbye: {
 onUpdate(pokemon) {
