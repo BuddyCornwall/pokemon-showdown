@@ -18628,6 +18628,30 @@ target: "self",
 type: "Normal",
 },
 
+dusk: {
+accuracy: 85,
+basePower: 65,
+category: "Special",
+name: "Dusk",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1},
+target: "any",
+type: "Rock",
+},
+
+dawn: {
+accuracy: 85,
+basePower: 65,
+category: "Physical",
+name: "Dawn",
+pp: 1.25,
+priority: 0,
+flags: {contact: 1},
+target: "any",
+type: "Rock",
+},
+
 waterkick: {
 accuracy: 85,
 basePower: 75,

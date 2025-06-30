@@ -5769,57 +5769,27 @@ isPermanent: true,
 name: "Slow Bros",
 },
 
-dusk: {
-onResidualOrder: 999,
-onResidual(pokemon) {
-if (!this.turn) return;
-const currentForm = pokemon.species.name;
-let targetForme;
-switch (currentForm) {
-case 'Solrock':
-targetForme = 'Lunatone';
-break;
-case 'Lunatone':
-targetForme = 'Solrock';
-break;
-default:
-targetForme = 'Solrock';
-break;
-}
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme);
-this.add('-formechange', pokemon, targetForme);
-}
-},
-isPermanent: true,
-name: "Dusk",
+dusktodawn: {
+  onModifyMovePriority: 1.5,
+  onModifyMove(move, attacker, defender) {
+    if (attacker.transformed) return;
+
+    if (attacker.species.baseSpecies !== 'Lunatone' && attacker.species.baseSpecies !== 'Solrock') return;
+
+    if (move.id === 'dusk') {
+      if (attacker.species.baseSpecies === 'Lunatone' && attacker.species.name !== 'Solrock') {
+        attacker.formeChange('Solrock', this.effect, true);
+      }
+    } else if (move.id === 'dawn') {
+      if (attacker.species.baseSpecies === 'Solrock' && attacker.species.name !== 'Lunatone') {
+        attacker.formeChange('Lunatone', this.effect, true);
+      }
+    }
+  },
+  isPermanent: true,
+  name: "Dusk to Dawn",
 },
 
-dawn: {
-onResidualOrder: 999,
-onResidual(pokemon) {
-if (!this.turn) return;
-const currentForm = pokemon.species.name;
-let targetForme;
-switch (currentForm) {
-case 'Lunatone':
-targetForme = 'Solrock';
-break;
-case 'Solrock':
-targetForme = 'Lunatone';
-break;
-default:
-targetForme = 'Lunatone'; // Default to Lunatone
-break;
-}
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme);
-this.add('-formechange', pokemon, targetForme);
-}
-},
-isPermanent: true,
-name: "Dawn",
-},
 
 ghostlygoodbye: {
 onUpdate(pokemon) {
