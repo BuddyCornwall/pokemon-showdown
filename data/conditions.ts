@@ -770,7 +770,7 @@ if (pokemon.baseSpecies.name === 'Shedinja') return;
 // Changes based on dynamax level, 2 is max (at LVL 10)
 const ratio = 1.5 + (pokemon.dynamaxLevel * 0.05);
 
-pokemon.maxhp = Math.floor(pokemon.maxhp a* ratio);
+pokemon.maxhp = Math.floor(pokemon.maxhp * ratio);
 pokemon.hp = Math.floor(pokemon.hp * ratio);
 this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
 },
