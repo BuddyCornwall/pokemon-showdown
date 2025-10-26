@@ -6366,4 +6366,21 @@ isBreakable: true,
 name: "Scarface",
 },
 
+monkeybusiness: {
+name: "Monkey Business",
+shortDesc: "Grants STAB to Fire, Water, and Grass moves regardless of type. Displays a random lead monkey at battle start.",
+onStart(pokemon) {
+const leaders = ['Pansage', 'Pansear', 'Panpour'];
+const leader = this.sample(leaders);
+this.add('-ability', pokemon, 'Monkey Business');
+this.add('-message', `${leader} leads the Monkey Business!`);
+pokemon.m.leaderMonkey = leader; // store it for flavor or future effects
+},
+onModifyDamage(damage, source, target, move) {
+if (['Fire', 'Water', 'Grass'].includes(move.type)) {
+return this.chainModify(1.5);
+}
+},
+},
+
 };
