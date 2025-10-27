@@ -6306,27 +6306,6 @@ isBreakable: true,
 name: "Wougfrey",
 },
 
-
-
-
-};
-},
-onModifySecondaries(secondaries) {
-this.debug('Shield Dust prevent secondary');
-return secondaries.filter(effect => !!(effect.self || effect.dustproof));
-},
-isBreakable: true,
-name: "Wougfrey",
-},
-
-
-
-
-};
-
-
-
-};
 onModifySpD(pokemon) {
 if (this.field.isTerrain('grassyterrain')) {
 return this.chainModify(1.5);
