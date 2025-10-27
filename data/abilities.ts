@@ -5786,9 +5786,6 @@ this.add('-ability', pokemon, 'Wonder Guard');
 name: "Ghostly Goodbye",
 },
 
-
-
-
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
@@ -6306,6 +6303,7 @@ isBreakable: true,
 name: "Wougfrey",
 },
 
+tush: {
 onModifySpD(pokemon) {
 if (this.field.isTerrain('grassyterrain')) {
 return this.chainModify(1.5);
