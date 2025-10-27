@@ -6303,44 +6303,6 @@ isBreakable: true,
 name: "Wougfrey",
 },
 
-tush: {
-onModifySpD(pokemon) {
-if (this.field.isTerrain('grassyterrain')) {
-return this.chainModify(1.5);
-}
-},
-onModifyTypePriority: -1,
-onModifyType(move, pokemon) {
-if (move.flags['sound'] && !pokemon.volatiles['dynamax']) {
-move.type = 'Electric';
-}
-},
-isBreakable: true,
-name: "Tush",
-},
-
-scarface: {
-onPreStart(pokemon) {
-this.add('-message', 'All I have in this world is my balls and my word, and I break em for no one!');
-this.add('-ability', pokemon, 'Synchronize');
-this.add('-ability', pokemon, 'Elemental Absorption');
-},
-onAfterSetStatus(status, target, source, effect) {
-if (!source || source === target) return;
-if (effect && effect.id === 'toxicspikes') return;
-if (status.id === 'slp' || status.id === 'frz') return;
-this.add('-activate', target, 'ability: Synchronize');
-source.trySetStatus(status, target, {status: status.id, id: 'synchronize'} as Effect);
-},
-onTryHit: function (target, source, move) {
-if (move.type === target.types[0] || move.type === target.types[1]) {
-this.boost({[target.getStat('spa') > target.getStat('atk') ? 'spa' : 'atk']: 1.5});
-return;
-}
-return;
-},
-isBreakable: true,
-name: "Scarface",
-},
-
 };
+
+
