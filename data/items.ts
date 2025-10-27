@@ -166,18 +166,6 @@ spa: 1,
 
 adamantcrystal: {
 name: "Adamant Crystal",
-onBasePower(basePower, user, target, move) {
-if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
-return this.chainModify([115, 100]);
-}
-},
-
-if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
-return false;
-}
-},
-forcedForme: "Dialga-Origin",
-itemUser: ["Dialga-Origin"],
 },
 
 altarianite: {
