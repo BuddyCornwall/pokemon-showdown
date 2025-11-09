@@ -145,9 +145,6 @@ return target.hp - 1;
 },
 },
 
-
-
-
 absorbbulb: {
 name: "Absorb Bulb",
 fling: {
@@ -161,10 +158,6 @@ target.useItem();
 boosts: {
 spa: 1,
 },
-},
-
-adamantcrystal: {
-name: "Adamant Crystal",
 },
 
 apicotberry: {
@@ -183,14 +176,6 @@ pokemon.eatItem();
 onEat(pokemon) {
 this.boost({spd: 1.5});
 },
-},
-
-armorfossil: {
-name: "Armor Fossil",
-fling: {
-basePower: 100,
-},
-isNonstandard: "Past",
 },
 
 aspearberry: {
@@ -230,15 +215,6 @@ pokemon.disableMove(moveSlot.id);
 },
 },
 
-
-
-auspiciousarmor: {
-name: "Auspicious Armor",
-fling: {
-basePower: 30,
-},
-},
-
 babiriberry: {
 name: "Babiri Berry",
 isBerry: true,
@@ -259,15 +235,6 @@ return this.chainModify(0.5);
 },
 onEat() { },
 },
-
-
-
-beastball: {
-name: "Beast Ball",
-isPokeball: true,
-},
-
-
 
 belueberry: {
 name: "Belue Berry",
@@ -303,13 +270,6 @@ basePower: 10,
 isNonstandard: "Past",
 },
 
-bignugget: {
-name: "Big Nugget",
-fling: {
-basePower: 130,
-},
-},
-
 bigroot: {
 name: "Big Root",
 fling: {
@@ -322,14 +282,6 @@ if (heals.includes(effect.id)) {
 return this.chainModify([115, 100]);
 }
 },
-},
-
-bindingband: {
-name: "Binding Band",
-fling: {
-basePower: 30,
-},
-// implemented in statuses
 },
 
 blackbelt: {
@@ -374,10 +326,6 @@ this.damage(pokemon.baseMaxhp / 3);
 },
 },
 
-
-
-
-
 blueorb: {
 name: "Blue Orb",
 onSwitchIn(pokemon) {
@@ -409,10 +357,11 @@ isNonstandard: "Past",
 
 blunderpolicy: {
 name: "Blunder Policy",
-fling: {
-basePower: 80,
+onMoveFail(target, source, move) {
+if (source && source.useItem()) {
+this.boost({spe: 2}, source);
+}
 },
-// Item activation located in scripts.js
 },
 
 boosterenergy: {
@@ -436,69 +385,6 @@ return true;
 },
 },
 
-brightpowder: {
-name: "Bright Powder",
-fling: {
-basePower: 10,
-},
-onModifyAccuracyPriority: -2,
-onModifyAccuracy(accuracy) {
-if (typeof accuracy !== 'number') return;
-this.debug('brightpowder - decreasing accuracy');
-return this.chainModify([3686, 4096]);
-},
-},
-
-buggem: {
-name: "Bug Gem",
-isGem: true,
-onSourceTryPrimaryHit(target, source, move) {
-if (target === source || move.category === 'Status') return;
-if (move.type === 'Bug' && source.useItem()) {
-source.addVolatile('gem');
-}
-},
-isNonstandard: "Past",
-},
-
-bugmemory: {
-name: "Bug Memory",
-onMemory: 'Bug',
-onTakeItem(item, pokemon, source) {
-if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
-return false;
-}
-return true;
-},
-forcedForme: "Silvally-Bug",
-itemUser: ["Silvally-Bug"],
-isNonstandard: "Past",
-},
-
-buginiumz: {
-name: "Buginium Z",
-onPlate: 'Bug',
-onTakeItem: false,
-zMove: true,
-zMoveType: "Bug",
-forcedForme: "Arceus-Bug",
-isNonstandard: "Past",
-},
-
-burndrive: {
-name: "Burn Drive",
-onTakeItem(item, pokemon, source) {
-if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
-return false;
-}
-return true;
-},
-onDrive: 'Fire',
-forcedForme: "Genesect-Burn",
-itemUser: ["Genesect-Burn"],
-isNonstandard: "Past",
-},
-
 bulletproofvest: {
 name: "Bullet Proof Vest",
 fling: {
@@ -517,8 +403,6 @@ pokemon.disableMove(moveSlot.id);
 },
 },
 
-
-
 charcoal: {
 name: "Charcoal",
 fling: {
@@ -531,8 +415,6 @@ return this.chainModify([115, 100]);
 }
 },
 },
-
-
 
 chartiberry: {
 name: "Charti Berry",
@@ -574,12 +456,6 @@ pokemon.cureStatus();
 },
 },
 
-cherishball: {
-name: "Cherish Ball",
-isPokeball: true,
-isNonstandard: "Unobtainable",
-},
-
 chestoberry: {
 name: "Chesto Berry",
 isBerry: true,
@@ -619,27 +495,6 @@ return this.chainModify(0.5);
 }
 },
 onEat() { },
-},
-
-chilldrive: {
-name: "Chill Drive",
-onTakeItem(item, pokemon, source) {
-if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
-return false;
-}
-return true;
-},
-onDrive: 'Ice',
-forcedForme: "Genesect-Chill",
-itemUser: ["Genesect-Chill"],
-isNonstandard: "Past",
-},
-
-chippedpot: {
-name: "Chipped Pot",
-fling: {
-basePower: 80,
-},
 },
 
 choiceband: {
@@ -728,14 +583,6 @@ return this.chainModify(0.5);
 onEat() { },
 },
 
-clawfossil: {
-name: "Claw Fossil",
-fling: {
-basePower: 100,
-},
-isNonstandard: "Past",
-},
-
 clearamulet: {
 name: "Clear Amulet",
 fling: {
@@ -755,14 +602,6 @@ if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') 
 this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + target);
 }
 },
-},
-
-cloversweet: {
-name: "Clover Sweet",
-fling: {
-basePower: 10,
-},
-isNonstandard: "Past",
 },
 
 cobaberry: {
@@ -818,13 +657,6 @@ onEat: false,
 isNonstandard: "Past",
 },
 
-coverfossil: {
-name: "Cover Fossil",
-fling: {
-basePower: 100,
-},
-isNonstandard: "Past",
-},
 
 covertcloak: {
 name: "Covert Cloak",
@@ -2615,17 +2447,7 @@ return true;
 forcedForme: "Arceus-Grass",
 },
 
-medichamite: {
-name: "Medichamite",
-megaStone: "Medicham-Mega",
-megaEvolves: "Medicham",
-itemUser: ["Medicham"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 mentalherb: {
 name: "Mental Herb",
@@ -2663,17 +2485,7 @@ return;
 },
 },
 
-metagrossite: {
-name: "Metagrossite",
-megaStone: "Metagross-Mega",
-megaEvolves: "Metagross",
-itemUser: ["Metagross"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 metalcoat: {
 name: "Metal Coat",
@@ -2744,38 +2556,7 @@ return this.chainModify([dmgMod[numConsecutive], 4096]);
 },
 },
 
-mewniumz: {
-name: "Mewnium Z",
-onTakeItem: false,
-zMove: "Genesis Supernova",
-zMoveFrom: "Psychic",
-itemUser: ["Mew"],
-isNonstandard: "Past",
-},
 
-mewtwonitex: {
-name: "Mewtwonite X",
-megaStone: "Mewtwo-Mega-X",
-megaEvolves: "Mewtwo",
-itemUser: ["Mewtwo"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
-
-mewtwonitey: {
-name: "Mewtwonite Y",
-megaStone: "Mewtwo-Mega-Y",
-megaEvolves: "Mewtwo",
-itemUser: ["Mewtwo"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 micleberry: {
 name: "Micle Berry",
@@ -3164,35 +2945,7 @@ this.boost({spa: 1.5});
 },
 },
 
-pidgeotite: {
-name: "Pidgeotite",
-megaStone: "Pidgeot-Mega",
-megaEvolves: "Pidgeot",
-itemUser: ["Pidgeot"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-pikaniumz: {
-name: "Pikanium Z",
-onTakeItem: false,
-zMove: "Catastropika",
-zMoveFrom: "Volt Tackle",
-itemUser: ["Pikachu"],
-isNonstandard: "Past",
-},
-
-pikashuniumz: {
-name: "Pikashunium Z",
-onTakeItem: false,
-zMove: "10,000,000 Volt Thunderbolt",
-zMoveFrom: "Thunderbolt",
-itemUser: ["Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner"],
-isNonstandard: "Past",
-},
 
 pinapberry: {
 name: "Pinap Berry",
@@ -3205,17 +2958,7 @@ onEat: false,
 isNonstandard: "Past",
 },
 
-pinsirite: {
-name: "Pinsirite",
-megaStone: "Pinsir-Mega",
-megaEvolves: "Pinsir",
-itemUser: ["Pinsir"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 pixieplate: {
 name: "Pixie Plate",
@@ -3991,31 +3734,7 @@ return true;
 itemUser: ["Zacian-Crowned"],
 },
 
-sablenite: {
-name: "Sablenite",
-megaStone: "Sableye-Mega",
-megaEvolves: "Sableye",
-itemUser: ["Sableye"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-sachet: {
-name: "Sachet",
-fling: {
-basePower: 80,
-},
-isNonstandard: "Past",
-},
-
-safariball: {
-name: "Safari Ball",
-isPokeball: true,
-isNonstandard: "Unobtainable",
-},
 
 safetygoggles: {
 name: "Safety Goggles",
@@ -4059,41 +3778,7 @@ this.boost({spe: 1.5});
 },
 },
 
-salamencite: {
-name: "Salamencite",
-megaStone: "Salamence-Mega",
-megaEvolves: "Salamence",
-itemUser: ["Salamence"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-sceptilite: {
-name: "Sceptilite",
-megaStone: "Sceptile-Mega",
-megaEvolves: "Sceptile",
-itemUser: ["Sceptile"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
-
-scizorite: {
-name: "Scizorite",
-megaStone: "Scizor-Mega",
-megaEvolves: "Scizor",
-itemUser: ["Scizor"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 scopelens: {
 name: "Scope Lens",
@@ -4132,17 +3817,7 @@ return this.chainModify([115, 100]);
 },
 },
 
-sharpedonite: {
-name: "Sharpedonite",
-megaStone: "Sharpedo-Mega",
-megaEvolves: "Sharpedo",
-itemUser: ["Sharpedo"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 shedshell: {
 name: "Shed Shell",
@@ -4282,33 +3957,7 @@ return true;
 forcedForme: "Arceus-Flying",
 },
 
-slowbronite: {
-name: "Slowbronite",
-megaStone: "Slowbro-Mega",
-megaEvolves: "Slowbro",
-itemUser: ["Slowbro"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-smoothrock: {
-name: "Smooth Rock",
-fling: {
-basePower: 10,
-},
-},
-
-snorliumz: {
-name: "Snorlium Z",
-onTakeItem: false,
-zMove: "Pulverizing Pancake",
-zMoveFrom: "Giga Impact",
-itemUser: ["Snorlax"],
-isNonstandard: "Past",
-},
 
 snowball: {
 name: "Snowball",
@@ -4526,25 +4175,7 @@ this.boost(boost);
 },
 },
 
-starsweet: {
-name: "Star Sweet",
-fling: {
-basePower: 10,
-},
-isNonstandard: "Past",
-},
 
-steelixite: {
-name: "Steelixite",
-megaStone: "Steelix-Mega",
-megaEvolves: "Steelix",
-itemUser: ["Steelix"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 steelgem: {
 name: "Steel Gem",
@@ -4671,24 +4302,7 @@ this.damage(pokemon.baseMaxhp / 3);
 },
 },
 
-swampertite: {
-name: "Swampertite",
-megaStone: "Swampert-Mega",
-megaEvolves: "Swampert",
-itemUser: ["Swampert"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-sweetapple: {
-name: "Sweet Apple",
-fling: {
-basePower: 30,
-},
-},
 
 tamatoberry: {
 name: "Tamato Berry",
@@ -4831,39 +4445,7 @@ return this.chainModify([115, 100]);
 },
 },
 
-tyranitarite: {
-name: "Tyranitarite",
-megaStone: "Tyranitar-Mega",
-megaEvolves: "Tyranitar",
-itemUser: ["Tyranitar"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-ultraball: {
-name: "Ultra Ball",
-isPokeball: true,
-},
-
-ultranecroziumz: {
-name: "Ultranecrozium Z",
-onTakeItem: false,
-zMove: "Light That Burns the Sky",
-zMoveFrom: "Photon Geyser",
-itemUser: ["Necrozma-Ultra"],
-isNonstandard: "Past",
-},
-
-upgrade: {
-name: "Up-Grade",
-fling: {
-basePower: 30,
-},
-isNonstandard: "Past",
-},
 
 utilityumbrella: {
 name: "Utility Umbrella",
@@ -4892,17 +4474,7 @@ this.effectState.inactive = true;
 },
 },
 
-venusaurite: {
-name: "Venusaurite",
-megaStone: "Venusaur-Mega",
-megaEvolves: "Venusaur",
-itemUser: ["Venusaur"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 wacanberry: {
 name: "Wacan Berry",
@@ -5412,17 +4984,7 @@ pokemon.cureStatus();
 isNonstandard: "Past",
 },
 
-crucibellite: {
-name: "Crucibellite",
-megaStone: "Crucibelle-Mega",
-megaEvolves: "Crucibelle",
-itemUser: ["Crucibelle"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "CAP",
-},
+
 
 vilevial: {
 name: "Vile Vial",
@@ -5764,6 +5326,190 @@ name: "Master Ball",
 
 mawilite: {
 name: "Mawilite",
+},
+
+medichamite: {
+name: "Medichamite",
+},
+
+metagrossite: {
+name: "Metagrossite",
+},
+
+mewniumz: {
+name: "Mewnium Z",
+},
+
+mewtwonitex: {
+name: "Mewtwonite X",
+},
+
+mewtwonitey: {
+name: "Mewtwonite Y",
+},
+
+pidgeotite: {
+name: "Pidgeotite",
+},
+
+pikaniumz: {
+name: "Pikanium Z",
+},
+
+pikashuniumz: {
+name: "Pikashunium Z",
+},
+
+pinsirite: {
+name: "Pinsirite",
+},
+
+sablenite: {
+name: "Sablenite",
+},
+
+sachet: {
+name: "Sachet",
+},
+
+safariball: {
+name: "Safari Ball",
+},
+
+salamencite: {
+name: "Salamencite",
+},
+
+sceptilite: {
+name: "Sceptilite",
+},
+
+scizorite: {
+name: "Scizorite",
+},
+
+sharpedonite: {
+name: "Sharpedonite",
+},
+
+slowbronite: {
+name: "Slowbronite",
+},
+
+smoothrock: {
+name: "Smooth Rock",
+},
+
+snorliumz: {
+name: "Snorlium Z",
+},
+
+starsweet: {
+name: "Star Sweet",
+},
+
+steelixite: {
+name: "Steelixite",
+},
+
+swampertite: {
+name: "Swampertite",
+},
+
+sweetapple: {
+name: "Sweet Apple",
+},
+
+tyranitarite: {
+name: "Tyranitarite",
+},
+
+ultraball: {
+name: "Ultra Ball",
+},
+
+ultranecroziumz: {
+name: "Ultranecrozium Z",
+},
+
+upgrade: {
+name: "Up-Grade",
+},
+
+venusaurite: {
+name: "Venusaurite",
+},
+
+crucibellite: {
+name: "Crucibellite",
+},
+
+adamantcrystal: {
+name: "Adamant Crystal",
+},
+
+armorfossil: {
+name: "Armor Fossil",
+},
+
+auspiciousarmor: {
+name: "Auspicious Armor",
+},
+
+beastball: {
+name: "Beast Ball",
+},
+
+bignugget: {
+name: "Big Nugget",
+},
+
+bindingband: {
+name: "Binding Band",
+},
+
+brightpowder: {
+name: "Bright Powder",
+},
+
+buggem: {
+name: "Bug Gem",
+},
+
+bugmemory: {
+name: "Bug Memory",
+},
+
+buginiumz: {
+name: "Buginium Z",
+},
+
+burndrive: {
+name: "Burn Drive",
+},
+
+cherishball: {
+name: "Cherish Ball",
+},
+
+chilldrive: {
+name: "Chill Drive",
+},
+
+chippedpot: {
+name: "Chipped Pot",
+},
+
+clawfossil: {
+name: "Claw Fossil",
+},
+
+cloversweet: {
+name: "Clover Sweet",
+},
+
+coverfossil: {
+name: "Cover Fossil",
 },
 
 };
