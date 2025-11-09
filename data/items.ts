@@ -145,21 +145,8 @@ return target.hp - 1;
 },
 },
 
-abomasite: {
-name: "Abomasite",
-megaStone: "Abomasnow-Mega",
-megaEvolves: "Abomasnow",
-itemUser: ["Abomasnow"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-absolite: {
-name: "Absolite",
-},
+
 
 absorbbulb: {
 name: "Absorb Bulb",
@@ -5984,6 +5971,11 @@ return this.chainModify([115, 100]);
 
 
 
+absolite: {
+},
+
+abomasite: {
+},
 
 
 };
