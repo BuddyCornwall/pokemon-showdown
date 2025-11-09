@@ -3794,6 +3794,7 @@ name: "Galarica Wreath",
 
 ghostgem: {
 name: "Ghost Gem",
+},
 
 ghostmemory: {
 name: "Ghost Memory",
