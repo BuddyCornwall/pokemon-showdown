@@ -159,14 +159,6 @@ isNonstandard: "Past",
 
 absolite: {
 name: "Absolite",
-megaStone: "Absol-Mega",
-megaEvolves: "Absol",
-itemUser: ["Absol"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
 },
 
 absorbbulb: {
@@ -187,8 +179,6 @@ spa: 1,
 adamantcrystal: {
 name: "Adamant Crystal",
 },
-
-
 
 altarianite: {
 name: "Altarianite",
