@@ -260,34 +260,14 @@ return this.chainModify(0.5);
 onEat() { },
 },
 
-banettite: {
-name: "Banettite",
-megaStone: "Banette-Mega",
-megaEvolves: "Banette",
-itemUser: ["Banette"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 beastball: {
 name: "Beast Ball",
 isPokeball: true,
 },
 
-beedrillite: {
-name: "Beedrillite",
-megaStone: "Beedrill-Mega",
-megaEvolves: "Beedrill",
-itemUser: ["Beedrill"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 belueberry: {
 name: "Belue Berry",
@@ -394,29 +374,9 @@ this.damage(pokemon.baseMaxhp / 3);
 },
 },
 
-blastoisinite: {
-name: "Blastoisinite",
-megaStone: "Blastoise-Mega",
-megaEvolves: "Blastoise",
-itemUser: ["Blastoise"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-blazikenite: {
-name: "Blazikenite",
-megaStone: "Blaziken-Mega",
-megaEvolves: "Blaziken",
-itemUser: ["Blaziken"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
+
 
 blueorb: {
 name: "Blue Orb",
@@ -557,17 +517,7 @@ pokemon.disableMove(moveSlot.id);
 },
 },
 
-cameruptite: {
-name: "Cameruptite",
-megaStone: "Camerupt-Mega",
-megaEvolves: "Camerupt",
-itemUser: ["Camerupt"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 charcoal: {
 name: "Charcoal",
@@ -582,29 +532,7 @@ return this.chainModify([115, 100]);
 },
 },
 
-charizarditex: {
-name: "Charizardite X",
-megaStone: "Charizard-Mega-X",
-megaEvolves: "Charizard",
-itemUser: ["Charizard"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-charizarditey: {
-name: "Charizardite Y",
-megaStone: "Charizard-Mega-Y",
-megaEvolves: "Charizard",
-itemUser: ["Charizard"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 chartiberry: {
 name: "Charti Berry",
@@ -1042,17 +970,7 @@ if (!source.volatiles['attract']) source.addVolatile('attract', target);
 },
 },
 
-diancite: {
-name: "Diancite",
-megaStone: "Diancie-Mega",
-megaEvolves: "Diancie",
-itemUser: ["Diancie"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 diveball: {
 name: "Dive Ball",
@@ -1749,17 +1667,7 @@ basePower: 30,
 isNonstandard: "Unobtainable",
 },
 
-galladite: {
-name: "Galladite",
-megaStone: "Gallade-Mega",
-megaEvolves: "Gallade",
-itemUser: ["Gallade"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 ganlonberry: {
 name: "Ganlon Berry",
@@ -1779,41 +1687,9 @@ this.boost({def: 1.5});
 },
 },
 
-garchompite: {
-name: "Garchompite",
-megaStone: "Garchomp-Mega",
-megaEvolves: "Garchomp",
-itemUser: ["Garchomp"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-gardevoirite: {
-name: "Gardevoirite",
-megaStone: "Gardevoir-Mega",
-megaEvolves: "Gardevoir",
-itemUser: ["Gardevoir"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-gengarite: {
-name: "Gengarite",
-megaStone: "Gengar-Mega",
-megaEvolves: "Gengar",
-itemUser: ["Gengar"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 ghostgem: {
 name: "Ghost Gem",
@@ -5953,15 +5829,52 @@ audinite: {
 name: "Audinite",
 },
 
+banettite: {
+name: "Banettite",
+},
+
+beedrillite: {
+name: "Beedrillite",
+},
+
+blastoisinite: {
+name: "Blastoisinite",
+},
+
+blazikenite: {
+name: "Blazikenite",
+},
+
+cameruptite: {
+name: "Cameruptite",
+},
+
+charizarditex: {
+name: "Charizardite X",
+},
+
+charizarditey: {
+name: "Charizardite Y",
+},
+
+diancite: {
+name: "Diancite",
+},
+
+galladite: {
+name: "Galladite",
+},
+
+garchompite: {
+name: "Garchompite",
+},
+
+gardevoirite: {
+name: "Gardevoirite",
+},
+
+gengarite: {
+name: "Gengarite",
+},
+
 };
-
-
-
-
-
-
-
-
-
-
-
