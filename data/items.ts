@@ -167,30 +167,6 @@ adamantcrystal: {
 name: "Adamant Crystal",
 },
 
-altarianite: {
-name: "Altarianite",
-megaStone: "Altaria-Mega",
-megaEvolves: "Altaria",
-itemUser: ["Altaria"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
-
-ampharosite: {
-name: "Ampharosite",
-megaStone: "Ampharos-Mega",
-megaEvolves: "Ampharos",
-itemUser: ["Ampharos"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
-
 apicotberry: {
 name: "Apicot Berry",
 isBerry: true,
@@ -254,17 +230,7 @@ pokemon.disableMove(moveSlot.id);
 },
 },
 
-audinite: {
-name: "Audinite",
-megaStone: "Audino-Mega",
-megaEvolves: "Audino",
-itemUser: ["Audino"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 auspiciousarmor: {
 name: "Auspicious Armor",
@@ -5967,7 +5933,9 @@ return this.chainModify([115, 100]);
 
 
 
-
+altarianite: {
+name: "Altarianite",
+},
 
 abomasite: {
 name: "Abomasite",
@@ -5977,6 +5945,13 @@ absolite: {
 name: "Absolite",
 },
 
+ampharosite: {
+name: "Ampharosite",
+},
+
+audinite: {
+name: "Audinite",
+},
 
 };
 
