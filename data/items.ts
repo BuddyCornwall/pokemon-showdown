@@ -1864,27 +1864,7 @@ itemUser: ["Silvally-Ground"],
 isNonstandard: "Past",
 },
 
-groundiumz: {
-name: "Groundium Z",
-onPlate: 'Ground',
-onTakeItem: false,
-zMove: true,
-zMoveType: "Ground",
-forcedForme: "Arceus-Ground",
-isNonstandard: "Past",
-},
 
-gyaradosite: {
-name: "Gyaradosite",
-megaStone: "Gyarados-Mega",
-megaEvolves: "Gyarados",
-itemUser: ["Gyarados"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 habanberry: {
 name: "Haban Berry",
@@ -1945,25 +1925,7 @@ basePower: 80,
 // Hazard Immunity implemented in moves.ts
 },
 
-helixfossil: {
-name: "Helix Fossil",
-fling: {
-basePower: 100,
-},
-isNonstandard: "Past",
-},
 
-heracronite: {
-name: "Heracronite",
-megaStone: "Heracross-Mega",
-megaEvolves: "Heracross",
-itemUser: ["Heracross"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 hondewberry: {
 name: "Hondew Berry",
@@ -1975,17 +1937,7 @@ type: "Ground",
 onEat: false,
 },
 
-houndoominite: {
-name: "Houndoominite",
-megaStone: "Houndoom-Mega",
-megaEvolves: "Houndoom",
-itemUser: ["Houndoom"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 iapapaberry: {
 name: "Iapapa Berry",
@@ -2237,17 +2189,7 @@ type: "Fighting",
 onEat: false,
 },
 
-kangaskhanite: {
-name: "Kangaskhanite",
-megaStone: "Kangaskhan-Mega",
-megaEvolves: "Kangaskhan",
-itemUser: ["Kangaskhan"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 kingsrock: {
 name: "King's Rock",
@@ -2305,50 +2247,7 @@ pokemon.addVolatile('focusenergy');
 },
 },
 
-latiasite: {
-name: "Latiasite",
-megaStone: "Latias-Mega",
-megaEvolves: "Latias",
-itemUser: ["Latias"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-latiosite: {
-name: "Latiosite",
-megaStone: "Latios-Mega",
-megaEvolves: "Latios",
-itemUser: ["Latios"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
-
-laxincense: {
-name: "Lax Incense",
-fling: {
-basePower: 10,
-},
-onModifyAccuracyPriority: -2,
-onModifyAccuracy(accuracy) {
-if (typeof accuracy !== 'number') return;
-this.debug('lax incense - decreasing accuracy');
-return this.chainModify([3686, 4096]);
-},
-isNonstandard: "Past",
-},
-
-leafstone: {
-name: "Leaf Stone",
-fling: {
-basePower: 30,
-},
-},
 
 leek: {
 name: "Leek",
@@ -2479,42 +2378,7 @@ delete move.multiaccuracy;
 },
 },
 
-lopunnite: {
-name: "Lopunnite",
-megaStone: "Lopunny-Mega",
-megaEvolves: "Lopunny",
-itemUser: ["Lopunny"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
-loveball: {
-name: "Love Ball",
-isPokeball: true,
-},
-
-lovesweet: {
-name: "Love Sweet",
-fling: {
-basePower: 10,
-},
-isNonstandard: "Past",
-},
-
-lucarionite: {
-name: "Lucarionite",
-megaStone: "Lucario-Mega",
-megaEvolves: "Lucario",
-itemUser: ["Lucario"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 luckypunch: {
 name: "Lucky Punch",
@@ -2711,17 +2575,7 @@ basePower: 30,
 },
 },
 
-manectite: {
-name: "Manectite",
-megaStone: "Manectric-Mega",
-megaEvolves: "Manectric",
-itemUser: ["Manectric"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
+
 
 marangaberry: {
 name: "Maranga Berry",
@@ -2741,31 +2595,7 @@ this.boost({spd: 1});
 isNonstandard: "Unobtainable",
 },
 
-marshadiumz: {
-name: "Marshadium Z",
-onTakeItem: false,
-zMove: "Soul-Stealing 7-Star Strike",
-zMoveFrom: "Spectral Thief",
-itemUser: ["Marshadow"],
-isNonstandard: "Past",
-},
 
-masterball: {
-name: "Master Ball",
-isPokeball: true,
-},
-
-mawilite: {
-name: "Mawilite",
-megaStone: "Mawile-Mega",
-megaEvolves: "Mawile",
-itemUser: ["Mawile"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 meadowplate: {
 name: "Meadow Plate",
@@ -5863,6 +5693,78 @@ name: "Ghostium Z",
 
 glalitite: {
 name: "Glalitite",
+},
+
+groundiumz: {
+name: "Groundium Z",
+},
+
+gyaradosite: {
+name: "Gyaradosite",
+},
+
+helixfossil: {
+name: "Helix Fossil",
+},
+
+heracronite: {
+name: "Heracronite",
+},
+
+houndoominite: {
+name: "Houndoominite",
+},
+
+kangaskhanite: {
+name: "Kangaskhanite",
+},
+
+latiasite: {
+name: "Latiasite",
+},
+
+latiosite: {
+name: "Latiosite",
+},
+
+laxincense: {
+name: "Lax Incense",
+},
+
+leafstone: {
+name: "Leaf Stone",
+},
+
+lopunnite: {
+name: "Lopunnite",
+},
+
+loveball: {
+name: "Love Ball",
+},
+
+lovesweet: {
+name: "Love Sweet",
+},
+
+lucarionite: {
+name: "Lucarionite",
+},
+
+manectite: {
+name: "Manectite",
+},
+
+marshadiumz: {
+name: "Marshadium Z",
+},
+
+masterball: {
+name: "Master Ball",
+},
+
+mawilite: {
+name: "Mawilite",
 },
 
 };
