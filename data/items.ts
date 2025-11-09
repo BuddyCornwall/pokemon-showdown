@@ -1717,27 +1717,7 @@ itemUser: ["Silvally-Ghost"],
 isNonstandard: "Past",
 },
 
-ghostiumz: {
-name: "Ghostium Z",
-onPlate: 'Ghost',
-onTakeItem: false,
-zMove: true,
-zMoveType: "Ghost",
-forcedForme: "Arceus-Ghost",
-isNonstandard: "Past",
-},
 
-glalitite: {
-name: "Glalitite",
-megaStone: "Glalie-Mega",
-megaEvolves: "Glalie",
-itemUser: ["Glalie"],
-onTakeItem(item, source) {
-if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-return true;
-},
-isNonstandard: "Past",
-},
 
 goldbottlecap: {
 name: "Gold Bottle Cap",
@@ -5875,6 +5855,14 @@ name: "Gardevoirite",
 
 gengarite: {
 name: "Gengarite",
+},
+
+ghostiumz: {
+name: "Ghostium Z",
+},
+
+glalitite: {
+name: "Glalitite",
 },
 
 };
