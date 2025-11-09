@@ -5969,12 +5969,12 @@ return this.chainModify([115, 100]);
 
 
 
-
-
-absolite: {
+abomasite: {
+name: "Abomasite",
 },
 
-abomasite: {
+absolite: {
+name: "Absolite",
 },
 
 
