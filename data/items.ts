@@ -2,9 +2,6 @@ export const Items: {[itemid: string]: ItemData} = {
 
 siriusarmilla: {
 name: "Sirius Armilla",
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -21,9 +18,6 @@ return target.hp - 1;
 
 denebcaestus: {
 name: "Deneb Caestus",
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -90,12 +84,7 @@ this.heal(1);
 
 abilityshield: {
 name: "Ability Shield",
-fling: {
-basePower: 30,
-},
 ignoreKlutz: true,
-// Neutralizing Gas protection implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
-// and in Neutralizing Gas itself within data/abilities.ts
 onSetAbility(ability, target, source, effect) {
 if (effect && effect.effectType === 'Ability' && effect.name !== 'Trace') {
 this.add('-ability', source, effect);
@@ -103,14 +92,10 @@ this.add('-ability', source, effect);
 this.add('-block', target, 'item: Ability Shield');
 return null;
 },
-// Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
 },
 
 captainsarmband: {
 name: "Captain's Armband",
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -151,9 +136,6 @@ isNonstandard: "Past",
 
 absorbbulb: {
 name: "Absorb Bulb",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Water') {
 target.useItem();
@@ -212,9 +194,6 @@ this.boost({spd: 1.5});
 
 armorfossil: {
 name: "Armor Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -239,9 +218,6 @@ pokemon.cureStatus();
 
 assaultvest: {
 name: "Assault Vest",
-fling: {
-basePower: 80,
-},
 onModifySpDPriority: 1,
 onModifySpD(spd) {
 return this.chainModify(1.55);
@@ -269,9 +245,6 @@ isNonstandard: "Past",
 
 auspiciousarmor: {
 name: "Auspicious Armor",
-fling: {
-basePower: 30,
-},
 },
 
 babiriberry: {
@@ -337,9 +310,6 @@ isNonstandard: "Past",
 
 berryjuice: {
 name: "Berry Juice",
-fling: {
-basePower: 30,
-},
 onUpdate(pokemon) {
 if (pokemon.hp <= pokemon.maxhp / 2) {
 if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
@@ -352,9 +322,6 @@ isNonstandard: "Past",
 
 berrysweet: {
 name: "Berry Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
@@ -367,9 +334,6 @@ basePower: 130,
 
 bigroot: {
 name: "Big Root",
-fling: {
-basePower: 10,
-},
 onTryHealPriority: 1,
 onTryHeal(damage, target, source, effect) {
 const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
@@ -381,17 +345,10 @@ return this.chainModify([115, 100]);
 
 bindingband: {
 name: "Binding Band",
-fling: {
-basePower: 30,
-},
-// implemented in statuses
 },
 
 blackbelt: {
 name: "Black Belt",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fighting') {
@@ -402,9 +359,6 @@ return this.chainModify([115, 100]);
 
 blackglasses: {
 name: "Black Glasses",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dark') {
@@ -415,9 +369,6 @@ return this.chainModify([115, 100]);
 
 blacksludge: {
 name: "Black Sludge",
-fling: {
-basePower: 30,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -493,9 +444,6 @@ this.boost({spe: 2}, source);
 
 boosterenergy: {
 name: "Booster Energy",
-fling: {
-basePower: 30,
-},
 onUpdate(pokemon) {
 if (pokemon.transformed) return;
 if (this.queue.peek(true)?.choice === 'runSwitch') return;
@@ -514,9 +462,6 @@ return true;
 
 brightpowder: {
 name: "Bright Powder",
-fling: {
-basePower: 10,
-},
 onModifyAccuracyPriority: -2,
 onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
@@ -577,9 +522,6 @@ isNonstandard: "Past",
 
 bulletproofvest: {
 name: "Bullet Proof Vest",
-fling: {
-basePower: 80,
-},
 onModifySpDPriority: 1,
 onModifySpD(def) {
 return this.chainModify(1.55);
@@ -607,9 +549,6 @@ isNonstandard: "Past",
 
 charcoal: {
 name: "Charcoal",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Fire') {
@@ -745,16 +684,10 @@ isNonstandard: "Past",
 
 chippedpot: {
 name: "Chipped Pot",
-fling: {
-basePower: 80,
-},
 },
 
 choiceband: {
 name: "Choice Band",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (pokemon.volatiles['choicelock']) {
 this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
@@ -774,9 +707,6 @@ isChoice: true,
 
 choicescarf: {
 name: "Choice Scarf",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (pokemon.volatiles['choicelock']) {
 this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
@@ -795,9 +725,6 @@ isChoice: true,
 
 choicespecs: {
 name: "Choice Specs",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (pokemon.volatiles['choicelock']) {
 this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
@@ -838,17 +765,11 @@ onEat() { },
 
 clawfossil: {
 name: "Claw Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 clearamulet: {
 name: "Clear Amulet",
-fling: {
-basePower: 30,
-},
 onTryBoost(boost, target, source, effect) {
 if (source && target === source) return;
 let showMsg = false;
@@ -867,9 +788,6 @@ this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + targ
 
 cloversweet: {
 name: "Clover Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
@@ -928,17 +846,11 @@ isNonstandard: "Past",
 
 coverfossil: {
 name: "Cover Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 covertcloak: {
 name: "Covert Cloak",
-fling: {
-basePower: 30,
-},
 onModifySecondaries(secondaries) {
 this.debug('Covert Cloak prevent secondary');
 return secondaries.filter(effect => !!(effect.self || effect.dustproof));
@@ -947,9 +859,6 @@ return secondaries.filter(effect => !!(effect.self || effect.dustproof));
 
 crackedpot: {
 name: "Cracked Pot",
-fling: {
-basePower: 80,
-},
 },
 
 custapberry: {
@@ -978,9 +887,6 @@ isNonstandard: "Unobtainable",
 
 damprock: {
 name: "Damp Rock",
-fling: {
-basePower: 60,
-},
 },
 
 darkgem: {
@@ -1021,9 +927,6 @@ isNonstandard: "Past",
 
 dawnstone: {
 name: "Dawn Stone",
-fling: {
-basePower: 80,
-},
 },
 
 decidiumz: {
@@ -1037,9 +940,6 @@ isNonstandard: "Past",
 
 deepseascale: {
 name: "Deep Sea Scale",
-fling: {
-basePower: 30,
-},
 onModifySpDPriority: 2,
 onModifySpD(spd, pokemon) {
 if (pokemon.baseSpecies.name === 'Clamperl') {
@@ -1052,9 +952,6 @@ isNonstandard: "Past",
 
 deepseatooth: {
 name: "Deep Sea Tooth",
-fling: {
-basePower: 90,
-},
 onModifySpAPriority: 1,
 onModifySpA(spa, pokemon) {
 if (pokemon.baseSpecies.name === 'Clamperl') {
@@ -1067,9 +964,6 @@ isNonstandard: "Past",
 
 destinyknot: {
 name: "Destiny Knot",
-fling: {
-basePower: 10,
-},
 onAttractPriority: -100,
 onAttract(target, source) {
 this.debug('attract intercepted: ' + target + ' from ' + source);
@@ -1097,9 +991,6 @@ isPokeball: true,
 
 domefossil: {
 name: "Dome Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -1137,9 +1028,6 @@ forcedForme: "Arceus-Dragon",
 
 dragonfang: {
 name: "Dragon Fang",
-fling: {
-basePower: 70,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Dragon') {
@@ -1176,9 +1064,6 @@ isNonstandard: "Past",
 
 dragonscale: {
 name: "Dragon Scale",
-fling: {
-basePower: 30,
-},
 isNonstandard: "Past",
 },
 
@@ -1217,9 +1102,6 @@ isPokeball: true,
 
 dubiousdisc: {
 name: "Dubious Disc",
-fling: {
-basePower: 50,
-},
 isNonstandard: "Past",
 },
 
@@ -1241,9 +1123,6 @@ isPokeball: true,
 
 duskstone: {
 name: "Dusk Stone",
-fling: {
-basePower: 80,
-},
 },
 
 earthplate: {
@@ -1275,9 +1154,6 @@ isNonstandard: "Past",
 
 ejectbutton: {
 name: "Eject Button",
-fling: {
-basePower: 30,
-},
 onAfterMoveSecondaryPriority: 2,
 onAfterMoveSecondary(target, source, move) {
 if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
@@ -1298,9 +1174,6 @@ target.switchFlag = false;
 
 ejectpack: {
 name: "Eject Pack",
-fling: {
-basePower: 50,
-},
 onAfterBoost(boost, target, source, effect) {
 if (this.activeMove?.id === 'partingshot') return;
 let eject = false;
@@ -1325,9 +1198,6 @@ if (target.useItem()) target.switchFlag = true;
 
 electirizer: {
 name: "Electirizer",
-fling: {
-basePower: 80,
-},
 isNonstandard: "Past",
 },
 
@@ -1359,9 +1229,6 @@ isNonstandard: "Past",
 
 electricseed: {
 name: "Electric Seed",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (!pokemon.ignoringItem() && this.field.isTerrain('electricterrain')) {
 pokemon.useItem();
@@ -1411,9 +1278,6 @@ isNonstandard: "Unobtainable",
 
 eviolite: {
 name: "Eviolite",
-fling: {
-basePower: 40,
-},
 onModifyDefPriority: 2,
 onModifyDef(def, pokemon) {
 if (pokemon.baseSpecies.nfe) {
@@ -1430,9 +1294,6 @@ return this.chainModify(1.5);
 
 eviomax: {
 name: "Eviomax",
-fling: {
-basePower: 40,
-},
 onModifyDefPriority: 2,
 onModifyDef(def, pokemon) {
 if (pokemon.baseSpecies.fe) {
@@ -1576,9 +1437,6 @@ isNonstandard: "Past",
 
 firestone: {
 name: "Fire Stone",
-fling: {
-basePower: 30,
-},
 },
 
 firiumz: {
@@ -1642,9 +1500,6 @@ forcedForme: "Arceus-Fire",
 
 floatstone: {
 name: "Float Stone",
-fling: {
-basePower: 30,
-},
 onModifyWeight(weighthg) {
 return this.trunc(weighthg / 2);
 },
@@ -1696,9 +1551,6 @@ isNonstandard: "Past",
 
 focusband: {
 name: "Focus Band",
-fling: {
-basePower: 10,
-},
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (this.randomChance(16.5, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
@@ -1710,9 +1562,6 @@ return target.hp - 1;
 
 focussash: {
 name: "Focus Sash",
-fling: {
-basePower: 10,
-},
 onDamagePriority: -40,
 onDamage(damage, target, source, effect) {
 if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
@@ -1725,33 +1574,21 @@ return target.hp - 1;
 
 fossilizedbird: {
 name: "Fossilized Bird",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 fossilizeddino: {
 name: "Fossilized Dino",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 fossilizeddrake: {
 name: "Fossilized Drake",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 fossilizedfish: {
 name: "Fossilized Fish",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -1762,26 +1599,17 @@ isPokeball: true,
 
 fullincense: {
 name: "Full Incense",
-fling: {
-basePower: 10,
-},
 onFractionalPriority: -0.1,
 isNonstandard: "Past",
 },
 
 galaricacuff: {
 name: "Galarica Cuff",
-fling: {
-basePower: 30,
-},
 isNonstandard: "Unobtainable",
 },
 
 galaricawreath: {
 name: "Galarica Wreath",
-fling: {
-basePower: 30,
-},
 isNonstandard: "Unobtainable",
 },
 
@@ -1901,9 +1729,6 @@ isNonstandard: "Past",
 
 goldbottlecap: {
 name: "Gold Bottle Cap",
-fling: {
-basePower: 30,
-},
 },
 
 grassgem: {
@@ -1944,9 +1769,6 @@ isNonstandard: "Past",
 
 grassyseed: {
 name: "Grassy Seed",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (!pokemon.ignoringItem() && this.field.isTerrain('grassyterrain')) {
 pokemon.useItem();
@@ -1980,10 +1802,6 @@ onEat: false,
 
 gripclaw: {
 name: "Grip Claw",
-fling: {
-basePower: 90,
-},
-// implemented in statuses
 },
 
 griseouscore: {
@@ -2006,9 +1824,6 @@ itemUser: ["Giratina-Origin"],
 
 griseousorb: {
 name: "Griseous Orb",
-fling: {
-basePower: 60,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
@@ -2089,9 +1904,6 @@ onEat() { },
 
 hardstone: {
 name: "Hard Stone",
-fling: {
-basePower: 100,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Rock') {
@@ -2107,9 +1919,6 @@ isPokeball: true,
 
 heatrock: {
 name: "Heat Rock",
-fling: {
-basePower: 60,
-},
 },
 
 heavyball: {
@@ -2119,17 +1928,10 @@ isPokeball: true,
 
 heavydutyboots: {
 name: "Heavy-Duty Boots",
-fling: {
-basePower: 80,
-},
-// Hazard Immunity implemented in moves.ts
 },
 
 helixfossil: {
 name: "Helix Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -2219,9 +2021,6 @@ isNonstandard: "Past",
 
 icestone: {
 name: "Ice Stone",
-fling: {
-basePower: 30,
-},
 },
 
 icicleplate: {
@@ -2254,9 +2053,6 @@ isNonstandard: "Past",
 
 icyrock: {
 name: "Icy Rock",
-fling: {
-basePower: 40,
-},
 },
 
 inciniumz: {
@@ -2340,9 +2136,6 @@ isNonstandard: "Unobtainable",
 
 jawfossil: {
 name: "Jaw Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -2461,9 +2254,6 @@ isNonstandard: "Past",
 
 laggingtail: {
 name: "Lagging Tail",
-fling: {
-basePower: 10,
-},
 onFractionalPriority: -0.1,
 },
 
@@ -2511,9 +2301,6 @@ isNonstandard: "Past",
 
 laxincense: {
 name: "Lax Incense",
-fling: {
-basePower: 10,
-},
 onModifyAccuracyPriority: -2,
 onModifyAccuracy(accuracy) {
 if (typeof accuracy !== 'number') return;
@@ -2525,16 +2312,10 @@ isNonstandard: "Past",
 
 leafstone: {
 name: "Leaf Stone",
-fling: {
-basePower: 30,
-},
 },
 
 leek: {
 name: "Leek",
-fling: {
-basePower: 60,
-},
 onModifyCritRatio(critRatio, user) {
 if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
 return critRatio + 2;
@@ -2546,9 +2327,6 @@ isNonstandard: "Past",
 
 leftovers: {
 name: "Leftovers",
-fling: {
-basePower: 10,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -2604,9 +2382,6 @@ this.boost({atk: 1.5});
 
 lifeorb: {
 name: "Life Orb",
-fling: {
-basePower: 30,
-},
 onModifyDamage(damage, source, target, move) {
 return this.chainModify([115, 100]);
 },
@@ -2640,18 +2415,10 @@ itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "
 
 lightclay: {
 name: "Light Clay",
-fling: {
-basePower: 30,
-},
-// implemented in the corresponding thing
 },
 
 loadeddice: {
 name: "Loaded Dice",
-fling: {
-basePower: 30,
-},
-// partially implemented in sim/battle-actions.ts:BattleActions#hitStepMoveHitLoop
 onModifyMove(move) {
 if (move.multiaccuracy) {
 delete move.multiaccuracy;
@@ -2678,9 +2445,6 @@ isPokeball: true,
 
 lovesweet: {
 name: "Love Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
@@ -2698,9 +2462,6 @@ isNonstandard: "Past",
 
 luckypunch: {
 name: "Lucky Punch",
-fling: {
-basePower: 40,
-},
 onModifyCritRatio(critRatio, user) {
 if (user.baseSpecies.name === 'Chansey') {
 return critRatio + 2;
@@ -2734,9 +2495,6 @@ pokemon.removeVolatile('confusion');
 
 luminousmoss: {
 name: "Luminous Moss",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Water') {
 target.useItem();
@@ -2781,9 +2539,6 @@ itemUser: ["Palkia-Origin"],
 
 lustrousorb: {
 name: "Lustrous Orb",
-fling: {
-basePower: 60,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
@@ -2810,9 +2565,6 @@ isNonstandard: "Past",
 machobrace: {
 name: "Macho Brace",
 ignoreKlutz: true,
-fling: {
-basePower: 60,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -2821,17 +2573,11 @@ isNonstandard: "Past",
 
 magmarizer: {
 name: "Magmarizer",
-fling: {
-basePower: 80,
-},
 isNonstandard: "Past",
 },
 
 magnet: {
 name: "Magnet",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Electric') {
@@ -2886,9 +2632,6 @@ isNonstandard: "Past",
 
 maliciousarmor: {
 name: "Malicious Armor",
-fling: {
-basePower: 30,
-},
 },
 
 manectite: {
@@ -3027,9 +2770,6 @@ isNonstandard: "Past",
 
 metalcoat: {
 name: "Metal Coat",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Steel') {
@@ -3040,9 +2780,6 @@ return this.chainModify([115, 100]);
 
 metalpowder: {
 name: "Metal Powder",
-fling: {
-basePower: 10,
-},
 onModifyDefPriority: 2,
 onModifyDef(def, pokemon) {
 if (pokemon.species.name === 'Ditto' && !pokemon.transformed) {
@@ -3055,9 +2792,6 @@ isNonstandard: "Past",
 
 metronome: {
 name: "Metronome",
-fling: {
-basePower: 30,
-},
 onStart(pokemon) {
 pokemon.addVolatile('metronome');
 },
@@ -3187,9 +2921,6 @@ forcedForme: "Arceus-Psychic",
 
 miracleseed: {
 name: "Miracle Seed",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Grass') {
@@ -3200,9 +2931,6 @@ return this.chainModify([115, 100]);
 
 mirrorherb: {
 name: "Mirror Herb",
-fling: {
-basePower: 30,
-},
 onFoeAfterBoost(boost, target, source, effect) {
 if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
 const boostPlus: SparseBoostsTable = {};
@@ -3223,9 +2951,6 @@ this.boost(boostPlus, pokemon);
 
 mistyseed: {
 name: "Misty Seed",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (!pokemon.ignoringItem() && this.field.isTerrain('mistyterrain')) {
 pokemon.useItem();
@@ -3249,16 +2974,10 @@ isPokeball: true,
 
 moonstone: {
 name: "Moon Stone",
-fling: {
-basePower: 30,
-},
 },
 
 mysticwater: {
 name: "Mystic Water",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Water') {
@@ -3290,9 +3009,6 @@ isPokeball: true,
 
 nevermeltice: {
 name: "Never-Melt Ice",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ice') {
@@ -3354,9 +3070,6 @@ onEat() { },
 
 oddincense: {
 name: "Odd Incense",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Psychic') {
@@ -3368,9 +3081,6 @@ isNonstandard: "Past",
 
 oldamber: {
 name: "Old Amber",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -3396,9 +3106,6 @@ this.heal(50);
 
 ovalstone: {
 name: "Oval Stone",
-fling: {
-basePower: 80,
-},
 },
 
 pamtreberry: {
@@ -3587,9 +3294,6 @@ forcedForme: "Arceus-Fairy",
 
 plumefossil: {
 name: "Plume Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -3661,9 +3365,6 @@ onEat: false,
 poweranklet: {
 name: "Power Anklet",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3672,9 +3373,6 @@ return this.chainModify(0.5);
 powerband: {
 name: "Power Band",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3683,9 +3381,6 @@ return this.chainModify(0.5);
 powerbelt: {
 name: "Power Belt",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3694,9 +3389,6 @@ return this.chainModify(0.5);
 powerbracer: {
 name: "Power Bracer",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3712,17 +3404,11 @@ return false; // skip charge turn
 }
 },
 name: "Power Herb",
-fling: {
-basePower: 10,
-},
 },
 
 powerlens: {
 name: "Power Lens",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3731,9 +3417,6 @@ return this.chainModify(0.5);
 powerweight: {
 name: "Power Weight",
 ignoreKlutz: true,
-fling: {
-basePower: 70,
-},
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -3755,25 +3438,16 @@ isNonstandard: "Past",
 
 prismscale: {
 name: "Prism Scale",
-fling: {
-basePower: 30,
-},
 isNonstandard: "Past",
 },
 
 protectivepads: {
 name: "Protective Pads",
-fling: {
-basePower: 30,
-},
 // protective effect handled in Battle#checkMoveMakesContact
 },
 
 protector: {
 name: "Protector",
-fling: {
-basePower: 80,
-},
 isNonstandard: "Past",
 },
 
@@ -3805,9 +3479,6 @@ isNonstandard: "Past",
 
 psychicseed: {
 name: "Psychic Seed",
-fling: {
-basePower: 10,
-},
 onStart(pokemon) {
 if (!pokemon.ignoringItem() && this.field.isTerrain('psychicterrain')) {
 pokemon.useItem();
@@ -3836,9 +3507,6 @@ isNonstandard: "Past",
 
 punchingglove: {
 name: "Punching Glove",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['punch']) {
@@ -3854,9 +3522,6 @@ if (move.flags['punch']) delete move.flags['contact'];
 
 kickpads: {
 name: "Kickpads",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['kick']) {
@@ -3872,9 +3537,6 @@ if (move.flags['kick']) delete move.flags['contact'];
 
 goldenbullet: {
 name: "Golden Bullet",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['bullet']) {
@@ -3890,9 +3552,6 @@ if (move.flags['bullet']) delete move.flags['contact'];
 
 skates: {
 name: "Skates",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['slow']) {
@@ -3908,9 +3567,6 @@ if (move.flags['slow']) delete move.flags['contact'];
 
 wiseglasses: {
 name: "Wise Glasses",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 16,
 onBasePower(basePower, user, target, move) {
 if (move.category === 'Special') {
@@ -3921,9 +3577,6 @@ return this.chainModify([115, 100]);
 
 muscleband: {
 name: "Muscle Band",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 16,
 onBasePower(basePower, user, target, move) {
 if (move.category === 'Physical') {
@@ -3934,9 +3587,6 @@ return this.chainModify([115, 100]);
 
 dragonball: {
 name: "Dragon Ball",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
 if (move.flags['beam']) {
@@ -3952,9 +3602,6 @@ if (move.flags['beam']) delete move.flags['contact'];
 
 expertbelt: {
 name: "Expert Belt",
-fling: {
-basePower: 10,
-},
 onModifyDamage(damage, source, target, move) {
 if (move && target.getMoveHitData(move).typeMod > 0) {
 return this.chainModify([115, 100]);
@@ -3987,16 +3634,10 @@ return 0.1;
 }
 },
 name: "Quick Claw",
-fling: {
-basePower: 80,
-},
 },
 
 quickpowder: {
 name: "Quick Powder",
-fling: {
-basePower: 10,
-},
 onModifySpe(spe, pokemon) {
 if (pokemon.species.name === 'Ditto' && !pokemon.transformed) {
 return this.chainModify(2);
@@ -4019,9 +3660,6 @@ isNonstandard: "Past",
 
 rarebone: {
 name: "Rare Bone",
-fling: {
-basePower: 100,
-},
 },
 
 rawstberry: {
@@ -4045,9 +3683,6 @@ pokemon.cureStatus();
 
 razorclaw: {
 name: "Razor Claw",
-fling: {
-basePower: 80,
-},
 onModifyCritRatio(critRatio) {
 return critRatio + 1;
 },
@@ -4088,17 +3723,11 @@ isNonstandard: "Past",
 
 reapercloth: {
 name: "Reaper Cloth",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
 redcard: {
 name: "Red Card",
-fling: {
-basePower: 10,
-},
 onAfterMoveSecondary(target, source, move) {
 if (source && source !== target && source.hp && target.hp && move && move.category !== 'Status') {
 if (!source.isActive || !this.canSwitch(source.side) || source.forceSwitchFlag || target.forceSwitchFlag) {
@@ -4139,9 +3768,6 @@ isPokeball: true,
 
 ribbonsweet: {
 name: "Ribbon Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
@@ -4168,9 +3794,6 @@ onEat() { },
 
 ringtarget: {
 name: "Ring Target",
-fling: {
-basePower: 10,
-},
 onNegateImmunity: false,
 },
 
@@ -4188,9 +3811,6 @@ isNonstandard: "Past",
 
 rockincense: {
 name: "Rock Incense",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Rock') {
@@ -4226,9 +3846,6 @@ isNonstandard: "Past",
 
 rockyhelmet: {
 name: "Rocky Helmet",
-fling: {
-basePower: 60,
-},
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
 if (this.checkMoveMakesContact(move, source, target)) {
@@ -4239,9 +3856,6 @@ this.damage(source.baseMaxhp / 6, source, target);
 
 roomservice: {
 name: "Room Service",
-fling: {
-basePower: 100,
-},
 onStart(pokemon) {
 if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickroom')) {
 pokemon.useItem();
@@ -4260,17 +3874,11 @@ spe: -1,
 
 rootfossil: {
 name: "Root Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
 roseincense: {
 name: "Rose Incense",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Grass') {
@@ -4355,9 +3963,6 @@ isNonstandard: "Past",
 
 sachet: {
 name: "Sachet",
-fling: {
-basePower: 80,
-},
 isNonstandard: "Past",
 },
 
@@ -4369,9 +3974,6 @@ isNonstandard: "Unobtainable",
 
 safetygoggles: {
 name: "Safety Goggles",
-fling: {
-basePower: 80,
-},
 onImmunity(type, pokemon) {
 if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
 },
@@ -4385,9 +3987,6 @@ return null;
 
 sailfossil: {
 name: "Sail Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -4447,9 +4046,6 @@ isNonstandard: "Past",
 
 scopelens: {
 name: "Scope Lens",
-fling: {
-basePower: 30,
-},
 onModifyCritRatio(critRatio) {
 return critRatio + 1;
 },
@@ -4457,9 +4053,6 @@ return critRatio + 1;
 
 seaincense: {
 name: "Sea Incense",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Water') {
@@ -4471,9 +4064,6 @@ isNonstandard: "Past",
 
 sharpbeak: {
 name: "Sharp Beak",
-fling: {
-basePower: 50,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move && move.type === 'Flying') {
@@ -4496,9 +4086,6 @@ isNonstandard: "Past",
 
 shedshell: {
 name: "Shed Shell",
-fling: {
-basePower: 10,
-},
 onTrapPokemonPriority: -10,
 onTrapPokemon(pokemon) {
 pokemon.trapped = pokemon.maybeTrapped = false;
@@ -4507,9 +4094,6 @@ pokemon.trapped = pokemon.maybeTrapped = false;
 
 shellbell: {
 name: "Shell Bell",
-fling: {
-basePower: 30,
-},
 onAfterMoveSecondarySelfPriority: -1,
 onAfterMoveSecondarySelf(pokemon, target, move) {
 if (move.totalDamage && !pokemon.forceSwitchFlag) {
@@ -4520,9 +4104,6 @@ this.heal(move.totalDamage / 8, pokemon);
 
 shinystone: {
 name: "Shiny Stone",
-fling: {
-basePower: 80,
-},
 },
 
 shockdrive: {
@@ -4562,9 +4143,6 @@ onEat() { },
 
 silkscarf: {
 name: "Silk Scarf",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Normal') {
@@ -4575,9 +4153,6 @@ return this.chainModify([115, 100]);
 
 silverpowder: {
 name: "Silver Powder",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Bug') {
@@ -4608,9 +4183,6 @@ this.heal(pokemon.baseMaxhp / 4);
 
 skullfossil: {
 name: "Skull Fossil",
-fling: {
-basePower: 100,
-},
 isNonstandard: "Past",
 },
 
@@ -4646,9 +4218,6 @@ isNonstandard: "Past",
 
 smoothrock: {
 name: "Smooth Rock",
-fling: {
-basePower: 10,
-},
 },
 
 snorliumz: {
@@ -4662,9 +4231,6 @@ isNonstandard: "Past",
 
 snowball: {
 name: "Snowball",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Ice') {
 target.useItem();
@@ -4678,9 +4244,6 @@ spa: 1,
 
 fairyscale: {
 name: "Fairy Scale",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Fairy') {
 target.useItem();
@@ -4694,9 +4257,6 @@ spa: 1,
 
 cellsynergysurge: {
 name: "Cell Synergy Surge",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Electric') {
 target.useItem();
@@ -4710,9 +4270,6 @@ spa: 1,
 
 darkband: {
 name: "Dark Band",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Dark') {
 target.useItem();
@@ -4726,9 +4283,6 @@ spa: 1,
 
 puck: {
 name: "Puck",
-fling: {
-basePower: 30,
-},
 onDamagingHit(damage, target, source, move) {
 if (move.type === 'Steel') {
 target.useItem();
@@ -4742,9 +4296,6 @@ spa: 1,
 
 softsand: {
 name: "Soft Sand",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ground') {
@@ -4764,9 +4315,6 @@ isNonstandard: "Past",
 
 souldew: {
 name: "Soul Dew",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (
@@ -4782,9 +4330,6 @@ isNonstandard: "Past",
 
 spelltag: {
 name: "Spell Tag",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Ghost') {
@@ -4878,9 +4423,6 @@ this.boost(boost);
 
 starsweet: {
 name: "Star Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
@@ -4934,9 +4476,6 @@ isNonstandard: "Past",
 
 stick: {
 name: "Stick",
-fling: {
-basePower: 60,
-},
 onModifyCritRatio(critRatio, user) {
 if (this.toID(user.baseSpecies.baseSpecies) === 'farfetchd') {
 return critRatio + 2;
@@ -4948,9 +4487,6 @@ isNonstandard: "Past",
 
 stickybarb: {
 name: "Sticky Barb",
-fling: {
-basePower: 80,
-},
 onResidualOrder: 28,
 onResidualSubOrder: 3,
 onResidual(pokemon) {
@@ -4992,24 +4528,15 @@ isNonstandard: "Unobtainable",
 
 strawberrysweet: {
 name: "Strawberry Sweet",
-fling: {
-basePower: 10,
-},
 isNonstandard: "Past",
 },
 
 sunstone: {
 name: "Sun Stone",
-fling: {
-basePower: 30,
-},
 },
 
 superspicycurry: {
 name: "Superspicy Curry",
-fling: {
-basePower: 30,
-},
 onResidualOrder: 5,
 onResidualSubOrder: 4,
 onResidual(pokemon) {
@@ -5035,9 +4562,6 @@ isNonstandard: "Past",
 
 sweetapple: {
 name: "Sweet Apple",
-fling: {
-basePower: 30,
-},
 },
 
 tamatoberry: {
@@ -5083,23 +4607,14 @@ isNonstandard: "Past",
 
 tartapple: {
 name: "Tart Apple",
-fling: {
-basePower: 30,
-},
 },
 
 terrainextender: {
 name: "Terrain Extender",
-fling: {
-basePower: 60,
-},
 },
 
 thickclub: {
 name: "Thick Club",
-fling: {
-basePower: 90,
-},
 onModifyAtkPriority: 1,
 onModifyAtk(atk, pokemon) {
 if (pokemon.baseSpecies.baseSpecies === 'Cubone' || pokemon.baseSpecies.baseSpecies === 'Marowak') {
@@ -5112,9 +4627,6 @@ isNonstandard: "Past",
 
 throatspray: {
 name: "Throat Spray",
-fling: {
-basePower: 30,
-},
 onAfterMoveSecondarySelf(target, source, move) {
 if (move.flags['sound']) {
 target.useItem();
@@ -5127,9 +4639,6 @@ spa: 1,
 
 thunderstone: {
 name: "Thunder Stone",
-fling: {
-basePower: 30,
-},
 },
 
 timerball: {
@@ -5170,9 +4679,6 @@ forcedForme: "Arceus-Poison",
 
 twistedspoon: {
 name: "Twisted Spoon",
-fling: {
-basePower: 30,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Psychic') {
@@ -5209,18 +4715,11 @@ isNonstandard: "Past",
 
 upgrade: {
 name: "Up-Grade",
-fling: {
-basePower: 30,
-},
 isNonstandard: "Past",
 },
 
 utilityumbrella: {
 name: "Utility Umbrella",
-fling: {
-basePower: 60,
-},
-// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 onStart(pokemon) {
 if (!pokemon.ignoringItem()) return;
 if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
@@ -5303,9 +4802,6 @@ isNonstandard: "Past",
 
 waterstone: {
 name: "Water Stone",
-fling: {
-basePower: 30,
-},
 },
 
 wateriumz: {
@@ -5331,9 +4827,6 @@ isNonstandard: "Past",
 
 waveincense: {
 name: "Wave Incense",
-fling: {
-basePower: 10,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (move.type === 'Water') {
@@ -5345,9 +4838,6 @@ isNonstandard: "Past",
 
 weaknesspolicy: {
 name: "Weakness Policy",
-fling: {
-basePower: 80,
-},
 onDamagingHit(damage, target, source, move) {
 if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
 target.useItem();
@@ -5372,9 +4862,6 @@ isNonstandard: "Past",
 
 whippeddream: {
 name: "Whipped Dream",
-fling: {
-basePower: 80,
-},
 isNonstandard: "Past",
 },
 
@@ -5417,9 +4904,6 @@ this.add('-clearnegativeboost', pokemon, '[silent]');
 
 widelens: {
 name: "Wide Lens",
-fling: {
-basePower: 10,
-},
 onSourceModifyAccuracyPriority: -2,
 onSourceModifyAccuracy(accuracy) {
 if (typeof accuracy === 'number') {
@@ -5493,9 +4977,6 @@ forcedForme: "Arceus-Electric",
 
 zoomlens: {
 name: "Zoom Lens",
-fling: {
-basePower: 10,
-},
 onSourceModifyAccuracyPriority: -2,
 onSourceModifyAccuracy(accuracy, target) {
 if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
@@ -5776,9 +5257,6 @@ isNonstandard: "CAP",
 
 vilevial: {
 name: "Vile Vial",
-fling: {
-basePower: 60,
-},
 onBasePowerPriority: 15,
 onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === -66 && ['Poison', 'Flying'].includes(move.type)) {
