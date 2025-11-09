@@ -88,6 +88,26 @@ this.heal(1);
 },
 },
 
+mbcumuberry: {
+name: "MBCUMU Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Poison",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2.1) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(1);
+},
+},
+
 abilityshield: {
 name: "Ability Shield",
 fling: {
@@ -166,7 +186,19 @@ spa: 1,
 
 adamantcrystal: {
 name: "Adamant Crystal",
+onBasePower(basePower, user, target, move) {
+if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
+return this.chainModify([115, 100]);
+}
 },
+
+if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
+return false;
+}
+},
+forcedForme: "Dialga-Origin",
+itemUser: ["Dialga-Origin"],
+
 
 altarianite: {
 name: "Altarianite",
@@ -2535,7 +2567,7 @@ fling: {
 basePower: 60,
 },
 onModifyCritRatio(critRatio, user) {
-if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
+if (["Unbeliequack", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
 return critRatio + 2;
 }
 },
@@ -4937,7 +4969,7 @@ fling: {
 basePower: 60,
 },
 onModifyCritRatio(critRatio, user) {
-if (this.toID(user.baseSpecies.baseSpecies) === 'farfetchd') {
+if (this.toID(user.baseSpecies.baseSpecies) === 'Unbeliequack') {
 return critRatio + 2;
 }
 },
@@ -5101,11 +5133,11 @@ basePower: 90,
 },
 onModifyAtkPriority: 1,
 onModifyAtk(atk, pokemon) {
-if (pokemon.baseSpecies.baseSpecies === 'Cubone' || pokemon.baseSpecies.baseSpecies === 'Marowak') {
+if (pokemon.baseSpecies.baseSpecies === 'Cubone' || pokemon.baseSpecies.baseSpecies === 'Harrowack') {
 return this.chainModify(2);
 }
 },
-itemUser: ["Marowak", "Marowak-Alola", "Marowak-Alola-Totem", "Cubone"],
+itemUser: ["Harrowack", "Marowak-Alola", "Marowak-Alola-Totem", "Cubone"],
 isNonstandard: "Past",
 },
 
@@ -5931,7 +5963,7 @@ desc: "Stops the foe from attacking for one turn. Single use.",
 },
 
 scorchingsandsstone: {
-name: 'Scorching Sands Stone',
+name: "Scorching Sands Stone",
 onModifyMovePriority: -1,
 onModifyMove(move) {
 if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
@@ -5945,7 +5977,7 @@ status: 'brn',
 },
 
 rainbowreflector: {
-name: 'Rainbow Reflector',
+name: "Rainbow Reflector",
 onDamagingHitOrder: 2,
 onDamagingHit(damage, target, source, move) {
 if (move.category === 'Special' && this.field.isWeather('raindance')) {
@@ -5975,3 +6007,14 @@ return this.chainModify([115, 100]);
 
 
 };
+
+
+
+
+
+
+
+
+
+
+
