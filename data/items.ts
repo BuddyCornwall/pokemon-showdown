@@ -1,5 +1,4 @@
 export const Items: {[itemid: string]: ItemData} = {
-
 abilityshield: {
 name: "Ability Shield",
 fling: {
@@ -17,7 +16,6 @@ return null;
 },
 // Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
 },
-
 abomasite: {
 name: "Abomasite",
 megaStone: "Abomasnow-Mega",
@@ -145,12 +143,6 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
-if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
-return false;
-}
-},
-forcedForme: "Dialga-Origin",
-itemUser: ["Dialga-Origin"],
 aspearberry: {
 name: "Aspear Berry",
 isBerry: true,
@@ -5985,4 +5977,23 @@ return critRatio + 1;
 
 
 
+
+
+
+
+
+
+
+
 };
+
+
+
+
+
+
+
+
+
+
+
