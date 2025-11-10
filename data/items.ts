@@ -5985,8 +5985,8 @@ scanner5000: {
 name: "Scanner 5000",
 onBasePowerPriority: 23,
 onBasePower(basePower, attacker, defender, move) {
-if (move.recharge) {
-this.debug('X-Ring recharge boost');
+if (move.flags['recharge']) {
+this.debug('Scanner 5000');
 return this.chainModify([115, 100]);
 }
 },
