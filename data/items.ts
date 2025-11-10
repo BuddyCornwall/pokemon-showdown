@@ -5972,102 +5972,143 @@ forcedForme: "Arceus-Electric",
 
 romansreigns: {
 name: "Roman's Reigns",
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.dog) {
+this.debug('romansreigns');
+return this.chainModify([115, 100]);
+}
+},
 },
 
 scanner5000: {
 name: "Scanner 5000",
-
-
-
-
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.recharge) {
+this.debug('X-Ring recharge boost');
+return this.chainModify([115, 100]);
+}
+},
 },
 
 xring: {
 name: "X-Ring",
-
-
-
-
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['beam']) {
+this.debug('Dragon Ball boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['beam']) delete move.flags['contact'];
+},
 },
 
 scanner3000: {
 name: "Scanner 3000",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (target?.newlySwitched) {
+this.add('-message', `${user.name}'s Scanner locked onto ${target.name}!`);
+return this.chainModify(1.15);
+}
+},
 },
 
 pinkflower: {
 name: "Pink Flower",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Fairy' || move.type === 'Grass') {
+return this.chainModify(1.075);
+}
+},
 },
 
 luchamask: {
 name: "Lucha Mask",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Flying' || move.type === 'Fighting') {
+return this.chainModify(1.075);
+}
+},
 },
 
 drill: {
 name: "Drill",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Ground' || move.type === 'Steel') {
+return this.chainModify(1.075);
+}
+},
 },
 
 slatecartridge: {
 name: "Slate Cartridge",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Rock' || move.type === 'Electric') {
+return this.chainModify(1.075);
+}
 },
+},
+
 
 teapot: {
 name: "Teapot",
-
-
-
-
+onModifyMove(move) {
+if (move.type === 'Water') {
+if (!move.secondaries) move.secondaries = [];
+move.secondaries.push({
+chance: 10,
+status: 'brn',
+});
+}
 },
+},
+
 
 waterbottle: {
 name: "Water Bottle",
-
-
-
-
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Water' && !user.hasType('Water') && !this.effectState.used) {
+this.effectState.used = true;
+user.useItem();
+return this.chainModify(1.5);
+}
+},
 },
 
 dsheadphones: {
 name: "DS Headphones",
-
-
-
-
+onDamagingHit(damage, target, source, move) {
+if (move.flags['sound']) {
+this.add('-message', `${target.name}'s Headphones muffled the noise!`);
+this.boost({def: 1, spd: 1}, target);
+}
+},
 },
 
 feather: {
 name: "Feather",
-
-
-
-
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Flying') {
+this.boost({spe: 1}, target);
+}
+},
 },
 
 loveletter: {
 name: "Love Letter",
-
-
-
-
+onAfterMove(pokemon, target, move) {
+if (this.effectState.used) return;
+if (move.category !== 'Status' && target && target.hp && !target.volatiles['attract']) {
+this.add('-message', `${pokemon.name} sheepishly hands over a Love Letter to ${target.name}! 💌`);
+target.addVolatile('attract', pokemon);
+pokemon.useItem();
+this.effectState.used = true;
+}
+},
 },
 
 duckcup: {
