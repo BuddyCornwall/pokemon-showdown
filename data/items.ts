@@ -172,14 +172,6 @@ return this.chainModify([115, 100]);
 }
 },
 
-if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
-return false;
-}
-},
-forcedForme: "Dialga-Origin",
-itemUser: ["Dialga-Origin"],
-
-
 altarianite: {
 name: "Altarianite",
 megaStone: "Altaria-Mega",
