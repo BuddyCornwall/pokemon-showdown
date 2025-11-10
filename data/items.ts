@@ -145,12 +145,6 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
-if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
-return false;
-}
-},
-forcedForme: "Dialga-Origin",
-itemUser: ["Dialga-Origin"],
 aspearberry: {
 name: "Aspear Berry",
 isBerry: true,
