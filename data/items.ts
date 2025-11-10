@@ -5970,4 +5970,140 @@ return true;
 forcedForme: "Arceus-Electric",
 },
 
+romansreigns: {
+name: "Roman's Reigns",
+},
+
+scanner5000: {
+name: "Scanner 5000",
+
+
+
+
+},
+
+xring: {
+name: "X-Ring",
+
+
+
+
+},
+
+scanner3000: {
+name: "Scanner 3000",
+
+
+
+
+},
+
+pinkflower: {
+name: "Pink Flower",
+
+
+
+
+},
+
+luchamask: {
+name: "Lucha Mask",
+
+
+
+
+},
+
+drill: {
+name: "Drill",
+
+
+
+
+},
+
+slatecartridge: {
+name: "Slate Cartridge",
+
+
+
+
+},
+
+teapot: {
+name: "Teapot",
+
+
+
+
+},
+
+waterbottle: {
+name: "Water Bottle",
+
+
+
+
+},
+
+dsheadphones: {
+name: "DS Headphones",
+
+
+
+
+},
+
+feather: {
+name: "Feather",
+
+
+
+
+},
+
+loveletter: {
+name: "Love Letter",
+
+
+
+
+},
+
+duckcup: {
+name: "Duck Cup",
+
+
+
+
+},
+
+earbuds: {
+name: "Earbuds",
+
+
+
+
+},
+
+
+
+
+
+benjerryum: {
+name: "BenJerryum",
+
+
+
+
+},
+
+fishhook: {
+name: "Fish Hook",
+
+
+
+
+},
+
 };
