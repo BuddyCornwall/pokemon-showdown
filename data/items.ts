@@ -2298,53 +2298,6 @@ return critRatio + 1;
 },
 },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 abomasite: {
 name: "Abomasite",
 megaStone: "Abomasnow-Mega",
@@ -2420,6 +2373,7 @@ onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
 return this.chainModify([115, 100]);
 }
+},
 },
 
 altarianite: {
