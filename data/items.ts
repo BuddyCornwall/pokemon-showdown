@@ -6080,30 +6080,37 @@ name: "Duck Cup",
 
 earbuds: {
 name: "Earbuds",
-
-
-
-
+headphones: {
+onTryHit(target, source, move) {
+if (move.flags['sound']) {
+this.add('-activate', target, 'item: Headphones');
+target.consumeItem();
+return null;
+}
 },
-
-
-
-
+},
+},
 
 benjerryum: {
 name: "BenJerryum",
-
-
-
-
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+if (pokemon.hasType('Ice')) {
+this.heal(pokemon.baseMaxhp / 13.34);
+} else {
+this.damage(pokemon.baseMaxhp / 3);
+}
+},
 },
 
 fishhook: {
 name: "Fish Hook",
-
-
-
-
+onFoeTrapPokemon(pokemon) {
+if (pokemon.hasType('Water')) {
+return true;
+}
+},
 },
 
 };
