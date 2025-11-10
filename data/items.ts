@@ -326,44 +326,45 @@ onEat() { },
 },
 
 clearamulet: {
-cobaberry: {
 name: "Clear Amulet",
-name: "Coba Berry",
 fling: {
-isBerry: true,
 basePower: 30,
-naturalGift: {
 },
-basePower: 80,
 onTryBoost(boost, target, source, effect) {
-type: "Flying",
 if (source && target === source) return;
-},
 let showMsg = false;
-onSourceModifyDamage(damage, source, target, move) {
 let i: BoostID;
-if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0) {
 for (i in boost) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
 if (boost[i]! < 0) {
-if (hitSub) return;
 delete boost[i];
-if (target.eatItem()) {
 showMsg = true;
-this.debug('-50% reduction');
 }
-this.add('-enditem', target, this.effect, '[weaken]');
 }
-return this.chainModify(0.5);
 if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-}
 this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + target);
 }
+},
+},
+
+cobaberry: {
+name: "Coba Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Flying",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
 }
 },
-},
 onEat() { },
-},
 },
 
 colburberry: {
@@ -5468,7 +5469,6 @@ forcedForme: "Genesect-Shock",
 itemUser: ["Genesect-Shock"],
 isNonstandard: "Past",
 },
-
 siriusarmilla: {
 name: "Sirius Armilla",
 fling: {
