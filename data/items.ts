@@ -5423,6 +5423,7 @@ forcedForme: "Genesect-Shock",
 itemUser: ["Genesect-Shock"],
 isNonstandard: "Past",
 },
+
 siriusarmilla: {
 name: "Sirius Armilla",
 fling: {
@@ -5441,6 +5442,7 @@ return target.hp - 1;
 }
 },
 },
+
 skullfossil: {
 name: "Skull Fossil",
 fling: {
@@ -5448,6 +5450,7 @@ basePower: 100,
 },
 isNonstandard: "Past",
 },
+
 skyplate: {
 name: "Sky Plate",
 onPlate: 'Flying',
@@ -5465,6 +5468,7 @@ return true;
 },
 forcedForme: "Arceus-Flying",
 },
+
 slowbronite: {
 name: "Slowbronite",
 megaStone: "Slowbro-Mega",
@@ -5476,6 +5480,7 @@ return true;
 },
 isNonstandard: "Past",
 },
+
 snorliumz: {
 name: "Snorlium Z",
 onTakeItem: false,
@@ -5484,6 +5489,7 @@ zMoveFrom: "Giga Impact",
 itemUser: ["Snorlax"],
 isNonstandard: "Past",
 },
+
 solganiumz: {
 name: "Solganium Z",
 onTakeItem: false,
@@ -5492,6 +5498,7 @@ zMoveFrom: "Sunsteel Strike",
 itemUser: ["Solgaleo", "Necrozma-Dusk-Mane"],
 isNonstandard: "Past",
 },
+
 souldew: {
 name: "Soul Dew",
 fling: {
@@ -5509,6 +5516,7 @@ return this.chainModify([115, 100]);
 itemUser: ["Latios", "Latias"],
 isNonstandard: "Past",
 },
+
 spelonberry: {
 name: "Spelon Berry",
 isBerry: true,
@@ -5519,6 +5527,7 @@ type: "Dark",
 onEat: false,
 isNonstandard: "Past",
 },
+
 splashplate: {
 name: "Splash Plate",
 onPlate: 'Water',
@@ -5536,6 +5545,7 @@ return true;
 },
 forcedForme: "Arceus-Water",
 },
+
 spookyplate: {
 name: "Spooky Plate",
 onPlate: 'Ghost',
@@ -5553,11 +5563,13 @@ return true;
 },
 forcedForme: "Arceus-Ghost",
 },
+
 sportball: {
 name: "Sport Ball",
 isPokeball: true,
 isNonstandard: "Unobtainable",
 },
+
 starsweet: {
 name: "Star Sweet",
 fling: {
@@ -5565,6 +5577,7 @@ basePower: 10,
 },
 isNonstandard: "Past",
 },
+
 steelgem: {
 name: "Steel Gem",
 isGem: true,
@@ -5576,6 +5589,7 @@ source.addVolatile('gem');
 },
 isNonstandard: "Past",
 },
+
 steeliumz: {
 name: "Steelium Z",
 onPlate: 'Steel',
@@ -5585,6 +5599,7 @@ zMoveType: "Steel",
 forcedForme: "Arceus-Steel",
 isNonstandard: "Past",
 },
+
 steelixite: {
 name: "Steelixite",
 megaStone: "Steelix-Mega",
@@ -5596,6 +5611,7 @@ return true;
 },
 isNonstandard: "Past",
 },
+
 steelmemory: {
 name: "Steel Memory",
 onMemory: 'Steel',
@@ -5609,6 +5625,7 @@ forcedForme: "Silvally-Steel",
 itemUser: ["Silvally-Steel"],
 isNonstandard: "Past",
 },
+
 stick: {
 name: "Stick",
 fling: {
@@ -5622,6 +5639,7 @@ return critRatio + 2;
 itemUser: ["Farfetch\u2019d"],
 isNonstandard: "Past",
 },
+
 stoneplate: {
 name: "Stone Plate",
 onPlate: 'Rock',
@@ -5639,11 +5657,13 @@ return true;
 },
 forcedForme: "Arceus-Rock",
 },
+
 strangeball: {
 name: "Strange Ball",
 isPokeball: true,
 isNonstandard: "Unobtainable",
 },
+
 strawberrysweet: {
 name: "Strawberry Sweet",
 fling: {
@@ -5651,12 +5671,14 @@ basePower: 10,
 },
 isNonstandard: "Past",
 },
+
 sunstone: {
 name: "Sun Stone",
 fling: {
 basePower: 30,
 },
 },
+
 swampertite: {
 name: "Swampertite",
 megaStone: "Swampert-Mega",
@@ -5668,12 +5690,14 @@ return true;
 },
 isNonstandard: "Past",
 },
+
 sweetapple: {
 name: "Sweet Apple",
 fling: {
 basePower: 30,
 },
 },
+
 tamatoberry: {
 name: "Tamato Berry",
 isBerry: true,
@@ -5683,6 +5707,7 @@ type: "Psychic",
 },
 onEat: false,
 },
+
 tapuniumz: {
 name: "Tapunium Z",
 onTakeItem: false,
@@ -5691,12 +5716,14 @@ zMoveFrom: "Nature's Madness",
 itemUser: ["Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini"],
 isNonstandard: "Past",
 },
+
 tartapple: {
 name: "Tart Apple",
 fling: {
 basePower: 30,
 },
 },
+
 thickclub: {
 name: "Thick Club",
 fling: {
@@ -5711,16 +5738,19 @@ return this.chainModify(2);
 itemUser: ["Harrowack", "Marowak-Alola", "Marowak-Alola-Totem", "Cubone"],
 isNonstandard: "Past",
 },
+
 thunderstone: {
 name: "Thunder Stone",
 fling: {
 basePower: 30,
 },
 },
+
 timerball: {
 name: "Timer Ball",
 isPokeball: true,
 },
+
 toxicplate: {
 name: "Toxic Plate",
 onPlate: 'Poison',
@@ -5738,6 +5768,7 @@ return true;
 },
 forcedForme: "Arceus-Poison",
 },
+
 tyranitarite: {
 name: "Tyranitarite",
 megaStone: "Tyranitar-Mega",
@@ -5749,10 +5780,12 @@ return true;
 },
 isNonstandard: "Past",
 },
+
 ultraball: {
 name: "Ultra Ball",
 isPokeball: true,
 },
+
 ultranecroziumz: {
 name: "Ultranecrozium Z",
 onTakeItem: false,
@@ -5761,6 +5794,7 @@ zMoveFrom: "Photon Geyser",
 itemUser: ["Necrozma-Ultra"],
 isNonstandard: "Past",
 },
+
 upgrade: {
 name: "Up-Grade",
 fling: {
@@ -5768,6 +5802,7 @@ basePower: 30,
 },
 isNonstandard: "Past",
 },
+
 venusaurite: {
 name: "Venusaurite",
 megaStone: "Venusaur-Mega",
@@ -5779,6 +5814,7 @@ return true;
 },
 isNonstandard: "Past",
 },
+
 vilevial: {
 name: "Vile Vial",
 fling: {
@@ -5800,6 +5836,7 @@ forcedForme: "Venomicon-Epilogue",
 itemUser: ["Venomicon-Epilogue"],
 isNonstandard: "CAP",
 },
+
 voodoodoll: {
 name: "Voodoo Doll",
 onDamagePriority: -100,
@@ -5811,6 +5848,7 @@ this.add('-message', target.name + "'s Voodoo Doll reflects " + damageToReflect 
 }
 },
 },
+
 watergem: {
 name: "Water Gem",
 isGem: true,
@@ -5822,6 +5860,7 @@ source.addVolatile('gem');
 },
 isNonstandard: "Past",
 },
+
 wateriumz: {
 name: "Waterium Z",
 onPlate: 'Water',
@@ -5831,6 +5870,7 @@ zMoveType: "Water",
 forcedForme: "Arceus-Water",
 isNonstandard: "Past",
 },
+
 watermemory: {
 name: "Water Memory",
 onMemory: 'Water',
@@ -5844,12 +5884,14 @@ forcedForme: "Silvally-Water",
 itemUser: ["Silvally-Water"],
 isNonstandard: "Past",
 },
+
 waterstone: {
 name: "Water Stone",
 fling: {
 basePower: 30,
 },
 },
+
 watmelberry: {
 name: "Watmel Berry",
 isBerry: true,
@@ -5860,6 +5902,7 @@ type: "Fire",
 onEat: false,
 isNonstandard: "Past",
 },
+
 waveincense: {
 name: "Wave Incense",
 fling: {
@@ -5873,6 +5916,7 @@ return this.chainModify([4915, 4096]);
 },
 isNonstandard: "Past",
 },
+
 wepearberry: {
 name: "Wepear Berry",
 isBerry: true,
@@ -5883,6 +5927,7 @@ type: "Electric",
 onEat: false,
 isNonstandard: "Past",
 },
+
 wikiberry: {
 name: "Wiki Berry",
 isBerry: true,
@@ -5906,6 +5951,7 @@ pokemon.addVolatile('confusion');
 }
 },
 },
+
 zapplate: {
 name: "Zap Plate",
 onPlate: 'Electric',
@@ -5923,4 +5969,5 @@ return true;
 },
 forcedForme: "Arceus-Electric",
 },
+
 };
