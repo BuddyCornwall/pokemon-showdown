@@ -6072,10 +6072,15 @@ name: "Love Letter",
 
 duckcup: {
 name: "Duck Cup",
-
-
-
-
+onStart(pokemon) {
+this.add('-message', `${pokemon.name} is holding a Duck Cup! Everyone's confused!`);
+for (const mon of this.getAllActive()) {
+if (mon && mon.hp && !mon.volatiles['confusion']) {
+mon.addVolatile('confusion');
+this.add('-start', mon, 'confusion', '[from] item: Duck Cup');
+}
+}
+},
 },
 
 earbuds: {
