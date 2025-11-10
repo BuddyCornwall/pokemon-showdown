@@ -1,4 +1,5 @@
 export const Items: {[itemid: string]: ItemData} = {
+	
 abilityshield: {
 name: "Ability Shield",
 fling: {
@@ -91,6 +92,7 @@ onBasePower(basePower, user, target, move) {
 if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
 return this.chainModify([115, 100]);
 }
+},
 },
 
 altarianite: {
