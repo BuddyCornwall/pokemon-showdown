@@ -1,5 +1,6 @@
 export const Items: {[itemid: string]: ItemData} = {
 
+
 abilityshield: {
 name: "Ability Shield",
 fling: {
@@ -18,2331 +19,7 @@ return null;
 // Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
 },
 
-aspearberry: {
-name: "Aspear Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ice",
-},
-onUpdate(pokemon) {
-if (pokemon.status === 'frz') {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-if (pokemon.status === 'frz') {
-pokemon.cureStatus();
-}
-},
-},
-
-assaultvest: {
-name: "Assault Vest",
-fling: {
-basePower: 80,
-},
-onModifySpDPriority: 1,
-onModifySpD(spd) {
-return this.chainModify(1.55);
-},
-onDisableMove(pokemon) {
-for (const moveSlot of pokemon.moveSlots) {
-if (this.dex.moves.get(moveSlot.move).category === 'Status') {
-pokemon.disableMove(moveSlot.id);
-}
-}
-},
-},
-
-babiriberry: {
-name: "Babiri Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Steel",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Steel' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-beachglass: {
-name: "Beach Glass",
-onResidualOrder: 26,
-onResidualSubOrder: 1,
-onResidual: function (pokemon) {
-if (this.field.isWeather('sunnyday')) {
-this.boost({spe: 1}, pokemon);
-} else {
-this.boost({spe: -1}, pokemon);
-}
-},
-},
-
-bigroot: {
-name: "Big Root",
-fling: {
-basePower: 10,
-},
-onTryHealPriority: 1,
-onTryHeal(damage, target, source, effect) {
-const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
-if (heals.includes(effect.id)) {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-bindingband: {
-name: "Binding Band",
-fling: {
-basePower: 30,
-},
-// implemented in statuses
-},
-
-blackbelt: {
-name: "Black Belt",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Fighting') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-blackglasses: {
-name: "Black Glasses",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Dark') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-blacksludge: {
-name: "Black Sludge",
-fling: {
-basePower: 30,
-},
-onResidualOrder: 5,
-onResidualSubOrder: 4,
-onResidual(pokemon) {
-if (pokemon.hasType('Poison')) {
-this.heal(pokemon.baseMaxhp / 13.34);
-} else {
-this.damage(pokemon.baseMaxhp / 3);
-}
-},
-},
-
-blunderpolicy: {
-name: "Blunder Policy",
-fling: {
-basePower: 80,
-},
-// Item activation located in scripts.js
-},
-
-bulletproofvest: {
-name: "Bullet Proof Vest",
-fling: {
-basePower: 80,
-},
-onModifySpDPriority: 1,
-onModifySpD(def) {
-return this.chainModify(1.55);
-},
-onDisableMove(pokemon) {
-for (const moveSlot of pokemon.moveSlots) {
-if (this.dex.moves.get(moveSlot.move).category === 'Status') {
-pokemon.disableMove(moveSlot.id);
-}
-}
-},
-},
-
-capsule: {
-name: "Capsule",
-onDamagingHitOrder: 2,
-onDamagingHit(damage, target, source, move) {
-if (!target.usedCapsule) {
-const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
-const randomStatus = this.sample(statuses);
-this.add('-message', `${source.name} was affected by a Capsule!`);
-this.add('-status', source, randomStatus);
-target.usedCapsule = true;
-}
-},
-},
-
-cellsynergysurge: {
-name: "Cell Synergy Surge",
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Electric') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-},
-
-charcoal: {
-name: "Charcoal",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Fire') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-chartiberry: {
-name: "Charti Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Rock",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-cheriberry: {
-name: "Cheri Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Fire",
-},
-onUpdate(pokemon) {
-if (pokemon.status === 'par') {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-if (pokemon.status === 'par') {
-pokemon.cureStatus();
-}
-},
-},
-
-chestoberry: {
-name: "Chesto Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Water",
-},
-onUpdate(pokemon) {
-if (pokemon.status === 'slp') {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-if (pokemon.status === 'slp') {
-pokemon.cureStatus();
-}
-},
-},
-
-chilanberry: {
-name: "Chilan Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Normal",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (
-move.type === 'Normal' &&
-(!target.volatiles['substitute'] || move.flags['bypasssub'] || (move.infiltrates && this.gen >= 6))
-) {
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-chopleberry: {
-name: "Chople Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Fighting",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-clearamulet: {
-
-cobaberry: {
-colburberry: {
-name: "Clear Amulet",
-name: "Colbur Berry",
-name: "Coba Berry",
-isBerry: true,
-fling: {
-naturalGift: {
-isBerry: true,
-basePower: 80,
-basePower: 30,
-type: "Dark",
-naturalGift: {
-},
-},
-onSourceModifyDamage(damage, source, target, move) {
-basePower: 80,
-if (move.type === 'Dark' && target.getMoveHitData(move).typeMod > 0) {
-onTryBoost(boost, target, source, effect) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-type: "Flying",
-if (hitSub) return;
-if (source && target === source) return;
-if (target.eatItem()) {
-},
-this.debug('-50% reduction');
-let showMsg = false;
-this.add('-enditem', target, this.effect, '[weaken]');
-onSourceModifyDamage(damage, source, target, move) {
-return this.chainModify(0.5);
-let i: BoostID;
-}
-if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0) {
-}
-for (i in boost) {
-},
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-onEat() { },
-if (boost[i]! < 0) {
-},
-if (hitSub) return;
-delete boost[i];
-if (target.eatItem()) {
-showMsg = true;
-this.debug('-50% reduction');
-}
-this.add('-enditem', target, this.effect, '[weaken]');
-}
-return this.chainModify(0.5);
-if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-}
-this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + target);
-}
-}
-},
-},
-onEat() { },
-},
-},
-
-covertcloak: {
-name: "Covert Cloak",
-fling: {
-basePower: 30,
-},
-onModifySecondaries(secondaries) {
-this.debug('Covert Cloak prevent secondary');
-return secondaries.filter(effect => !!(effect.self || effect.dustproof));
-},
-},
-
-custapberry: {
-name: "Custap Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Ghost",
-},
-onFractionalPriorityPriority: -2,
-onFractionalPriority(priority, pokemon) {
-if (
-priority <= 0 &&
-(pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony))
-) {
-if (pokemon.eatItem()) {
-this.add('-activate', pokemon, 'item: Custap Berry', '[consumed]');
-return 0.1;
-}
-}
-},
-onEat() { },
-isNonstandard: "Unobtainable",
-},
-
-damprock: {
-name: "Damp Rock",
-fling: {
-basePower: 60,
-},
-},
-
-darkband: {
-name: "Dark Band",
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Dark') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-},
-
-donnyosmium: {
-name: "Donny Osmium",
-onModifyWeightPriority: 1,
-onModifyWeight(weighthg) {
-return weighthg * 2.5;
-},
-isBreakable: true,
-},
-
-dragonball: {
-name: "Dragon Ball",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['beam']) {
-this.debug('Dragon Ball boost');
-return this.chainModify([115, 100]);
-}
-},
-onModifyMovePriority: 1,
-onModifyMove(move) {
-if (move.flags['beam']) delete move.flags['contact'];
-},
-},
-
-dragonfang: {
-name: "Dragon Fang",
-fling: {
-basePower: 70,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Dragon') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-egg: {
-name: "Egg",
-onDamagingHitOrder: 1,
-onDamagingHit: function (damage, target, source, move) {
-this.add('-activate', target, 'item: Egg');
-source.addVolatile('confusion', target);
-let damageAmount = Math.ceil(source.maxhp / 10);
-this.damage(damageAmount, source, target);
-target.setItem('');
-},
-onUse: function (pokemon) {
-if (!pokemon.volatiles['eggused']) {
-pokemon.addVolatile('eggused');
-} else {
-return false;
-}
-},
-},
-
-ejectbutton: {
-name: "Eject Button",
-fling: {
-basePower: 30,
-},
-onAfterMoveSecondaryPriority: 2,
-onAfterMoveSecondary(target, source, move) {
-if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
-if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.beingCalledBack || target.isSkyDropped()) return;
-if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
-for (const pokemon of this.getAllActive()) {
-if (pokemon.switchFlag === true) return;
-}
-target.switchFlag = true;
-if (target.useItem()) {
-source.switchFlag = false;
-} else {
-target.switchFlag = false;
-}
-}
-},
-},
-
-ejectpack: {
-name: "Eject Pack",
-fling: {
-basePower: 50,
-},
-onAfterBoost(boost, target, source, effect) {
-if (this.activeMove?.id === 'partingshot') return;
-let eject = false;
-let i: BoostID;
-for (i in boost) {
-if (boost[i]! < 0) {
-eject = true;
-}
-}
-if (eject) {
-if (target.hp) {
-if (!this.canSwitch(target.side)) return;
-if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
-for (const pokemon of this.getAllActive()) {
-if (pokemon.switchFlag === true) return;
-}
-if (target.useItem()) target.switchFlag = true;
-}
-}
-},
-},
-
-electricseed: {
-name: "Electric Seed",
-fling: {
-basePower: 10,
-},
-onStart(pokemon) {
-if (!pokemon.ignoringItem() && this.field.isTerrain('electricterrain')) {
-pokemon.useItem();
-}
-},
-onTerrainChange(pokemon) {
-if (this.field.isTerrain('electricterrain')) {
-pokemon.useItem();
-}
-},
-boosts: {
-def: 1,
-spd: 1,
-},
-},
-
-enigmaberry: {
-name: "Enigma Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Bug",
-},
-onHit(target, source, move) {
-if (move && target.getMoveHitData(move).typeMod > 0) {
-if (target.eatItem()) {
-this.heal(target.baseMaxhp / 4);
-}
-}
-},
-onTryEatItem(item, pokemon) {
-if (!this.runEvent('TryHeal', pokemon)) return false;
-},
-onEat() { },
-isNonstandard: "Unobtainable",
-},
-
-eviolite: {
-name: "Eviolite",
-fling: {
-basePower: 40,
-},
-onModifyDefPriority: 2,
-onModifyDef(def, pokemon) {
-if (pokemon.baseSpecies.nfe) {
-return this.chainModify(1.5);
-}
-},
-onModifySpDPriority: 2,
-onModifySpD(spd, pokemon) {
-if (pokemon.baseSpecies.nfe) {
-return this.chainModify(1.5);
-}
-},
-},
-
-eviomax: {
-name: "Eviomax",
-fling: {
-basePower: 40,
-},
-onModifyDefPriority: 2,
-onModifyDef(def, pokemon) {
-if (pokemon.baseSpecies.fe) {
-return this.chainModify(1.25);
-}
-},
-onModifySpDPriority: 2,
-onModifySpD(spd, pokemon) {
-if (pokemon.baseSpecies.fe) {
-return this.chainModify(1.25);
-}
-},
-},
-
-expertbelt: {
-name: "Expert Belt",
-fling: {
-basePower: 10,
-},
-onModifyDamage(damage, source, target, move) {
-if (move && target.getMoveHitData(move).typeMod > 0) {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-fairyscale: {
-name: "Fairy Scale",
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Fairy') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-},
-
-flameorb: {
-name: "Flame Orb",
-fling: {
-basePower: 30,
-status: 'brn',
-},
-onResidualOrder: 28,
-onResidualSubOrder: 3,
-onResidual(pokemon) {
-pokemon.trySetStatus('brn', pokemon);
-},
-},
-
-floatstone: {
-name: "Float Stone",
-fling: {
-basePower: 30,
-},
-onModifyWeight(weighthg) {
-return this.trunc(weighthg / 2);
-},
-},
-
-focusband: {
-name: "Focus Band",
-fling: {
-basePower: 10,
-},
-onDamagePriority: -40,
-onDamage(damage, target, source, effect) {
-if (this.randomChance(16.5, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
-this.add("-activate", target, "item: Focus Band");
-return target.hp - 1;
-}
-},
-},
-
-focussash: {
-name: "Focus Sash",
-fling: {
-basePower: 10,
-},
-onDamagePriority: -40,
-onDamage(damage, target, source, effect) {
-if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
-if (target.useItem()) {
-return target.hp - 1;
-}
-}
-},
-},
-
-ganlonberry: {
-name: "Ganlon Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Ice",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-this.boost({def: 1.5});
-},
-},
-
-goldenbullet: {
-name: "Golden Bullet",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['bullet']) {
-this.debug('Golden Bullet boost');
-return this.chainModify([115, 100]);
-}
-},
-onModifyMovePriority: 1,
-onModifyMove(move) {
-if (move.flags['bullet']) delete move.flags['contact'];
-},
-},
-
-grassyseed: {
-name: "Grassy Seed",
-fling: {
-basePower: 10,
-},
-onStart(pokemon) {
-if (!pokemon.ignoringItem() && this.field.isTerrain('grassyterrain')) {
-pokemon.useItem();
-}
-},
-onTerrainChange(pokemon) {
-if (this.field.isTerrain('grassyterrain')) {
-pokemon.useItem();
-}
-},
-boosts: {
-def: 1,
-spd: 1,
-},
-},
-
-gripclaw: {
-name: "Grip Claw",
-fling: {
-basePower: 90,
-},
-// implemented in statuses
-},
-
-habanberry: {
-name: "Haban Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Dragon",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-hardstone: {
-name: "Hard Stone",
-fling: {
-basePower: 100,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Rock') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-heartscale: {
-name: "Heart Scale",
-onFaint: function (source) {
-this.add('-message', source.side.name + "'s Heart Scale emits a radiant light, confusing all opposing Pokémon!");
-for (const foeActive of source.side.foe.active) {
-if (foeActive && foeActive.hp) {
-foeActive.addVolatile('confusion');
-}
-}
-},
-},
-
-heatrock: {
-name: "Heat Rock",
-fling: {
-basePower: 60,
-},
-},
-
-heavydutyboots: {
-name: "Heavy-Duty Boots",
-fling: {
-basePower: 80,
-},
-// Hazard Immunity implemented in moves.ts
-},
-
-iceskates: {
-name: "Ice Skates",
-onResidualOrder: 26,
-onResidualSubOrder: 1,
-onResidual: function (pokemon) {
-if (this.field.isWeather('snow')) {
-this.boost({spe: 1}, pokemon);
-} else {
-this.boost({spe: -1}, pokemon);
-}
-},
-},
-
-icyrock: {
-name: "Icy Rock",
-fling: {
-basePower: 40,
-},
-},
-
-ironball: {
-name: "Iron Ball",
-fling: {
-basePower: 130,
-},
-onEffectiveness(typeMod, target, type, move) {
-if (!target) return;
-if (target.volatiles['ingrain'] || target.volatiles['smackdown'] || this.field.getPseudoWeather('gravity')) return;
-if (move.type === 'Ground' && target.hasType('Flying')) return 0;
-},
-// airborneness negation implemented in sim/pokemon.js:Pokemon#isGrounded
-onModifySpe(spe) {
-return this.chainModify(0.5);
-},
-},
-
-jabocaberry: {
-name: "Jaboca Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Dragon",
-},
-onDamagingHit(damage, target, source, move) {
-if (move.category === 'Physical' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
-if (target.eatItem()) {
-this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
-}
-}
-},
-onEat() { },
-isNonstandard: "Unobtainable",
-},
-
-kasibberry: {
-name: "Kasib Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ghost",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-kebiaberry: {
-name: "Kebia Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Poison",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-keeberry: {
-name: "Kee Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Fairy",
-},
-onAfterMoveSecondary(target, source, move) {
-if (move.category === 'Physical') {
-if (move.id === 'present' && move.heal) return;
-target.eatItem();
-}
-},
-onEat(pokemon) {
-this.boost({def: 1.5});
-},
-isNonstandard: "Unobtainable",
-},
-
-kickpads: {
-name: "Kickpads",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['kick']) {
-this.debug('Kickpads boost');
-return this.chainModify([115, 100]);
-}
-},
-onModifyMovePriority: 1,
-onModifyMove(move) {
-if (move.flags['kick']) delete move.flags['contact'];
-},
-},
-
-laggingtail: {
-name: "Lagging Tail",
-fling: {
-basePower: 10,
-},
-onFractionalPriority: -0.1,
-},
-
-lansatberry: {
-name: "Lansat Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Flying",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-pokemon.addVolatile('focusenergy');
-},
-},
-
-leftovers: {
-name: "Leftovers",
-fling: {
-basePower: 10,
-},
-onResidualOrder: 5,
-onResidualSubOrder: 4,
-onResidual(pokemon) {
-this.heal(pokemon.baseMaxhp / 13.34);
-},
-},
-
-lemonjelly: {
-name: "Lemon Jelly",
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (this.field.isWeather('raindance') && move.flags['duck']) {
-this.debug('Lemon Jelly boost');
-return this.chainModify([115, 100]);
-}
-},
-},
-
-liechiberry: {
-name: "Liechi Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Grass",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-this.boost({atk: 1.5});
-},
-},
-
-lifeorb: {
-name: "Life Orb",
-fling: {
-basePower: 30,
-},
-onModifyDamage(damage, source, target, move) {
-return this.chainModify([115, 100]);
-},
-onAfterMoveSecondarySelf(source, target, move) {
-if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
-this.damage(source.baseMaxhp / 8, source, source, this.dex.items.get('lifeorb'));
-}
-},
-},
-
-lightball: {
-name: "Light Ball",
-fling: {
-basePower: 30,
-status: 'par',
-},
-onModifyAtkPriority: 1,
-onModifyAtk(atk, pokemon) {
-if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
-return this.chainModify(2);
-}
-},
-onModifySpAPriority: 1,
-onModifySpA(spa, pokemon) {
-if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
-return this.chainModify(2);
-}
-},
-itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
-},
-
-lightclay: {
-name: "Light Clay",
-fling: {
-basePower: 30,
-},
-// implemented in the corresponding thing
-},
-
-luckycoin: {
-name: "Lucky Coin",
-onModifyMovePriority: -1,
-onModifyMove: function (move, attacker, defender) {
-if (!attacker.volatiles['luckycoinused'] && attacker.activeTurns === 1) {
-attacker.addVolatile('luckycoinused');
-move.willCrit = true;
-this.add('-message', attacker.name + "'s attack became a critical hit due to the Lucky Coin!");
-}
-},
-},
-
-lumberry: {
-name: "Lum Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Flying",
-},
-onAfterSetStatusPriority: -1,
-onAfterSetStatus(status, pokemon) {
-pokemon.eatItem();
-},
-onUpdate(pokemon) {
-if (pokemon.status || pokemon.volatiles['confusion']) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-pokemon.cureStatus();
-pokemon.removeVolatile('confusion');
-},
-},
-
-magnesificent: {
-name: "Magnesificent",
-onModifyWeight(weighthg) {
-return this.trunc(weighthg / 2);
-},
-isBreakable: true,
-},
-
-magnet: {
-name: "Magnet",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Electric') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-magoberry: {
-name: "Mago Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ghost",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onTryEatItem(item, pokemon) {
-if (!this.runEvent('TryHeal', pokemon)) return false;
-},
-onEat(pokemon) {
-this.heal(pokemon.baseMaxhp / 3);
-if (pokemon.getNature().minus === 'spe') {
-pokemon.addVolatile('confusion');
-}
-},
-},
-
-marangaberry: {
-name: "Maranga Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Dark",
-},
-onAfterMoveSecondary(target, source, move) {
-if (move.category === 'Special') {
-target.eatItem();
-}
-},
-onEat(pokemon) {
-this.boost({spd: 1});
-},
-isNonstandard: "Unobtainable",
-},
-
-mentalherb: {
-name: "Mental Herb",
-fling: {
-basePower: 10,
-effect(pokemon) {
-const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
-for (const firstCondition of conditions) {
-if (pokemon.volatiles[firstCondition]) {
-for (const secondCondition of conditions) {
-pokemon.removeVolatile(secondCondition);
-if (firstCondition === 'attract' && secondCondition === 'attract') {
-this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
-}
-}
-return;
-}
-}
-},
-},
-onUpdate(pokemon) {
-const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
-for (const firstCondition of conditions) {
-if (pokemon.volatiles[firstCondition]) {
-if (!pokemon.useItem()) return;
-for (const secondCondition of conditions) {
-pokemon.removeVolatile(secondCondition);
-if (firstCondition === 'attract' && secondCondition === 'attract') {
-this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
-}
-}
-return;
-}
-}
-},
-},
-
-metalcoat: {
-name: "Metal Coat",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Steel') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-micleberry: {
-name: "Micle Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Rock",
-},
-onResidual(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-pokemon.addVolatile('micleberry');
-},
-condition: {
-duration: 2,
-onSourceAccuracy(accuracy, target, source, move) {
-if (!move.ohko) {
-this.add('-enditem', source, 'Micle Berry');
-source.removeVolatile('micleberry');
-if (typeof accuracy === 'number') {
-return this.chainModify([115, 100]);
-}
-}
-},
-},
-isNonstandard: "Unobtainable",
-},
-
-miracleseed: {
-name: "Miracle Seed",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Grass') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-mirrorherb: {
-name: "Mirror Herb",
-fling: {
-basePower: 30,
-},
-onFoeAfterBoost(boost, target, source, effect) {
-if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
-const boostPlus: SparseBoostsTable = {};
-let statsRaised = false;
-let i: BoostID;
-for (i in boost) {
-if (boost[i]! > 0) {
-boostPlus[i] = boost[i];
-statsRaised = true;
-}
-}
-if (!statsRaised) return;
-const pokemon: Pokemon = this.effectState.target;
-pokemon.useItem();
-this.boost(boostPlus, pokemon);
-},
-},
-
-mistyseed: {
-name: "Misty Seed",
-fling: {
-basePower: 10,
-},
-onStart(pokemon) {
-if (!pokemon.ignoringItem() && this.field.isTerrain('mistyterrain')) {
-pokemon.useItem();
-}
-},
-onTerrainChange(pokemon) {
-if (this.field.isTerrain('mistyterrain')) {
-pokemon.useItem();
-}
-},
-boosts: {
-def: 1,
-spd: 1,
-},
-},
-
-muscleband: {
-name: "Muscle Band",
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 16,
-onBasePower(basePower, user, target, move) {
-if (move.category === 'Physical') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-mysticwater: {
-name: "Mystic Water",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Water') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-nevermeltice: {
-name: "Never-Melt Ice",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Ice') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-occaberry: {
-name: "Occa Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Fire",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-oranberry: {
-name: "Oran Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Poison",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-pokemon.eatItem();
-}
-},
-onTryEatItem(item, pokemon) {
-if (!this.runEvent('TryHeal', pokemon)) return false;
-},
-onEat(pokemon) {
-this.heal(50);
-},
-},
-
-passhoberry: {
-name: "Passho Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Water",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-payapaberry: {
-name: "Payapa Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Psychic",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-pechaberry: {
-name: "Pecha Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Electric",
-},
-onUpdate(pokemon) {
-if (pokemon.status === 'psn' || pokemon.status === 'tox') {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-if (pokemon.status === 'psn' || pokemon.status === 'tox') {
-pokemon.cureStatus();
-}
-},
-},
-
-persimberry: {
-name: "Persim Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ground",
-},
-onUpdate(pokemon) {
-if (pokemon.volatiles['confusion']) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-pokemon.removeVolatile('confusion');
-},
-},
-
-poisonbarb: {
-name: "Poison Barb",
-fling: {
-basePower: 70,
-status: 'psn',
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Poison') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-powerherb: {
-onChargeMove(pokemon, target, move) {
-if (pokemon.useItem()) {
-this.debug('power herb - remove charge turn for ' + move.id);
-this.attrLastMove('[still]');
-this.addMove('-anim', pokemon, move.name, target);
-return false; // skip charge turn
-}
-},
-name: "Power Herb",
-fling: {
-basePower: 10,
-},
-},
-
-protectivepads: {
-name: "Protective Pads",
-fling: {
-basePower: 30,
-},
-// protective effect handled in Battle#checkMoveMakesContact
-},
-
-psychicseed: {
-name: "Psychic Seed",
-fling: {
-basePower: 10,
-},
-onStart(pokemon) {
-if (!pokemon.ignoringItem() && this.field.isTerrain('psychicterrain')) {
-pokemon.useItem();
-}
-},
-onTerrainChange(pokemon) {
-if (this.field.isTerrain('psychicterrain')) {
-pokemon.useItem();
-}
-},
-boosts: {
-def: 1,
-spd: 1,
-},
-},
-
-puck: {
-name: "Puck",
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Steel') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-},
-
-punchingglove: {
-name: "Punching Glove",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['punch']) {
-this.debug('Punching Glove boost');
-return this.chainModify([115, 100]);
-}
-},
-onModifyMovePriority: 1,
-onModifyMove(move) {
-if (move.flags['punch']) delete move.flags['contact'];
-},
-},
-
-quickclaw: {
-onFractionalPriorityPriority: -2,
-onFractionalPriority(priority, pokemon, target, move) {
-if (move.category === "Status" && pokemon.hasAbility("myceliummight")) return;
-if (priority <= 0 && this.randomChance(1, 5)) {
-this.add('-activate', pokemon, 'item: Quick Claw');
-return 0.1;
-}
-},
-name: "Quick Claw",
-fling: {
-basePower: 80,
-},
-},
-
-rainbowreflector: {
-name: 'Rainbow Reflector',
-onDamagingHitOrder: 2,
-onDamagingHit(damage, target, source, move) {
-if (move.category === 'Special' && this.field.isWeather('raindance')) {
-this.damage(source.baseMaxhp / 6, source, target);
-}
-},
-},
-
-rawstberry: {
-name: "Rawst Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Grass",
-},
-onUpdate(pokemon) {
-if (pokemon.status === 'brn') {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-if (pokemon.status === 'brn') {
-pokemon.cureStatus();
-}
-},
-},
-
-redcard: {
-name: "Red Card",
-fling: {
-basePower: 10,
-},
-onAfterMoveSecondary(target, source, move) {
-if (source && source !== target && source.hp && target.hp && move && move.category !== 'Status') {
-if (!source.isActive || !this.canSwitch(source.side) || source.forceSwitchFlag || target.forceSwitchFlag) {
-return;
-}
-// The item is used up even against a pokemon with Ingrain or that otherwise can't be forced out
-if (target.useItem(source)) {
-if (this.runEvent('DragOut', source, target, move)) {
-source.forceSwitchFlag = true;
-}
-}
-}
-},
-},
-
-rindoberry: {
-name: "Rindo Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Grass",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-ringtarget: {
-name: "Ring Target",
-fling: {
-basePower: 10,
-},
-onNegateImmunity: false,
-},
-
-rockyhelmet: {
-name: "Rocky Helmet",
-fling: {
-basePower: 60,
-},
-onDamagingHitOrder: 2,
-onDamagingHit(damage, target, source, move) {
-if (this.checkMoveMakesContact(move, source, target)) {
-this.damage(source.baseMaxhp / 6, source, target);
-}
-},
-},
-
-roomservice: {
-name: "Room Service",
-fling: {
-basePower: 100,
-},
-onStart(pokemon) {
-if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickroom')) {
-pokemon.useItem();
-}
-},
-onAnyPseudoWeatherChange() {
-const pokemon = this.effectState.target;
-if (this.field.getPseudoWeather('trickroom')) {
-pokemon.useItem(pokemon);
-}
-},
-boosts: {
-spe: -1,
-},
-},
-
-roseliberry: {
-name: "Roseli Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Fairy",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Fairy' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-rowapberry: {
-name: "Rowap Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Dark",
-},
-onDamagingHit(damage, target, source, move) {
-if (move.category === 'Special' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
-if (target.eatItem()) {
-this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
-}
-}
-},
-onEat() { },
-isNonstandard: "Unobtainable",
-},
-
-safetygoggles: {
-name: "Safety Goggles",
-fling: {
-basePower: 80,
-},
-onImmunity(type, pokemon) {
-if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
-},
-onTryHit(pokemon, source, move) {
-if (move.flags['powder'] && pokemon !== source && this.dex.getImmunity('powder', pokemon)) {
-this.add('-activate', pokemon, 'item: Safety Goggles', move.name);
-return null;
-}
-},
-},
-
-salacberry: {
-name: "Salac Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Fighting",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-this.boost({spe: 1.5});
-},
-},
-
-scopelens: {
-name: "Scope Lens",
-fling: {
-basePower: 30,
-},
-onModifyCritRatio(critRatio) {
-return critRatio + 1;
-},
-},
-
-scorchingsandsstone: {
-name: 'Scorching Sands Stone',
-onModifyMovePriority: -1,
-onModifyMove(move) {
-if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
-if (!move.secondaries) move.secondaries = [];
-move.secondaries.push({
-chance: 33,
-status: 'brn',
-});
-}
-},
-},
-
-sharpbeak: {
-name: "Sharp Beak",
-fling: {
-basePower: 50,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move && move.type === 'Flying') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-shedshell: {
-name: "Shed Shell",
-fling: {
-basePower: 10,
-},
-onTrapPokemonPriority: -10,
-onTrapPokemon(pokemon) {
-pokemon.trapped = pokemon.maybeTrapped = false;
-},
-},
-
-shellbell: {
-name: "Shell Bell",
-fling: {
-basePower: 30,
-},
-onAfterMoveSecondarySelfPriority: -1,
-onAfterMoveSecondarySelf(pokemon, target, move) {
-if (move.totalDamage && !pokemon.forceSwitchFlag) {
-this.heal(move.totalDamage / 8, pokemon);
-}
-},
-},
-
-shucaberry: {
-name: "Shuca Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ground",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-silkscarf: {
-name: "Silk Scarf",
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Normal') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-silverpowder: {
-name: "Silver Powder",
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Bug') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-sitrusberry: {
-name: "Sitrus Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Psychic",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2) {
-pokemon.eatItem();
-}
-},
-onTryEatItem(item, pokemon) {
-if (!this.runEvent('TryHeal', pokemon)) return false;
-},
-onEat(pokemon) {
-this.heal(pokemon.baseMaxhp / 4);
-},
-},
-
-skates: {
-name: "Skates",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.flags['slow']) {
-this.debug('Skates boost');
-return this.chainModify([115, 100]);
-}
-},
-onModifyMovePriority: 1,
-onModifyMove(move) {
-if (move.flags['slow']) delete move.flags['contact'];
-},
-},
-
-smoothrock: {
-name: "Smooth Rock",
-fling: {
-basePower: 10,
-},
-},
-
-snowball: {
-name: "Snowball",
-fling: {
-basePower: 30,
-},
-onDamagingHit(damage, target, source, move) {
-if (move.type === 'Ice') {
-target.useItem();
-}
-},
-boosts: {
-atk: 1,
-spa: 1,
-},
-},
-
-softsand: {
-name: "Soft Sand",
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Ground') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-spelltag: {
-name: "Spell Tag",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Ghost') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-starfberry: {
-name: "Starf Berry",
-isBerry: true,
-naturalGift: {
-basePower: 100,
-type: "Psychic",
-},
-onUpdate(pokemon) {
-if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
-pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
-pokemon.eatItem();
-}
-},
-onEat(pokemon) {
-const stats: BoostID[] = [];
-let stat: BoostID;
-for (stat in pokemon.boosts) {
-if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
-stats.push(stat);
-}
-}
-if (stats.length) {
-const randomStat = this.sample(stats);
-const boost: SparseBoostsTable = {};
-boost[randomStat] = 2.5;
-this.boost(boost);
-}
-},
-},
-
-stickybarb: {
-name: "Sticky Barb",
-fling: {
-basePower: 80,
-},
-onResidualOrder: 28,
-onResidualSubOrder: 3,
-onResidual(pokemon) {
-this.damage(pokemon.baseMaxhp / 8);
-},
-onHit(target, source, move) {
-if (source && source !== target && !source.item && move && this.checkMoveMakesContact(move, source, target)) {
-const barb = target.takeItem();
-if (!barb) return; // Gen 4 Multitype
-source.setItem(barb);
-// no message for Sticky Barb changing hands
-}
-},
-},
-
-superspicycurry: {
-name: "Superspicy Curry",
-fling: {
-basePower: 30,
-},
-onResidualOrder: 5,
-onResidualSubOrder: 4,
-onResidual(pokemon) {
-if (pokemon.hasType('fire')) {
-this.heal(pokemon.baseMaxhp / 13.34);
-} else {
-this.damage(pokemon.baseMaxhp / 3);
-}
-},
-},
-
-tangaberry: {
-name: "Tanga Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Bug",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-terrainextender: {
-name: "Terrain Extender",
-fling: {
-basePower: 60,
-},
-},
-
-throatspray: {
-name: "Throat Spray",
-fling: {
-basePower: 30,
-},
-onAfterMoveSecondarySelf(target, source, move) {
-if (move.flags['sound']) {
-target.useItem();
-}
-},
-boosts: {
-spa: 1,
-},
-},
-
-toxicorb: {
-name: "Toxic Orb",
-fling: {
-basePower: 30,
-status: 'tox',
-},
-onResidualOrder: 28,
-onResidualSubOrder: 3,
-onResidual(pokemon) {
-pokemon.trySetStatus('tox', pokemon);
-},
-},
-
-twistedspoon: {
-name: "Twisted Spoon",
-fling: {
-basePower: 30,
-},
-onBasePowerPriority: 15,
-onBasePower(basePower, user, target, move) {
-if (move.type === 'Psychic') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-utilityumbrella: {
-name: "Utility Umbrella",
-fling: {
-basePower: 60,
-},
-// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
-onStart(pokemon) {
-if (!pokemon.ignoringItem()) return;
-if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
-}
-},
-onUpdate(pokemon) {
-if (!this.effectState.inactive) return;
-this.effectState.inactive = false;
-if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
-}
-},
-onEnd(pokemon) {
-if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
-}
-this.effectState.inactive = true;
-},
-},
-
-wacanberry: {
-name: "Wacan Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Electric",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-weaknesspolicy: {
-name: "Weakness Policy",
-fling: {
-basePower: 80,
-},
-onDamagingHit(damage, target, source, move) {
-if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
-target.useItem();
-}
-},
-boosts: {
-atk: 2,
-spa: 2,
-},
-},
-
-whippeddream: {
-name: "Whipped Dream",
-fling: {
-basePower: 80,
-},
-isNonstandard: "Past",
-},
-
-whiteherb: {
-name: "White Herb",
-fling: {
-basePower: 10,
-effect(pokemon) {
-let activate = false;
-const boosts: SparseBoostsTable = {};
-let i: BoostID;
-for (i in pokemon.boosts) {
-if (pokemon.boosts[i] < 0) {
-activate = true;
-boosts[i] = 0;
-}
-}
-if (activate) {
-pokemon.setBoost(boosts);
-this.add('-clearnegativeboost', pokemon, '[silent]');
-}
-},
-},
-onUpdate(pokemon) {
-let activate = false;
-const boosts: SparseBoostsTable = {};
-let i: BoostID;
-for (i in pokemon.boosts) {
-if (pokemon.boosts[i] < 0) {
-activate = true;
-boosts[i] = 0;
-}
-}
-if (activate && pokemon.useItem()) {
-pokemon.setBoost(boosts);
-this.add('-clearnegativeboost', pokemon, '[silent]');
-}
-},
-},
-
-widelens: {
-name: "Wide Lens",
-fling: {
-basePower: 10,
-},
-onSourceModifyAccuracyPriority: -2,
-onSourceModifyAccuracy(accuracy) {
-if (typeof accuracy === 'number') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-wiseglasses: {
-name: "Wise Glasses",
-fling: {
-basePower: 10,
-},
-onBasePowerPriority: 16,
-onBasePower(basePower, user, target, move) {
-if (move.category === 'Special') {
-return this.chainModify([115, 100]);
-}
-},
-},
-
-yacheberry: {
-name: "Yache Berry",
-isBerry: true,
-naturalGift: {
-basePower: 80,
-type: "Ice",
-},
-onSourceModifyDamage(damage, source, target, move) {
-if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0) {
-const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
-if (hitSub) return;
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
-
-yellowcard: {
-name: "Yellow Card",
-onStart: function (pokemon) {
-pokemon.itemUsageCount = 1;
-},
-onBeforeMove: function (attacker, defender, move) {
-if (defender.side !== attacker.side && !defender.volatiles['yellowcard']) {
-defender.addVolatile('yellowcard');
-this.add('-message', defender.name + ' was shown a Yellow Card and cannot attack this turn!');
-if (defender.item) {
-let item = this.dex.items.get(defender.item);
-if (item) {
-this.add('-enditem', defender, item, '[consumed]');
-}
-}
-defender.setItem('');
-defender.itemUsageCount = 0;
-return false;
-}
-},
-desc: "Stops the foe from attacking for one turn. Single use.",
-},
-
-zoomlens: {
-name: "Zoom Lens",
-fling: {
-basePower: 10,
-},
-onSourceModifyAccuracyPriority: -2,
-onSourceModifyAccuracy(accuracy, target) {
-if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
-this.debug('Critical Zoom Lens boosting accuracy');
-return this.chainModify([115, 100]);
-}
-},
-onModifyCritRatio(critRatio, source, target) {
-if (!this.queue.willMove(target)) {
-this.debug('Critical Zoom Lens boosting critical hit ratio');
-return critRatio + 1;
-}
-},
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+abomasite: {
 name: "Abomasite",
 megaStone: "Abomasnow-Mega",
 megaEvolves: "Abomasnow",
@@ -2353,8 +30,6 @@ return true;
 },
 isNonstandard: "Past",
 },
-
-abomasite: {
 
 absolite: {
 name: "Absolite",
@@ -2420,6 +95,7 @@ if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dra
 return this.chainModify([115, 100]);
 }
 },
+},
 
 altarianite: {
 name: "Altarianite",
@@ -2471,6 +147,43 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+aspearberry: {
+name: "Aspear Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ice",
+},
+onUpdate(pokemon) {
+if (pokemon.status === 'frz') {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+if (pokemon.status === 'frz') {
+pokemon.cureStatus();
+}
+},
+},
+
+assaultvest: {
+name: "Assault Vest",
+fling: {
+basePower: 80,
+},
+onModifySpDPriority: 1,
+onModifySpD(spd) {
+return this.chainModify(1.55);
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+},
+
 audinite: {
 name: "Audinite",
 megaStone: "Audino-Mega",
@@ -2490,6 +203,27 @@ basePower: 30,
 },
 },
 
+babiriberry: {
+name: "Babiri Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Steel",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Steel' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
 banettite: {
 name: "Banettite",
 megaStone: "Banette-Mega",
@@ -2500,6 +234,19 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "Past",
+},
+
+beachglass: {
+name: "Beach Glass",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('sunnyday')) {
+this.boost({spe: 1}, pokemon);
+} else {
+this.boost({spe: -1}, pokemon);
+}
+},
 },
 
 beastball: {
@@ -2595,6 +342,28 @@ basePower: 130,
 },
 },
 
+bigroot: {
+name: "Big Root",
+fling: {
+basePower: 10,
+},
+onTryHealPriority: 1,
+onTryHeal(damage, target, source, effect) {
+const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+if (heals.includes(effect.id)) {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+bindingband: {
+name: "Binding Band",
+fling: {
+basePower: 30,
+},
+// implemented in statuses
+},
+
 bitterberry: {
 name: "Bitter Berry",
 isBerry: true,
@@ -2611,6 +380,48 @@ onEat(pokemon) {
 pokemon.removeVolatile('confusion');
 },
 isNonstandard: "Past",
+},
+
+blackbelt: {
+name: "Black Belt",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Fighting') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+blackglasses: {
+name: "Black Glasses",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Dark') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+blacksludge: {
+name: "Black Sludge",
+fling: {
+basePower: 30,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+if (pokemon.hasType('Poison')) {
+this.heal(pokemon.baseMaxhp / 13.34);
+} else {
+this.damage(pokemon.baseMaxhp / 3);
+}
+},
 },
 
 blastoisinite: {
@@ -2664,6 +475,14 @@ type: "Fire",
 },
 onEat: false,
 isNonstandard: "Past",
+},
+
+blunderpolicy: {
+name: "Blunder Policy",
+fling: {
+basePower: 80,
+},
+// Item activation located in scripts.js
 },
 
 boosterenergy: {
@@ -2736,6 +555,24 @@ itemUser: ["Silvally-Bug"],
 isNonstandard: "Past",
 },
 
+bulletproofvest: {
+name: "Bullet Proof Vest",
+fling: {
+basePower: 80,
+},
+onModifySpDPriority: 1,
+onModifySpD(def) {
+return this.chainModify(1.55);
+},
+onDisableMove(pokemon) {
+for (const moveSlot of pokemon.moveSlots) {
+if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+pokemon.disableMove(moveSlot.id);
+}
+}
+},
+},
+
 burndrive: {
 name: "Burn Drive",
 onTakeItem(item, pokemon, source) {
@@ -2782,6 +619,20 @@ return true;
 isNonstandard: "Past",
 },
 
+capsule: {
+name: "Capsule",
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (!target.usedCapsule) {
+const statuses = ['brn', 'par', 'frz', 'psn', 'tox', 'slp'];
+const randomStatus = this.sample(statuses);
+this.add('-message', `${source.name} was affected by a Capsule!`);
+this.add('-status', source, randomStatus);
+target.usedCapsule = true;
+}
+},
+},
+
 captainsarmband: {
 name: "Captain's Armband",
 fling: {
@@ -2797,6 +648,35 @@ onDamage(damage, target, source, effect) {
 if (this.randomChance(10, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
 this.add("-activate", target, "item: Captains Armband");
 return target.hp - 1;
+}
+},
+},
+
+cellsynergysurge: {
+name: "Cell Synergy Surge",
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Electric') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+},
+
+charcoal: {
+name: "Charcoal",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Fire') {
+return this.chainModify([115, 100]);
 }
 },
 },
@@ -2825,10 +705,91 @@ return true;
 isNonstandard: "Past",
 },
 
+chartiberry: {
+name: "Charti Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Rock",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+cheriberry: {
+name: "Cheri Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Fire",
+},
+onUpdate(pokemon) {
+if (pokemon.status === 'par') {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+if (pokemon.status === 'par') {
+pokemon.cureStatus();
+}
+},
+},
+
 cherishball: {
 name: "Cherish Ball",
 isPokeball: true,
 isNonstandard: "Unobtainable",
+},
+
+chestoberry: {
+name: "Chesto Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Water",
+},
+onUpdate(pokemon) {
+if (pokemon.status === 'slp') {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+if (pokemon.status === 'slp') {
+pokemon.cureStatus();
+}
+},
+},
+
+chilanberry: {
+name: "Chilan Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Normal",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (
+move.type === 'Normal' &&
+(!target.volatiles['substitute'] || move.flags['bypasssub'] || (move.infiltrates && this.gen >= 6))
+) {
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
 },
 
 chilldrive: {
@@ -2917,6 +878,27 @@ return this.chainModify(1.5);
 isChoice: true,
 },
 
+chopleberry: {
+name: "Chople Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Fighting",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
 clawfossil: {
 name: "Claw Fossil",
 fling: {
@@ -2925,12 +907,75 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+clearamulet: {
+name: "Clear Amulet",
+fling: {
+basePower: 30,
+},
+onTryBoost(boost, target, source, effect) {
+if (source && target === source) return;
+let showMsg = false;
+let i: BoostID;
+for (i in boost) {
+if (boost[i]! < 0) {
+delete boost[i];
+showMsg = true;
+}
+}
+if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + target);
+}
+},
+},
+
 cloversweet: {
 name: "Clover Sweet",
 fling: {
 basePower: 10,
 },
 isNonstandard: "Past",
+},
+
+cobaberry: {
+name: "Coba Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Flying",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+colburberry: {
+name: "Colbur Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Dark",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Dark' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
 },
 
 cornnberry: {
@@ -2952,6 +997,17 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+covertcloak: {
+name: "Covert Cloak",
+fling: {
+basePower: 30,
+},
+onModifySecondaries(secondaries) {
+this.debug('Covert Cloak prevent secondary');
+return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+},
+},
+
 crackedpot: {
 name: "Cracked Pot",
 fling: {
@@ -2969,6 +1025,53 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "CAP",
+},
+
+custapberry: {
+name: "Custap Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Ghost",
+},
+onFractionalPriorityPriority: -2,
+onFractionalPriority(priority, pokemon) {
+if (
+priority <= 0 &&
+(pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony))
+) {
+if (pokemon.eatItem()) {
+this.add('-activate', pokemon, 'item: Custap Berry', '[consumed]');
+return 0.1;
+}
+}
+},
+onEat() { },
+isNonstandard: "Unobtainable",
+},
+
+damprock: {
+name: "Damp Rock",
+fling: {
+basePower: 60,
+},
+},
+
+darkband: {
+name: "Dark Band",
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Dark') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
 },
 
 darkgem: {
@@ -3110,6 +1213,15 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+donnyosmium: {
+name: "Donny Osmium",
+onModifyWeightPriority: 1,
+onModifyWeight(weighthg) {
+return weighthg * 2.5;
+},
+isBreakable: true,
+},
+
 dousedrive: {
 name: "Douse Drive",
 onTakeItem(item, pokemon, source) {
@@ -3140,6 +1252,37 @@ return false;
 return true;
 },
 forcedForme: "Arceus-Dragon",
+},
+
+dragonball: {
+name: "Dragon Ball",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['beam']) {
+this.debug('Dragon Ball boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['beam']) delete move.flags['contact'];
+},
+},
+
+dragonfang: {
+name: "Dragon Fang",
+fling: {
+basePower: 70,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Dragon') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 dragongem: {
@@ -3267,6 +1410,75 @@ itemUser: ["Eevee"],
 isNonstandard: "Past",
 },
 
+egg: {
+name: "Egg",
+onDamagingHitOrder: 1,
+onDamagingHit: function (damage, target, source, move) {
+this.add('-activate', target, 'item: Egg');
+source.addVolatile('confusion', target);
+let damageAmount = Math.ceil(source.maxhp / 10);
+this.damage(damageAmount, source, target);
+target.setItem('');
+},
+onUse: function (pokemon) {
+if (!pokemon.volatiles['eggused']) {
+pokemon.addVolatile('eggused');
+} else {
+return false;
+}
+},
+},
+
+ejectbutton: {
+name: "Eject Button",
+fling: {
+basePower: 30,
+},
+onAfterMoveSecondaryPriority: 2,
+onAfterMoveSecondary(target, source, move) {
+if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
+if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.beingCalledBack || target.isSkyDropped()) return;
+if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
+for (const pokemon of this.getAllActive()) {
+if (pokemon.switchFlag === true) return;
+}
+target.switchFlag = true;
+if (target.useItem()) {
+source.switchFlag = false;
+} else {
+target.switchFlag = false;
+}
+}
+},
+},
+
+ejectpack: {
+name: "Eject Pack",
+fling: {
+basePower: 50,
+},
+onAfterBoost(boost, target, source, effect) {
+if (this.activeMove?.id === 'partingshot') return;
+let eject = false;
+let i: BoostID;
+for (i in boost) {
+if (boost[i]! < 0) {
+eject = true;
+}
+}
+if (eject) {
+if (target.hp) {
+if (!this.canSwitch(target.side)) return;
+if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
+for (const pokemon of this.getAllActive()) {
+if (pokemon.switchFlag === true) return;
+}
+if (target.useItem()) target.switchFlag = true;
+}
+}
+},
+},
+
 electirizer: {
 name: "Electirizer",
 fling: {
@@ -3301,6 +1513,27 @@ itemUser: ["Silvally-Electric"],
 isNonstandard: "Past",
 },
 
+electricseed: {
+name: "Electric Seed",
+fling: {
+basePower: 10,
+},
+onStart(pokemon) {
+if (!pokemon.ignoringItem() && this.field.isTerrain('electricterrain')) {
+pokemon.useItem();
+}
+},
+onTerrainChange(pokemon) {
+if (this.field.isTerrain('electricterrain')) {
+pokemon.useItem();
+}
+},
+boosts: {
+def: 1,
+spd: 1,
+},
+},
+
 electriumz: {
 name: "Electrium Z",
 onPlate: 'Electric',
@@ -3309,6 +1542,77 @@ zMove: true,
 zMoveType: "Electric",
 forcedForme: "Arceus-Electric",
 isNonstandard: "Past",
+},
+
+enigmaberry: {
+name: "Enigma Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Bug",
+},
+onHit(target, source, move) {
+if (move && target.getMoveHitData(move).typeMod > 0) {
+if (target.eatItem()) {
+this.heal(target.baseMaxhp / 4);
+}
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat() { },
+isNonstandard: "Unobtainable",
+},
+
+eviolite: {
+name: "Eviolite",
+fling: {
+basePower: 40,
+},
+onModifyDefPriority: 2,
+onModifyDef(def, pokemon) {
+if (pokemon.baseSpecies.nfe) {
+return this.chainModify(1.5);
+}
+},
+onModifySpDPriority: 2,
+onModifySpD(spd, pokemon) {
+if (pokemon.baseSpecies.nfe) {
+return this.chainModify(1.5);
+}
+},
+},
+
+eviomax: {
+name: "Eviomax",
+fling: {
+basePower: 40,
+},
+onModifyDefPriority: 2,
+onModifyDef(def, pokemon) {
+if (pokemon.baseSpecies.fe) {
+return this.chainModify(1.25);
+}
+},
+onModifySpDPriority: 2,
+onModifySpD(spd, pokemon) {
+if (pokemon.baseSpecies.fe) {
+return this.chainModify(1.25);
+}
+},
+},
+
+expertbelt: {
+name: "Expert Belt",
+fling: {
+basePower: 10,
+},
+onModifyDamage(damage, source, target, move) {
+if (move && target.getMoveHitData(move).typeMod > 0) {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 fairiumz: {
@@ -3345,6 +1649,22 @@ return true;
 forcedForme: "Silvally-Fairy",
 itemUser: ["Silvally-Fairy"],
 isNonstandard: "Past",
+},
+
+fairyscale: {
+name: "Fairy Scale",
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Fairy') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
 },
 
 fastball: {
@@ -3473,6 +1793,19 @@ return true;
 forcedForme: "Arceus-Fighting",
 },
 
+flameorb: {
+name: "Flame Orb",
+fling: {
+basePower: 30,
+status: 'brn',
+},
+onResidualOrder: 28,
+onResidualSubOrder: 3,
+onResidual(pokemon) {
+pokemon.trySetStatus('brn', pokemon);
+},
+},
+
 flameplate: {
 name: "Flame Plate",
 onPlate: 'Fire',
@@ -3489,6 +1822,16 @@ return false;
 return true;
 },
 forcedForme: "Arceus-Fire",
+},
+
+floatstone: {
+name: "Float Stone",
+fling: {
+basePower: 30,
+},
+onModifyWeight(weighthg) {
+return this.trunc(weighthg / 2);
+},
 },
 
 flowersweet: {
@@ -3533,6 +1876,35 @@ zMove: true,
 zMoveType: "Flying",
 forcedForme: "Arceus-Flying",
 isNonstandard: "Past",
+},
+
+focusband: {
+name: "Focus Band",
+fling: {
+basePower: 10,
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (this.randomChance(16.5, 100) && damage >= target.hp && effect && effect.effectType === 'Move') {
+this.add("-activate", target, "item: Focus Band");
+return target.hp - 1;
+}
+},
+},
+
+focussash: {
+name: "Focus Sash",
+fling: {
+basePower: 10,
+},
+onDamagePriority: -40,
+onDamage(damage, target, source, effect) {
+if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+if (target.useItem()) {
+return target.hp - 1;
+}
+}
+},
 },
 
 fossilizedbird: {
@@ -3607,6 +1979,24 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "Past",
+},
+
+ganlonberry: {
+name: "Ganlon Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Ice",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+this.boost({def: 1.5});
+},
 },
 
 garchompite: {
@@ -3722,6 +2112,24 @@ basePower: 30,
 },
 },
 
+goldenbullet: {
+name: "Golden Bullet",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['bullet']) {
+this.debug('Golden Bullet boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['bullet']) delete move.flags['contact'];
+},
+},
+
 grassgem: {
 name: "Grass Gem",
 isGem: true,
@@ -3758,6 +2166,27 @@ itemUser: ["Silvally-Grass"],
 isNonstandard: "Past",
 },
 
+grassyseed: {
+name: "Grassy Seed",
+fling: {
+basePower: 10,
+},
+onStart(pokemon) {
+if (!pokemon.ignoringItem() && this.field.isTerrain('grassyterrain')) {
+pokemon.useItem();
+}
+},
+onTerrainChange(pokemon) {
+if (this.field.isTerrain('grassyterrain')) {
+pokemon.useItem();
+}
+},
+boosts: {
+def: 1,
+spd: 1,
+},
+},
+
 greatball: {
 name: "Great Ball",
 isPokeball: true,
@@ -3771,6 +2200,14 @@ basePower: 90,
 type: "Flying",
 },
 onEat: false,
+},
+
+gripclaw: {
+name: "Grip Claw",
+fling: {
+basePower: 90,
+},
+// implemented in statuses
 },
 
 griseouscore: {
@@ -3853,14 +2290,75 @@ return true;
 isNonstandard: "Past",
 },
 
+habanberry: {
+name: "Haban Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Dragon",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+hardstone: {
+name: "Hard Stone",
+fling: {
+basePower: 100,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Rock') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
 healball: {
 name: "Heal Ball",
 isPokeball: true,
 },
 
+heartscale: {
+name: "Heart Scale",
+onFaint: function (source) {
+this.add('-message', source.side.name + "'s Heart Scale emits a radiant light, confusing all opposing Pokémon!");
+for (const foeActive of source.side.foe.active) {
+if (foeActive && foeActive.hp) {
+foeActive.addVolatile('confusion');
+}
+}
+},
+},
+
+heatrock: {
+name: "Heat Rock",
+fling: {
+basePower: 60,
+},
+},
+
 heavyball: {
 name: "Heavy Ball",
 isPokeball: true,
+},
+
+heavydutyboots: {
+name: "Heavy-Duty Boots",
+fling: {
+basePower: 80,
+},
+// Hazard Immunity implemented in moves.ts
 },
 
 helixfossil: {
@@ -3975,6 +2473,19 @@ itemUser: ["Silvally-Ice"],
 isNonstandard: "Past",
 },
 
+iceskates: {
+name: "Ice Skates",
+onResidualOrder: 26,
+onResidualSubOrder: 1,
+onResidual: function (pokemon) {
+if (this.field.isWeather('snow')) {
+this.boost({spe: 1}, pokemon);
+} else {
+this.boost({spe: -1}, pokemon);
+}
+},
+},
+
 icestone: {
 name: "Ice Stone",
 fling: {
@@ -4010,6 +2521,13 @@ forcedForme: "Arceus-Ice",
 isNonstandard: "Past",
 },
 
+icyrock: {
+name: "Icy Rock",
+fling: {
+basePower: 40,
+},
+},
+
 inciniumz: {
 name: "Incinium Z",
 onTakeItem: false,
@@ -4037,6 +2555,22 @@ return true;
 forcedForme: "Arceus-Bug",
 },
 
+ironball: {
+name: "Iron Ball",
+fling: {
+basePower: 130,
+},
+onEffectiveness(typeMod, target, type, move) {
+if (!target) return;
+if (target.volatiles['ingrain'] || target.volatiles['smackdown'] || this.field.getPseudoWeather('gravity')) return;
+if (move.type === 'Ground' && target.hasType('Flying')) return 0;
+},
+// airborneness negation implemented in sim/pokemon.js:Pokemon#isGrounded
+onModifySpe(spe) {
+return this.chainModify(0.5);
+},
+},
+
 ironplate: {
 name: "Iron Plate",
 onPlate: 'Steel',
@@ -4053,6 +2587,24 @@ return false;
 return true;
 },
 forcedForme: "Arceus-Steel",
+},
+
+jabocaberry: {
+name: "Jaboca Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Dragon",
+},
+onDamagingHit(damage, target, source, move) {
+if (move.category === 'Physical' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
+if (target.eatItem()) {
+this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
+}
+}
+},
+onEat() { },
+isNonstandard: "Unobtainable",
 },
 
 jawfossil: {
@@ -4075,6 +2627,67 @@ return true;
 isNonstandard: "Past",
 },
 
+kasibberry: {
+name: "Kasib Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ghost",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+kebiaberry: {
+name: "Kebia Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Poison",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+keeberry: {
+name: "Kee Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Fairy",
+},
+onAfterMoveSecondary(target, source, move) {
+if (move.category === 'Physical') {
+if (move.id === 'present' && move.heal) return;
+target.eatItem();
+}
+},
+onEat(pokemon) {
+this.boost({def: 1.5});
+},
+isNonstandard: "Unobtainable",
+},
+
 kelpsyberry: {
 name: "Kelpsy Berry",
 isBerry: true,
@@ -4083,6 +2696,24 @@ basePower: 90,
 type: "Fighting",
 },
 onEat: false,
+},
+
+kickpads: {
+name: "Kickpads",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['kick']) {
+this.debug('Kickpads boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['kick']) delete move.flags['contact'];
+},
 },
 
 kingsrock: {
@@ -4113,6 +2744,32 @@ zMove: "Clangorous Soulblaze",
 zMoveFrom: "Clanging Scales",
 itemUser: ["Kommo-o", "Kommo-o-Totem"],
 isNonstandard: "Past",
+},
+
+laggingtail: {
+name: "Lagging Tail",
+fling: {
+basePower: 10,
+},
+onFractionalPriority: -0.1,
+},
+
+lansatberry: {
+name: "Lansat Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Flying",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+pokemon.addVolatile('focusenergy');
+},
 },
 
 latiasite: {
@@ -4174,6 +2831,29 @@ itemUser: ["Farfetch\u2019d", "Farfetch\u2019d-Galar", "Sirfetch\u2019d"],
 isNonstandard: "Past",
 },
 
+leftovers: {
+name: "Leftovers",
+fling: {
+basePower: 10,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+this.heal(pokemon.baseMaxhp / 13.34);
+},
+},
+
+lemonjelly: {
+name: "Lemon Jelly",
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (this.field.isWeather('raindance') && move.flags['duck']) {
+this.debug('Lemon Jelly boost');
+return this.chainModify([115, 100]);
+}
+},
+},
+
 leppaberry: {
 name: "Leppa Berry",
 isBerry: true,
@@ -4200,6 +2880,68 @@ this.add('-activate', pokemon, 'item: Leppa Berry', moveSlot.move, '[consumed]')
 levelball: {
 name: "Level Ball",
 isPokeball: true,
+},
+
+liechiberry: {
+name: "Liechi Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Grass",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+this.boost({atk: 1.5});
+},
+},
+
+lifeorb: {
+name: "Life Orb",
+fling: {
+basePower: 30,
+},
+onModifyDamage(damage, source, target, move) {
+return this.chainModify([115, 100]);
+},
+onAfterMoveSecondarySelf(source, target, move) {
+if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+this.damage(source.baseMaxhp / 8, source, source, this.dex.items.get('lifeorb'));
+}
+},
+},
+
+lightball: {
+name: "Light Ball",
+fling: {
+basePower: 30,
+status: 'par',
+},
+onModifyAtkPriority: 1,
+onModifyAtk(atk, pokemon) {
+if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+return this.chainModify(2);
+}
+},
+onModifySpAPriority: 1,
+onModifySpA(spa, pokemon) {
+if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+return this.chainModify(2);
+}
+},
+itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
+},
+
+lightclay: {
+name: "Light Clay",
+fling: {
+basePower: 30,
+},
+// implemented in the corresponding thing
 },
 
 loadeddice: {
@@ -4252,6 +2994,18 @@ return true;
 isNonstandard: "Past",
 },
 
+luckycoin: {
+name: "Lucky Coin",
+onModifyMovePriority: -1,
+onModifyMove: function (move, attacker, defender) {
+if (!attacker.volatiles['luckycoinused'] && attacker.activeTurns === 1) {
+attacker.addVolatile('luckycoinused');
+move.willCrit = true;
+this.add('-message', attacker.name + "'s attack became a critical hit due to the Lucky Coin!");
+}
+},
+},
+
 luckypunch: {
 name: "Lucky Punch",
 fling: {
@@ -4264,6 +3018,28 @@ return critRatio + 2;
 },
 itemUser: ["Chansey"],
 isNonstandard: "Past",
+},
+
+lumberry: {
+name: "Lum Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Flying",
+},
+onAfterSetStatusPriority: -1,
+onAfterSetStatus(status, pokemon) {
+pokemon.eatItem();
+},
+onUpdate(pokemon) {
+if (pokemon.status || pokemon.volatiles['confusion']) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+pokemon.cureStatus();
+pokemon.removeVolatile('confusion');
+},
 },
 
 luminousmoss: {
@@ -4361,6 +3137,51 @@ basePower: 80,
 isNonstandard: "Past",
 },
 
+magnesificent: {
+name: "Magnesificent",
+onModifyWeight(weighthg) {
+return this.trunc(weighthg / 2);
+},
+isBreakable: true,
+},
+
+magnet: {
+name: "Magnet",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Electric') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+magoberry: {
+name: "Mago Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ghost",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(pokemon.baseMaxhp / 3);
+if (pokemon.getNature().minus === 'spe') {
+pokemon.addVolatile('confusion');
+}
+},
+},
+
 magostberry: {
 name: "Magost Berry",
 isBerry: true,
@@ -4398,6 +3219,24 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "Past",
+},
+
+marangaberry: {
+name: "Maranga Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Dark",
+},
+onAfterMoveSecondary(target, source, move) {
+if (move.category === 'Special') {
+target.eatItem();
+}
+},
+onEat(pokemon) {
+this.boost({spd: 1});
+},
+isNonstandard: "Unobtainable",
 },
 
 marshadiumz: {
@@ -4476,6 +3315,42 @@ return true;
 isNonstandard: "Past",
 },
 
+mentalherb: {
+name: "Mental Herb",
+fling: {
+basePower: 10,
+effect(pokemon) {
+const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+for (const firstCondition of conditions) {
+if (pokemon.volatiles[firstCondition]) {
+for (const secondCondition of conditions) {
+pokemon.removeVolatile(secondCondition);
+if (firstCondition === 'attract' && secondCondition === 'attract') {
+this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
+}
+}
+return;
+}
+}
+},
+},
+onUpdate(pokemon) {
+const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+for (const firstCondition of conditions) {
+if (pokemon.volatiles[firstCondition]) {
+if (!pokemon.useItem()) return;
+for (const secondCondition of conditions) {
+pokemon.removeVolatile(secondCondition);
+if (firstCondition === 'attract' && secondCondition === 'attract') {
+this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
+}
+}
+return;
+}
+}
+},
+},
+
 metagrossite: {
 name: "Metagrossite",
 megaStone: "Metagross-Mega",
@@ -4486,6 +3361,19 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "Past",
+},
+
+metalcoat: {
+name: "Metal Coat",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Steel') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 metalpowder: {
@@ -4577,6 +3465,37 @@ return true;
 isNonstandard: "Past",
 },
 
+micleberry: {
+name: "Micle Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Rock",
+},
+onResidual(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+pokemon.addVolatile('micleberry');
+},
+condition: {
+duration: 2,
+onSourceAccuracy(accuracy, target, source, move) {
+if (!move.ohko) {
+this.add('-enditem', source, 'Micle Berry');
+source.removeVolatile('micleberry');
+if (typeof accuracy === 'number') {
+return this.chainModify([115, 100]);
+}
+}
+},
+},
+isNonstandard: "Unobtainable",
+},
+
 mimikiumz: {
 name: "Mimikium Z",
 onTakeItem: false,
@@ -4643,6 +3562,63 @@ pokemon.removeVolatile('confusion');
 isNonstandard: "Past",
 },
 
+miracleseed: {
+name: "Miracle Seed",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Grass') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+mirrorherb: {
+name: "Mirror Herb",
+fling: {
+basePower: 30,
+},
+onFoeAfterBoost(boost, target, source, effect) {
+if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
+const boostPlus: SparseBoostsTable = {};
+let statsRaised = false;
+let i: BoostID;
+for (i in boost) {
+if (boost[i]! > 0) {
+boostPlus[i] = boost[i];
+statsRaised = true;
+}
+}
+if (!statsRaised) return;
+const pokemon: Pokemon = this.effectState.target;
+pokemon.useItem();
+this.boost(boostPlus, pokemon);
+},
+},
+
+mistyseed: {
+name: "Misty Seed",
+fling: {
+basePower: 10,
+},
+onStart(pokemon) {
+if (!pokemon.ignoringItem() && this.field.isTerrain('mistyterrain')) {
+pokemon.useItem();
+}
+},
+onTerrainChange(pokemon) {
+if (this.field.isTerrain('mistyterrain')) {
+pokemon.useItem();
+}
+},
+boosts: {
+def: 1,
+spd: 1,
+},
+},
+
 moonball: {
 name: "Moon Ball",
 isPokeball: true,
@@ -4652,6 +3628,19 @@ moonstone: {
 name: "Moon Stone",
 fling: {
 basePower: 30,
+},
+},
+
+muscleband: {
+name: "Muscle Band",
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 16,
+onBasePower(basePower, user, target, move) {
+if (move.category === 'Physical') {
+return this.chainModify([115, 100]);
+}
 },
 },
 
@@ -4692,6 +3681,19 @@ this.add('-activate', pokemon, 'item: Mystery Berry', moveSlot.move);
 isNonstandard: "Past",
 },
 
+mysticwater: {
+name: "Mystic Water",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Water') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
 nanabberry: {
 name: "Nanab Berry",
 isBerry: true,
@@ -4711,6 +3713,19 @@ isPokeball: true,
 netball: {
 name: "Net Ball",
 isPokeball: true,
+},
+
+nevermeltice: {
+name: "Never-Melt Ice",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Ice') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 nomelberry: {
@@ -4743,6 +3758,27 @@ zMoveType: "Normal",
 isNonstandard: "Past",
 },
 
+occaberry: {
+name: "Occa Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Fire",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
 oddincense: {
 name: "Odd Incense",
 fling: {
@@ -4763,6 +3799,26 @@ fling: {
 basePower: 100,
 },
 isNonstandard: "Past",
+},
+
+oranberry: {
+name: "Oran Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Poison",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(50);
+},
 },
 
 ovalstone: {
@@ -4787,6 +3843,84 @@ parkball: {
 name: "Park Ball",
 isPokeball: true,
 isNonstandard: "Unobtainable",
+},
+
+passhoberry: {
+name: "Passho Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Water",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+payapaberry: {
+name: "Payapa Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Psychic",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+pechaberry: {
+name: "Pecha Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Electric",
+},
+onUpdate(pokemon) {
+if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+pokemon.cureStatus();
+}
+},
+},
+
+persimberry: {
+name: "Persim Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ground",
+},
+onUpdate(pokemon) {
+if (pokemon.volatiles['confusion']) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+pokemon.removeVolatile('confusion');
+},
 },
 
 petayaberry: {
@@ -4896,6 +4030,20 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+poisonbarb: {
+name: "Poison Barb",
+fling: {
+basePower: 70,
+status: 'psn',
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Poison') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
 poisongem: {
 name: "Poison Gem",
 isGem: true,
@@ -5001,6 +4149,21 @@ return this.chainModify(0.5);
 },
 },
 
+powerherb: {
+onChargeMove(pokemon, target, move) {
+if (pokemon.useItem()) {
+this.debug('power herb - remove charge turn for ' + move.id);
+this.attrLastMove('[still]');
+this.addMove('-anim', pokemon, move.name, target);
+return false; // skip charge turn
+}
+},
+name: "Power Herb",
+fling: {
+basePower: 10,
+},
+},
+
 powerlens: {
 name: "Power Lens",
 ignoreKlutz: true,
@@ -5043,6 +4206,14 @@ fling: {
 basePower: 30,
 },
 isNonstandard: "Past",
+},
+
+protectivepads: {
+name: "Protective Pads",
+fling: {
+basePower: 30,
+},
+// protective effect handled in Battle#checkMoveMakesContact
 },
 
 protector: {
@@ -5119,6 +4290,27 @@ itemUser: ["Silvally-Psychic"],
 isNonstandard: "Past",
 },
 
+psychicseed: {
+name: "Psychic Seed",
+fling: {
+basePower: 10,
+},
+onStart(pokemon) {
+if (!pokemon.ignoringItem() && this.field.isTerrain('psychicterrain')) {
+pokemon.useItem();
+}
+},
+onTerrainChange(pokemon) {
+if (this.field.isTerrain('psychicterrain')) {
+pokemon.useItem();
+}
+},
+boosts: {
+def: 1,
+spd: 1,
+},
+},
+
 psychiumz: {
 name: "Psychium Z",
 onPlate: 'Psychic',
@@ -5127,6 +4319,40 @@ zMove: true,
 zMoveType: "Psychic",
 forcedForme: "Arceus-Psychic",
 isNonstandard: "Past",
+},
+
+puck: {
+name: "Puck",
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Steel') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+},
+
+punchingglove: {
+name: "Punching Glove",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['punch']) {
+this.debug('Punching Glove boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['punch']) delete move.flags['contact'];
+},
 },
 
 qualotberry: {
@@ -5142,6 +4368,21 @@ onEat: false,
 quickball: {
 name: "Quick Ball",
 isPokeball: true,
+},
+
+quickclaw: {
+onFractionalPriorityPriority: -2,
+onFractionalPriority(priority, pokemon, target, move) {
+if (move.category === "Status" && pokemon.hasAbility("myceliummight")) return;
+if (priority <= 0 && this.randomChance(1, 5)) {
+this.add('-activate', pokemon, 'item: Quick Claw');
+return 0.1;
+}
+},
+name: "Quick Claw",
+fling: {
+basePower: 80,
+},
 },
 
 quickpowder: {
@@ -5169,10 +4410,39 @@ onEat: false,
 isNonstandard: "Past",
 },
 
+rainbowreflector: {
+name: 'Rainbow Reflector',
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (move.category === 'Special' && this.field.isWeather('raindance')) {
+this.damage(source.baseMaxhp / 6, source, target);
+}
+},
+},
+
 rarebone: {
 name: "Rare Bone",
 fling: {
 basePower: 100,
+},
+},
+
+rawstberry: {
+name: "Rawst Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Grass",
+},
+onUpdate(pokemon) {
+if (pokemon.status === 'brn') {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+if (pokemon.status === 'brn') {
+pokemon.cureStatus();
+}
 },
 },
 
@@ -5227,6 +4497,26 @@ basePower: 10,
 isNonstandard: "Past",
 },
 
+redcard: {
+name: "Red Card",
+fling: {
+basePower: 10,
+},
+onAfterMoveSecondary(target, source, move) {
+if (source && source !== target && source.hp && target.hp && move && move.category !== 'Status') {
+if (!source.isActive || !this.canSwitch(source.side) || source.forceSwitchFlag || target.forceSwitchFlag) {
+return;
+}
+// The item is used up even against a pokemon with Ingrain or that otherwise can't be forced out
+if (target.useItem(source)) {
+if (this.runEvent('DragOut', source, target, move)) {
+source.forceSwitchFlag = true;
+}
+}
+}
+},
+},
+
 redorb: {
 name: "Red Orb",
 onSwitchIn(pokemon) {
@@ -5256,6 +4546,35 @@ fling: {
 basePower: 10,
 },
 isNonstandard: "Past",
+},
+
+rindoberry: {
+name: "Rindo Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Grass",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+ringtarget: {
+name: "Ring Target",
+fling: {
+basePower: 10,
+},
+onNegateImmunity: false,
 },
 
 rockgem: {
@@ -5308,6 +4627,40 @@ itemUser: ["Silvally-Rock"],
 isNonstandard: "Past",
 },
 
+rockyhelmet: {
+name: "Rocky Helmet",
+fling: {
+basePower: 60,
+},
+onDamagingHitOrder: 2,
+onDamagingHit(damage, target, source, move) {
+if (this.checkMoveMakesContact(move, source, target)) {
+this.damage(source.baseMaxhp / 6, source, target);
+}
+},
+},
+
+roomservice: {
+name: "Room Service",
+fling: {
+basePower: 100,
+},
+onStart(pokemon) {
+if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickroom')) {
+pokemon.useItem();
+}
+},
+onAnyPseudoWeatherChange() {
+const pokemon = this.effectState.target;
+if (this.field.getPseudoWeather('trickroom')) {
+pokemon.useItem(pokemon);
+}
+},
+boosts: {
+spe: -1,
+},
+},
+
 rootfossil: {
 name: "Root Fossil",
 fling: {
@@ -5328,6 +4681,45 @@ return this.chainModify([115, 100]);
 }
 },
 isNonstandard: "Past",
+},
+
+roseliberry: {
+name: "Roseli Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Fairy",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Fairy' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+rowapberry: {
+name: "Rowap Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Dark",
+},
+onDamagingHit(damage, target, source, move) {
+if (move.category === 'Special' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
+if (target.eatItem()) {
+this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
+}
+}
+},
+onEat() { },
+isNonstandard: "Unobtainable",
 },
 
 rustedshield: {
@@ -5378,12 +4770,46 @@ isPokeball: true,
 isNonstandard: "Unobtainable",
 },
 
+safetygoggles: {
+name: "Safety Goggles",
+fling: {
+basePower: 80,
+},
+onImmunity(type, pokemon) {
+if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+},
+onTryHit(pokemon, source, move) {
+if (move.flags['powder'] && pokemon !== source && this.dex.getImmunity('powder', pokemon)) {
+this.add('-activate', pokemon, 'item: Safety Goggles', move.name);
+return null;
+}
+},
+},
+
 sailfossil: {
 name: "Sail Fossil",
 fling: {
 basePower: 100,
 },
 isNonstandard: "Past",
+},
+
+salacberry: {
+name: "Salac Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Fighting",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+this.boost({spe: 1.5});
+},
 },
 
 salamencite: {
@@ -5422,6 +4848,30 @@ return true;
 isNonstandard: "Past",
 },
 
+scopelens: {
+name: "Scope Lens",
+fling: {
+basePower: 30,
+},
+onModifyCritRatio(critRatio) {
+return critRatio + 1;
+},
+},
+
+scorchingsandsstone: {
+name: 'Scorching Sands Stone',
+onModifyMovePriority: -1,
+onModifyMove(move) {
+if (move.flags['contact'] && this.field.isWeather('sandstorm')) {
+if (!move.secondaries) move.secondaries = [];
+move.secondaries.push({
+chance: 33,
+status: 'brn',
+});
+}
+},
+},
+
 seaincense: {
 name: "Sea Incense",
 fling: {
@@ -5436,6 +4886,19 @@ return this.chainModify([115, 100]);
 isNonstandard: "Past",
 },
 
+sharpbeak: {
+name: "Sharp Beak",
+fling: {
+basePower: 50,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move && move.type === 'Flying') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
 sharpedonite: {
 name: "Sharpedonite",
 megaStone: "Sharpedo-Mega",
@@ -5446,6 +4909,30 @@ if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 return true;
 },
 isNonstandard: "Past",
+},
+
+shedshell: {
+name: "Shed Shell",
+fling: {
+basePower: 10,
+},
+onTrapPokemonPriority: -10,
+onTrapPokemon(pokemon) {
+pokemon.trapped = pokemon.maybeTrapped = false;
+},
+},
+
+shellbell: {
+name: "Shell Bell",
+fling: {
+basePower: 30,
+},
+onAfterMoveSecondarySelfPriority: -1,
+onAfterMoveSecondarySelf(pokemon, target, move) {
+if (move.totalDamage && !pokemon.forceSwitchFlag) {
+this.heal(move.totalDamage / 8, pokemon);
+}
+},
 },
 
 shinystone: {
@@ -5469,6 +4956,53 @@ itemUser: ["Genesect-Shock"],
 isNonstandard: "Past",
 },
 
+shucaberry: {
+name: "Shuca Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ground",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+silkscarf: {
+name: "Silk Scarf",
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Normal') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+silverpowder: {
+name: "Silver Powder",
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Bug') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
 siriusarmilla: {
 name: "Sirius Armilla",
 fling: {
@@ -5485,6 +5019,44 @@ if (this.randomChance(15, 100) && damage >= target.hp && effect && effect.effect
 this.add("-activate", target, "item: Sirius Armilla");
 return target.hp - 1;
 }
+},
+},
+
+sitrusberry: {
+name: "Sitrus Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Psychic",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2) {
+pokemon.eatItem();
+}
+},
+onTryEatItem(item, pokemon) {
+if (!this.runEvent('TryHeal', pokemon)) return false;
+},
+onEat(pokemon) {
+this.heal(pokemon.baseMaxhp / 4);
+},
+},
+
+skates: {
+name: "Skates",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 23,
+onBasePower(basePower, attacker, defender, move) {
+if (move.flags['slow']) {
+this.debug('Skates boost');
+return this.chainModify([115, 100]);
+}
+},
+onModifyMovePriority: 1,
+onModifyMove(move) {
+if (move.flags['slow']) delete move.flags['contact'];
 },
 },
 
@@ -5526,6 +5098,13 @@ return true;
 isNonstandard: "Past",
 },
 
+smoothrock: {
+name: "Smooth Rock",
+fling: {
+basePower: 10,
+},
+},
+
 snorliumz: {
 name: "Snorlium Z",
 onTakeItem: false,
@@ -5533,6 +5112,35 @@ zMove: "Pulverizing Pancake",
 zMoveFrom: "Giga Impact",
 itemUser: ["Snorlax"],
 isNonstandard: "Past",
+},
+
+snowball: {
+name: "Snowball",
+fling: {
+basePower: 30,
+},
+onDamagingHit(damage, target, source, move) {
+if (move.type === 'Ice') {
+target.useItem();
+}
+},
+boosts: {
+atk: 1,
+spa: 1,
+},
+},
+
+softsand: {
+name: "Soft Sand",
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Ground') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 solganiumz: {
@@ -5560,6 +5168,19 @@ return this.chainModify([115, 100]);
 },
 itemUser: ["Latios", "Latias"],
 isNonstandard: "Past",
+},
+
+spelltag: {
+name: "Spell Tag",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Ghost') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 spelonberry: {
@@ -5613,6 +5234,36 @@ sportball: {
 name: "Sport Ball",
 isPokeball: true,
 isNonstandard: "Unobtainable",
+},
+
+starfberry: {
+name: "Starf Berry",
+isBerry: true,
+naturalGift: {
+basePower: 100,
+type: "Psychic",
+},
+onUpdate(pokemon) {
+if (pokemon.hp <= pokemon.maxhp / 2 || (pokemon.hp <= pokemon.maxhp / 2 &&
+pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+pokemon.eatItem();
+}
+},
+onEat(pokemon) {
+const stats: BoostID[] = [];
+let stat: BoostID;
+for (stat in pokemon.boosts) {
+if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
+stats.push(stat);
+}
+}
+if (stats.length) {
+const randomStat = this.sample(stats);
+const boost: SparseBoostsTable = {};
+boost[randomStat] = 2.5;
+this.boost(boost);
+}
+},
 },
 
 starsweet: {
@@ -5685,6 +5336,26 @@ itemUser: ["Farfetch\u2019d"],
 isNonstandard: "Past",
 },
 
+stickybarb: {
+name: "Sticky Barb",
+fling: {
+basePower: 80,
+},
+onResidualOrder: 28,
+onResidualSubOrder: 3,
+onResidual(pokemon) {
+this.damage(pokemon.baseMaxhp / 8);
+},
+onHit(target, source, move) {
+if (source && source !== target && !source.item && move && this.checkMoveMakesContact(move, source, target)) {
+const barb = target.takeItem();
+if (!barb) return; // Gen 4 Multitype
+source.setItem(barb);
+// no message for Sticky Barb changing hands
+}
+},
+},
+
 stoneplate: {
 name: "Stone Plate",
 onPlate: 'Rock',
@@ -5724,6 +5395,22 @@ basePower: 30,
 },
 },
 
+superspicycurry: {
+name: "Superspicy Curry",
+fling: {
+basePower: 30,
+},
+onResidualOrder: 5,
+onResidualSubOrder: 4,
+onResidual(pokemon) {
+if (pokemon.hasType('fire')) {
+this.heal(pokemon.baseMaxhp / 13.34);
+} else {
+this.damage(pokemon.baseMaxhp / 3);
+}
+},
+},
+
 swampertite: {
 name: "Swampertite",
 megaStone: "Swampert-Mega",
@@ -5753,6 +5440,27 @@ type: "Psychic",
 onEat: false,
 },
 
+tangaberry: {
+name: "Tanga Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Bug",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
 tapuniumz: {
 name: "Tapunium Z",
 onTakeItem: false,
@@ -5766,6 +5474,13 @@ tartapple: {
 name: "Tart Apple",
 fling: {
 basePower: 30,
+},
+},
+
+terrainextender: {
+name: "Terrain Extender",
+fling: {
+basePower: 60,
 },
 },
 
@@ -5784,6 +5499,21 @@ itemUser: ["Harrowack", "Marowak-Alola", "Marowak-Alola-Totem", "Cubone"],
 isNonstandard: "Past",
 },
 
+throatspray: {
+name: "Throat Spray",
+fling: {
+basePower: 30,
+},
+onAfterMoveSecondarySelf(target, source, move) {
+if (move.flags['sound']) {
+target.useItem();
+}
+},
+boosts: {
+spa: 1,
+},
+},
+
 thunderstone: {
 name: "Thunder Stone",
 fling: {
@@ -5794,6 +5524,19 @@ basePower: 30,
 timerball: {
 name: "Timer Ball",
 isPokeball: true,
+},
+
+toxicorb: {
+name: "Toxic Orb",
+fling: {
+basePower: 30,
+status: 'tox',
+},
+onResidualOrder: 28,
+onResidualSubOrder: 3,
+onResidual(pokemon) {
+pokemon.trySetStatus('tox', pokemon);
+},
 },
 
 toxicplate: {
@@ -5812,6 +5555,19 @@ return false;
 return true;
 },
 forcedForme: "Arceus-Poison",
+},
+
+twistedspoon: {
+name: "Twisted Spoon",
+fling: {
+basePower: 30,
+},
+onBasePowerPriority: 15,
+onBasePower(basePower, user, target, move) {
+if (move.type === 'Psychic') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 tyranitarite: {
@@ -5846,6 +5602,33 @@ fling: {
 basePower: 30,
 },
 isNonstandard: "Past",
+},
+
+utilityumbrella: {
+name: "Utility Umbrella",
+fling: {
+basePower: 60,
+},
+// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
+onStart(pokemon) {
+if (!pokemon.ignoringItem()) return;
+if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
+this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+}
+},
+onUpdate(pokemon) {
+if (!this.effectState.inactive) return;
+this.effectState.inactive = false;
+if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
+this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+}
+},
+onEnd(pokemon) {
+if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
+this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+}
+this.effectState.inactive = true;
+},
 },
 
 venusaurite: {
@@ -5892,6 +5675,27 @@ this.damage(damageToReflect, source, target);
 this.add('-message', target.name + "'s Voodoo Doll reflects " + damageToReflect + " damage back at " + source.name + "!");
 }
 },
+},
+
+wacanberry: {
+name: "Wacan Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Electric",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
 },
 
 watergem: {
@@ -5962,6 +5766,22 @@ return this.chainModify([4915, 4096]);
 isNonstandard: "Past",
 },
 
+weaknesspolicy: {
+name: "Weakness Policy",
+fling: {
+basePower: 80,
+},
+onDamagingHit(damage, target, source, move) {
+if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
+target.useItem();
+}
+},
+boosts: {
+atk: 2,
+spa: 2,
+},
+},
+
 wepearberry: {
 name: "Wepear Berry",
 isBerry: true,
@@ -5971,6 +5791,64 @@ type: "Electric",
 },
 onEat: false,
 isNonstandard: "Past",
+},
+
+whippeddream: {
+name: "Whipped Dream",
+fling: {
+basePower: 80,
+},
+isNonstandard: "Past",
+},
+
+whiteherb: {
+name: "White Herb",
+fling: {
+basePower: 10,
+effect(pokemon) {
+let activate = false;
+const boosts: SparseBoostsTable = {};
+let i: BoostID;
+for (i in pokemon.boosts) {
+if (pokemon.boosts[i] < 0) {
+activate = true;
+boosts[i] = 0;
+}
+}
+if (activate) {
+pokemon.setBoost(boosts);
+this.add('-clearnegativeboost', pokemon, '[silent]');
+}
+},
+},
+onUpdate(pokemon) {
+let activate = false;
+const boosts: SparseBoostsTable = {};
+let i: BoostID;
+for (i in pokemon.boosts) {
+if (pokemon.boosts[i] < 0) {
+activate = true;
+boosts[i] = 0;
+}
+}
+if (activate && pokemon.useItem()) {
+pokemon.setBoost(boosts);
+this.add('-clearnegativeboost', pokemon, '[silent]');
+}
+},
+},
+
+widelens: {
+name: "Wide Lens",
+fling: {
+basePower: 10,
+},
+onSourceModifyAccuracyPriority: -2,
+onSourceModifyAccuracy(accuracy) {
+if (typeof accuracy === 'number') {
+return this.chainModify([115, 100]);
+}
+},
 },
 
 wikiberry: {
@@ -5997,6 +5875,63 @@ pokemon.addVolatile('confusion');
 },
 },
 
+wiseglasses: {
+name: "Wise Glasses",
+fling: {
+basePower: 10,
+},
+onBasePowerPriority: 16,
+onBasePower(basePower, user, target, move) {
+if (move.category === 'Special') {
+return this.chainModify([115, 100]);
+}
+},
+},
+
+yacheberry: {
+name: "Yache Berry",
+isBerry: true,
+naturalGift: {
+basePower: 80,
+type: "Ice",
+},
+onSourceModifyDamage(damage, source, target, move) {
+if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0) {
+const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
+
+yellowcard: {
+name: "Yellow Card",
+onStart: function (pokemon) {
+pokemon.itemUsageCount = 1;
+},
+onBeforeMove: function (attacker, defender, move) {
+if (defender.side !== attacker.side && !defender.volatiles['yellowcard']) {
+defender.addVolatile('yellowcard');
+this.add('-message', defender.name + ' was shown a Yellow Card and cannot attack this turn!');
+if (defender.item) {
+let item = this.dex.items.get(defender.item);
+if (item) {
+this.add('-enditem', defender, item, '[consumed]');
+}
+}
+defender.setItem('');
+defender.itemUsageCount = 0;
+return false;
+}
+},
+desc: "Stops the foe from attacking for one turn. Single use.",
+},
+
 zapplate: {
 name: "Zap Plate",
 onPlate: 'Electric',
@@ -6013,6 +5948,26 @@ return false;
 return true;
 },
 forcedForme: "Arceus-Electric",
+},
+
+zoomlens: {
+name: "Zoom Lens",
+fling: {
+basePower: 10,
+},
+onSourceModifyAccuracyPriority: -2,
+onSourceModifyAccuracy(accuracy, target) {
+if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
+this.debug('Critical Zoom Lens boosting accuracy');
+return this.chainModify([115, 100]);
+}
+},
+onModifyCritRatio(critRatio, source, target) {
+if (!this.queue.willMove(target)) {
+this.debug('Critical Zoom Lens boosting critical hit ratio');
+return critRatio + 1;
+}
+},
 },
 
 };
