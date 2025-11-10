@@ -94,7 +94,6 @@ if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dra
 return this.chainModify([115, 100]);
 }
 },
-},
 
 altarianite: {
 name: "Altarianite",
@@ -146,6 +145,12 @@ basePower: 100,
 isNonstandard: "Past",
 },
 
+if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
+return false;
+}
+},
+forcedForme: "Dialga-Origin",
+itemUser: ["Dialga-Origin"],
 aspearberry: {
 name: "Aspear Berry",
 isBerry: true,
@@ -5142,15 +5147,6 @@ return this.chainModify([115, 100]);
 },
 },
 
-if (target.eatItem()) {
-this.debug('-50% reduction');
-this.add('-enditem', target, this.effect, '[weaken]');
-return this.chainModify(0.5);
-}
-}
-},
-onEat() { },
-},
 solganiumz: {
 name: "Solganium Z",
 onTakeItem: false,
@@ -5459,6 +5455,15 @@ onSourceModifyDamage(damage, source, target, move) {
 if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0) {
 const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
 if (hitSub) return;
+if (target.eatItem()) {
+this.debug('-50% reduction');
+this.add('-enditem', target, this.effect, '[weaken]');
+return this.chainModify(0.5);
+}
+}
+},
+onEat() { },
+},
 
 tapuniumz: {
 name: "Tapunium Z",
@@ -5968,6 +5973,7 @@ return critRatio + 1;
 }
 },
 },
+
 
 
 
