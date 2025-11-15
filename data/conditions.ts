@@ -262,48 +262,24 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 },
 
-tox: {
-name: 'tox',
-effectType: 'Status',
-onStart(target, source, sourceEffect) {
-this.effectState.stage = 0;
-if (sourceEffect && sourceEffect.id === 'toxicorb') {
-this.add('-status', target, 'tox', '[from] item: Toxic Orb');
-} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
-this.add('-status', target, 'tox', '[from] ability: ' + sourceEffect.name, `[of] ${source}`);
-} else {
-this.add('-status', target, 'tox');
-}
+bleeding:{
+name:'bleeding',
+displayName:'🩸',
+onStart(target,source,sourceEffect){
+this.add('-start',target,'bleeding');
+this.add('-message',`${target.name} began bleeding!`);
+this.effectState.time=this.random(2,6);
 },
-onSwitchIn() {
-this.effectState.stage = 0;
+onEnd(target){
+this.add('-end',target,'bleeding');
+this.add('-message',`${target.name}'s wounds closed!`);
 },
-onResidualOrder: 9,
-onResidual(pokemon) {
-if (this.effectState.stage < 15) {
-this.effectState.stage++;
-}
-this.damage(this.clampIntRange(pokemon.baseMaxhp / 16, 1) * this.effectState.stage);
-},
-},
-
-bleeding: {
-name: 'bleeding',
-onStart(target, source, sourceEffect) {
-this.add('-start', target, 'bleeding');
-this.add('-message', `${target.name} began bleeding!`);
-this.effectState.time = this.random(2, 6);
-},
-onEnd(target) {
-this.add('-end', target, 'bleeding');
-this.add('-message', `${target.name}'s wounds closed!`);
-},
-onResidual(pokemon) {
+onResidual(pokemon){
 pokemon.volatiles['bleeding'].time--;
-const damage = pokemon.maxhp / 8;
-this.add('-activate', pokemon, 'bleeding');
-this.damage(damage, pokemon);
-if (!pokemon.volatiles['bleeding'].time) {
+const damage=pokemon.maxhp/8;
+this.add('-activate',pokemon,'bleeding');
+this.damage(damage,pokemon);
+if(!pokemon.volatiles['bleeding'].time){
 pokemon.removeVolatile('bleeding');
 }
 },
