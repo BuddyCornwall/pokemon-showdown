@@ -258,7 +258,7 @@ priority: 0,
 flags: {protect: 1, mirror: 1, distance: 1, slicing: 1},
 secondaries: [
 {
-chance: 100,
+chance: 50,
 volatileStatus: 'bleeding',
 }, {
 chance: 50,
