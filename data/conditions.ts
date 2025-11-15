@@ -263,8 +263,7 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 
 bleeding:{
-name:'bleeding',
-displayName:'🩸',
+name:'🩸',
 onStart(target,source,sourceEffect){
 this.add('-start',target,'bleeding');
 this.add('-message',`${target.name} began bleeding!`);
