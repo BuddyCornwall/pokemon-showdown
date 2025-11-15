@@ -262,11 +262,13 @@ if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 },
 
-🩸:{
-name:'🩸',
-onStart(target,source,sourceEffect){
+bleeding:{
+name:'bleeding',
+onStart(target){
+if(!this.effectState.stacks)this.effectState.stacks=1;
+else this.effectState.stacks++;
 this.add('-start',target,'bleeding');
-this.add('-message',`${target.name} began bleeding!`);
+this.add('-message',`${target.name} began bleeding! (${this.effectState.stacks} stack${this.effectState.stacks>1?'s':''})`);
 this.effectState.time=this.random(2,6);
 },
 onEnd(target){
@@ -275,7 +277,9 @@ this.add('-message',`${target.name}'s wounds closed!`);
 },
 onResidual(pokemon){
 pokemon.volatiles['bleeding'].time--;
-const damage=pokemon.maxhp/8;
+const stacks=pokemon.volatiles['bleeding'].stacks||1;
+// 1%, 2%, 4%, 8%, ... (exponential)
+const damage=pokemon.maxhp*(0.01*Math.pow(2,stacks-1));
 this.add('-activate',pokemon,'bleeding');
 this.damage(damage,pokemon);
 if(!pokemon.volatiles['bleeding'].time){
