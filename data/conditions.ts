@@ -1,4 +1,5 @@
 export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
+
 brn: {
 name: 'brn',
 effectType: 'Status',
@@ -17,6 +18,7 @@ onResidual(pokemon) {
 this.damage(pokemon.baseMaxhp / 20);
 },
 },
+
 par: {
 name: 'par',
 effectType: 'Status',
@@ -44,6 +46,7 @@ return false;
 }
 },
 },
+
 slp: {
 name: 'slp',
 effectType: 'Status',
@@ -80,6 +83,7 @@ return;
 return false;
 },
 },
+
 frz: {
 name: 'frz',
 effectType: 'Status',
@@ -120,6 +124,7 @@ target.cureStatus();
 }
 },
 },
+
 psn: {
 name: 'psn',
 effectType: 'Status',
@@ -135,6 +140,7 @@ onResidual(pokemon) {
 this.damage(pokemon.baseMaxhp / 8);
 },
 },
+
 tox: {
 name: 'tox',
 effectType: 'Status',
@@ -159,6 +165,7 @@ this.effectState.stage++;
 this.damage(this.clampIntRange(pokemon.baseMaxhp / 16, 1) * this.effectState.stage);
 },
 },
+
 confusion: {
 name: 'confusion',
 // this is a volatile status
@@ -195,6 +202,7 @@ this.damage(damage, pokemon, pokemon, activeMove as ActiveMove);
 return false;
 },
 },
+
 flinch: {
 name: 'flinch',
 duration: 1,
@@ -205,6 +213,7 @@ this.runEvent('Flinch', pokemon);
 return false;
 },
 },
+
 trapped: {
 name: 'trapped',
 noCopy: true,
@@ -215,10 +224,12 @@ onStart(target) {
 this.add('-activate', target, 'trapped');
 },
 },
+
 trapper: {
 name: 'trapper',
 noCopy: true,
 },
+
 partiallytrapped: {
 name: 'partiallytrapped',
 duration: 5,
@@ -250,6 +261,54 @@ const gmaxEffect = ['gmaxcentiferno', 'gmaxsandblast'].includes(this.effectState
 if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 },
 },
+
+tox: {
+name: 'tox',
+effectType: 'Status',
+onStart(target, source, sourceEffect) {
+this.effectState.stage = 0;
+if (sourceEffect && sourceEffect.id === 'toxicorb') {
+this.add('-status', target, 'tox', '[from] item: Toxic Orb');
+} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
+this.add('-status', target, 'tox', '[from] ability: ' + sourceEffect.name, `[of] ${source}`);
+} else {
+this.add('-status', target, 'tox');
+}
+},
+onSwitchIn() {
+this.effectState.stage = 0;
+},
+onResidualOrder: 9,
+onResidual(pokemon) {
+if (this.effectState.stage < 15) {
+this.effectState.stage++;
+}
+this.damage(this.clampIntRange(pokemon.baseMaxhp / 16, 1) * this.effectState.stage);
+},
+},
+
+bleeding: {
+name: 'bleeding',
+onStart(target, source, sourceEffect) {
+this.add('-start', target, 'bleeding');
+this.add('-message', `${target.name} began bleeding!`);
+this.effectState.time = this.random(2, 6);
+},
+onEnd(target) {
+this.add('-end', target, 'bleeding');
+this.add('-message', `${target.name}'s wounds closed!`);
+},
+onResidual(pokemon) {
+pokemon.volatiles['bleeding'].time--;
+const damage = pokemon.maxhp / 8;
+this.add('-activate', pokemon, 'bleeding');
+this.damage(damage, pokemon);
+if (!pokemon.volatiles['bleeding'].time) {
+pokemon.removeVolatile('bleeding');
+}
+},
+},
+
 lockedmove: {
 // Outrage, Thrash, Petal Dance...
 name: 'lockedmove',
@@ -284,6 +343,7 @@ if (pokemon.volatiles['dynamax']) return;
 return this.effectState.move;
 },
 },
+
 twoturnmove: {
 // Skull Bash, SolarBeam, Sky Drop...
 name: 'twoturnmove',
@@ -321,6 +381,7 @@ onMoveAborted(pokemon) {
 pokemon.removeVolatile('twoturnmove');
 },
 },
+
 choicelock: {
 name: 'choicelock',
 noCopy: true,
@@ -361,6 +422,7 @@ pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
 }
 },
 },
+
 mustrecharge: {
 name: 'mustrecharge',
 duration: 2,
@@ -376,6 +438,7 @@ this.add('-mustrecharge', pokemon);
 },
 onLockMove: 'recharge',
 },
+
 futuremove: {
 // this is a slot condition
 name: 'futuremove',
@@ -421,6 +484,7 @@ this.activeMove = null;
 this.checkWin();
 },
 },
+
 healreplacement: {
 // this is a slot condition
 name: 'healreplacement',
@@ -436,6 +500,7 @@ target.side.removeSlotCondition(target, 'healreplacement');
 }
 },
 },
+
 stall: {
 // Protect, Detect, Endure counter
 name: 'stall',
@@ -460,6 +525,7 @@ this.effectState.counter *= 3;
 this.effectState.duration = 2;
 },
 },
+
 gem: {
 name: 'gem',
 duration: 1,
@@ -470,8 +536,6 @@ this.debug('Gem Boost');
 return this.chainModify([5325, 4096]);
 },
 },
-
-// weather is implemented here since it's so important to the game
 
 raindance: {
 name: 'RainDance',
@@ -511,6 +575,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 primordialsea: {
 name: 'PrimordialSea',
 effectType: 'Weather',
@@ -543,6 +608,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 sunnyday: {
 name: 'SunnyDay',
 effectType: 'Weather',
@@ -589,6 +655,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 desolateland: {
 name: 'DesolateLand',
 effectType: 'Weather',
@@ -625,6 +692,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 sandstorm: {
 name: 'Sandstorm',
 effectType: 'Weather',
@@ -663,6 +731,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 hail: {
 name: 'Hail',
 effectType: 'Weather',
@@ -693,6 +762,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 snowscape: {
 name: 'Snowscape',
 effectType: 'Weather',
@@ -726,6 +796,7 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 deltastream: {
 name: 'DeltaStream',
 effectType: 'Weather',
@@ -804,8 +875,6 @@ this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
 },
 },
 
-// Commander needs two conditions so they are implemented here
-// Dondozo
 commanded: {
 name: "Commanded",
 noCopy: true,
@@ -822,7 +891,7 @@ onTrapPokemon(pokemon) {
 pokemon.trapped = true;
 },
 },
-// Tatsugiri
+
 commanding: {
 name: "Commanding",
 noCopy: true,
@@ -843,12 +912,6 @@ this.queue.cancelAction(pokemon);
 },
 },
 
-// Arceus and Silvally's actual typing is implemented here.
-// Their true typing for all their formes is Normal, and it's only
-// Multitype and RKS System, respectively, that changes their type,
-// but their formes are specified to be their corresponding type
-// in the Pokedex, so that needs to be overridden.
-// This is mainly relevant for Hackmons Cup and Balanced Hackmons.
 arceus: {
 name: 'Arceus',
 onTypePriority: 1,
@@ -864,6 +927,7 @@ type = 'Normal';
 return [type];
 },
 },
+
 silvally: {
 name: 'Silvally',
 onTypePriority: 1,
@@ -879,6 +943,7 @@ type = 'Normal';
 return [type];
 },
 },
+
 rolloutstorage: {
 name: 'rolloutstorage',
 duration: 2,
