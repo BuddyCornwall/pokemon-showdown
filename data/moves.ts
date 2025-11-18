@@ -14044,12 +14044,21 @@ name: "Smokescreen",
 pp: 1.25,
 priority: 0,
 flags: {protect: 1, reflectable: 1, mirror: 1},
-boosts: {
-evasion: -3,
+onHit(target, source, move) {
+if (!target || !source) return;
+if (this.random(2) === 0) {
+if (!target.volatiles['minimize']) { // optional: ignore certain boosts if needed
+this.boost({ evasion: -1 }, target, source, move);
+}
+} else {
+if (target.side.active.length > 1) { // only if switch possible
+this.add('-activate', target, 'move: Smokescreen');
+target.forceSwitchFlag = true;
+}
+}
 },
 secondary: null,
-target: "allAdjacent",
-type: "Normal",
+boosts: null, // handled in onHit
 },
 
 snaptrap: {
@@ -18782,5 +18791,10 @@ critRatio: 2,
 target: "any",
 type: "Rock",
 },
+
+
+
+
+
 
 };
