@@ -189,9 +189,9 @@ name: "Bucket of Scorn",
 onFaint(target, source, effect) {
 if (!source || source === target) return;
 if (!source.hasAbility('magicguard')) {
-source.trySetStatus('psn', target);
+source.trySetStatus('tox', target);
 this.add('-item', target, 'Bucket of Scorn', '[trigger]');
-this.add('-status', source, 'psn', '[from] item: Bucket of Scorn', '[ignoreimmune]');
+this.add('-status', source, 'tox', '[from] item: Bucket of Scorn', '[ignoreimmune]');
 }
 },
 },
