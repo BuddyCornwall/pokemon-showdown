@@ -186,8 +186,8 @@ name: "Blunder Policy",
 
 bucketofscorn: {
 name: "Bucket of Scorn",
-onAfterDamage(damage, target, source, move) {
-if (!source || source === target || !move || target.hp > 0) return;
+onFaint(target, source, effect) {
+if (!source || source === target) return;
 if (!source.hasAbility('magicguard')) {
 source.trySetStatus('psn', target);
 this.add('-item', target, 'Bucket of Scorn', '[trigger]');
