@@ -727,6 +727,13 @@ this.boost({spe: 1}, target);
 fishhook: {
 name: "Fish Hook",
 flags: {trap: 1},
+onFoeTrapPokemon(pokemon, source) {
+if (!source || source === pokemon) return;
+const species = pokemon.baseSpecies?.name;
+if (species === "Magikarp" || species === "Gyarados") {
+return true;
+}
+},
 onFoeBeforeSwitchOut(pokemon) {
 const species = pokemon.baseSpecies?.name;
 if (species === "Magikarp" || species === "Gyarados") {
@@ -735,7 +742,6 @@ return true;
 }
 },
 },
-
 
 flameorb: {
 name: "Flame Orb",
