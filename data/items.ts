@@ -726,13 +726,16 @@ this.boost({spe: 1}, target);
 
 fishhook: {
 name: "Fish Hook",
+flags: {trap: 1},
 onFoeBeforeSwitchOut(pokemon) {
+const species = pokemon.baseSpecies?.name;
 if (species === "Magikarp" || species === "Gyarados") {
-this.add('-message', `${pokemon.name} was hooked and can't escape!`);
-return false;
+this.add('-message', `${pokemon.name} is caught by the Fish Hook!`);
+return true;
 }
 },
 },
+
 
 flameorb: {
 name: "Flame Orb",
