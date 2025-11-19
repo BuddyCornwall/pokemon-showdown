@@ -239,9 +239,8 @@ return target.hp - 1;
 
 catstoy: {
 name: "Cat's Toy",
-boostCats: ['meowth', 'meowthalola', 'meowthgalar'],
 onStart(pokemon) {
-if (this.item.boostCats.includes(pokemon.species.id)) {
+if (pokemon.species.id === 'meowth') {
 this.boost({spe: 1}, pokemon);
 }
 },
