@@ -726,10 +726,10 @@ this.boost({spe: 1}, target);
 
 fishhook: {
 name: "Fish Hook",
-onFoeTrapPokemon(pokemon) {
-const species = pokemon.baseSpecies?.name || pokemon.species?.name;
+onFoeBeforeSwitchOut(pokemon) {
 if (species === "Magikarp" || species === "Gyarados") {
-return true;
+this.add('-message', `${pokemon.name} was hooked and can't escape!`);
+return false;
 }
 },
 },
