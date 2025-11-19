@@ -2316,6 +2316,26 @@ return critRatio + 1;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 abomasite: {
 name: "Abomasite",
 megaStone: "Abomasnow-Mega",
