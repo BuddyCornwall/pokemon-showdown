@@ -727,7 +727,8 @@ this.boost({spe: 1}, target);
 fishhook: {
 name: "Fish Hook",
 onFoeTrapPokemon(pokemon) {
-if (pokemon.hasType('Water')) {
+const species = pokemon.baseSpecies?.name || pokemon.species?.name;
+if (species === "Magikarp" || species === "Gyarados") {
 return true;
 }
 },
