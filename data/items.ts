@@ -240,7 +240,8 @@ return target.hp - 1;
 catstoy: {
 name: "Cat's Toy",
 onStart(pokemon) {
-if (pokemon.species.id === 'meowth') {
+const boostedMons = ['Toxel'];
+if (boostedMons.includes(pokemon.species.id)) {
 this.boost({spe: 1}, pokemon);
 }
 },
@@ -1675,11 +1676,10 @@ this.damage(source.baseMaxhp / 6, source, target);
 
 romansreigns: {
 name: "Roman's Reigns",
-onBasePowerPriority: 23,
-onBasePower(basePower, attacker, defender, move) {
-if (move.dog) {
-this.debug('romansreigns');
-return this.chainModify([115, 100]);
+onStart(pokemon) {
+const boostedMons = ['Boltund'];
+if (boostedMons.includes(pokemon.species.id)) {
+this.boost({spe: 1}, pokemon);
 }
 },
 },
