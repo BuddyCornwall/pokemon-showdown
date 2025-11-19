@@ -3,8 +3,6 @@ export const Items: {[itemid: string]: ItemData} = {
 abilityshield: {
 name: "Ability Shield",
 ignoreKlutz: true,
-// Neutralizing Gas protection implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
-// and in Neutralizing Gas itself within data/abilities.ts
 onSetAbility(ability, target, source, effect) {
 if (effect && effect.effectType === 'Ability' && effect.name !== 'Trace') {
 this.add('-ability', source, effect);
@@ -12,7 +10,6 @@ this.add('-ability', source, effect);
 this.add('-block', target, 'item: Ability Shield');
 return null;
 },
-// Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
 },
 
 airballoon: {
@@ -143,7 +140,6 @@ return this.chainModify([115, 100]);
 
 bindingband: {
 name: "Binding Band",
-// implemented in statuses
 },
 
 blackbelt: {
@@ -181,7 +177,6 @@ this.damage(pokemon.baseMaxhp / 3);
 
 blunderpolicy: {
 name: "Blunder Policy",
-// Item activation located in scripts.js
 },
 
 bucketofscorn: {
@@ -243,7 +238,13 @@ return target.hp - 1;
 },
 
 catstoy: {
-name: "Cats Toy",
+name: "Cat's Toy",
+boostCats: ['meowth', 'meowthalola', 'meowthgalar'], // expand this list later
+onStart(pokemon) {
+if (this.item.boostCats.includes(pokemon.species.id)) {
+this.boost({spe: 1}, pokemon);
+}
+},
 },
 
 cellsynergysurge: {
@@ -724,15 +725,6 @@ this.boost({spe: 1}, target);
 },
 },
 
-fishhook: {
-name: "Fish Hook",
-onFoeTrapPokemon(pokemon) {
-if (pokemon.hasType('Water')) {
-return true;
-}
-},
-},
-
 flameorb: {
 name: "Flame Orb",
 onResidualOrder: 28,
@@ -834,7 +826,6 @@ spd: 1,
 
 gripclaw: {
 name: "Grip Claw",
-// implemented in statuses
 },
 
 habanberry: {
@@ -886,7 +877,6 @@ name: "Heat Rock",
 
 heavydutyboots: {
 name: "Heavy-Duty Boots",
-// Hazard Immunity implemented in moves.ts
 },
 
 iceskates: {
@@ -913,7 +903,6 @@ if (!target) return;
 if (target.volatiles['ingrain'] || target.volatiles['smackdown'] || this.field.getPseudoWeather('gravity')) return;
 if (move.type === 'Ground' && target.hasType('Flying')) return 0;
 },
-// airborneness negation implemented in sim/pokemon.js:Pokemon#isGrounded
 onModifySpe(spe) {
 return this.chainModify(0.5);
 },
@@ -1105,7 +1094,6 @@ this.damage(source.baseMaxhp / 8, source, source, this.dex.items.get('lifeorb'))
 
 lightclay: {
 name: "Light Clay",
-// implemented in the corresponding thing
 },
 
 loveletter: {
@@ -1528,7 +1516,7 @@ if (pokemon.useItem()) {
 this.debug('power herb - remove charge turn for ' + move.id);
 this.attrLastMove('[still]');
 this.addMove('-anim', pokemon, move.name, target);
-return false; // skip charge turn
+return false;
 }
 },
 name: "Power Herb",
@@ -1536,7 +1524,6 @@ name: "Power Herb",
 
 protectivepads: {
 name: "Protective Pads",
-// protective effect handled in Battle#checkMoveMakesContact
 },
 
 psychicseed: {
@@ -1642,7 +1629,6 @@ if (source && source !== target && source.hp && target.hp && move && move.catego
 if (!source.isActive || !this.canSwitch(source.side) || source.forceSwitchFlag || target.forceSwitchFlag) {
 return;
 }
-// The item is used up even against a pokemon with Ingrain or that otherwise can't be forced out
 if (target.useItem(source)) {
 if (this.runEvent('DragOut', source, target, move)) {
 source.forceSwitchFlag = true;
@@ -2020,9 +2006,8 @@ this.damage(pokemon.baseMaxhp / 8);
 onHit(target, source, move) {
 if (source && source !== target && !source.item && move && this.checkMoveMakesContact(move, source, target)) {
 const barb = target.takeItem();
-if (!barb) return; // Gen 4 Multitype
+if (!barb) return;
 source.setItem(barb);
-// no message for Sticky Barb changing hands
 }
 },
 },
@@ -2111,7 +2096,6 @@ return this.chainModify([115, 100]);
 
 utilityumbrella: {
 name: "Utility Umbrella",
-// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 onStart(pokemon) {
 if (!pokemon.ignoringItem()) return;
 if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
@@ -4028,7 +4012,6 @@ isPokeball: true,
 
 loadeddice: {
 name: "Loaded Dice",
-// partially implemented in sim/battle-actions.ts:BattleActions#hitStepMoveHitLoop
 onModifyMove(move) {
 if (move.multiaccuracy) {
 delete move.multiaccuracy;
