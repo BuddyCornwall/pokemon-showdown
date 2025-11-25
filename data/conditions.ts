@@ -279,7 +279,7 @@ onResidual(pokemon){
 pokemon.volatiles['bleeding'].time--;
 const stacks=pokemon.volatiles['bleeding'].stacks||1;
 // 1%, 2%, 4%, 8%, ... (exponential)
-const damage=pokemon.maxhp*(0.01*Math.pow(2,stacks-1));
+const damage=pokemon.maxhp*(0.05*Math.pow(2,stacks-1));
 this.add('-activate',pokemon,'bleeding');
 this.damage(damage,pokemon);
 if(!pokemon.volatiles['bleeding'].time){
@@ -936,4 +936,5 @@ source.removeVolatile('rolloutstorage');
 return bp;
 },
 },
+
 };
