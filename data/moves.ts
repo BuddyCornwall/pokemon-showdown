@@ -940,7 +940,7 @@ pokemon.removeVolatile('attract');
 onBeforeMovePriority: 2,
 onBeforeMove(pokemon, target, move) {
 this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
-if (this.randomChance(1, 4)) {
+if (this.randomChance(1, 7)) {
 this.add('cant', pokemon, 'Attract');
 return false;
 }
@@ -18745,9 +18745,9 @@ type: "Rock",
 },
 
 teeterdance: {
-accuracy: 97,
-basePower: 0,
-category: "Status",
+accuracy: 85,
+basePower: 65,
+category: "Physical",
 name: "Teeter Dance",
 pp: 0.625,
 priority: 0,
@@ -18758,16 +18758,30 @@ type: "Normal",
 },
 
 victorydance: {
-accuracy: 97,
-basePower: 0,
-category: "Status",
+accuracy: 95,
+basePower: 45,
+category: "Physical",
 name: "Victory Dance",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
+critRatio: 0,
+target: "normal",
 type: "Fighting",
+onBasePower(basePower, pokemon, target, move) {
+if (pokemon.lastMoveKO) {
+this.add('-message', `${pokemon.name} is celebrating a KO!`);
+return basePower * 2;
+}
+return basePower;
+},
+onAfterMove(pokemon, target, move) {
+if (target.hp <= 0 && move.category !== 'Status') {
+pokemon.lastMoveKO = true;
+} else {
+pokemon.lastMoveKO = false;
+}
+},
 },
 
 metronome: {
