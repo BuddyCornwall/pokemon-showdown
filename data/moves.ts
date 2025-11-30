@@ -14437,7 +14437,7 @@ if (this.effectState.layers >= 3) return false;
 this.add('-sidestart', side, 'Spikes');
 this.effectState.layers++;
 },
-onEntryHazard(pokemon) {
+onSwitchIn(pokemon) {
 if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
 const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
 this.damage(damageAmounts[this.effectState.layers] * pokemon.maxhp / 24);
@@ -14450,15 +14450,14 @@ type: "Normal",
 
 spikes: {
 accuracy: 97,
-basePower: 25,
+basePower: 0,
 category: "Status",
 name: "Spikes",
 pp: 0.625,
 priority: 0,
-flags: {reflectable: 1},
+flags: { reflectable: 1, nonsky: 1, metronome: 1, mustpressure: 1 },
 sideCondition: 'spikes',
 condition: {
-// this is a side condition
 onSideStart(side) {
 this.add('-sidestart', side, 'Spikes');
 this.effectState.layers = 1;
@@ -14468,7 +14467,7 @@ if (this.effectState.layers >= 3) return false;
 this.add('-sidestart', side, 'Spikes');
 this.effectState.layers++;
 },
-onEntryHazard(pokemon) {
+onSwitchIn(pokemon) {
 if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
 const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
 this.damage(damageAmounts[this.effectState.layers] * pokemon.maxhp / 24);
@@ -14723,7 +14722,7 @@ condition: {
 onSideStart(side) {
 this.add('-sidestart', side, 'move: Stealth Rock');
 },
-onEntryHazard(pokemon) {
+onSwitchIn(pokemon) {
 if (pokemon.hasItem('heavydutyboots')) return;
 const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('stealthrock')), -6, 6);
 this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
@@ -14846,7 +14845,7 @@ condition: {
 onSideStart(side) {
 this.add('-sidestart', side, 'move: Sticky Web');
 },
-onEntryHazard(pokemon) {
+onSwitchIn(pokemon) {
 if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
 this.add('-activate', pokemon, 'move: Sticky Web');
 this.boost({spe: -1}, pokemon, this.effectState.source, this.dex.getActiveMove('stickyweb'));
@@ -16390,7 +16389,7 @@ if (this.effectState.layers >= 2) return false;
 this.add('-sidestart', side, 'move: Toxic Spikes');
 this.effectState.layers++;
 },
-onEntryHazard(pokemon) {
+onSwitchIn(pokemon) {
 if (!pokemon.isGrounded()) return;
 if (pokemon.hasType('Poison')) {
 this.add('-sideend', pokemon.side, 'move: Toxic Spikes', '[of] ' + pokemon);
