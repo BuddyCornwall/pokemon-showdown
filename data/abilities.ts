@@ -6370,9 +6370,6 @@ this.add('-ability', pokemon, 'Shield Dust');
 onDamagingHit(damage, target, source, move) {
 this.field.setTerrain('electricterrain');
 },
-onPreStart(pokemon) {
-this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
-},
 isPermanent: true,
 onStart(source) {
 this.field.setWeather('sandstorm');
