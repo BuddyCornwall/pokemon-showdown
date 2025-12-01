@@ -1342,11 +1342,9 @@ electricsurge: {
 onStart(source) {
 this.field.setTerrain('electricterrain');
 },
-
 onPreStart(pokemon) {
 this.add('-message', 'pokemon','triggered Electric Terrain! Electric moves are now more powerful! Pokémon can no longer fall asleep!');
 },
-
 name: "Electric Surge",
 },
 
@@ -6316,48 +6314,9 @@ this.debug('Dragon\'s Maw boost');
 return this.chainModify(1.5);
 }
 },
+},
 onModifySpAPriority: 5,
 onModifySpA(atk, attacker, defender, move) {
-if (move.type === 'Dragon') {
-this.debug('Dragon\'s Maw boost');
-return this.chainModify(1.5);
-}
-},
-onAllyFaint(target) {
-const holder = this.effectState.target;
-if (!holder.hp) return;
-const sourceAbility = target.getAbility();
-if (sourceAbility.isPermanent || additionalBannedAbilities.includes(target.ability)) return;
-if (!holder.m.alchemyAbilities) holder.m.alchemyAbilities = [];
-if (!holder.m.alchemyAbilities.includes(sourceAbility.id)) {
-holder.m.alchemyAbilities.push(sourceAbility.id);
-this.add('-ability', holder, "Draconic Alchemy (copied " + sourceAbility.name + ")", '[from] ability: Draconic Alchemy', '[of] ' + target);
-const abilityEffect = this.dex.abilities.get(sourceAbility.id);
-if (abilityEffect.onStart) {
-abilityEffect.onStart.call(this, holder);
-}
-}
-},
-onAnyModifyAtk(atk, attacker, defender, move) {
-return this.runSecondaryAbilities('onModifyAtk', atk, attacker, defender, move);
-},
-onAnyModifySpA(atk, attacker, defender, move) {
-return this.runSecondaryAbilities('onModifySpA', atk, attacker, defender, move);
-},
-onAnyBasePower(basePower, attacker, defender, move) {
-return this.runSecondaryAbilities('onBasePower', basePower, attacker, defender, move);
-},
-runSecondaryAbilities(event, ...args) {
-const holder = args[0];
-if (!holder || !holder.m || !holder.m.alchemyAbilities) return;
-for (const abil of holder.m.alchemyAbilities) {
-const effect = this.dex.abilities.get(abil);
-if (effect[event]) {
-const result = effect[event].apply(this, args);
-if (result !== undefined) return result;
-}
-}
-},
 name: "Cunty Bob",
 },
 
