@@ -6321,6 +6321,14 @@ this.debug('Dragon\'s Maw boost');
 return this.chainModify(1.5);
 }
 },
+onAllyFaint(target) {
+if (!this.effectState.target.hp) return;
+const ability = target.getAbility();
+if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+if (this.effectState.target.setAbility(ability)) {
+this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
+}
+},
 name: "Cunty Bob",
 },
 
