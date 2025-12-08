@@ -5958,7 +5958,7 @@ onEnd(pokemon) {
 pokemon.removeVolatile('flashfire');
 },
 condition: {
-noCopy: true, // doesn't get copied by Baton Pass
+noCopy: true, 
 onStart(target) {
 this.add('-start', target, 'ability: Flash Fire');
 },
