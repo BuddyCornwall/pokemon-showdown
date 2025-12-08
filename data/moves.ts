@@ -5415,11 +5415,15 @@ name: "Focus Punch",
 pp: 1.25,
 priority: -3,
 flags: {contact: 1, slow: 1, protect: 1, punch: 1},
-boosts: {
+critRatio: 2,
+secondary: {
 chance: 50,
+self: {
+boosts: {
 atk: 1,
 },
-secondary: null,
+},
+},
 target: "any",
 type: "Fighting",
 },
