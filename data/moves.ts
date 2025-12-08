@@ -5417,7 +5417,6 @@ priority: -3,
 flags: {contact: 1, slow: 1, protect: 1, punch: 1},
 boosts: {
 chance: 50,
-accuracy: 1,
 atk: 1,
 },
 secondary: null,
@@ -7258,7 +7257,7 @@ accuracy: 75,
 basePower: 115,
 category: "Special",
 name: "Ice Burn",
-pp: 5,
+pp: 1.25,
 priority: 0,
 flags: {charge: 1, protect: 1, mirror: 1},
 onTryMove(attacker, defender, move) {
@@ -14450,14 +14449,15 @@ type: "Normal",
 
 spikes: {
 accuracy: 97,
-basePower: 0,
+basePower: 25,
 category: "Status",
 name: "Spikes",
 pp: 0.625,
 priority: 0,
-flags: { reflectable: 1, nonsky: 1, metronome: 1, mustpressure: 1 },
+flags: {reflectable: 1},
 sideCondition: 'spikes',
 condition: {
+// this is a side condition
 onSideStart(side) {
 this.add('-sidestart', side, 'Spikes');
 this.effectState.layers = 1;
