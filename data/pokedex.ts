@@ -5403,6 +5403,24 @@ abilities: {0: "No Ability"},
 weightkg: 3.4,
 },
 
+burmysandy: {
+name: "Burmy-Sandy",
+types: ["Bug"],
+gender: "F",
+baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
+abilities: {0: "No Ability"},
+weightkg: 3.4,
+},
+
+burmytrash: {
+name: "Burmy-Trash",
+types: ["Bug"],
+gender: "F",
+baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
+abilities: {0: "No Ability"},
+weightkg: 3.4,
+},
+
 wormadam: {
 num: 413,
 name: "Wormadam",
