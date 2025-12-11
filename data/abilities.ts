@@ -33,7 +33,7 @@ pokemon.formeChange(forme, this.effect, false, '[msg]');
 }
 },
 name: "Burmy",
-}
+},
 
 adaptability: {
 onModifyMove(move) {
