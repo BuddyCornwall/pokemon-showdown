@@ -7,9 +7,13 @@ name: "No Ability",
 
 burmy: {
 onStart(pokemon) {
-this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+this.add('-ability', pokemon, 'Burmy');
+this.burmyFormeChange(pokemon);
 },
 onWeatherChange(pokemon) {
+this.burmyFormeChange(pokemon);
+},
+burmyFormeChange(pokemon) {
 if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
 let forme = null;
 switch (pokemon.effectiveWeather()) {
