@@ -8,12 +8,29 @@ name: "No Ability",
 burmy: {
 onStart(pokemon) {
 this.add('-ability', pokemon, 'Burmy');
-this.burmyFormeChange(pokemon);
+if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
+let forme = null;
+switch (pokemon.effectiveWeather()) {
+case 'sandstorm':
+if (pokemon.species.id !== 'burmysandy') forme = 'Burmy-Sandy';
+break;
+case 'raindance':
+case 'primordialsea':
+if (pokemon.species.id !== 'burmytrash') forme = 'Burmy-Trash';
+break;
+case 'sunnyday':
+case 'desolateland':
+if (pokemon.species.id !== 'burmy') forme = 'Burmy';
+break;
+default:
+if (pokemon.species.id !== 'burmy') forme = 'Burmy';
+break;
+}
+if (pokemon.isActive && forme) {
+pokemon.formeChange(forme, this.effect, false, '[msg]');
+}
 },
 onWeatherChange(pokemon) {
-this.burmyFormeChange(pokemon);
-},
-burmyFormeChange(pokemon) {
 if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
 let forme = null;
 switch (pokemon.effectiveWeather()) {
@@ -38,6 +55,7 @@ pokemon.formeChange(forme, this.effect, false, '[msg]');
 },
 name: "Burmy",
 },
+
 
 adaptability: {
 onModifyMove(move) {
