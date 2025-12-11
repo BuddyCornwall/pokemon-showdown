@@ -6,25 +6,34 @@ name: "No Ability",
 },
 
 burmy: {
-onResidualOrder: 999,
-onResidual(pokemon) {
-if (!this.turn) return;
-const forms = [
-'Burmy',
-'Burmy-Sandy',
-'Burmy-Trash',
-];
-const currentForm = pokemon.species.name;
-const possibleForms = forms.filter(f => f !== currentForm);
-const targetForme = this.sample(possibleForms);
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme, this.effect, true);
-this.add('-formechange', pokemon, targetForme);
+onStart(pokemon) {
+this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+},
+onWeatherChange(pokemon) {
+if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
+let forme = null;
+switch (pokemon.effectiveWeather()) {
+case 'sandstorm':
+if (pokemon.species.id !== 'burmysandy') forme = 'Burmy-Sandy';
+break;
+case 'raindance':
+case 'primordialsea':
+if (pokemon.species.id !== 'burmytrash') forme = 'Burmy-Trash';
+break;
+case 'sunnyday':
+case 'desolateland':
+if (pokemon.species.id !== 'burmy') forme = 'Burmy';
+break;
+default:
+if (pokemon.species.id !== 'burmy') forme = 'Burmy';
+break;
+}
+if (pokemon.isActive && forme) {
+pokemon.formeChange(forme, this.effect, false, '[msg]');
 }
 },
-isPermanent: true,
 name: "Burmy",
-},
+}
 
 adaptability: {
 onModifyMove(move) {
