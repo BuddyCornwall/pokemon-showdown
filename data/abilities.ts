@@ -6,45 +6,25 @@ name: "No Ability",
 },
 
 burmy: {
+onResidualOrder: 999,
+onResidual(pokemon) {
+if (!this.turn) return;
+const forms = [
+'Burmy',
+'Burmy-Sandy',
+'Burmy-Trash',
+];
+const currentForm = pokemon.species.name;
+const possibleForms = forms.filter(f => f !== currentForm);
+const targetForme = this.sample(possibleForms);
+if (currentForm !== targetForme) {
+pokemon.formeChange(targetForme, this.effect, true);
+this.add('-formechange', pokemon, targetForme);
+}
+},
+isPermanent: true,
 name: "Burmy",
-isBreakable: true,
-onImmunity(type, pokemon) {
-if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
 },
-onTryHitPriority: 1.5,
-onTryHit(target, source, move) {
-if (move.flags['powder'] && target !== source && this.dex.getImmunity('powder', target)) {
-this.add('-immune', target, '[from] ability: Burmy');
-return null;
-}
-},
-onStart(pokemon) {
-pokemon.volatiles.burmyFormChange = (poke => {
-const weather = poke.battle.field.weather;
-let newForm = null;
-if (weather === 'sandstorm') {
-newForm = 'Burmy-Sandy';
-} else if (weather === 'raindance' || weather === 'primordialsea') {
-newForm = 'Burmy-Trash';
-} else if (weather === 'sunnyday' || weather === 'desolateland') {
-newForm = 'Burmy';
-}
-if (!newForm) return;
-if (poke.species.name !== newForm) {
-const species = poke.battle.dex.species.get(newForm);
-poke.formeChange(species.id, null, true);
-poke.battle.add('-formchange', poke, species.name);
-}
-});
-pokemon.volatiles.burmyFormChange(pokemon);
-},
-onWeatherChange(pokemon) {
-if (pokemon.volatiles.burmyFormChange) {
-pokemon.volatiles.burmyFormChange(pokemon);
-}
-},
-},
-
 
 adaptability: {
 onModifyMove(move) {
