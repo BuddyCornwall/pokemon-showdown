@@ -19,14 +19,8 @@ return null;
 }
 },
 onStart(pokemon) {
-this.effectState.burmyFormInit = true;
-this.runBurmyFormChange(pokemon);
-},
-onWeatherChange(pokemon) {
-this.runBurmyFormChange(pokemon);
-},
-runBurmyFormChange(pokemon) {
-const weather = pokemon.battle.field.weather;
+pokemon.volatiles.burmyFormChange = (poke => {
+const weather = poke.battle.field.weather;
 let newForm = null;
 if (weather === 'sandstorm') {
 newForm = 'Burmy-Sandy';
@@ -36,13 +30,21 @@ newForm = 'Burmy-Trash';
 newForm = 'Burmy';
 }
 if (!newForm) return;
-if (pokemon.species.name !== newForm) {
-const species = this.dex.species.get(newForm);
-pokemon.formeChange(species.id, this.effect, true);
-this.add('-formchange', pokemon, species.name, '[from] ability: Burmy');
+if (poke.species.name !== newForm) {
+const species = poke.battle.dex.species.get(newForm);
+poke.formeChange(species.id, null, true);
+poke.battle.add('-formchange', poke, species.name);
+}
+});
+pokemon.volatiles.burmyFormChange(pokemon);
+},
+onWeatherChange(pokemon) {
+if (pokemon.volatiles.burmyFormChange) {
+pokemon.volatiles.burmyFormChange(pokemon);
 }
 },
 },
+
 
 adaptability: {
 onModifyMove(move) {
