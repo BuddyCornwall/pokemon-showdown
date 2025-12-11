@@ -5,58 +5,6 @@ isNonstandard: "Past",
 name: "No Ability",
 },
 
-burmy: {
-onStart(pokemon) {
-this.add('-ability', pokemon, 'Burmy');
-if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
-let forme = null;
-switch (pokemon.effectiveWeather()) {
-case 'sandstorm':
-if (pokemon.species.id !== 'burmysandy') forme = 'Burmy-Sandy';
-break;
-case 'raindance':
-case 'primordialsea':
-if (pokemon.species.id !== 'burmytrash') forme = 'Burmy-Trash';
-break;
-case 'sunnyday':
-case 'desolateland':
-if (pokemon.species.id !== 'burmy') forme = 'Burmy';
-break;
-default:
-if (pokemon.species.id !== 'burmy') forme = 'Burmy';
-break;
-}
-if (pokemon.isActive && forme) {
-pokemon.formeChange(forme, this.effect, false, '[msg]');
-}
-},
-onWeatherChange(pokemon) {
-if (pokemon.baseSpecies.baseSpecies !== 'Burmy' || pokemon.transformed) return;
-let forme = null;
-switch (pokemon.effectiveWeather()) {
-case 'sandstorm':
-if (pokemon.species.id !== 'burmysandy') forme = 'Burmy-Sandy';
-break;
-case 'raindance':
-case 'primordialsea':
-if (pokemon.species.id !== 'burmytrash') forme = 'Burmy-Trash';
-break;
-case 'sunnyday':
-case 'desolateland':
-if (pokemon.species.id !== 'burmy') forme = 'Burmy';
-break;
-default:
-if (pokemon.species.id !== 'burmy') forme = 'Burmy';
-break;
-}
-if (pokemon.isActive && forme) {
-pokemon.formeChange(forme, this.effect, false, '[msg]');
-}
-},
-name: "Burmy",
-},
-
-
 adaptability: {
 onModifyMove(move) {
 move.stab = 2;
@@ -6412,5 +6360,34 @@ this.field.setWeather('sandstorm');
 name: "Jeremy Irons",
 },
 
+jasonwaterfalls: {
+onStart(pokemon) {
+let activated = false;
+for (const target of pokemon.adjacentFoes()) {
+if (!activated) {
+this.add('-ability', pokemon, 'Flustered', 'boost');
+activated = true;
+}
+if (target.volatiles['substitute']) {
+this.add('-immune', target);
+} else {
+this.boost({spe: -1}, target, pokemon, null, true);
+}
+}
+},
+onDamagingHit(damage, target, source, move) {
+if (!this.checkMoveMakesContact(move, source, target)) return;
+let announced = false;
+for (const pokemon of [source]) {
+if (pokemon.volatiles['perishsong']) continue;
+if (!announced) {
+this.add('-ability', target, 'Perish Body');
+announced = true;
+}
+pokemon.addVolatile('perishsong');
+}
+},
+name: "Jasonwater Falls",
+},
 
 };
