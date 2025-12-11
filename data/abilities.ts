@@ -1305,6 +1305,18 @@ isBreakable: true,
 name: "Dry Skin",
 },
 
+duneblessed: {
+onWeather(target, source, effect) {
+if (effect.id === 'sandstorm') {
+this.heal(target.baseMaxhp / 9);
+}
+},
+onImmunity(type, pokemon) {
+if (type === 'sandstorm') return false;
+},
+name: "Duneblessed",
+},
+
 earlybird: {
 name: "Early Bird",
 },
@@ -5958,7 +5970,7 @@ onEnd(pokemon) {
 pokemon.removeVolatile('flashfire');
 },
 condition: {
-noCopy: true, 
+noCopy: true,
 onStart(target) {
 this.add('-start', target, 'ability: Flash Fire');
 },
@@ -6350,5 +6362,3 @@ name: "Jeremy Irons",
 
 
 };
-
-
