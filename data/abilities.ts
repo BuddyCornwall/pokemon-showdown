@@ -5,6 +5,45 @@ isNonstandard: "Past",
 name: "No Ability",
 },
 
+burmy: {
+name: "Burmy",
+isBreakable: true,
+onImmunity(type, pokemon) {
+if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+},
+onTryHitPriority: 1.5,
+onTryHit(target, source, move) {
+if (move.flags['powder'] && target !== source && this.dex.getImmunity('powder', target)) {
+this.add('-immune', target, '[from] ability: Burmy');
+return null;
+}
+},
+onStart(pokemon) {
+this.burmyUpdateForm(pokemon);
+},
+onWeatherChange(pokemon) {
+this.burmyUpdateForm(pokemon);
+},
+condition: {
+burmyUpdateForm(pokemon) {
+const weather = pokemon.battle.field.weather;
+let newForm: string | null = null;
+if (weather === 'sandstorm') {
+newForm = 'Burmy-Sandy';
+} else if (weather === 'raindance' || weather === 'primordialsea') {
+newForm = 'Burmy-Trash';
+} else if (weather === 'sunnyday' || weather === 'desolateland') {
+newForm = 'Burmy';
+}
+if (newForm && pokemon.species.name !== newForm) {
+const species = this.dex.species.get(newForm);
+pokemon.formeChange(species.id, this.effect, true);
+this.add('-formchange', pokemon, species.name, '[from] ability: Burmy');
+}
+},
+},
+},
+
 adaptability: {
 onModifyMove(move) {
 move.stab = 2;
