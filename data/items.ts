@@ -1233,8 +1233,10 @@ onAfterDamage(damage, target, source, move) {
 if (!move || !move.flags['contact'] || !source) return;
 this.add('-activate', target, 'item: Marmalade!');
 this.add('-message', `The battlefield has become sticky! No one can switch!`);
-target.side.addSideCondition('marmaladelock');
-source.side.addSideCondition('marmaladelock');
+target.addVolatile('trapped');
+for (const foe of target.foes()) {
+foe.addVolatile('trapped');
+}
 },
 },
 

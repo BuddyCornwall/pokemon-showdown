@@ -937,13 +937,4 @@ return bp;
 },
 },
 
-marmaladelock: {
-name: 'Marmalade Lock',
-duration: 3,
-onSwitchAttempt(pokemon) {
-this.add('-fail', pokemon, 'move: Marmalade lock prevents switching!');
-return false;
-},
-},
-
 };
