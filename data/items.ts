@@ -1236,7 +1236,6 @@ this.add('-message', `The battlefield has become sticky! No one can switch!`);
 target.side.addSideCondition('marmaladelock');
 source.side.addSideCondition('marmaladelock');
 },
-num: 9999,
 },
 
 mentalherb: {
