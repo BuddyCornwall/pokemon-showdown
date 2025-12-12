@@ -1229,14 +1229,6 @@ isNonstandard: "Unobtainable",
 
 marmalade: {
 name: "Marmalade",
-onAfterDamage(damage, target, source, move) {
-if (!move || !move.flags['contact'] || !source) return;
-this.add('-activate', target, 'item: Marmalade!');
-this.add('-message', `The battlefield has become sticky! No one can switch!`);
-for (const pokemon of this.getAllActive()) {
-pokemon.addVolatile('trapped');
-}
-},
 },
 
 mentalherb: {

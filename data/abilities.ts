@@ -5753,6 +5753,30 @@ isPermanent: true,
 name: "Rotombola",
 },
 
+rotombola2: {
+onResidualOrder: 999,
+onResidual(pokemon) {
+if (!this.turn) return;
+const forms = [
+'Rotom',
+'Rotom-Wash',
+'Rotom-Heat',
+'Rotom-Frost',
+'Rotom-Fan',
+'Rotom-Mow',
+];
+const currentForm = pokemon.species.name;
+const possibleForms = forms.filter(f => f !== currentForm);
+const targetForme = this.sample(possibleForms);
+if (currentForm !== targetForme) {
+pokemon.formeChange(targetForme, this.effect, true);
+this.add('-formechange', pokemon, targetForme);
+}
+},
+isPermanent: true,
+name: "Rotombola2",
+},
+
 slowbros: {
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
