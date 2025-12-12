@@ -1229,15 +1229,16 @@ isNonstandard: "Unobtainable",
 
 marmalade: {
 name: "Marmalade",
-onStart(pokemon) {
-const boostedMons = ['mew','pyroar'];
-if (boostedMons.includes(pokemon.species.id)) {
-const healAmount = Math.floor(pokemon.maxhp / 20); // 5% HP
-this.heal(healAmount, pokemon);
-this.add('-item', pokemon, 'Marmalade', '[from] ability');
-}
+onAfterDamage(damage, target, source, move) {
+if (!move || !move.flags['contact'] || !source) return;
+this.add('-activate', target, 'item: Marmalade!');
+this.add('-message', `The battlefield has become sticky! No one can switch!`);
+target.side.addSideCondition('marmaladelock');
+source.side.addSideCondition('marmaladelock');
 },
+num: 9999,
 },
+};
 
 mentalherb: {
 name: "Mental Herb",
