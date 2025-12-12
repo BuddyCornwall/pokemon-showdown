@@ -1238,7 +1238,6 @@ source.side.addSideCondition('marmaladelock');
 },
 num: 9999,
 },
-};
 
 mentalherb: {
 name: "Mental Herb",
