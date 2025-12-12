@@ -2358,15 +2358,15 @@ name: "Flustered",
 
 hibernation: {
 name: "Hibernation",
-shortDesc: "Sleep lasts 5–7 turns. If holding Marmalade, heals HP each turn while asleep.",
 onSleep(pokemon) {
 const dur = this.random(5, 8);
 pokemon.statusData.time = dur;
 pokemon.statusData.startTime = dur;
+pokemon.statusData.isHibernation = true;
 },
 onResidualOrder: 5,
 onResidual(pokemon) {
-if (pokemon.status === 'slp' && pokemon.getItem().id === 'marmalade') {
+if (pokemon.status === 'slp' && pokemon.statusData?.isHibernation && pokemon.getItem().id === 'marmalade') {
 this.heal(pokemon.baseMaxhp / 8);
 }
 },
