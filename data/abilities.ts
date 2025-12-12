@@ -2356,22 +2356,6 @@ this.boost({spe: -1}, target, pokemon, null, true);
 name: "Flustered",
 },
 
-hibernation: {
-name: "Hibernation",
-onSleep(pokemon) {
-const dur = this.random(5, 8);
-pokemon.statusData.time = dur;
-pokemon.statusData.startTime = dur;
-pokemon.statusData.isHibernation = true;
-},
-onResidualOrder: 5,
-onResidual(pokemon) {
-if (pokemon.status === 'slp' && pokemon.statusData?.isHibernation && pokemon.getItem().id === 'marmalade') {
-this.heal(pokemon.baseMaxhp / 8);
-}
-},
-},
-
 intrepidsword: {
 onPreStart(pokemon) {
 this.add('-message', 'Intrepid Sword has boosted their highest attacking stat.');
