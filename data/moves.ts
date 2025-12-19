@@ -35,7 +35,7 @@ type: "Rock",
 acid: {
 accuracy: 95,
 basePower: 45,
-category: "Special",
+category: "Physical",
 name: "Acid",
 pp: 1.25,
 priority: 0,
