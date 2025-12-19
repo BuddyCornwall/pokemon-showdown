@@ -19139,32 +19139,6 @@ target: "any",
 type: "Rock",
 },
 
-foresight: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Foresight",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
-freezyfrost: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Freezy Frost",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
 frustration: {
 accuracy: 97,
 basePower: 0,
