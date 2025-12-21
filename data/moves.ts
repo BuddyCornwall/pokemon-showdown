@@ -19422,20 +19422,6 @@ type: "Poison",
 },
 
 
-
-polarflare: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Polar Flare",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
 pound: {
 accuracy: 97,
 basePower: 0,
