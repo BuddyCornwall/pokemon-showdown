@@ -19474,12 +19474,12 @@ type: "Rock",
 },
 
 reflecttype: {
-accuracy: 97
+accuracy: 97,
 basePower: 0,
 category: "Status",
 name: "Reflect Type",
 pp: 0.625,
-priority: 5,
+priority: 0,
 flags: { protect: 1, bypasssub: 1, allyanim: 1, metronome: 1 },
 onHit(target, source) {
 if (source.species && (source.species.num === 493 || source.species.num === 773)) return false;
@@ -19501,7 +19501,7 @@ if (!source.knownType) source.apparentType = oldApparentType;
 },
 secondary: null,
 target: "any",
-type: "Normal",
+type: "Mystery",
 },
 
 return: {
