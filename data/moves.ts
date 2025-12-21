@@ -18787,29 +18787,6 @@ pokemon.lastMoveKO = false;
 },
 },
 
-metronome: {
-accuracy: 97,
-basePower: 0,
-category: "Status",
-name: "Metronome",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
-
-
-
-
-
-
-
-
-
-
 bestow: {
 accuracy: 97,
 basePower: 0,
@@ -19479,7 +19456,7 @@ basePower: 0,
 category: "Status",
 name: "Reflect Type",
 pp: 0.625,
-priority: 0,
+priority: 5,
 flags: { protect: 1, bypasssub: 1, allyanim: 1, metronome: 1 },
 onHit(target, source) {
 if (source.species && (source.species.num === 493 || source.species.num === 773)) return false;
@@ -19504,19 +19481,6 @@ target: "any",
 type: "Mystery",
 },
 
-return: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Return",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
 sharpen: {
 accuracy: 97,
 basePower: 0,
@@ -19530,9 +19494,6 @@ target: "any",
 type: "Rock",
 },
 
-
-
-
 sketch: {
 accuracy: 97,
 basePower: 0,
@@ -19543,7 +19504,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 skillswap: {
@@ -19556,7 +19517,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Psychic",
 },
 
 slam: {
@@ -19569,7 +19530,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 spark: {
@@ -19582,20 +19543,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
-},
-
-sparklyswirl: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Sparkly Swirl",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
+type: "Electric",
 },
 
 spitup: {
@@ -19608,20 +19556,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
-},
-
-splishysplash: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Splishy Splash",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 spotlight: {
@@ -19634,7 +19569,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 stockpile: {
@@ -19647,7 +19582,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 swallow: {
@@ -19660,7 +19595,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 telekinesis: {
@@ -19673,7 +19608,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Psychic",
 },
 
 terastarstorm: {
@@ -19686,7 +19621,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 thundershock: {
@@ -19699,7 +19634,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Electric",
 },
 
 torment: {
@@ -19712,7 +19647,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Dark",
 },
 
 trick: {
@@ -19725,7 +19660,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Psychic",
 },
 
 trumpcard: {
@@ -19738,7 +19673,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 vcreate: {
@@ -19751,33 +19686,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
-},
-
-veeveevolley: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Veevee Volley",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
-victorydance: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Victory Dance",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
+type: "Fire",
 },
 
 watersport: {
@@ -19790,7 +19699,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Water",
 },
 
 willowisp: {
@@ -19803,7 +19712,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Fire",
 },
 
 wrap: {
@@ -19816,7 +19725,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 zingzap: {
@@ -19829,22 +19738,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Electric",
 },
-
-zippyzap: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Zippy Zap",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
-
-
 
 };
