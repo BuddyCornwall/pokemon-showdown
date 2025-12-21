@@ -18800,32 +18800,15 @@ target: "any",
 type: "Rock",
 },
 
-nihillight: {
-accuracy: 100,
-basePower: 100,
-category: "Special",
-name: "Nihil Light",
-pp: 0.625,
-priority: 0,
-flags: { protect: 1, mirror: 1, metronome: 1 },
-ignoreImmunity: { 'Fairy': true },
-secondary: null,
-target: "allAdjacentFoes",
-type: "Dragon",
-},
 
-baddybad: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Baddy Bad",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
-},
+
+
+
+
+
+
+
+
 
 bestow: {
 accuracy: 97,
@@ -18837,7 +18820,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 bubble: {
@@ -18850,20 +18833,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
-},
-
-buzzybuzz: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Buzzy Buzz",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
+type: "Water",
 },
 
 captivate: {
@@ -18876,7 +18846,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 catastropika: {
@@ -18889,20 +18859,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
-},
-
-celebrate: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Celebrate",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Rock",
+type: "Electric",
 },
 
 confide: {
@@ -18915,7 +18872,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 constrict: {
@@ -18928,7 +18885,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "normal",
 },
 
 conversion: {
@@ -18941,7 +18898,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 conversion2: {
@@ -18954,7 +18911,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 covet: {
@@ -18967,7 +18924,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 crosschop: {
@@ -18980,7 +18937,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Fighting",
 },
 
 cut: {
@@ -19006,7 +18963,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Fighting",
 },
 
 disable: {
@@ -19019,7 +18976,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 doubleslap: {
@@ -19032,7 +18989,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 dynamaxcannon: {
@@ -19045,7 +19002,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Dragon",
 },
 
 extremeevoboost: {
@@ -19058,7 +19015,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 falseswipe: {
@@ -19071,7 +19028,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 feint: {
@@ -19084,7 +19041,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Normal",
 },
 
 firespin: {
@@ -19097,7 +19054,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Rock",
+type: "Fire",
 },
 
 flameburst: {
@@ -19105,6 +19062,45 @@ accuracy: 97,
 basePower: 0,
 category: "Special",
 name: "Flame Burst",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Fire",
+},
+
+foresight: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Foresight",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Normal",
+},
+
+frustration: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Frustration",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+futuresight: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Future Sight",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1},
@@ -19164,5 +19160,111 @@ critRatio: 2,
 target: "any",
 type: "Rock",
 },
+
+foresight: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Foresight",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+freezyfrost: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Freezy Frost",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+frustration: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Frustration",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+futuresight: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Future Sight",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+gearup: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Gear Up",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+glitzyglow: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Glitzy Glow",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+growl: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Growl",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+guillotine: {
+accuracy: 97,
+basePower: 0,
+category: "Special",
+name: "Guillotine",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
+
 
 };
