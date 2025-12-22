@@ -3685,6 +3685,7 @@ secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
 },
+},
 target: "any",
 type: "Dragon",
 },
@@ -5633,6 +5634,7 @@ secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
 },
+},
 multihit: [1, 7],
 multiaccuracy: 85,
 secondary: null,
@@ -5655,6 +5657,7 @@ self: {
 secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
+},
 },
 recoil: [33, 100],
 multihit: [1, 10],
@@ -5679,6 +5682,7 @@ self: {
 secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
+},
 },
 multihit: [1, 7],
 multiaccuracy: 95,
@@ -11749,6 +11753,7 @@ secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
 },
+},
 target: "any",
 type: "Ghost",
 },
@@ -11798,6 +11803,7 @@ self: {
 secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
+},
 },
 onTryHit(pokemon) {
 // will shatter screens through sub, before you hit
@@ -19409,6 +19415,7 @@ self: {
 secondary: {
 chance: 33,
 volatileStatus: 'Blind Rage',
+},
 },
 critRatio: 2,
 target: "any",
