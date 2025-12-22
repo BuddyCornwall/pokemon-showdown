@@ -3680,9 +3680,9 @@ name: "Dragon Rage",
 pp: 0.625,
 priority: 3,
 flags: {protect: 1, mirror: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5629,9 +5629,9 @@ name: "Fury Attack",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5653,9 +5653,9 @@ name: "Fury Cutter",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5678,9 +5678,9 @@ name: "Fury Swipes",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -11748,9 +11748,9 @@ name: "Rage Fist",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -11799,9 +11799,9 @@ name: "Raging Bull",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -19411,9 +19411,9 @@ name: "Rage",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1},
-self: {
 secondary: {
-chance: 100,
+self: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 },
