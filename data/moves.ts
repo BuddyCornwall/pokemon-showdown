@@ -3682,7 +3682,7 @@ priority: 3,
 flags: {protect: 1, mirror: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5631,7 +5631,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5655,7 +5655,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -5680,7 +5680,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -11750,7 +11750,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -11801,7 +11801,7 @@ priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
@@ -19413,7 +19413,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 self: {
 secondary: {
-chance: 33,
+chance: 100,
 volatileStatus: 'Blind Rage',
 },
 },
