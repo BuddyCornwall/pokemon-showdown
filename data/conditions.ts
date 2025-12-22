@@ -288,6 +288,51 @@ pokemon.removeVolatile('bleeding');
 },
 },
 
+blindrage:{
+name:'Blind Rage',
+onStart(target){
+this.add('-start',target,'Blind Rage');
+this.add('-message',`${target.name} flew into a blind rage!`);
+this.effectState.time=this.random(3,6);
+},
+onDamagingHit(damage,target,source,move){
+const atk=target.getStat('atk',false,false);
+const spa=target.getStat('spa',false,false);
+if(atk>=spa){
+this.boost({atk:1},target);
+this.add('-message',`${target.name}'s rage boosted its Attack!`);
+}else{
+this.boost({spa:1},target);
+this.add('-message',`${target.name}'s rage boosted its Sp. Atk!`);
+}
+},
+onModifyTarget(target,source,move){
+if(!source.isActive||!move||move.target==='self')return;
+const possibleTargets=[];
+for(const side of this.sides){
+for(const pokemon of side.active){
+if(pokemon&&!pokemon.fainted){
+possibleTargets.push(pokemon);
+}
+}
+}
+if(!possibleTargets.length)return;
+const chosen=this.sample(possibleTargets);
+this.add('-message',`${source.name} lashes out blindly!`);
+return chosen;
+},
+onResidual(pokemon){
+this.effectState.time--;
+if(!this.effectState.time){
+pokemon.removeVolatile('blindrage');
+}
+},
+onEnd(target){
+this.add('-end',target,'Blind Rage');
+this.add('-message',`${target.name} regained control!`);
+},
+},
+
 lockedmove: {
 // Outrage, Thrash, Petal Dance...
 name: 'lockedmove',

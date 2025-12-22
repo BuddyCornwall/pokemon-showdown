@@ -1550,7 +1550,7 @@ type: "Ground",
 
 boomburst: {
 accuracy: 85,
-basePower: 95,
+basePower: 75,
 category: "Special",
 name: "Boomburst",
 pp: 0.625,
@@ -3680,7 +3680,9 @@ name: "Dragon Rage",
 pp: 0.625,
 priority: 3,
 flags: {protect: 1, mirror: 1},
-secondary: null,
+self: {
+volatileStatus: 'Blind Rage',
+},
 target: "any",
 type: "Dragon",
 },
@@ -5625,21 +5627,8 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
-volatileStatus: 'rage',
+volatileStatus: 'Blind Rage',
 },
-condition: {
-onStart(pokemon) {
-this.add('-singlemove', pokemon, 'Rage');
-},
-onHit(target, source, move) {
-if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
-}
-},
-onBeforeMovePriority: 100,
-onBeforeMove(pokemon) {
-this.debug('removing Rage before attack');
-pokemon.removeVolatile('rage');
 },
 },
 multihit: [1, 7],
@@ -5661,22 +5650,7 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 self: {
-volatileStatus: 'rage',
-},
-condition: {
-onStart(pokemon) {
-this.add('-singlemove', pokemon, 'Rage');
-},
-onHit(target, source, move) {
-if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
-}
-},
-onBeforeMovePriority: 100,
-onBeforeMove(pokemon) {
-this.debug('removing Rage before attack');
-pokemon.removeVolatile('rage');
-},
+volatileStatus: 'Blinding Rage',
 },
 recoil: [33, 100],
 multihit: [1, 10],
@@ -5698,22 +5672,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
-volatileStatus: 'rage',
-},
-condition: {
-onStart(pokemon) {
-this.add('-singlemove', pokemon, 'Rage');
-},
-onHit(target, source, move) {
-if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
-}
-},
-onBeforeMovePriority: 100,
-onBeforeMove(pokemon) {
-this.debug('removing Rage before attack');
-pokemon.removeVolatile('rage');
-},
+volatileStatus: 'Blinding Rage',
 },
 multihit: [1, 7],
 multiaccuracy: 95,
@@ -5834,27 +5793,31 @@ type: "Psychic",
 },
 
 geomancy: {
-accuracy: 75,
-basePower: 115,
-category: "Physical",
+pp: 0.625,
+basePower: 0,
+category: "Status",
 name: "Geomancy",
 pp: 0.625,
 priority: 0,
-flags: {charge: 1, contact: 1, protect: 1, mirror: 1},
+flags: { charge: 1, nonsky: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1 },
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
 }
 this.add('-prepare', attacker, move.name);
-this.boost({atk: -2.5, def: -1, evasion: 3,}, attacker, attacker, move);
 if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 return;
 }
 attacker.addVolatile('twoturnmove', defender);
 return null;
 },
+boosts: {
+spa: 2,
+spd: 2,
+spe: 2,
+},
 secondary: null,
-target: "any",
+target: "self",
 type: "Fairy",
 },
 
@@ -8434,11 +8397,11 @@ type: "Psychic",
 
 lunge: {
 accuracy: 85,
-basePower: 75,
+basePower: 55,
 category: "Physical",
 name: "Lunge",
 pp: 1.25,
-priority: 0,
+priority: 1,
 flags: {contact: 1, protect: 1, mirror: 1},
 secondary: {
 chance: 50,
@@ -11775,7 +11738,9 @@ name: "Rage Fist",
 pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-secondary: null,
+self: {
+volatileStatus: 'Blind Rage',
+},
 target: "any",
 type: "Ghost",
 },
@@ -11822,22 +11787,7 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
-volatileStatus: 'rage',
-},
-condition: {
-onStart(pokemon) {
-this.add('-singlemove', pokemon, 'Rage');
-},
-onHit(target, source, move) {
-if (target !== source && move.category !== 'Status') {
-this.boost({atk: 2});
-}
-},
-onBeforeMovePriority: 100,
-onBeforeMove(pokemon) {
-this.debug('removing Rage before attack');
-pokemon.removeVolatile('rage');
-},
+volatileStatus: 'Blinding Rage',
 },
 onTryHit(pokemon) {
 // will shatter screens through sub, before you hit
@@ -16467,7 +16417,7 @@ chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
-type: "Normal",
+type: "Mystery",
 },
 
 triattack: {
@@ -18787,6 +18737,19 @@ pokemon.lastMoveKO = false;
 },
 },
 
+metronome: {
+accuracy: 97,
+basePower: 0,
+category: "Status",
+name: "Metronome",
+pp: 0.625,
+priority: 0,
+flags: {contact: 1, protect: 1},
+critRatio: 2,
+target: "any",
+type: "Rock",
+},
+
 bestow: {
 accuracy: 97,
 basePower: 0,
@@ -19445,6 +19408,9 @@ name: "Rage",
 pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1},
+self: {
+volatileStatus: 'Blind Rage',
+},
 critRatio: 2,
 target: "any",
 type: "Rock",
