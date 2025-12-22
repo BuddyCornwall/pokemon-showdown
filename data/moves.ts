@@ -3681,6 +3681,8 @@ pp: 0.625,
 priority: 3,
 flags: {protect: 1, mirror: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 target: "any",
@@ -5627,6 +5629,8 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 multihit: [1, 7],
@@ -5648,6 +5652,8 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 recoil: [33, 100],
@@ -5670,6 +5676,8 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 multihit: [1, 7],
@@ -11737,6 +11745,8 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 target: "any",
@@ -11785,6 +11795,8 @@ pp: 1.25,
 priority: 0,
 flags: {contact: 1, protect: 1, mirror: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 onTryHit(pokemon) {
@@ -19394,6 +19406,8 @@ pp: 0.625,
 priority: 0,
 flags: {contact: 1, protect: 1},
 self: {
+secondary: {
+chance: 33,
 volatileStatus: 'Blind Rage',
 },
 critRatio: 2,
