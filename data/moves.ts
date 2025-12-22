@@ -5791,13 +5791,13 @@ type: "Psychic",
 },
 
 geomancy: {
-pp: 0.625,
+accuracy: 95,
 basePower: 0,
 category: "Status",
 name: "Geomancy",
 pp: 0.625,
 priority: 0,
-flags: { charge: 1, nonsky: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1 },
+flags: { charge: 1, nonsky: 1, failinstruct: 1 },
 onTryMove(attacker, defender, move) {
 if (attacker.removeVolatile(move.id)) {
 return;
@@ -17527,7 +17527,7 @@ category: "Status",
 name: "Burning Bulwark",
 pp: 0.625,
 priority: 100,
-flags: {metronome: 1, noassist: 1, failcopycat: 1},
+flags: {noassist: 1, failcopycat: 1},
 stallingMove: true,
 volatileStatus: 'burningbulwark',
 onPrepareHit(pokemon) {
@@ -19268,19 +19268,6 @@ target: "any",
 type: "Normal",
 },
 
-metronome: {
-accuracy: 97,
-basePower: 0,
-category: "Special",
-name: "Metronome",
-pp: 0.625,
-priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
-target: "any",
-type: "Normal",
-},
-
 mindreader: {
 accuracy: 97,
 basePower: 0,
@@ -19421,7 +19408,7 @@ category: "Status",
 name: "Reflect Type",
 pp: 0.625,
 priority: 5,
-flags: { protect: 1, bypasssub: 1, allyanim: 1, metronome: 1 },
+flags: { protect: 1, bypasssub: 1, allyanim: 1},
 onHit(target, source) {
 if (source.species && (source.species.num === 493 || source.species.num === 773)) return false;
 if (source.terastallized) return false;
