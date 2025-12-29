@@ -7930,6 +7930,7 @@ boosts: {
 spa: -2,
 },
 },
+weather: 'DeltaStream',
 secondary: null,
 target: "any",
 type: "Grass",
@@ -14620,6 +14621,7 @@ onAfterSubDamage() {
 this.field.clearTerrain();
 },
 secondary: null,
+weather: 'DeltaStream',
 target: "any",
 type: "Rock",
 },
@@ -14662,6 +14664,7 @@ boosts: {
 spa: -1,
 },
 },
+weather: 'DeltaStream',
 target: "any",
 type: "Fairy",
 },

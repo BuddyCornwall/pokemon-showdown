@@ -784,6 +784,7 @@ this.add('-weather', 'Hail', '[from] ability: ' + effect.name, `[of] ${source}`)
 } else {
 this.add('-weather', 'Hail');
 }
+this.add('-message', 'The bitter cold halves all Pokémon’s Special Attack!');
 },
 onModifySpA(spa, attacker) {
 return this.chainModify(0.5);
@@ -802,7 +803,6 @@ onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
-
 
 snow: {
 name: 'Snow',
@@ -842,13 +842,6 @@ deltastream: {
 name: 'DeltaStream',
 effectType: 'Weather',
 duration: 0,
-onEffectivenessPriority: -1,
-onEffectiveness(typeMod, target, type, move) {
-if (move && move.effectType === 'Move' && move.category !== 'Status' && type === 'Flying' && typeMod > 0) {
-this.add('-fieldactivate', 'Delta Stream');
-return 0;
-}
-},
 onFieldStart(field, source, effect) {
 this.add('-weather', 'DeltaStream', '[from] ability: ' + effect.name, `[of] ${source}`);
 },
@@ -856,6 +849,20 @@ onFieldResidualOrder: 1,
 onFieldResidual() {
 this.add('-weather', 'DeltaStream', '[upkeep]');
 this.eachEvent('Weather');
+for (const pokemon of this.getAllActive()) {
+if (!pokemon.isActive || pokemon.fainted) continue;
+if (pokemon.hasType('Flying')) continue;
+let blowChance = 0;
+if (pokemon.weight >= 49) {
+blowChance = 0.1;
+} else {
+blowChance = 0.2;
+}
+if (this.randomChance(blowChance)) {
+this.add('-message', `${pokemon.name} was blown away by the fierce winds!`);
+pokemon.switchFlag = true;
+}
+}
 },
 onFieldEnd() {
 this.add('-weather', 'none');
