@@ -603,25 +603,32 @@ this.add('-weather', 'none');
 primordialsea: {
 name: 'PrimordialSea',
 effectType: 'Weather',
-duration: 0,
-onTryMovePriority: 1,
-onTryMove(attacker, defender, move) {
-if (move.type === 'Fire' && move.category !== 'Status') {
-this.debug('Primordial Sea fire suppress');
-this.add('-fail', attacker, move, '[from] Primordial Sea');
-this.attrLastMove('[still]');
-return null;
+duration: 5,
+durationCallback(source, effect) {
+if (source?.hasItem('damprock')) {
+return 8;
 }
+return 5;
 },
 onWeatherModifyDamage(damage, attacker, defender, move) {
 if (defender.hasItem('utilityumbrella')) return;
 if (move.type === 'Water') {
-this.debug('Rain water boost');
+this.debug('rain water boost');
 return this.chainModify(1.5);
+}
+if (move.type === 'Fire') {
+this.debug('rain fire suppress');
+return this.chainModify(0.5);
 }
 },
 onFieldStart(field, source, effect) {
+if (effect?.effectType === 'Ability') {
+if (this.gen <= 5) this.effectState.duration = 0;
 this.add('-weather', 'PrimordialSea', '[from] ability: ' + effect.name, `[of] ${source}`);
+} else {
+this.add('-weather', 'PrimordialSea');
+}
+this.field.setTerrain('electricterrain', source, effect);
 },
 onFieldResidualOrder: 1,
 onFieldResidual() {
@@ -630,8 +637,12 @@ this.eachEvent('Weather');
 },
 onFieldEnd() {
 this.add('-weather', 'none');
+if (this.field.terrain === 'electricterrain') {
+this.field.clearTerrain();
+}
 },
 },
+
 
 sunnyday: {
 name: 'SunnyDay',
