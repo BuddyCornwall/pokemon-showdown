@@ -785,18 +785,24 @@ this.add('-weather', 'Hail', '[from] ability: ' + effect.name, `[of] ${source}`)
 this.add('-weather', 'Hail');
 }
 },
+onModifySpA(spa, attacker) {
+return this.chainModify(0.5);
+},
 onFieldResidualOrder: 1,
 onFieldResidual() {
 this.add('-weather', 'Hail', '[upkeep]');
-if (this.field.isWeather('hail')) this.eachEvent('Weather');
+this.eachEvent('Weather');
 },
 onWeather(target) {
+if (!target.hasType('Ice')) {
 this.damage(target.baseMaxhp / 16);
+}
 },
 onFieldEnd() {
 this.add('-weather', 'none');
 },
 },
+
 
 snow: {
 name: 'Snow',
