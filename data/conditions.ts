@@ -859,8 +859,12 @@ blowChance = 0.1;
 blowChance = 0.2;
 }
 if (this.randomChance(blowChance)) {
+const team = pokemon.side.pokemon.filter(p => !p.isActive && !p.fainted);
+if (team.length) {
+const newActive = this.sample(team);
 this.add('-message', `${pokemon.name} was blown away by the fierce winds!`);
-pokemon.switchFlag = true;
+this.switchPokemon(pokemon, newActive, true);
+}
 }
 }
 },
