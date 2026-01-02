@@ -5835,10 +5835,26 @@ this.add('-ability', pokemon, 'Wonder Guard');
 name: "Ghostly Goodbye",
 },
 
-
-
-
-
+vampirictendencies: {
+name: "Vampiric Tendencies",
+onResidualOrder: 26,
+onResidual(pokemon) {
+if (!pokemon.hp) return;
+let bleedingFoes = 0;
+for (const foe of pokemon.foes()) {
+if (foe && foe.hp && foe.volatiles['bleeding']) {
+bleedingFoes++;
+}
+}
+if (!bleedingFoes) return;
+const healFraction = Math.min(bleedingFoes * 0.1111, 0.33);
+const healAmount = Math.floor(pokemon.maxhp * healFraction);
+if (healAmount > 0) {
+this.heal(healAmount, pokemon);
+this.add('-activate', pokemon, 'ability: Vampiric Tendencies');
+}
+},
+},
 
 axolargel: {
 onPreStart(pokemon) {
