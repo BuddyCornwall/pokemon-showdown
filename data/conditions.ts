@@ -643,7 +643,6 @@ this.field.clearTerrain();
 },
 },
 
-
 sunnyday: {
 name: 'SunnyDay',
 effectType: 'Weather',

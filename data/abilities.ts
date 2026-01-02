@@ -1325,13 +1325,26 @@ eartheater: {
 onTryHit(target, source, move) {
 if (target !== source && move.type === 'Ground') {
 if (!this.heal(target.baseMaxhp / 3)) {
-this.add('-immune', target, '[from] ability: Earth Eater');
+this.add('-immune', target, '[from] ability: Fire Eater');
 }
 return null;
 }
 },
 isBreakable: true,
 name: "Earth Eater",
+},
+
+fireeater: {
+onTryHit(target, source, move) {
+if (target !== source && move.type === 'Fire') {
+if (!this.heal(target.baseMaxhp / 3)) {
+this.add('-immune', target, '[from] ability: Fire Eater');
+}
+return null;
+}
+},
+isBreakable: true,
+name: "Fire Eater",
 },
 
 effectspore: {
@@ -1958,6 +1971,22 @@ return damage / 2;
 },
 isBreakable: true,
 name: "Heatproof",
+},
+
+waterproof: {
+onSourceBasePowerPriority: 1.58,
+onSourceBasePower(basePower, attacker, defender, move) {
+if (move.type === 'Water') {
+return this.chainModify(0.5);
+}
+},
+onDamage(damage, target, source, effect) {
+if (effect && effect.id === 'brn') {
+return damage / 2;
+}
+},
+isBreakable: true,
+name: "Waterproof",
 },
 
 heavymetal: {
@@ -3955,6 +3984,20 @@ if (type === 'sandstorm') return false;
 name: "Sand Rush",
 },
 
+desolation: {
+onDamagingHit(damage, target, source, move) {
+this.field.setWeather('desolateLand');
+},
+name: "Desolation",
+},
+
+stormwarning: {
+onDamagingHit(damage, target, source, move) {
+this.field.setWeather('PrimordialSea');
+},
+name: "Storm Warning",
+},
+
 sandspit: {
 onDamagingHit(damage, target, source, move) {
 this.field.setWeather('sandstorm');
@@ -4323,6 +4366,20 @@ onStart(source) {
 this.field.setWeather('snow');
 },
 name: "Snow Warning",
+},
+
+whatthehail: {
+onStart(source) {
+this.field.setWeather('hail');
+},
+name: "What the Hail",
+},
+
+jetstream: {
+onStart(source) {
+this.field.setWeather('DeltaStream');
+},
+name: "Jet Stream",
 },
 
 solarpower: {
@@ -5670,24 +5727,6 @@ return;
 name: "Elemental Absorption"
 },
 
-purplerain: {
-onPreStart(pokemon) {
-this.add('-message', 'Purple rain falls from the sky 🌧️');
-this.field.setWeather('raindance');
-},
-onResidual(pokemon) {
-const allPokemon = this.getAllActive();
-for (const target of allPokemon) {
-if (!target || target.fainted) continue;
-if (this.field.isWeather('sunnyday') && this.randomChance(1, 4)) {
-this.add('-message', `${target.name} is poisoned by the purple rain!`);
-target.trySetStatus('tox');
-}
-}
-},
-name: "Purple Rain",
-},
-
 destinysgambit: {
 onResidualOrder: 27,
 onResidualSubOrder: 1.5,
@@ -5753,30 +5792,6 @@ isPermanent: true,
 name: "Rotombola",
 },
 
-rotombola2: {
-onResidualOrder: 999,
-onResidual(pokemon) {
-if (!this.turn) return;
-const forms = [
-'Rotom',
-'Rotom-Wash',
-'Rotom-Heat',
-'Rotom-Frost',
-'Rotom-Fan',
-'Rotom-Mow',
-];
-const currentForm = pokemon.species.name;
-const possibleForms = forms.filter(f => f !== currentForm);
-const targetForme = this.sample(possibleForms);
-if (currentForm !== targetForme) {
-pokemon.formeChange(targetForme, this.effect, true);
-this.add('-formechange', pokemon, targetForme);
-}
-},
-isPermanent: true,
-name: "Rotombola2",
-},
-
 slowbros: {
 onModifyMovePriority: 1.5,
 onModifyMove(move, attacker, defender) {
@@ -5819,6 +5834,11 @@ this.add('-ability', pokemon, 'Wonder Guard');
 },
 name: "Ghostly Goodbye",
 },
+
+
+
+
+
 
 axolargel: {
 onPreStart(pokemon) {
