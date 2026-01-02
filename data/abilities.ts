@@ -5856,6 +5856,25 @@ this.add('-activate', pokemon, 'ability: Vampiric Tendencies');
 },
 },
 
+toxicblood: {
+name: "Toxic Blood",
+onDamagingHit(damage, target, source, move) {
+if (!target.volatiles['bleeding']) return;
+if (!source || source.fainted) return;
+if (move.flags && move.flags['bite']) {
+this.add('-ability', target, 'Toxic Blood');
+this.add('-message', 'Toxic blood splashes everywhere!');
+source.trySetStatus('tox', target);
+return;
+}
+if (move.flags && move.flags['contact']) {
+this.add('-ability', target, 'Toxic Blood');
+this.add('-message', 'Toxic blood splashes everywhere!');
+source.trySetStatus('tox', target);
+}
+},
+},
+
 axolargel: {
 onPreStart(pokemon) {
 this.add('-message', 'Axolargel is very Cold & hates Mold.');
