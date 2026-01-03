@@ -3390,7 +3390,7 @@ category: "Special",
 priority: 0,
 flags: {futuremove: 1},
 effectType: 'Move',
-type: 'Steel',
+type: "Steel",
 },
 });
 this.add('-start', source, 'Doom Desire');
@@ -9008,7 +9008,7 @@ type: "Steel",
 metalsound: {
 accuracy: 95,
 basePower: 35,
-category: "Speical",
+category: "Special",
 name: "Metal Sound",
 pp: 0.625,
 priority: 1,
@@ -15034,7 +15034,7 @@ this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High 
 },
 secondary: null,
 target: "randomNormal",
-type: "Normal",
+type: "???",
 },
 
 strugglebug: {
@@ -16333,7 +16333,7 @@ type: "Poison",
 toxicspikes: {
 accuracy: 95,
 basePower: 25,
-category: "Staus",
+category: "Status",
 name: "Toxic Spikes",
 pp: 0.625,
 priority: 0,
@@ -16424,7 +16424,7 @@ chance: 75,
 volatileStatus: 'flinch ',
 },
 target: "any",
-type: "Mystery",
+type: "???",
 },
 
 triattack: {
@@ -18888,7 +18888,7 @@ type: "Fighting",
 },
 
 cut: {
-accuracy: 97,
+accuracy: 95,
 basePower: 45,
 category: "Special",
 name: "Cut",
@@ -19148,7 +19148,7 @@ priority: 0,
 flags: {contact: 1, protect: 1},
 critRatio: 2,
 target: "any",
-type: "Mystery",
+type: "???",
 },
 
 holdback: {
@@ -19444,7 +19444,7 @@ if (!source.knownType) source.apparentType = oldApparentType;
 },
 secondary: null,
 target: "any",
-type: "Mystery",
+type: "???",
 },
 
 sharpen: {
@@ -19565,14 +19565,18 @@ type: "Normal",
 },
 
 telekinesis: {
-accuracy: 97,
-basePower: 0,
+accuracy: 95,
+basePower: 45,
 category: "Special",
 name: "Telekinesis",
 pp: 0.625,
 priority: 0,
-flags: {contact: 1, protect: 1},
-critRatio: 2,
+flags: {reflectable: 1, mirror: 1, allyanim: 1},
+onHit(target) {
+if (target.getTypes().join() === 'Flying' || !target.setType('Flying')) return false;
+this.add('-start', target, 'typechange', 'Flying');
+},
+secondary: null,
 target: "any",
 type: "Psychic",
 },
